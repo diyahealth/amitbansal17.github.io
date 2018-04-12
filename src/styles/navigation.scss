@@ -1,0 +1,33 @@
+.navigation-container {
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-container {
+        max-width: 180px;
+
+        .logo {
+            width: 100%;
+        }
+    }
+
+    .navigation {
+        @extend .list-unstyled;
+
+        flex-grow: 1;
+        max-width: 700px;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            font-size: 18px;
+            line-height: 1;
+            color: #333;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding-left: 20px;
+            display: block;
+        }
+    }
+}

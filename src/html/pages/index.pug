@@ -1,0 +1,93 @@
+extends ../shared/layout.pug
+
+include ../shared/mixins.pug
+
+block content
+    +headImage("head-bg-index", "DiyaGroup", "Lighting the Path to a Healthier Future for All")
+
+    article.content-block
+        .index-who
+            .text-container
+                h2.block-title Who We Are
+                p.text.
+                    We are a group of socially-minded individuals 
+                    from a spectrum of developed and developing
+                    countries around the world. We represent many
+                    different cultures, religions, ethnic background,
+                    and speak over a dozen spoken languages.
+                    Some of us are starting to dabble in the world of
+                    social causes, while others have generations of social
+                    work in our lineage. We have deep expertise in
+                    the areas of technical, medical, legal, arts
+                    and linguistics, and at DiyaGroup, we share a common cause
+                    to help make life saving healthcare decisions feasible for all.
+            .image-container
+                img(src=require("../../images/index/people.jpg"), alt="People in village")
+
+    article.content-block
+        .index-diya
+            .border-container
+                .image-container
+                    img(src=require("../../images/index/diya.jpg"), alt="Diya")
+                p.text.
+                    The diya is a traditional oil lamp usually made from clay.
+                    It is used in India for special occasions, specifically during the Diwali Festival,
+                    the Festival of Lights. The diya is truly a great symbol of optimism and prosperity.
+                    It lights the dark and gives a deep sense of calm, which is extremely in tune with our mission.
+                    Similar to the diya we want to light the path for those who have lost in the dark
+                    and give them the hope for a better and healthier future.
+
+    article.content-block.bg-outline
+        .index-mission
+            .text-container
+                h2.block-title Our Mission
+                p.text.
+                    Much of the world's population lives in rural or undeveloped
+                    areas where basic life needs cannot be met.
+                    Yet, they still develop health ailments requiring medical treatment.
+                    They may have to travel miles to find this help, however communication
+                    can be limited to nil. Making health care decisions based on limited
+                    information is not desirable; in reality, it’s unsafe.
+            .quote-container
+                .header-replacement
+                p.quote.
+                    The primary mission of DiyaGroup is to build technology 
+                    o bridge the gap of access to basic health care information
+                    for underprivileged population, in order to assist them to make safer health care decisions.
+
+    article.content-block
+        h2.block-title Our Projects
+        .index-projects
+            .image-container
+                img(src=require("../../images/index/our-projects.jpg"), alt="People in village")
+            .text-container
+                h3.app-header
+                    span.app-name OK to Take 
+                    | / Mobile Application
+                p.text.
+                    Ok to Take application provides quick and easy functionality
+                    for checking critical drug interactions and identifying possible health risks.
+                    Using innovative drug recognition technology and a simplified user interface in local languages,
+                    it allows the end user to make drug-taking decisions, collaborate with
+                    a family member and clearly communicate current drug and allergies information to a healthcare provider.
+                .link-container
+                    a.btn(href="") Read more
+
+    section.content-block.contact
+
+    form(action="", method="post", name="questions").content-block.questions
+        h2.block-title Have Questions?
+        p.text.
+            If you have questions, suggestions or would like to volunteer with DiyaGroup in our mission,
+            please contact us. We look forward to hearing from you!
+
+        .input-group
+            input.form-control(name="firstName", type="text", placeholder="First name")
+            input.form-control(name="lastName", type="text", placeholder="Last name")
+            input.form-control(name="email", type="email", placeholder="Email")
+
+        .input-group
+            textarea.form-control(name="message", rows="5")
+
+        .input-group
+            button.btn(type="submit") Contact Us

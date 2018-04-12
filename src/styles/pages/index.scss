@@ -1,0 +1,103 @@
+.index-who {
+    display: flex;
+
+    .text-container {
+        flex-basis: 60%;
+        padding-right: 70px;
+    }
+
+    .image-container {
+        flex-basis: 40%;
+    }
+}
+
+.index-diya {
+    padding: 40px 0;
+
+    .border-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::after {
+            content: " ";
+            position: absolute;
+            height: calc(100% + 80px);
+            width: 85%;
+            right: 0;
+            border: solid 2px $primary-color;
+        }
+
+        .text {
+            flex-basis: 70%;
+            padding: 0 70px;
+        }
+
+        .image-container {
+            flex-basis: 30%;
+            z-index: 1;
+        }
+    }
+}
+
+.index-mission {
+    display: flex;
+
+    .text-container,
+    .quote-container {
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+    .text-container {
+        padding-right: 35px;
+    }
+
+    .quote-container {
+        padding-left: 35px;
+    }
+
+    .header-replacement {
+        border: 2px solid #971f26;
+        width: 100px;
+        margin-bottom: 50px;
+    }
+
+    .quote {
+        font-style: italic;
+        font-size: 26px;
+        line-height: 1.69;
+        margin: 0;
+    }
+}
+
+.index-projects {
+    display: flex;
+
+    .image-container {
+        flex-basis: 40%;
+    }
+
+    .text-container {
+        flex-basis: 60%;
+        padding-left: 70px;
+    }
+
+    .link-container {
+        text-align: right;
+        margin-top: 25px;
+    }
+
+    .app-header {
+        margin: 0 0 25px 0;
+    }
+
+    .app-name {
+        color: $primary-color;
+    }
+}
+
+.questions {
+    text-align: center;
+    margin-bottom: 100px;
+}
