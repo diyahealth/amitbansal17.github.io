@@ -1,0 +1,37 @@
+{
+    "name": "diyagroup.website",
+    "version": "1.0.0",
+    "description": "Static website for diyagroup.com",
+    "main": "\"./html/index.pug\"",
+    "scripts": {
+        "dev": "webpack --progress --bail --mode=development",
+        "watch": "npm run dev -- --watch",
+        "prod": "webpack --mode=production",
+        "clean": "rimraf ./dist",
+        "build-prod": "npm install && npm run clean && npm run prod"
+    },
+    "keywords": [
+        "diya",
+        "website",
+        "diaygroup"
+    ],
+    "author": "DiayGroup",
+    "license": "ISC",
+    "dependencies": {
+
+        "normalize.css": "^8.0.0"
+    },
+    "devDependencies": {
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "html-webpack-plugin": "^3.2.0",
+        "pug": "^2.0.3",
+        "pug-loader": "^2.4.0",
+        "sass-loader": "^6.0.7",
+        "webpack": "^4.5.0",
+        "webpack-cli": "^2.0.14",
+        "css-loader": "^0.28.11",
+        "node-sass": "^4.8.3",
+        "style-loader": "^0.20.3",
+        "file-loader": "^1.1.11"
+    }
+}
