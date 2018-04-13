@@ -58,8 +58,8 @@ module.exports = {
         new CssRewritePlugin({
             fileReg: new RegExp('./css/styles.css'),
             processor: (source) => source
-                .replace("url(images/", "url(../images/")
-                .replace("url(fonts/", "url(../fonts/")
+                .replace(/url\(images\//g, "url(../images/")
+                .replace(/url\(fonts\//g, "url(../fonts/")
         }),
         new HtmlWebpackPlugin({
             template: "./html/pages/index.pug",
@@ -69,6 +69,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./html/pages/contact-us.pug",
             filename: "/contact-us.html",
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            template: "./html/pages/how-to-help.pug",
+            filename: "/how-to-help.html",
             inject: false
         }),
     ]
