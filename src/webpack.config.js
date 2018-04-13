@@ -3,11 +3,12 @@
 const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CssRewritePlugin = require("css-rewrite-webpack-plugin");
 
 module.exports = {
     entry: "./index.js",
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve("./dist"),
         filename: "js/app.js"
     },
     module: {
@@ -15,10 +16,15 @@ module.exports = {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     use: [{
-                            loader: 'css-loader',
+                            loader: "css-loader",
+                            options: {
+                                minimize: true
+                            }
                         },
-                        'sass-loader'
-                    ]
+                        {
+                            loader: "sass-loader"
+                        },
+                    ],
                 }),
             },
             {
@@ -30,18 +36,39 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        publicPath: "../images",
+                        publicPath: "images",
                         outputPath: "images"
+                    }
+                }]
+            },
+            {
+                test: /\.woff$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        publicPath: "fonts",
+                        outputPath: "fonts"
                     }
                 }]
             }
         ]
     },
     plugins: [
-        new ExtractTextPlugin("styles/styles.css"),
+        new ExtractTextPlugin("./css/styles.css"),
+        new CssRewritePlugin({
+            fileReg: new RegExp('./css/styles.css'),
+            processor: (source) => source
+                .replace("url(images/", "url(../images/")
+                .replace("url(fonts/", "url(../fonts/")
+        }),
         new HtmlWebpackPlugin({
             template: "./html/pages/index.pug",
-            filename: "/pages/index.html",
+            filename: "/index.html",
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            template: "./html/pages/contact-us.pug",
+            filename: "/contact-us.html",
             inject: false
         }),
     ]

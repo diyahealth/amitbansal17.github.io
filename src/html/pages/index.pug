@@ -4,7 +4,7 @@ include ../shared/mixins.pug
 
 block content
     +headImage("head-bg-index", "DiyaGroup", "Lighting the Path to a Healthier Future for All")
-
+    script(src="./js/app.js")
     article.content-block
         .index-who
             .text-container
@@ -73,21 +73,10 @@ block content
                 .link-container
                     a.btn(href="") Read more
 
-    section.content-block.contact
+    section.index-contacts
+        include ../shared/contacts.pug
 
-    form(action="", method="post", name="questions").content-block.questions
-        h2.block-title Have Questions?
-        p.text.
-            If you have questions, suggestions or would like to volunteer with DiyaGroup in our mission,
-            please contact us. We look forward to hearing from you!
+    include ../shared/questions-form.pug
 
-        .input-group
-            input.form-control(name="firstName", type="text", placeholder="First name")
-            input.form-control(name="lastName", type="text", placeholder="Last name")
-            input.form-control(name="email", type="email", placeholder="Email")
-
-        .input-group
-            textarea.form-control(name="message", rows="5")
-
-        .input-group
-            button.btn(type="submit") Contact Us
+block script
+    include ../shared/map-script.pug

@@ -1,0 +1,16 @@
+form(action="", method="post", name="questions").content-block.questions
+    h2.block-title Have Questions?
+    p.text.
+        If you have questions, suggestions or would like to volunteer with DiyaGroup in our mission,
+        please contact us. We look forward to hearing from you!
+
+    .input-group
+        input.form-control(name="firstName", type="text", placeholder="First name")
+        input.form-control(name="lastName", type="text", placeholder="Last name")
+        input.form-control(name="email", type="email", placeholder="Email")
+
+    .input-group
+        textarea.form-control(name="message", rows="5")
+
+    .input-group
+        button.btn(type="submit") Contact Us
