@@ -76,5 +76,10 @@ module.exports = {
             filename: "/how-to-help.html",
             inject: false
         }),
+        new HtmlWebpackPlugin({
+            template: "./html/pages/our-projects.pug",
+            filename: "/our-projects.html",
+            inject: false
+        }),
     ]
 }

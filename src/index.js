@@ -14,7 +14,7 @@ function initGoogleMap() {
 
     var mapParams = {
         center: position,
-        zoom: 12,
+        zoom: 13,
     };
 
     var map = new google.maps.Map(mapElement, mapParams);
