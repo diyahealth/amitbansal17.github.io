@@ -21,6 +21,7 @@
         "normalize.css": "^8.0.0"
     },
     "devDependencies": {
+        "copy-webpack-plugin": "^4.5.1",
         "css-loader": "^0.28.11",
         "css-rewrite-webpack-plugin": "^0.1.1",
         "extract-text-webpack-plugin": "^4.0.0-beta.0",

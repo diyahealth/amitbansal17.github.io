@@ -4,6 +4,7 @@ const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CssRewritePlugin = require("css-rewrite-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: "./index.js",
@@ -54,6 +55,15 @@ module.exports = {
         ]
     },
     plugins: [
+        new CopyWebpackPlugin([
+            {
+                from: "favicon/*",
+                ignore: [ "*.ico"],
+            },
+            {
+                from: "favicon/favicon.ico",
+            },
+        ]),
         new ExtractTextPlugin("./css/styles.css"),
         new CssRewritePlugin({
             fileReg: new RegExp('./css/styles.css'),
