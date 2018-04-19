@@ -65,6 +65,9 @@ module.exports = {
             {
                 from: "favicon/favicon.ico",
             },
+            {
+                from: "robots.txt",
+            }
         ]),
         new ExtractTextPlugin("./css/styles.css"),
         new CssRewritePlugin({
