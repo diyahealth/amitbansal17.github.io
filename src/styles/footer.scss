@@ -1,14 +1,18 @@
 .footer {
-    padding: 60px 100px;
     background-color: $text-color;
     color: #fff;
-    display: flex;
-    justify-content: space-between;
+
+    .container {
+        max-width: $container-max-width;
+        margin: auto;
+        padding: 60px 100px;
+        display: flex;
+        justify-content: space-between;
+    }
 
     .section-title {
         margin: 0 0 25px 0;
         font-weight: normal;
-        font-size: 18px;
         text-transform: uppercase;
     }
 

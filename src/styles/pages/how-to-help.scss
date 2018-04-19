@@ -1,32 +1,10 @@
 .hth-volunteer {
-    display: flex;
-
-    .text-container {
-        flex-basis: 60%;
-        padding-right: 70px;
-    }
-
-    .image-container {
-        flex-basis: 40%;
-    }
-
     .btn {
         margin-top: 45px;
     }
 }
 
 .hth-share {
-    display: flex;
-
-    .text-container {
-        flex-basis: 60%;
-        padding-left: 70px;
-    }
-
-    .image-container {
-        flex-basis: 40%;
-    }
-
     .input-group {
         justify-content: space-between;
     }

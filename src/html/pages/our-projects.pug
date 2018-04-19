@@ -12,13 +12,15 @@ block content
                 .tagline Stay Healthy. Take Your Drugs Safely
                 a.btn(href="", target="_blank") Try Beta
 
-    article.content-block
-        .op-what
-            .text-container
-                h2.block-title What it's all about
-                p.text.
-                    Medications are being prescribed at an alarming rate around the world.
-                    According to the FDA, over 4.5 billion prescriptions were filled,
+    article.content-block.text-image
+        .text-container
+            h2.block-title What it's all about
+            p.text
+                |Medications are being prescribed at an alarming rate around the world.
+                a(href="https://www.fda.gov/drugs/developmentapprovalprocess/developmentresources/ucm110632.htm"
+                  target="_blank")  According to the FDA
+                .
+                    , over 4.5 billion prescriptions were filled,
                     and Adverse Drug Reactions (ADRs) caused over 106,000 deaths and
                     hospitalized over 2M people in 2017 in the US alone.
                     In developing countries, where prescription drugs are available over
@@ -26,15 +28,15 @@ block content
                     In India, for example, 52% of the population admits to self-medicating
                     prescription drugs in order to save doctor consultancy costs.
                     That’s nearly 690M people in India who are at risk of ADR.
-            .image-container
-                img(src=require("../../images/our-projects/pills.jpg"), alt="Pills")
+        .image-container
+            img(src=require("../../images/our-projects/pills.jpg"), alt="Pills")
 
-    article.content-block.bg-stat
-        .op-time-stats
+    article.content-block-bg.bg-stat
+        .content-inner.op-time-stats
             .title
                 |The average length of medical primary care consultants spend with
                 |patients according to 
-                span.text-red BMJ Open
+                a(href="http://bmjopen.bmj.com/content/7/10/e017902", target="_blank") BMJ Open
                 |:
             ul.list-unstyled.list-stats
                 li
@@ -50,8 +52,8 @@ block content
                     .time.color-green 20 min
                     .location in the USA
 
-    article.content-block
-        .op-number-stats
+    article.content-block.text-image.op-number-stats
+        .text-container
             p.text.
                 While there is a severe shortage of doctors around the world, there has been, however,
                 a great proliferation of smartphone users. There are nearly 2.4B smartphone users with
@@ -60,19 +62,20 @@ block content
                 Although these methods are cheaper and more easily accessible, the providers often do not have
                 the full information on patients and treatment may lead to more potential risks.
                 The Ok to Take app is going to turn these things around and protect patients from ADRs.
-            .stats
-                .stat-title Number of doctors per 1000 patients:
+
+        .image-container
+                a.stat-title(href="http://bmjopen.bmj.com/content/7/10/e017902", target="_blank") Number of doctors per 1000 patients:
                 .bar.green
                 .stat-num
                     .number 3-7 / 1000
-                    .target First world countries
+                    |First world countries
                 .bar.red
                 .stat-num
                     .number 0.01-0.09 / 1000
-                    .target Developing countries
+                    |Developing countries
 
-    article.content-block.bg-outline
-        .op-how-helps
+    article.content-block-bg
+        .content-inner.image-text
             .image-container
                 img(src=require("../../images/our-projects/how-it-will-help-me.jpg"), alt="How it will help me")
             .text-container
@@ -87,39 +90,39 @@ block content
 
     article.content-block
         .op-add
+            img(src=require("../../images/our-projects/add-drugs.png"), alt="Application screens")
             h2.block-title Add drugs to check interaction
             p.text.
                 The OK to Take app is extremely easy to use. A list of medications is created by adding them to the app either
                 by taking a picture of the blister pack or by typing in the drug’s name. A quick check to see if any on
                 the current or newly added medications can cause any harm be done by touch of a button.
-            img(src=require("../../images/our-projects/add-drugs.png"), alt="Application screens")
 
-    article.op-risks.content-block.bg-outline
-        .text-container
-            h2.block-title See your risks
-            p.text.
-                The OK to Take app checks for potentially dangerous interactions among a group of medications.
-                Interactions will be classified into three risk types, high, medium and low.
-                It is recommended that you stop taking a medication that leads to a high risk interaction and consult the prescribing health care provider.
-                For medium and low risks, it is likely safe to take the medications but it’s best to read
-                the prescribing information that accompanies the drug and/or discuss with your healthcare provider. Take your health seriously.
-        .image-container
-            img.phones(src=require("../../images/our-projects/see-risks.png"), alt="See risks")
-
-    article.content-block
-        .op-reports
-            .image-container
-                img(src=require("../../images/our-projects/see-risks.png"), alt="Create & Share Reports")
+    article.op-risks.content-block-bg
+        .content-inner.text-image
             .text-container
-                h2.block-title Create & Share Reports
+                h2.block-title See your risks
                 p.text.
-                    The app creates medication reports that you can share with others.
-                    Reports that list current and/or past medications, along with drug allergies, can provide a clearer picture of your health to a doctor,
-                    who can then make safe prescribing recommendations. This app will generate the report that can be downloaded to your smartphone and/or
-                    sent directly to a health care provider or family member.
+                    The OK to Take app checks for potentially dangerous interactions among a group of medications.
+                    Interactions will be classified into three risk types, high, medium and low.
+                    It is recommended that you stop taking a medication that leads to a high risk interaction and consult the prescribing health care provider.
+                    For medium and low risks, it is likely safe to take the medications but it’s best to read
+                    the prescribing information that accompanies the drug and/or discuss with your healthcare provider. Take your health seriously.
+            .image-container
+                img.phones(src=require("../../images/our-projects/see-risks.png"), alt="See risks")
 
-    article.content-block.bg-outline
-        .op-try
+    article.content-block.op-reports.image-text
+        .image-container
+            img(src=require("../../images/our-projects/reports.png"), alt="Create & Share Reports")
+        .text-container
+            h2.block-title Create & Share Reports
+            p.text.
+                The app creates medication reports that you can share with others.
+                Reports that list current and/or past medications, along with drug allergies, can provide a clearer picture of your health to a doctor,
+                who can then make safe prescribing recommendations. This app will generate the report that can be downloaded to your smartphone and/or
+                sent directly to a health care provider or family member.
+
+    article.content-block-bg
+        .content-inner.op-try
             h2.block-title Want to try it now?
             p.text.
                 The OK to Take application will be available for all soon. However, the beta version is already available for testing.

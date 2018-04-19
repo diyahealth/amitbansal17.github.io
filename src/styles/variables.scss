@@ -2,3 +2,11 @@ $text-color: #333;
 $primary-color: #971f26;
 
 $icon-font-family: 'diya-icons';
+
+$font-size: 18px;
+
+$container-max-width: 1366px;
+
+$container-gutter: (100px/ $font-size) * 1rem;
+
+$content-max-width: ($container-max-width / $font-size) * 1rem;

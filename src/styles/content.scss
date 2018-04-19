@@ -1,12 +1,8 @@
-.content-block {
-    margin-top: 100px;
-    padding: 0 100px;
+$content-text-padding: (70px / $font-size) * 1rem;
+$content-image-basis: (445px / ($container-max-width - 200px -20px)) * 100%;
+$content-text-basis: 100% - $content-image-basis;
 
-    &.bg-outline {
-        background-color: #fff9e0;
-        padding: 100px;
-    }
-
+@mixin text-decoration() {
     .block-title {
         margin: 0 0 40px 0;
         font-size: 30px;
@@ -15,15 +11,64 @@
     }
 
     .text {
-        margin: 0;
-        font-size: 18px;
         line-height: 1.78;
+    }
+}
+
+@mixin text-image-layout() {
+    &.image-text,
+    &.text-image {
+        display: flex;
+
+        .text-container {
+            flex-basis: $content-text-basis;
+        }
+
+        .image-container {
+            flex-basis: $content-image-basis;
+        }
+    }
+
+    &.image-text {
+        .text-container {
+            padding-left: $content-text-padding;
+        }
+    }
+
+    &.text-image {
+        .text-container {
+            padding-right: $content-text-padding;
+        }
+    }
+}
+
+.content-block {
+    margin: $container-gutter auto 0;
+    padding: 0 $container-gutter;
+    max-width: $container-max-width;
+
+    @include text-image-layout();
+    @include text-decoration();
+}
+
+.content-block-bg {
+    margin-top: $container-gutter;
+    background-color: #fff9e0;
+    padding: $container-gutter 0;
+
+    .content-inner {
+        max-width: $container-max-width;
+        padding: 0 $container-gutter;
+        margin: auto;
+
+        @include text-image-layout();
+        @include text-decoration();
     }
 }
 
 .questions {
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: $container-gutter;
 
     .text {
         margin: auto;

@@ -5,23 +5,21 @@ include ../shared/head-image.pug
 block content
     +headImage("head-bg-how-to-help", "How Can I Help", "Every Life Matters. Together We Can Make a Difference")
 
-    article.content-block
-        .hth-volunteer
-            .text-container
-                h2.block-title Volunteer With Us
-                p.text.
-                    On behalf of 3.4 billion global rural population
-                    who have little or no direct access to health care providers,
-                    we invite people of all ages, backgrounds and skill sets to
-                    share in our mission and become part of DiyaGroup.
-                    Contact us to discover available volunteer opportunities.
-                
-                .a.btn(href="./contact-us") Contact Us
-            .image-container
-                img(src=require("../../images/how-to-help/volunteer-with-us.jpg"), alt="Volunteer with Us")
+    article.content-block.text-image.hth-volunteer
+        .text-container
+            h2.block-title Volunteer With Us
+            p.text.
+                On behalf of 3.4 billion global rural population
+                who have little or no direct access to health care providers,
+                we invite people of all ages, backgrounds and skill sets to
+                share in our mission and become part of DiyaGroup.
+                Contact us to discover available volunteer opportunities.
+            .a.btn(href="./contact-us") Contact Us
+        .image-container
+            img(src=require("../../images/how-to-help/volunteer-with-us.jpg"), alt="Volunteer with Us")
 
-    article.content-block.bg-outline
-        .hth-share
+    article.content-block-bg
+        .content-inner.image-text.hth-share
             .image-container
                 img(src=require("../../images/how-to-help/share-with-others.jpg"), alt="Share with others")
             .text-container

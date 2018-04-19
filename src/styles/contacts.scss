@@ -10,7 +10,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        margin-left: 100px;
+        margin-left: $container-gutter;
         padding: 60px 80px;
         background-color: #fff9e0;
     }

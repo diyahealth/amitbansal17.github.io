@@ -5,7 +5,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding: 0 100px;
+    padding: 0 $container-gutter;
 
     .splash-container {
         flex-basis: 30%;
@@ -45,21 +45,7 @@
     }
 }
 
-.op-what {
-    display: flex;
-
-    .text-container {
-        flex-basis: 60%;
-        padding-right: 70px;
-    }
-
-    .image-container {
-        flex-basis: 40%;
-    }
-}
-
 .bg-stat {
-    padding: 100px;
     background: linear-gradient(to right, #ffecee, #fef5e5 59%, #ebfbf2);
 }
 
@@ -67,10 +53,6 @@
     .title {
         font-size: 22px;
         text-align: center;
-    }
-
-    .text-red {
-        color: $primary-color;
     }
 
     .list-stats {
@@ -101,25 +83,12 @@
         .location {
             text-align: center;
             margin-top: 20px;
-            font-size: 18px;
         }
     }
 }
 
 .op-number-stats {
-    display: flex;
-
-    .text {
-        padding-right: 70px;
-        flex-basis: 60%;
-    }
-
-    .stats {
-        flex-basis: 40%;
-    }
-
     .stat-title {
-        color: $primary-color;
         font-size: 22px;
     }
 
@@ -146,23 +115,6 @@
         .number {
             font-size: 28px;
         }
-
-        .target {
-            font-size: 18px;
-        }
-    }
-}
-
-.op-how-helps {
-    display: flex;
-
-    .image-container {
-        flex-basis: 40%;
-    }
-
-    .text-container {
-        flex-basis: 60%;
-        padding-left: 70px;
     }
 }
 
@@ -175,20 +127,14 @@
     }
 
     img {
-        margin-top: 60px;
+        margin-bottom: 60px;
         max-width: 894px;
     }
 }
 
 .op-risks {
     margin: 200px 0;
-    display: flex;
     justify-content: space-between;
-
-    .text-container {
-        flex-basis: 70%;
-        padding-right: 70px;
-    }
 
     .image-container {
         height: 0;
@@ -214,16 +160,6 @@
 }
 
 .op-reports {
-    display: flex;
     align-items: center;
     justify-content: space-between;
-
-    .image-container {
-        flex-basis: 30%;
-    }
-
-    .text-container {
-        flex-basis: 70%;
-        padding-left: 70px;
-    }
 }

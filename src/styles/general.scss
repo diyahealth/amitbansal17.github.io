@@ -1,7 +1,11 @@
+html {
+    color: $text-color;
+    font-size: $font-size;
+    line-height: 1;
+}
+
 body {
     font-family: "Open Sans", sans-serif;
-    color: $text-color;
-    line-height: 1;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -11,10 +15,15 @@ body {
 
 a {
     text-decoration: none;
+    color: $primary-color;
 }
 
 img {
     max-width: 100%;
+}
+
+p {
+    margin: 0;
 }
 
 .list-unstyled {
@@ -29,7 +38,7 @@ img {
     background-color: $primary-color;
     color: #fff;
     font-size: 22px;
-    padding: 20px 64px;
+    padding: 18px 64px;
     border: 1px;
     user-select: none;
     cursor: pointer;
