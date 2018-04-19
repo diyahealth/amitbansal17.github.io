@@ -18,7 +18,8 @@
     "author": "DiayGroup",
     "license": "ISC",
     "dependencies": {
-        "normalize.css": "^8.0.0"
+        "normalize.css": "^8.0.0",
+        "npm": "^5.8.0"
     },
     "devDependencies": {
         "copy-webpack-plugin": "^4.5.1",

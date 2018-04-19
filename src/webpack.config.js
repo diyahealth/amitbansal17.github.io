@@ -6,12 +6,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CssRewritePlugin = require("css-rewrite-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const pages = require("./scripts/page-cofigs");
+const pages = require("./scripts/page-configs");
 
 module.exports = {
     entry: "./index.js",
     output: {
-        path: path.resolve("./dist"),
+        path: path.resolve("../dist"),
         filename: "js/app.js"
     },
     module: {
@@ -79,25 +79,25 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./html/pages/index.pug",
             templateParameters: pages.index,
-            filename: "/index.html",
+            filename: "index.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
             template: "./html/pages/contact-us.pug",
             templateParameters: pages.contactUs,
-            filename: "/contact-us.html",
+            filename: "contact-us.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
             template: "./html/pages/how-to-help.pug",
             templateParameters: pages.howToHelp,
-            filename: "/how-to-help.html",
+            filename: "how-to-help.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
             template: "./html/pages/our-projects.pug",
             templateParameters: pages.ourProjects,
-            filename: "/our-projects.html",
+            filename: "our-projects.html",
             inject: false
         }),
     ]
