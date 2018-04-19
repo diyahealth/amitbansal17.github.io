@@ -10,12 +10,12 @@
     }
 
     .social-btn {
-        display: inline-block;
+        display: flex;
         border-radius: 30px;
         background-color: $primary-color;
         color: #fff;
         font-size: 22px;
-        padding: 17px 40px;
+        padding: 18px 40px;
         border: 1px;
         user-select: none;
         cursor: pointer;

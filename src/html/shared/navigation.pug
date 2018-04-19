@@ -1,10 +1,11 @@
 nav.navigation-container
     div.logo-container
-        img.logo(src=require("../../images/diyagroup-logo.svg"), alt="Diya Group Logo")
+        a(href=pages.index)
+            img.logo(src=require("../../images/diyagroup-logo.svg"), alt="DiyaGroup Logo")
     ul.navigation
         li
-            a(href="./our-projects") Our Projects
+            a(href=pages.ourProjects, class=url === pages.ourProjects ? "active" : "") Our Projects
         li
-            a(href="./how-to-help") How To Help
+            a(href=pages.howToHelp, class=url === pages.howToHelp ? "active" : "") How To Help
         li
-            a(href="./contact-us") Contact Us
+            a(href=pages.contactUs, class=url === pages.contactUs ? "active" : "") Contact Us

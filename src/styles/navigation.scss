@@ -20,13 +20,25 @@
         display: flex;
         justify-content: space-between;
 
+        li {
+            padding-left: 20px;
+        }
+
         a {
             line-height: 1;
             color: #333;
             text-decoration: none;
             text-transform: uppercase;
-            padding-left: 20px;
             display: block;
+            position: relative;
+
+            &.active::before {
+                content: " ";
+                border: 1px solid $primary-color;
+                position: absolute;
+                width: 100%;
+                bottom: -10px;
+            }
         }
     }
 }
