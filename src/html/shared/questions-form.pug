@@ -1,16 +1,26 @@
-form#form(action="", method="post", name="questions").content-block.questions
+form#form.content-block.questions(
+    action="./contact-us",
+    method="post",
+    name="questions",
+    onsubmit="return sendContactForm(event, this)")
     h2.block-title Have Questions?
     p.text.
         If you have questions, suggestions or would like to volunteer with DiyaGroup in our mission,
         please contact us. We look forward to hearing from you!
 
     .input-group
-        input.form-control(name="firstName", type="text", placeholder="First name")
-        input.form-control(name="lastName", type="text", placeholder="Last name")
-        input.form-control(name="email", type="email", placeholder="Email")
+        input.form-control(name="FirstName", type="text", placeholder="First name", maxlength="250")
+        input.form-control(name="LastName", type="text", placeholder="Last name", maxlength="250")
+        input.form-control(name="Email", type="email", placeholder="Email", maxlength="250")
 
     .input-group
-        textarea.form-control(name="message", rows="5", placeholder="Your message")
+        textarea.form-control(name="Message", rows="5", placeholder="Your message", required, maxlength="10000")
+
+    .input-group
+        .g-recaptcha(
+            data-sitekey="6Le-a1MUAAAAACpFUE5aZ5k-os4F_d9svImr_x8m",
+            data-callback="requireReCaptcha",
+            data-expired-callback="expireReCaptcha")
 
     .input-group
         button.btn(type="submit") Submit
