@@ -16,8 +16,15 @@ function showPopup(title, text) {
     alert(title);
 }
 
+function formAsJson(form) {
+    return form.elements.reduce((data, element)=> {
+        data[element.name] = element.value;
+        return data;
+    }, {});
+}
+
 export function sendContactForm(e, form) {
-    var data = new FormData(form);
+    var data = formAsJson(form);
 
     if (!isReCaptchaPassed) {
         return false;
@@ -36,7 +43,7 @@ export function sendContactForm(e, form) {
     request.onerror = function() {
         showErrorPopup("Can't reach target server.")
     }
-    request.send(data);
+    request.send(JSON.stringify(data));
 
     return false;
 }
