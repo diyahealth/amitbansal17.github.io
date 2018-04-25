@@ -3,7 +3,17 @@
     padding-top: 550px / 1366px * 100%;
     background-position: center;
     background-size: cover;
-    position: relative;
+
+    .content-container {
+        max-width: $container-max-width;
+        margin: auto;
+        position: relative;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        padding-top: 330px / 320px * 100%;
+        margin-bottom: 50px;
+    }
 
     &.head-bg-index {
         background-image: url("../images/index/index-page-bg.jpg");
@@ -25,9 +35,26 @@
         font-size: 48px;
         font-weight: 600;
         color: #fff;
-        background-color: $primary-color;
+        background-color: transparentize($primary-color, 0.1);
         height: 270px;
         margin: 0;
+
+        @media screen and (max-width: $break-tablet) {
+            left: 30px;
+            height: 184px;
+            font-size: 34px;
+            padding: 30px 45px;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            bottom: -30px;
+            left: 20px;
+            right: 20px;
+            padding: 20px 40px;
+            font-size: 26px;
+            height: 184px;
+            text-align: center;
+        }
     }
 
     .text-container {
@@ -36,5 +63,21 @@
         padding: 30px 170px;
         font-size: 30px;
         background-color: #fff9e0e6;
+
+        @media screen and (max-width: $break-tablet) {
+            bottom: 30px;
+            font-size: 20px;
+            padding: 20px 75px;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            bottom: 0;
+            padding: 20px;
+            font-size: 16px;
+            background-color: #fff9e0e6;
+            line-height: 1.5;
+            text-align: center;
+            width: 100%;
+        }
     }
 }

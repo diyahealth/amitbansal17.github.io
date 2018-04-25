@@ -1,10 +1,18 @@
 .index-diya {
     padding: 40px 0;
 
+    @media screen and (max-width: $break-mobile) {
+        padding: 0;
+    }
+
     .border-container {
         position: relative;
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: $break-mobile) {
+            flex-direction: column;
+        }
 
         &::after {
             content: " ";
@@ -13,16 +21,38 @@
             width: 80%;
             right: 0;
             border: solid 2px $primary-color;
+
+            @media screen and (max-width: $break-mobile) {
+                display: none;
+            }
         }
 
         .text {
-            flex-basis: 60%;
+            flex-basis: $content-text-basis;
             padding: 0 70px;
+
+            @media screen and (max-width: $break-tablet) {
+                padding: 0 30px;
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                padding: 0 20px;
+                margin-top: 23px;
+                flex-basis: auto;
+            }
         }
 
         .image-container {
-            flex-basis: 40%;
+            flex-basis: $content-image-basis;
             z-index: 1;
+
+            @media screen and (max-width: $break-tablet) {
+                flex-basis: $content-image-basis-tablet;
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                flex-basis: auto;
+            }
         }
     }
 }
@@ -38,16 +68,32 @@
 
     .text-container {
         padding-right: 35px;
+
+        @media screen and (max-width: $break-tablet) {
+            padding-right: 26px;
+        }
     }
 
     .quote-container {
         padding-left: 35px;
+
+        @media screen and (max-width: $break-tablet) {
+            padding-left: 26px;
+        }
     }
 
     .header-replacement {
         border: 2px solid #971f26;
         width: 100px;
         margin-bottom: 50px;
+
+        @media screen and (max-width: $break-tablet) {
+            margin-bottom: 37px;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            margin: 29px 0 25px;
+        }
     }
 
     .quote {
@@ -55,21 +101,24 @@
         font-size: 26px;
         line-height: 1.69;
         margin: 0;
+
+        @media screen and (max-width: $break-tablet) {
+            font-size: 18px;
+            line-height: 1.78;
+        }
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        flex-direction: column;
+
+        .text-container,
+        .quote-container {
+            padding: 0;
+        }
     }
 }
 
 .index-projects {
-    display: flex;
-
-    .image-container {
-        flex-basis: 40%;
-    }
-
-    .text-container {
-        flex-basis: 60%;
-        padding-left: 70px;
-    }
-
     .link-container {
         text-align: right;
         margin-top: 25px;
@@ -78,8 +127,34 @@
     .app-header {
         margin: 0 0 25px 0;
     }
+
+    .text-container {
+        margin-top: 71px;
+
+        @media screen and (max-width: $break-tablet) {
+            margin-top: 43px;
+        }
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        .block-title {
+            padding: 0 20px;
+        }
+
+        .text-container {
+            margin-top: 0;
+        }
+
+        .link-container {
+            text-align: center;
+        }
+    }
 }
 
 .index-contacts {
     margin-top: $container-gutter;
+
+    @media screen and (max-width: $break-mobile) {
+        margin-top: 40px;
+    }
 }

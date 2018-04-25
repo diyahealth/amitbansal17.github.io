@@ -7,7 +7,7 @@
         "dev": "webpack --progress --bail --mode=development",
         "watch": "npm run dev -- --watch",
         "prod": "webpack --mode=production",
-        "clean": "rimraf ./dist",
+        "clean": "rimraf ../dist",
         "dist": "npm install && npm run clean && npm run prod"
     },
     "keywords": [

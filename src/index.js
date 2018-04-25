@@ -8,8 +8,8 @@ function initGoogleMap() {
     }
 
     var position = {
-        lat: 37.812700,
-        lng: -122.273364,
+        lat: 37.830856,
+        lng: -122.2493,
     };
 
     var mapParams = {
@@ -20,8 +20,8 @@ function initGoogleMap() {
     var map = new google.maps.Map(mapElement, mapParams);
 
     var markerParams = {
-        position,
-        map,
+        position: position,
+        map: map,
         icon: mapPin
     };
 

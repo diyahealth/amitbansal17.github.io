@@ -2,6 +2,10 @@ html {
     color: $text-color;
     font-size: $font-size;
     line-height: 1;
+
+    @media screen and (max-width: $break-tablet) {
+        font-size: $font-size-tablet;
+    }
 }
 
 body {
@@ -46,5 +50,11 @@ p {
 
     &:focus {
         outline: 0;
+    }
+
+    @media screen and (max-width: $break-tablet) {
+        font-size: 16px;
+        padding: 13px 59px;
+        align-self: center;
     }
 }

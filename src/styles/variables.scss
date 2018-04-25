@@ -4,9 +4,22 @@ $primary-color: #971f26;
 $icon-font-family: 'diya-icons';
 
 $font-size: 18px;
+$font-size-tablet: 14px;
 
 $container-max-width: 1366px;
+$container-max-width-tablet: 768px;
+$container-max-width-mobile: 420px;
+
+$break-tablet: 1024px;
+$break-mobile: 576px;
 
 $container-gutter: (100px/ $font-size) * 1rem;
+$container-gutter-tablet: (30px/ $font-size-tablet) * 1rem;
 
 $content-max-width: ($container-max-width / $font-size) * 1rem;
+
+$content-image-basis: (445px / ($container-max-width - 200px -20px)) * 100%;
+$content-text-basis: 100% - $content-image-basis;
+
+$content-image-basis-tablet: (298px / ($container-max-width-tablet - 60px)) * 100%;
+$content-text-basis-tablet: 100% - $content-image-basis-tablet;

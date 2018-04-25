@@ -1,6 +1,4 @@
 $content-text-padding: (70px / $font-size) * 1rem;
-$content-image-basis: (445px / ($container-max-width - 200px -20px)) * 100%;
-$content-text-basis: 100% - $content-image-basis;
 
 @mixin text-decoration() {
     .block-title {
@@ -8,6 +6,16 @@ $content-text-basis: 100% - $content-image-basis;
         font-size: 30px;
         text-transform: uppercase;
         font-weight: normal;
+
+        @media screen and (max-width: $break-tablet) {
+            margin-bottom: 21px;
+            font-size: 22px;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            margin-bottom: 16px;
+            font-size: 22px;
+        }
     }
 
     .text {
@@ -15,29 +23,64 @@ $content-text-basis: 100% - $content-image-basis;
     }
 }
 
-@mixin text-image-layout() {
+@mixin text-image-layout(
+    $text-basis: $content-text-basis,
+    $image-basis: $content-image-basis,
+    $padding: $content-text-padding) {
+    &.image-text {
+        .text-container {
+            padding-left: $padding;
+
+            @media screen and (max-width: $break-tablet) {
+                padding-left: 30px;
+            }
+        }
+    }
+
+    &.text-image {
+        .text-container {
+            padding-right: $padding;
+
+            @media screen and (max-width: $break-tablet) {
+                padding-right: 30px;
+            }
+        }
+    }
+
     &.image-text,
     &.text-image {
         display: flex;
 
         .text-container {
-            flex-basis: $content-text-basis;
+            flex-basis: $text-basis;
+
+            @media screen and (max-width: $break-tablet) {
+                flex-basis: $content-text-basis-tablet;
+            }
         }
 
         .image-container {
-            flex-basis: $content-image-basis;
-        }
-    }
+            flex-basis: $image-basis;
 
-    &.image-text {
-        .text-container {
-            padding-left: $content-text-padding;
+            @media screen and (max-width: $break-tablet) {
+                flex-basis: $content-image-basis-tablet;
+            }
         }
-    }
 
-    &.text-image {
-        .text-container {
-            padding-right: $content-text-padding;
+        @media screen and (max-width: $break-mobile) {
+            flex-direction: column;
+
+            .image-container {
+                order: 1;
+                flex-basis: auto;
+            }
+
+            .text-container {
+                order: 2;
+                padding: 0 20px;
+                margin-top: 25px;
+                flex-basis: auto;
+            }
         }
     }
 }
@@ -46,6 +89,16 @@ $content-text-basis: 100% - $content-image-basis;
     margin: $container-gutter auto 0;
     padding: 0 $container-gutter;
     max-width: $container-max-width;
+
+    @media screen and (max-width: $break-tablet) {
+        padding: 0 $container-gutter-tablet;
+        margin-top: 40px;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        margin-top: 36px;
+        padding: 0;
+    }
 
     @include text-image-layout();
     @include text-decoration();
@@ -56,6 +109,16 @@ $content-text-basis: 100% - $content-image-basis;
     background-color: #fff9e0;
     padding: $container-gutter 0;
 
+    @media screen and (max-width: $break-tablet) {
+        margin-top: 40px;
+        padding: $container-gutter-tablet;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        margin-top: 36px;
+        padding: 40px 20px;
+    }
+
     .content-inner {
         max-width: $container-max-width;
         padding: 0 $container-gutter;
@@ -63,16 +126,20 @@ $content-text-basis: 100% - $content-image-basis;
 
         @include text-image-layout();
         @include text-decoration();
+
+        @media screen and (max-width: $break-tablet) {
+            padding: 0;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            padding: 0;
+
+            &.image-text,
+            &.text-image {
+                .text-container {
+                    padding: 0;
+                }
+            }
+        }
     }
 }
-
-.questions {
-    text-align: center;
-    margin-bottom: $container-gutter;
-
-    .text {
-        margin: auto;
-        max-width: 750px;
-    }
-}
-

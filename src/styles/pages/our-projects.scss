@@ -1,3 +1,13 @@
+.head-bg-our-projects {
+    position: relative;
+}
+
+@media screen and (max-width: $container-max-width-mobile) {
+    .head-bg-our-projects {
+        padding-top: 446px/320px*100%;
+    }
+}
+
 .op-content-container {
     position: absolute;
     top: 0;
@@ -7,6 +17,12 @@
     align-items: center;
     padding: 0 $container-gutter;
 
+    @media screen and (max-width: $break-mobile) {
+        flex-direction: column-reverse;
+        padding: 30px 20px 0;
+        justify-content: flex-end;
+    }
+
     .splash-container {
         flex-basis: 30%;
         align-self: stretch;
@@ -14,6 +30,10 @@
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
+
+        @media screen and (max-width: $break-mobile) {
+            flex-basis: auto;
+        }
     }
 
     .splash {
@@ -24,12 +44,21 @@
         background-size: 100%;
         flex-basis: 85%;
         background-image: url("../images/our-projects/splash.png");
+
+        @media screen and (max-width: $break-mobile) {
+            max-width: 50%;
+        }
     }
 
     .content {
         margin: auto;
         padding: 0 1rem;
         text-align: center;
+
+        @media screen and (max-width: $break-mobile) {
+            margin: 0 0 25px;
+            padding: 0;
+        }
     }
 
     .header {
@@ -37,16 +66,29 @@
         font-size: 46px;
         color: $primary-color;
         font-weight: 600;
+
+        @media screen and (max-width: $break-mobile) {
+            font-size: 26px;
+        }
     }
 
     .tagline {
         margin: 40px 0 60px;
         font-size: 30px;
+
+        @media screen and (max-width: $break-mobile) {
+            font-size: 16px;
+            margin: 16px 0 24px;
+        }
     }
 }
 
 .bg-stat {
     background: linear-gradient(to right, #ffecee, #fef5e5 59%, #ebfbf2);
+
+    @media screen and (max-width: $break-mobile) {
+        background: linear-gradient(to bottom, #ffecee, #fef5e5 59%, #ebfbf2);
+    }
 }
 
 .op-time-stats {
@@ -59,6 +101,15 @@
         margin-top: 50px;
         display: flex;
         justify-content: space-between;
+
+        @media screen and (max-width: $break-mobile) {
+            flex-direction: column;
+            text-align: center;
+
+            li + li {
+                margin-top: 40px;
+            }
+        }
 
         .time {
             font-size: 60px;
@@ -90,6 +141,18 @@
 .op-number-stats {
     .stat-title {
         font-size: 22px;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        &.content-block.text-image .text-container {
+            margin-top: 0;
+        }
+
+        &.content-block.text-image .image-container {
+            order: 9;
+            margin-top: 30px;
+            padding: 0 20px;
+        }
     }
 
     .bar {
@@ -128,7 +191,12 @@
 
     img {
         margin-bottom: 60px;
-        max-width: 894px;
+        width: 894px;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        padding: 0 20px;
+        text-align: left;
     }
 }
 
@@ -136,12 +204,28 @@
     margin: 200px 0;
     justify-content: space-between;
 
+    @media screen and (max-width: $break-mobile) {
+        margin: 36px 0 0;
+
+        &.content-block-bg .content-inner.text-image .text-container {
+            padding: 0;
+        }
+    }
+
     .image-container {
         height: 0;
         align-self: center;
 
+        @media screen and (max-width: $break-mobile) {
+            height: auto;
+        }
+
         .phones {
             transform: translateY(-50%);
+
+            @media screen and (max-width: $break-mobile) {
+                transform: none;
+            }
         }
     }
 }
@@ -162,4 +246,12 @@
 .op-reports {
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width: $break-mobile) {
+        padding: 0 20px;
+
+        &.content-block.image-text .text-container {
+            padding: 0;
+        }
+    }
 }
