@@ -17,7 +17,7 @@ function showPopup(title, text) {
 }
 
 function formAsJson(form) {
-    return form.elements.reduce((data, element)=> {
+    return [].reduce.call(form.elements, (data, element) => {
         data[element.name] = element.value;
         return data;
     }, {});
