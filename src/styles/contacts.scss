@@ -91,6 +91,7 @@
 .questions {
     text-align: center;
     margin-bottom: $container-gutter;
+    position: relative;
 
     .g-recaptcha {
         margin: auto;
@@ -124,4 +125,73 @@
             }
         }
     }
+}
+
+.submit-message {
+    .header-container {
+        font-size: 72px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-line {
+            border: 1px solid $primary-color;
+            flex-grow: 1;
+        }
+
+        .icon-diya-lamp {
+            padding: 0 40px;
+            margin-top: -10px;
+        }
+    }
+
+    .message-title {
+        margin-top: 60px;
+        text-transform: uppercase;
+        font-size: 30px;
+        text-align: center;
+
+        @media screen and (max-width: $break-tablet) {
+            margin-top: 40px;
+            font-size: 22px;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            margin-top: 35px;
+            line-height: 1.45;
+        }
+    }
+
+    .message-text {
+        font-size: 18px;
+        text-align: center;
+        line-height: 1.78;
+        margin-top: 40px;
+
+        @media screen and (max-width: $break-tablet) {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.71;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            margin-top: 10px;
+        }
+    }
+
+    .btn {
+        margin-top: 40px;
+
+        @media screen and (max-width: $break-tablet) {
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            margin-top: 10px;
+        }
+    }
+}
+
+.hidden {
+    display: none;
 }

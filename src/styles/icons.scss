@@ -1,5 +1,7 @@
 $icon-address: \e900;
 $icon-close: \e901;
+$icon-diya-lamp-path1: \e902;
+$icon-diya-lamp-path2: \e903;
 $icon-email: \e904;
 $icon-facebook: \e905;
 $icon-linkedin: \e906;
@@ -31,6 +33,19 @@ $icon-twitter: \e90a;
 
 @function unicode($str) {
     @return unquote("\"")+$str+unquote("\"");
+}
+
+.icon-diya-lamp {
+    &::before {
+        content: unicode($icon-diya-lamp-path1);
+        color: rgb(151, 31, 38);
+    }
+
+    &::after {
+        content: unicode($icon-diya-lamp-path2);
+        margin-left: -1em;
+        color: rgb(245, 184, 65);
+    }
 }
 
 .icon-address {

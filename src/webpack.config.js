@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const pages = require("./scripts/page-configs");
 
 module.exports = {
-    entry: "./index.js",
+    entry: "./index.ts",
     output: {
         path: path.resolve("../dist"),
         filename: "js/app.js"
@@ -53,8 +53,16 @@ module.exports = {
                         outputPath: "fonts"
                     }
                 }]
+            },
+            {
+                test: /\.ts$/,
+                loader: 'awesome-typescript-loader',
+                exclude: /node_modules/,
             }
         ]
+    },
+    resolve: {
+        extensions: [".ts", "js"]
     },
     plugins: [
         new CopyWebpackPlugin([

@@ -1,26 +1,46 @@
-form#form.content-block.questions(
-    action="./contact-us",
-    method="post",
-    name="questions",
-    onsubmit="return sendContactForm(event, this)")
-    h2.block-title Have Questions?
-    p.text.
-        If you have questions, suggestions or would like to volunteer with DiyaGroup in our mission,
-        please contact us. We look forward to hearing from you!
+include submit-message.pug
 
-    .input-group
-        input.form-control(name="FirstName", type="text", placeholder="First name", maxlength="250")
-        input.form-control(name="LastName", type="text", placeholder="Last name", maxlength="250")
-        input.form-control(name="Email", type="email", placeholder="Email", maxlength="250")
+.content-block.questions
+    form(
+        action="./contact-us",
+        method="post",
+        name="questions",
+        onsubmit="return diya.contactUs.form.send(event, this)")#form
+        fieldset#fields
+            h2.block-title Have Questions?
+            p.text.
+                If you have questions, suggestions or would like to volunteer with DiyaGroup in our mission,
+                please contact us. We look forward to hearing from you!
 
-    .input-group
-        textarea.form-control(name="Message", rows="5", placeholder="Your message", required, maxlength="10000")
+            .input-group
+                input.form-control(name="FirstName", type="text", placeholder="First name", maxlength="250")
+                input.form-control(name="LastName", type="text", placeholder="Last name", maxlength="250")
+                input.form-control(name="Email", type="email", placeholder="Email", maxlength="250")
 
-    .input-group
-        .g-recaptcha(
-            data-sitekey="6Le-a1MUAAAAACpFUE5aZ5k-os4F_d9svImr_x8m",
-            data-callback="requireReCaptcha",
-            data-expired-callback="expireReCaptcha")
+            .input-group
+                textarea.form-control(name="Message", rows="5", placeholder="Your message", required, maxlength="10000")
 
-    .input-group
-        button.btn(type="submit") Submit
+            .input-group
+                .g-recaptcha(
+                    data-sitekey="6Le-a1MUAAAAACpFUE5aZ5k-os4F_d9svImr_x8m",
+                    data-callback="diya.contactUs.captcha.pass",
+                    data-expired-callback="diya.contactUs.captcha.reset")
+
+            .input-group
+                button.btn(type="submit") Submit
+
+    .loader-container.hidden#loader
+        .loader
+            .circle
+            .circle
+            .circle
+            .circle
+            .circle
+
+    +submitMessage("Your message has been sent", "success-message")
+        .message-text Thank you for contacting us! We will get in touch with you as soon as possible.
+
+    +submitMessage("An error occured during the request", "error-message")
+        .message-text Please contact us via email 
+            a(href="mailto:amit.bansal@diyagroup.org") amit.bansal@diyagroup.org
+        button.btn(type="button", onclick="return diya.contactUs.form.reset()") Try Again

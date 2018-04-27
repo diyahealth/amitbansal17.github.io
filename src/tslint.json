@@ -1,0 +1,21 @@
+{
+  "extends": "tslint:latest",
+  "rules": {
+    "quotemark": [
+      true,
+      "double"
+    ],
+    "interface-name":[true, "never-prefix"],
+    "member-access": false,
+    "variable-name": [
+      true,
+      "allow-leading-underscore"
+    ],
+    "whitespace": [
+      true,
+      "check-module"
+    ],
+    "no-empty-interface": false,
+    "max-classes-per-file": false
+  }
+}
