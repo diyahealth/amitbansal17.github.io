@@ -6,25 +6,25 @@ footer.footer
             h4.section-title Menu
             ul.links
                 li
-                    a(href="./") About Us
+                    a(href=pages.index.url) About Us
                 li
-                    a(href="./our-projects") Our Projects
+                    a(href=pages.ourProjects.url)=pages.ourProjects.name
                 li
-                    a(href="./how-to-help") How to Help
+                    a(href=pages.howToHelp.url)=pages.howToHelp.name
         .section-contacts
             h4.section-title Contact Us
             ul.links
                 li
-                    a(href="tel:+01-408-771-6017") +1 (408) 771-6014
+                    a(href=`tel:${contacts.phone}`)=contacts.phoneText
                 li
-                    a(href="mailto:amit.bansal@diyagroup.org") amit.bansal@diyagroup.org
+                    a(href=`mailto:${contacts.email}`)=contacts.email
                 li
-                    a.multi-line(href="https://www.google.com/maps/place/4364+Montgomery+St,+Oakland,+CA+94611,+USA",
-                    target="_blank").address 4364 Montgomery St, Oakland, CA 94611, USA
+                    a.multi-line(href=`https://www.google.com/maps/place/${contacts.address.gmap}`,
+                                 target="_blank").address #{contacts.address.line1}, #{contacts.address.line2}
         .section-copyright
             .copyright-container
                 p.copyright Copyright ©2018 DiyaGroup. All Rights Reserved.
                 p.copyright DiyaGroup is a 501(c)3 non-profit organization.
             .link-container
-                a(href="./privacy-policy") Privacy Policy
-                a(href="./terms-and-conditions") Terms & Conditions
+                a(href=pages.privacyPolicy.url)= pages.privacyPolicy.name
+                a(href=pages.termsAndConditions.url)= pages.termsAndConditions.name

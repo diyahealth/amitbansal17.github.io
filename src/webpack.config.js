@@ -6,9 +6,20 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CssRewritePlugin = require("css-rewrite-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const pages = require("./scripts/page-configs");
+const data = require("./html/data");
 
-module.exports = {
+function buildTemplateData(pageName, mode) {
+    if (mode !== "production") {
+        data.keys.google.analytics = null;
+    };
+
+    return {
+        ...data,
+        page: data.pages[pageName]
+    };
+}
+
+module.exports = (env, argv) => ({
     entry: "./index.ts",
     output: {
         path: path.resolve("../dist"),
@@ -65,10 +76,9 @@ module.exports = {
         extensions: [".ts", "js"]
     },
     plugins: [
-        new CopyWebpackPlugin([
-            {
+        new CopyWebpackPlugin([{
                 from: "favicon/*",
-                ignore: [ "*.ico"],
+                ignore: ["*.ico"],
             },
             {
                 from: "favicon/favicon.ico",
@@ -86,27 +96,27 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: "./html/pages/index.pug",
-            templateParameters: pages.index,
+            templateParameters: buildTemplateData("index", argv.mode),
             filename: "index.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
             template: "./html/pages/contact-us.pug",
-            templateParameters: pages.contactUs,
+            templateParameters: buildTemplateData("contactUs", argv.mode),
             filename: "contact-us.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
             template: "./html/pages/how-to-help.pug",
-            templateParameters: pages.howToHelp,
+            templateParameters: buildTemplateData("howToHelp", argv.mode),
             filename: "how-to-help.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
             template: "./html/pages/our-projects.pug",
-            templateParameters: pages.ourProjects,
+            templateParameters: buildTemplateData("ourProjects", argv.mode),
             filename: "our-projects.html",
             inject: false
         }),
     ]
-}
+});

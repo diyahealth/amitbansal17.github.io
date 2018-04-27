@@ -57,10 +57,10 @@ block content
     article.content-block.image-text.index-projects 
             .image-container
                 h2.block-title Our Projects
-                img(src=require("../../images/index/our-projects.jpg"), alt="People in village")
+                img(src=require("../../images/index/our-projects.jpg"), alt="Ok to Take app")
             .text-container
                 h3.app-header
-                    a(href=pages.ourProjects) OK to Take 
+                    a(href=pages.ourProjects.url) OK to Take 
                     | / Mobile Application
                 p.text.
                     Ok to Take application provides quick and easy functionality
@@ -69,7 +69,7 @@ block content
                     it allows the end user to make drug-taking decisions, collaborate with
                     a family member and clearly communicate current drug and allergies information to a healthcare provider.
                 .link-container
-                    a.btn(href=pages.ourProjects) Read more
+                    a.btn(href=pages.ourProjects.url) Read more
 
     section.index-contacts
         include ../shared/contacts.pug

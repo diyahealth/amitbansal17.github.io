@@ -8,15 +8,15 @@ import "./typings";
 declare global {
     interface Window {
         diya: DiyaGroupWebSite;
+        // Google reCaptcha requires callbacks directly in window object.
+        passCaptcha: () => void;
+        resetCaptcha: () => void;
     }
 }
 
 interface DiyaGroupWebSite {
     contactUs: {
-        captcha: {
-            pass: () => void,
-            reset: () => void,
-        },
+        captcha: CaptchaStateHolder,
         form: ContactUsForm,
     };
     map: {
@@ -27,12 +27,12 @@ interface DiyaGroupWebSite {
 const layout = new LayoutManager();
 const captcha = new CaptchaStateHolder();
 
+window.passCaptcha = () => captcha.pass();
+window.resetCaptcha = () => captcha.reset();
+
 window.diya = {
     contactUs: {
-        captcha: {
-            pass: () => captcha.pass(),
-            reset: () => captcha.reset(),
-        },
+        captcha,
         form: new ContactUsForm(captcha, layout),
     },
     map: {

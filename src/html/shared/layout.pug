@@ -3,7 +3,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title=title
+        title=page.title
         link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:400,600")
         link(rel="stylesheet", href="./css/styles.css")
 
@@ -19,3 +19,10 @@ html(lang="en")
         block content
         include footer.pug
         block script
+
+        script(async, src=`https://www.googletagmanager.com/gtag/js?id=${keys.google.analytics}`)
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', "#{keys.google.analytics}");

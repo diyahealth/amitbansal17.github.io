@@ -5,17 +5,17 @@
             h1.title Contact Us
             ul.links
                 li
-                    a(href="tel:+01-408-771-6017")
+                    a(href=`tel:${contacts.phone}`)
                         i.icon-phone
-                        |+1 (408) 771-6014
+                        |#{contacts.phoneText}
                 li
-                    a(href="mailto:amit.bansal@diyagroup.org")
+                    a(href=`mailto:${contacts.email}`)
                         i.icon-email
-                        |amit.bansal@diyagroup.org
+                        |#{contacts.email}
                 li
-                    a(href="https://www.google.com/maps/place/4364+Montgomery+St,+Oakland,+CA+94611,+USA",
+                    a(href=`https://www.google.com/maps/place/${contacts.address.gmap}`,
                     target="_blank").address
                         i.icon-address
-                        |4364 Montgomery St, Oakland,
+                        |#{contacts.address.line1}
                         br
-                        | CA 94611, USA
+                        |#{contacts.address.line2}
