@@ -2,6 +2,14 @@ extends ../shared/layout.pug
 
 include ../shared/head-image.pug
 
+block head
+    meta(name="twitter:card" value="DiyaGroup Website")
+    meta(property="og:title" content="DiyaGroup Website")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="https://www.diyagroup.org/")
+    meta(property="og:image" content="https://www.diyagroup.org/images/cbde0a1dc167b130bcf77464cabbe0e7.svg")
+    meta(property="og:description" content="Description Here")
+
 block content
     +headImage("head-bg-index", "DiyaGroup", "Lighting the Path to a Healthier Future for All")
 
