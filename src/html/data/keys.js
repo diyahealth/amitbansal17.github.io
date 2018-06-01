@@ -1,7 +1,7 @@
 const keys = {
     google: {
-        map: "AIzaSyAMFkqLFS7r01WraiC9HW-MiPxLnsl9xHM",
-        captcha: "6Le-a1MUAAAAACpFUE5aZ5k-os4F_d9svImr_x8m",
+        map: "AIzaSyBYO5XrKi3ztcfR1S9AoJcjYtu2K_FdDcY",
+        captcha: "6LekklwUAAAAAJzABpyaAJzLJlsoByFXlMDSzhio",
         analytics: "UA-118012943-1",
     },
 };
