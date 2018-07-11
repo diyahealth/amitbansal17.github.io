@@ -9,8 +9,8 @@ export function initGoogleMap() {
     }
 
     const position: google.maps.LatLngLiteral = {
-        lat: 37.830856,
-        lng: -122.2493,
+        lat: 37.779097,
+        lng: -122.220587,
     };
 
     const mapParams: google.maps.MapOptions = {
