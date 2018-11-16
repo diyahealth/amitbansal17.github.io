@@ -3,9 +3,15 @@ const pages = {
         url: "./",
         name: "DiyaGroup",
         title: "DiyaGroup",
-        description: `The primary mission of DiyaGroup is to build technology o bridge the gap of access to 
+        description: `The primary mission of DiyaGroup is to build technology to bridge the gap of access to
                     basic health care information for underprivileged population, in order to assist them
                     to make safer health care decisions.`,
+    },
+    aboutUs: {
+        url: "./about-us",
+        name: "About Us",
+        title: "About Us - DiyaGroup",
+        description: "Learn about the DiyaGroup mission and members.",
     },
     ourProjects: {
         url: "./our-projects",

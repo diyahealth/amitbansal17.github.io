@@ -1,0 +1,77 @@
+extends ../shared/layout.pug
+
+include ../shared/head-image.pug
+
+block content
+    +headImage("head-bg-about-us", "We believe in the pursuit of happiness, and good health.")
+
+    article.content-block.text-image
+        .text-container
+            h2.block-title Who We Are
+            p.text.
+                We are a group of socially-minded individuals 
+                from a spectrum of developed and developing
+                countries around the world. We represent many
+                different cultures, religions, ethnic background,
+                and speak over a dozen spoken languages.
+                Some of us are starting to dabble in the world of
+                social causes, while others have generations of social
+                work in our lineage. We have deep expertise in
+                the areas of technical, medical, legal, arts
+                and linguistics, and at DiyaGroup, we share a common cause
+                to help make life saving healthcare decisions feasible for all.
+        .image-container
+            img(src=require("../../images/index/people.jpg"), alt="People in village")
+
+    article.content-block-bg
+        .content-inner.index-mission
+                .text-container
+                    h2.block-title Our Mission
+                    p.text.
+                        Much of the world's population lives in rural or undeveloped
+                        areas where basic life needs cannot be met.
+                        Yet, they still develop health ailments requiring medical treatment.
+                        They may have to travel miles to find this help, however communication
+                        can be limited to nil. Making health care decisions based on limited
+                        information is not desirable; in reality, it’s unsafe.
+                .quote-container
+                    .header-replacement
+                    p.quote.
+                        The primary mission of DiyaGroup is to build technology 
+                        o bridge the gap of access to basic health care information
+                        for underprivileged population, in order to assist them to make safer health care decisions.
+
+
+    article.content-block
+        .index-diya
+            .border-container
+                .image-container
+                    img(src=require("../../images/index/diya.jpg"), alt="Diya")
+                p.text.
+                    The diya is a traditional oil lamp usually made from clay.
+                    It is truly a great symbol of optimism and prosperity.
+                    It lights the dark and gives a deep sense of calm, which is extremely in tune with our mission.
+                    Similar to the diya we want to light the path for those who have lost in the dark
+                    and give them the hope for a better and healthier future.
+
+    article.content-block-bg
+        .content-inner.image-text.hth-share
+            .image-container
+                img(src=require("../../images/how-to-help/share-with-others.jpg"), alt="Share with others")
+            .text-container
+                h2.block-title Share with others
+                p.text.
+                    If you believe in our mission or know someone else who may have the desire,
+                    knowledge or expertise, please help by increasing awareness of DiyaGroup.
+                    Share our story with your friends. Together we can make the future brighter
+                    for those in need and give everyone a fair chance for good health.
+                .input-group
+                    a.social-btn.fb(href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.diyagroup.org/" target="_blank")
+                        i.icon-facebook
+                        |Share
+                    a.social-btn.twt(href="https://twitter.com/intent/tweet/?text=DiyaGroup%20Website&amp;url=https%3A%2F%2Fwww.diyagroup.org%2F" target="_blank")
+                        i.icon-twitter
+                        |Tweet
+                    a.social-btn.lin(href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.diyagroup.org/&title=DiyaGroup%20Website&summary=Lighting%20the%20Path%20to%20a%20Healthier%20Future%20for%20All&source=https%3A//www.diyagroup.org/" target="_blank")
+                        i.icon-linkedin
+                        |Share
