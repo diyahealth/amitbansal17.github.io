@@ -11,78 +11,47 @@ block head
     meta(property="og:description" content="Description Here")
 
 block content
-    +headImage("head-bg-index", "DiyaGroup", "Lighting the Path to a Healthier Future for All")
+    +headImage("head-bg-index", "We all deserve the best health possible.", "big")
+      
+    article.content-block.image-text
+        .image-container
+            img(src=require("../../images/index/people.jpg"), alt="People in village")
+        .text-container
+            p.text.
+                We envision a future where every individual, in every stratum of society, has the tools, information, and knowledge they need to take an active role in their own ability to seek a healthy, happy, and meaningful life. Health is not simply an afterthought, but rather a precondition for the pursuit of happiness. So many of us still lack what many of us enjoy as common sense access to health care and the safe practice of medicine. At DiyaGroup we want to change this.
+
+    article.content-block 
+        h2.index-highlight DiyaGroup is changing the healthcare equation, in a way that is inclusive of the underprivileged.
+
+    article.content-block-bg.bg-stat
+        .content-inner.op-time-stats
+            .title
+                |Average time spent with patients during medical primary care consultants:
+            ul.list-unstyled.list-stats
+                li
+                    .time.color-deep-red 48 s
+                    .location in Bangladesh
+                li
+                    .time.color-red 2 min
+                    .location in India
+                li
+                    .time.color-yellow 9 min
+                    .location in the UK
+                li
+                    .time.color-green 20 min
+                    .location in the USA
 
     article.content-block.text-image
         .text-container
-            h2.block-title Who We Are
-            p.text.
-                We are a group of socially-minded individuals 
-                from a spectrum of developed and developing
-                countries around the world. We represent many
-                different cultures, religions, ethnic background,
-                and speak over a dozen spoken languages.
-                Some of us are starting to dabble in the world of
-                social causes, while others have generations of social
-                work in our lineage. We have deep expertise in
-                the areas of technical, medical, legal, arts
-                and linguistics, and at DiyaGroup, we share a common cause
-                to help make life saving healthcare decisions feasible for all.
+            p.text
+                | DiyaGroup is helping to bridge the gap of access to basic health care information for underprivileged population, in order to assist them to make safer health care decisions. The world has made unprecedented process in delivering quality healthcare to a larger proportion of the population than ever before. At the same time, the need is still much greater. Many areas still have far too few doctors, translating to extremely brief consultations and increased risks for these populations.
+            br 
+            .link-container
+                a.btn(href=pages.ourProjects.url) Check out our projects
         .image-container
-            img(src=require("../../images/index/people.jpg"), alt="People in village")
-
-    article.content-block
-        .index-diya
-            .border-container
-                .image-container
-                    img(src=require("../../images/index/diya.jpg"), alt="Diya")
-                p.text.
-                    The diya is a traditional oil lamp usually made from clay.
-                    It is used in India for special occasions, specifically during the Diwali Festival,
-                    the Festival of Lights. The diya is truly a great symbol of optimism and prosperity.
-                    It lights the dark and gives a deep sense of calm, which is extremely in tune with our mission.
-                    Similar to the diya we want to light the path for those who have lost in the dark
-                    and give them the hope for a better and healthier future.
-
-    article.content-block-bg
-        .content-inner.index-mission
-                .text-container
-                    h2.block-title Our Mission
-                    p.text.
-                        Much of the world's population lives in rural or undeveloped
-                        areas where basic life needs cannot be met.
-                        Yet, they still develop health ailments requiring medical treatment.
-                        They may have to travel miles to find this help, however communication
-                        can be limited to nil. Making health care decisions based on limited
-                        information is not desirable; in reality, it’s unsafe.
-                .quote-container
-                    .header-replacement
-                    p.quote.
-                        The primary mission of DiyaGroup is to build technology 
-                        o bridge the gap of access to basic health care information
-                        for underprivileged population, in order to assist them to make safer health care decisions.
-
-    article.content-block.image-text.index-projects 
-            .image-container
-                h2.block-title Our Projects
-                img(src=require("../../images/index/our-projects.jpg"), alt="Ok to Take app")
-            .text-container
-                h3.app-header
-                    a(href=pages.ourProjects.url) OK to Take 
-                    | / Mobile Application
-                p.text.
-                    Ok to Take application provides quick and easy functionality
-                    for checking critical drug interactions and identifying possible health risks.
-                    Using innovative drug recognition technology and a simplified user interface in local languages,
-                    it allows the end user to make drug-taking decisions, collaborate with
-                    a family member and clearly communicate current drug and allergies information to a healthcare provider.
-                .link-container
-                    a.btn(href=pages.ourProjects.url) Read more
+            img(src=require("../../images/index/diya.jpg"), alt="Diya Lamp")
 
     section.index-contacts
-        include ../shared/contacts.pug
-
-    include ../shared/questions-form.pug
 
 block script
     include ../shared/map-script.pug

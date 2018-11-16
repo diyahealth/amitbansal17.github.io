@@ -19,61 +19,59 @@
         background-image: url("../images/index/index-page-bg.jpg");
     }
 
-    &.head-bg-how-to-help {
-        background-image: url("../images/how-to-help/how-to-help.jpg");
+    &.head-bg-about-us {
+        background-image: url("../images/about-us/about-us-bg.jpg");
     }
 
     &.head-bg-our-projects {
-        background-image: url("../images/our-projects/ok-to-take-bg.jpg");
+        background-image: url("../images/our-projects/our-projects-bg.jpg");
     }
 
-    .title-container {
-        position: absolute;
-        bottom: 0;
-        left: $container-gutter;
-        padding: 50px 70px;
-        font-size: 48px;
-        font-weight: 600;
-        color: #fff;
-        background-color: transparentize($primary-color, 0.1);
-        height: 270px;
-        margin: 0;
+    &.head-bg-how-to-help {
+        background-image: url("../images/how-to-help/how-to-help-bg.jpg");
+    }
 
+    &.big {
+      padding-top: 750px / 1366px * 100%;
+      .text-container {
+        font-size: 65px;
+        font-weight: bold;
         @media screen and (max-width: $break-tablet) {
-            left: 30px;
-            height: 184px;
-            font-size: 34px;
-            padding: 30px 45px;
+            font-size: 30px;
+            padding: 20px 75px;
         }
 
         @media screen and (max-width: $break-mobile) {
-            bottom: -30px;
-            left: 20px;
-            right: 20px;
-            padding: 20px 40px;
-            font-size: 26px;
-            height: 184px;
-            text-align: center;
+            font-size: 20px;
+            line-height: 1.2;
+            padding: 10px 30px;
+
         }
+      }
     }
 
     .text-container {
         position: absolute;
-        bottom: 45px;
-        padding: 30px 170px;
+        width: 100%;
+        bottom: 120px;
+        text-align: center;
+        padding: 30px 180px;
         font-size: 30px;
-        background-color: rgba(255, 249, 224, 0.9);
+        font-family: "Arial Black";
+        color: #a14743;
+        background-color: rgba(255,255,255, 0.85);
 
         @media screen and (max-width: $break-tablet) {
             bottom: 30px;
-            font-size: 20px;
+            font-size: 30px;
+            line-height: 38px;
             padding: 20px 75px;
         }
 
         @media screen and (max-width: $break-mobile) {
             bottom: 0;
             padding: 20px;
-            font-size: 16px;
+            font-size: 20px;
             line-height: 1.5;
             text-align: center;
             width: 100%;

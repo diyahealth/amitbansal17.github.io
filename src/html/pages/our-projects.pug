@@ -3,126 +3,61 @@ extends ../shared/layout.pug
 include ../shared/head-image.pug
 
 block content
-    section.head-image-container.head-bg-our-projects
-        .op-content-container
-            .splash-container
-                .splash
-            .content
-                h1.header OK to Take App
-                .tagline Stay Healthy. Take Your Drugs Safely
+    +headImage("head-bg-our-projects", "We believe patients and doctors are a team.")
+    
+    article.content-block 
+        h2(style="text-align: center;") For Doctors
+        h2.index-highlight RxDiya: Prescribe with confidence.
 
     article.content-block.text-image
         .text-container
-            h2.block-title What it's all about
-            p.text
-                |Medications are being prescribed at an alarming rate around the world.
-                a(href="https://www.fda.gov/drugs/developmentapprovalprocess/developmentresources/ucm110632.htm"
-                  target="_blank")  According to the FDA
-                .
-                    , over 4.5 billion prescriptions were filled,
-                    and Adverse Drug Reactions (ADRs) caused over 106,000 deaths and
-                    hospitalized over 2M people in 2017 in the US alone.
-                    In developing countries, where prescription drugs are available over
-                    the counter, the death rates due to ADRs are even higher.
-                    In India, for example, 52% of the population admits to self-medicating
-                    prescription drugs in order to save doctor consultancy costs.
-                    That’s nearly 690M people in India who are at risk of ADR.
+            h2.block-title Patient information in one place
+            p.text.
+                Across the world demand for medical expertise far outstrips the supply, and no where is this pain felt more acutely than in the developing world. Your time is incredibly valuable. RxDiya surfaces critical patient data into an intelligent synopsis, so you can build a picture of the patients health in seconds, and make decisions about what treatments in a short span of time.
         .image-container
-            img(src=require("../../images/our-projects/pills.jpg"), alt="Pills")
+            img(src=require("../../images/our-projects/health-synopsis.png"), alt="Health Synopsis")
 
-    article.content-block-bg.bg-stat
-        .content-inner.op-time-stats
-            .title
-                |The average length of medical primary care consultants spend with
-                |patients according to 
-                a(href="http://bmjopen.bmj.com/content/7/10/e017902", target="_blank") BMJ Open
-                |:
-            ul.list-unstyled.list-stats
-                li
-                    .time.color-deep-red 48 s
-                    .location in Bangladesh
-                li
-                    .time.color-red 2 min
-                    .location in India
-                li
-                    .time.color-yellow 9 min
-                    .location in the UK
-                li
-                    .time.color-green 20 min
-                    .location in the USA
-
-    article.content-block.text-image.op-number-stats
+    article.content-block.text-image
         .text-container
+            h2.block-title Smart alerts
             p.text.
-                While there is a severe shortage of doctors around the world, there has been, however,
-                a great proliferation of smartphone users. There are nearly 2.4B smartphone users with
-                Internet access around the world and the number is expected to surpass 5B by 2020.
-                This has led to a surge in online options to get the needed health care.
-                Although these methods are cheaper and more easily accessible, the providers often do not have
-                the full information on patients and treatment may lead to more potential risks.
-                The Ok to Take app is going to turn these things around and protect patients from ADRs.
-
+               Adverse Drug Reactions (ADRs) caused over 106,000 deaths and hospitalized over 2M people in 2017 in the US alone. In developing countries, where prescription drugs are available over the counter, the death rates due to ADRs are even higher. You and your patients deserve to have the best information available. The Diya platform provides empowers doctors with livesaving inforamation such as drug side effects, contraindications, and ADRs for all locally available meds including fixed dose combination drugs, which is used in a timely manner to help doctors create the best diagnoses and treatment plans.
         .image-container
-                a.stat-title(href="http://bmjopen.bmj.com/content/7/10/e017902", target="_blank") Number of doctors per 1000 patients:
-                .bar.green
-                .stat-num
-                    .number 3-7 / 1000
-                    |First world countries
-                .bar.red
-                .stat-num
-                    .number 0.01-0.09 / 1000
-                    |Developing countries
+            img(src=require("../../images/our-projects/adr-alerts.png"), alt="ADR Alerts")
 
-    article.content-block-bg
-        .content-inner.image-text
-            .image-container
-                img(src=require("../../images/our-projects/how-it-will-help-me.jpg"), alt="How it will help me")
-            .text-container
-                h2.block-title How it will help me
-                p.text.
-                    Available 24/7 at your fingertips, using innovative drug recognition technology,
-                    an extensive database and a user-friendly interface, the OK to Take app allows
-                    you keep an up-to-date list of your current medications and allergies and answer
-                    basic drug interaction questions, e.g.: Is this new drug safe to take with my current medications?
-                    Will I have an allergic reaction to this medication? The app can warn you about a potentially
-                    harmful drug interaction, and notify you when it’s important to contact your doctor, thus protecting your health.
-
-    article.content-block
-        .op-add
-            img(src=require("../../images/our-projects/add-drugs.png"), alt="Application screens")
-            h2.block-title Add drugs to check interaction
-            p.text.
-                The OK to Take app is extremely easy to use. A list of medications is created by adding them to the app either
-                by taking a picture of the blister pack or by typing in the drug’s name. A quick check to see if any on
-                the current or newly added medications can cause any harm be done by touch of a button.
-
-    article.op-risks.content-block-bg
-        .content-inner.text-image
-            .text-container
-                h2.block-title See your risks
-                p.text.
-                    The OK to Take app checks for potentially dangerous interactions among a group of medications.
-                    Interactions will be classified into three risk types, high, medium and low.
-                    It is recommended that you stop taking a medication that leads to a high risk interaction and consult the prescribing health care provider.
-                    For medium and low risks, it is likely safe to take the medications but it’s best to read
-                    the prescribing information that accompanies the drug and/or discuss with your healthcare provider. Take your health seriously.
-            .image-container
-                img.phones(src=require("../../images/our-projects/see-risks.png"), alt="See risks")
-
-    article.content-block.op-reports.image-text
-        .image-container
-            img(src=require("../../images/our-projects/reports.png"), alt="Create & Share Reports")
+    article.content-block.text-image
         .text-container
-            h2.block-title Create & Share Reports
+            h2.block-title Comprehensive medical records
             p.text.
-                The app creates medication reports that you can share with others.
-                Reports that list current and/or past medications, along with drug allergies, can provide a clearer picture of your health to a doctor,
-                who can then make safe prescribing recommendations. This app will generate the report that can be downloaded to your smartphone and/or
-                sent directly to a health care provider or family member.
+                Complete and accurate records are to critical to your ability to practice safe and effective medicine. Our intuitive, and engaging onboarding and record maintenance process helps ensure doctors have the most complete patient records at their fingertips, including those created and maintained outside your practice. We are elevating doctor-to-patient and doctor-to-doctor collaboration to a new level.
+        .image-container
+            img(src=require("../../images/our-projects/medical-mac.jpg"), alt="Doctors Tools and Computer")
 
-    article.content-block-bg
-        .content-inner.op-try
-            h2.block-title Want to try it now?
+    article.content-block 
+        h2(style="text-align: center;") For Patients and Caretakers
+        h2.index-highlight myDiya: Feel Safe.
+        
+    article.content-block.text-image
+        .text-container
+            h2.block-title Unprecedented access
             p.text.
-                The OK to Take application will be available for all soon. However, the beta version is already available for testing.
-                We invite you to be one of our early users and provide us with your valuable feedback.
+                At DiyaGroup we believe that patient involvement is critical to solving the problem of the delivery of quality health care to all of the worlds people. This is why we have developed a platform which gives you unprecedented access to and control of your medical record, as well as pertinent and detailed medical information to keep you informed about preventative and management health. With myDiya, you have a true seat at the table of managing your health.
+        .image-container
+            img(src=require("../../images/our-projects/account-screen.png"), alt="Account Screen")
+        
+    article.content-block.text-image
+        .text-container
+            h2.block-title Your records are your records
+            p.text.
+                In an emergency it's critical to have your health records available immediately. With myDiya you won't be left scambling to collect and share your records with medical providers or stuck with potentially life threatening delays. In the digital age, many doctors and health institutions still lack basic ability to send and receive health records, and we believe it is the patient—the true owner of these records—who is the key to solving this problem and ushering in a new era of collaboration.
+        .image-container
+            img(src=require("../../images/our-projects/medical-book.jpg"), alt="Medical Book")
+
+    article.content-block.text-image
+
+    //- article.content-block-bg
+    //-     .content-inner.op-try
+    //-         h2.block-title Want to try it now?
+    //-         p.text.
+    //-             The OK to Take application will be available for all soon. However, the beta version is already available for testing.
+    //-             We invite you to be one of our early users and provide us with your valuable feedback.
