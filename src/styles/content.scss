@@ -20,6 +20,10 @@ $content-text-padding: (70px / $font-size) * 1rem;
 
     .text {
         line-height: 1.78;
+
+        li a {
+            word-break: break-all;
+        }
     }
 }
 
@@ -142,4 +146,23 @@ $content-text-padding: (70px / $font-size) * 1rem;
             }
         }
     }
+}
+
+.content-longread-block {
+    margin: 0 auto $container-gutter;
+    padding: 0 $container-gutter;
+    max-width: $container-max-width;
+
+    @media screen and (max-width: $break-tablet) {
+        padding: 0 $container-gutter-tablet;
+        margin-bottom: 40px;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        margin-bottom: 36px;
+        padding: 0;
+    }
+
+    @include text-image-layout();
+    @include text-decoration();
 }

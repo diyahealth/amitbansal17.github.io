@@ -124,5 +124,17 @@ module.exports = (env, argv) => ({
             filename: "our-projects.html",
             inject: false
         }),
+        new HtmlWebpackPlugin({
+            template: "./html/pages/privacy-policy.pug",
+            templateParameters: buildTemplateData("privacyPolicy", argv.mode),
+            filename: "privacy-policy.html",
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            template: "./html/pages/terms-and-conditions.pug",
+            templateParameters: buildTemplateData("termsAndConditions", argv.mode),
+            filename: "terms-and-conditions.html",
+            inject: false
+        }),
     ]
 });
