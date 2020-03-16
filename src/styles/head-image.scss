@@ -16,38 +16,37 @@
     }
 
     &.head-bg-index {
-        background-image: url("../images/index/index-page-bg.jpg");
+        background-image: url('../images/index/index-page-bg.jpg');
     }
 
     &.head-bg-about-us {
-        background-image: url("../images/about-us/about-us-bg.jpg");
+        background-image: url('../images/about-us/about-us-bg.jpg');
     }
 
     &.head-bg-our-projects {
-        background-image: url("../images/our-projects/our-projects-bg.jpg");
+        background-image: url('../images/our-projects/our-projects-bg.jpg');
     }
 
     &.head-bg-how-to-help {
-        background-image: url("../images/how-to-help/how-to-help-bg.jpg");
+        background-image: url('../images/how-to-help/how-to-help-bg.jpg');
     }
 
     &.big {
-      padding-top: 750px / 1366px * 100%;
-      .text-container {
-        font-size: 65px;
-        font-weight: bold;
-        @media screen and (max-width: $break-tablet) {
-            font-size: 30px;
-            padding: 20px 75px;
-        }
+        padding-top: 750px / 1366px * 100%;
+        .text-container {
+            font-size: 48px;
+            font-weight: bold;
+            @media screen and (max-width: $break-tablet) {
+                font-size: 30px;
+                padding: 20px 75px;
+            }
 
-        @media screen and (max-width: $break-mobile) {
-            font-size: 20px;
-            line-height: 1.2;
-            padding: 10px 30px;
-
+            @media screen and (max-width: $break-mobile) {
+                font-size: 20px;
+                line-height: 1.2;
+                padding: 10px 30px;
+            }
         }
-      }
     }
 
     .text-container {
@@ -57,9 +56,9 @@
         text-align: center;
         padding: 30px 180px;
         font-size: 30px;
-        font-family: "Arial Black";
+        font-family: 'Arial Black';
         color: #a14743;
-        background-color: rgba(255,255,255, 0.85);
+        background-color: rgba(255, 255, 255, 0.85);
 
         @media screen and (max-width: $break-tablet) {
             bottom: 30px;
