@@ -78,10 +78,7 @@ module.exports = (env, argv) => ({
     plugins: [
         new CopyWebpackPlugin([{
                 from: "favicon/*",
-                ignore: ["*.ico"],
-            },
-            {
-                from: "favicon/favicon.ico",
+                flatten: true,
             },
             {
                 from: "robots.txt",
