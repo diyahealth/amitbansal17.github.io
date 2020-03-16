@@ -1,7 +1,7 @@
 {
-    "name": "diyagroup.website",
+    "name": "diyahealth.website",
     "version": "1.0.0",
-    "description": "Static website for diyagroup.com",
+    "description": "Static website for diyahealth.com",
     "main": "\"./html/index.pug\"",
     "scripts": {
         "dev": "webpack --progress --bail --mode=development",
@@ -13,9 +13,9 @@
     "keywords": [
         "diya",
         "website",
-        "diaygroup"
+        "diyahealth"
     ],
-    "author": "DiayGroup",
+    "author": "DiyaHealth",
     "license": "ISC",
     "dependencies": {
         "normalize.css": "^8.0.0",

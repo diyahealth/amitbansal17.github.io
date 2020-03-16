@@ -1,5 +1,5 @@
 const contacts = {
-    email: "info@diyagroup.org",
+    email: "info@diyahealth.org",
     phone: "+01-408-771-6014",
     phoneText: "+1 (408) 771-6014",
     address: {

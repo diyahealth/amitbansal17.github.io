@@ -7,14 +7,14 @@ import "./typings";
 
 declare global {
     interface Window {
-        diya: DiyaGroupWebSite;
+        diya: DiyaHealthWebSite;
         // Google reCaptcha requires callbacks directly in window object.
         passCaptcha: () => void;
         resetCaptcha: () => void;
     }
 }
 
-interface DiyaGroupWebSite {
+interface DiyaHealthWebSite {
     contactUs: {
         captcha: CaptchaStateHolder,
         form: ContactUsForm,
