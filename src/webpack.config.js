@@ -82,7 +82,11 @@ module.exports = (env, argv) => ({
             },
             {
                 from: "robots.txt",
-            }
+            },
+            {
+                from: "./images/reviews",
+                to: "./images/reviews",
+            },
         ]),
         new ExtractTextPlugin("./css/styles.css"),
         new CssRewritePlugin({
