@@ -120,9 +120,9 @@ module.exports = (env, argv) => ({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            template: "./html/pages/our-projects.pug",
-            templateParameters: buildTemplateData("ourProjects", argv.mode),
-            filename: "our-projects.html",
+            template: "./html/pages/doctors.pug",
+            templateParameters: buildTemplateData("doctors", argv.mode),
+            filename: "doctors.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
