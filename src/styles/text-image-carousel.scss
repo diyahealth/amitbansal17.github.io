@@ -1,0 +1,262 @@
+.text-image-carousel-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 630px / 1366px * 100%;
+
+    .content-container {
+        z-index: 1;
+        max-width: $container-max-width;
+        width: 100%;
+        margin: auto;
+        position: absolute;
+        bottom: 55%;
+        width: 100%;
+        padding: 20px 130px;
+        padding-top: 10px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.85);
+
+        @media screen and (max-width: $break-tablet) {
+            padding: 15px 10%;
+            bottom: 48%;
+            border-radius: 0;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            padding: 15px 10%;
+            text-align: center;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .text-container {
+            display: flex;
+            flex-direction: column;
+
+            text-align: center;
+
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-inline-start: 0;
+
+            min-height: 60px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .title {
+                margin-top: 0;
+                margin-bottom: 20px;
+                
+                font-size: 35px;
+                color: $primary-color;
+
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 26px;
+                    margin-bottom: 10px;
+                    min-height: initial;
+                }
+
+                @media screen and (max-width: $break-mobile) {
+                    font-size: 20px;
+                }
+
+                &.alternative {
+                    color: $alternative-primary-color;
+                }
+
+                & + .text {
+                    color: $text-color;
+                    font-size: 20px;
+
+                    @media screen and (max-width: $break-tablet) {
+                        font-size: 18px;
+                    }
+    
+                    @media screen and (max-width: $break-mobile) {
+                        font-size: 14px;
+                    }
+                }
+            }
+            
+            .text {
+                font-family: 'Helvetica';
+                font-weight: 600;
+                color: $primary-color;
+
+                font-size: 30px;
+
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 25px;
+                }
+
+                @media screen and (max-width: $break-mobile) {
+                    font-size: 18px;
+                }
+
+                &.alternative {
+                    color: $alternative-primary-color;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        padding-top: 330px / 320px * 100%;
+    }
+
+    .carousel-image-background {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+
+        &.active {
+            opacity: 1;
+        }
+
+        &.head-bg-index {
+            background-image: url('../images/index/index-page-bg.jpg');
+        }
+    
+        &.head-bg-doctor-checkup {
+            background-image: url('../images/doctors-benefits/doctor-making-check-up.jpg');
+        }
+    
+        &.head-bg-health-watches {
+            background-image:url('../images/doctors-benefits/health-watches.png');
+        }
+    
+        &.head-bg-medical-mac {
+            background-image:url('../images/doctors-benefits/medical-mac.jpg');
+        }
+
+        &.head-bg-share-with-others {
+            background-image:url('../images/doctors-benefits/share-with-others.jpg');
+        }
+
+        &.head-bg-chief-complaints {
+            background-image:url('../images/doctors-benefits/access-to-chief-complaints.jpg');
+        }
+
+        &.head-bg-instant-communication {
+            background-image:url('../images/doctors-benefits/instant_communication.jpg');
+        }
+    }
+
+    .carousel-control {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 10%;
+        opacity: 0.5;
+        cursor: pointer;
+        border-radius: 10px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        background-repeat: repeat-x;
+        user-select: none;
+
+        @media screen and (max-width: $break-tablet) {
+            border-radius: 0;
+        }
+    
+        &:hover {
+            opacity: 0.9;
+        }
+        &.left {
+            left: 0;
+            background-image: linear-gradient(to right,rgba(0,0,0,.3) 0,rgba(0,0,0,.0001) 100%);
+        }
+        &.right {
+            right: 0;
+            background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.3) 100%);
+        }
+    
+        .icon {
+            pointer-events: none;
+            position: relative;
+            width: 60px;
+            height: 60px;
+            color: #fff;
+        }
+    }
+
+    .single-tile-container, .multiple-tiles-container {
+        display: flex;
+        position: absolute;
+        bottom: 20%;
+    
+        @media screen and (max-width: $break-tablet) {
+            bottom: 10%;
+        }
+    }
+    
+    .single-tile-container {
+        width: 100%;
+        justify-content: center;
+    
+        @media screen and (max-width: $break-mobile) {
+            bottom: -75px;
+        }
+    
+        & > .info-tile {
+            flex-basis: 40%;
+    
+            @media screen and (max-width: $break-tablet) {
+                flex-basis: 49%
+            }
+    
+            @media screen and (max-width: $break-mobile) {
+                flex-basis: initial;
+                flex: 1;
+                margin-top: 10px;
+            }
+        }
+    }
+    
+    .multiple-tiles-container {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    
+        @media screen and (max-width: $break-mobile) {
+            bottom: -180px;
+        }
+    
+        & > .info-tile {
+            flex-basis: 40%;
+    
+            @media screen and (max-width: $break-tablet) {
+                flex-basis: 49%
+            }
+    
+            @media screen and (max-width: $break-mobile) {
+                flex-basis: initial;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+
+.carousel-with-tiles {
+    @media screen and (max-width: $break-mobile) {
+        padding-bottom: 185px;
+    }
+}
+
+.carousel-with-tile {
+    @media screen and (max-width: $break-mobile) {
+        padding-bottom: 80px
+    }
+}
+
