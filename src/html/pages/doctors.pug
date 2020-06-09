@@ -1,0 +1,43 @@
+extends ../shared/layout.pug
+
+include ../shared/contact-us.pug
+include ../shared/reviews.pug
+include ../shared/youtube-video.pug
+include ../shared/text-image-carousel.pug
+include ../shared/info-tile.pug
+
+block content
+    - const benefitsCarouselId = 'doctors-benefits'
+    - const reviewsCarouselId = 'doctors-reviews'
+    -
+        const requestConsultationTile = {
+            title: 'Request consultation',
+            link: pages.contactUs.url,
+            text: 'Grow your practice and get your patients onboard',
+        }
+
+    script.
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('doctors-benefits', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 8000);
+            diya.carousel.init('doctors-reviews', {
+                switchSlideControlSelector: '.control',
+            }, 10000);
+        });
+    
+    article.carousel-with-tile.primary-background-content
+        +textImageCarousel(doctorsBenefits, benefitsCarouselId, 'alternative')
+            .single-tile-container
+                +infoTile(requestConsultationTile, 'alternative')
+    article
+        include ../shared/partners.pug
+    article.alternative-background-content
+        +reviews(reviews, reviewsCarouselId, 'Reviews', 'alternative')
+    article.primary-background-content
+        +youtubeVideo("https://www.youtube.com/embed/2E90ecf2Bxw")
+    article.alternative-background-content
+        +contactUs(organizationSizeOptions)
+
+    include ../shared/map-app.pug
