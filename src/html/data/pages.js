@@ -13,10 +13,10 @@ const pages = {
         title: "About Us - Diya Health",
         description: "Learn about the DiyaHealth mission and members",
     },
-    ourProjects: {
-        url: "./our-projects",
-        name: "Our Projects",
-        title: "Our Projects - Diya Health",
+    doctors: {
+        url: "./doctors",
+        name: "Doctors",
+        title: "Doctors - Diya Health",
         description: "The OK to Take app allows you keep an up-to-date list of your current medications and allergies and answer basic drug interaction questions",
     },
     howToHelp: {
