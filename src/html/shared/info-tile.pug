@@ -1,0 +1,11 @@
+mixin tileContent(tileData)
+    div.text.title=tileData.title
+    div.text=tileData.text
+
+mixin infoTile(tileData, additionalClass)
+    if tileData.link
+        a(href=tileData.link, target=tileData.linkTarget, id=tileData.id).info-tile(class=additionalClass)
+            +tileContent(tileData)
+    else 
+        .info-tile(id=tileData.id, class=additionalClass)
+            +tileContent(tileData)

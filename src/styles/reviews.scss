@@ -1,0 +1,184 @@
+@mixin review-part($max-width-percentage) {
+    flex-grow: 0;
+    max-width: $max-width-percentage;
+    flex-basis: $max-width-percentage;
+
+    @media screen and (max-width: $break-tablet) {
+        padding: 0;
+        max-width: initial;
+        flex-basis: initial;
+        flex-grow: initial;
+        width: 100%;
+    }
+}
+
+.reviews-container {
+    .title {
+        font-size: 48px;
+        line-height: 1.14;
+        text-align: center;
+        color: #2c2d2d;
+        margin: 30px 0;
+    }
+
+    .review {
+        display: flex;
+        flex-wrap: wrap;
+    
+        & > .part:nth-of-type(1) {
+            @include review-part(30%);
+        }
+    
+        & > .part:nth-of-type(2) {
+            @include review-part(70%);
+        }
+    
+        .part {
+            padding: 40px;
+        }
+    
+        .avatar {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            border-radius: 50%;
+    
+            border: 2px solid $primary-color;
+            user-select: none;
+
+            &.alternative {
+                border: 2px solid $alternative-primary-color;
+            }
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        .review-text {
+            margin-top: 32px;
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 1.39;
+
+            margin-block-end: 0;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+
+            @media screen and (max-width: $break-tablet) {
+                font-size: 20px;
+                line-height: 1.1;
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                font-size: 18px;
+                line-height: 1.1;
+            }
+    
+            &.reviewer-name {
+                margin-top: 40px;
+                font-size: 34px;
+                font-weight: 600;
+                text-align: end;
+                line-height: 1.235;
+    
+                color: $primary-color;
+
+                &.alternative {
+                    color: $alternative-primary-color;
+                }
+    
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 26px;
+                    margin-top: 25px;
+                    line-height: 1.15;
+                }
+
+                @media screen and (max-width: $break-tablet) {
+                    margin-top: 20px;
+                }
+            }
+        
+            &.reviewer-position {
+                font-size: 26px;
+                text-align: end;
+                margin-top: 0;
+    
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 22px;
+                }
+            }
+        }
+    
+        .quote-logo {
+            height: 80px;
+        }
+    
+        .logo {
+            height: 64px;
+            text-align: right;
+            & > img {
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+    
+        .compact-logo-signature {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            flex-wrap: wrap;
+    
+            .compact-logo {
+                height: 128px;
+                padding-right: 16px;
+                & > img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+    
+    .controls-container {
+        margin-top: 20px;
+    
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: center;
+    
+        .control {
+            background-color: $primary-color;
+            border-radius: 50%;
+            height: 64px;
+            cursor: pointer;
+    
+            transition: background-color 0.2s ease-in-out;
+    
+            &:hover {
+                background-color: darken($primary-color, 20%);
+            }
+
+            & > svg {
+                height: 100%;
+                pointer-events: none;
+                fill: #fff;
+            }
+
+            &.alternative {
+                background-color: $alternative-primary-color;
+
+                &:hover {
+                    background-color: darken($alternative-primary-color, 20%);
+                }
+            }
+    
+            @media screen and (max-width: $break-tablet) {
+                height: 50px;
+            }
+        }
+    }
+}

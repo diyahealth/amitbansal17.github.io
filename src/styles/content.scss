@@ -89,6 +89,21 @@ $content-text-padding: (70px / $font-size) * 1rem;
     }
 }
 
+.default-content-block {
+    position: relative;
+    margin: auto;
+    padding: 24px;
+    max-width: $container-max-width;
+}
+
+.primary-background-content {
+    background: linear-gradient(to bottom, #f0fafd, #cfeef8);  
+}
+
+.alternative-background-content {
+    background: #fff9ef;
+}
+
 .content-block {
     margin: $container-gutter auto 0;
     padding: 0 $container-gutter;
