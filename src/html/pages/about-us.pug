@@ -3,25 +3,25 @@ extends ../shared/layout.pug
 include ../shared/head-image.pug
 
 block content
-    +headImage("head-bg-about-us", "We believe in the pursuit of happiness, and good health")
+    +headImage("head-bg-about-us", "Diya Health is a team of physicians, engineers, gerontologists, researchers, designers and business leaders", 'small')
 
     article.content-block.text-image
         .text-container
-            h2.block-title Who We Are
+            h2.block-title Our Mission
+            ul
+                li.text To bridge the communication gap between doctors, patients and families.
+                li.text To reduce the incidence of medical errors and healthcare costs.
+                li.text To democratise access to healthcare worldwide.
             p.text.
-                We are a group of socially-minded individuals 
-                from a spectrum of developed and developing
-                countries around the world. We represent many
-                different cultures, religions, ethnic background,
-                and speak over a dozen spoken languages.
-                Some of us are starting to dabble in the world of
-                social causes, while others have generations of social
-                work in our lineage. We have deep expertise in
-                the areas of technical, medical, legal, arts
-                and linguistics, and at DiyaHealth, we share a common cause
-                to help make life saving healthcare decisions feasible for all.
+                We use advanced software algorithms and data science to enable doctors,
+                patients and families to improve health outcomes. Our software-as-a-service digital health platform focuses
+                on actionable data science to empower doctors and patients.
+            br
+            p.text
+                b Diya Health 
+                span.text was founded in April 2018 in CA, USA.
         .image-container
-            img(src=require("../../images/index/people.jpg"), alt="People in village")
+            img(src=require("../../images/about-us/volunteer-with-us.jpg"), alt="Volunteers")
 
     article.content-block-bg
         .content-inner.index-mission
