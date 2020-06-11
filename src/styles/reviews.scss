@@ -3,7 +3,7 @@
     max-width: $max-width-percentage;
     flex-basis: $max-width-percentage;
 
-    @media screen and (max-width: $break-tablet) {
+    @media screen and (max-width: $break-mobile) {
         padding: 0;
         max-width: initial;
         flex-basis: initial;
@@ -14,11 +14,11 @@
 
 .reviews-container {
     .title {
-        font-size: 48px;
+        font-size: 30px;
         line-height: 1.14;
         text-align: center;
         color: #2c2d2d;
-        margin: 30px 0;
+        margin: 10px 0;
     }
 
     .review {
@@ -34,7 +34,7 @@
         }
     
         .part {
-            padding: 40px;
+            padding: 20px;
         }
     
         .avatar {
@@ -58,8 +58,8 @@
         }
     
         .review-text {
-            margin-top: 32px;
-            font-size: 22px;
+            margin-top: 15px;
+            font-size: 20px;
             font-weight: 500;
             letter-spacing: 0;
             line-height: 1.39;
@@ -69,18 +69,18 @@
             margin-inline-end: 0;
 
             @media screen and (max-width: $break-tablet) {
-                font-size: 20px;
+                font-size: 18px;
                 line-height: 1.1;
             }
 
             @media screen and (max-width: $break-mobile) {
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 1.1;
             }
     
             &.reviewer-name {
-                margin-top: 40px;
-                font-size: 34px;
+                margin-top: 15px;
+                font-size: 25px;
                 font-weight: 600;
                 text-align: end;
                 line-height: 1.235;
@@ -92,33 +92,28 @@
                 }
     
                 @media screen and (max-width: $break-tablet) {
-                    font-size: 26px;
-                    margin-top: 25px;
+                    font-size: 23px;
                     line-height: 1.15;
-                }
-
-                @media screen and (max-width: $break-tablet) {
-                    margin-top: 20px;
                 }
             }
         
             &.reviewer-position {
-                font-size: 26px;
+                font-size: 20px;
                 text-align: end;
                 margin-top: 0;
     
                 @media screen and (max-width: $break-tablet) {
-                    font-size: 22px;
+                    font-size: 19px;
                 }
             }
         }
     
         .quote-logo {
-            height: 80px;
+            height: 40px;
         }
     
         .logo {
-            height: 64px;
+            height: 45px;
             text-align: right;
             & > img {
                 max-width: 100%;
@@ -133,7 +128,7 @@
             flex-wrap: wrap;
     
             .compact-logo {
-                height: 128px;
+                height: 90px;
                 padding-right: 16px;
                 & > img {
                     height: 100%;
@@ -153,7 +148,7 @@
         .control {
             background-color: $primary-color;
             border-radius: 50%;
-            height: 64px;
+            height: 60px;
             cursor: pointer;
     
             transition: background-color 0.2s ease-in-out;

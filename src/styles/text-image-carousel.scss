@@ -4,6 +4,58 @@
     justify-content: center;
     padding-top: 630px / 1366px * 100%;
 
+    @media screen and (max-width: $break-mobile) {
+        padding-top: 330px / 320px * 100%;
+    }
+
+    &.small {
+        padding-top: 520px / 1366px * 100%;
+
+        @media screen and (max-width: $break-desktop-medium) {
+            padding-top: 690px / 1366px * 100%;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            padding-top: 280px / 320px * 100%;
+        }
+
+        & > .content-container {
+            bottom: 30%;
+
+            @media screen and (max-width: $break-tablet) {
+                bottom: 28%;
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                bottom: 0;
+            }
+        }
+
+        & > .single-button-container, .multiple-buttons-container {
+            bottom: 12%;
+        
+            @media screen and (max-width: $break-tablet) {
+                bottom: 5%;
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                bottom: inherit;
+            }
+        }
+
+        & > .single-tile-container, .multiple-tiles-container {
+            bottom: 5%;
+        
+            @media screen and (max-width: $break-tablet) {
+                bottom: 1%;
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                bottom: inherit;
+            }
+        }
+    }
+
     .content-container {
         z-index: 1;
         max-width: $container-max-width;
@@ -46,6 +98,10 @@
             justify-content: center;
             align-items: center;
 
+            @media screen and (max-width: $break-tablet) {
+                min-height: initial;
+            }
+
             .title {
                 margin-top: 0;
                 margin-bottom: 20px;
@@ -56,7 +112,6 @@
                 @media screen and (max-width: $break-tablet) {
                     font-size: 26px;
                     margin-bottom: 10px;
-                    min-height: initial;
                 }
 
                 @media screen and (max-width: $break-mobile) {
@@ -82,7 +137,6 @@
             }
             
             .text {
-                font-family: 'Helvetica';
                 font-weight: 600;
                 color: $primary-color;
 
@@ -100,11 +154,29 @@
                     color: $alternative-primary-color;
                 }
             }
-        }
-    }
 
-    @media screen and (max-width: $break-mobile) {
-        padding-top: 330px / 320px * 100%;
+            .link {
+                display: block;
+                margin-top: 20px;
+
+                color: $primary-color;
+
+                font-size: 22px;
+
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 20px;
+                    margin-top: 10px;
+                }
+
+                @media screen and (max-width: $break-mobile) {
+                    font-size: 18px;
+                }
+
+                &.alternative {
+                    color: $alternative-primary-color;
+                }
+            }
+        }
     }
 
     .carousel-image-background {
@@ -123,30 +195,69 @@
 
         &.head-bg-index {
             background-image: url('../images/index/index-page-bg.jpg');
+            background-position-y: 33%;
         }
     
-        &.head-bg-doctor-checkup {
-            background-image: url('../images/doctors-benefits/doctor-making-check-up.jpg');
+        &.head-bg-bills-statement-stethoscope {
+            background-image: url('../images/doctors-benefits/bills-statement-stethoscope.jpg');
         }
     
-        &.head-bg-health-watches {
-            background-image:url('../images/doctors-benefits/health-watches.png');
+        &.head-bg-apple-watch {
+            background-image:url('../images/doctors-benefits/apple-watch.png');
+            background-position-y: bottom;
         }
     
         &.head-bg-medical-mac {
             background-image:url('../images/doctors-benefits/medical-mac.jpg');
         }
 
-        &.head-bg-share-with-others {
-            background-image:url('../images/doctors-benefits/share-with-others.jpg');
+        &.head-bg-easy-to-use {
+            background-image:url('../images/doctors-benefits/easy-to-use.jpg');
+            background-position-y: top;
         }
 
-        &.head-bg-chief-complaints {
-            background-image:url('../images/doctors-benefits/access-to-chief-complaints.jpg');
+        &.head-bg-broccoli-stethoscope {
+            background-image:url('../images/doctors-benefits/broccoli-stethoscope.jpg');
         }
 
         &.head-bg-instant-communication {
-            background-image:url('../images/doctors-benefits/instant_communication.jpg');
+            background-image:url('../images/doctors-benefits/instant-communication.jpg');
+            background-position-y: 13%;
+        }
+
+        &.head-bg-emergency-access {
+            background-image:url('../images/patients-and-families/emergency-access.jpg');
+            background-position-y: 40%;
+        }
+
+        &.head-bg-covid-19-check {
+            background-image:url('../images/patients-and-families/covid-19-check.jpg');
+        }
+
+        &.head-bg-emergency-card {
+            background-image:url('../images/patients-and-families/emergency-card.jpg');
+            @media screen and (min-width: $break-tablet) {
+                background-position-y: 23%;
+            }
+            @media screen and (max-width: $break-tablet) {
+                background-position-y: 40%;
+            }
+            @media screen and (max-width: $break-mobile) {
+                background-image:url('../images/patients-and-families/emergency-card-mobile.jpg');
+            }
+        }
+
+        &.head-bg-expert-at-home {
+            background-image:url('../images/patients-and-families/expert-at-home.jpg');
+        }
+
+        &.head-bg-medication-safety {
+            background-image:url('../images/patients-and-families/medication-safety.jpg');
+        }
+
+        &.head-bg-24-7-connection {
+            background-image:url('../images/patients-and-families/24-7-connection.jpg');
+            background-position-y: 30%;
         }
     }
 
@@ -190,73 +301,118 @@
             color: #fff;
         }
     }
+}
 
-    .single-tile-container, .multiple-tiles-container {
+.single-button-container, .multiple-buttons-container, .single-tile-container, .multiple-tiles-container {
+    display: flex;
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+
+    @media screen and (max-width: $break-tablet) {
+        bottom: 10%;
+    }
+
+    & > .button-container {
+        flex: 1;
+
         display: flex;
-        position: absolute;
-        bottom: 20%;
-    
-        @media screen and (max-width: $break-tablet) {
-            bottom: 10%;
-        }
-    }
-    
-    .single-tile-container {
-        width: 100%;
         justify-content: center;
-    
+        align-items: center;
+
         @media screen and (max-width: $break-mobile) {
-            bottom: -75px;
-        }
-    
-        & > .info-tile {
-            flex-basis: 40%;
-    
-            @media screen and (max-width: $break-tablet) {
-                flex-basis: 49%
-            }
-    
-            @media screen and (max-width: $break-mobile) {
-                flex-basis: initial;
+            flex: initial;
+            margin-top: 10px;
+
+            & > *:not(.sign-in-button) {
                 flex: 1;
-                margin-top: 10px;
-            }
-        }
-    }
-    
-    .multiple-tiles-container {
-        justify-content: space-around;
-        flex-wrap: wrap;
-    
-        @media screen and (max-width: $break-mobile) {
-            bottom: -180px;
-        }
-    
-        & > .info-tile {
-            flex-basis: 40%;
-    
-            @media screen and (max-width: $break-tablet) {
-                flex-basis: 49%
-            }
-    
-            @media screen and (max-width: $break-mobile) {
-                flex-basis: initial;
-                margin-top: 10px;
             }
         }
     }
 }
 
+.single-button-container {
+    justify-content: center;
+
+    @media screen and (max-width: $break-mobile) {
+        bottom: -75px;
+    }
+}
+
+.multiple-buttons-container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $break-mobile) {
+        flex-direction: column;
+        bottom: -130px;
+    }
+}
+
+.single-tile-container {
+    justify-content: center;
+
+    @media screen and (max-width: $break-mobile) {
+        bottom: -75px;
+    }
+
+    & > .info-tile {
+        flex-basis: 30%;
+
+        @media screen and (max-width: $break-tablet) {
+            flex-basis: 49%
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            flex-basis: initial;
+            flex: 1;
+            margin-top: 10px;
+        }
+    }
+}
+
+.multiple-tiles-container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $break-mobile) {
+        bottom: -180px;
+    }
+
+    & > .info-tile {
+        flex-basis: 40%;
+
+        @media screen and (max-width: $break-tablet) {
+            flex-basis: 49%
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            flex-basis: 100%;
+            margin-top: 10px;
+        }
+    }
+}
+
+.carousel-with-buttons {
+    @media screen and (max-width: $break-mobile) {
+        padding-bottom: 140px;
+    }
+}
+
+.carousel-with-button {
+    @media screen and (max-width: $break-mobile) {
+        padding-bottom: 70px
+    }
+}
 
 .carousel-with-tiles {
     @media screen and (max-width: $break-mobile) {
-        padding-bottom: 185px;
+        padding-bottom: 220px;
     }
 }
 
 .carousel-with-tile {
     @media screen and (max-width: $break-mobile) {
-        padding-bottom: 80px
+        padding-bottom: 120px
     }
 }
-

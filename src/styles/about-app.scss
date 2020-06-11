@@ -1,0 +1,56 @@
+.about-app-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    .main-info {
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+
+        flex-grow: 0;
+        max-width: 58%;
+        flex-basis: 58%;
+
+        @media screen and (max-width: $break-tablet) {
+            flex-grow: initial;
+            max-width: initial;
+            flex-basis: initial;
+        }
+
+        .info {
+            margin: 48px 0;
+            font-size: 26px;
+            line-height: 1.17;
+            font-weight: 500;
+            @media screen and (max-width: $break-tablet) {
+                margin: 24px 0;
+
+                font-size: 22px;
+                line-height: 1.235;
+            }
+        }
+
+        .title {
+            margin: 0;
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 1.17;
+        }
+
+    }
+
+    .image {
+        flex-grow: 0;
+        max-width: 25%;
+        flex-basis: 25%;
+
+        @media screen and (max-width: $break-tablet) {
+            flex-grow: initial;
+            max-width: initial;
+            flex-basis: initial;
+            width: 100%;
+        }
+    }
+}
