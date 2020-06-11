@@ -23,11 +23,11 @@ const doctorsBenefits = {
         },
     ],
     imagesClasses: [
-        'head-bg-doctor-checkup',
+        'head-bg-bills-statement-stethoscope',
+        'head-bg-easy-to-use',
         'head-bg-medical-mac',
-        'head-bg-share-with-others',
-        'head-bg-health-watches',
-        'head-bg-chief-complaints',
+        'head-bg-broccoli-stethoscope',
+        'head-bg-apple-watch',
         'head-bg-instant-communication',
     ],
 }

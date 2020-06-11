@@ -4,6 +4,7 @@ include ../shared/text-image-carousel.pug
 include ../shared/contact-us.pug
 include ../shared/reviews.pug
 include ../shared/info-tile.pug
+include ../shared/partners.pug
 
 block head
     meta(name="twitter:card" value="DiyaHealth Website")
@@ -16,20 +17,8 @@ block head
 block content
     - const benefitsCarouselId = 'benefits'
     - const reviewsCarouselId = 'reviews'
-    -
-        const tiles = {
-            doctors: {
-                title: 'Doctors',
-                link: pages.doctors.url,
-                text: 'Expanding your practice online, or keeping track of your patient\'s health remotely?',
-            },
-            patients: {
-                title: 'Patients & Families',
-                link: 'https://mydiya.org',
-                linkTarget: '_blank',
-                text: 'Concerned about COVID-19, maintaining medications or starting a health journal?', 
-            }
-        }
+    - const doctorsUrl = pages.doctors.url;
+    - const patientsAndFamiliesUrl = pages.patientsAndFamilies.url;
 
     script.
         window.addEventListener('load', (event) => {
@@ -41,15 +30,25 @@ block content
                 switchSlideControlSelector: '.control',
             }, 10000);
         });
-    article.carousel-with-tiles.alternative-background-content
-        +textImageCarousel(benefits, benefitsCarouselId)
-            .multiple-tiles-container
-                +infoTile(tiles.doctors)
-                +infoTile(tiles.patients)
+    article.carousel-with-buttons.alternative-background-content
+        +textImageCarousel(benefits, benefitsCarouselId, 'small')
+            .multiple-buttons-container
+                .button-container
+                    a.material-btn.large(href=doctorsUrl)
+                        span.label
+                            include ../../images/icons/local-hospital-outline-icon.svg
+                            span Doctors
+                .button-container
+                    a.material-btn.large(href=patientsAndFamiliesUrl)
+                        span.label
+                            include ../../images/icons/person-outline-icon.svg
+                            span Patients & Families
     article
-        include ../shared/partners.pug
+        +partners('small')
     article.alternative-background-content
         +reviews(reviews, reviewsCarouselId, 'Reviews')
+    article.covid-info-container
+        include ../shared/covid-info.pug
     article.primary-background-content
         +contactUs(organizationSizeOptions)
 
