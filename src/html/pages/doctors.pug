@@ -5,6 +5,8 @@ include ../shared/reviews.pug
 include ../shared/youtube-video.pug
 include ../shared/text-image-carousel.pug
 include ../shared/info-tile.pug
+include ../shared/partners.pug
+include ../shared/sign-in-button.pug
 
 block content
     - const benefitsCarouselId = 'doctors-benefits'
@@ -27,17 +29,23 @@ block content
             }, 10000);
         });
     
-    article.carousel-with-tile.primary-background-content
-        +textImageCarousel(doctorsBenefits, benefitsCarouselId, 'alternative')
-            .single-tile-container
-                +infoTile(requestConsultationTile, 'alternative')
+    article.carousel-with-tiles.primary-background-content
+        +textImageCarousel(doctorsBenefits, benefitsCarouselId, 'alternative small')
+            .multiple-tiles-container
+                +infoTile('Doctors Sign-In')
+                    +signInButton('https://diyamd.org/auth/sign-in')
+                +infoTile('Need Help?')
+                    a.material-btn(href=`${page.url}#contact-us`)
+                        span.label
+                            include ../../images/icons/comment-question-outline-icon.svg
+                            span Request consultation                    
     article
-        include ../shared/partners.pug
+        +partners('small')
+    article.covid-info-container
+        include ../shared/covid-info.pug
     article.alternative-background-content
         +reviews(reviews, reviewsCarouselId, 'Reviews', 'alternative')
-    article.primary-background-content
-        +youtubeVideo("https://www.youtube.com/embed/2E90ecf2Bxw")
-    article.alternative-background-content
+    article.primary-background-content(id="contact-us")
         +contactUs(organizationSizeOptions)
 
     include ../shared/map-app.pug

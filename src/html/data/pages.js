@@ -19,6 +19,12 @@ const pages = {
         title: "Doctors - Diya Health",
         description: "The OK to Take app allows you keep an up-to-date list of your current medications and allergies and answer basic drug interaction questions",
     },
+    patientsAndFamilies: {
+        url: "./patients-and-families",
+        name: "Patients & Families",
+        title: "Patients & Families - Diya Health",
+        description: "",
+    },
     howToHelp: {
         url: "./how-to-help",
         name: "How to Help",

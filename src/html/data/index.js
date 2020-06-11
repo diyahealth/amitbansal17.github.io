@@ -4,6 +4,7 @@ const pages = require("./pages");
 const benefits = require("./benefits");
 const organizationSizeOptions = require("./organizationSizeOptions");
 const doctorsBenefits = require("./doctorsBenefits");
+const patientsBenefits = require("./patientsBenefits");
 const reviews = require("./reviews");
 
 module.exports = {
@@ -13,5 +14,6 @@ module.exports = {
     benefits,
     organizationSizeOptions,
     doctorsBenefits,
+    patientsBenefits,
     reviews
 };
