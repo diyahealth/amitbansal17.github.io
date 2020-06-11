@@ -1,6 +1,6 @@
 // tslint:disable-next-line:no-implicit-dependencies
 import { } from "googlemaps";
-import mapPin from "../images/map-pin.svg";
+import mapPin from "../images/icons/map-pin.svg";
 
 export function initGoogleMap() {
     const mapElement = document.getElementById("js-google-map");

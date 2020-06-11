@@ -1,6 +1,7 @@
-.default-content-block
-    .partners-content
-        img.partner-icon(src=require("../../images/partners/kaiser-permanente-logo.svg"), alt="Kaiser Permanente Logo")
-        img.partner-icon(src=require("../../images/partners/vituity-logo.svg"), alt="Vituity Logo")
-        img.partner-icon(src=require("../../images/partners/drugbank-logo.svg"), alt="Drugbank Logo")
-        img.partner-icon(src=require("../../images/partners/nih-logo.svg"), alt="NIH Logo")
+mixin partners(additionalClass)
+    .partners-container
+        .partners-content(class=additionalClass)
+            img.partner-icon(src=require("../../images/partners/kaiser-permanente-logo.svg"), alt="Kaiser Permanente Logo")
+            img.partner-icon(src=require("../../images/partners/vituity-logo.svg"), alt="Vituity Logo")
+            img.partner-icon(src=require("../../images/partners/drugbank-logo.svg"), alt="Drugbank Logo")
+            img.partner-icon(src=require("../../images/partners/nih-logo.svg"), alt="NIH Logo")

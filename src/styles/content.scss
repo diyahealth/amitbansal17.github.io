@@ -89,6 +89,36 @@ $content-text-padding: (70px / $font-size) * 1rem;
     }
 }
 
+.two-column-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .item {
+        flex-basis: 50%;
+        max-width: 50%;
+        flex-grow: 0;
+        margin: 0;
+
+        @media screen and (max-width: $break-tablet) {
+            width: 100%;
+            flex-basis: initial;
+            max-width: initial;
+        }
+
+    }
+
+    .item:last-child {
+        @media screen and (max-width: $break-tablet) {
+            margin-top: 24px;
+        }
+    }
+}
+
+.hidden-overflow {
+    overflow: hidden;
+}
+
 .default-content-block {
     position: relative;
     margin: auto;
