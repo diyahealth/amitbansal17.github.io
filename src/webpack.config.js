@@ -87,6 +87,10 @@ module.exports = (env, argv) => ({
                 from: "./images/reviews",
                 to: "./images/reviews",
             },
+            {
+                from: "./images/patients-and-families",
+                to: "./images/patients-and-families",
+            },
         ]),
         new ExtractTextPlugin("./css/styles.css"),
         new CssRewritePlugin({
@@ -123,6 +127,12 @@ module.exports = (env, argv) => ({
             template: "./html/pages/doctors.pug",
             templateParameters: buildTemplateData("doctors", argv.mode),
             filename: "doctors.html",
+            inject: false
+        }),
+        new HtmlWebpackPlugin({
+            template: "./html/pages/patients-and-families.pug",
+            templateParameters: buildTemplateData("patientsAndFamilies", argv.mode),
+            filename: "patients-and-families.html",
             inject: false
         }),
         new HtmlWebpackPlugin({

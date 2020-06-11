@@ -13,7 +13,7 @@ mixin reviews(reviews, id, title, additionalClass)
                 h3.title=title
             each review, index in reviews
                 .carousel-item-container(class=index === 0 ? 'active' : '')
-                    .review
+                    .review(class=additionalClass)
                             .part
                                 .avatar(class=additionalClass)
                                     img(src=review.image)
@@ -32,9 +32,9 @@ mixin reviews(reviews, id, title, additionalClass)
                                         img(src=review.logo)
             .controls-container
                 span.control(class=additionalClass).left
-                    include ../../images/carousel/chevron-left-icon.svg
+                    include ../../images/icons/chevron-left-icon.svg
                 ol.indicators-container
                     each review, index in reviews
                         li.indicator(class = index === 0 ? 'active' : '')
                 span.control(class=additionalClass).right
-                    include ../../images/carousel/chevron-right-icon.svg
+                    include ../../images/icons/chevron-right-icon.svg

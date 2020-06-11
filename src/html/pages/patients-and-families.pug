@@ -1,0 +1,56 @@
+extends ../shared/layout.pug
+
+include ../shared/contact-us.pug
+include ../shared/reviews.pug
+include ../shared/youtube-video.pug
+include ../shared/text-image-carousel.pug
+include ../shared/info-tile.pug
+include ../shared/partners.pug
+include ../shared/about-app.pug
+include ../shared/sign-in-button.pug
+
+block content
+    - const benefitsCarouselId = 'patients-benefits'; 
+    - const reviewsCarouselId = 'patients-reviews';
+    -
+        const headerData = {
+            title : 'myDiya',
+            tagline: 'Your personal health diary',
+            imageSrc: './images/patients-and-families/header.png',
+        };
+    -
+        const aboutApp = {
+            title : 'About myDiya',
+            text: 'A personal health diary with the goal of keeping you safe and connected with your family during a health emergency. Your records are kept up-to-date and easily accessible. Developed by Diya Health, a team of doctors and engineers myDiya is being used in four continents with the majority of users in North America.',
+        };
+
+    script.
+        window.addEventListener('load', (event) => {
+            diya.carousel.init('patients-reviews', {
+                switchSlideControlSelector: '.control',
+            }, 10000);
+
+            diya.carousel.init('patients-benefits', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 8000);
+        });
+
+    article.carousel-with-tile.primary-background-content
+        +textImageCarousel(patientsBenefits, benefitsCarouselId, 'small')
+            .single-tile-container
+                    +infoTile('Personal Sign-In')
+                        +signInButton('https://mydiya.org/auth/sign-in')
+
+    article
+        +partners('small')
+    article.covid-info-container
+        include ../shared/covid-info.pug
+    article.alternative-background-content
+        +reviews(reviews, reviewsCarouselId, 'Reviews', 'alternative')
+    article.primary-background-content
+        +aboutApp(aboutApp.title, aboutApp.text, `${page.url}#contact-us`)
+    article.primary-background-content(id="contact-us")
+        +contactUs(organizationSizeOptions)
+
+    include ../shared/map-app.pug
