@@ -11,12 +11,6 @@ include ../shared/sign-in-button.pug
 block content
     - const benefitsCarouselId = 'doctors-benefits'
     - const reviewsCarouselId = 'doctors-reviews'
-    -
-        const requestConsultationTile = {
-            title: 'Request consultation',
-            link: pages.contactUs.url,
-            text: 'Grow your practice and get your patients onboard',
-        }
 
     script.
         window.addEventListener('load', (event) => {
@@ -32,13 +26,13 @@ block content
     article.carousel-with-tiles.primary-background-content
         +textImageCarousel(doctorsBenefits, benefitsCarouselId, 'alternative small')
             .multiple-tiles-container
-                +infoTile('Doctors Sign-In')
+                +infoTile('Doctors Sign-In', 'alternative')
                     +signInButton('https://diyamd.org/auth/sign-in')
-                +infoTile('Need Help?')
+                +infoTile('Any Questions?', 'alternative')
                     a.material-btn(href=`${page.url}#contact-us`)
                         span.label
                             include ../../images/icons/comment-question-outline-icon.svg
-                            span Request consultation                    
+                            span Contact Us                    
     article
         +partners('small')
     article.covid-info-container
