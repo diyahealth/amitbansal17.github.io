@@ -7,8 +7,8 @@ include ../shared/info-tile.pug
 include ../shared/partners.pug
 
 block head
-    meta(name="twitter:card" value="DiyaHealth Website")
-    meta(property="og:title" content="DiyaHealth Website")
+    meta(name="twitter:card" value="Diya Health Website")
+    meta(property="og:title" content="Diya Health Website")
     meta(property="og:type" content="website")
     meta(property="og:url" content="https://www.diyahealth.org/")
     meta(property="og:image" content="https://www.diyahealth.org/images/cbde0a1dc167b130bcf77464cabbe0e7.svg")
@@ -45,10 +45,10 @@ block content
                             span Patients & Families
     article
         +partners('small')
-    article.alternative-background-content
-        +reviews(reviews, reviewsCarouselId, 'Reviews')
     article.covid-info-container
         include ../shared/covid-info.pug
+    article.alternative-background-content
+        +reviews(reviews, reviewsCarouselId, 'Reviews')
     article.primary-background-content
         +contactUs(organizationSizeOptions)
 
