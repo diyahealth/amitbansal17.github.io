@@ -1,0 +1,13 @@
+mixin faq(questionsData)
+    .faq-container 
+        each section in questionsData
+            .faq-section
+                .info
+                    span.title=section.title
+                    include ../../images/icons/chevron-down-icon.svg
+                .faq-list
+                    .faq-list-delimeter
+                    each question in section.questions
+                        .question
+                            .title=question.question
+                            .answer-text=question.answer
