@@ -1,0 +1,29 @@
+mixin textImageCarousel(carouselData, id, additionalClass)
+    - const infoArray = carouselData.info || []
+    - const images = carouselData.imagesClasses || []
+    .text-image-carousel-container(id=id, class=additionalClass)
+        .content-container
+            .carousel-control.left
+                img.icon(src=require("../../images/icons/chevron-left-icon.svg"), alt="Left")
+            .carousel-control.right
+                img.icon(src=require("../../images/icons/chevron-right-icon.svg"), alt="Right")
+            ol.indicators-container
+                each info, index in infoArray
+                    li.indicator(class = index === 0 ? 'active' : '')
+            ul.text-container
+                each info, index in infoArray
+                    .carousel-item-container(class=index === 0 ? 'active' : '')
+                        if info.title
+                            h5.title(class=additionalClass)=info.title
+                        span.text(class=!info.title ? additionalClass : '')=info.text
+                        if info.link && info.link.href
+                            a.link(href=info.link.href, rel=info.link.rel, target=info.link.target)
+                                if info.link.text
+                                    span #{info.link.text}
+        each val, index in images
+            if index === 0
+                div.carousel-image-background.active(class=val)
+            else
+                div.carousel-image-background(class=val)
+        if block
+            block

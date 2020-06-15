@@ -1,0 +1,49 @@
+extends ../shared/layout.pug
+
+include ../shared/contact-us.pug
+include ../shared/reviews.pug
+include ../shared/youtube-video.pug
+include ../shared/text-image-carousel.pug
+include ../shared/info-tile.pug
+include ../shared/partners.pug
+include ../shared/sign-in-button.pug
+include ../shared/about-app.pug
+
+block content
+    - const benefitsCarouselId = 'doctors-benefits'
+    -
+        const aboutApp = {
+            title : 'About diyaMD',
+            text: 'A health record management system with the goal of keeping patients safe during a health emergency. Patient records are kept up-to-date and easily accessible. Developed by Diya Health, a team of doctors and engineers diyaMD is being used in four continents with the majority of users in North America.',
+        };
+    script.
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('doctors-benefits', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 8000);
+        });
+    
+    article.carousel-with-tiles.primary-background-content
+        +textImageCarousel(doctorsBenefits, benefitsCarouselId, 'alternative small')
+            .multiple-tiles-container
+                +infoTile('Doctors Sign-In', 'alternative')
+                    +signInButton('https://diyamd.org/auth/sign-in')
+                +infoTile('Any Questions?', 'alternative')
+                    button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
+                        span.label
+                            include ../../images/icons/comment-question-outline-icon.svg
+                            span Contact Us                    
+    article
+        +partners('small')
+    article.covid-info-container
+        include ../shared/covid-info.pug
+    article.alternative-background-content
+        +reviews(reviews.diyaMd, 'alternative')
+    article.primary-background-content
+        +aboutApp(aboutApp.title, aboutApp.text)
+            include ../../images/icons/diyamd-logo.svg
+    article.alternative-background-content(id="contact-us")
+        +contactUs(organizationSizeOptions)
+
+    include ../shared/map-app.pug

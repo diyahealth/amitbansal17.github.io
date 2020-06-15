@@ -1,0 +1,6 @@
+mixin infoTile(title, additionalClass)
+    .info-tile(class=additionalClass)
+        .text.title=title
+        .content
+            if block
+                block

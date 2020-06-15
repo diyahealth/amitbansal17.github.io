@@ -1,0 +1,43 @@
+.partners-container {
+    position: relative;
+    margin: auto;
+    padding: 10px 40px;
+    @media screen and (max-width: $break-tablet) {
+        padding: 10px 20px;
+    }
+
+    max-width: $container-max-width;
+
+    
+}
+
+.partners-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &.small {
+        justify-content: space-around;
+        & > .partner-icon {
+            height: 120px;
+
+            @media screen and (max-width: $break-tablet) {
+                height: 110px;
+            }
+        }
+    }
+
+    .partner-icon {
+        height: 200px;
+        margin: 10px;
+
+        @media screen and (max-width: $break-tablet) {
+            height: 160px;
+        }
+
+        @media screen and (max-width: $break-tablet) {
+            height: 128px;
+        }
+    }
+}

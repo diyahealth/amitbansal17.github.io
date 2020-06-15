@@ -4,11 +4,11 @@ footer.footer
             h4.section-title Menu
             ul.links
                 li
-                    a(href=pages.index.url) About Us
+                    a(href=pages.aboutUs.url)=pages.aboutUs.name
                 li
-                    a(href=pages.ourProjects.url)=pages.ourProjects.name
+                    a(href=pages.doctors.url)=pages.doctors.name
                 li
-                    a(href=pages.howToHelp.url)=pages.howToHelp.name
+                    a(href=pages.patientsAndFamilies.url)=pages.patientsAndFamilies.name
         .section-contacts
             h4.section-title Contact Us
             ul.links
@@ -21,7 +21,7 @@ footer.footer
                                  target="_blank").address #{contacts.address.line2}
         .section-copyright
             .copyright-container
-                p.copyright Copyright ©#{new Date().getFullYear()} DiyaHealth. All Rights Reserved.
+                p.copyright Copyright ©#{new Date().getFullYear()} Diya Health. All Rights Reserved.
             .link-container
                 a(href=pages.privacyPolicy.url)= pages.privacyPolicy.name
                 a(href=pages.termsAndConditions.url)= pages.termsAndConditions.name

@@ -1,0 +1,100 @@
+.covid-info-container { 
+    background-color: #fdf4f4;
+}
+
+.covid-info-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    @media screen and (max-width: $break-tablet) {
+        width: calc(100% + 72px);
+        margin: -36px;
+    }
+
+    .item {
+        padding: 36px;
+
+        &.main-info {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            flex-grow: 0;
+            max-width: 100%;
+            flex-basis: 100%;
+
+            @media screen and (max-width: $break-tablet) {
+                flex-grow: initial;
+                max-width: initial;
+                flex-basis: initial;
+            }
+
+            & > .icon-container {
+                margin-bottom: 48px;
+            }
+
+            .text {
+                font-size: 34px;
+                line-height: 1.17;
+                text-align: center;
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 26px;
+                    line-height: 1.235;
+                }
+            }
+
+        }
+
+        &.secondary-info {
+            margin: 4px 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            flex-grow: 0;
+            max-width: 50%;
+            flex-basis: 50%;
+
+            @media screen and (max-width: $break-tablet) {
+                flex-grow: initial;
+                max-width: initial;
+                flex-basis: initial;
+            }
+
+            & > .icon-container {
+                margin-bottom: 48px;
+            }
+
+            &.image-container {
+                & > img {
+                    width: 100%;
+                }
+                
+                @media screen and (max-width: $break-tablet) {
+                    order: -1;
+
+                    width: calc(100% + 48px);
+                    margin: -24px -24px 0px -24px;
+                }
+            }
+
+            .text {
+                font-size: 26px;
+                line-height: 1.235;
+
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 22px;
+                    line-height: 1.334;
+                }
+
+                &.link {
+                    color: $primary-color;
+                    margin-top: 32px;
+                    align-self: baseline;
+                }
+            }
+
+        }
+    }
+}

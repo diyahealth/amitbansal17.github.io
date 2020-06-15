@@ -1,13 +1,14 @@
 nav.navigation-container
+    - const myDiyaUrl = 'https://mydiya.org';
     div.logo-container
         a(href=pages.index.url)
-            img.logo(src=require("../../images/diyahealth-logo.svg"), alt="DiyaHealth Logo")
+            img.logo(src=require("../../images/icons/diyahealth-logo.svg"), alt="Diya Health Logo")
     ul.navigation
         li
+            a(href=pages.doctors.url, class=page === pages.doctors ? "active" : "") Doctors
+        li
+            a(href=pages.patientsAndFamilies.url, class=page === pages.patientsAndFamilies ? "active" : "") #{pages.patientsAndFamilies.name}
+        li
             a(href=pages.aboutUs.url, class=page === pages.aboutUs ? "active" : "") About Us
-        li
-          a(href=pages.ourProjects.url, class=page === pages.ourProjects ? "active" : "") Our Projects
-        li
-            a(href=pages.howToHelp.url, class=page === pages.howToHelp ? "active" : "") How To Help
         li
             a(href=pages.contactUs.url, class=page === pages.contactUs ? "active" : "") Contact Us

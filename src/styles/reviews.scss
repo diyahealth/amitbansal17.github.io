@@ -1,0 +1,132 @@
+@mixin review-part($max-width-percentage) {
+    flex-grow: 0;
+    max-width: $max-width-percentage;
+    flex-basis: $max-width-percentage;
+
+    @media screen and (max-width: $break-mobile) {
+        padding: 0;
+        max-width: initial;
+        flex-basis: initial;
+        flex-grow: initial;
+        width: 100%;
+    }
+}
+
+.reviews-container {
+    .title {
+        font-size: 30px;
+        line-height: 1.14;
+        text-align: center;
+        color: #2c2d2d;
+        margin: 10px 0;
+    }
+
+    .reviews {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (max-width: $break-mobile) {
+            flex-direction: column;
+        }
+
+        .review {
+            padding: 0 10px;
+            flex: 1 0 32%;
+            display: flex;
+
+            @media screen and (max-width: $break-tablet) {
+                flex: 1 0 45%;
+    
+                &:last-of-type {
+                    flex: 1;
+                    margin-top: 10px;
+                }
+    
+            }
+    
+            @media screen and (max-width: $break-mobile) {
+                flex: 1;
+                padding: 0;
+
+                flex-direction: column;
+                margin-top: 20px;
+
+                &:first-child {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                & > .part:first-of-type {
+                    display: flex;
+                    justify-content: center;
+
+                    & > .avatar {
+                        width: 150px;
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .reviewer-signature {
+                @media screen and (max-width: $break-mobile) {
+                   text-align: center;
+                }
+            }
+        
+            .avatar {
+                margin-right: 10px;
+                width: 100px;
+                overflow: hidden;
+                position: relative;
+                border-radius: 50%;
+        
+                border: 2px solid $primary-color;
+                user-select: none;
+    
+                &.alternative {
+                    border: 2px solid $alternative-primary-color;
+                }
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        
+            .review-text {
+                margin: 0px;
+                margin-top: 10px;
+
+                font-size: 15px;
+                font-weight: 500;
+                letter-spacing: 0;
+                line-height: 1.39;
+        
+                &.reviewer-name {
+                    margin-top: 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 1.235;
+        
+                    color: $primary-color;
+    
+                    &.alternative {
+                        color: $alternative-primary-color;
+                    }
+                }
+            
+                &.reviewer-position {
+                    font-size: 16px;
+                    margin-top: 0;
+
+                }
+            }
+        
+            .quote-logo {
+                height: 40px;
+            }
+        
+        }
+    }
+}

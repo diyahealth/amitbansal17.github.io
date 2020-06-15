@@ -77,6 +77,12 @@
   }
 }
 
+.title-underlined {
+    display: inline-block;
+    margin-bottom: 2px;
+    border-bottom: 2px solid #971f26;
+}
+
 .index-mission {
     display: flex;
 
@@ -134,6 +140,11 @@
         .text-container,
         .quote-container {
             padding: 0;
+        }
+
+        .image-container {
+            order: -1;
+            margin-bottom: 20px;
         }
     }
 }

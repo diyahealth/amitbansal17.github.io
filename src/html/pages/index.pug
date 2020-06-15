@@ -1,60 +1,51 @@
 extends ../shared/layout.pug
 
-include ../shared/head-image.pug
+include ../shared/text-image-carousel.pug
+include ../shared/contact-us.pug
+include ../shared/reviews.pug
+include ../shared/info-tile.pug
+include ../shared/partners.pug
 
 block head
-    meta(name="twitter:card" value="DiyaHealth Website")
-    meta(property="og:title" content="DiyaHealth Website")
+    meta(name="twitter:card" value="Diya Health Website")
+    meta(property="og:title" content="Diya Health Website")
     meta(property="og:type" content="website")
     meta(property="og:url" content="https://www.diyahealth.org/")
     meta(property="og:image" content="https://www.diyahealth.org/images/cbde0a1dc167b130bcf77464cabbe0e7.svg")
     meta(property="og:description" content="Diya Health")
 
 block content
-    +headImage("head-bg-index", "We all deserve the best health possible", "big")
-      
-    article.content-block.image-text
-        .image-container
-            img(src=require("../../images/index/people.jpg"), alt="People in village")
-        .text-container
-            p.text.
-                We envision a future where every individual, in every stratum of society, has the tools, information, and knowledge they need to take an active role in their own ability to seek a healthy, happy, and meaningful life. Health is not simply an afterthought, but rather a precondition for the pursuit of happiness. So many of us still lack what many of us enjoy as common sense access to health care and the safe practice of medicine. At DiyaHealth we want to change this.
+    - const benefitsCarouselId = 'benefits'
+    - const doctorsUrl = pages.doctors.url;
+    - const patientsAndFamiliesUrl = pages.patientsAndFamilies.url;
 
-    article.content-block 
-        h2.index-highlight DiyaHealth is changing the healthcare equation, in a way that is inclusive of the underprivileged.
+    script.
+        window.addEventListener('load', (event) => {
+            diya.carousel.init('benefits', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 8000);
+        });
+    article.carousel-with-buttons.alternative-background-content
+        +textImageCarousel(benefits, benefitsCarouselId, 'small')
+            .multiple-buttons-container
+                .button-container
+                    a.material-btn.large(href=doctorsUrl)
+                        span.label
+                            include ../../images/icons/local-hospital-outline-icon.svg
+                            span Doctors
+                .button-container
+                    a.material-btn.large(href=patientsAndFamiliesUrl)
+                        span.label
+                            include ../../images/icons/person-outline-icon.svg
+                            span Patients & Families
+    article
+        +partners('small')
+    article.covid-info-container
+        include ../shared/covid-info.pug
+    article.alternative-background-content
+        +reviews(reviews.index)
+    article.primary-background-content
+        +contactUs(organizationSizeOptions)
 
-    article.covid-block
-        .image-container
-            img(src=require("../../images/index/covidvirus.png"), alt="Covidvirus" class="Covidvirus")
-        h2.reduce REDUCE YOUR RISK OF CORONAVIRUS WITH DIYA!
-        p Patients can track their COVID-19 exposure and symptoms (temperature, cough, fever, etc) from the safety and comfort of their homes. They can share this accurate history and symptom information with their family and physicians, especially if symptoms worsen. Physicians can also remotely monitor patients' symptoms from anywhere. 
-
-    article.content-block-bg.bg-stat
-        .content-inner.op-time-stats
-            .title
-                |Average time spent with patients during medical primary care consultants:
-            ul.list-unstyled.list-stats
-                li
-                    .time.color-deep-red 48 s
-                    .location in Bangladesh
-                li
-                    .time.color-red 2 min
-                    .location in India
-                li
-                    .time.color-yellow 9 min
-                    .location in the UK
-                li
-                    .time.color-green 20 min
-                    .location in the USA
-
-    article.content-block.text-image
-        .text-container
-            p.text
-                | DiyaHealth is helping to bridge the gap of access to basic health care information for underprivileged population, in order to assist them to make safer health care decisions. The world has made unprecedented process in delivering quality healthcare to a larger proportion of the population than ever before. At the same time, the need is still much greater. Many areas still have far too few doctors, translating to extremely brief consultations and increased risks for these populations.
-            br 
-            .link-container
-                a.btn(href=pages.ourProjects.url) Check out our projects
-        .image-container
-            img(src=require("../../images/index/diya.jpg"), alt="Diya Lamp")
-
-    section.index-contacts
+    include ../shared/map-app.pug

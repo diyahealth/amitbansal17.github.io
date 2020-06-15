@@ -1,7 +1,10 @@
 import { CaptchaStateHolder } from "./scripts/CaptchaStateHolder";
+import { CarouselManager } from "./scripts/CarouselManager";
 import { ContactUsForm } from "./scripts/ContactUsForm";
 import { initGoogleMap } from "./scripts/GoogleMap";
 import { LayoutManager } from "./scripts/LayoutManager";
+import { toAnchor, ToAnchor } from "./scripts/toAnchor";
+
 import "./styles/main.scss";
 import "./typings";
 
@@ -22,6 +25,8 @@ interface DiyaHealthWebSite {
     map: {
         init: () => void;
     };
+    carousel: CarouselManager;
+    toAnchor: ToAnchor;
 }
 
 const layout = new LayoutManager();
@@ -31,6 +36,7 @@ window.passCaptcha = () => captcha.pass();
 window.resetCaptcha = () => captcha.reset();
 
 window.diya = {
+    carousel: new CarouselManager(),
     contactUs: {
         captcha,
         form: new ContactUsForm(captcha, layout),
@@ -38,4 +44,5 @@ window.diya = {
     map: {
         init: initGoogleMap,
     },
+    toAnchor,
 };

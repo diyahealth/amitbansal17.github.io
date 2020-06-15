@@ -3,21 +3,80 @@ fieldset {
     border: none;
 }
 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
 .form-control {
-    display: block;
     width: 100%;
-    padding: 20px;
-    border: 1px solid #000;
-    font-size: 18px;
-    line-height: 1;
+    margin-top: 16px;
+    margin-bottom: 8px;
 
-    &:focus {
-        outline: 0;
-    }
+    .input-container {
+        width: 100%;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
 
-    @media screen and (max-width: $break-tablet) {
-        padding: 14px;
-        font-size: 14px;
+        background-color: #fff;
+        border-radius: 4px;
+
+        cursor: text;
+
+        &:hover > .input {
+            border: 1px solid $hover-input-border-color;
+        }
+
+        .input {
+            padding: 18.5px 14px;
+            width: 100%;
+            outline: 0;
+            
+
+            border: 1px solid $disabled-input-color;
+            border-radius: 4px;
+
+            background-color: #fff;
+
+            &:focus {
+                border: 2px solid $primary-color;
+                padding-top: 17.5px;
+                padding-bottom: 17.5px;
+            }
+
+            &.non-resizable {
+                resize: none;
+            }
+
+            &:focus + .form-label {
+                transform: translate(4px, -8px) scale(0.75);
+                color: $primary-color;
+            }
+
+            &:not(:placeholder-shown) + .form-label {
+                transform: translate(4px, -8px) scale(0.75);
+                color: $disabled-input-color;
+            }
+        }
+
+        .form-label {
+            pointer-events: none;
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+
+            font-size: 18px;
+            color: $disabled-input-color;
+            background-color: #fff;
+
+            z-index: 1;
+            transform: translate(12px, 18px) scale(1);
+            transition: color 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;
+        }
     }
 }
 

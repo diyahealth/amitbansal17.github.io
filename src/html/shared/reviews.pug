@@ -1,0 +1,20 @@
+mixin reviewerSignature(review, additionalClass)
+    .reviewer-signature
+        h4.review-text.reviewer-name(class=additionalClass)=review.signature
+            h5.review-text.reviewer-position=review.title
+            if review.subline
+                h5.review-text.reviewer-position=review.subline
+
+mixin reviews(reviews, additionalClass)
+    .reviews-container
+        .default-content-block
+            .reviews
+                each review, index in reviews
+                    .review(class=additionalClass)
+                            .part
+                                .avatar(class=additionalClass)
+                                    img(src=review.image)
+                            .part
+                                +reviewerSignature(review,additionalClass)
+                                h5.review-text=review.text
+                                    

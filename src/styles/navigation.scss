@@ -1,5 +1,5 @@
 .navigation-container {
-    padding: 30px $container-gutter;
+    padding: 20px $container-gutter;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,31 +7,31 @@
     max-width: $container-max-width;
 
     @media screen and (max-width: $break-tablet) {
-        padding: 20px 30px;
+        padding: 15px 30px;
     }
 
     @media screen and (max-width: $break-mobile) {
         flex-direction: column;
-        padding: 20px 25px 20px;
+        padding: 15px 10px;
         font-size: 12px;
     }
 
     .logo-container {
-        max-width: 90px;
+        max-width: 180px;
 
         @media screen and (max-width: $break-tablet) {
-            max-width: 70px;
+            max-width: 140px;
         }
 
         @media screen and (max-width: $break-mobile) {
-            max-width: 45px;
+            max-width: 101px;
         }
     }
 
     .navigation {
         @extend .list-unstyled;
 
-        padding-left: 15%;
+        padding-left: 10%;
         flex-grow: 1;
         display: flex;
         justify-content: space-between;
@@ -48,7 +48,6 @@
 
         li {
             padding-left: 15px;
-            flex-basis: 25%;
 
             @media screen and (max-width: $break-mobile) {
                 flex-basis: auto;

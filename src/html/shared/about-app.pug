@@ -1,0 +1,16 @@
+mixin aboutApp(title, text, click)
+    .default-content-block
+        .about-app-content
+            if block
+                .icon-container
+                    block
+            else
+                img.image(src=require("../../images/contact-us/contact-us.png"))
+
+            .main-info
+                h3.title=title
+                h5.info=text
+                if click
+                    button.material-btn(onclick=click)
+                        span.label
+                            span Contact Us

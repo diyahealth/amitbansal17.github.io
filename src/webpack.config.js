@@ -82,7 +82,15 @@ module.exports = (env, argv) => ({
             },
             {
                 from: "robots.txt",
-            }
+            },
+            {
+                from: "./images/reviews",
+                to: "./images/reviews",
+            },
+            {
+                from: "./images/patients-and-families",
+                to: "./images/patients-and-families",
+            },
         ]),
         new ExtractTextPlugin("./css/styles.css"),
         new CssRewritePlugin({
@@ -110,15 +118,15 @@ module.exports = (env, argv) => ({
             inject: false
         }),
         new HtmlWebpackPlugin({
-            template: "./html/pages/how-to-help.pug",
-            templateParameters: buildTemplateData("howToHelp", argv.mode),
-            filename: "how-to-help.html",
+            template: "./html/pages/doctors.pug",
+            templateParameters: buildTemplateData("doctors", argv.mode),
+            filename: "doctors.html",
             inject: false
         }),
         new HtmlWebpackPlugin({
-            template: "./html/pages/our-projects.pug",
-            templateParameters: buildTemplateData("ourProjects", argv.mode),
-            filename: "our-projects.html",
+            template: "./html/pages/patients-and-families.pug",
+            templateParameters: buildTemplateData("patientsAndFamilies", argv.mode),
+            filename: "patients-and-families.html",
             inject: false
         }),
         new HtmlWebpackPlugin({

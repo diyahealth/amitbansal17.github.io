@@ -3,57 +3,81 @@ extends ../shared/layout.pug
 include ../shared/head-image.pug
 
 block content
-    +headImage("head-bg-about-us", "We believe in the pursuit of happiness, and good health")
+    +headImage("head-bg-about-us", "Diya Health is a team of physicians, engineers, gerontologists, researchers, designers and business leaders", 'small')
 
-    article.content-block.text-image
-        .text-container
-            h2.block-title Who We Are
-            p.text.
-                We are a group of socially-minded individuals 
-                from a spectrum of developed and developing
-                countries around the world. We represent many
-                different cultures, religions, ethnic background,
-                and speak over a dozen spoken languages.
-                Some of us are starting to dabble in the world of
-                social causes, while others have generations of social
-                work in our lineage. We have deep expertise in
-                the areas of technical, medical, legal, arts
-                and linguistics, and at DiyaHealth, we share a common cause
-                to help make life saving healthcare decisions feasible for all.
-        .image-container
-            img(src=require("../../images/index/people.jpg"), alt="People in village")
-
-    article.content-block-bg
-        .content-inner.index-mission
-                .text-container
-                    h2.block-title Our Mission
-                    p.text.
-                        Much of the world's population lives in rural or undeveloped
-                        areas where basic life needs cannot be met.
-                        Yet, they still develop health ailments requiring medical treatment.
-                        They may have to travel miles to find this help, however communication
-                        can be limited to nil. Making health care decisions based on limited
-                        information is not desirable; in reality, it’s unsafe.
-                .quote-container
-                    .header-replacement
-                    p.quote.
-                        The primary mission of DiyaHealth is to build technology 
-                        o bridge the gap of access to basic health care information
-                        for underprivileged population, in order to assist them to make safer health care decisions.
-
+    article.content-block-bg.text-image
+        .index-mission.content-inner
+            .text-container
+                h2.block-title Our Mission
+                ul
+                    li.text To bridge the communication gap between doctors, patients and families.
+                    li.text To reduce the incidence of medical errors and healthcare costs.
+                    li.text To democratise access to healthcare worldwide.
+                .header-replacement
+                p.quote.
+                    We use advanced software algorithms and data science to enable doctors,
+                    patients and families to improve health outcomes. Our software-as-a-service digital health platform focuses
+                    on actionable data science to empower doctors and patients.
+                br
+                p.text Diya Health  was founded in April 2018 in CA, USA.
+            .image-container
+                img(src=require("../../images/about-us/volunteer-with-us.jpg"), alt="Volunteers")
 
     article.content-block
         .index-diya
             .border-container
                 .image-container
                     img(src=require("../../images/index/diya.jpg"), alt="Diya")
-                p.text.
-                    The diya is a traditional oil lamp usually made from clay.
-                    It is truly a great symbol of optimism and prosperity.
-                    It lights the dark and gives a deep sense of calm, which is extremely in tune with our mission.
-                    Similar to the diya we want to light the path for those who have lost in the dark
-                    and give them the hope for a better and healthier future.
+                p.text
+                    span In selecting our name, we drew inspiration from a sentence in the Saint Francis prayer, 
+                    i “May we bring light where there is darkness.” 
+                    span.
+                        There is an immense amount of information darkness when it comes to our healthcare - the doctors,
+                        the patients, and the families are often in the dark despite our best efforts otherwise. 
+                    br
+                    span.
+                        Ḍiyā is a word of Arabic origin and it means radiance.
+                        It’s been adopted by South-Asain culture as a name for a primitive lamp.-- a small handmade bowl made out of clay that,
+                        with a bit of oil and a wick, creates light. Lifesaving medical information delivered on a smart-device is still just a diya to us.
 
+    article.content-block-bg.primary
+        .content-inner.image-text
+            .image-container
+                img(src=require("../../images/about-us/doctors.jpg"), alt="Doctors")
+            .text-container
+                h2.block-title
+                    span We serve 
+                    span.title-underlined doctors
+                p.text
+                    span Specifically designed for physicians in private practice, 
+                    i DiyaMD 
+                    span enables doctors to communicate with single or multiple patients
+                    span through the patients’ 
+                    i myDiya
+                    span . 
+                    i DiyaMD 
+                    span enhances telehealth.  Doctors use 
+                    i DiyaMD 
+                    span.
+                        to review and respond to patients’ complaints, monitor patients remotely, note symptom-trends,
+                        reconcile medications with in-house EHRs, send alerts, and generate reports of billable services.
+    article.content-block-bg.primary
+        .content-inner.text-image
+            .text-container
+                h2.block-title
+                    span We serve 
+                    span.title-underlined patients
+                p.text
+                    span Our personal health records app, 
+                    i myDiya
+                    span , allows a person to manage their own electronic “health diary.”
+                    span.
+                        It can receive data from any standard healthcare system, is compliant with personal-security standards, and can be used in emergencies as a personal
+                        “medical alert bracelet.”  It allows for remote referrals, monitoring of symptoms, alerts about medications
+                        (e.g., dosage duplications or contraindications), among other capabilities. Most importantly, the information is controlled by,
+                        owned by, and travels with the patient, regardless of changes in doctor, medical plan, residence, or caregiver.
+            .image-container
+                img(src=require("../../images/about-us/patients.jpg"), alt="Patients")
     article.content-block-bg
         .content-inner.image-text.hth-share
             .image-container
@@ -62,16 +86,16 @@ block content
                 h2.block-title Share with others
                 p.text.
                     If you believe in our mission or know someone else who may have the desire,
-                    knowledge or expertise, please help by increasing awareness of DiyaHealth.
+                    knowledge or expertise, please help by increasing awareness of Diya Health.
                     Share our story with your friends. Together we can make the future brighter
                     for those in need and give everyone a fair chance for good health.
                 .input-group
                     a.social-btn.fb(href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.diyahealth.org/" target="_blank")
                         i.icon-facebook
                         |Share
-                    a.social-btn.twt(href="https://twitter.com/intent/tweet/?text=DiyaHealth%20Website&amp;url=https%3A%2F%2Fwww.diyahealth.org%2F" target="_blank")
+                    a.social-btn.twt(href="https://twitter.com/intent/tweet/?text=Diya%20Health%20Website&amp;url=https%3A%2F%2Fwww.diyahealth.org%2F" target="_blank")
                         i.icon-twitter
                         |Tweet
-                    a.social-btn.lin(href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.diyahealth.org/&title=DiyaHealth%20Website&summary=Lighting%20the%20Path%20to%20a%20Healthier%20Future%20for%20All&source=https%3A//www.diyahealth.org/" target="_blank")
+                    a.social-btn.lin(href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.diyahealth.org/&title=Diya%20Health%20Website&summary=Lighting%20the%20Path%20to%20a%20Healthier%20Future%20for%20All&source=https%3A//www.diyahealth.org/" target="_blank")
                         i.icon-linkedin
                         |Share

@@ -76,6 +76,8 @@ export class ContactUsForm {
             return data;
         };
 
-        return [].reduce.call(form.elements, collect, {});
+        const formResult = [].reduce.call(form.elements, collect, {});
+        formResult["referUrl"] = window.location.href;
+        return formResult;
     }
 }
