@@ -30,7 +30,7 @@ block content
                 +infoTile('Doctors Sign-In', 'alternative')
                     +signInButton('https://diyamd.org/auth/sign-in')
                 +infoTile('Any Questions?', 'alternative')
-                    a.material-btn(href=`${page.url}#contact-us`)
+                    button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
                         span.label
                             include ../../images/icons/comment-question-outline-icon.svg
                             span Contact Us                    

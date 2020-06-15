@@ -1,4 +1,4 @@
-mixin aboutApp(title, text, link)
+mixin aboutApp(title, text, click)
     .default-content-block
         .about-app-content
             if block
@@ -10,7 +10,7 @@ mixin aboutApp(title, text, link)
             .main-info
                 h3.title=title
                 h5.info=text
-                if link
-                    a.material-btn(href=link)
+                if click
+                    button.material-btn(onclick=click)
                         span.label
                             span Contact Us
