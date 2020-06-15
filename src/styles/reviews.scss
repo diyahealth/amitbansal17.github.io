@@ -21,159 +21,112 @@
         margin: 10px 0;
     }
 
-    .review {
+    .reviews {
         display: flex;
         flex-wrap: wrap;
-    
-        & > .part:nth-of-type(1) {
-            @include review-part(30%);
-        }
-    
-        & > .part:nth-of-type(2) {
-            @include review-part(70%);
-        }
-    
-        .part {
-            padding: 20px;
-        }
-    
-        .avatar {
-            width: 100%;
-            overflow: hidden;
-            position: relative;
-            border-radius: 50%;
-    
-            border: 2px solid $primary-color;
-            user-select: none;
 
-            &.alternative {
-                border: 2px solid $alternative-primary-color;
-            }
-    
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+        @media screen and (max-width: $break-mobile) {
+            flex-direction: column;
         }
-    
-        .review-text {
-            margin-top: 15px;
-            font-size: 20px;
-            font-weight: 500;
-            letter-spacing: 0;
-            line-height: 1.39;
 
-            margin-block-end: 0;
-            margin-inline-start: 0;
-            margin-inline-end: 0;
+        .review {
+            padding: 0 10px;
+            flex: 1 0 32%;
+            display: flex;
 
             @media screen and (max-width: $break-tablet) {
-                font-size: 18px;
-                line-height: 1.1;
-            }
-
-            @media screen and (max-width: $break-mobile) {
-                font-size: 16px;
-                line-height: 1.1;
-            }
+                flex: 1 0 45%;
     
-            &.reviewer-name {
-                margin-top: 15px;
-                font-size: 25px;
-                font-weight: 600;
-                text-align: end;
-                line-height: 1.235;
-    
-                color: $primary-color;
-
-                &.alternative {
-                    color: $alternative-primary-color;
+                &:last-of-type {
+                    flex: 1;
+                    margin-top: 10px;
                 }
     
-                @media screen and (max-width: $break-tablet) {
-                    font-size: 23px;
-                    line-height: 1.15;
+            }
+    
+            @media screen and (max-width: $break-mobile) {
+                flex: 1;
+                padding: 0;
+
+                flex-direction: column;
+                margin-top: 20px;
+
+                &:first-child {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                & > .part:first-of-type {
+                    display: flex;
+                    justify-content: center;
+
+                    & > .avatar {
+                        width: 150px;
+                        margin-right: 0;
+                    }
+                }
+            }
+
+            .reviewer-signature {
+                @media screen and (max-width: $break-mobile) {
+                   text-align: center;
                 }
             }
         
-            &.reviewer-position {
-                font-size: 20px;
-                text-align: end;
-                margin-top: 0;
+            .avatar {
+                margin-right: 10px;
+                width: 100px;
+                overflow: hidden;
+                position: relative;
+                border-radius: 50%;
+        
+                border: 2px solid $primary-color;
+                user-select: none;
     
-                @media screen and (max-width: $break-tablet) {
-                    font-size: 19px;
+                &.alternative {
+                    border: 2px solid $alternative-primary-color;
                 }
-            }
-        }
-    
-        .quote-logo {
-            height: 40px;
-        }
-    
-        .logo {
-            height: 45px;
-            text-align: right;
-            & > img {
-                max-width: 100%;
-                height: 100%;
-            }
-        }
-    
-        .compact-logo-signature {
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-            flex-wrap: wrap;
-    
-            .compact-logo {
-                height: 90px;
-                padding-right: 16px;
-                & > img {
+                
+                img {
+                    width: 100%;
                     height: 100%;
+                    object-fit: cover;
                 }
             }
-        }
-    }
-    
-    .controls-container {
-        margin-top: 20px;
-    
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: nowrap;
-        align-items: center;
-    
-        .control {
-            background-color: $primary-color;
-            border-radius: 50%;
-            height: 60px;
-            cursor: pointer;
-    
-            transition: background-color 0.2s ease-in-out;
-    
-            &:hover {
-                background-color: darken($primary-color, 20%);
-            }
+        
+            .review-text {
+                margin: 0px;
+                margin-top: 10px;
 
-            & > svg {
-                height: 100%;
-                pointer-events: none;
-                fill: #fff;
-            }
+                font-size: 15px;
+                font-weight: 500;
+                letter-spacing: 0;
+                line-height: 1.39;
+        
+                &.reviewer-name {
+                    margin-top: 0;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 1.235;
+        
+                    color: $primary-color;
+    
+                    &.alternative {
+                        color: $alternative-primary-color;
+                    }
+                }
+            
+                &.reviewer-position {
+                    font-size: 16px;
+                    margin-top: 0;
 
-            &.alternative {
-                background-color: $alternative-primary-color;
-
-                &:hover {
-                    background-color: darken($alternative-primary-color, 20%);
                 }
             }
-    
-            @media screen and (max-width: $break-tablet) {
-                height: 50px;
+        
+            .quote-logo {
+                height: 40px;
             }
+        
         }
     }
 }

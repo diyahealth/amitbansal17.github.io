@@ -18,15 +18,12 @@
     flex-wrap: wrap;
 
     &.small {
+        justify-content: space-around;
         & > .partner-icon {
-            height: 160px;
+            height: 120px;
 
             @media screen and (max-width: $break-tablet) {
-                height: 140px;
-            }
-
-            @media screen and (max-width: $break-tablet) {
-                height: 128px;
+                height: 110px;
             }
         }
     }

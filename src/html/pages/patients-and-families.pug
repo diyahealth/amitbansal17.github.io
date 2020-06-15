@@ -11,7 +11,6 @@ include ../shared/sign-in-button.pug
 
 block content
     - const benefitsCarouselId = 'patients-benefits'; 
-    - const reviewsCarouselId = 'patients-reviews';
     -
         const headerData = {
             title : 'myDiya',
@@ -26,10 +25,6 @@ block content
 
     script.
         window.addEventListener('load', (event) => {
-            diya.carousel.init('patients-reviews', {
-                switchSlideControlSelector: '.control',
-            }, 10000);
-
             diya.carousel.init('patients-benefits', {
                 switchSlideControlSelector: '.carousel-control',
                 backgroundSelector: '.carousel-image-background',
@@ -47,10 +42,11 @@ block content
     article.covid-info-container
         include ../shared/covid-info.pug
     article.alternative-background-content
-        +reviews(reviews, reviewsCarouselId, 'Reviews', 'alternative')
+       +reviews(reviews.myDiya)
     article.primary-background-content
-        +aboutApp(aboutApp.title, aboutApp.text, `${page.url}#contact-us`)
-    article.primary-background-content(id="contact-us")
+        +aboutApp(aboutApp.title, aboutApp.text)
+            include ../../images/icons/mydiya-logo.svg
+    article.alternative-background-content(id="contact-us")
         +contactUs(organizationSizeOptions)
 
     include ../shared/map-app.pug

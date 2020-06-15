@@ -1,7 +1,11 @@
 mixin aboutApp(title, text, link)
     .default-content-block
         .about-app-content
-            img.image(src=require("../../images/contact-us/contact-us.png"))
+            if block
+                .icon-container
+                    block
+            else
+                img.image(src=require("../../images/contact-us/contact-us.png"))
 
             .main-info
                 h3.title=title
