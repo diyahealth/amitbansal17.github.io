@@ -16,7 +16,6 @@ block head
 
 block content
     - const benefitsCarouselId = 'benefits'
-    - const reviewsCarouselId = 'reviews'
     - const doctorsUrl = pages.doctors.url;
     - const patientsAndFamiliesUrl = pages.patientsAndFamilies.url;
 
@@ -26,9 +25,6 @@ block content
                 switchSlideControlSelector: '.carousel-control',
                 backgroundSelector: '.carousel-image-background',
             }, 8000);
-            diya.carousel.init('reviews', {
-                switchSlideControlSelector: '.control',
-            }, 10000);
         });
     article.carousel-with-buttons.alternative-background-content
         +textImageCarousel(benefits, benefitsCarouselId, 'small')
@@ -48,7 +44,7 @@ block content
     article.covid-info-container
         include ../shared/covid-info.pug
     article.alternative-background-content
-        +reviews(reviews, reviewsCarouselId, 'Reviews')
+        +reviews(reviews.index)
     article.primary-background-content
         +contactUs(organizationSizeOptions)
 
