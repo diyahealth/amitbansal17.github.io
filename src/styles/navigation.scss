@@ -1,3 +1,19 @@
+.requestDemo {
+    background-color: #109cdc;
+    padding: 2% 2% 2% 2%;
+    display: inline;
+    border-radius: 70px;
+}
+
+.requestDemo a {
+    color: white !important;
+}
+
+.navigation li {
+    margin-top: 1%;
+    padding-top: 2%;
+}
+
 .navigation-container {
     padding: 20px $container-gutter;
     display: flex;
@@ -69,6 +85,19 @@
                 width: 100%;
                 bottom: -10px;
             }
+        }
+
+        a:hover {
+            border-bottom: 3px solid #109cdc;
+            padding-bottom: 3px;
+        }
+
+        .requestDemo:hover {
+            background-color: #0e75a5;
+        }
+
+        .requestDemo a:hover {
+            border-bottom: none;
         }
     }
 }
