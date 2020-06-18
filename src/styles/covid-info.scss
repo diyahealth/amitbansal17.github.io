@@ -2,6 +2,37 @@
     background-color: #fdf4f4;
 }
 
+.medicare-container { 
+    background-color: #ecf9fc;
+    // width: 100%;
+}
+
+.medicare-content {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 2%;
+}
+
+.medicare-image {
+    width: 3000px;
+    margin-left: 5%;
+    // padding-top: 1%;
+}
+
+h1 {
+    margin-left: 3%;
+}
+
+.medicare-image, .benefit {
+    // flex: 33.33%;
+    // padding: 5px;
+}
+
+.diya {
+    // display: inline;
+}
+
 .reduce {
     margin-top: 4%;
     margin-left: 2%;
