@@ -11,4 +11,5 @@ nav.navigation-container
         li
             a(href=pages.aboutUs.url, class=page === pages.aboutUs ? "active" : "") About Us
         li
-            a(href=pages.contactUs.url, class=page === pages.contactUs ? "active" : "") Contact Us
+            button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+                span.label Request a demo

@@ -1,6 +1,7 @@
 extends ../shared/layout.pug
 
 include ../shared/head-image.pug
+include ../shared/contact-us.pug
 
 block content
     +headImage("head-bg-about-us", "Diya Health is a team of physicians, engineers, gerontologists, researchers, designers and business leaders", 'small')
@@ -99,3 +100,5 @@ block content
                     a.social-btn.lin(href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.diyahealth.org/&title=Diya%20Health%20Website&summary=Lighting%20the%20Path%20to%20a%20Healthier%20Future%20for%20All&source=https%3A//www.diyahealth.org/" target="_blank")
                         i.icon-linkedin
                         |Share
+    article.primary-background-content(id="contact-us")
+        +contactUs(organizationSizeOptions)
