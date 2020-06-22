@@ -2,196 +2,99 @@
     background-color: #fdf4f4;
 }
 
-.medicare-container { 
-    background-color: #ecf9fc;
-    // width: 100%;
-}
-
-.algo {
-    display: flex;
-
-    @media screen and (max-width: $break-tablet) {
-        display: block;
-    }
-}
-
-.corona {
-    margin-left: 3%;
-    width: 40%;
-    padding-bottom: 0.5%;
-
-    @media screen and (max-width: $break-tablet) {
-        width: 100%;
-        margin: auto;
-        padding-top: 3%;
-    }
-}
-
-.medicare-content {
-    display: flex;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    padding-right: 2%;
-
-    @media screen and (max-width: $break-tablet) {
-        display: inline;
-    }
-}
-
-.medicare-image {
-    width: 3000px;
-    margin-left: 5%;
-
-    @media screen and (max-width: $break-tablet) {
-        width: 90%;
-        margin-top: 4%;
-    }
-}
-
-h1 {
-    margin-left: 3%;
-}
-
-.medicare-image, .benefit {
-    // flex: 33.33%;
-    // padding: 5px;
-}
-
-.diya {
-    // display: inline;
-}
-
-.reduce {
-    margin-top: 4%;
-    margin-left: 2%;
-}
-
-.covid-info-image {
-    margin-top: 2%;
-    margin-bottom: 0.5%;
-
-    @media screen and (max-width: $break-tablet) {
-        margin-top: 7%;
-        margin-bottom: 3%;
-    }
-}
-
-h2 {
-    @media screen and (max-width: $break-tablet) {
-        padding-right: 4%;
-        padding-left: 5%;
-    }
-}
-
-p {
-    margin-bottom: 2%;
-    padding-right: 4%;
-    padding-left: 5%;
-    margin-top: 0.5%;
-    line-height: 25px;
-
-    @media screen and (max-width: $break-tablet) {
-        margin-right: 3%;
-        margin-left: 3%;
-        padding-bottom: 3%;
-    }
-}
-
 .covid-info-content {
-    // margin-top: 2%;
-    margin-bottom: 1%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     
-    // @media screen and (max-width: $break-tablet) {
-    //     width: calc(100% + 72px);
-    //     margin: -36px;
-    // }
+    @media screen and (max-width: $break-tablet) {
+        width: calc(100% + 72px);
+        margin: -36px;
+    }
 
-    // .item {
-    //     padding: 36px;
+    .item {
+        padding: 36px;
 
-    //     &.main-info {
-    //         display: flex;
-    //         align-items: center;
-    //         flex-direction: column;
+        &.main-info {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
 
-    //         flex-grow: 0;
-    //         max-width: 100%;
-    //         flex-basis: 100%;
+            flex-grow: 0;
+            max-width: 100%;
+            flex-basis: 100%;
 
-    //         @media screen and (max-width: $break-tablet) {
-    //             flex-grow: initial;
-    //             max-width: initial;
-    //             flex-basis: initial;
-    //         }
+            @media screen and (max-width: $break-tablet) {
+                flex-grow: initial;
+                max-width: initial;
+                flex-basis: initial;
+            }
 
-    //         & > .icon-container {
-    //             margin-bottom: 48px;
-    //         }
+            & > .icon-container {
+                margin-bottom: 48px;
+            }
 
-    //         .text {
-    //             font-size: 34px;
-    //             line-height: 1.17;
-    //             text-align: center;
-    //             @media screen and (max-width: $break-tablet) {
-    //                 font-size: 26px;
-    //                 line-height: 1.235;
-    //             }
-    //         }
+            .text {
+                font-size: 34px;
+                line-height: 1.17;
+                text-align: center;
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 26px;
+                    line-height: 1.235;
+                }
+            }
 
-    //     }
+        }
 
-    //     &.secondary-info {
-    //         margin: 4px 0;
-    //         display: flex;
-    //         align-items: center;
-    //         flex-direction: column;
+        &.secondary-info {
+            margin: 4px 0;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
 
-    //         flex-grow: 0;
-    //         max-width: 50%;
-    //         flex-basis: 50%;
+            flex-grow: 0;
+            max-width: 50%;
+            flex-basis: 50%;
 
-    //         @media screen and (max-width: $break-tablet) {
-    //             flex-grow: initial;
-    //             max-width: initial;
-    //             flex-basis: initial;
-    //         }
+            @media screen and (max-width: $break-tablet) {
+                flex-grow: initial;
+                max-width: initial;
+                flex-basis: initial;
+            }
 
-    //         & > .icon-container {
-    //             margin-bottom: 48px;
-    //         }
+            & > .icon-container {
+                margin-bottom: 48px;
+            }
 
-    //         &.image-container {
-    //             & > img {
-    //                 width: 100%;
-    //             }
+            &.image-container {
+                & > img {
+                    width: 100%;
+                }
                 
-    //             @media screen and (max-width: $break-tablet) {
-    //                 order: -1;
+                @media screen and (max-width: $break-tablet) {
+                    order: -1;
 
-    //                 width: calc(100% + 48px);
-    //                 margin: -24px -24px 0px -24px;
-    //             }
-    //         }
+                    width: calc(100% + 48px);
+                    margin: -24px -24px 0px -24px;
+                }
+            }
 
-    //         .text {
-    //             font-size: 26px;
-    //             line-height: 1.235;
+            .text {
+                font-size: 26px;
+                line-height: 1.235;
 
-    //             @media screen and (max-width: $break-tablet) {
-    //                 font-size: 22px;
-    //                 line-height: 1.334;
-    //             }
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 22px;
+                    line-height: 1.334;
+                }
 
-    //             &.link {
-    //                 color: $primary-color;
-    //                 margin-top: 32px;
-    //                 align-self: baseline;
-    //             }
-    //         }
+                &.link {
+                    color: $primary-color;
+                    margin-top: 32px;
+                    align-self: baseline;
+                }
+            }
 
-    //     }
-    // }
+        }
+    }
 }
