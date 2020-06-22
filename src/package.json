@@ -18,6 +18,7 @@
     "author": "DiyaHealth",
     "license": "ISC",
     "dependencies": {
+        "jade-bootstrap": "^1.0.14",
         "normalize.css": "^8.0.0",
         "npm": "^5.8.0"
     },

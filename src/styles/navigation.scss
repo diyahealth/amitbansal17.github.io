@@ -5,8 +5,18 @@
     border-radius: 70px;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
 .requestDemo a {
     color: white !important;
+}
+
+.navbar-static-top {
+    // @extend _bootstrap;
 }
 
 .navigation li {
