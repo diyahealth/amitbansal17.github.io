@@ -7,6 +7,26 @@
     // width: 100%;
 }
 
+.algo {
+    display: flex;
+
+    @media screen and (max-width: $break-tablet) {
+        display: block;
+    }
+}
+
+.corona {
+    margin-left: 3%;
+    width: 40%;
+    padding-bottom: 0.5%;
+
+    @media screen and (max-width: $break-tablet) {
+        width: 100%;
+        margin: auto;
+        padding-top: 3%;
+    }
+}
+
 .medicare-content {
     display: flex;
     padding-top: 2%;

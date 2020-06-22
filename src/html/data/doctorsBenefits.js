@@ -13,7 +13,7 @@ const doctorsBenefits = {
         },
         {
             title: 'Establish your brand and create patient loyalty',
-            text: 'Share educational material and health alerts with patients easily and regularly.',
+            text: 'Easily educational material and health alerts with patients easily on a regular basis.',
         },
         {
             text: 'Direct access to patient\'s chief complaints, insurance information, vitals, medications, labs etc. anywhere and anytime. HIPAA protected.',
