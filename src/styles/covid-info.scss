@@ -1,7 +1,67 @@
 .covid-info-container { 
     background-color: #fdf4f4;
 }
+ 
+.medicare-container { 
+    background-color: #ecf9fc;
+}
+ 
+.algo {
+    display: flex;
+ 
+    @media screen and (max-width: $break-tablet) {
+        display: block;
+    }
+}
 
+.comment {
+    font-size: 13px;
+    line-height: 18px !important;
+}
+ 
+.medicare-content {
+    display: flex;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 2%;
+ 
+    @media screen and (max-width: $break-tablet) {
+        display: inline;
+    }
+}
+ 
+.medicare-image {
+    width: 2500px;
+    margin-left: 5%;
+ 
+    @media screen and (max-width: $break-tablet) {
+        width: 90%;
+        margin-top: 4%;
+    }
+}
+ 
+h1 {
+    margin-left: 5%;
+ 
+    @media screen and (max-width: $break-tablet) {
+        margin-right: 0.5%;
+    }
+}
+ 
+.benefit p {
+    margin-bottom: 2%;
+    padding-right: 4%;
+    padding-left: 5%;
+    margin-top: 0%;
+    line-height: 25px;
+ 
+    @media screen and (max-width: $break-tablet) {
+        margin-right: 3%;
+        margin-left: 3%;
+        padding-bottom: 3%;
+    }
+}
+ 
 .covid-info-content {
     display: flex;
     flex-wrap: wrap;
@@ -11,29 +71,29 @@
         width: calc(100% + 72px);
         margin: -36px;
     }
-
+ 
     .item {
         padding: 36px;
-
+ 
         &.main-info {
             display: flex;
             align-items: center;
             flex-direction: column;
-
+ 
             flex-grow: 0;
             max-width: 100%;
             flex-basis: 100%;
-
+ 
             @media screen and (max-width: $break-tablet) {
                 flex-grow: initial;
                 max-width: initial;
                 flex-basis: initial;
             }
-
+ 
             & > .icon-container {
                 margin-bottom: 48px;
             }
-
+ 
             .text {
                 font-size: 34px;
                 line-height: 1.17;
@@ -43,29 +103,29 @@
                     line-height: 1.235;
                 }
             }
-
+ 
         }
-
+ 
         &.secondary-info {
             margin: 4px 0;
             display: flex;
             align-items: center;
             flex-direction: column;
-
+ 
             flex-grow: 0;
             max-width: 50%;
             flex-basis: 50%;
-
+ 
             @media screen and (max-width: $break-tablet) {
                 flex-grow: initial;
                 max-width: initial;
                 flex-basis: initial;
             }
-
+ 
             & > .icon-container {
                 margin-bottom: 48px;
             }
-
+ 
             &.image-container {
                 & > img {
                     width: 100%;
@@ -73,28 +133,28 @@
                 
                 @media screen and (max-width: $break-tablet) {
                     order: -1;
-
+ 
                     width: calc(100% + 48px);
                     margin: -24px -24px 0px -24px;
                 }
             }
-
+ 
             .text {
                 font-size: 26px;
                 line-height: 1.235;
-
+ 
                 @media screen and (max-width: $break-tablet) {
                     font-size: 22px;
                     line-height: 1.334;
                 }
-
+ 
                 &.link {
                     color: $primary-color;
                     margin-top: 32px;
                     align-self: baseline;
                 }
             }
-
+ 
         }
     }
 }
