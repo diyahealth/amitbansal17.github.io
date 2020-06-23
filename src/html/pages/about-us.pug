@@ -1,46 +1,50 @@
 extends ../shared/layout.pug
-
+ 
 include ../shared/head-image.pug
 include ../shared/contact-us.pug
-
+ 
 block content
     +headImage("head-bg-about-us", "Diya Health is a team of physicians, engineers, gerontologists, researchers, designers and business leaders", 'small')
-
+ 
     article.content-block-bg.text-image
         .index-mission.content-inner
             .text-container
                 h2.block-title Our Mission
                 ul
-                    li.text To bridge the communication gap between doctors, patients and families.
-                    li.text To reduce the incidence of medical errors and healthcare costs.
-                    li.text To democratise access to healthcare worldwide.
+                    li.text To bridge the communication gap between doctors, patients, and families.
+                    li.text To prevent medical errors.
+                    li.text To reduce healthcare costs.
+                    li.text To 
+                        i put high-quality 
+                        medical medical care 
+                        i within reach 
+                        of of all persons worldwide, rich or poor, in cities or remote villages.
                 .header-replacement
                 p.quote.
-                    We use advanced software algorithms and data science to enable doctors,
-                    patients and families to improve health outcomes. Our software-as-a-service digital health platform focuses
-                    on actionable data science to empower doctors and patients.
+                    Using advanced algorithms, data science, and artificial-intelligence capability, we have developed a product that was inconceivable only a few years ago.  It is a software-as-a-service digital platform for use as a personal health diary.  It receives, stores, and updates all of a patient's medical information, making it available to anyone the patient wishes -- doctors, family members, and caregivers.  It facilitates telehealth as well as communication among a patient's health providers.  It is easy to use in any language.  It improves health outcomes.  
+ 
+ 
                 br
                 p.text Diya Health  was founded in April 2018 in CA, USA.
             .image-container
                 img(src=require("../../images/about-us/volunteer-with-us.jpg"), alt="Volunteers")
-
+ 
     article.content-block
         .index-diya
             .border-container
                 .image-container
                     img(src=require("../../images/index/diya.jpg"), alt="Diya")
                 p.text
-                    span In selecting our name, we drew inspiration from a sentence in the Saint Francis prayer, 
-                    i “May we bring light where there is darkness.” 
-                    span.
-                        There is an immense amount of information darkness when it comes to our healthcare - the doctors,
-                        the patients, and the families are often in the dark despite our best efforts otherwise. 
+                    span.block-title2 What's in a name?
+                    br
+                    br
+                    span Diya is a word of Arabic origin that means "radiance."  It has been adopted by South-Asian culture as a name for a primitive lamp -- a small handmade clay bowl that, with a bit of oil and a wick, creates light.  It symbolizes optimism and prosperity, lighting the dark to give a sense of calm.
+                    br 
                     br
                     span.
-                        Ḍiyā is a word of Arabic origin and it means radiance.
-                        It’s been adopted by South-Asain culture as a name for a primitive lamp.-- a small handmade bowl made out of clay that,
-                        with a bit of oil and a wick, creates light. Lifesaving medical information delivered on a smart-device is still just a diya to us.
-
+                        In selecting our name, we drew inspiration from a sentence in the prayer of St. Francis of Assisi:  "Where there is darkness, may I bring light."  When it comes to our health care, there is an enormous amount of darkness -- information darkness.  Doctors, patients, and families often are in the dark.  Our product offers lifesaving information delivered on a computer or smartphone, a unique and sophisticated gift of modern technology.  Yet to us it also is a simple gift -- it lights the dark.
+ 
+ 
     article.content-block-bg.primary
         .content-inner.image-text
             .image-container
@@ -52,10 +56,10 @@ block content
                 p.text
                     span Specifically designed for physicians in private practice, 
                     i DiyaMD 
-                    span enables doctors to communicate with single or multiple patients
+                    span enables doctors to communicate with single or multiple patients 
                     span through the patients’ 
-                    i myDiya
-                    span . 
+                    i myDiya 
+                    span accounts. On the other hand, 
                     i DiyaMD 
                     span enhances telehealth.  Doctors use 
                     i DiyaMD 
@@ -71,7 +75,7 @@ block content
                 p.text
                     span Our personal health records app, 
                     i myDiya
-                    span , allows a person to manage their own electronic “health diary.”
+                    span , allows a person to manage their own electronic “health diary.” 
                     span.
                         It can receive data from any standard healthcare system, is compliant with personal-security standards, and can be used in emergencies as a personal
                         “medical alert bracelet.”  It allows for remote referrals, monitoring of symptoms, alerts about medications
