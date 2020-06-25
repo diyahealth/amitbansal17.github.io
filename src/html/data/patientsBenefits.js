@@ -3,12 +3,12 @@ const defaultLinkProps = {
     target: '_blank',
     text: 'Watch YouTube video',
 }
-
+ 
 const patientsBenefits = {
     info: [
         {
             title: 'Emergency Access',
-            text: 'First responders quickly and directly contact your family and regular doctors (in an emergency).',
+            text: 'First responders quickly and directly contact your family and regular doctors in case of an emergency.',
             link: {
                 href: 'https://www.youtube.com/watch?v=AvAYfDaFpr0',
                 ...defaultLinkProps,
@@ -48,7 +48,7 @@ const patientsBenefits = {
         },
         {
             title: '24/7 Connection',
-            text: 'Stay connected with your family and health care team at all times.',
+            text: 'Stay connected with your family and healthcare team at all times.',
             link: {
                 href: 'https://www.youtube.com/watch?v=dNj_iTR2pHc',
                 ...defaultLinkProps,
@@ -64,5 +64,5 @@ const patientsBenefits = {
         'head-bg-24-7-connection',
     ],
 }
-
+ 
 module.exports = patientsBenefits;
