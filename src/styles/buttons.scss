@@ -146,6 +146,19 @@
         }
     }
 
+    &.small {
+        padding: 8px 16px;
+        min-width: 0;
+
+        @media screen and (max-width: $break-tablet) {
+            padding: 8px 8px;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            padding: 4px;
+        }
+    }
+
     .label {
         display: inline-flex;
         align-items: center;

@@ -2,14 +2,6 @@
     background-color: #fdf4f4;
 }
  
-h1 {
-    margin-left: 5%;
- 
-    @media screen and (max-width: $break-tablet) {
-        margin-right: 0.5%;
-    }
-}
- 
 .covid-info-content {
     display: flex;
     flex-wrap: wrap;
@@ -39,7 +31,7 @@ h1 {
             }
  
             & > .icon-container {
-                margin-bottom: 48px;
+                margin-bottom: 24px;
             }
  
             .text {
@@ -48,7 +40,11 @@ h1 {
                 text-align: center;
                 @media screen and (max-width: $break-tablet) {
                     font-size: 26px;
-                    line-height: 1.235;
+                    line-height: 1.1;
+                }
+
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 22px;
                 }
             }
  
@@ -71,7 +67,7 @@ h1 {
             }
  
             & > .icon-container {
-                margin-bottom: 48px;
+                margin-bottom: 24px;
             }
  
             &.image-container {
@@ -94,6 +90,10 @@ h1 {
                 @media screen and (max-width: $break-tablet) {
                     font-size: 22px;
                     line-height: 1.334;
+                }
+
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 18px;
                 }
  
                 &.link {
