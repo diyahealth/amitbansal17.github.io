@@ -19,6 +19,20 @@ function buildTemplateData(pageName, mode) {
     };
 }
 
+function buildWebpackPages(argv) {
+    const pages = data.pages;
+    return Object.keys(pages).map(pageKey => {
+        const page = pages[pageKey];
+
+        return new HtmlWebpackPlugin({
+            template: `./html/pages/${page.fileName}.pug`,
+            templateParameters: buildTemplateData(pageKey, argv.mode),
+            filename: `${page.fileName}.html`,
+            inject: false
+        })
+    });
+}
+
 module.exports = (env, argv) => ({
     entry: "./index.ts",
     output: {
@@ -27,49 +41,49 @@ module.exports = (env, argv) => ({
     },
     module: {
         rules: [{
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    use: [{
-                            loader: "css-loader",
-                            options: {
-                                minimize: true
-                            }
-                        },
-                        {
-                            loader: "sass-loader"
-                        },
-                    ],
-                }),
-            },
-            {
-                test: /\.pug$/,
-                use: "pug-loader",
-            },
-            {
-                test: /\.(png|svg|jpg|gif)$/,
+            test: /\.scss$/,
+            use: ExtractTextPlugin.extract({
                 use: [{
-                    loader: 'file-loader',
+                    loader: "css-loader",
                     options: {
-                        publicPath: "images",
-                        outputPath: "images"
+                        minimize: true
                     }
-                }]
-            },
-            {
-                test: /\.woff$/,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        publicPath: "fonts",
-                        outputPath: "fonts"
-                    }
-                }]
-            },
-            {
-                test: /\.ts$/,
-                loader: 'awesome-typescript-loader',
-                exclude: /node_modules/,
-            }
+                },
+                {
+                    loader: "sass-loader"
+                },
+                ],
+            }),
+        },
+        {
+            test: /\.pug$/,
+            use: "pug-loader",
+        },
+        {
+            test: /\.(png|svg|jpg|gif)$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    publicPath: "images",
+                    outputPath: "images"
+                }
+            }]
+        },
+        {
+            test: /\.woff$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    publicPath: "fonts",
+                    outputPath: "fonts"
+                }
+            }]
+        },
+        {
+            test: /\.ts$/,
+            loader: 'awesome-typescript-loader',
+            exclude: /node_modules/,
+        }
         ]
     },
     resolve: {
@@ -77,20 +91,20 @@ module.exports = (env, argv) => ({
     },
     plugins: [
         new CopyWebpackPlugin([{
-                from: "favicon/*",
-                flatten: true,
-            },
-            {
-                from: "robots.txt",
-            },
-            {
-                from: "./images/reviews",
-                to: "./images/reviews",
-            },
-            {
-                from: "./images/patients-and-families",
-                to: "./images/patients-and-families",
-            },
+            from: "favicon/*",
+            flatten: true,
+        },
+        {
+            from: "robots.txt",
+        },
+        {
+            from: "./images/reviews",
+            to: "./images/reviews",
+        },
+        {
+            from: "./images/patients-and-families",
+            to: "./images/patients-and-families",
+        },
         ]),
         new ExtractTextPlugin("./css/styles.css"),
         new CssRewritePlugin({
@@ -99,47 +113,6 @@ module.exports = (env, argv) => ({
                 .replace(/url\(images\//g, "url(../images/")
                 .replace(/url\(fonts\//g, "url(../fonts/")
         }),
-        new HtmlWebpackPlugin({
-            template: "./html/pages/index.pug",
-            templateParameters: buildTemplateData("index", argv.mode),
-            filename: "index.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "./html/pages/about-us.pug",
-            templateParameters: buildTemplateData("aboutUs", argv.mode),
-            filename: "about-us.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "./html/pages/contact-us.pug",
-            templateParameters: buildTemplateData("contactUs", argv.mode),
-            filename: "contact-us.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "./html/pages/doctors.pug",
-            templateParameters: buildTemplateData("doctors", argv.mode),
-            filename: "doctors.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "./html/pages/patients-and-families.pug",
-            templateParameters: buildTemplateData("patientsAndFamilies", argv.mode),
-            filename: "patients-and-families.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "./html/pages/privacy-policy.pug",
-            templateParameters: buildTemplateData("privacyPolicy", argv.mode),
-            filename: "privacy-policy.html",
-            inject: false
-        }),
-        new HtmlWebpackPlugin({
-            template: "./html/pages/terms-and-conditions.pug",
-            templateParameters: buildTemplateData("termsAndConditions", argv.mode),
-            filename: "terms-and-conditions.html",
-            inject: false
-        }),
+        ...buildWebpackPages(argv),
     ]
 });
