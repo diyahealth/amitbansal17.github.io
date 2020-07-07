@@ -1,0 +1,22 @@
+block variables
+	- blocks = {}
+
+mixin setContent(key)
+	- blocks[key] = this.block
+
+mixin twoColumnArticle(classes)
+	- blocks = {}
+	.article-container(class=classes && classes.container)
+		.default-content-block.hidden-overflow
+			.two-column-article-content
+				block
+				if blocks.main
+					.item.main-info(class=classes && classes.main)
+						- blocks.main()
+				if blocks.secondaryLeft
+					.item.secondary-info(class=classes && classes.secondaryLeft)
+						- blocks.secondaryLeft()
+				if blocks.secondaryRight
+					.item.secondary-info(class=classes && classes.secondaryRight)
+						- blocks.secondaryRight()
+				- blocks = {}
