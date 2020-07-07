@@ -9,7 +9,6 @@ const pageToLink = (page, variant) => ({
 const buildDropdownFromPageWithSubpages = (pageKey, subheaderPageKey) => {
     const page = pages[pageKey];
     const subpageKeys = page ? Object.keys(pages).filter(subPageKey => pages[subPageKey].parent === pageKey) : undefined;
-    console.log(pages);
 
     if (!subpageKeys || subpageKeys.length === 0) {
         return undefined;

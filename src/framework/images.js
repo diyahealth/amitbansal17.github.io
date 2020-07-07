@@ -1,12 +1,19 @@
 const path = require("path");
+const fs = require("fs");
 
 const timestamp = Math.round(new Date().getTime() / 1000);
 
 const buildImageCopyCommand = (root, name) => {
-    const res =  ({
-        from: path.join(root, 'images'),
+    const source = path.join(root, 'images');
+    if (!fs.existsSync(source)) {
+        return null;
+    }
+
+    const res = ({
+        from: source,
         to: `./images/${name}-${timestamp}`,
     });
+
     return res;
 };
 
