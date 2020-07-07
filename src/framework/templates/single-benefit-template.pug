@@ -1,6 +1,7 @@
 extends ../../html/shared/layout.pug
 
 include ../../html/shared/contact-us.pug
+include ../../html/shared/data-content-article.pug
 
 block head
     meta(name="twitter:card" value="Diya Health Website")
@@ -11,9 +12,9 @@ block head
     meta(property="og:description" content="Diya Health")
 
 block content
-    each item in content
-        article.default-content-block
-            .text= item.text
-            img(src=item.image)
-    article.primary-background-content(id="contact-us")
+    each item, index in content
+        article
+        +dataContentArticle(item, index)
+    - const isEven = (content.length - 1) % 2 === 0 ? 'alternative-background-content' : 'primary-background-content'
+    article(id="contact-us", class = isEven)
         +contactUs(organizationSizeOptions)

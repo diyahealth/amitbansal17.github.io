@@ -1,0 +1,6 @@
+{
+    "id": "emergencyAccess",
+    "name": "Emergency Access",
+    "description": "Sharing health diary possibilities of myDiya product",
+    "parent": "patientsAndFamilies"
+}
