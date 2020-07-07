@@ -1,0 +1,6 @@
+{
+    "id": "myDiya",
+    "name": "myDiya",
+    "description": "A personal health diary with the goal of keeping you safe and connected with your family and providers during a health emergency",
+    "parent": "patientsAndFamilies"
+}
