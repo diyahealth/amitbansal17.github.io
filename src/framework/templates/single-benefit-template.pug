@@ -1,0 +1,19 @@
+extends ../../html/shared/layout.pug
+
+include ../../html/shared/contact-us.pug
+
+block head
+    meta(name="twitter:card" value="Diya Health Website")
+    meta(property="og:title" content="Diya Health Website")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="https://www.diyahealth.org/")
+    meta(property="og:image" content="https://www.diyahealth.org/images/cbde0a1dc167b130bcf77464cabbe0e7.svg")
+    meta(property="og:description" content="Diya Health")
+
+block content
+    each item in content
+        article.default-content-block
+            .text= item.text
+            img(src=item.image)
+    article.primary-background-content(id="contact-us")
+        +contactUs(organizationSizeOptions)

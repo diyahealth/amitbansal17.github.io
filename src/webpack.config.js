@@ -7,6 +7,7 @@ const CssRewritePlugin = require("css-rewrite-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const data = require("./html/data");
+const process = require('./framework');
 
 function buildTemplateData(pageName, mode) {
     if (mode !== "production") {
@@ -21,7 +22,7 @@ function buildTemplateData(pageName, mode) {
 
 function buildWebpackPages(argv) {
     const pages = data.pages;
-    return Object.keys(pages).map(pageKey => {
+    const existing = Object.keys(pages).map(pageKey => {
         const page = pages[pageKey];
 
         return new HtmlWebpackPlugin({
@@ -31,6 +32,11 @@ function buildWebpackPages(argv) {
             inject: false
         })
     });
+
+    const root = path.join(__dirname, 'data');
+    const dynamic = process(root, argv);
+
+    return existing.concat(dynamic);
 }
 
 module.exports = (env, argv) => ({
