@@ -1,13 +1,12 @@
-.primary-background-content
-    .default-content-block.hidden-overflow
-        .covid-info-content.medicare-info-content
-            .item.main-info
-                span.text Remote follow-ups (up to 4 times/month) 
-            .item.secondary-info.image-container
-                img(src=require("../../images/doctors-benefits/medicare.png"))
-            .item.secondary-info
-                .text Diya Health allows physicians to do remote follow ups of vital signs like blood pressure & blood sugars with billable codes for up to 4 times per month per patient.
-                .text Due to COVID-19*, physicians or allied health professionals (NPs, PAs) are allowed to increase practice revenue from Virtual Check-ins (G2014 & G2012), e-Consults (93446-99451) and Online Digital Evaluations (G2061-2063) up to 4 times per month per patient. These services are quickly rendered and automatically tracked for reimbursement in Diya. Contact us to learn how!
-                .text We know that during this unprecedented time, physician incomes have dropped drastically and our simple workflow will allow for businesses to regain some of their vital income ASAP. 
-                .text.note *Under US Department of Health and Human Services and Centers for Medicare & Medicaid Services mandate
+include ../shared/two-column-article.pug
 
++twoColumnArticle({ container: 'primary', secondaryLeft: 'image-container' })
+    +setContent('main')
+        span.text Remote follow-ups (up to 4 times/month) 
+    +setContent('secondaryLeft')
+        img(src=require("../../images/doctors-benefits/medicare.png"))
+    +setContent('secondaryRight')
+        p.text.paragraph Diya Health allows physicians to do remote follow ups of vital signs like blood pressure & blood sugars with billable codes for up to 4 times per month per patient.
+        p.text.paragraph Due to COVID-19*, physicians or allied health professionals (NPs, PAs) are allowed to increase practice revenue from Virtual Check-ins (G2014 & G2012), e-Consults (93446-99451) and Online Digital Evaluations (G2061-2063) up to 4 times per month per patient. These services are quickly rendered and automatically tracked for reimbursement in Diya. Contact us to learn how!
+        p.text.paragraph We know that during this unprecedented time, physician incomes have dropped drastically and our simple workflow will allow for businesses to regain some of their vital income ASAP. 
+        p.text.paragraph.note *Under US Department of Health and Human Services and Centers for Medicare & Medicaid Services mandate

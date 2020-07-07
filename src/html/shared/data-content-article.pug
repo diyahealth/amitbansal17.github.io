@@ -1,0 +1,75 @@
+mixin textContent(data, layoutContentType)
+    -
+        let isTextValid = true;
+        if (!data.text) {
+           isTextValid = false;
+        } else {
+            if (Array.isArray(data.text) && data.text.length === 0) {
+                isTextValid = false;
+            }
+        }
+        let isListValid = true
+        if (!data.list || data.list.length === 0) {
+           isListValid = false;
+        }
+
+    if isTextValid || isListValid
+        +setContent(layoutContentType)
+            if isTextValid
+                if Array.isArray(data.text)
+                    each text, index in data.text
+                        span.text.paragraph=text
+                else
+                    span.text.paragraph=data.text
+            if isListValid
+                ul
+                    each text, index in data.list
+                        li.text=text
+            if data.link
+                a.text.link(href=data.link, rel="noopener nofollow", target="_blank") Watch YouTube video
+
+mixin imageContent(data, layoutContentType)
+    if data.image
+        +setContent(layoutContentType)
+            img(src=data.image)
+
+include ../shared/two-column-article.pug
+
+mixin dataContentArticle(data, index)
+    -const isEven = index % 2 === 0
+    -const containerClass = data.background || (isEven ? 'alternative' : 'primary')
+    -
+        const leftContentType = data.image && isEven ? 'image' : 'text';
+        let rightContentType = data.image && !isEven ? 'image' : 'text';
+        if (leftContentType === rightContentType) {
+            rightContentType = undefined;
+        }
+    -
+        let isTitleValid = true;
+        if (!data.title) {
+           isTitleValid = false;
+        } else {
+            if (Array.isArray(data.title) && data.title.length === 0) {
+                isTitleValid = false;
+            }
+        }
+
+    -const secodaryLeftClass = leftContentType === 'image' ? 'image-container' : undefined;
+    -const secodaryRightClass = rightContentType === 'image' ? 'image-container' : undefined
+
+    +twoColumnArticle({ container: containerClass, secondaryLeft: secodaryLeftClass, secondaryRight: secodaryRightClass })
+        if isTitleValid
+            +setContent('main')
+                if Array.isArray(data.title)
+                    each title, index in data.title
+                        span.text=title
+                else
+                    span.text=data.title
+        if leftContentType === 'image'
+            +imageContent(data, 'secondaryLeft')
+        else if leftContentType === 'text'
+            +textContent(data, 'secondaryLeft')
+        if rightContentType === 'image'
+            +imageContent(data, 'secondaryRight')
+        else if rightContentType === 'text'
+            +textContent(data, 'secondaryRight')

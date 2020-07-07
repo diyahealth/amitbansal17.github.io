@@ -1,8 +1,16 @@
-.covid-info-container { 
-    background-color: #fdf4f4;
+.article-container {
+    &.primary {
+        background: linear-gradient(to bottom, #f0fafd, #cfeef8);  
+    }
+    &.alternative {
+        background-color: #fff9ef;
+    }
+    &.red {
+        background-color: #fdf4f4;
+    }
 }
  
-.covid-info-content {
+.two-column-article-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -13,7 +21,7 @@
     }
  
     .item {
-        padding: 36px;
+        padding: 0 24px;
  
         &.main-info {
             display: flex;
@@ -51,14 +59,14 @@
         }
  
         &.secondary-info {
+            padding: 24px;
             margin: 4px 0;
             display: flex;
             align-items: center;
             flex-direction: column;
  
-            flex-grow: 0;
-            max-width: 50%;
-            flex-basis: 50%;
+            flex-grow: 6;
+            flex-basis: 0;
  
             @media screen and (max-width: $break-tablet) {
                 flex-grow: initial;
@@ -71,6 +79,7 @@
             }
  
             &.image-container {
+                flex-grow: 4;
                 & > img {
                     width: 100%;
                 }
@@ -100,6 +109,22 @@
                     color: $primary-color;
                     margin-top: 32px;
                     align-self: baseline;
+                }
+
+                &.paragraph:not(:first-child) {
+                    margin-top: 14px;
+                }
+
+                &.note {
+                    font-size: 20px;
+            
+                    @media screen and (max-width: $break-tablet) {
+                        font-size: 18px;
+                    }
+            
+                    @media screen and (max-width: $break-mobile) {
+                        font-size: 16px;
+                    }
                 }
             }
  
