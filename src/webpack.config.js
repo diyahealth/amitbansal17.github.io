@@ -9,14 +9,14 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const data = require("./html/data");
 const process = require('./framework');
 
-function buildTemplateData(pageName, mode) {
+function buildTemplateData(pageKey, mode) {
     if (mode !== "production") {
         data.keys.google.analytics = null;
     };
 
     return {
         ...data,
-        page: data.pages[pageName]
+        page: data.pages[pageKey],
     };
 }
 
@@ -24,7 +24,6 @@ function buildWebpackPages(argv) {
     const pages = data.pages;
     const existing = Object.keys(pages).map(pageKey => {
         const page = pages[pageKey];
-
         return new HtmlWebpackPlugin({
             template: `./html/pages/${page.fileName}.pug`,
             templateParameters: buildTemplateData(pageKey, argv.mode),

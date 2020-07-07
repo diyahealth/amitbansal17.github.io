@@ -1,15 +1,23 @@
 nav.navigation-container
-    - const myDiyaUrl = 'https://mydiya.org';
-    div.logo-container
-        a(href=pages.index.url)
-            img.logo(src=require("../../images/icons/diyahealth-logo.svg"), alt="Diya Health Logo")
-    ul.navigation
-        li
-            a(href=pages.doctors.url, class=page === pages.doctors ? "active" : "") Doctors
-        li
-            a(href=pages.patientsAndFamilies.url, class=page === pages.patientsAndFamilies ? "active" : "") #{pages.patientsAndFamilies.name}
-        li
-            a(href=pages.aboutUs.url, class=page === pages.aboutUs ? "active" : "") About Us
-        li
-            button.material-btn.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
-                span.label Request a demo
+    .navigation
+        div.logo-container
+            a(href=pages.index.url)
+                img.logo(src=require("../../images/icons/diyahealth-logo.svg"), alt="Diya Health Logo")
+        ul.navigation-list
+            each link in navigation
+                - const haveDropdown = link.dropdown && link.dropdown.length > 0
+                - const isActive = page.name === link.title || (page.parent && pages[page.parent].name === link.title)
+                li(class = isActive ? 'active' : '')
+                    .link-container
+                        a(href=link.url) #{link.title}
+                        if (haveDropdown)
+                            include ../../images/icons/chevron-right-icon.svg
+                    if (haveDropdown)
+                        ul.dropdown-menu
+                            each dropdownLink in link.dropdown
+                                - const isDropdownLinkActive = page.name === dropdownLink.title
+                                li(class = dropdownLink.variant, class=isDropdownLinkActive ? 'active' : undefined)
+                                    a(href=dropdownLink.url) #{dropdownLink.title}
+            li
+                button.material-btn.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+                    span.label Request a demo
