@@ -25,7 +25,7 @@ function process(root, argv) {
         const metaPath = path.join(pageRoot, 'meta.json');
         const meta = JSON.parse(readFileSync(metaPath));
 
-        const dynamicPageMeta = buildPageFromMetadata(meta, pages);
+        const dynamicPageMeta = buildPageFromMetadata(meta, pages, x);
         pages[dynamicPageMeta.key] = dynamicPageMeta.page;
 
         imageCopyParams.push(buildImageCopyCommand(pageRoot, x));
@@ -34,7 +34,7 @@ function process(root, argv) {
     rebuildNavigation();
     return [
         ...htmlParams.map(x => new HtmlWebpackPlugin(x)),
-        new CopyWebpackPlugin(imageCopyParams),
+        new CopyWebpackPlugin(imageCopyParams.filter(x => x != null)),
         //new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i, disable: argv.mode === 'development' }),
     ]
 }
