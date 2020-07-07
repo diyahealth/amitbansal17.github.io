@@ -37,7 +37,7 @@ include ../shared/two-column-article.pug
 
 mixin dataContentArticle(data, index)
     -const isEven = index % 2 === 0
-    -const containerClass = data.background || (isEven ? 'alternative' : 'primary')
+    -const containerClass = data.background || (isEven ? 'primary' : 'alternative')
     -
         const leftContentType = data.image && isEven ? 'image' : 'text';
         let rightContentType = data.image && !isEven ? 'image' : 'text';
