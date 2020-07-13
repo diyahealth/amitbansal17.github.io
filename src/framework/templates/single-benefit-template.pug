@@ -12,9 +12,9 @@ block head
     meta(property="og:description" content="Diya Health")
 
 block content
+    - const rootId = mode === "development" ? `${page.url.substring(2)}` : null
     each item, index in content
-        article
-        +dataContentArticle(item, index)
+        +dataContentArticle(item, index, rootId)
     - const isEven = (content.length - 1) % 2 === 0 ? 'alternative-background-content' : 'primary-background-content'
     article(id="contact-us", class = isEven)
-        +contactUs(organizationSizeOptions)
+        +contactUs(organizationSizeOptions, rootId)

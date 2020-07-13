@@ -29,9 +29,9 @@ function process(root, argv) {
         pages[dynamicPageMeta.key] = dynamicPageMeta.page;
 
         imageCopyParams.push(buildImageCopyCommand(pageRoot, x));
-        htmlParams.push(buildHtmlCommand(x, { content, page: pages[dynamicPageMeta.key], ...data }))
+        htmlParams.push(buildHtmlCommand(x, { content, page: pages[dynamicPageMeta.key], ...data, mode: argv.mode }))
     });
-    rebuildNavigation();
+    rebuildNavigation(argv.mode);
     return [
         ...htmlParams.map(x => new HtmlWebpackPlugin(x)),
         new CopyWebpackPlugin(imageCopyParams.filter(x => x != null)),

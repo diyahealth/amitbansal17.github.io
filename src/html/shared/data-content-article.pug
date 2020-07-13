@@ -35,7 +35,7 @@ mixin imageContent(data, layoutContentType)
 
 include ../shared/two-column-article.pug
 
-mixin dataContentArticle(data, index)
+mixin dataContentArticle(data, index, rootId)
     -const isEven = index % 2 === 0
     -const containerClass = data.background || (isEven ? 'primary' : 'alternative')
     -
@@ -58,6 +58,8 @@ mixin dataContentArticle(data, index)
     -const secodaryRightClass = rightContentType === 'image' ? 'image-container' : undefined
 
     +twoColumnArticle({ container: containerClass, secondaryLeft: secodaryLeftClass, secondaryRight: secodaryRightClass })
+        if rootId
+            .dev-id #{rootId}-article-#{index}
         if isTitleValid
             +setContent('main')
                 if Array.isArray(data.title)
