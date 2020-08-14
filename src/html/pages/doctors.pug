@@ -14,7 +14,7 @@ block content
     -
         const aboutApp = {
             title : 'About diyaMD',
-            text: 'A health record management system with the goal of keeping patients safe during a health emergency. Patient records are kept up-to-date and easily accessible. Developed by Diya Health, a team of doctors and engineers diyaMD is being used in four continents with the majority of users in North America.',
+            text: 'DiyaMD is a software application with many unique capabilities that improve a medical practice\'s revenue, efficiency, and delivery of health care.  Patients\' records are kept up-to-date and accessed easily.  It was developed by Diya Health, a team of doctors and engineers, and is being used on four continents with most users in North America.',
         };
     script.
         window.addEventListener('load', (event) => {
@@ -38,14 +38,12 @@ block content
         +partners('small')
     article
         include ../shared/covid-info.pug
-    article
-        include ../shared/medicare.pug
-    article.alternative-background-content
-        +reviews(reviews.diyaMd, 'alternative')
     article.primary-background-content
         +aboutApp(aboutApp.title, aboutApp.text)
             include ../../images/icons/diyamd-logo.svg
-    article.alternative-background-content(id="contact-us")
+    article.alternative-background-content
+        +reviews(reviews.diyaMd, 'alternative')
+    article.primary-background-content(id="contact-us")
         +contactUs(organizationSizeOptions)
 
     include ../shared/map-app.pug

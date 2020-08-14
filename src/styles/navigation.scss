@@ -181,6 +181,15 @@
                             color: $primary-color;
                         }
                     }
+
+                    &:first-child::before {
+                        content: " ";
+                        border-top: 1px solid #d3dae0;
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                    }
                     
                     &:last-child::after {
                         content: " ";

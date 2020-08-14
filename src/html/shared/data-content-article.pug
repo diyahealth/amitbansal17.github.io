@@ -18,15 +18,15 @@ mixin textContent(data, layoutContentType)
             if isTextValid
                 if Array.isArray(data.text)
                     each text, index in data.text
-                        span.text.paragraph=text
+                        span.text.big.paragraph=text
                 else
-                    span.text.paragraph=data.text
+                    span.text.big.paragraph=data.text
             if isListValid
                 ul
                     each text, index in data.list
-                        li.text=text
+                        li.text.big=text
             if data.link
-                a.text.link(href=data.link, rel="noopener nofollow", target="_blank") Watch YouTube video
+                a.text.big.link(href=data.link, rel="noopener nofollow", target="_blank") Watch YouTube video
 
 mixin imageContent(data, layoutContentType)
     if data.image
@@ -64,9 +64,9 @@ mixin dataContentArticle(data, index, rootId)
             +setContent('main')
                 if Array.isArray(data.title)
                     each title, index in data.title
-                        span.text=title
+                        span.text.big=title
                 else
-                    span.text=data.title
+                    span.text.big=data.title
         if leftContentType === 'image'
             +imageContent(data, 'secondaryLeft')
         else if leftContentType === 'text'

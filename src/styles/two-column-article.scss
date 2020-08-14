@@ -52,7 +52,7 @@
                     line-height: 1.1;
                 }
 
-                @media screen and (max-width: $break-tablet) {
+                @media screen and (max-width: $break-mobile) {
                     font-size: 22px;
                 }
             }
@@ -95,14 +95,14 @@
  
             .text {
                 font-size: 26px;
-                line-height: 1.235;
+                line-height: 1.435;
  
                 @media screen and (max-width: $break-tablet) {
                     font-size: 22px;
                     line-height: 1.334;
                 }
 
-                @media screen and (max-width: $break-tablet) {
+                @media screen and (max-width: $break-mobile) {
                     font-size: 18px;
                 }
  
@@ -125,6 +125,20 @@
             
                     @media screen and (max-width: $break-mobile) {
                         font-size: 16px;
+                    }
+                }
+
+                &.big {
+                    font-size: 32px;
+                    line-height: 1.535;
+     
+                    @media screen and (max-width: $break-tablet) {
+                        font-size: 26px;
+                        line-height: 1.434;
+                    }
+    
+                    @media screen and (max-width: $break-mobile) {
+                        font-size: 22px;
                     }
                 }
             }
