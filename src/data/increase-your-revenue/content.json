@@ -1,1 +1,15 @@
-[]
+[
+    {
+        "title": "Increase your revenue",
+        "text": "Perform billable e-services such as telehealth consultations, follow-ups, and remote patient-monitoring, thereby maximizing efficiency and revenue.",
+        "image": "telehealth.png"
+    },
+    {
+        "text": "Efficiently connect with other providers, billing staff, and insurance companies to maintain accurate, timely charges and reimbursements.",
+        "image": "emergency-contacts-on-computer.jpg"
+    },
+    {
+        "text": "Expand your patient outreach with COVID-19 tracking capabilities, virtual check-ins, online evaluations, and more.",
+        "image": "covid-tracker-page-full.jpg"
+    }
+]

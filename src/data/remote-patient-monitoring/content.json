@@ -1,0 +1,15 @@
+[
+    {
+        "title": "Remote Patient Monitoring",
+        "text": "Easy, direct access to patients' complaints, insurance information, vital signs, medications, lab results, etc. — anywhere, anytime.  HIPAA protected.",
+        "image": "vitals-on-screen.jpg"
+    },
+    {
+        "text": "Perform remote monitoring and other e-services to maximize revenue.",
+        "image": "remote-patient-monitoring.jpg"
+    },
+    {
+        "text": "Receive alerts and reports when patients update their information. ",
+        "image": "patient-update.jpg"
+    }
+]

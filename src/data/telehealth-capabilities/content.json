@@ -1,1 +1,15 @@
-[]
+[
+    {
+        "title": "Telehealth Capabilities",
+        "text": "Easily talk or video with patients — anytime, anywhere — for necessary consultations.",
+        "image": "contact-patient.jpg"
+    },
+    {
+        "text": "Increase revenue with DiyaMD by performing additional billable services, such as telehealth consultations, follow-ups, and remote patient-monitoring.",
+        "image": "remote-patient-monitoring.jpg"
+    },
+    {
+        "text": "Track billing and reimbursement automatically and accurately with DiyaMD's unique technology.",
+        "image": "revenue-chart.png"
+    }
+]
