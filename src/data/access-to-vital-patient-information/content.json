@@ -1,0 +1,19 @@
+[
+    {
+        "title": "Access to vital patient information",
+        "text": "Instantly communicate with other physicians, office staff, patients, and families. No more fumbling for phone numbers or email addresses.",
+        "image": "emergency-contacts-on-computer.jpg"
+    },
+    {
+        "text": "Effortlessly analyze patients' progress with DiyaMD's automatically-generated reports.",
+        "image": "vitals-on-screen.jpg"
+    },
+    {
+        "text": "Manage actual or potential COVID-19 patients using DiyaMD's symptom-tracking capabilities.",
+        "image": "сovid-tracker-page-full.jpg"
+    },
+    {
+        "text": "Receive alerts and reports when patients update their information.",
+        "image": "patient-update-2.jpg"
+    }
+]

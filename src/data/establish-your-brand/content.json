@@ -1,1 +1,15 @@
-[]
+[
+    {
+        "title": "Establish your brand",
+        "text": "DiyaMD allows you to expand your patient volume with billable e-service capabilities.",
+        "image": "revenue-chart.png"
+    },
+    {
+        "text": "Improve the patient-doctor relationship using DiyaMD's tools for disseminating information, providing patient support, and managing various patient populations.",
+        "image": "mass-communication.jpg"
+    },
+    {
+        "text": " Create patient loyalty by sharing educational material and health alerts with patients easily and regularly.",
+        "image": "mobile-alerts.jpg"
+    }
+]

@@ -1,19 +1,19 @@
 [
     {
         "title": "Smoothly integrate DiyaMD",
-        "text": "Smoothly integrate DiyaMD with your existing office technology. DiyaMD can be used alone or with any telehealth and EMR products.",
-        "image": "300x150.png"
+        "text": "Easy, direct access to patients' complaints, insurance information, vital signs, medications, lab results, etc. — anywhere, anytime. HIPAA protected.",
+        "image": "complaints-on-screen.jpg"
     },
     {
-        "text": "Directly access to patient's chief complaints, insurance information, vitals, medications, labs, and more - anywhere and anytime. HIPAA protected.",
-        "image": "300x150.png"
+        "text": "Upload a patient's PHR updates to your EHR software with the click of a button.  DiyaMD's technology makes re-entry and duplication unnecessary.",
+        "image": "patient-update.jpg"
     },
     {
-        "text": "Improve your relationships with DiyaMD's mass information dissemination, patient-provider relationship support, and population management tools.",
-        "image": "300x150.png"
+        "text": "Receive alerts and reports when patients update their information.",
+        "image": "mobile-alerts.jpg"
     },
     {
-        "text": "Remotely monitor patients and perform billable e-services to maximize your revenue.",
-        "image": "300x150.png"
+        "text": "DiyaMD is easy to use for all health care providers, including nurse practitioners, physician assistants, and billing staff.",
+        "image": "diyaMD-logo-computer.jpg"
     }
 ]
