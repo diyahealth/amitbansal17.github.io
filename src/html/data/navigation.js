@@ -24,20 +24,17 @@ let navigationLinks = [];
 
 const buildNavigationLinks = (mode) => {
     const postfix = mode === 'development' ? '.html' : '';
-    console.log(mode);
     navigationLinks.length = 0;
     navigationLinks.push(
         {
             ...pageToLink(pages.doctors, null, postfix),
-            dropdown: buildDropdownFromPageWithSubpages('doctors', 'diyaMD', postfix),
+            dropdown: buildDropdownFromPageWithSubpages('doctors', null, postfix),
         },
         {
             ...pageToLink(pages.patientsAndFamilies, null, postfix),
-            dropdown: buildDropdownFromPageWithSubpages('patientsAndFamilies', 'myDiya', postfix),
         },
         {
             ...pageToLink(pages.aboutUs, null, postfix),
-            dropdown: buildDropdownFromPageWithSubpages('aboutUs', null, postfix),
         }
     );
 }
