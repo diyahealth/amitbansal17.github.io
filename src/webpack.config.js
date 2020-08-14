@@ -9,6 +9,25 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const data = require("./html/data");
 const process = require('./framework');
 
+const processAfterDynamic = ['doctors'];
+
+
+const processStaticPage = (pageKey, argv) => {
+    const pages = data.pages;
+    const page = pages[pageKey];
+    
+    if (page.id === 'index' && argv.mode === 'development') {
+        page.url = page.url + 'index.html';
+    }
+
+    return new HtmlWebpackPlugin({
+        template: `./html/pages/${page.fileName}.pug`,
+        templateParameters: buildTemplateData(pageKey, argv.mode),
+        filename: `${page.fileName}.html`,
+        inject: false
+    });
+};
+
 function buildTemplateData(pageKey, mode) {
     if (mode !== "production") {
         data.keys.google.analytics = null;
@@ -22,20 +41,20 @@ function buildTemplateData(pageKey, mode) {
 
 function buildWebpackPages(argv) {
     const pages = data.pages;
+
     const existing = Object.keys(pages).map(pageKey => {
-        const page = pages[pageKey];
-        return new HtmlWebpackPlugin({
-            template: `./html/pages/${page.fileName}.pug`,
-            templateParameters: buildTemplateData(pageKey, argv.mode),
-            filename: `${page.fileName}.html`,
-            inject: false
-        })
-    });
+        if (processAfterDynamic.includes(pageKey)) {
+            return undefined;
+        }
+        return processStaticPage(pageKey, argv)
+    }).filter(Boolean);
 
     const root = path.join(__dirname, 'data');
     const dynamic = process(root, argv);
 
-    return existing.concat(dynamic);
+    const restStaticPages = processAfterDynamic.map(pageKey => processStaticPage(pageKey, argv));
+
+    return existing.concat(dynamic).concat(restStaticPages);
 }
 
 module.exports = (env, argv) => ({

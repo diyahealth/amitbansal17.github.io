@@ -6,6 +6,7 @@ const { readdirSync, readFileSync } = require("fs");
 const path = require("path");
 const data = require("../html/data");
 const { rebuildNavigation } = require("../html/data/navigation");
+const { rebuildDoctorsBenefits } = require("../html/data/doctorsBenefits");
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -31,7 +32,9 @@ function process(root, argv) {
         imageCopyParams.push(buildImageCopyCommand(pageRoot, x));
         htmlParams.push(buildHtmlCommand(x, { content, page: pages[dynamicPageMeta.key], ...data, mode: argv.mode }))
     });
+
     rebuildNavigation(argv.mode);
+    rebuildDoctorsBenefits(argv.mode);
     return [
         ...htmlParams.map(x => new HtmlWebpackPlugin(x)),
         new CopyWebpackPlugin(imageCopyParams.filter(x => x != null)),
