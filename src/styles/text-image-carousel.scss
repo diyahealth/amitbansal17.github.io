@@ -156,7 +156,10 @@
             }
 
             .link {
-                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
                 margin-top: 20px;
 
                 color: $primary-color;
@@ -174,6 +177,15 @@
 
                 &.alternative {
                     color: $alternative-primary-color;
+                }
+
+                & > svg {
+                    margin-left: 4px;
+
+                    color: $primary-color;
+                    &.alternative {
+                        color: $alternative-primary-color;
+                    }
                 }
             }
         }
