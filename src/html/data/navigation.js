@@ -32,6 +32,7 @@ const buildNavigationLinks = (mode) => {
         },
         {
             ...pageToLink(pages.patientsAndFamilies, null, postfix),
+            dropdown: buildDropdownFromPageWithSubpages('patientsAndFamilies', null, postfix),
         },
         {
             ...pageToLink(pages.aboutUs, null, postfix),

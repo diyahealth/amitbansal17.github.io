@@ -3,7 +3,7 @@
         background: linear-gradient(to bottom, #f0fafd, #cfeef8);  
     }
     &.alternative {
-        background-color: #fff9ef;
+        background-color: #fff;
     }
     &.red {
         background-color: #fdf4f4;
@@ -89,7 +89,7 @@
                     order: -1;
  
                     width: calc(100% + 48px);
-                    margin: -24px -24px 0px -24px;
+                    padding-bottom: 0;
                 }
             }
  
