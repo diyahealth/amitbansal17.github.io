@@ -1,0 +1,6 @@
+{
+    "id": "expertAtHome",
+    "name": "Expert At Home",
+    "description": "Receive expert medical advice using myDiya telehealth services",
+    "parent": "patientsAndFamilies"
+}

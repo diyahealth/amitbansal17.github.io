@@ -1,6 +1,17 @@
 [
     {
-        "title": "Remote Patient Monitoring",
+        "text": "Remote Patient Monitoring",
+        "classes": {
+            "root": "patient-monitoring",
+            "content": "right",
+            "textContainer": "patient-monitoring",
+            "bgContainer": "patient-monitoring",
+            "text": "patient-monitoring"
+        },
+        "image": "rpm-banner.jpg",
+        "type": "banner"
+    },
+    {
         "text": "Easy, direct access to patients' complaints, insurance information, vital signs, medications, lab results, etc. — anywhere, anytime.  HIPAA protected.",
         "image": "vitals-on-screen.jpg"
     },

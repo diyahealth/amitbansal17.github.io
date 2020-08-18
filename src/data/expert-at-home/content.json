@@ -1,0 +1,29 @@
+[
+    {
+        "text": "Expert at Home",
+        "image": "expert-at-home-banner.jpg",
+        "classes": {
+            "root": "expert-at-home",
+            "bgContainer": "expert-at-home",
+            "textContainer": "expert-at-home",
+            "text": "expert-at-home left"
+        },
+        "type": "banner"
+    },
+    {
+        "text": "Receive expert medical advice from the comfort and safety of your own home with myDiya's telehealth services.",
+        "image": "telehealth-on-screen-2.png"
+    },
+    {
+        "text": "Use myDiya's seamless technology to message your care provider whenever you have questions or need assistance.",
+        "image": "contact-provider-mobile.jpg"
+    },
+    {
+        "text": "Attend private, secure telehealth visits with your healthcare providers using myDiya's telehealth and e-services.",
+        "image": "telehealth-on-screen-3.png"
+    },
+    {
+        "text": "To learn more about myDiya's telehealth capabilities, watch the following video.",
+        "video": "https://www.youtube.com/watch?v=dNj_iTR2pHc"
+    }
+]

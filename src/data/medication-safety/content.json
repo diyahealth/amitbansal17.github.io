@@ -1,0 +1,33 @@
+[
+    {
+        "text": "Medication Safety",
+        "image": "medication-safety-banner.jpg",
+        "classes": {
+            "root": "medication-safety",
+            "bgContainer": "medication-safety",
+            "textContainer": "medication-safety",
+            "text": "medication-safety left"
+        },
+        "type": "banner"
+    },
+    {
+        "text": "Effortlessly manage your's and your loved one's medications with myDiya.",
+        "image": "medication-wizard-phone.jpg"
+    },
+    {
+        "text": "Track any medication from myDiya's library of over 100,000 brands and ingredient combinations. Simply add new medications by manually searching or taking a picture of your prescription.",
+        "image": "pills.jpg"
+    },
+    {
+        "text": "Receive alerts if your medications negatively interfere with each other or with any allergies you may have.",
+        "image": "mobile-alerts.jpg"
+    },
+    {
+        "text": "Print a copy of your medication report or share it with your care team to maintain safe, accurate treatment.",
+        "image": "medication-report-w-share.jpg"
+    },
+    {
+        "text": "To learn more about myDiya's medication safety capabilities, watch the following video.",
+        "video": "https://www.youtube.com/watch?v=Mi324TMy5h0"
+    }
+]

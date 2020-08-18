@@ -1,0 +1,34 @@
+[
+    {
+        "text": "24/7 Connection",
+        "image": "connection-banner.jpg",
+        "classes": {
+            "root": "connection-24-7",
+            "bgContainer": "connection-24-7",
+            "content": "right",
+            "textContainer": "connection-24-7 right",
+            "text": "connection-24-7 right"
+        },
+        "type": "banner"
+    },
+    {
+        "text": "Connect with your loved ones and providers using myDiya's sharing and telehealth capabilities.",
+        "image": "family-on-screen.jpg"
+    },
+    {
+        "text": "You may be caring for another family member or friend, and want quick access to their health information. You can easily create a myDiya health diary for someone else.",
+        "image": "add-family-screen.jpg"
+    },
+    {
+        "text": "Providers and caregivers can collaborate using the same health diary, so you know everything that is going on with your or your love one's care.",
+        "image": "collaborate.jpg"
+    },
+    {
+        "text": "Control who sees your data and how much access they have. You can choose from read-only or edit access options.",
+        "image": "share-access-photo.jpg"
+    },
+    {
+        "text": "To learn more about myDiya's sharing and connectivity capabilities, watch the following video.",
+        "video": "https://www.youtube.com/watch?v=AvAYfDaFpr0"
+    }
+]

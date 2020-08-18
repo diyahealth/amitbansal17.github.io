@@ -2,6 +2,7 @@ extends ../../html/shared/layout.pug
 
 include ../../html/shared/contact-us.pug
 include ../../html/shared/data-content-article.pug
+include ../../html/shared/data-content-banner.pug
 
 block head
     meta(name="twitter:card" value="Diya Health Website")
@@ -13,8 +14,13 @@ block head
 
 block content
     - const rootId = mode === "development" ? `${page.url.substring(2)}` : null
+    - const haveBanner = content.find(x => x.type === 'banner');
+    - const resultArticlesLength = haveBanner ? content.length - 1 : content.length;
     each item, index in content
-        +dataContentArticle(item, index, rootId)
-    - const isEven = (content.length - 1) % 2 === 0 ? 'alternative-background-content' : 'primary-background-content'
+        if item.type == 'banner'
+            +dataContentBanner(item, rootId)
+        else
+            +dataContentArticle(item, haveBanner ? index - 1 : index, rootId)
+    - const isEven = (resultArticlesLength - 1) % 2 === 0 ? '' : 'primary-background-content'
     article(id="contact-us", class = isEven)
         +contactUs(organizationSizeOptions, rootId)

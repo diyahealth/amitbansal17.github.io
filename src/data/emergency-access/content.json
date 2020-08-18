@@ -1,1 +1,33 @@
-[]
+[
+    {
+        "text": "Emergency Access",
+        "image": "emergency-access-banner.jpg",
+        "classes": {
+            "root": "emergency-access",
+            "bgContainer": "emergency-access",
+            "textContainer": "emergency-access left",
+            "text": "emergency-access left"
+        },
+        "type": "banner"
+    },
+    {
+        "text": "Share your health diary with anyone you desire. With myDiya's sharing capabilities, your family members, friends, caregivers, and providers can have access to your vital health information.",
+        "image": "share-on-phone.jpg"
+    },
+    {
+        "text": "In case of an emergency, your loved ones and care team can quickly and easily access your health information to ensure safe, quality treatment.",
+        "image": "family-on-screen.jpg"
+    },
+    {
+        "text": "Instead of wasting precious time looking up which medications you may be allergic to or your health history, healthcare providers can immediately provide appropriate care.",
+        "image": "emergency-care.jpg"
+    },
+    {
+        "text": "Take control of your health information and prepare for any situation.",
+        "image": "myDiya-on-computer.jpg"
+    },
+    {
+        "text": "To learn more about myDiya's emergency access and sharing capabilities, watch the following video.",
+        "video": "https://www.youtube.com/watch?v=dNj_iTR2pHc"
+    }
+]

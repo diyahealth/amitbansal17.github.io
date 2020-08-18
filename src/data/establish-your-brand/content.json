@@ -1,6 +1,16 @@
 [
     {
-        "title": "Establish your brand",
+        "text": "Establish Your Brand",
+        "image": "brand-banner.jpg",
+        "classes": {
+            "root": "establish-brand",
+            "bgContainer": "establish-brand",
+            "textContainer": "establish-brand",
+            "text": "establish-brand left"
+        },
+        "type": "banner"
+    },
+    {
         "text": "DiyaMD allows you to expand your patient volume with billable e-service capabilities.",
         "image": "revenue-chart.png"
     },
