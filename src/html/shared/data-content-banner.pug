@@ -1,0 +1,6 @@
+include ../shared/banner.pug
+
+mixin dataContentBanner(data, rootId)
+    +banner(data.text, data.image, data.classes)
+        if rootId
+            .dev-id #{rootId}-banner

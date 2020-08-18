@@ -1,0 +1,15 @@
+mixin banner(text, imageSrc, classes)
+    .banner-container(class=classes && classes.root)
+        .background-image(style=`background-image: url("${imageSrc}")`, class=classes && classes.bgContainer)
+            .banner-content(class=classes && classes.content)
+                block
+                .text-container(class=classes && classes.textContainer)
+                    .text(class=classes && classes.text)
+                        if(Array.isArray(text))
+                            each textItem, index in text
+                                span=textItem
+                                if (index !== text.length -1)
+                                    br
+                        else
+                            span=text
+
