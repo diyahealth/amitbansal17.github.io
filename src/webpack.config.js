@@ -9,7 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const data = require("./html/data");
 const process = require('./framework');
 
-const processAfterDynamic = ['doctors'];
+const processAfterDynamic = ['doctors', 'patientsAndFamilies'];
 
 
 const processStaticPage = (pageKey, argv) => {
