@@ -1,6 +1,17 @@
 [
     {
-        "title": "Access to vital patient information",
+        "text": ["Access to Vital", "Patient Information"],
+        "classes": {
+            "root": "patient-info",
+            "content": "right",
+            "textContainer": "patient-info",
+            "bgContainer": "patient-info",
+            "text": "patient-info"
+        },
+        "image": "patient-info-banner.jpg",
+        "type": "banner"
+    },
+    {
         "text": "Instantly communicate with other physicians, office staff, patients, and families. No more fumbling for phone numbers or email addresses.",
         "image": "emergency-contacts-on-computer.jpg"
     },

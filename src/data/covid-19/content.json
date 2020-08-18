@@ -1,8 +1,33 @@
 [
     {
-        "text": "If you think you have been exposed to COVID-19, you can record the incident in your myDiya account, including any symptoms you may be experiencing."
+        "text": ["COVID-19", "Symptom Tracker"],
+        "image": "covid-banner.jpg",
+        "classes": {
+            "root": "covid-19",
+            "bgContainer": "covid-19",
+            "textContainer": "covid-19 left",
+            "text": "covid-19"
+        },
+        "type": "banner"
     },
     {
-        "text": "You can easily track your symptoms' progression with myDiya's visual charts, which are automatically populated once you update your symptoms."
+        "text": "Manage your risk to COVID-19 and track your symptoms with myDiya's COVID-19 Symptom Tracker.",
+        "image": "covid.jpg"
+    },
+    {
+        "text": "If you think you have been exposed to COVID-19, you can record the incident in your myDiya account, including any symptoms you may be experiencing.",
+        "image": "covid-incident-phone.jpg"
+    },
+    {
+        "text": "You can easily track your symptoms' progression with myDiya's visual charts, which are automatically populated once you update your symptoms.",
+        "image": "covid-19-synopsis.jpg"
+    },
+    {
+        "text": "If your symptoms worsen, easily share your records with your physician via myDiya.",
+        "image": "share-on-phone.jpg"
+    },
+    {
+        "text": "To learn more about myDiya's COVID-19 tracking capabilities, watch the following video.",
+        "video": "https://www.youtube.com/watch?v=I6mY-9erW6c"
     }
 ]

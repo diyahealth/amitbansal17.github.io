@@ -1,1 +1,29 @@
-[]
+[
+    {
+        "text": "Emergency Card",
+        "image": "emergency-card-banner.jpg",
+        "classes": {
+            "root": "emergency-card",
+            "bgContainer": "emergency-card",
+            "textContainer": "emergency-card left",
+            "text": "emergency-card left"
+        },
+        "type": "banner"
+    },
+    {
+        "text": "myDiya provides you with a digital and printable emergency card that depicts a scannable QR code that supplies emergency responders with immediate, on-site health history.",
+        "image": "emergency-card.png"
+    },
+    {
+        "text": "Easily create your Emergency Card and print it out. Then, keep it in your wallet or on the back of your phone for ease of access. Doctors, family members, and friends can simply scan your QR code to review vital health information for safer, higher-quality care.",
+        "image": "print-card-phone.jpg"
+    },
+    {
+        "text": "Your Emergency Card is customizable. Simply use myDiya to choose which information to include on your card and in your QR code. Your card can depict basic personal information, information of your emergency contacts, and the scannable QR code.",
+        "image": "emergency-card-wizard.jpg"
+    },
+    {
+        "text": "To learn more about this life-saving Emergency Card, watch the following video.",
+        "video": "https://www.youtube.com/watch?v=o8FZ73Ajpro"
+    }
+]

@@ -1,6 +1,17 @@
 [
     {
-        "title": "Increase your revenue",
+        "text": "Increase Your Revenue",
+        "classes": {
+            "root": "increase-revenue",
+            "content": "right",
+            "textContainer": "increase-revenue",
+            "bgContainer": "increase-revenue",
+            "text": "increase-revenue right"
+        },
+        "image": "revenue-banner.jpg",
+        "type": "banner"
+    },
+    {
         "text": "Perform billable e-services such as telehealth consultations, follow-ups, and remote patient-monitoring, thereby maximizing efficiency and revenue.",
         "image": "telehealth.png"
     },

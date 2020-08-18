@@ -1,6 +1,20 @@
 [
     {
-        "title": "Telehealth Capabilities",
+        "text": "Telehealth Capabilities",
+        "image": "telehealth-banner.jpg",
+        "classes": {
+            "root": "telehealth-capabilities",
+            "bgContainer": "telehealth-capabilities",
+            "textContainer": "telehealth-capabilities",
+            "text": "telehealth-capabilities left"
+        },
+        "type": "banner"
+    },
+    {
+        "text": "Conduct billable telehealth visits and other billable e-services using DiyaMD's innovative technology — approved by Medicare and Medicaid.",
+        "image": "telehealth.png"
+    },
+    {
         "text": "Easily talk or video with patients — anytime, anywhere — for necessary consultations.",
         "image": "contact-patient.jpg"
     },
