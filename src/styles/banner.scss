@@ -1,0 +1,401 @@
+.banner-container {
+    width: 100%;
+    position: relative;
+
+    .banner-content {
+        position: relative;
+        margin: auto;
+        padding: 5px;
+        max-width: $container-max-width;
+
+        &.right {
+            display: flex;
+            justify-content: flex-end;
+
+            & .text {
+                text-align: right;
+            }
+        }
+    }
+
+    .background-image {
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: top;
+
+        &.telehealth-capabilities {
+            background-position-y: 30%;
+            @media screen and (max-width: $break-mobile) {
+                background-position-x: 42%;
+            }
+        }
+
+        &.increase-revenue {
+            @media screen and (max-width: $break-tablet) {
+                background-position-x: 20%;
+            }
+
+            @media screen and (max-width: 340px) {
+                background-position-x: 25%;
+            }
+        }
+
+        &.establish-brand {
+            @media screen and (max-width: $break-tablet) {
+                background-position-x: 60%;
+            }
+        }
+
+        &.integrate-with-office {
+            @media screen and (max-width: 400px) {
+                background-position-x: 57%;
+            }
+        }
+
+        &.patient-monitoring {
+            @media screen and (max-width: 700px) {
+                background-position-x: 90%;
+            }
+        }
+
+        &.patient-info {
+            @media screen and (min-width: $break-tablet) {
+                background-position-x: 10%;
+            }
+            @media screen and (max-width: $break-tablet) {
+                background-position-x: 62%;
+            }
+
+            @media screen and (max-width: 800px) {
+                background-position-x: 35%;
+            }
+
+            @media screen and (max-width: 480px) {
+                background-position-x: 53%;
+            }
+
+            @media screen and (max-width: 350px) {
+                background-position-x: 45%;
+            }
+        }
+
+        &.covid-19 {
+            background-position-y: center;
+            background-position-x: 80%;
+
+            @media screen and (max-width: $break-mobile) {
+                background-position-x: 60%;
+            }
+
+            @media screen and (max-width: 400px) {
+                background-position-x: 70%;
+            }
+
+            @media screen and (max-width: 350px) {
+                background-position-x: 60%;
+            }
+        }
+
+        &.emergency-card {
+            background-position-x: 63%;
+        }
+
+        &.connection-24-7 {
+            @media screen and (max-width: 400px) {
+                background-position-x: 70%;
+            }
+        }
+
+        &.expert-at-home {
+            background-position-x: 57%;
+        }
+
+        .text-container {
+            padding: 0 15px;
+            width: 70%;
+
+            @media screen and (max-width: $break-mobile) {
+                padding: 0 5px;
+                width: 80%;
+            }
+
+            &.increase-revenue {
+                width: 80%;
+
+                @media screen and (max-width: 960px) {
+                    width: 70%;
+                }
+            }
+
+            &.establish-brand {
+                @media screen and (max-width: $break-tablet) {
+                    width: 55%;
+                }
+            }
+
+            &.integrate-with-office {
+                @media screen and (max-width: 1300px) {
+                    width: 47%;
+                }
+
+                @media screen and (max-width: 1150px) {
+                    width: 54%;
+                }
+
+                @media screen and (max-width: 800px) {
+                    width: 70%;
+                }
+
+                @media screen and (max-width: 700px) {
+                    width: 74%;
+                }
+
+                @media screen and (max-width: 580px) {
+                    width: 78%;
+                }
+
+                @media screen and (max-width: 450px) {
+                    width: 100%;
+                }
+            }
+
+            &.patient-monitoring {
+                @media screen and (max-width: $break-tablet) {
+                    width: 71%;
+                }
+
+                @media screen and (max-width: 630px) {
+                    width: 80%;
+                }
+
+                @media screen and (max-width: 450px) {
+                    width: 100%;
+                }
+            }
+
+            &.patient-info {
+                @media screen and (max-width: $break-tablet) {
+                    width: 91%;
+                }
+
+                @media screen and (max-width: 600px) {
+                    width: 95%;
+                }
+
+                @media screen and (max-width: $break-mobile) {
+                    width: 97%;
+                }
+
+                @media screen and (max-width: 430px) {
+                    width: 100%;
+                }
+            }
+
+            &.covid-19 {    
+                @media screen and (max-width: $break-mobile) {
+                    width: 65%;
+                }
+
+                @media screen and (max-width: 340px) {
+                    width: 90%;
+                }
+            }
+
+            &.emergency-access {
+                @media screen and (max-width: $break-mobile) {
+                    width: 70%;
+                }
+            }
+
+            &.connection-24-7 {
+                @media screen and (max-width: 810px) {
+                    width: 58%;
+                }
+
+                @media screen and (max-width: $break-mobile) {
+                    width: 66%;
+                }
+
+                @media screen and (max-width: 380px) {
+                    width: 100%;
+                }
+            }
+
+            &.expert-at-home {
+                @media screen and (max-width: 750px) {
+                    width: 280px;
+                }
+
+                @media screen and (max-width: 625px) {
+                    width: 260px;
+                }
+            }
+
+            .text {
+                display: block;
+                letter-spacing: .5px;
+
+                font-size: 52px;
+                font-weight: 900;
+                line-height: 58px;
+
+                margin: 160px 0 140px;
+
+                @media screen and (max-width: $break-tablet) {
+                    margin: 120px auto 90px;
+                }
+
+                @media screen and (max-width: $break-mobile) {
+                    font-size: 45px;
+                    margin: 90px auto 70px;
+                }
+                
+                &.left {
+                    padding-left: 55px;
+
+                    @media screen and (max-width: 1178px) {
+                        padding-left: 30px;
+                    }
+
+                    @media screen and (max-width: 625px) {
+                        padding-left: 0;
+                    }
+                }
+
+                &.right {
+                    padding-right: 55px;
+
+                    @media screen and (max-width: 1178px) {
+                        padding-right: 30px;
+                    }
+
+                    @media screen and (max-width: 625px) {
+                        padding-right: 0;
+                    }
+                }
+                
+                &.telehealth-capabilities {
+                    color: $banner-text-alternative-color;
+
+                    @media screen and (max-width: 1178px) {
+                        margin: 115px auto 50px;
+                    }
+                }
+
+                &.establish-brand {
+                    color: $banner-text-alternative-color;
+
+                    @media screen and (max-width: $break-mobile) {
+                        padding-right: 0px;
+                        margin: 50px auto 60px;
+                    }
+                }
+
+                &.integrate-with-office {
+                    @media screen and (max-width: 1300px) {
+                        padding-right: 130px;
+                    }
+
+                    @media screen and (max-width: $break-tablet) {
+                        margin: 90px auto 120px;
+                        padding-right: 30px;
+                    }
+
+                    @media screen and (max-width: $break-mobile) {
+                        padding-right: 0px;
+                        margin: 50px auto 60px;
+                    }
+
+                    @media screen and (max-width: 340px) {
+                        font-size: 40px;
+                    }
+                }
+
+                &.patient-monitoring {
+                    color:rgba(2,44,87, 0.9);
+                    
+                    margin: 120px auto 150px;
+
+                    @media screen and (max-width: $break-tablet) {
+                        margin: 80px auto 120px;
+                    }
+
+                    @media screen and (max-width: 750px) {
+                        margin: 50px auto 150px;
+                    }
+
+                    @media screen and (max-width: $break-mobile) {
+                        font-size: 40px;
+                        margin: 30px auto 60px;
+                    }
+
+                    @media screen and (max-width: 350px) {
+                        font-size: 38px;
+                    }
+                }
+
+                &.patient-info {
+                    @media screen and (max-width: $break-tablet) {
+                        margin: 60px auto 110px;
+                    }
+
+                    @media screen and (max-width: $break-mobile) {
+                        font-size: 40px;
+                        line-height: 40px;
+
+                        margin: 40px auto 60px;
+                    }
+
+                    @media screen and (max-width: 420px) {
+                        font-size: 36px;
+                    }
+
+                    @media screen and (max-width: 370px) {
+                        font-size: 34px;
+                    }
+
+                    @media screen and (max-width: 360px) {
+                        font-size: 32px;
+                    }
+
+                    @media screen and (max-width: 330px) {
+                        font-size: 30px;
+                    }
+                }
+
+                &.covid-19 {
+                    background-position-y: center;
+
+                    @media screen and (max-width: $break-tablet) {
+                        margin: 80px auto 110px;
+                    }
+        
+                    @media screen and (max-width: $break-mobile) {
+                        font-size: 38px;
+
+                        margin: 30px auto 60px;
+                        line-height: 42px;
+                    }
+                }
+
+                &.emergency-access {
+                    @media screen and (max-width: $break-mobile) {
+                        margin: 60px auto 70px;
+                    }
+                }
+
+                &.emergency-card {
+                    color: $banner-text-alternative-color;
+                }
+
+                &.connection-24-7 {
+                    color: $banner-text-alternative-color;
+                }
+
+                &.medication-safety {
+                    color: rgba(0, 0, 0, 0.8)
+                }
+            }
+        }
+    }
+}

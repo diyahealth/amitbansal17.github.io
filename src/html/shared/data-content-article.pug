@@ -1,3 +1,6 @@
+include ../shared/two-column-article.pug
+include ../shared/youtube-video.pug
+
 mixin textContent(data, layoutContentType)
     -
         let isTextValid = true;
@@ -33,14 +36,38 @@ mixin imageContent(data, layoutContentType)
         +setContent(layoutContentType)
             img(src=data.image)
 
-include ../shared/two-column-article.pug
+mixin videoContent(data, layoutContentType)
+    if data.video
+        +setContent(layoutContentType)
+            +youtubeVideo(data.video)
+
+mixin content(data, type, layoutContentType)
+    case type
+        when 'image'
+            +imageContent(data, layoutContentType)
+        when 'text'
+            +textContent(data, layoutContentType)
+        when 'video'
+            +videoContent(data, layoutContentType)
 
 mixin dataContentArticle(data, index, rootId)
     -const isEven = index % 2 === 0
     -const containerClass = data.background || (isEven ? 'primary' : 'alternative')
     -
-        const leftContentType = data.image && isEven ? 'image' : 'text';
-        let rightContentType = data.image && !isEven ? 'image' : 'text';
+        const getContentType = (notText) => {
+            let result = 'text';
+            if (notText) {
+                if (data.image) {
+                    result = 'image';
+                } else if (data.video) {
+                    result = 'video';
+                }
+            }
+            return result;
+        }
+        const leftContentType = getContentType(isEven);
+        let rightContentType = getContentType(!isEven);
+
         if (leftContentType === rightContentType) {
             rightContentType = undefined;
         }
@@ -67,11 +94,5 @@ mixin dataContentArticle(data, index, rootId)
                         span.text.big=title
                 else
                     span.text.big=data.title
-        if leftContentType === 'image'
-            +imageContent(data, 'secondaryLeft')
-        else if leftContentType === 'text'
-            +textContent(data, 'secondaryLeft')
-        if rightContentType === 'image'
-            +imageContent(data, 'secondaryRight')
-        else if rightContentType === 'text'
-            +textContent(data, 'secondaryRight')
+        +content(data, leftContentType, 'secondaryLeft')
+        +content(data, rightContentType, 'secondaryRight')
