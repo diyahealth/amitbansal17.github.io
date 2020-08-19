@@ -6,7 +6,9 @@ const organizationSizeOptions = require("./organizationSizeOptions");
 const {
     doctorsBenefits,
 } = require("./doctorsBenefits");
-const patientsBenefits = require("./patientsBenefits");
+const {
+    patientsBenefits,
+} = require("./patientsBenefits");
 const reviews = require("./reviews");
 const { navigation } = require("./navigation");
 

@@ -56,15 +56,6 @@ const buildDoctorsBenefits = (mode) => ({
     ],
 });
 
-const a = [
-    'head-bg-bills-statement-stethoscope',
-    'head-bg-easy-to-use',
-    'head-bg-medical-mac',
-    'head-bg-broccoli-stethoscope',
-    'head-bg-apple-watch',
-    'head-bg-instant-communication',
-];
-
 let doctorsBenefits = buildDoctorsBenefits();
 
 const rebuildDoctorsBenefits = (mode) => {

@@ -13,14 +13,16 @@ mixin textImageCarousel(carouselData, id, additionalClass)
             ul.text-container
                 each info, index in infoArray
                     .carousel-item-container(class=index === 0 ? 'active' : '')
-                        if info.title
-                            h5.title(class=additionalClass)=info.title
-                        span.text(class=!info.title ? additionalClass : '')=info.text
                         if (info.link && info.link.href)
-                            a.link(href=info.link.href, rel=info.link.rel, target=info.link.target)
-                                if info.link.text
-                                    span #{info.link.text}
-                                    include ../../images/icons/forward-arrow-icon.svg
+                            a(href=info.link.href, rel=info.link.rel, target=info.link.target)
+                                if info.title
+                                    h5.title(class=additionalClass)=info.title
+                                span.text(class=!info.title ? additionalClass : '')=info.text
+                                if (info.link && info.link.href)
+                                        if info.link.text
+                                            .link
+                                                span #{info.link.text}
+                                                include ../../images/icons/forward-arrow-icon.svg
         each val, index in images
             if index === 0
                 div.carousel-image-background.active(class=val)
