@@ -11,7 +11,6 @@ const { rebuildPatientsBenefits } = require("../html/data/patientsBenefits");
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 function process(root, argv) {
     const pages = data.pages;

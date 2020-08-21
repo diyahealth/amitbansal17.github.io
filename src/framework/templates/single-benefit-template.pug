@@ -21,6 +21,6 @@ block content
             +dataContentBanner(item, rootId)
         else
             +dataContentArticle(item, haveBanner ? index - 1 : index, rootId)
-    - const isEven = (resultArticlesLength - 1) % 2 === 0 ? '' : 'primary-background-content'
+    - const isEven = (resultArticlesLength - 1) % 2 === 0 ? '' : 'contact-us-background-content'
     article(id="contact-us", class = isEven)
         +contactUs(organizationSizeOptions, rootId)
