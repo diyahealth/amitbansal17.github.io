@@ -1,16 +1,33 @@
-mixin aboutApp(title, text, click)
-    .default-content-block
-        .about-app-content
-            if block
-                .icon-container
-                    block
-            else
-                img.image(src=require("../../images/contact-us/contact-us.png"))
+include ./article-title.pug
 
+mixin linkButton(link, cssClass)
+    if (link)
+        a.link(href=link.href)
+            button.material-btn(class=cssClass)
+                span.label(class=cssClass)
+                    include ../../images/icons/forward-arrow-icon.svg
+                    span=link.text
+
+mixin mediaContainer(link)
+    if block
+        .media-container
+            if block
+                    block
+            +linkButton(link)
+
+mixin aboutApp(data, isIconOnRight, classes)
+    .default-content-block.about-app-content-container(class=classes && classes.container)
+        if (data && data.title)
+            - const titleClass = classes ? classes.title : '';
+            +articleTitle(data.title, { title: titleClass, divider: titleClass }, false, true)
+        .about-app-content
+            if (!isIconOnRight)
+                +mediaContainer(data.link)
+                    block
             .main-info
-                h3.title=title
-                h5.info=text
-                if click
-                    button.material-btn(onclick=click)
-                        span.label
-                            span Contact Us
+                if (data && data.text)
+                    h5.info(class=classes && classes.text)=data.text
+                    +linkButton(data && data.link, 'large')
+            if (isIconOnRight)
+                +mediaContainer(data && data.link)
+                    block
