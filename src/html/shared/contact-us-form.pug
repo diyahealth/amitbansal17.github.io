@@ -8,24 +8,27 @@ mixin contactUsForm(organizationSizeOptions)
         name="questions",
         onsubmit="return diya.contactUs.form.send(event, this)")#form
         fieldset#fields
-            .form-control
-                .input-container
-                    input.input(name="Name", required, placeholder=" ", type="text", maxlength="250")
-                    .form-label Name*
-            .form-control
-                .input-container
-                    input.input(name="Email", required, placeholder=" ", type="email", maxlength="250")
-                    .form-label Email*
-            .form-control
-                .input-container
-                    select.input(name="OrganizationSize", required, placeholder=" ", type="email", maxlength="250")
-                        each option in options
-                            option(value=option.value) #{option.label}
-                    .form-label Organization Size
-            .form-control
-                .input-container
-                    textarea.input.non-resizable(name="Message", placeholder=" ", rows="5", maxlength="10000")
-                    .form-label Comments
+            .columns-container
+                .column.left
+                    .form-control
+                        .input-container
+                            input.input(name="Name", required, placeholder=" ", type="text", maxlength="250")
+                            .form-label Name*
+                    .form-control
+                        .input-container
+                            input.input(name="Email", required, placeholder=" ", type="email", maxlength="250")
+                            .form-label Email*
+                    .form-control
+                        .input-container
+                            select.input(name="OrganizationSize", required, placeholder=" ", type="email", maxlength="250")
+                                each option in options
+                                    option(value=option.value) #{option.label}
+                            .form-label Organization Size
+                .column.right.comment
+                    .form-control
+                        .input-container
+                            textarea.input.non-resizable(name="Message", placeholder=" ", rows="9", maxlength="10000")
+                            .form-label Comments
 
             .g-recaptcha(
                     data-sitekey=keys.google.captcha,
