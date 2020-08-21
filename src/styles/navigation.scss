@@ -123,9 +123,11 @@
                 width: 0;
                 height: 0;
                 overflow: hidden;
-                background-color: #f7f6f6;
+                background: #f3fafd;
                 transition: opacity 0.2s ease-in-out;
                 text-align: left;
+                border-bottom-left-radius: 5%;
+                border-bottom-right-radius: 5%;
 
                 & > li {
                     position: relative;
@@ -149,24 +151,6 @@
                             transform: translate(10px);
                             color: $primary-color;
                         }
-                    }
-
-                    &:first-child::before {
-                        content: ' ';
-                        border-top: 1px solid #d3dae0;
-                        position: absolute;
-                        width: 100%;
-                        left: 0;
-                        top: 0;
-                    }
-
-                    &:last-child::after {
-                        content: ' ';
-                        border-top: 1px solid #d3dae0;
-                        position: absolute;
-                        width: 100%;
-                        left: 0;
-                        bottom: -4px;
                     }
 
                     &.active {
@@ -199,8 +183,9 @@
     }
 
     .logo-container {
-        width: 200px;
+        width: 160px;
         padding: 10px 20px;
+        padding-right: 10px;
     }
 
     .menu-toggle {
@@ -226,7 +211,7 @@
                 ~ span {
                     opacity: 1;
                     transform: rotate(45deg) translate(-2px, -1px);
-                    background: #232323;
+                    background: #3C4043;
                 }
 
                 ~ span:nth-last-child(3) {
@@ -251,7 +236,7 @@
             margin-bottom: 5px;
             position: relative;
 
-            background: #cdcdcd;
+            background: #757575;
             border-radius: 3px;
 
             z-index: 1;
@@ -280,11 +265,12 @@
         top: 0;
         margin: 0;
         padding: 20px;
-        padding-top: 60px;
+        padding-top: 0;
+        margin-top: 67px;
 
         overflow-y: scroll;
 
-        background: #ededed;
+        background: #f3fafd;;
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         transform-origin: 0% 0%;
@@ -316,6 +302,19 @@
                 &.active {
                     > a {
                         color: $primary-color;
+                    }
+                }
+
+                &.subheader {
+                    border-bottom: 1px solid #d3dae0;
+                    font-weight: 600;
+                    font-size: 1.1em;
+
+                    &:hover {
+                        & > a {
+                            transform: none;
+                            color: $primary-color;
+                        }
                     }
                 }
             }

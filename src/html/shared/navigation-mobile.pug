@@ -2,6 +2,8 @@
     .logo-container
         a(href=pages.index.url)
             img.logo(src=require("../../images/icons/diyahealth-logo.svg"), alt="Diya Health Logo")
+    button.material-btn.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+                span.label Request a demo
     .menu-toggle
         input(type="checkbox")
         span
@@ -12,13 +14,18 @@
                 - const haveDropdown = link.dropdown && link.dropdown.length > 0
                 - const isActive = page.name === link.title || (page.parent && pages[page.parent].name === link.title)
                 li(class = isActive ? 'active' : '')
-                    a(href=link.url) #{link.title}
+                    if (link.url)
+                        a(href=link.url) #{link.title}
+                    else
+                        span=link.title
+
                     if (haveDropdown)
                         ul.dropdown-menu
                             each dropdownLink in link.dropdown
                                 - const isDropdownLinkActive = page.name === dropdownLink.title
                                 li(class = dropdownLink.variant, class=isDropdownLinkActive ? 'active' : undefined)
-                                    a(href=dropdownLink.url) #{dropdownLink.title}
-            li
-                button.material-btn.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
-                    span.label Request a demo
+                                    if (dropdownLink.url)
+                                        a(href=dropdownLink.url) #{dropdownLink.title}
+                                    else
+                                        span=dropdownLink.title
+
