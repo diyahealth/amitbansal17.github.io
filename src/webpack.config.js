@@ -15,10 +15,15 @@ const processAfterDynamic = ['doctors', 'patientsAndFamilies'];
 const processStaticPage = (pageKey, argv) => {
     const pages = data.pages;
     const page = pages[pageKey];
-    
-    if (page.id === 'index' && argv.mode === 'development') {
-        page.url = page.url + 'index.html';
+
+    if (argv.mode === 'development') {
+        if (page.id === 'index') {
+            page.url = page.url + 'index.html';
+        } else {
+            page.url = page.url + '.html';
+        }
     }
+
 
     return new HtmlWebpackPlugin({
         template: `./html/pages/${page.fileName}.pug`,
