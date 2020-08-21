@@ -44,6 +44,7 @@
             }
  
             .text {
+                font-weight: 700;
                 font-size: 34px;
                 line-height: 1.17;
                 text-align: center;
@@ -83,23 +84,25 @@
                 flex-grow: 4;
                 & > img {
                     width: 100%;
+                    @extend .image-shadow;
                 }
+                
                 
                 @media screen and (max-width: $break-tablet) {
                     order: -1;
  
                     width: calc(100% + 48px);
-                    padding-bottom: 0;
+                    margin: -24px -24px 0px -24px;
                 }
             }
  
             .text {
                 font-size: 26px;
-                line-height: 1.435;
+                line-height: 1.235;
  
                 @media screen and (max-width: $break-tablet) {
                     font-size: 22px;
-                    line-height: 1.334;
+                    line-height: 1.134;
                 }
 
                 @media screen and (max-width: $break-mobile) {
@@ -110,6 +113,10 @@
                     color: $primary-color;
                     margin-top: 32px;
                     align-self: baseline;
+                }
+
+                &.covid-info {
+                    color: $covid-info-text-color;
                 }
 
                 &.paragraph:not(:first-child) {
@@ -141,8 +148,46 @@
                         font-size: 22px;
                     }
                 }
+
+                .text {
+                    font-size: 26px;
+                    line-height: 1.235;
+
+                    &.title {
+                        width: 100%;
+                        font-size: 32px;
+                        line-height: 1.535;
+    
+                        margin-inline-start: 0;
+                        margin-block-end: 0;
+    
+                        margin-bottom: 24px;
+    
+                        @media screen and (max-width: $break-tablet) {
+                            font-size: 26px;
+                            line-height: 1.434;
+                        }
+        
+                        @media screen and (max-width: $break-mobile) {
+                            font-size: 22px;
+                        }
+    
+                        &.big {
+                            font-size: 36px;
+    
+                            @media screen and (max-width: $break-tablet) {
+                                font-size: 32px;
+                                line-height: 1.434;
+                            }
+            
+                            @media screen and (max-width: $break-mobile) {
+                                font-size: 26px;
+                            }
+    
+                        }
+                    }
+                }
             }
- 
         }
     }
 }

@@ -52,7 +52,7 @@ mixin content(data, type, layoutContentType)
 
 mixin dataContentArticle(data, index, rootId)
     -const isEven = index % 2 === 0
-    -const containerClass = data.background || (isEven ? 'primary' : 'alternative')
+    -const containerClass = data.background || (isEven ? 'primary-background-content' : '')
     -
         const getContentType = (notText) => {
             let result = 'text';

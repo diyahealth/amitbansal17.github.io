@@ -1,0 +1,14 @@
+mixin articleTitle(title, classes, divider, noPadding)
+    - 
+        let containerClass = classes ? classes.contentContainer : '';
+        containerClass = noPadding ? containerClass + ' no-padding' : containerClass;
+    
+    .default-content-block.article-title-content(class=containerClass)
+        .title-container
+            if Array.isArray(title)
+                each titleItem, index in title
+                    h4.title(class=classes && classes.title)=titleItem
+            else
+                h4.title(class=classes && classes.title)=title
+        if (divider)
+            .divider(class=classes && classes.divider)

@@ -8,6 +8,8 @@ include ../shared/info-tile.pug
 include ../shared/partners.pug
 include ../shared/about-app.pug
 include ../shared/sign-in-button.pug
+include ../shared/covid-info.pug
+include ../shared/timeline-articles.pug
 
 block content
     - const benefitsCarouselId = 'patients-benefits'; 
@@ -17,11 +19,27 @@ block content
             tagline: 'Your personal health diary',
             imageSrc: './images/patients-and-families/header.png',
         };
-    -
         const aboutApp = {
             title : 'About myDiya',
-            text: 'A personal health diary with the goal of keeping you safe and connected with your family during a health emergency. Your records are kept up-to-date and easily accessible. Developed by Diya Health, a team of doctors and engineers myDiya is being used in four continents with the majority of users in North America.',
+            text: 'A personal health record (PHR) software that gives patients control of their own health data. This HIPAA-compliant software boasts a multitude of unique, essential capabilities that ensure patients receive high-quality, safe medical treatment. From serving as a health diary, to creating a timeline of users\' health history, to tracking COVID-19 symptoms, myDiya allows patients to conveniently access their own health data, share their information with whoever they please, and prepare for medical emergencies.',
         };
+        const timelineData = [
+            {
+                title: 'Take Control',
+                text: 'With myDiya, you can take control of your own health data. From accessing your medical history, to uploading new health information, to sharing your information with anyone you desire, you will never have trouble tracking your health information again.',
+                src: require("../../images/patients-and-families/emergency-access.jpg"),
+            },
+            {
+                title: 'Upload Anything',
+                text: 'After creating a myDiya account, you can effortlessly upload your health information through manual entry or your existing medical record. You can also upload photographs of your prescriptions, reports, and other documents which our highly trained team will digitize and keep current. To keep your information safe, we abide by HIPAA and HL7-FHIR standards.',
+                src: require("../../images/patients-and-families/expert-at-home.jpg"),
+            },
+            {
+                title: 'Track your Health',
+                text: 'Additionally, you can track your vital signs, mood, potential COVID-19 exposure and symptoms, and overall health status using myDiya\'s cutting-edge technology. myDiya even consolidates a your information into a digital and printable emergency card that depicts a scannable QR code. So, you can carry your health information at all times in case of an emergency, and first responders have the information they need to provide immediate, safe, high-quality care.',
+                src: require("../../images/patients-and-families/24-7-connection.jpg"),
+            },
+        ];
 
     script.
         window.addEventListener('load', (event) => {
@@ -36,17 +54,24 @@ block content
             .single-tile-container
                     +infoTile('Personal Sign-In')
                         +signInButton('https://mydiya.org/auth/sign-in')
-
+    article.primary-background-content
+        +aboutApp(aboutApp, false, { title: 'playfair'})
+            include ../../images/icons/mydiya-logo.svg
     article
-        +partners('small')
+        .default-content-block
+            +timelineArticles(timelineData)
+    article
+        .default-content-block
+            +articleTitle('myDiya Capabilities', { title: 'primary', divider: 'primary' }, true, true)
+            .capabilities-container
+                .capabilities
+                    include ../../images/capabilities/mydiya-capabilities.svg
     article.covid-info-container
-        include ../shared/covid-info.pug
+        +covidInfo(covidInfo.patients)
+            img(src=require("../../images/patients-and-families/covid.jpg"))
     article.alternative-background-content
        +reviews(reviews.myDiya)
-    article.primary-background-content
-        +aboutApp(aboutApp.title, aboutApp.text)
-            include ../../images/icons/mydiya-logo.svg
-    article.alternative-background-content(id="contact-us")
+    article.contact-us-background-content(id="contact-us")
         +contactUs(organizationSizeOptions)
 
     include ../shared/map-app.pug

@@ -1,0 +1,11 @@
+mixin timelineArticles(data)
+    .timeline-articles-container
+        each item, index in data
+            .article
+                if (item.src)
+                    .part.image-container
+                        img(src=item.src)
+                .part.text-container
+                    if (item.title)
+                        h4.text.title=item.title
+                    span.text=item.text

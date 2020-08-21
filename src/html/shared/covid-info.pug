@@ -1,16 +1,12 @@
 include ../shared/two-column-article.pug
 
-+twoColumnArticle({ container: 'red', secondaryRight: 'image-container' })
-    +setContent('main')
-        .icon-container
-            include ../../images/icons/virus.svg
-        span.text [COVID-19]
-        span.text Reduce your risk of coronavirus with Diya
-    +setContent('secondaryLeft')
-        span.text.
-            Patients can track their COVID-19 exposure and symptoms (temperature, cough, fever, etc) from the safety and comfort of their homes.
-            They can share this accurate history and symptom information with their family and physicians, especially if symptoms worsen.
-            Physicians can also remotely monitor patients' symptoms from anywhere. 
-        a.text.link(href="https://www.youtube.com/watch?v=I6mY-9erW6c", rel="noopener nofollow", target="_blank") Watch YouTube video
-    +setContent('secondaryRight')
-        img(src=require("../../images/patients-and-families/covid.jpg"))
+mixin covidInfo(data)
+    +twoColumnArticle({ container: 'red', secondaryRight: 'image-container' })
+        +setContent('secondaryLeft')
+            if data.title
+                h4.text.title.covid-info=data.title
+            span.text.covid-info=data.text
+            if (data.link)
+                a.text.link(href=data.link.href, rel=data.link.rel, target=data.link.target)=data.link.text
+        +setContent('secondaryRight')
+            block
