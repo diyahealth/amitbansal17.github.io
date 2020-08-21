@@ -5,6 +5,9 @@ include ../shared/contact-us.pug
 include ../shared/reviews.pug
 include ../shared/info-tile.pug
 include ../shared/partners.pug
+include ../shared/about-app.pug
+include ../shared/article-title.pug
+include ../shared/covid-info.pug        
 
 block head
     meta(name="twitter:card" value="Diya Health Website")
@@ -18,6 +21,16 @@ block content
     - const benefitsCarouselId = 'benefits'
     - const doctorsUrl = pages.doctors.url;
     - const patientsAndFamiliesUrl = pages.patientsAndFamilies.url;
+    -
+        const aboutDiyaMdApp = {
+            text: 'DiyaMD is a software application with many unique capabilities that improve a medical practice\'s revenue, efficiency, and delivery of health care.  Patients\' records are kept up-to-date and accessed easily.  It was developed by Diya Health, a team of doctors and engineers, and is being used on four continents with most users in North America.',
+            link: { href: pages.doctors.url, text: 'More Info' },
+        };
+    -
+        const aboutMyDiyaApp = {
+            text: 'myDiya is a personal health diary with the goal of keeping you safe and connected with your family during a health emergency. Your records are kept up-to-date and easily accessible. Developed by Diya Health, a team of doctors and engineers myDiya is being used in four continents with the majority of users in North America.',
+            link: { href: pages.patientsAndFamilies.url, text: 'More Info' },
+        };
 
     script.
         window.addEventListener('load', (event) => {
@@ -40,12 +53,18 @@ block content
                             include ../../images/icons/person-outline-icon.svg
                             span Patients & Families
     article
-        +partners('small')
-    article
-        include ../shared/covid-info.pug        
+        +articleTitle('Our Products', { divider: 'primary' }, true)
+    article.primary-background-content
+        +aboutApp(aboutDiyaMdApp, false)
+            include ../../images/icons/diyamd-logo.svg
     article.alternative-background-content
-        +reviews(reviews.index)
-    article.primary-background-content(id="contact-us")
+        +aboutApp(aboutMyDiyaApp, true)
+            include ../../images/icons/mydiya-logo.svg
+        
+    article
+        +covidInfo(covidInfo.index)
+            img(src=require("../../images/patients-and-families/covid.jpg"))
+    article.contact-us-background-content(id="contact-us")
         +contactUs(organizationSizeOptions)
 
     include ../shared/map-app.pug

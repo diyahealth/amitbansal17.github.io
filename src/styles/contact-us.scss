@@ -1,56 +1,29 @@
+.contact-us-background-content {
+    background: linear-gradient(to bottom, #f0fafd, #cfeef8);  
+}
+
 .contact-us-container {
-    padding: 24px 0px;
     overflow: hidden;
 
     .content {
-        width: calc(100% + 80px);
-        margin: -40px;
-
-        display: flex;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-
-        @media screen and (max-width: $break-tablet) {
-            width: 100%;
-            margin: 0;
-        }
-
-        .item {
-            padding: 40px;
-            flex-grow: 0;
-            max-width: 50%;
-            flex-basis: 50%;
+        .text {
+            font-size: 26px;
+            margin-bottom: 24px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-block-start: 0;
 
             @media screen and (max-width: $break-tablet) {
-                display: flex;
-                flex-direction: column;
-                flex-wrap: wrap;
-
-                padding: 0;
-                width: 100%;
-                max-width: initial;
-                flex-basis: initial;
+                font-size: 22px;
             }
+        }
 
-            .text {
-                font-size: 26px;
-                margin-bottom: 40px;
-                font-weight: 400;
-                line-height: 30px;
-                margin-block-start: 0;
+        .title {
+            font-size: 32px;
+            font-weight: 600;
 
-                @media screen and (max-width: $break-tablet) {
-                    font-size: 22px;
-                }
-            }
-
-            .title {
-                font-size: 34px;
-
-                @media screen and (max-width: $break-tablet) {
-                    font-size: 26px;
-                    text-align: center;
-                }
+            @media screen and (max-width: $break-tablet) {
+                font-size: 26x;
             }
         }
 
@@ -69,11 +42,31 @@
         }
 
         .contact-us-form {
-            display: flex;
-            flex-direction: column;
+            .columns-container {
+                display: flex;
+                flex-wrap: wrap;
+
+                .column {
+                    max-width: 50%;
+                    flex-basis: 50%;
+
+                    &.left {
+                        padding-right: 12px;
+                    }
+                    &.right {
+                        padding-right: 12px;
+                    }
+
+                    @media screen and (max-width: $break-tablet) {
+                        max-width: 100%;
+                        flex-basis: 100%;
+                    }   
+                }
+            }
+            
 
             .form-control {
-                margin-top: 42px;
+                margin-top: 21px;
 
                 &:first-child {
                     margin-top: 16px;
@@ -82,10 +75,18 @@
                 @media screen and (max-width: $break-tablet) {
                     margin-top: 16px;
                 }
+
+                &.comment {
+                    min-width: 550px;
+                }
+
+                &.comment {
+                    min-width: 550px;
+                }
             }
 
             .g-recaptcha {
-                margin: 40px 0;
+                margin: 20px 0;
             }
         }
     }

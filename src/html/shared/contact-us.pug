@@ -2,22 +2,19 @@ include submit-message.pug
 include contact-us-form.pug
  
 mixin contactUs(organizationSizeOptions, rootId)
-    .contact-us-container 
-        .default-content-block
-            if rootId
-                .dev-id #{rootId}-contact-us
-            .content
-                .item
-                    h3.title.text.
-                        Contact Us
-                    h4.text.
-                        Haven’t found the answer to your question? Want to ask us about pricing options for your
-                        organization? Contact us and we will return to
-                        you shortly.
-                    .image-container
-                        img.image(src=require("../../images/contact-us/contact-us.png"), alt="Contact Us")
-                .item
-                    +contactUsForm(organizationSizeOptions)
+    .default-content-block.contact-us-container 
+        if rootId
+            .dev-id #{rootId}-contact-us
+        .content
+            .item
+                h3.title.text.
+                    Contact Us
+                h4.text.
+                    Haven’t found the answer to your question? Want to ask us about pricing options for your
+                    organization? Contact us and we will return to
+                    you shortly.
+                +contactUsForm(organizationSizeOptions)
+                    
     block script
         include ../shared/map-app.pug
         script(src="https://www.google.com/recaptcha/api.js", defer)
