@@ -1,0 +1,45 @@
+extends ../shared/layout.pug
+
+include ../shared/contact-us.pug
+include ../shared/reviews.pug
+include ../shared/info-tile.pug
+include ../shared/partners.pug
+include ../shared/about-app.pug
+include ../shared/article-title.pug
+include ../shared/sign-in-button.pug        
+include ../shared/info-tile.pug        
+include ../shared/covid-info.pug        
+
+block content
+    -
+        const aboutApp = {
+            text: 'A personal health diary with the goal of keeping you safe and connected with your family and providers.  It’s a patient-centric health records platform that provides doctors with your health synopsis that is complete, succinct, always accessible, and safely protected. Developed by Diya Health, a team of doctors and engineers, myDiya, is being used in four continents with the majority of users in North America.',
+        };
+
+    article.primary-background-content
+        +aboutApp(aboutApp, false, { title: 'primary playfair big', text: 'hidden-after' })
+            include ../../images/icons/mydiya-logo.svg
+        .two-tiles-container
+            +infoTile('Personal Sign-In', 'alternative')
+                +signInButton('https://mydiya.org/auth/sign-in')
+            +infoTile('Any Questions?', 'alternative')
+                button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
+                    span.label
+                        include ../../images/icons/comment-question-outline-icon.svg
+                        span Contact Us
+        +aboutApp(aboutApp, false, { container: 'no-padding-vert', text: 'hidden-before' })
+    article
+        .default-content-block
+            +articleTitle('myDiya Capabilities', { title: 'primary', divider: 'primary' }, true, true)
+            .capabilities-container
+                .capabilities
+                    include ../../images/capabilities/mydiya-capabilities.svg
+    article
+        +covidInfo(covidInfo.patients)
+    article.alternative-background-content
+        +articleTitle('myDiya Testimonies')
+        +reviews(reviews.myDiya)
+    article.contact-us-background-content(id="contact-us")
+        +contactUs(organizationSizeOptions)
+
+    include ../shared/map-app.pug
