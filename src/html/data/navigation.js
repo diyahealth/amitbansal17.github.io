@@ -1,10 +1,17 @@
 const pages = require("./pages");
 
-const buildPage = (title, url, variant, postfix) => ({
-    title,
-    url: url ? url + postfix : undefined,
-    variant,
-});
+const buildPage = (title, url, variant, postfix) => {
+    const result = {
+        title,
+        url,
+        variant,
+    };
+
+    if (result.url && postfix && !url.endsWith(postfix)) {
+        result.url = result.url + postfix;
+    }
+    return result;
+};
 
 const pageToLink = (page, variant, postfix) => buildPage(page.name, page.url, variant, postfix);
 
@@ -15,11 +22,11 @@ const buildDropdownFromPageWithSubpages = (pageKey, subheader, postfix) => {
     if (!subpageKeys || subpageKeys.length === 0) {
         return undefined;
     }
-    const subheaderPage = subheader ? pages[subheader] : undefined;
+    const isPage = Boolean(subheader.url);
 
-    const subheaderLink = subheader ? buildPage(
-        subheaderPage ? subheader.name : subheader,
-        subheaderPage ? subheader.url : undefined,
+    const subheaderLink = subheader? buildPage(
+        isPage ? subheader.name : subheader,
+        isPage ? subheader.url : undefined,
         'subheader', postfix) : undefined;
 
     const links = [subheaderLink, ...subpageKeys.map(pageKey => {
@@ -31,6 +38,19 @@ const buildDropdownFromPageWithSubpages = (pageKey, subheader, postfix) => {
     return links;
 }
 
+const buildAboutUsDropdown = () => {
+    const aboutUsUrl = pages.aboutUs.url;
+
+    const titleUrlItems = [
+        { title: 'Our Mission', url: `${aboutUsUrl}#mission`},
+        { title: 'Our History', url: `${aboutUsUrl}#history`},
+        { title: 'Partnerships', url: `${aboutUsUrl}#partnerships `},
+        { title: 'Careers', url: `${aboutUsUrl}#careers `},
+    ];
+
+    return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
+}
+
 let navigationLinks = [];
 
 const buildNavigationLinks = (mode) => {
@@ -39,14 +59,15 @@ const buildNavigationLinks = (mode) => {
     navigationLinks.push(
         {
             ...pageToLink(pages.doctors, null, postfix),
-            dropdown: buildDropdownFromPageWithSubpages('doctors', 'DiyaMD', postfix),
+            dropdown: buildDropdownFromPageWithSubpages('doctors', { name: 'DiyaMD', url: pages.doctors.url }, postfix),
         },
         {
             ...pageToLink(pages.patientsAndFamilies, null, postfix),
-            dropdown: buildDropdownFromPageWithSubpages('patientsAndFamilies', 'myDiya', postfix),
+            dropdown: buildDropdownFromPageWithSubpages('patientsAndFamilies', { name: 'myDiya', url: pages.patientsAndFamilies.url }, postfix),
         },
         {
             ...pageToLink(pages.aboutUs, null, postfix),
+            dropdown: buildAboutUsDropdown(postfix),
         }
     );
 }
