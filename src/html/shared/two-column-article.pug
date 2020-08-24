@@ -8,7 +8,7 @@ mixin twoColumnArticle(classes)
 	- blocks = {}
 	.article-container(class=classes && classes.container)
 		.default-content-block.hidden-overflow
-			.two-column-article-content
+			.two-column-article-content(class=classes && classes.contentContainer)
 				block
 				if blocks.main
 					.item.main-info(class=classes && classes.main)

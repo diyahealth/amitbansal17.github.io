@@ -8,9 +8,9 @@ mixin linkButton(link, cssClass)
                     include ../../images/icons/forward-arrow-icon.svg
                     span=link.text
 
-mixin mediaContainer(link)
+mixin mediaContainer(link, cssClass)
     if block
-        .media-container
+        .media-container(class=cssClass)
             if block
                     block
             +linkButton(link)

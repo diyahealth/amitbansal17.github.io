@@ -1,0 +1,23 @@
+include ./about-app.pug
+
+block variables
+    - aboutAppBlocks = {}
+
+mixin setAboutAppContent(key)
+    - aboutAppBlocks[key] = this.block
+
+mixin aboutAppIndex(data)
+    .default-content-block.about-app-content-container(class=classes && classes.container)
+        .about-app-index-content
+            .image-container
+                img(src=data.image)
+            .main-info
+                h5.title(class=classes && classes.title)=data.title
+                if aboutAppBlocks.info
+                    p.info(class=classes && classes.text)
+                        - aboutAppBlocks.info()
+            .logo-container
+                block
+                +linkButton(data.link)
+            - aboutAppBlocks = {}
+                
