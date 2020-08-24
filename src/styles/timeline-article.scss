@@ -83,7 +83,7 @@
                 flex-grow: 4;
                 & > img {
                     width: 100%;
-                    @extend .image-shadow;
+                    @extend .shadow;
                 }
 
                 @media screen and (max-width: 900px) {

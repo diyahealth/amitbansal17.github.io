@@ -2,103 +2,153 @@ extends ../shared/layout.pug
 
 include ../shared/head-image.pug
 include ../shared/contact-us.pug
+include ../shared/two-column-article.pug
+include ../shared/article-title.pug
+include ../shared/list.pug
+include ../shared/partners.pug
 
 block content
+    -
+        const missions = [
+            'To bridge the communication gap between patients and doctors.',
+            'To reduce the incidence of medical errors and associated costs.',
+            'To democratise access to healthcare worldwide.',
+        ];
+
+        const links = [
+            {
+                href: 'https://www.facebook.com/sharer/sharer.php?u=https%3A//www.diyahealth.org/',
+                icon: require("../../images/icons/facebook-icon.svg"),
+            },
+            {
+                href: 'https://twitter.com/intent/tweet/?text=Diya%20Health%20Website&amp;url=https%3A%2F%2Fwww.diyahealth.org%2F',
+                icon: require("../../images/icons/twitter-icon.svg"),
+            },
+            {
+                href: 'https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.diyahealth.org/&title=Diya%20Health%20Website&summary=Lighting%20the%20Path%20to%20a%20Healthier%20Future%20for%20All&source=https%3A//www.diyahealth.org/',
+                icon: require("../../images/icons/linkedin-icon.svg"),
+            }
+        ];
+
+        const team = [
+            {
+                name: 'Amit Bansal, CEO & Founder',
+                text: 'Amit is an experienced software engineer who has led large organizations that develop and deploy SaaS products. His record of achievements includes innovations, expansion, and profitability. As CEO, Amit serves as the company’s lead communicatory, fundraiser, and talent recruiter. Amit directs the company’s efforts to achieve a clear vision of healthcare system improvement.',
+                image: require('../../images/team/amit.png'),
+                itemClass: 'primary-background-content',
+            },
+            {
+                name: 'Sangeeta Marwaha, M.D., Chief Medical Officer',
+                text: 'Dr. Marwaha is a physician with 20+ years of clinical dermatology experience in both private practice and multi-specialty medical group settings. She has extensive expertise in the medical technology sector, including EMR and tele-health, data science research and medical group operational efficiency. As CMO, Dr. Marwaha builds and leads the Medical Advisory Board, oversees media awareness and healthcare outreach, provides guidance on product development, and supports fundraising efforts.',
+                image: require('../../images/team/sangeeta.jpg'),
+            },
+            {
+                name: 'Roman Polunin, Chief Technology Officer',
+                text: 'Roman is a long-time software engineer and architect, having served in many different business domains writing code, working on products, and mentoring others. He\'s passionate about healthcare, technology, and cloud computing. As CTO, Roman leads Diya Health’s technological innovation and advancement. Roman oversees the company’s strategy and growth as it relates to product development.',
+                image: require('../../images/team/roman.png'),
+                itemClass: 'primary-background-content',
+            },
+            {
+                name: 'Danielle Kaiser, Director of Operations',
+                text: 'Danielle is a Master of Health Administration student at USC, where she has played a key role in health-system-level data analytics and research study development. As Director of Operations, Danielle is responsible for the execution of strategic goals. Danielle oversees daily operations and business improvement initiatives.',
+                image: require('../../images/team/danielle.jpg'),  
+            },
+            {
+                name: 'Hoan Nguyen, Director of Strategy',
+                text: 'Hoan is a doctoral candidate at the University of Southern California, who has an extensive research background that addresses information communication technologies and technology entrepreneurship. Along with her Ph.D., Hoan is pursuing a graduate degree in Technology Commercialization at USC’s Marshall School of Business. As the Director of Strategy, Hoan researches and plans Diya Health’s long-term strategic goals. Hoan leads the company’s growth and future development.',
+                image: require('../../images/team/hoan.jpg'),
+                itemClass: 'primary-background-content',
+            },
+        ];
+
     +headImage("head-bg-about-us", "Diya Health is a team of physicians, engineers, gerontologists, researchers, designers and business leaders", 'small')
+    article.primary-background-content.anchor(id="mission")
+        .default-content-block.centered-article-container
+            .content
+                h4.text.title Our Mission
+                +list(missions, { itemText: 'big', icon: 'big' })   
+    article
+        +twoColumnArticle({ secondaryLeft: 'image-container' })
+            +setContent('secondaryLeft')
+                img(src=require("../../images/about-us/diya-health-on-computer.jpg"))
+            +setContent('secondaryRight')
+                span.text.
+                    We use advanced software algorithms and data science to enable doctors, patients and families to improve health outcomes. Our software-as-a-service digital health platform focuses on actionable data science to empower doctors and patients.
 
-    article.content-block-bg.text-image
-        .index-mission.content-inner
-            .text-container
-                h2.block-title Our Mission
-                ul
-                    li.text To bridge the communication gap between doctors, patients and families.
-                    li.text To reduce the incidence of medical errors and healthcare costs.
-                    li.text To democratise access to healthcare worldwide.
-                .header-replacement
-                p.quote.
-                    We use advanced software algorithms and data science to enable doctors,
-                    patients and families to improve health outcomes. Our software-as-a-service digital health platform focuses
-                    on actionable data science to empower doctors and patients.
-                br
-                p.text Diya Health  was founded in April 2018 in CA, USA.
-            .image-container
-                img(src=require("../../images/about-us/volunteer-with-us.jpg"), alt="Volunteers")
+    article.primary-background-content
+        .default-content-block.centered-article-container.hth-share
+            .content
+                h4.text.title Share With Others
+                span.text.
+                    If you believe in our mission or know someone else who may have the desire, knowledge or expertise, please help by increasing awareness of Diya Health. Share our story with your friends. Together we can make the future brighter for those in need and give everyone a fair chance for good health.
+                .input-group
+                    each item in links
+                        a(href=item.href, target="_blank")
+                            img(src=item.icon)
 
-    article.content-block
-        .index-diya
-            .border-container
-                .image-container
-                    img(src=require("../../images/index/diya.jpg"), alt="Diya")
-                p.text
+    article.anchor(id="history")
+        +articleTitle('Our History', { divider: 'primary' }, true)
+    article
+        +twoColumnArticle({ container: 'primary-background-content', secondaryRight: 'image-container' })
+            +setContent('main')
+                h4.text.title What's in the name?
+            +setContent('secondaryLeft')
+                span.text
                     span In selecting our name, we drew inspiration from a sentence in the Saint Francis prayer, 
-                    i “May we bring light where there is darkness.” 
-                    span.
-                        There is an immense amount of information darkness when it comes to our healthcare - the doctors,
-                        the patients, and the families are often in the dark despite our best efforts otherwise. 
+                    i “May we bring light where there is darkness.”
+                    br
+                    span There is an immense amount of information darkness when it comes to our healthcare - the doctors, the patients, and the families are often in the dark despite our best efforts otherwise. 
                     br
                     span.
                         Ḍiyā is a word of Arabic origin and it means radiance.
-                        It’s been adopted by South-Asain culture as a name for a primitive lamp.-- a small handmade bowl made out of clay that,
+                        It’s been adopted by South-Asain culture as a name for a primitive lamp, — a small handmade bowl made out of clay that,
                         with a bit of oil and a wick, creates light. Lifesaving medical information delivered on a smart-device is still just a diya to us.
-
-    article.content-block-bg.primary
-        .content-inner.image-text
-            .image-container
-                img(src=require("../../images/about-us/doctors.jpg"), alt="Doctors")
-            .text-container
-                h2.block-title
-                    span We serve 
-                    span.title-underlined doctors
-                p.text
-                    span Specifically designed for physicians in private practice, 
-                    i DiyaMD 
-                    span enables doctors to communicate with single or multiple patients
-                    span through the patients’ 
-                    i myDiya
-                    span . 
-                    i DiyaMD 
-                    span enhances telehealth.  Doctors use 
-                    i DiyaMD 
-                    span.
-                        to review and respond to patients’ complaints, monitor patients remotely, note symptom-trends,
-                        reconcile medications with in-house EHRs, send alerts, and generate reports of billable services.
-    article.content-block-bg.primary
-        .content-inner.text-image
-            .text-container
-                h2.block-title
-                    span We serve 
-                    span.title-underlined patients
-                p.text
-                    span Our personal health records app, 
-                    i myDiya
-                    span , allows a person to manage their own electronic “health diary.”
-                    span.
-                        It can receive data from any standard healthcare system, is compliant with personal-security standards, and can be used in emergencies as a personal
-                        “medical alert bracelet.”  It allows for remote referrals, monitoring of symptoms, alerts about medications
-                        (e.g., dosage duplications or contraindications), among other capabilities. Most importantly, the information is controlled by,
-                        owned by, and travels with the patient, regardless of changes in doctor, medical plan, residence, or caregiver.
-            .image-container
-                img(src=require("../../images/about-us/patients.jpg"), alt="Patients")
-    article.content-block-bg
-        .content-inner.image-text.hth-share
-            .image-container
-                img(src=require("../../images/how-to-help/share-with-others.jpg"), alt="Share with others")
-            .text-container
-                h2.block-title Share with others
-                p.text.
-                    If you believe in our mission or know someone else who may have the desire,
-                    knowledge or expertise, please help by increasing awareness of Diya Health.
-                    Share our story with your friends. Together we can make the future brighter
-                    for those in need and give everyone a fair chance for good health.
+            +setContent('secondaryRight')
+                img(src=require("../../images/index/diya.jpg"), alt="Diya")
+    article.anchor(id="team")
+        +articleTitle('Our Team', { divider: 'primary' }, true)
+        .team-content-container
+            each member in team
+                div(class=member.itemClass)
+                    .team-member
+                        .image-container
+                            .photo
+                                img(src=member.image)
+                        .info-container
+                            h5.person=member.name
+                            p.description=member.text
+    article.anchor(id="partnerships")
+        +articleTitle('Partnerships', { divider: 'primary' }, true)
+    article.primary-background-content
+        .default-content-block.centered-article-container
+            .content
+                span.text.
+                    Diya Health is a growing healthcare technology startup. We are a team of a team of physicians, engineers, gerontologists, researchers, designers and business leaders who are looking to learn and grow as professionals. We are seeking additional team members who have a passion for improving care quality and access, are driven and hard-working, and who appreciate lifelong learning.
+                br
+                button.material-btn.large(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
+                    span.label.large
+                        span Partner With Us
+    article
+        .default-content-block.centered-article-container.partners-title-container
+            .content
+                h4.text.title.no-margin Our Partners
+        +partners()
+    
+    article.anchor.primary-background-content(id="careers")
+        .default-content-block.centered-article-container
+            .content.positions
+                h4.text.title Available Positions
                 .input-group
-                    a.social-btn.fb(href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.diyahealth.org/" target="_blank")
-                        i.icon-facebook
-                        |Share
-                    a.social-btn.twt(href="https://twitter.com/intent/tweet/?text=Diya%20Health%20Website&amp;url=https%3A%2F%2Fwww.diyahealth.org%2F" target="_blank")
-                        i.icon-twitter
-                        |Tweet
-                    a.social-btn.lin(href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.diyahealth.org/&title=Diya%20Health%20Website&summary=Lighting%20the%20Path%20to%20a%20Healthier%20Future%20for%20All&source=https%3A//www.diyahealth.org/" target="_blank")
-                        i.icon-linkedin
-                        |Share
-    article.contact-us-background-content(id="contact-us")
+                    a.material-btn(href="https://docs.google.com/document/d/1afM9j0J4hE3-1YCQ0-EAUyGhQpFSRgtFiUSsgNoPtkw", target="_blank")
+                        span.label.large
+                            span Digital Media Intern
+                    a.material-btn(href="https://docs.google.com/document/d/1ajM1DSblYl5I2h7rsFjP8HJitwav42VnBKSwmAe17T4", target="_blank")
+                        span.label.large
+                            span Analyst Intern
+                i.text
+                    span If you are interested in applying for any available position, please submit inqueries to 
+                    a(href="mailto:info@diyahealth.org") info@diyahealth.org
+                    
+                        
+    article(id="contact-us")
         +contactUs(organizationSizeOptions)

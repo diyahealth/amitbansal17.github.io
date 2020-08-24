@@ -1,0 +1,7 @@
+mixin list(items, classes)
+    ul.list-container(class=classes && classes.container)
+        each item in items
+            li.list-item(class=classes && classes.item)
+                .icon-container(class=classes && classes.icon)
+                    include ../../images/icons/check-circle-icon.svg
+                span.item-text(class=classes && classes.itemText)=item
