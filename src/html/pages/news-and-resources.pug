@@ -1,0 +1,54 @@
+extends ../shared/layout.pug
+
+include ../shared/blog-articles.pug
+include ../shared/contact-us.pug
+block content
+    script.
+        window.addEventListener('load', (event) => {
+            diya.prepareTwitterFeed('twitter-widget-0');
+        });
+    -
+        const articles = [
+            {
+                title: 'Primary care is being devastated by Covid-19. It must be saved',
+                timestamp: 'By DANIEL HORN, WAYNE ALTMAN, and ZIRUI SONGAPRIL / APRIL 29, 2020',
+                description: 'As the U.S. nears 60,000 deaths due to Covid-19, primary care could be among its next casualties. Half of the primary care practices in America are small businesses, which means they are battling the virus on the frontlines even as they are on the verge of going out of business. The reason for this dynamic is that most of these practices, and much of our health care system, rely on an outdated payment model: Each in-person visit with a patient generates a payment. Without in-person visits, there is little to no revenue.',
+                href: 'https://www.statnews.com/2020/04/29/save-primary-care-devastation-covid-19/',
+            },
+            {
+                title: 'THE ‘SILENT FRONT LINE’',
+                timestamp: 'By SARA GILGORE  – Staff Reporter, Washington Business Journal / APRIL 17, 2020',
+                description: 'The novel coronavirus could cripple an important contingent of Washington’s health ecosystem: physician private practices.',
+                href: 'https://www.bizjournals.com/washington/news/2020/04/17/a-silent-front-line-d-c-s-physician-practices.html',
+            },
+            {
+                title: 'Coronavirus Could Force Private Practices To Close Or Sell — Raising Costs',
+                timestamp: 'By KRISTEN HWANG / APRIL 25, 2020',
+                description: 'In a matter of weeks, Dr. William Goral, a private practice ear, nose and throat specialist in San Bernardino County, will be out of business. His small, solo clinic, which has served patients throughout the Inland Empire for 30 years, postponed about 80% of patient visits due to coronavirus restrictions. That’s not enough revenue to pay rent, utilities or staff. ',
+                href: 'https://www.capradio.org/articles/2020/04/25/coronavirus-could-force-private-practices-to-close-or-sell-raising-costs/',
+            },
+            {
+                title: 'Coronavirus threatens the future of private doctors',
+                timestamp: 'By KATIE JICKLING / APRIL 6, 2020',
+                description: 'Dr. Michael Lyons used to count on a steady 70 patients a day at the White River Family Practice that he runs with four other doctors. No longer. Even as hospitals prepare to treat a surge of people with coronavirus, patients avoiding routine care have left small independent practices with empty waiting rooms and a dwindling flow of cash. At a low point on March 27, practitioners at Lyons’ office in White River Junction saw just eight patients. ',
+                href: 'https://vtdigger.org/2020/04/06/covid-19-threatens-the-future-of-private-doctors/',
+            },
+            {
+                title: 'Patients have positive telehealth experiences – but things could be better',
+                timestamp: 'By KAT JERCICH / JULY 13, 2020',
+                description: 'A recent survey found that three-quarters of patients said they were very or completely satisfied with the virtual care they\'d received, but many left the visit without understanding the next steps.',
+                href: 'https://www.healthcareitnews.com/news/patients-have-positive-telehealth-experiences-things-could-be-better',
+            },
+        ];
+
+    .our-blog
+        .content-container
+            article.content
+                +blogArticles(articles)
+            article.feed
+                a(class="twitter-timeline", href="https://twitter.com/DiyaHealth?ref_src=twsrc%5Etfw") Tweets by DiyaHealth 
+                    script(async=true, src="https://platform.twitter.com/widgets.js", charset="utf-8")
+    article(id="contact-us")
+        +contactUs(organizationSizeOptions)
+    
+    include ../shared/map-app.pug

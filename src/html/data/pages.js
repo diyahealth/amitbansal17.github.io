@@ -35,7 +35,21 @@ const pages = {
         url: "./contact-us",
         name: "Contact Us",
         title: "Contact Us - Diya Health",
-        description: "Contact with DiyaHealth!",
+        description: "Contact with Diya Health!",
+    },
+    ourBlog: {
+        fileName: "blog",
+        url: "./blog",
+        name: "Our Blog",
+        title: "Our Blog - Diya Health",
+        description: "Get news about Diya Health products and updates",
+    },
+    newsAndResources: {
+        fileName: "news-and-resources",
+        url: "./news-and-resources",
+        name: "News And Resources",
+        title: "News And Resources - Diya Health",
+        description: "Get news articles and resources that are helpful to doctors and patients by DiyaHealth",
     },
     privacyPolicy: {
         fileName: "privacy-policy",

@@ -44,11 +44,17 @@ const buildAboutUsDropdown = () => {
     const titleUrlItems = [
         { title: 'Our Mission', url: `${aboutUsUrl}#mission`},
         { title: 'Our History', url: `${aboutUsUrl}#history`},
+        { title: 'Our Team', url: `${aboutUsUrl}#team`},
         { title: 'Partnerships', url: `${aboutUsUrl}#partnerships `},
         { title: 'Careers', url: `${aboutUsUrl}#careers `},
     ];
 
     return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
+}
+
+const buildBlogDropdown = () => {
+    const { ourBlog, newsAndResources } = pages;
+    return [pageToLink(ourBlog), pageToLink(newsAndResources)];
 }
 
 let navigationLinks = [];
@@ -68,6 +74,10 @@ const buildNavigationLinks = (mode) => {
         {
             ...pageToLink(pages.aboutUs, null, postfix),
             dropdown: buildAboutUsDropdown(postfix),
+        },
+        {
+            ...pageToLink(pages.ourBlog, null, postfix),
+            dropdown: buildBlogDropdown(),
         }
     );
 }

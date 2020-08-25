@@ -3,6 +3,7 @@ import { CarouselManager } from "./scripts/CarouselManager";
 import { ContactUsForm } from "./scripts/ContactUsForm";
 import { initGoogleMap } from "./scripts/GoogleMap";
 import { LayoutManager } from "./scripts/LayoutManager";
+import { prepareTwitterFeed } from "./scripts/PrepareTwitterFeed";
 import { toAnchor, ToAnchor } from "./scripts/toAnchor";
 
 import "./styles/main.scss";
@@ -27,6 +28,7 @@ interface DiyaHealthWebSite {
     };
     carousel: CarouselManager;
     toAnchor: ToAnchor;
+    prepareTwitterFeed: (id: string) => void;
 }
 
 const layout = new LayoutManager();
@@ -44,5 +46,6 @@ window.diya = {
     map: {
         init: initGoogleMap,
     },
+    prepareTwitterFeed,
     toAnchor,
 };
