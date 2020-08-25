@@ -10,9 +10,10 @@ include ../shared/partners.pug
 block content
     -
         const missions = [
-            'To bridge the communication gap between patients and doctors.',
-            'To reduce the incidence of medical errors and associated costs.',
-            'To democratise access to healthcare worldwide.',
+            'To bridge the communication gap between doctors, patients, and families.',
+            'To prevent medical errors',
+            'To reduce healthcare costs.',
+            ['To ', { text: 'put high quality ', variant: 'italic'}, 'medical care ', { text: 'within reach ', variant: 'italic'}, 'of all persons worldwide, rich or poor, in cities or remote villages.']
         ];
 
         const links = [
@@ -36,11 +37,6 @@ block content
                 text: 'Amit is an experienced software engineer who has led large organizations that develop and deploy SaaS products. His record of achievements includes innovations, expansion, and profitability. As CEO, Amit serves as the company’s lead communicatory, fundraiser, and talent recruiter. Amit directs the company’s efforts to achieve a clear vision of healthcare system improvement.',
                 image: require('../../images/team/amit.png'),
                 itemClass: 'primary-background-content',
-            },
-            {
-                name: 'Sangeeta Marwaha, M.D., Chief Medical Officer',
-                text: 'Dr. Marwaha is a physician with 20+ years of clinical dermatology experience in both private practice and multi-specialty medical group settings. She has extensive expertise in the medical technology sector, including EMR and tele-health, data science research and medical group operational efficiency. As CMO, Dr. Marwaha builds and leads the Medical Advisory Board, oversees media awareness and healthcare outreach, provides guidance on product development, and supports fundraising efforts.',
-                image: require('../../images/team/sangeeta.jpg'),
             },
             {
                 name: 'Roman Polunin, Chief Technology Officer',
@@ -72,9 +68,8 @@ block content
             +setContent('secondaryLeft')
                 img(src=require("../../images/about-us/diya-health-on-computer.jpg"))
             +setContent('secondaryRight')
-                span.text.
-                    We use advanced software algorithms and data science to enable doctors, patients and families to improve health outcomes. Our software-as-a-service digital health platform focuses on actionable data science to empower doctors and patients.
-
+                i.text.
+                    Using advanced algorithms, data science, and artificial-intelligence capability, we have developed a product that was inconceivable only a few years ago.  It is a software-as-a-service digital platform for use as a personal health diary.  It receives, stores, and updates all of a patient's medical information, making it available to anyone the patient wishes — doctors, family members, and caregivers.  It facilitates telehealth as well as communication among a patient's health providers.  It is easy to use in any language.  It improves health outcomes.
     article.primary-background-content
         .default-content-block.centered-article-container.hth-share
             .content
@@ -93,16 +88,20 @@ block content
             +setContent('main')
                 h4.text.title What's in the name?
             +setContent('secondaryLeft')
+                span.text.
+                    Diya is a word of Arabic origin that means "radiance."  It has been adopted by South-Asian culture as a name for a primitive lamp — a small handmade clay bowl that, with a bit of oil and a wick, creates light.  It symbolizes optimism and prosperity.  It lights the dark and gives a sense of calm.
+                br
                 span.text
-                    span In selecting our name, we drew inspiration from a sentence in the Saint Francis prayer, 
-                    i “May we bring light where there is darkness.”
-                    br
-                    span There is an immense amount of information darkness when it comes to our healthcare - the doctors, the patients, and the families are often in the dark despite our best efforts otherwise. 
-                    br
-                    span.
-                        Ḍiyā is a word of Arabic origin and it means radiance.
-                        It’s been adopted by South-Asain culture as a name for a primitive lamp, — a small handmade bowl made out of clay that,
-                        with a bit of oil and a wick, creates light. Lifesaving medical information delivered on a smart-device is still just a diya to us.
+                    span In selecting our name, we drew inspiration from a sentence in the 
+                    i prayer of St. Francis of Assisi: 
+                    span "Where there is darkness, may I bring light."  When it comes to our health care, there is an enormous amount of darkness — information darkness. 
+                    i Doctors, patients, and families often are in the dark. 
+                    span Our product offers lifesaving information delivered on a 
+                    i computer or smart phone. 
+                    span It is a 
+                    i unique and sophisticated 
+                    span gift of modern technology.  Yet to us it also is a simple gift — it lights the dark.
+
             +setContent('secondaryRight')
                 img(src=require("../../images/index/diya.jpg"), alt="Diya")
     article.anchor(id="team")
@@ -133,7 +132,6 @@ block content
             .content
                 h4.text.title.no-margin Our Partners
         +partners()
-    
     article.anchor.primary-background-content(id="careers")
         .default-content-block.centered-article-container
             .content.positions

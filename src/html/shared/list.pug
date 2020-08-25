@@ -1,7 +1,19 @@
+mixin renderItem(item, additionalClass)
+    if (typeof item === 'object')
+        if (item.text)
+            span.item-text(class=item.variant, class=additionalClass)=item.text
+    else if (typeof item === 'string')
+        span.item-text(class=additionalClass)=item
+
 mixin list(items, classes)
     ul.list-container(class=classes && classes.container)
         each item in items
             li.list-item(class=classes && classes.item)
                 .icon-container(class=classes && classes.icon)
                     include ../../images/icons/check-circle-icon.svg
-                span.item-text(class=classes && classes.itemText)=item
+                span
+                    if (Array.isArray(item))
+                        each itemPart in item
+                            +renderItem(itemPart, classes && classes.itemText)
+                    else
+                        +renderItem(item, classes && classes.itemText)

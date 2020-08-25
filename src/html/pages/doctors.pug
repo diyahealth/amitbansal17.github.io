@@ -15,7 +15,6 @@ block content
     - const benefitsCarouselId = 'doctors-benefits'
     -
         const aboutApp = {
-            title : 'About DiyaMD',
             text: 'DiyaMD is a budding telehealth platform that focuses on high efficiency, high throughput, and billable patient care services. Modeled after a physician\'s customary workflow, DiyaMD helps physicians optimize their time to improve patient care and increase revenue. This novel technology allows physicians to effortlessly access their patient’s health information, track their health data, administer billable e-services, and conduct remote patient monitoring. Moreover, DiyaMD provides clinicians with reports and alerts, the capability for mass information dissemination to select or all patients, patient-doctor relationship support, and patient population management tools. With DiyaMD, physicians can improve their quality of care, establish their brand, and thrive in their practice.',
         };
         const timelineData = [
@@ -33,16 +32,11 @@ block content
             }, 8000);
         });
     
-    article.carousel-with-tiles.primary-background-content
+    article.carousel-with-tile.primary-background-content
         +textImageCarousel(doctorsBenefits, benefitsCarouselId, 'alternative small')
-            .multiple-tiles-container
+            .single-tile-container
                 +infoTile('Doctors Sign-In', 'alternative')
                     +signInButton('https://diyamd.org/auth/sign-in')
-                +infoTile('Any Questions?', 'alternative')
-                    button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
-                        span.label
-                            include ../../images/icons/comment-question-outline-icon.svg
-                            span Contact Us
     article.primary-background-content
         +aboutApp(aboutApp, false, { title: 'playfair'})
             include ../../images/icons/diyamd-logo.svg
