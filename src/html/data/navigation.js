@@ -33,8 +33,6 @@ const buildDropdownFromPageWithSubpages = (pageKey, subheader, postfix) => {
         const page = pages[pageKey];
         return page && pageKey !== subheader ? pageToLink(page, null, postfix) : undefined;
     })].filter(Boolean);
-
-    console.log(links);
     return links;
 }
 
