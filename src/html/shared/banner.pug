@@ -1,4 +1,4 @@
-mixin banner(text, imageSrc, classes)
+mixin banner(text, imageSrc, classes, link)
     .banner-container(class=classes && classes.root)
         .background-image(style=`background-image: url("${imageSrc}")`, class=classes && classes.bgContainer)
             .banner-content(class=classes && classes.content)
@@ -12,4 +12,8 @@ mixin banner(text, imageSrc, classes)
                                     br
                         else
                             span=text
+                        if link != null
+                            a.item.more-link(href=link, target="_blank")
+                                span Read More
+                                include ../../images/icons/forward-arrow-icon.svg
 

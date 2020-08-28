@@ -17,13 +17,8 @@
             font-weight: 700;
             font-stretch: normal;
             font-style: normal;
-            line-height: 1.43;
             letter-spacing: normal;
             color: #2c2d2d;
-
-            &:only-child {
-                line-height: 1.43;
-            }
 
             @media screen and (max-width: $break-tablet) {
                 font-size: 38px;

@@ -4,7 +4,6 @@ $content-text-padding: (70px / $font-size) * 1rem;
     .block-title {
         margin: 0 0 40px 0;
         font-size: 30px;
-        text-transform: uppercase;
         font-weight: normal;
 
         @media screen and (max-width: $break-tablet) {

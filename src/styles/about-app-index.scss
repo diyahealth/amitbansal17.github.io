@@ -95,11 +95,9 @@
         .info {
             margin: 12px 0;
             font-size: 26px;
-            line-height: 1.17;
             font-weight: 500;
             @media screen and (max-width: $break-tablet) {
                 font-size: 22px;
-                line-height: 1.235;
             }
 
             @media screen and (max-width: $break-mobile) {
@@ -114,12 +112,10 @@
 
             font-weight: 700;
 
-            text-transform: uppercase;
             font-size: 30px;
 
             @media screen and (max-width: $break-tablet) {
                 font-size: 26px;
-                line-height: 1.1;
             }
 
             @media screen and (max-width: $break-mobile) {

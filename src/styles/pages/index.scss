@@ -61,7 +61,6 @@
   padding: 0.5em 1em;
   text-align: center;
   font-size: 40px;
-  line-height: 1.2;
   margin: auto;
   max-width: 900px;
   font-style: italic;
@@ -125,12 +124,10 @@
     .quote {
         font-style: italic;
         font-size: 26px;
-        line-height: 1.69;
         margin: 0;
 
         @media screen and (max-width: $break-tablet) {
             font-size: 18px;
-            line-height: 1.78;
         }
     }
 

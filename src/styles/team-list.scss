@@ -76,9 +76,8 @@
                 }
             }
 
-            &>.description {
+            & > .description {
                 font-size: 22px;
-                line-height: 1.39;
 
                 @media screen and (max-width: $break-tablet) {
                     font-size: 20px;

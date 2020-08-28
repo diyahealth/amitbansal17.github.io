@@ -1,7 +1,7 @@
 html {
     color: $text-color;
     font-size: $font-size;
-    line-height: 1;
+    line-height: 1.4;
 
     @media screen and (max-width: $break-tablet) {
         font-size: $font-size-tablet;

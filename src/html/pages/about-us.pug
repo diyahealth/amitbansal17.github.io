@@ -72,7 +72,7 @@ block content
         .default-content-block.centered-article-container
             .content
                 h4.text.title Our Mission
-                +list(missions, { itemText: 'big', icon: 'big' })   
+                +list(missions, { itemText: 'big', icon: 'big' })
     article
         +twoColumnArticle({ secondaryLeft: 'image-container' })
             +setContent('secondaryLeft')
@@ -80,16 +80,6 @@ block content
             +setContent('secondaryRight')
                 i.text.
                     Using advanced algorithms, data science, and artificial-intelligence capability, we have developed a product that was inconceivable only a few years ago.  It is a software-as-a-service digital platform for use as a personal health diary.  It receives, stores, and updates all of a patient's medical information, making it available to anyone the patient wishes — doctors, family members, and caregivers.  It facilitates telehealth as well as communication among a patient's health providers.  It is easy to use in any language.  It improves health outcomes.
-    article.primary-background-content
-        .default-content-block.centered-article-container.hth-share
-            .content
-                h4.text.title Share With Others
-                span.text.
-                    If you believe in our mission or know someone else who may have the desire, knowledge or expertise, please help by increasing awareness of Diya Health. Share our story with your friends. Together we can make the future brighter for those in need and give everyone a fair chance for good health.
-                .input-group
-                    each item in links
-                        a(href=item.href, target="_blank")
-                            img(src=item.icon)
 
     article.anchor(id="history")
         +articleTitle('Our History', { divider: 'primary' }, true)
@@ -156,7 +146,17 @@ block content
                 i.text
                     span If you are interested in applying for any available position, please submit inqueries to 
                     a(href="mailto:info@diyahealth.org") info@diyahealth.org
-                    
-                        
-    article(id="contact-us")
+
+    article
+        .default-content-block.centered-article-container.hth-share
+            .content
+                h4.text.title Share With Others
+                span.text.
+                    If you believe in our mission or know someone else who may have the desire, knowledge or expertise, please help by increasing awareness of Diya Health. Share our story with your friends. Together we can make the future brighter for those in need and give everyone a fair chance for good health.
+                .input-group
+                    each item in links
+                        a(href=item.href, target="_blank")
+                            img(src=item.icon)
+
+    article(id="contact-us").primary-background-content
         +contactUs(organizationSizeOptions)
