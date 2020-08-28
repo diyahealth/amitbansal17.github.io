@@ -32,7 +32,6 @@
 
                 & .text {
                     font-size: 22px;
-                    line-height: 1.235;
 
                     @media screen and (max-width: $break-mobile) {
                         font-size: 18px;
@@ -51,7 +50,6 @@
     
                         @media screen and (max-width: $break-tablet) {
                             font-size: 26px;
-                            line-height: 1.434;
                         }
         
                         @media screen and (max-width: $break-mobile) {

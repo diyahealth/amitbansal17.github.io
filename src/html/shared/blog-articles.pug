@@ -7,7 +7,11 @@ mixin blogArticles(articles)
                         .item.title(class=!article.timestamp ? 'no-timestamp' : '')=article.title
                     if (article.timestamp)
                         .item.timestamp=article.timestamp
-                    .item.description=article.description
-                    a.item.more-link(href=article.href, target="_blank")
-                        span Read More
-                        include ../../images/icons/forward-arrow-icon.svg
+                    .container
+                        if (article.image)
+                            img.image(src=article.image)
+                        .text
+                            .item.description=article.description
+                            a.item.more-link(href=article.href, target="_blank")
+                                span Read More
+                                include ../../images/icons/forward-arrow-icon.svg

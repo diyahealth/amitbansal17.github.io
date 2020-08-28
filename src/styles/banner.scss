@@ -16,6 +16,12 @@
                 text-align: right;
             }
         }
+
+        .more-link {
+            display: block;
+            font-size: 0.5em;
+            margin-top: 0.7em;
+        }
     }
 
     .background-image {
@@ -237,7 +243,6 @@
 
                 font-size: 52px;
                 font-weight: 900;
-                line-height: 58px;
 
                 margin: 160px 0 140px;
 
@@ -341,8 +346,6 @@
 
                     @media screen and (max-width: $break-mobile) {
                         font-size: 40px;
-                        line-height: 40px;
-
                         margin: 40px auto 60px;
                     }
 
@@ -374,7 +377,6 @@
                         font-size: 38px;
 
                         margin: 30px auto 60px;
-                        line-height: 42px;
                     }
                 }
 

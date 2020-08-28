@@ -43,7 +43,6 @@
 
             @media screen and (max-width: $break-mobile) {
                 font-size: 20px;
-                line-height: 1.2;
                 padding: 10px 30px;
             }
         }
@@ -63,7 +62,6 @@
         @media screen and (max-width: $break-tablet) {
             bottom: 30px;
             font-size: 30px;
-            line-height: 38px;
             padding: 20px 75px;
         }
 
@@ -71,7 +69,6 @@
             bottom: 0;
             padding: 20px;
             font-size: 20px;
-            line-height: 1.5;
             text-align: center;
             width: 100%;
         }

@@ -11,9 +11,9 @@ mixin list(items, classes)
             li.list-item(class=classes && classes.item)
                 .icon-container(class=classes && classes.icon)
                     include ../../images/icons/check-circle-icon.svg
-                span
-                    if (Array.isArray(item))
+                if (Array.isArray(item))
+                    span
                         each itemPart in item
                             +renderItem(itemPart, classes && classes.itemText)
-                    else
-                        +renderItem(item, classes && classes.itemText)
+                else
+                    +renderItem(item, classes && classes.itemText)

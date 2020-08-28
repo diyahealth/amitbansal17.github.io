@@ -1,6 +1,6 @@
 include ../shared/banner.pug
 
 mixin dataContentBanner(data, rootId)
-    +banner(data.text, data.image, data.classes)
+    +banner(data.text, data.image, data.classes, data.link)
         if rootId
             .dev-id #{rootId}-banner
