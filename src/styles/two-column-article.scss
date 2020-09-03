@@ -144,6 +144,10 @@
                     color: $primary-color;
                     margin-top: 32px;
                     align-self: baseline;
+
+                    & > svg {
+                        margin-left: 4px;
+                    }
                 }
 
                 &.covid-info {

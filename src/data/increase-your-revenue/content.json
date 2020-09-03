@@ -9,6 +9,7 @@
             "text": "increase-revenue right"
         },
         "image": "revenue-banner.jpg",
+        "link": "https://preview.hs-sites.com/_hcms/preview/content/32121112736?portalId=7621573&_preview=true&cacheBust=0&preview_key=TpBqhNUw&from_buffer=false",
         "type": "banner"
     },
     {
@@ -17,10 +18,10 @@
     },
     {
         "text": "Efficiently connect with other providers, billing staff, and insurance companies to maintain accurate, timely charges and reimbursements.",
-        "image": "emergency-contacts-on-computer.jpg"
+        "image": "emergency-contacts-on-computer.png"
     },
     {
         "text": "Expand your patient outreach with COVID-19 tracking capabilities, virtual check-ins, online evaluations, and more.",
-        "image": "covid-tracker-page-full.jpg"
+        "image": "covid-tracker-page-full.png"
     }
 ]

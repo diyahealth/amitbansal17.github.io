@@ -13,15 +13,17 @@
     },
     {
         "text": "Instantly communicate with other physicians, office staff, patients, and families. No more fumbling for phone numbers or email addresses.",
-        "image": "emergency-contacts-on-computer.jpg"
+        "image": "emergency-contacts-on-computer.png"
     },
     {
         "text": "Effortlessly analyze patients' progress with DiyaMD's automatically-generated reports.",
-        "image": "vitals-on-screen.jpg"
+        "image": "vitals-on-screen.png"
     },
     {
         "text": "Manage actual or potential COVID-19 patients using DiyaMD's symptom-tracking capabilities.",
-        "image": "сovid-tracker-page-full.jpg"
+        "image": "сovid-tracker-page-full.png",
+        "link": "https://preview.hs-sites.com/_hcms/preview/content/34240559792?portalId=7621573&_preview=true&cacheBust=0&preview_key=REwzlHJY&from_buffer=false",
+        "linkText": "More Info"
     },
     {
         "text": "Receive alerts and reports when patients update their information.",

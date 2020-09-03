@@ -29,7 +29,12 @@ mixin textContent(data, layoutContentType)
                     each text, index in data.list
                         li.text.big=text
             if data.link
-                a.text.big.link(href=data.link, rel="noopener nofollow", target="_blank") Watch YouTube video
+                a.text.big.link(href=data.link, rel="noopener nofollow", target="_blank")
+                    if (data.linkText)
+                        span=data.linkText
+                    else
+                        span Watch YouTube video
+                    include ../../images/icons/forward-arrow-icon.svg
 
 mixin imageContent(data, layoutContentType)
     if data.image

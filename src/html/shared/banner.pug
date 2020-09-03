@@ -13,7 +13,8 @@ mixin banner(text, imageSrc, classes, link)
                         else
                             span=text
                         if link != null
-                            a.item.more-link(href=link, target="_blank")
-                                span Read More
-                                include ../../images/icons/forward-arrow-icon.svg
+                            .more-link-container
+                                a.more-link(href=link, target="_blank")
+                                    span Read More
+                                    include ../../images/icons/forward-arrow-icon.svg
 

@@ -17,10 +17,20 @@
             }
         }
 
-        .more-link {
+        .more-link-container {
             display: block;
-            font-size: 0.5em;
-            margin-top: 0.7em;
+            line-height: 0.3;
+            margin-top: .2em;
+            
+            & > .more-link {
+                display: inline-flex;
+                align-items: center;
+                font-size: .5em;
+
+                & > svg {
+                    margin-left: 4px;
+                }
+            }
         }
     }
 
