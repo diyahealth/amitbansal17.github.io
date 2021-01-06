@@ -48,7 +48,7 @@ block content
             +articleTitle('DiyaMD Capabilities', { title: 'primary', divider: 'primary' }, true, true)
             .capabilities-container
                 .capabilities
-                    include ../../images/capabilities/diyamd-capabilities.svg               
+                    include ../../images/capabilities/diyamd-capabilities.svg
     article
         +covidInfo(covidInfo.doctors)
             img(src=require("../../images/doctors-benefits/covid-19-synopsis.jpg"))
@@ -56,5 +56,3 @@ block content
         +reviews(reviews.diyaMd, 'alternative')
     article.contact-us-background-content(id="contact-us")
         +contactUs(organizationSizeOptions)
-
-    include ../shared/map-app.pug

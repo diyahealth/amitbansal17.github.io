@@ -25,6 +25,7 @@ html(lang="en")
         block variables
         block content
         include footer.pug
+        script(defer, src="./js/app.js")
         block script
 
         script(async, src=`https://www.googletagmanager.com/gtag/js?id=${keys.google.analytics}`)

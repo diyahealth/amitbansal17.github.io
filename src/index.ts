@@ -49,3 +49,21 @@ window.diya = {
     prepareTwitterFeed,
     toAnchor,
 };
+
+function appendReturnUrl() {
+    debugger
+    const link = document.getElementById("sign-in");
+    if (link != null) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const returnUrl = urlParams.get("returnUrl");
+        if (returnUrl == null || returnUrl === '') {
+            return;
+        }
+        const currentUrl = link.getAttribute("href");
+        const newUrl = currentUrl + '?returnUrl=' + returnUrl;
+
+        link.setAttribute("href", newUrl);
+    }
+    window.removeEventListener("DOMContentLoaded", appendReturnUrl);
+}
+window.addEventListener('DOMContentLoaded',appendReturnUrl)
