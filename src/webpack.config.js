@@ -134,6 +134,10 @@ module.exports = (env, argv) => ({
             from: "./images/patients-and-families",
             to: "./images/patients-and-families",
         },
+        {
+            from: "./posts",
+            to: "./posts",
+        }
         ]),
         new ExtractTextPlugin("./css/styles.css"),
         new CssRewritePlugin({
