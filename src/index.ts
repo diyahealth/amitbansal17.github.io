@@ -5,6 +5,7 @@ import { initGoogleMap } from "./scripts/GoogleMap";
 import { LayoutManager } from "./scripts/LayoutManager";
 import { prepareTwitterFeed } from "./scripts/PrepareTwitterFeed";
 import { toAnchor, ToAnchor } from "./scripts/toAnchor";
+import { toggleClass, ToggleClass } from "./scripts/toggleClass";
 
 import "./styles/main.scss";
 import "./typings";
@@ -28,6 +29,7 @@ interface DiyaHealthWebSite {
     };
     carousel: CarouselManager;
     toAnchor: ToAnchor;
+    toggleClass: ToggleClass;
     prepareTwitterFeed: (id: string) => void;
 }
 
@@ -48,10 +50,10 @@ window.diya = {
     },
     prepareTwitterFeed,
     toAnchor,
+    toggleClass,
 };
 
 function appendReturnUrl() {
-    debugger
     const link = document.getElementById("sign-in");
     if (link != null) {
         const urlParams = new URLSearchParams(window.location.search);
