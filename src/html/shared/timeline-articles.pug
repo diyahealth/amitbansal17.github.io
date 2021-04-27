@@ -1,11 +1,23 @@
-mixin timelineArticles(data)
+mixin timelineArticles(data, variant, classes)
     .timeline-articles-container
         each item, index in data
             .article
-                if (item.src)
+                if variant === 'oneColumn'
+                    span.circle(class=classes && classes.circle)
+                        if (item.circleContent)
+                            span=item.circleContent
+                if (item.src && variant !== 'oneColumn')
                     .part.image-container
                         img(src=item.src)
                 .part.text-container
                     if (item.title)
-                        h4.text.title=item.title
+                        .title-container
+                            h4.text.title=item.title
+                            if variant !== 'oneColumn'
+                                span.circle(class=classes && classes.circle)
+                                    if (item.circleContent)
+                                        span=item.circleContent
+                        
                     span.text=item.text
+                    if (variant === 'oneColumn')
+                        img(src=item.src)

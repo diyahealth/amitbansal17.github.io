@@ -1,0 +1,19 @@
+include ./two-column-article.pug
+include ./list.pug
+
+
+mixin securityInfo()
+    -
+        const security = [
+            'We integrate with e-mail services; no user names or passwords are stored on our system.',
+            'We store health information on the most secure cloud systems available: Microsoft Azure and Amazon Web Services.',
+            'We use an opt-in model: Records owned by users are never shared unless done so explicitly by the user.',
+            'We do not sell data to pharmaceutical companies, insurers, employers, or other businesses.',
+            'Our employees do not have access to patients’ records — not even our CEO.',
+            'We maintain a complete audit trail of all information access.',
+        ];
+    +twoColumnArticle({ secondaryLeft: 'image-container' })
+        +setContent('secondaryLeft')
+            img(src=require("../../images/index/PHi.jpg"))
+        +setContent('secondaryRight')
+            +list(security, { container: 'no-padding'})

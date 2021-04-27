@@ -6,18 +6,30 @@ block variables
 mixin setAboutAppContent(key)
     - aboutAppBlocks[key] = this.block
 
+mixin mainInfo(data)
+    .main-info
+        h5.title(class=classes && classes.title)=data.title
+        if aboutAppBlocks.info
+            p.info(class=classes && classes.text)
+                - aboutAppBlocks.info()
+mixin logo(data)
+    .logo-container
+        block
+        +linkButton(data.link)
+
 mixin aboutAppIndex(data)
     .default-content-block.about-app-content-container(class=classes && classes.container)
-        .about-app-index-content
-            .image-container
-                img(src=data.image)
-            .main-info
-                h5.title(class=classes && classes.title)=data.title
-                if aboutAppBlocks.info
-                    p.info(class=classes && classes.text)
-                        - aboutAppBlocks.info()
-            .logo-container
-                block
-                +linkButton(data.link)
+        - const contentClass = data.main === 'right' ? 'reversed' : '';
+        .about-app-index-content(class=contentClass)
+            if data.main === 'left'
+                +mainInfo(data)
+            else
+                +logo(data)
+                    block
+            if data.main === 'right'
+                +mainInfo(data)
+            else
+                +logo(data)
+                    block
             - aboutAppBlocks = {}
                 

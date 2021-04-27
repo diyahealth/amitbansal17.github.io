@@ -50,6 +50,21 @@ const buildAboutUsDropdown = () => {
     return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
 }
 
+const buildEmployersDropdown = () => {
+    const employersUrl = pages.employers.url;
+
+    const titleUrlItems = [
+        { title: 'DiyaHR', variant: 'subheader', url: employersUrl},
+        { title: 'How it Works', url: `${employersUrl}#how-it-works`},
+        { title: 'Prevent Rising Costs', url: `${employersUrl}#prevent-rising-costs`},
+        { title: 'Enhance Employee Well-Being', url: `${employersUrl}#employee-well-being`},
+        { title: 'Drive Strategic Change', url: `${employersUrl}#strategic-change`},
+        { title: 'Security Features', url: `${employersUrl}#security-features`},
+    ];
+
+    return titleUrlItems.map(item => buildPage(item.title, item.url, item.variant));
+}
+
 const buildBlogDropdown = () => {
     const { ourBlog, newsAndResources } = pages;
     return [pageToLink(ourBlog), pageToLink(newsAndResources)];
@@ -61,6 +76,10 @@ const buildNavigationLinks = (mode) => {
     const postfix = mode === 'development' ? '.html' : '';
     navigationLinks.length = 0;
     navigationLinks.push(
+        {
+            ...pageToLink(pages.employers, null, postfix),
+            dropdown: buildEmployersDropdown(),
+        },
         {
             ...pageToLink(pages.doctors, null, postfix),
             dropdown: buildDropdownFromPageWithSubpages('doctors', { name: 'DiyaMD', url: pages.doctors.url }, postfix),

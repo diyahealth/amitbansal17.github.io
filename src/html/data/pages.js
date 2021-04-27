@@ -16,6 +16,13 @@ const pages = {
         title: "About Us - Diya Health",
         description: "Learn about the Diya Health mission and members",
     },
+    employers: {
+        fileName: "employers",
+        url: "./employers",
+        name: "Employers",
+        title: "Employers - Diya Health",
+        description: "How employers can benefit from using DiyaHealth platform",
+    },
     doctors: {
         fileName: "doctors",
         url: "./doctors",
