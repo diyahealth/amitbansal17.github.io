@@ -82,6 +82,27 @@
                 @media screen and (max-width: $break-tablet) {
                     font-size: 20px;
                 }
+
+                & .more-points {
+                    color: $primary-color;
+                    cursor: pointer;
+                }
+
+                & .full-description {
+                    display: none;
+                }
+
+                &.full {
+                    & .more-points {
+                        display: none;
+                    }
+                    & .partial-description {
+                        display: none;
+                    }
+                    & .full-description {
+                        display: inline;
+                    }
+                }
             }
         }
     }
