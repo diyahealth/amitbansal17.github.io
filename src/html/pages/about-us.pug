@@ -50,31 +50,38 @@ block content
                 itemClass: 'primary-background-content',
             },
             {
+                name: 'Charlie Barr, MD, MPH, Chief Medical Officer',
+                text: 'Dr. Barr is a board-certified internal medicine physician with 20 years of experience in clinical practice, teaching, and research. He has played key roles in promoting innovative programs within the pharmaceutical and startup industries. As Chief Medical Officer, Dr. Barr plays an essential role in building Diya Health\'s relationships and refining the product',
+                fullText: 'Dr. Barr\'s breadth of experience spans the academic and community settings with an interest in electronic health records, clinical quality improvement, clinical guidelines, and telemedicine. He has 20 years of experience in pharmaceutical drug development (Pfizer, Roche and Genentech) with leadership roles in clinical development and medical affairs, clinical operations, biostatistics, health economics, and outcomes research. He joined a startup company in disease management, and has been an intrapreunerial founder of groups in medical informatics, data science, patient registries and real world data, evidence science, strategic innovation, and external partnerships.',
+                image: require('../../images/team/charlie.png'),
+            },
+            {
                 name: 'Danielle Kaiser, Director of Operations',
                 text: 'Danielle is a Master of Health Administration student at USC, where she has played a key role in health-system-level data analytics and research study development. As Director of Operations, Danielle is responsible for the execution of strategic goals. Danielle oversees daily operations and business improvement initiatives.',
-                image: require('../../images/team/danielle.jpg'),  
+                image: require('../../images/team/danielle.jpg'),
+                itemClass: 'primary-background-content',
             },
             {
                 name: 'Wally Finley, Head of IT & Compliance',
                 text: 'Wally Finley has over 25 years of experience managing and optimizing private and public cloud infrastructure in the medical, internet-facing, university, and big data industries. As Head of IT & Compliance, Wally oversees regulatory and contractual compliance, handling of PHI data, cloud architecture, cost modeling, and day-to-day IT operations. Wally has a Masters of Computer Science from Vanderbilt University.',
                 image: require('../../images/team/wally.png'),  
-                itemClass: 'primary-background-content',
             },
             {
                 name: 'Hoan Nguyen, Director of Strategy',
                 text: 'Hoan is a doctoral candidate at the University of Southern California, who has an extensive research background that addresses information communication technologies and technology entrepreneurship. Along with her Ph.D., Hoan is pursuing a graduate degree in Technology Commercialization at USC’s Marshall School of Business. As the Director of Strategy, Hoan researches and plans Diya Health’s long-term strategic goals. Hoan leads the company’s growth and future development.',
                 image: require('../../images/team/hoan.jpg'),
+                itemClass: 'primary-background-content',
             },
             {
                 name: 'Alex Tolkachev, Software Engineer',
                 text: 'Alex is an experienced software engineer, who has worked on plenty of projects in different business domains. As an engineer, Alex is responsible for API and infrastructure development, continuous integration, building data processing tools, code review, and technical requirements validation.',
                 image: require('../../images/team/alex.jpg'),
-                itemClass: 'primary-background-content',
             },
             {
                 name: 'Nikita Posled, Software Engineer',
                 text: 'Nikita is a software engineer with a strong technical background. As an engineer, Nikita is in charge of UI / UX development and delivery management of our products. Besides Nikita is working on building fast and robust PWA applications for mobile devices to provide our solutions for any platform.',
                 image: require('../../images/team/nikita.jpg'),
+                itemClass: 'primary-background-content',
             }
         ];
 
@@ -83,7 +90,12 @@ block content
         .default-content-block.centered-article-container
             .content
                 h4.text.title Our Mission
-                +list(missions, { itemText: 'big', icon: 'big' })
+                +twoColumnArticle({ secondaryLeft: 'image-container' })
+                    +setContent('secondaryLeft')
+                        img(src=require("../../images/about-us/diya-health-on-computer.jpg"))
+                    +setContent('secondaryRight')
+                        +list(missions, { itemText: 'big', icon: 'big' })
+               
     article
         +twoColumnArticle({ secondaryLeft: 'image-container' })
             +setContent('secondaryLeft')
@@ -118,7 +130,7 @@ block content
     article.anchor(id="team")
         +articleTitle('Our Team', { divider: 'primary' }, true)
         .team-content-container
-            each member in team
+            each member, index in team
                 div(class=member.itemClass)
                     .team-member
                         .image-container
@@ -126,7 +138,12 @@ block content
                                 img(src=member.image)
                         .info-container
                             h5.person=member.name
-                            p.description=member.text
+                            p.description(id=`${index}-description`)
+                                span(class=member.fullText !== null ? 'partial-description' : undefined)=member.text
+                                if (member.fullText)
+                                    span.more-points(onclick="window.diya.toggleClass('" + index + '-description' + "', 'full')") ...
+                                    span.full-description=member.fullText
+
     article.anchor(id="partnerships")
         +articleTitle('Partnerships', { divider: 'primary' }, true)
     article.primary-background-content

@@ -271,6 +271,26 @@
             background-image:url('../images/patients-and-families/24-7-connection.jpg');
             background-position-y: 30%;
         }
+
+        &.head-bg-employee-engagement {
+            background-image:url('../images/employers/employee-engagement.jpg');
+            background-position-y: 100%;
+        }
+
+        &.head-bg-employee-conversation {
+            background-image:url('../images/employers/employee-conversation.jpg');
+            background-position-y: 80%;
+        }
+
+        &.head-bg-happy-employees {
+            background-image:url('../images/employers/happy-employees.jpg');
+            background-position-y: 40%;
+        }
+
+        &.head-bg-happy-hr {
+            background-image:url('../images/employers/happy-hr.jpg');
+            background-position-y: 75%;
+        }
     }
 
     .carousel-control {

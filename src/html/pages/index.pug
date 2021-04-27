@@ -8,8 +8,10 @@ include ../shared/partners.pug
 include ../shared/about-app.pug
 include ../shared/article-title.pug
 include ../shared/covid-info.pug
+include ../shared/security-info.pug
 include ../shared/about-app-index.pug
 include ../shared/youtube-video.pug
+include ../shared/list.pug
 
 block head
     meta(name="twitter:card" value="Diya Health Website")
@@ -24,16 +26,25 @@ block content
     - const doctorsUrl = pages.doctors.url;
     - const patientsAndFamiliesUrl = pages.patientsAndFamilies.url;
     -
+        const aboutDiyaHrApp = {
+            title: 'We serve employers',
+            link: { href: pages.employers.url, text: 'Learn about DiyaHR' },
+            image: require("../../images/about-us/doctors.jpg"),
+            main: 'right',
+        };
+    -
         const aboutDiyaMdApp = {
             title: 'We serve doctors',
-            link: { href: pages.doctors.url, text: 'More Info' },
+            link: { href: pages.doctors.url, text: 'Learn about DiyaMD' },
             image: require("../../images/about-us/doctors.jpg"),
+            main: 'left',
         };
     -
         const aboutMyDiyaApp = {
             title: 'We serve patients',
-            link: { href: pages.patientsAndFamilies.url, text: 'More Info' },
+            link: { href: pages.patientsAndFamilies.url, text: 'Learn about myDiya' },
             image: require("../../images/about-us/patients.jpg"),
+            main: 'right',
         };
 
     script.
@@ -58,32 +69,38 @@ block content
                             span Patients & Families
     article
         +partners('small')
-    article.primary-background-content
-        +twoColumnArticle({ secondaryRight: 'video-container' })
-            +setContent('secondaryLeft')
-                span.text.big.
-                    Learn how to start with Diya Health
-            +setContent('secondaryRight')
-                +youtubeVideo('https://www.youtube.com/embed/FDRHgmXYUNQ')
     article
         +articleTitle('Our Products', { divider: 'primary' }, true)
     article.primary-background-content
         +setAboutAppContent('info')
-            span Specifically designed for physicians in private practice, 
-            i DiyaMD 
-            span enables doctors to communicate with single or multiple patients 
-            span through the patients’ 
-            i myDiya
-            span . 
-            i DiyaMD 
-            span enhances telehealth.  Doctors use 
+            i DiyaHR 
+            span.
+                is a digital health, Software-as-a-Service platform that empowers HR to predict and contain rising healthcare costs.
+                Using data-driven insights,
+            i DiyaHR's 
+            span.
+                robust analytics and management tools allow corporate HR departments to reduce spending and enhance employee well-being.
+                As employers increasingly focus on employee experience, 
+            i DiyaHR 
+            span.
+                allows HR departments to foster exceptional change.
+        +aboutAppIndex(aboutDiyaHrApp)
+            include ../../images/icons/diyahr-logo.svg
+    article
+        +setAboutAppContent('info')
             i DiyaMD 
             span.
-                to review and respond to patients’ complaints, monitor patients remotely, note symptom-trends,
-                reconcile medications with in-house EHRs, send alerts, and generate reports of billable services.
+                is a budding health management platform that integrates personal health records with tools for patient engagement.
+                Modeled after a physician's customary workflow, 
+            i DiyaMD 
+            span.
+                seamlessly plugs into any exisiting electronic health record (EHR) system.
+                In addition to bridging the gap between EHRs and patient-reported information,
+                the platform has numerous other unique capabilities, including telehealth, tracking of COVID-19 symptoms, remote patient monitoring,
+                medication safety alerts, and automatic capture of billable services.
         +aboutAppIndex(aboutDiyaMdApp)
             include ../../images/icons/diyamd-logo.svg
-    article
+    article.primary-background-content
         +setAboutAppContent('info')
             span Our personal health records app, 
             i myDiya
@@ -99,5 +116,8 @@ block content
     article
         +covidInfo(covidInfo.index)
             img(src=require("../../images/patients-and-families/covid.jpg"))
+    article
+        +articleTitle('Protecting Your Information is Our Top Priority', { divider: 'primary' }, true)
+        +securityInfo
     article.contact-us-background-content(id="contact-us")
         +contactUs(organizationSizeOptions)

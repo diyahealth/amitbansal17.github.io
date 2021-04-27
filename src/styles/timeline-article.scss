@@ -1,8 +1,54 @@
+@mixin timeline-circle {
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    position: absolute;
+    font-size: 20px;
+    border: 2px solid #0c9fdb;
+    border-radius: 100%;
+    background-color: #fff;
+    left: 5px;
+  }
+
 .timeline-articles-container {
     display: flex;
     flex-direction: column;
     .article {
         display: flex;
+        position: relative;
+
+        & > .circle {
+            @include timeline-circle;
+            z-index: 1;
+            top: 22px;
+
+            @media screen and (max-width: $break-tablet) {
+                top: 18px;
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                top: 15px;
+            }
+            
+            &.big {
+                width: 35px;
+                height: 35px;
+                font-size: 30px;
+
+                top: 18px;
+                left: 0;
+
+                @media screen and (max-width: $break-tablet) {
+                    top: 13px;
+                }
+    
+                @media screen and (max-width: $break-mobile) {
+                    top: 11px;
+                }
+            }
+        }
 
         .part {
             padding: 12px 24px;
@@ -14,6 +60,12 @@
                 position: relative;
                 padding-left: 48px;
 
+                & > img {
+                    max-height: 400px;
+                    object-fit: contain;
+                    @extend .shadow;
+                }
+
                 &::before {
                     left: 16px;
                     top: 0;
@@ -24,20 +76,23 @@
                     background-color: $primary-color;
                 }
 
-                &:not(:last-child) {
-                    &::before {
-                        height: calc(100% + 24px);
-                    }
-                }
+                & .title-container {
+                    & .circle {
+                        @include timeline-circle;
+                        left: 5px;
+                        top: 22px;
 
-                & .text {
-                    font-size: 22px;
+                        @media screen and (max-width: $break-tablet) {
+                            top: 18px;
+                        }
 
-                    @media screen and (max-width: $break-mobile) {
-                        font-size: 18px;
+                        @media screen and (max-width: $break-mobile) {
+                            top: 15px;
+                        }
+
                     }
- 
-                    &.title {
+
+                    & .title {
                         position: relative;
                         width: 100%;
                         font-size: 32px;
@@ -55,24 +110,20 @@
                         @media screen and (max-width: $break-mobile) {
                             font-size: 22px;
                         }
+                    }
+                }
 
-                        &::before {
-                            width: 25px;
-                            height: 25px;
-                            content: "";
-                            position: absolute;
-                            border: 2px solid #0c9fdb;
-                            border-radius: 100%;
-                            background-color: #fff;
-                            left: -45px;
-                            top: 15%;
+                &:not(:last-child) {
+                    &::before {
+                        height: calc(100% + 24px);
+                    }
+                }
 
-                            @media screen and (max-width: $break-mobile) {
-                                top: 5%;
-                            }
-    
-                        }
-    
+                & .text {
+                    font-size: 22px;
+
+                    @media screen and (max-width: $break-mobile) {
+                        font-size: 18px;
                     }
                 }
             }

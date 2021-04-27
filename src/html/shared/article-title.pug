@@ -10,5 +10,5 @@ mixin articleTitle(title, classes, divider, noPadding)
                     h4.title(class=classes && classes.title)=titleItem
             else
                 h4.title(class=classes && classes.title)=title
-        if (divider)
+        if divider
             .divider(class=classes && classes.divider)
