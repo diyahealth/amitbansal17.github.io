@@ -14,7 +14,7 @@
         justify-content: space-between;
         align-items: center;
         margin: auto;
-        max-width: $container-max-width;
+        max-width: $navigation-max-width;
 
         @media screen and (max-width: $break-tablet) {
             padding: 0 30px;
@@ -43,12 +43,16 @@
         .navigation-list {
             @extend .list-unstyled;
 
-            padding-left: 2%;
+            padding-left: 5%;
             flex-grow: 1;
             display: flex;
             justify-content: space-between;
             text-align: right;
             align-items: center;
+
+            @media screen and (max-width: $break-desktop-small) {
+                padding-left: 2%;
+            }
 
             & > li {
                 position: relative;
