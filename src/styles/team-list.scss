@@ -89,18 +89,19 @@
                 }
 
                 & .full-description {
-                    display: none;
+                    display: inline-block;
+                    overflow: hidden;
+                    height: auto;
+                    max-height: 0;
+                    transition: max-height 400ms ease;
                 }
 
                 &.full {
                     & .more-points {
                         display: none;
                     }
-                    & .partial-description {
-                        display: none;
-                    }
                     & .full-description {
-                        display: inline;
+                        max-height: 300px;
                     }
                 }
             }
