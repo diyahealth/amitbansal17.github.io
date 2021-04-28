@@ -19,6 +19,25 @@
             padding-top: 280px / 320px * 100%;
         }
 
+        &.three {
+            @media screen and (max-width: $carousel-with-button-break-three) {
+                padding-top: 280px / 320px * 100%;
+            }
+
+            & > .single-button-container, .multiple-buttons-container {
+
+                @media screen and (max-width: $carousel-with-button-break-three) {
+                    bottom: inherit;
+                }
+            }
+            
+            & > .content-container {
+                @media screen and (max-width: $carousel-with-button-break-three) {
+                    bottom: 10%;
+                }
+            }
+        }
+
         & > .content-container {
             bottom: 30%;
 
@@ -345,12 +364,29 @@
         bottom: 10%;
     }
 
+    &.three {
+        & > .button-container {
+            @media screen and (max-width: $carousel-with-button-break-three) {
+                flex: initial;
+                margin-top: 10px;
+    
+                & > *:not(.sign-in-button) {
+                    flex: 1;
+                }
+            }
+        }
+    }
+
     & > .button-container {
         flex: 1;
 
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &.large {
+            flex: 1.3;
+        }
 
         @media screen and (max-width: $break-mobile) {
             flex: initial;
@@ -374,6 +410,13 @@
 .multiple-buttons-container {
     justify-content: space-around;
     flex-wrap: wrap;
+
+    &.three {
+        @media screen and (max-width: $carousel-with-button-break-three) {
+            flex-direction: column;
+            bottom: -130px;
+        }
+    }
 
     @media screen and (max-width: $break-mobile) {
         flex-direction: column;
@@ -426,6 +469,12 @@
 }
 
 .carousel-with-buttons {
+    &.three {
+        @media screen and (max-width: $carousel-with-button-break-three) {
+            padding-bottom: 210px;
+        }
+    }
+
     @media screen and (max-width: $break-mobile) {
         padding-bottom: 140px;
     }

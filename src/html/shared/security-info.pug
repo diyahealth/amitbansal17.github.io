@@ -2,7 +2,7 @@ include ./two-column-article.pug
 include ./list.pug
 
 
-mixin securityInfo()
+mixin securityInfo(extraItems)
     -
         const security = [
             'We integrate with e-mail services; no user names or passwords are stored on our system.',
@@ -11,6 +11,7 @@ mixin securityInfo()
             'We do not sell data to pharmaceutical companies, insurers, employers, or other businesses.',
             'Our employees do not have access to patients’ records — not even our CEO.',
             'We maintain a complete audit trail of all information access.',
+            ...(extraItems ? extraItems : []),
         ];
     +twoColumnArticle({ secondaryLeft: 'image-container' })
         +setContent('secondaryLeft')

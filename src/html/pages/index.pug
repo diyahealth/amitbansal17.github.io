@@ -25,25 +25,23 @@ block content
     - const benefitsCarouselId = 'benefits'
     - const doctorsUrl = pages.doctors.url;
     - const patientsAndFamiliesUrl = pages.patientsAndFamilies.url;
+    - const employersUrl = pages.employers.url;
     -
         const aboutDiyaHrApp = {
             title: 'We serve employers',
             link: { href: pages.employers.url, text: 'Learn about DiyaHR' },
-            image: require("../../images/about-us/doctors.jpg"),
             main: 'right',
         };
     -
         const aboutDiyaMdApp = {
             title: 'We serve doctors',
             link: { href: pages.doctors.url, text: 'Learn about DiyaMD' },
-            image: require("../../images/about-us/doctors.jpg"),
             main: 'left',
         };
     -
         const aboutMyDiyaApp = {
             title: 'We serve patients',
             link: { href: pages.patientsAndFamilies.url, text: 'Learn about myDiya' },
-            image: require("../../images/about-us/patients.jpg"),
             main: 'right',
         };
 
@@ -54,18 +52,23 @@ block content
                 backgroundSelector: '.carousel-image-background',
             }, 8000);
         });
-    article.carousel-with-buttons.alternative-background-content
-        +textImageCarousel(benefits, benefitsCarouselId, 'small')
-            .multiple-buttons-container
+    article.carousel-with-buttons.alternative-background-content.three
+        +textImageCarousel(benefits, benefitsCarouselId, 'small three')
+            .multiple-buttons-container.three
+                .button-container
+                    a.material-btn.large(href=employersUrl)
+                        span.label
+                            include ../../images/icons/business-center-icon.svg
+                            span Employers
                 .button-container
                     a.material-btn.large(href=doctorsUrl)
                         span.label
-                            include ../../images/icons/local-hospital-outline-icon.svg
+                            include ../../images/icons/local-hospital-icon.svg
                             span Doctors
-                .button-container
+                .button-container.large
                     a.material-btn.large(href=patientsAndFamiliesUrl)
                         span.label
-                            include ../../images/icons/person-outline-icon.svg
+                            include ../../images/icons/person-icon.svg
                             span Patients & Families
     article
         +partners('small')
