@@ -67,16 +67,17 @@
         width: 100%;
         display: inherit;
         align-items: inherit;
-    
+        white-space: nowrap;
+
         .icon-container {
-            padding: 12px;
+            padding: 4px;
             background-color: #fff;
         }
 
         .text-container {
             color: #fff;
             padding: 0 12px;
-            font-size: 21px;
+            font-size: 20px;
             font-weight: 600;
         }
     }
