@@ -38,11 +38,9 @@ mixin textImageCarousel(carouselData, id, additionalClass)
             block
 
 
-mixin textImageCarouselSecond(carouselData, id, additionalClass)
-    - const infoArray = carouselData.info || []
-    - const images = carouselData.imagesClasses || []
+mixin textImageCarouselStatic(bgClass, id, additionalClass)
     .text-image-carousel-container(id=id, class=additionalClass)
-        div.carousel-image-background.active(class=carouselData.imagesClasses[4])
+        div.carousel-image-background.active(class=bgClass)
             if block
             block
 

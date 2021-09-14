@@ -17,23 +17,19 @@ mixin timelineArticles(data, variant, classes)
                                 span.circle(class=classes && classes.circle)
                                     if (item.circleContent)
                                         span=item.circleContent
-                        
+
                     span.text=item.text
                     if (variant === 'oneColumn')
                         img(src=item.src)
 
 
 
-mixin timelineArticlesSecond(data, variant, classes)
+mixin imageSection(data, variant, classes)
     .timeline-articles-container
-        
-            .article
-                .part.text-container.flex-container
-                    .title-container
-                    if(variant==='small-img')
-                            img(src=data.src class=variant)
-                    else 
-                     img(src=data.src)   
-                    
-                                      
-                                                
+        .article
+            .part.text-container.flex-container
+                .title-container
+                if(variant==='small-img')
+                    img(src=data.src class=variant)
+                else 
+                    img(src=data.src)

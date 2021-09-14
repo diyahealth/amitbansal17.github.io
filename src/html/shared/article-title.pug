@@ -17,11 +17,11 @@ mixin articleTitleSecond(title, classes, divider, noPadding)
     - 
         let containerClass = classes ? classes.contentContainer : '';
         containerClass = noPadding ? containerClass + ' no-padding' : containerClass;
-    
+
     .default-content-block.article-title-content(class=containerClass)
         .title-container-second
             if (title==='How it works') 
-                img(class='diyahr-logo' src='C:/Users/yauheni.balashka/Desktop/diyawebsite/amitbansal17.github.io/src/images/icons/diyahr-logo.svg' alt='logo HR')
+                img.diyahr-logo(src=require("../../images/icons/diyahr-logo.svg") alt='logo HR')
             h4.title(class=classes && classes.title)=title
         if divider
             .divider(class=classes && classes.divider)
