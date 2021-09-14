@@ -51,15 +51,12 @@ const buildAboutUsDropdown = () => {
 }
 
 const buildEmployersDropdown = () => {
-    const employersUrl = pages.employers.url;
+    const employersUrlHr = pages.employers.url;
+    const employersUrlVP = pages.vaccinePasport.url;
 
     const titleUrlItems = [
-        { title: 'DiyaHR', variant: 'subheader', url: employersUrl},
-        { title: 'How it Works', url: `${employersUrl}#how-it-works`},
-        { title: 'Prevent Rising Costs', url: `${employersUrl}#prevent-rising-costs`},
-        { title: 'Enhance Employee Well-Being', url: `${employersUrl}#employee-well-being`},
-        { title: 'Drive Strategic Change', url: `${employersUrl}#strategic-change`},
-        { title: 'Security Features', url: `${employersUrl}#security-features`},
+        { title: 'DiyaHR', variant: 'subheader', url: employersUrlHr},
+        { title: 'Vaccine passport', url: employersUrlVP},     
     ];
 
     return titleUrlItems.map(item => buildPage(item.title, item.url, item.variant));

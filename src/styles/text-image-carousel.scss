@@ -24,13 +24,13 @@
                 padding-top: 280px / 320px * 100%;
             }
 
-            & > .single-button-container, .multiple-buttons-container {
-
+            & > .single-button-container,
+            .multiple-buttons-container {
                 @media screen and (max-width: $carousel-with-button-break-three) {
                     bottom: inherit;
                 }
             }
-            
+
             & > .content-container {
                 @media screen and (max-width: $carousel-with-button-break-three) {
                     bottom: 10%;
@@ -50,9 +50,10 @@
             }
         }
 
-        & > .single-button-container, .multiple-buttons-container {
+        & > .single-button-container,
+        .multiple-buttons-container {
             bottom: 12%;
-        
+
             @media screen and (max-width: $break-tablet) {
                 bottom: 5%;
             }
@@ -62,11 +63,12 @@
             }
         }
 
-        & > .single-tile-container, .multiple-tiles-container {
+        & > .single-tile-container,
+        .multiple-tiles-container {
             bottom: 5%;
-        
+
             @media screen and (max-width: $break-tablet) {
-                bottom: 1%;
+                bottom: 20%;
             }
 
             @media screen and (max-width: $break-mobile) {
@@ -104,15 +106,11 @@
         .text-container {
             display: flex;
             flex-direction: column;
-
             text-align: center;
-
             margin-block-start: 0;
             margin-block-end: 0;
             padding-inline-start: 0;
-
             min-height: 60px;
-
             display: flex;
             justify-content: center;
             align-items: center;
@@ -124,7 +122,6 @@
             .title {
                 margin-top: 0;
                 margin-bottom: 20px;
-                
                 font-size: 35px;
                 color: $primary-color;
 
@@ -148,17 +145,16 @@
                     @media screen and (max-width: $break-tablet) {
                         font-size: 18px;
                     }
-    
+
                     @media screen and (max-width: $break-mobile) {
                         font-size: 14px;
                     }
                 }
             }
-            
+
             .text {
                 font-weight: 600;
                 color: $primary-color;
-
                 font-size: 30px;
 
                 @media screen and (max-width: $break-tablet) {
@@ -178,11 +174,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
                 margin-top: 20px;
-
                 color: $primary-color;
-
                 font-size: 22px;
 
                 @media screen and (max-width: $break-tablet) {
@@ -200,8 +193,8 @@
 
                 & > svg {
                     margin-left: 4px;
-
                     color: $primary-color;
+
                     &.alternative {
                         color: $alternative-primary-color;
                     }
@@ -228,86 +221,93 @@
             background-image: url('../images/index/index-page-bg.jpg');
             background-position-y: 33%;
         }
-    
+
         &.head-bg-bills-statement-stethoscope {
             background-image: url('../images/doctors-benefits/bills-statement-stethoscope.jpg');
         }
-    
+
         &.head-bg-apple-watch {
-            background-image:url('../images/doctors-benefits/apple-watch.png');
+            background-image: url('../images/doctors-benefits/apple-watch.png');
             background-position-y: bottom;
         }
-    
+
         &.head-bg-medical-mac {
-            background-image:url('../images/doctors-benefits/medical-mac.jpg');
+            background-image: url('../images/doctors-benefits/medical-mac.jpg');
         }
 
         &.head-bg-easy-to-use {
-            background-image:url('../images/doctors-benefits/easy-to-use.jpg');
+            background-image: url('../images/doctors-benefits/easy-to-use.jpg');
             background-position-y: top;
         }
 
         &.head-bg-broccoli-stethoscope {
-            background-image:url('../images/doctors-benefits/broccoli-stethoscope.jpg');
+            background-image: url('../images/doctors-benefits/broccoli-stethoscope.jpg');
         }
 
         &.head-bg-instant-communication {
-            background-image:url('../images/doctors-benefits/instant-communication.jpg');
+            background-image: url('../images/doctors-benefits/instant-communication.jpg');
             background-position-y: 13%;
         }
 
         &.head-bg-emergency-access {
-            background-image:url('../images/patients-and-families/emergency-access.jpg');
+            background-image: url('../images/patients-and-families/emergency-access.jpg');
             background-position-y: 40%;
         }
 
         &.head-bg-covid-19-check {
-            background-image:url('../images/patients-and-families/covid-19-check.jpg');
+            background-image: url('../images/patients-and-families/covid-19-check.jpg');
         }
 
         &.head-bg-emergency-card {
-            background-image:url('../images/patients-and-families/emergency-card.jpg');
+            background-image: url('../images/patients-and-families/emergency-card.jpg');
+
             @media screen and (min-width: $break-tablet) {
                 background-position-y: 23%;
             }
+
             @media screen and (max-width: $break-tablet) {
                 background-position-y: 40%;
             }
+
             @media screen and (max-width: $break-mobile) {
-                background-image:url('../images/patients-and-families/emergency-card-mobile.jpg');
+                background-image: url('../images/patients-and-families/emergency-card-mobile.jpg');
             }
         }
 
         &.head-bg-expert-at-home {
-            background-image:url('../images/patients-and-families/expert-at-home.jpg');
+            background-image: url('../images/patients-and-families/expert-at-home.jpg');
         }
 
         &.head-bg-medication-safety {
-            background-image:url('../images/patients-and-families/medication-safety.jpg');
+            background-image: url('../images/patients-and-families/medication-safety.jpg');
         }
 
         &.head-bg-24-7-connection {
-            background-image:url('../images/patients-and-families/24-7-connection.jpg');
+            background-image: url('../images/patients-and-families/24-7-connection.jpg');
             background-position-y: 30%;
         }
 
         &.head-bg-employee-engagement {
-            background-image:url('../images/employers/employee-engagement.jpg');
+            background-image: url('../images/employers/employee-engagement.jpg');
             background-position-y: 100%;
         }
 
         &.head-bg-employee-conversation {
-            background-image:url('../images/employers/employee-conversation.jpg');
-            background-position-y: 80%;
+            background-image: url('../images/employers/employee-conversation.jpg');
         }
 
         &.head-bg-happy-employees {
-            background-image:url('../images/employers/happy-employees.jpg');
+            background-image: url('../images/employers/happy-employees.jpg');
             background-position-y: 40%;
         }
 
         &.head-bg-happy-hr {
-            background-image:url('../images/employers/happy-hr.jpg');
+            background-image: url('../images/employers/happy-hr.jpg');
+            background-position-y: 75%;
+        }
+
+        &.head-bg-happy-logo {
+            background-image: url('../images/employers/happy-employees-banner.jpg');
             background-position-y: 75%;
         }
     }
@@ -320,30 +320,30 @@
         opacity: 0.5;
         cursor: pointer;
         border-radius: 10px;
-    
         display: flex;
         align-items: center;
         justify-content: center;
-    
         background-repeat: repeat-x;
         user-select: none;
 
         @media screen and (max-width: $break-tablet) {
             border-radius: 0;
         }
-    
+
         &:hover {
             opacity: 0.9;
         }
+
         &.left {
             left: 0;
-            background-image: linear-gradient(to right,rgba(0,0,0,.3) 0,rgba(0,0,0,.0001) 100%);
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3) 0, rgba(0, 0, 0, 0.0001) 100%);
         }
+
         &.right {
             right: 0;
-            background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.3) 100%);
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0, rgba(0, 0, 0, 0.3) 100%);
         }
-    
+
         .icon {
             pointer-events: none;
             position: relative;
@@ -354,14 +354,17 @@
     }
 }
 
-.single-button-container, .multiple-buttons-container, .single-tile-container, .multiple-tiles-container {
+.single-button-container,
+.multiple-buttons-container,
+.single-tile-container,
+.multiple-tiles-container {
     display: flex;
     position: absolute;
     bottom: 20%;
     width: 100%;
 
     @media screen and (max-width: $break-tablet) {
-        bottom: 10%;
+        bottom: 5%;
     }
 
     &.three {
@@ -369,7 +372,7 @@
             @media screen and (max-width: $carousel-with-button-break-three) {
                 flex: initial;
                 margin-top: 10px;
-    
+
                 & > *:not(.sign-in-button) {
                     flex: 1;
                 }
@@ -379,7 +382,6 @@
 
     & > .button-container {
         flex: 1;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -428,14 +430,14 @@
     justify-content: center;
 
     @media screen and (max-width: $break-mobile) {
-        bottom: -75px;
+        // bottom: -75px;
     }
 
     & > .info-tile {
         flex-basis: 30%;
 
         @media screen and (max-width: $break-tablet) {
-            flex-basis: 49%
+            flex-basis: 49%;
         }
 
         @media screen and (max-width: $break-mobile) {
@@ -458,7 +460,7 @@
         flex-basis: 40%;
 
         @media screen and (max-width: $break-tablet) {
-            flex-basis: 49%
+            flex-basis: 49%;
         }
 
         @media screen and (max-width: $break-mobile) {
@@ -482,7 +484,7 @@
 
 .carousel-with-button {
     @media screen and (max-width: $break-mobile) {
-        padding-bottom: 70px
+        padding-bottom: 70px;
     }
 }
 
@@ -494,6 +496,6 @@
 
 .carousel-with-tile {
     @media screen and (max-width: $break-mobile) {
-        padding-bottom: 120px
+        padding-bottom: 120px;
     }
 }

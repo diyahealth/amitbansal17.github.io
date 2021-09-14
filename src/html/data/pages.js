@@ -72,6 +72,13 @@ const pages = {
         title: "Terms & Conditions - Diya Health",
         description: "Terms and conditions of Diya Health Website",
     },
+    vaccinePasport: {
+        fileName: "vaccine-passport",
+        url: "./vaccine-passport",
+        name: "Vaccine Passport",
+        title: "Vaccine Passport",
+        description: "Vaccine passport",
+    },
 };
 
 module.exports = pages;

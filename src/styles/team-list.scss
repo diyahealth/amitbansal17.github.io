@@ -1,9 +1,9 @@
 .team-content-container {
     .team-member {
         @extend .default-content-block;
+
         padding-top: 0;
         padding-bottom: 0;
-
         display: flex;
         flex-wrap: wrap;
 
@@ -19,7 +19,6 @@
 
         & .image-container {
             padding: 24px;
-
             flex-grow: 0;
             flex-basis: 33%;
             max-width: 33%;
@@ -28,7 +27,6 @@
                 padding: initial;
                 flex-basis: 100%;
                 max-width: 100%;
-
                 margin-bottom: 24px;
             }
 
@@ -38,8 +36,8 @@
                 position: relative;
                 padding-top: 100%;
                 border-radius: 50%;
-                
-                &>img {
+
+                & > img {
                     width: 100%;
                     position: absolute;
                     top: 0;
@@ -47,26 +45,23 @@
             }
         }
 
-        &>.info-container {
+        & > .info-container {
             padding: 24px;
-
             flex-grow: 0;
             flex-basis: 66%;
             max-width: 66%;
 
             @media screen and (max-width: $break-tablet) {
                 padding: initial;
-
                 flex-basis: 100%;
                 max-width: 100%;
             }
 
-            &>.person {
+            & > .person {
                 margin-block-start: 0;
                 margin-top: 38px;
                 font-weight: 600;
                 font-size: 34px;
-
                 margin-bottom: 24px;
 
                 @media screen and (max-width: $break-tablet) {
@@ -100,6 +95,7 @@
                     & .more-points {
                         display: none;
                     }
+
                     & .full-description {
                         max-height: 300px;
                     }

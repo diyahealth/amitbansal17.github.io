@@ -10,17 +10,19 @@
     border-radius: 100%;
     background-color: #fff;
     left: 5px;
-  }
+}
 
 .timeline-articles-container {
     display: flex;
     flex-direction: column;
+
     .article {
         display: flex;
         position: relative;
 
         & > .circle {
             @include timeline-circle;
+
             z-index: 1;
             top: 22px;
 
@@ -31,19 +33,18 @@
             @media screen and (max-width: $break-mobile) {
                 top: 15px;
             }
-            
+
             &.big {
                 width: 35px;
                 height: 35px;
                 font-size: 30px;
-
                 top: 18px;
                 left: 0;
 
                 @media screen and (max-width: $break-tablet) {
                     top: 13px;
                 }
-    
+
                 @media screen and (max-width: $break-mobile) {
                     top: 11px;
                 }
@@ -52,7 +53,6 @@
 
         .part {
             padding: 12px 24px;
-
             flex-grow: 6;
             flex-basis: 0;
 
@@ -63,22 +63,12 @@
                 & > img {
                     max-height: 400px;
                     object-fit: contain;
-                    @extend .shadow;
-                }
-
-                &::before {
-                    left: 16px;
-                    top: 0;
-                    width: 3px;
-                    height: 100%;
-                    content: "";
-                    position: absolute;
-                    background-color: $primary-color;
                 }
 
                 & .title-container {
                     & .circle {
                         @include timeline-circle;
+
                         left: 5px;
                         top: 22px;
 
@@ -89,24 +79,21 @@
                         @media screen and (max-width: $break-mobile) {
                             top: 15px;
                         }
-
                     }
 
                     & .title {
                         position: relative;
                         width: 100%;
                         font-size: 32px;
-    
                         margin-block-start: 0;
                         margin-inline-start: 0;
                         margin-block-end: 0;
-    
                         margin-bottom: 24px;
-    
+
                         @media screen and (max-width: $break-tablet) {
                             font-size: 26px;
                         }
-        
+
                         @media screen and (max-width: $break-mobile) {
                             font-size: 22px;
                         }
@@ -130,8 +117,10 @@
 
             &.image-container {
                 flex-grow: 4;
+
                 & > img {
                     width: 100%;
+
                     @extend .shadow;
                 }
 
@@ -141,4 +130,10 @@
             }
         }
     }
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

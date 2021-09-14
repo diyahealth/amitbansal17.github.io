@@ -1,5 +1,4 @@
 extends ../shared/layout.pug
-
 include ../shared/contact-us.pug
 include ../shared/reviews.pug
 include ../shared/youtube-video.pug
@@ -10,90 +9,70 @@ include ../shared/sign-in-button.pug
 include ../shared/about-app.pug
 include ../shared/covid-info.pug
 include ../shared/timeline-articles.pug
+include ../shared/boxes-row.pug
 
 block content
     - const benefitsCarouselId = 'employers-benefits'
     -
+        const boxexInfo =[{val:'Minimize tedious & repetitive work', class:"light"}, {val:'Engage employees to keep them happy and healthy', class:"darker"}, {val:'Predict and prevent healthcare costs'
+        ,class:"dark"}]
         const aboutApp = {
-            text: 'DiyaHR is an AI-based, Software-as-a-Service platform that empowers HR with aggregated HRIS and health data. Our platform best serves self-insured coporations with a large number of employees.\nBy enabling HR to predict and prevent high-dollar claims, DiyaHR will save corporations a minimum of 15% in annual healthcare costs.',
+            text: 'DiyaHR gfhgfh is an AI-based, Software-as-a-Service platform that empowers HR with aggregated HRIS and health data. Our platform best serves self-insured coporations with a large number of employees.\nBy enabling HR to predict and prevent high-dollar claims, DiyaHR will save corporations a minimum of 15% in annual healthcare costs.',
         };
         const timelineData = [
             {
-                title: 'Connect your exisiting HRIS system',
-                circleContent: 1,
-                src: require("../../images/employers/how-it-works-reports.jpg"),
+                src: require("../../images/employers/howitworks.png"),
             },
             {
-                title: 'Analyze automatically-generated reports',
-                circleContent: 2,
-                src: require("../../images/employers/how-it-works-mood-report.jpg"),
+                src: require("../../images/employers/benefits.png"),
             },
             {
-                title: 'Engage employees in benefits programs',
-                circleContent: 3,
-                src: require("../../images/employers/how-it-works-tasks.jpg"),
-            },
-            {
-                title: 'Contact and manage employees at the touch of a button',
-                circleContent: 4,
-                src: require("../../images/employers/how-it-works-management-page.jpg"),
+                src: require("../../images/employers/security.png"),
             },
         ];
+
+    -const missions= ['HIPAA Compliant','No information is shared or sold','Employees control their own health information','Reports are anonymized'];
     script.
         window.addEventListener('load', (event) => {
             window.diya.carousel.init('employers-benefits', {
                 switchSlideControlSelector: '.carousel-control',
                 backgroundSelector: '.carousel-image-background',
             }, 8000);
-        });
-    
+        });    
     article.carousel-with-tile.primary-background-content
-        +textImageCarousel(employersBenefits, benefitsCarouselId, 'alternative small')
+        +textImageCarouselSecond(employersBenefits, benefitsCarouselId, 'alternative small')
+            .paragraph-title 
+              h2.paragraph-title__main Engage employees. Reduce healthcare costs
             .single-tile-container
                 +infoTile('Employers Sign-In', 'alternative')
                     +signInButton('https://diyahr.org/auth/sign-in')
-    article.primary-background-content
-        .default-content-block
-            +aboutApp(aboutApp, false, { title: 'playfair'})
-                include ../../images/icons/diyahr-logo.svg
-    article.anchor(id='how-it-works')
-        +articleTitle('How it works', { divider: 'primary' }, true)
+            .box-container 
+                 +boxesRow(boxexInfo)       
+    article.anchor(id='how-it-works' class="how-it-works-mt")
+        +articleTitleSecond('How it works', { divider: 'primary' }, true)
     article.primary-background-content
         .default-content-block.how-it-works-article
-            +timelineArticles(timelineData, 'oneColumn', { circle: 'big'})
-    article
-        +articleTitle('Capabilities', { divider: 'primary' }, true)
+            +timelineArticlesSecond(timelineData[0], 'oneColumn')
+    article.anchor(id='prevent-rising-costs', class='puzzle-container')
+        +twoColumnArticle({ secondaryRight: 'image-container image-container-first' })
+            +setContent('secondaryLeft')
+                span.text.title.
+                    diyaHR unifies disparate systems
+            +setContent('secondaryRight')
+                img(src=require("../../images/employers/puzzle.png"))
+    article.anchor(id='benefits')
+        +articleTitleSecond('Benefits', { divider: 'primary' }, true)
     article.primary-background-content
-        +twoColumnArticle({ secondaryLeft: 'image-container' })
-            +setContent('secondaryLeft')
-                img(src=require("../../images/about-us/diya-health-on-computer.jpg"))
-            +setContent('secondaryRight')
-                span.text.title.
-                    Quickly identify high health risk employees
-    article.anchor(id='prevent-rising-costs')
-        +twoColumnArticle({ secondaryRight: 'image-container' })
-            +setContent('secondaryLeft')
-                span.text.title.
-                    Take preventative measures to help reduce high-cost claims
-            +setContent('secondaryRight')
-                img(src=require("../../images/employers/task-management.jpg"))
-    article.primary-background-content.anchor(id='employee-well-being')
-        +twoColumnArticle({ secondaryLeft: 'image-container' })
-            +setContent('secondaryLeft')
-                img(src=require("../../images/employers/content-library.jpg"))
-            +setContent('secondaryRight')
-                span.text.title.
-                    Promote wellness and education by sending individualized content and resources to employees
-    article.anchor(id='strategic-change')
-        +twoColumnArticle({ secondaryRight: 'image-container' })
-            +setContent('secondaryLeft')
-                span.text.title.
-                    Empower HR with insights to drive strategic, enterprise-level change
-            +setContent('secondaryRight')
-                img(src=require("../../images/employers/strategic-insights.jpg"))
-    article.anchor(id='security-features')
-        +articleTitle('Protecting Your Information is Our Top Priority', { divider: 'primary' }, true)
-    article
-        +securityInfo(['Reports are anonymized to protect employees\' health '])
+        .default-content-block.how-it-works-article
+            +timelineArticlesSecond(timelineData[1], 'oneColumn')
+    article.anchor(id='security')
+        +articleTitleSecond('Security', { divider: 'primary' }, true)
+    article.primary-background-content
+        .default-content-block.how-it-works-article
+             +twoColumnArticle({ secondaryLeft: 'image-container image-container-second'})
+                +setContent('secondaryLeft')
+                    img(src=require("../../images/employers/security.png"))
+                +setContent('secondaryRight')
+                   +list(missions, { itemText: 'big', icon: 'big' })
     article.contact-us-background-content.anchor(id="contact-us")
         +contactUs(organizationSizeOptions)
