@@ -1,0 +1,9 @@
+include ../shared/mixin-items.pug
+
+mixin boxesRow(boxexInfo)
+    .boxes-row-container 
+        each item in boxexInfo
+             +mixinItems(item.val, item.class)
+                
+                
+

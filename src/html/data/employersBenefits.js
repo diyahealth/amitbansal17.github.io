@@ -43,6 +43,7 @@ const buildEmployersBenefits = (mode) => {
             'head-bg-employee-conversation',
             'head-bg-happy-employees',
             'head-bg-happy-hr',
+            'head-bg-happy-logo',
         ],
     };
 };

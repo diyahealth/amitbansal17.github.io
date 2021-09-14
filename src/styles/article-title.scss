@@ -27,7 +27,7 @@
             @media screen and (max-width: $break-mobile) {
                 font-size: 32px;
             }
-    
+
             &.primary {
                 color: $primary-color;
             }
@@ -41,7 +41,43 @@
             }
         }
     }
-    
+
+    .title-container-second {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .title {
+            text-align: center;
+            margin: 0;
+            font-size: 42px;
+            font-weight: 700;
+            font-stretch: normal;
+            font-style: normal;
+            letter-spacing: normal;
+            color: #2c2d2d;
+
+            @media screen and (max-width: $break-tablet) {
+                font-size: 38px;
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                font-size: 32px;
+            }
+
+            &.primary {
+                color: $primary-color;
+            }
+
+            &.playfair {
+                font-family: "Playfair Display";
+            }
+
+            &.big {
+                font-size: 58px;
+            }
+        }
+    }
 
     .divider {
         margin: 12px 48px;
@@ -57,7 +93,33 @@
         }
 
         &.primary {
-            border-top: 2px solid #CFF1FF;
+            border-top: 2px solid #cff1ff;
         }
+    }
+}
+
+.how-it-works-mt {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $break-tablet) {
+        margin-top: 480px;
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        margin-top: 360px;
+    }
+}
+
+.diyahr-logo {
+    width: 150px;
+    height: auto;
+    margin-right: 15px;
+    align-self: flex-end;
+    padding-bottom: 8px;
+
+    @media screen and (max-width: $break-mobile) {
+        width: 110px;
     }
 }

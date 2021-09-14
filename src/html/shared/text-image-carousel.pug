@@ -36,3 +36,13 @@ mixin textImageCarousel(carouselData, id, additionalClass)
                 div.carousel-image-background(class=val)
         if block
             block
+
+
+mixin textImageCarouselSecond(carouselData, id, additionalClass)
+    - const infoArray = carouselData.info || []
+    - const images = carouselData.imagesClasses || []
+    .text-image-carousel-container(id=id, class=additionalClass)
+        div.carousel-image-background.active(class=carouselData.imagesClasses[4])
+            if block
+            block
+
