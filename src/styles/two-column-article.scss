@@ -221,6 +221,7 @@
 
 .image-container-second img {
     box-shadow: none !important;
+    max-width: 70%;
 
     @media screen and (max-width: $break-tablet) {
         width: 20% !important;

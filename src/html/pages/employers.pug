@@ -14,10 +14,13 @@ include ../shared/boxes-row.pug
 block content
     - const benefitsCarouselId = 'employers-benefits'
     -
-        const boxexInfo =[{val:'Minimize tedious & repetitive work', class:"light"}, {val:'Engage employees to keep them happy and healthy', class:"darker"}, {val:'Predict and prevent healthcare costs'
-        ,class:"dark"}]
+        const boxesInfo =[
+            { val:'Minimize tedious & repetitive work', class:"light"},
+            { val:'Engage employees to keep them happy and healthy', class:"darker"},
+            { val:'Predict and prevent healthcare costs', class:"dark"}
+        ];
         const aboutApp = {
-            text: 'DiyaHR gfhgfh is an AI-based, Software-as-a-Service platform that empowers HR with aggregated HRIS and health data. Our platform best serves self-insured coporations with a large number of employees.\nBy enabling HR to predict and prevent high-dollar claims, DiyaHR will save corporations a minimum of 15% in annual healthcare costs.',
+            text: 'DiyaHR is an AI-based, Software-as-a-Service platform that empowers HR with aggregated HRIS and health data. Our platform best serves self-insured corporations with a large number of employees.\nBy enabling HR to predict and prevent high-dollar claims, DiyaHR will save corporations a minimum of 15% in annual healthcare costs.',
         };
         const timelineData = [
             {
@@ -32,27 +35,22 @@ block content
         ];
 
     -const missions= ['HIPAA Compliant','No information is shared or sold','Employees control their own health information','Reports are anonymized'];
-    script.
-        window.addEventListener('load', (event) => {
-            window.diya.carousel.init('employers-benefits', {
-                switchSlideControlSelector: '.carousel-control',
-                backgroundSelector: '.carousel-image-background',
-            }, 8000);
-        });    
     article.carousel-with-tile.primary-background-content
-        +textImageCarouselSecond(employersBenefits, benefitsCarouselId, 'alternative small')
-            .paragraph-title 
-              h2.paragraph-title__main Engage employees. Reduce healthcare costs
+        +textImageCarouselStatic('head-bg-happy-logo', benefitsCarouselId, 'alternative small')
+            .paragraph-title
+                h2.paragraph-title__main
+                    p Engage employees.
+                    p Reduce healthcare costs
             .single-tile-container
                 +infoTile('Employers Sign-In', 'alternative')
                     +signInButton('https://diyahr.org/auth/sign-in')
-            .box-container 
-                 +boxesRow(boxexInfo)       
+            .box-container
+                 +boxesRow(boxesInfo)
     article.anchor(id='how-it-works' class="how-it-works-mt")
         +articleTitleSecond('How it works', { divider: 'primary' }, true)
     article.primary-background-content
         .default-content-block.how-it-works-article
-            +timelineArticlesSecond(timelineData[0], 'oneColumn')
+            +imageSection(timelineData[0], 'oneColumn')
     article.anchor(id='prevent-rising-costs', class='puzzle-container')
         +twoColumnArticle({ secondaryRight: 'image-container image-container-first' })
             +setContent('secondaryLeft')
@@ -64,7 +62,7 @@ block content
         +articleTitleSecond('Benefits', { divider: 'primary' }, true)
     article.primary-background-content
         .default-content-block.how-it-works-article
-            +timelineArticlesSecond(timelineData[1], 'oneColumn')
+            +imageSection(timelineData[1], 'oneColumn')
     article.anchor(id='security')
         +articleTitleSecond('Security', { divider: 'primary' }, true)
     article.primary-background-content

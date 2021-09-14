@@ -8,30 +8,30 @@ block content
     article.container-page-vaccine   
         article.vaccine-container   
             .vaccine-container__left-side-box
-                img(class='vaccine-container__img' src='C:/Users/yauheni.balashka/Desktop/diyawebsite/amitbansal17.github.io/src/images/vaccine-pasport/vaccinepassport.png' alt='vaccine passport')   
+                img(class='vaccine-container__img' src=require("../../images/vaccine-passport/vaccine-passport.png") alt='vaccine passport')
             .vaccine-container__right-side-box
                 h2.vaccine-container__title Return-to-Work Made Easy
                 p.vaccine-container__subtitle 
                     span Complying with your company’s COVID-19 policies gets complicated. But, our AI-driven Vaccine Passport makes it easy.
                     span Whether mandating vaccines or not, the Vaccine Passport simplifies workplace safety — worldwide
-        article.anchor(id='VP How-it-Works')
+        article.anchor
             +articleTitleSecond('How it works ', { divider: 'primary' }, true)
-        article.vp-hiw-container 
-            img(class='vp-hiw-container__img' src='C:/Users/yauheni.balashka/Desktop/diyawebsite/amitbansal17.github.io/src/images/vaccine-pasport/vphowitworks.png' alt='vp how it works')
-        article.anchor(id='Contact us' class="")
+        article.vp-hiw-container
+            img(class='vp-hiw-container__img' src=require("../../images/vaccine-passport/how-it-works.png") alt='how it works')
+        article.anchor
             +articleTitleSecond('', { divider: 'primary' }, true)
-        article.charts-container   
-            .charts-container__left 
-                img(class='charts-container__img' src='C:/Users/yauheni.balashka/Desktop/diyawebsite/amitbansal17.github.io/src/images/vaccine-pasport/charts.png' alt='charts')
-            .charts-container__right    
-                p For example, analyze trends among unvaccinated employees byoffice location 
-        article.anchor(id='VP How-it-Works' class="")
-            +articleTitleSecond('Security', { divider: 'primary' }, true)        
-        article.security-container   
-            .security-container__left    
-                img(class='security-container__img' src='C:/Users/yauheni.balashka/Desktop/diyawebsite/amitbansal17.github.io/src/images/employers/security.png' alt='security') 
-            .security-container__right 
+        article.charts-container
+            .charts-container__left
+                img(class='charts-container__img' src=require("../../images/vaccine-passport/charts.png") alt='charts')
+            .charts-container__right
+                p For example, analyze trends among unvaccinated employees by office location
+        article.anchor
+            +articleTitleSecond('Security', { divider: 'primary' }, true)
+        article.security-container
+            .security-container__left
+                img(class='security-container__img' src=require("../../images/employers/security.png") alt='security')
+            .security-container__right
                 +list(missions, { itemText: 'big', icon: 'big' })
-        article.anchor(id='Contact us' class="")
+        article.anchor(id='Contact us')
             +articleTitleSecond('', { divider: 'primary' }, true)
         +contactUs(organizationSizeOptions)

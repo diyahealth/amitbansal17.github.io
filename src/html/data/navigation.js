@@ -52,11 +52,11 @@ const buildAboutUsDropdown = () => {
 
 const buildEmployersDropdown = () => {
     const employersUrlHr = pages.employers.url;
-    const employersUrlVP = pages.vaccinePasport.url;
+    const employersUrlVP = pages.vaccinePassport.url;
 
     const titleUrlItems = [
         { title: 'DiyaHR', variant: 'subheader', url: employersUrlHr},
-        { title: 'Vaccine passport', url: employersUrlVP},     
+        { title: 'Vaccine passport', url: employersUrlVP},
     ];
 
     return titleUrlItems.map(item => buildPage(item.title, item.url, item.variant));
