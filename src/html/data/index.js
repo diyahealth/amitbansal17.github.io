@@ -6,7 +6,6 @@ const covidInfo = require("./covidInfo");
 const organizationSizeOptions = require("./organizationSizeOptions");
 const { doctorsBenefits } = require("./doctorsBenefits");
 const { patientsBenefits } = require("./patientsBenefits");
-const { employersBenefits } = require("./employersBenefits");
 const reviews = require("./reviews");
 const { navigation } = require("./navigation");
 
@@ -19,7 +18,6 @@ module.exports = {
     benefits,
     organizationSizeOptions,
     doctorsBenefits,
-    employersBenefits,
     patientsBenefits,
     reviews
 };
