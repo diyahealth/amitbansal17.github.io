@@ -1,76 +1,355 @@
 extends ../shared/layout.pug
-include ../shared/contact-us.pug
-include ../shared/reviews.pug
-include ../shared/youtube-video.pug
-include ../shared/text-image-carousel.pug
-include ../shared/info-tile.pug
-include ../shared/security-info.pug
+include ../shared/contact-us-form.pug
 include ../shared/sign-in-button.pug
-include ../shared/about-app.pug
-include ../shared/covid-info.pug
-include ../shared/timeline-articles.pug
-include ../shared/boxes-row.pug
 
 block content
-    - const benefitsCarouselId = 'employers-benefits'
-    -
-        const boxesInfo =[
-            { val:'Minimize tedious & repetitive work', class:"light"},
-            { val:'Engage employees to keep them happy and healthy', class:"darker"},
-            { val:'Predict and prevent healthcare costs', class:"dark"}
-        ];
-        const aboutApp = {
-            text: 'DiyaHR is an AI-based, Software-as-a-Service platform that empowers HR with aggregated HRIS and health data. Our platform best serves self-insured corporations with a large number of employees.\nBy enabling HR to predict and prevent high-dollar claims, DiyaHR will save corporations a minimum of 15% in annual healthcare costs.',
-        };
-        const timelineData = [
-            {
-                src: require("../../images/employers/howitworks.png"),
-            },
-            {
-                src: require("../../images/employers/benefits.png"),
-            },
-            {
-                src: require("../../images/employers/security.png"),
-            },
-        ];
-
-    -const missions= ['HIPAA Compliant','No information is shared or sold','Employees control their own health information','Reports are anonymized'];
-    article.carousel-with-tile.primary-background-content
-        +textImageCarouselStatic('head-bg-happy-logo', benefitsCarouselId, 'alternative small')
-            .paragraph-title
-                h2.paragraph-title__main
-                    p Engage employees.
-                    p Reduce healthcare costs
-            .single-tile-container
-                +infoTile('Employers Sign-In', 'alternative')
+    main.main-box.employers-sales
+        article.hr-image-container
+            .hr-image-container__text-box
+                .hr-image-container__title-text
+                    img(src=require("../../images/icons/diyahr-logo.svg"))
+                p.hr-image-container__subtitle-text Compliance-as-a-Service
+                p.hr-image-container__subtitle-text COVID 19
+                .button-container
                     +signInButton('https://diyahr.org/auth/sign-in', 'diyaHR')
-            .box-container
-                 +boxesRow(boxesInfo)
-    article.anchor(id='how-it-works' class="how-it-works-mt")
-        +articleTitleSecond('How it works', { divider: 'primary' }, true)
-    article.primary-background-content
-        .default-content-block.how-it-works-article
-            +imageSection(timelineData[0], 'oneColumn')
-    article.anchor(id='prevent-rising-costs', class='puzzle-container')
-        +twoColumnArticle({ secondaryRight: 'image-container image-container-first' })
-            +setContent('secondaryLeft')
-                span.text.title.
-                    diyaHR unifies disparate systems
-            +setContent('secondaryRight')
-                img(src=require("../../images/employers/puzzle.png"))
-    article.anchor(id='benefits')
-        +articleTitleSecond('Benefits', { divider: 'primary' }, true)
-    article.primary-background-content
-        .default-content-block.how-it-works-article
-            +imageSection(timelineData[1], 'oneColumn')
-    article.anchor(id='security')
-        +articleTitleSecond('Security', { divider: 'primary' }, true)
-    article.primary-background-content
-        .default-content-block.how-it-works-article
-             +twoColumnArticle({ secondaryLeft: 'image-container image-container-second'})
-                +setContent('secondaryLeft')
-                    img(src=require("../../images/employers/security.png"))
-                +setContent('secondaryRight')
-                   +list(missions, { itemText: 'big', icon: 'big' })
-    article.contact-us-background-content.anchor(id="contact-us")
-        +contactUs(organizationSizeOptions)
+
+
+        article.compliance-container
+            .compliance-container__left
+                h2.compliance-container__title Complying with COVID-19 executive mandates — made easy!
+                p.compliance-container__text Complying with COVID-19 executive mandates is complicated. When managing multiple HR systems and navigating ever-changing policies, avoiding hours of repetitive work is close to impossible. But, our HIPAA-compliant COVID Compliance platform makes it easy. Whether mandating vaccines or not, diyaHR COVID Compliance simplifies workplace safety — worldwide.
+                a(href='https://www.youtube.com/watch?v=ueuW0z5_GNc' class='hr-button compliance-container__title__button-size' target="__blank") WATCH VIDEO
+            .compliance-container__right
+                .compliance-container__image-box
+
+
+        article.compliance-service
+            .inner
+                h2 Compliance-as-a-Service
+                p.compliance-service__subtitle Our comprehensive platform is designed to meet your needs.
+                .compliance-service__service-items-box
+                    .compliance-service__item
+                        img.compliance-service__logo(src=require("../../images/employers/item1.png") alt='Description')
+                        p COVID Compliance Experts
+                    .compliance-service__item
+                        img.compliance-service__logo(src=require("../../images/employers/item2.png") alt='Description')
+                        p Easy, comprehensive & up-to-date process
+                    .compliance-service__item
+                        img.compliance-service__logo(src=require("../../images/employers/item3.png") alt='Description')
+                        p System designed specifically for compliance
+
+
+        article.getting-started
+            h2.getting-started__title Getting Started is Easy
+            .container
+                .getting-started__steps
+                    .getting-started__step
+                        .step
+                            .circle-number 1
+                            .line-right
+                        .content
+                            .logo
+                                img(src=require("../../images/employers/getting_item1.png") alt='Description')
+                            p.info Import employees’ information from your human capital management system
+                    .getting-started__step
+                        .step
+                            .arrow
+                            .line-left
+                            .circle-number 2
+                            .line-right
+                        .content
+                            .logo
+                                img(src=require("../../images/employers/getting_item2.png") alt='Description')
+                            p.info Send employees a notification to upload their COVID-19 status
+                    .getting-started__step
+                        .step
+                            .arrow
+                            .line-left
+                            .circle-number 3
+                        .content
+                            .logo
+                                img(src=require("../../images/employers/getting_item3.png") alt='Description')
+                            p.info View a real-time compliance dashboard
+
+
+        article.slider-service
+            .inner
+                h2.slider-service__title
+                    div A Real-Time, Comprehensive
+                    div Dashboard
+
+                .carousel-container#dashboard-carousel
+                    ol.indicators-container
+                        li.indicator.active
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                    .carousel-control.left
+                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                    .carousel-control.right
+                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                    .content-container
+                        .carousel-image-container
+                            .carousel-image-wrapper
+                                .carousel-image-background.dashboard-carousel-bg-1.active
+                                .carousel-image-background.dashboard-carousel-bg-2
+                                .carousel-image-background.dashboard-carousel-bg-3
+                                .carousel-image-background.dashboard-carousel-bg-4
+
+                        ul.text-container
+                            li.carousel-item-container.active
+                                h3.title A unified view of company-wide compliance statistics
+                                p.text Whether your company requires vaccines or weekly testing, diyaHR COVID Compliance provides the relevant compliance data.
+                            li.carousel-item-container
+                                h3.title View compliance by department
+                                p.text Track compliance by specific departments at any office location.
+                            li.carousel-item-container
+                                h3.title Includes the details you need
+                                p.text View compliance by manager and individual employee.
+                            li.carousel-item-container
+                                h3.title Learn how much non-compliance is costing you
+                                p.text See how non-compliant employees are impacting productivity, sick days, healthcare expenses and more.
+
+
+        article.none-compliance
+            .none-compliance__title-box
+                h2.none-compliance__title Understand the Impact of Non-Compliance
+            .none-compliance__first-block
+                .none-compliance__content-block
+                    .none-compliance__main-text
+                        h3.none-compliance__title-text COVID-19 Non-Compliance
+                        p.none-compliance__date As of Oct 1, 2021
+                    .none-compliance__sub-text
+                        p.none-compliance__sub-text-title GLOBAL INC.
+                        p.none-compliance__sub-text-count 10,000 Employees
+                .root-card-wrapper
+                    .card-employees.warning
+                        img.card-employees__img(src=require("../../images/employers/employee1.png") alt='Employee-image')
+                        .card-employees__description
+                            p.card-employees__name Jane Barr
+                            p.card-employees__position CEO
+                            p.card-employees__count-members 10,000 Employees
+                        .card-employees__info
+                            .card-employees__left-part
+                                p Unvaccinated:
+                                p Total Cases:
+                                p In-Office Cases:
+                                p Training Completion:
+                                p Policy Acknowledgement:
+                            .card-employees__right-part
+                                p 13%
+                                p 1,306
+                                p 432
+                                p 45%
+                                p 53%
+            .none-compliance__others-employees
+                .wrapper
+                    .line-left.tablet-only
+                    .line-right
+                    .card-employees.horizontal
+                        .arrow
+                        img.card-employees__img(src=require("../../images/employers/employee5.png") alt='Employee-image')
+                        .card-employees__description
+                            p.card-employees__name Matt Smith
+                            p.card-employees__position SVP, Accounting
+                            p.card-employees__count-members 1,500 Employees
+                        .card-employees__info
+                            .card-employees__left-part
+                                p Unvaccinated:
+                                p Total Cases:
+                                p In-Office Cases:
+                                p Training Completion:
+                                p Policy Acknowledgement:
+                            .card-employees__right-part
+                                p 8%
+                                p 96
+                                p 32
+                                p 52%
+                                p 63%
+                .wrapper
+                    .line-left
+                    .line-right
+                    .card-employees.horizontal
+                        .arrow
+                        img.card-employees__img(src=require("../../images/employers/employee2.png") alt='Employee-image')
+                        .card-employees__description
+                            p.card-employees__name Aaron Garcia
+                            p.card-employees__position SVP, Sales
+                            p.card-employees__count-members 2,000 Employees
+                        .card-employees__info
+                            .card-employees__left-part
+                                p Unvaccinated:
+                                p Total Cases:
+                                p In-Office Cases:
+                                p Training Completion:
+                                p Policy Acknowledgement:
+                            .card-employees__right-part
+                                p 9%
+                                p 120
+                                p 40
+                                p 47%
+                                p 54%
+                .wrapper
+                    .line-left
+                    .line-right
+                    .card-employees.horizontal
+                        .arrow
+                        img.card-employees__img(src=require("../../images/employers/employee3.png") alt='Employee-image')
+                        .card-employees__description
+                            p.card-employees__name Tiffany Lee
+                            p.card-employees__position SVP, Advertising
+                            p.card-employees__count-members 2,500 Employees
+                        .card-employees__info
+                            .card-employees__left-part
+                                p Unvaccinated:
+                                p Total Cases:
+                                p In-Office Cases:
+                                p Training Completion:
+                                p Policy Acknowledgement:
+                            .card-employees__right-part
+                                p 5%
+                                p 100
+                                p 33
+                                p 73%
+                                p 78%
+                .wrapper
+                    .line-left
+                    .card-employees.warning.horizontal
+                        .arrow
+                        img.card-employees__img(src=require("../../images/employers/employee4.png") alt='Employee-image')
+                        .card-employees__description
+                            p.card-employees__name Ed James
+                            p.card-employees__position SVP, Manufacturing
+                            p.card-employees__count-members 4,000 Employees
+                        .card-employees__info
+                            .card-employees__left-part
+                                p Unvaccinated:
+                                p Total Cases:
+                                p In-Office Cases:
+                                p Training Completion:
+                                p Policy Acknowledgement:
+                            .card-employees__right-part
+                                p 30%
+                                p 990
+                                p 327
+                                p 11%
+                                p 18%
+
+
+        article.details-container
+            .inner
+                h2.details-container__title We Take Care of the Details
+                .details-container__content
+                    .details-container__left
+                        img.details-container__alert(src=require("../../images/employers/alert1.png") alt='Alert')
+                        img.details-container__img(src=require("../../images/employers/details1.png") alt='Details')
+                        h3.details-container__subtitle Automated reminders for non-compliant employees
+                        p.details-container__text Send automated reminders to non-compliant employees and, optionally, their management.
+                    .details-container__right
+                        img.details-container__alert(src=require("../../images/employers/alert2.png") alt='Alert')
+                        img.details-container__img(src=require("../../images/employers/details2.png") alt='Details')
+                        h3.details-container__subtitle Ensure adherence to travel policies
+                        p.details-container__text Keep your employees informed about changing requirements for domestic and international travel, without the tedious research.
+
+
+        article.return-to-work-container
+            h2.return-to-work-container__title Return-to-work safely
+            p.return-to-work-container__subtitle Know employees have taken the proper health and safety precautions to return to in-person work.
+            .return-to-work-container__content
+                .return-to-work-container__left
+                   img.return-to-work-container__img-1(src=require("../../images/employers/return-to-work1.png") alt='Return')
+                .return-to-work-container__right
+                   img.return-to-work-container__img-2(src=require("../../images/employers/return-to-work2.png") alt='Return')
+
+
+        article.future-proof
+            .inner
+                .future-proof__main-text
+                    h2.future-proof__title Future Proof
+                    p.future-proof__subtitle No matter how the virus mutates; new booster shots arrive; CDC, federal and state guidelines change; and CEOs adjust corporate mandates — HR can be rest assured that diyaHR COVID Compliance will adapt to their needs.
+                    h3.future-proof__guarantee 100% Guaranteed
+                .future-proof__service-items-box
+                    .future-proof__item
+                        img.future-proof__logo(src=require("../../images/employers/proof1.png") alt='Proof')
+                        p.future-proof__info Built by scientists and physicians
+                    .future-proof__item
+                        img.future-proof__logo(src=require("../../images/employers/proof2.png") alt='Proof')
+                        p.future-proof__info Built by accomplished engineers and AI experts
+                    .future-proof__item
+                        img.future-proof__logo(src=require("../../images/employers/proof3.png") alt='Proof')
+                        p.future-proof__info Configurable, powerful engine
+
+
+        article.hipaa-container
+            .hipaa-container__main-text
+                h2.hipaa-container__title HIPAA-Compliant
+            .hipaa-container__service-items-box
+                .hipaa-container__item
+                    img.hipaa-container__logo(src=require("../../images/employers/illustration1.png") alt='illustration')
+                    .text
+                        h3.hipaa-container__info Safe Log-In
+                        ul.hipaa-container__list 
+                            li.hipaa-container__list-item
+                            img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+                            span.hipaa-container__item-text 100% encryption
+                            li.hipaa-container__list-item
+                            img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+                            span.hipaa-container__item-text Immutable audit trail of all activity
+                            li.hipaa-container__list-item
+                            img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+                            span.hipaa-container__item-text Stored on the most secure cloud systems, not devices
+                .hipaa-container__item
+                    img.hipaa-container__logo(src=require("../../images/employers/illustration2.png") alt='illustration')
+                    .text 
+                        h3.hipaa-container__info Protected Access to Information
+                        ul.hipaa-container__list 
+                            li.hipaa-container__list-item
+                            img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+                            span.hipaa-container__item-text No data is shared or sold
+                            li.hipaa-container__list-item
+                            img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+                            span.hipaa-container__item-text You are in control of your data (If you want your data deleted,we delete it)
+                            li.hipaa-container__list-item
+                            img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+                            span.hipaa-container__item-text No advertising on our platform
+                .hipaa-container__item
+                    img.hipaa-container__logo(src=require("../../images/employers/illustration3.png") alt='illustration')
+                    .text
+                        h3.hipaa-container__info Secure Information Storage
+                        ul.hipaa-container__list 
+                            li.hipaa-container__list-item
+                            img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+                            span.hipaa-container__item-text Single sign-on
+                            li.hipaa-container__list-item
+                            img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+                            span.hipaa-container__item-text Multi-factor authentication
+                            li.hipaa-container__list-item
+                            img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+                            span.hipaa-container__item-text Security alerts for unauthorized access
+
+
+        article.download-container
+            .inner
+                .download-container__main-text
+                    h2.download-container__title Download our product details for free!
+                    button(type='button' class='hr-button download-container__button-size') DOWNLOAD
+
+
+        article.contact-us-container(id="contact-us")
+            .title 
+                h2 Contact Us
+                p.text.
+                    Haven’t found the answer to your question? Want to ask us about pricing options
+                    for your organization? Contact us and we will return to you shortly.
+            .content
+                +contactUsForm(organizationSizeOptions)
+
+block script
+    script.
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('dashboard-carousel', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 8000);
+        });
+
