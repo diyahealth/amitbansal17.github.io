@@ -127,6 +127,10 @@ module.exports = (env, argv) => ({
             from: "robots.txt",
         },
         {
+            from: "./files",
+            to: "./files"
+        },
+        {
             from: "./images/reviews",
             to: "./images/reviews",
         },
