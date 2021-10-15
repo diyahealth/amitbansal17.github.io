@@ -24,21 +24,21 @@
                 padding-top: 280px / 320px * 100%;
             }
 
-            & > .single-button-container,
+            &>.single-button-container,
             .multiple-buttons-container {
                 @media screen and (max-width: $carousel-with-button-break-three) {
                     bottom: inherit;
                 }
             }
 
-            & > .content-container {
+            &>.content-container {
                 @media screen and (max-width: $carousel-with-button-break-three) {
                     bottom: 10%;
                 }
             }
         }
 
-        & > .content-container {
+        &>.content-container {
             bottom: 30%;
 
             @media screen and (max-width: $break-tablet) {
@@ -50,7 +50,7 @@
             }
         }
 
-        & > .single-button-container,
+        &>.single-button-container,
         .multiple-buttons-container {
             bottom: 12%;
 
@@ -63,7 +63,7 @@
             }
         }
 
-        & > .single-tile-container,
+        &>.single-tile-container,
         .multiple-tiles-container {
             bottom: 5%;
 
@@ -138,7 +138,7 @@
                     color: $alternative-primary-color;
                 }
 
-                & + .text {
+                &+.text {
                     color: $text-color;
                     font-size: 20px;
 
@@ -191,7 +191,7 @@
                     color: $alternative-primary-color;
                 }
 
-                & > svg {
+                &>svg {
                     margin-left: 4px;
                     color: $primary-color;
 
@@ -286,30 +286,6 @@
             background-image: url('../images/patients-and-families/24-7-connection.jpg');
             background-position-y: 30%;
         }
-
-        &.head-bg-employee-engagement {
-            background-image: url('../images/employers/employee-engagement.jpg');
-            background-position-y: 100%;
-        }
-
-        &.head-bg-employee-conversation {
-            background-image: url('../images/employers/employee-conversation.jpg');
-        }
-
-        &.head-bg-happy-employees {
-            background-image: url('../images/employers/happy-employees.jpg');
-            background-position-y: 40%;
-        }
-
-        &.head-bg-happy-hr {
-            background-image: url('../images/employers/happy-hr.jpg');
-            background-position-y: 75%;
-        }
-
-        &.head-bg-happy-logo {
-            background-image: url('../images/employers/happy-employees-banner.jpg');
-            background-position-y: 75%;
-        }
     }
 
     .carousel-control {
@@ -369,19 +345,19 @@
     }
 
     &.three {
-        & > .button-container {
+        &>.button-container {
             @media screen and (max-width: $carousel-with-button-break-three) {
                 flex: initial;
                 margin-top: 10px;
 
-                & > *:not(.sign-in-button) {
+                &>*:not(.sign-in-button) {
                     flex: 1;
                 }
             }
         }
     }
 
-    & > .button-container {
+    &>.button-container {
         flex: 1;
         display: flex;
         justify-content: center;
@@ -395,7 +371,7 @@
             flex: initial;
             margin-top: 10px;
 
-            & > *:not(.sign-in-button) {
+            &>*:not(.sign-in-button) {
                 flex: 1;
             }
         }
@@ -434,7 +410,7 @@
         // bottom: -75px;
     }
 
-    & > .info-tile {
+    &>.info-tile {
         flex-basis: 30%;
 
         @media screen and (max-width: $break-tablet) {
@@ -457,7 +433,7 @@
         bottom: -180px;
     }
 
-    & > .info-tile {
+    &>.info-tile {
         flex-basis: 40%;
 
         @media screen and (max-width: $break-tablet) {

@@ -8,7 +8,6 @@ const data = require("../html/data");
 const { rebuildNavigation } = require("../html/data/navigation");
 const { rebuildDoctorsBenefits } = require("../html/data/doctorsBenefits");
 const { rebuildPatientsBenefits } = require("../html/data/patientsBenefits");
-const { rebuildEmployersBenefits } = require("../html/data/employersBenefits");
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -36,7 +35,6 @@ function process(root, argv) {
 
     rebuildNavigation(argv.mode);
     rebuildDoctorsBenefits(argv.mode);
-    rebuildEmployersBenefits(argv.mode);
     rebuildPatientsBenefits(argv.mode);
     return [
         ...htmlParams.map(x => new HtmlWebpackPlugin(x)),

@@ -24,14 +24,6 @@ const pages = {
         description: "How employers can benefit from using DiyaHealth platform",
     },
 
-    employers2: {
-        fileName: "employers2",
-        url: "./employers2",
-        name: "Employers2",
-        title: "Employers - Diya Health2",
-        description: "How employers can benefit from using DiyaHealth platform2",
-    },
-
     doctors: {
         fileName: "doctors",
         url: "./doctors",
