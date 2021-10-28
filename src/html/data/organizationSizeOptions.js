@@ -1,9 +1,5 @@
 const organizationSizeOptions = [
     {
-        value: '',
-        label: 'None',
-    },
-    {
         value: '1-10',
         label: 'up to 10 people',
     },

@@ -20,7 +20,7 @@ mixin contactUsForm(organizationSizeOptions)
                             .form-label Email*
                     .form-control
                         .input-container
-                            select.input(name="OrganizationSize", required, placeholder=" ", type="email", maxlength="250")
+                            select.input(name="OrganizationSize", required, placeholder=" ", type="email", maxlength="250", value=options[0].value)
                                 each option in options
                                     option(value=option.value) #{option.label}
                             .form-label Organization Size
