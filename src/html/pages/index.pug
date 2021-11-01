@@ -1,5 +1,4 @@
 extends ../shared/layout.pug
-
 include ../shared/text-image-carousel.pug
 include ../shared/contact-us.pug
 include ../shared/reviews.pug
@@ -12,6 +11,7 @@ include ../shared/security-info.pug
 include ../shared/about-app-index.pug
 include ../shared/youtube-video.pug
 include ../shared/list.pug
+include ../shared/sign-in-button.pug
 
 block head
     meta(name="twitter:card" value="Diya Health Website")
@@ -45,82 +45,130 @@ block content
             main: 'right',
         };
 
+        
+    main.main-box.main-page                         
+        article.main-introduce-container
+                a(href='https://www.diyahealth.org/employers' class='main-introduce-container__alert' rel="noopener noreferrer nofollow") Use our Compliance-as-a-Service Product to stay in compliance with COVID-19 regulatory requirements and bring employees back to work safely. Click here for more information!
+                button.material-btn.main-introduce-container__demo.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+                    span.label Request a demo
+       
+        article
+            +articleTitle('Our Products', { divider: 'primary' }, true)
+        article.compliance-product-container.gray
+            .compliance-product-container__left
+                h2.compliance-product-container__title COVID Compliance-as-a-Service
+                p.compliance-product-container__text Helps employers stay in compliance with COVID-19 regulatory requirements and bring employees back to work safely.
+                .compliance-product-container__button-box
+                    a(href='https://www.youtube.com/watch?v=ueuW0z5_GNc' class='material-btn large color' target="__blank" rel="noopener noreferrer nofollow") WATCH VIDEO
+                    a(href='https://www.youtube.com/watch?v=ueuW0z5_GNc' class='material-btn large color addMarginLeft' target="__blank" rel="noopener noreferrer nofollow") LEARN MORE
+            .compliance-product-container__right
+                .compliance-product-container__image-box.image-compliance-first
+        article.compliance-product-container
+            .compliance-product-container__left
+                h2.compliance-product-container__title Wellness Engagement
+                p.compliance-product-container__text Enables HR to create and launch personalized wellness programs for optimal employee engagement and results.
+            .compliance-product-container__right
+                .compliance-product-container__image-box.image-compliance-second
+        article.compliance-product-container.gray
+            .compliance-product-container__left
+                h2.compliance-product-container__title Discharge Companion
+                p.compliance-product-container__text Transforms the archaic post-surgical discharge process into a living, engaging experience that drives better health outcomes.
+            .compliance-product-container__right
+                .compliance-product-container__image-box.image-compliance-third
+        article
+            +articleTitle('Testimonials', { divider: 'primary' }, true)
+            .slider-service
+                    .inner
+                        h2.slider-service__title                   
+                        .carousel-container#dashboard-carousel
+                            ol.indicators-container.custom-settings
+                                li.indicator.active
+                                li.indicator
+                                li.indicator
+                                li.indicator
+                            .carousel-control.left
+                                img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                            .carousel-control.right
+                                img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                            .content-container
+                                .carousel-image-container
+                                    .carousel-image-wrapper
+                                        .carousel-image-background.active
+                                            .carousel-box.dashboard-carousel-bg-2
+                                            .text-box
+                                                h4 David Pidwell 
+                                                p  Faculty, Stanford University Graduate School of Business
+                                            .spice-box
+                                        .carousel-image-background
+                                            .carousel-box.dashboard-carousel-bg-4
+                                            .text-box
+                                                h4 Gary Chu
+                                                p MD - Chief, Physical Health and Wellness, The Permanente Medical Group
+                                            .spice-box
+                                        .carousel-image-background
+                                            .carousel-box.dashboard-carousel-bg-1
+                                            .text-box
+                                                h4 Sangeeta Marwaha, MD
+                                                p MD - Chair, Dermatology Technology
+                                            .spice-box
+                                        .carousel-image-background
+                                            .carousel-box.dashboard-carousel-bg-3
+                                            .text-box
+                                                h4 Rajesh K Sood, MD
+                                                p MD - Epidemiology, District Programme Officer, National Health Mission, HP, India
+                                            .spice-box
+                                ul.text-container
+                                    .text-container__box
+                                        li.carousel-item-container.active
+                                            p.text 	&#8221;Diya Health has the potential to revolutionize the health and wellness industry.&#8221;
+                                        li.carousel-item-container
+                                            p.text 	&#8221;Diya Health's technology will help to bridge an important gap in the Personal Health Records (PHR) and telehealth industries.&#8221;
+                                        li.carousel-item-container
+                                            p.text 	&#8221;Diya Health allows doctors to quickly understand and trust patient's health information, and give the safest and best medical care.&#8221;
+                                        li.carousel-item-container
+                                            p.text 	&#8221;Diya Health is designed to help us manage immunization compliance and infectious disease outbreaks in the rural communities of HP, India.&#8221;
+        article
+            +articleTitle('Press', { divider: 'primary' }, true)
+        article.press-container
+            .press-container__main-box
+                .press-container__card-box
+                    .card-press
+                        .card-press__title Blogs
+                        .card-press__image
+                            a(href='https://www.youtube.com/watch?v=ueuW0z5_GNc' class='' target="__blank" rel="noopener noreferrer nofollow")
+                                img(src=require("../../images/main-page/team_image.png") alt='Description')    
+                        p.card-press__info Helps employers stay in compliance with COVID-19 regulatory requirements and bring employees back to work safely.
+                        a(href='https://www.youtube.com/watch?v=ueuW0z5_GNc' class='card-press__read-more' target="__blank" rel="noopener noreferrer nofollow") Read more
+                    .card-press
+                        .card-press__title Product Details E-Book
+                        .card-press__image
+                            a(href='https://www.youtube.com/watch?v=ueuW0z5_GNc' class='' target="__blank" rel="noopener noreferrer nofollow")
+                                img(src=require("../../images/main-page/team_image.png") alt='Description')     
+                        p.card-press__info Helps employers stay in compliance with COVID-19 regulatory requirements and bring employees back to work safely.
+                        a(href='https://www.youtube.com/watch?v=ueuW0z5_GNc' class='card-press__read-more' target="__blank" rel="noopener noreferrer nofollow") Download
+                    .card-press
+                        .card-press__title Social Media
+                        .card-press__image
+                            a(href='https://www.youtube.com/watch?v=ueuW0z5_GNc' class='' target="__blank" rel="noopener noreferrer nofollow")
+                                img(src=require("../../images/main-page/team_image.png") alt='Description')     
+                        p.card-press__info Helps employers stay in compliance with COVID-19 regulatory requirements and bring employees back to work safely.
+                        a(href='https://www.youtube.com/watch?v=ueuW0z5_GNc' class='card-press__read-more' target="__blank" rel="noopener noreferrer nofollow") 
+                .press-container__request-box 
+                    .press-container__line-box
+                        .press-container__blue-line      
+                    .press-container__demo-request
+                        button.material-btn.large.color(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+                            span.label Request a demo
+                    .press-container__line-box
+                        .press-container__blue-line
+        article.contact-us-background-content(id="contact-us")
+            +contactUs(organizationSizeOptions)
+block script
     script.
         window.addEventListener('load', (event) => {
-            diya.carousel.init('benefits', {
+            window.diya.carousel.init('dashboard-carousel', {
                 switchSlideControlSelector: '.carousel-control',
                 backgroundSelector: '.carousel-image-background',
             }, 8000);
         });
-    article.carousel-with-buttons.alternative-background-content.three
-        +textImageCarousel(benefits, benefitsCarouselId, 'small three')
-            .multiple-buttons-container.three
-                .button-container
-                    a.material-btn.large(href=employersUrl)
-                        span.label
-                            include ../../images/icons/business-center-icon.svg
-                            span Employers
-                .button-container
-                    a.material-btn.large(href=doctorsUrl)
-                        span.label
-                            include ../../images/icons/local-hospital-icon.svg
-                            span Doctors
-                .button-container.large
-                    a.material-btn.large(href=individualsUrl)
-                        span.label
-                            include ../../images/icons/person-icon.svg
-                            span Patients & Families
-    article
-        +partners('small')
-    article
-        +articleTitle('Our Products', { divider: 'primary' }, true)
-    article.primary-background-content
-        +setAboutAppContent('info')
-            i DiyaHR 
-            span.
-                is a digital health, Software-as-a-Service platform that empowers HR to predict and contain rising healthcare costs.
-                Using data-driven insights,
-            i DiyaHR's 
-            span.
-                robust analytics and management tools allow corporate HR departments to reduce spending and enhance employee well-being.
-                As employers increasingly focus on employee experience, 
-            i DiyaHR 
-            span.
-                allows HR departments to foster exceptional change.
-        +aboutAppIndex(aboutDiyaHrApp)
-            include ../../images/icons/diyahr-logo.svg
-    article
-        +setAboutAppContent('info')
-            i DiyaMD 
-            span.
-                is a budding health management platform that integrates personal health records with tools for patient engagement.
-                Modeled after a physician's customary workflow, 
-            i DiyaMD 
-            span.
-                seamlessly plugs into any exisiting electronic health record (EHR) system.
-                In addition to bridging the gap between EHRs and patient-reported information,
-                the platform has numerous other unique capabilities, including telehealth, tracking of COVID-19 symptoms, remote patient monitoring,
-                medication safety alerts, and automatic capture of billable services.
-        +aboutAppIndex(aboutDiyaMdApp)
-            include ../../images/icons/diyamd-logo.svg
-    article.primary-background-content
-        +setAboutAppContent('info')
-            span Our personal health records app, 
-            i myDiya
-            span , allows a person to manage their own electronic “health diary.”
-            span.
-                It can receive data from any standard healthcare system, is compliant with personal-security standards, and can be used in emergencies as a personal
-                “medical alert bracelet.”  It allows for remote referrals, monitoring of symptoms, alerts about medications
-                (e.g., dosage duplications or contraindications), among other capabilities. Most importantly, the information is controlled by,
-                    owned by, and travels with the patient, regardless of changes in doctor, medical plan, residence, or caregiver.
-        +aboutAppIndex(aboutMyDiyaApp)
-            include ../../images/icons/mydiya-logo.svg
-        
-    article
-        +covidInfo(covidInfo.index)
-            img(src=require("../../images/patients-and-families/covid.jpg"))
-    article
-        +articleTitle('Protecting Your Information is Our Top Priority', { divider: 'primary' }, true)
-        +securityInfo
-    article.contact-us-background-content(id="contact-us")
-        +contactUs(organizationSizeOptions)
+    script(src="https://www.google.com/recaptcha/api.js", defer)

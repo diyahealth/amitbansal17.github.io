@@ -4,11 +4,13 @@
     top: 0;
     z-index: 3;
     width: 100%;
+   
 
     .navigation {
         @media screen and (max-width: $break-tablet) {
             display: none;
         }
+       
         padding: 0 $container-gutter;
         display: flex;
         justify-content: space-between;
