@@ -83,6 +83,10 @@
     }
 }
 
+.color {
+    color: #fff;
+}
+
 .material-btn {
     padding: 8px 22px;
     min-width: 80px;
@@ -111,6 +115,7 @@
     &.large {
         padding: 13px 28px;
         font-size: 30px;
+        text-align: center;
 
         &>.label {
             &>.icon {
