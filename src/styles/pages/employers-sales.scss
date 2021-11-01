@@ -1003,6 +1003,10 @@
             max-width: 1440px;
         }
 
+        &__title {
+            margin-bottom: 20px;
+        }
+
         &__main-text {
             display: flex;
             flex-direction: column;
@@ -1010,7 +1014,7 @@
         }
 
         &__subtitle {
-            margin: 16px 0;
+            margin: 36px 0 16px 0;
             max-width: 640px;
             text-align: center;
         }
