@@ -34,19 +34,6 @@
         padding: 0;
     }
 
-
-    .hr-button {
-        padding: 16px 22px;
-        border-radius: 4px;
-        background-color: #0c9fdb;
-        color: white;
-        font-size: 18px;
-        line-height: 24.5px;
-        border: none;
-        cursor: pointer;
-        display: inline-block;
-    }
-
     // Main image
 
     .hr-image-container {
@@ -216,6 +203,10 @@
         &__title {
             text-align: center;
             margin-bottom: 36px;
+
+            .material-btn {
+                margin-top: 20px;
+            }
         }
 
         &__steps {
