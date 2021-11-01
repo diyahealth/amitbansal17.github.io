@@ -2,5 +2,5 @@
     "id": "medicationSafety",
     "name": "Medication Safety",
     "description": "Manage your's and your loved one's medications with myDiya",
-    "parent": "patientsAndFamilies"
+    "parent": "individuals"
 }

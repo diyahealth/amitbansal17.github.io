@@ -2,5 +2,5 @@
     "id": "telehealthCapabilities",
     "name": "Telehealth Capabilities",
     "description": "Telehealth capabilities of DiyaMD product",
-    "parent": "doctors"
+    "parent": "healthSystems"
 }

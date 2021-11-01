@@ -5,38 +5,36 @@ const pages = {
         url: "./",
         name: "Diya Health",
         title: "Diya Health",
-        description: `The primary mission of Diya Health is to build technology to bridge the gap of access to
-                    basic health care information for underprivileged population, in order to assist them
-                    to make safer health care decisions`,
+        description: "Diya Health’s new COVID-19 platform helps employers return to work safely while staying compliant with regulatory requirements",
     },
     aboutUs: {
         fileName: "about-us",
         url: "./about-us",
         name: "About Us",
         title: "About Us - Diya Health",
-        description: "Learn about the Diya Health mission and members",
+        description: "Diya Health is a digital health, AI-driven Software-as-a-Service platform that empowers employers, health systems, and individuals to deliver better health outcomes at lower cost",
     },
     employers: {
         fileName: "employers",
         url: "./employers",
         name: "Employers",
         title: "Employers - Diya Health",
-        description: "How employers can benefit from using DiyaHealth platform",
+        description: " Our COVID Compliance-as-a-Service platform helps employers stay in compliance with pandemic regulatory requirements and bring employees back to work safely",
     },
 
-    doctors: {
-        fileName: "doctors",
-        url: "./doctors",
-        name: "Doctors",
-        title: "Doctors - Diya Health",
-        description: "How doctors can benefit from using DiyaHealth platform",
+    healthSystems: {
+        fileName: "health-systems",
+        url: "./health-systems",
+        name: "Health Systems",
+        title: "Health Systems - Diya Health",
+        description: "Our Discharge Companion transforms the archaic post-discharge process into a living, engaging care experience that delivers great health outcomes",
     },
-    patientsAndFamilies: {
-        fileName: "patients-and-families",
-        url: "./patients-and-families",
-        name: "Patients & Families",
-        title: "Patients & Families - Diya Health",
-        description: "Patients and families DiyaHealth diary usage",
+    individuals: {
+        fileName: "individuals",
+        url: "./individuals",
+        name: "Individuals",
+        title: "Individuals - Diya Health",
+        description: "Diya Health empowers people to take control of their health information and achieve their health goals using a personal health diary",
     },
     contactUs: {
         fileName: "contact-us",
@@ -50,7 +48,7 @@ const pages = {
         url: "./blog",
         name: "Our Blog",
         title: "Our Blog - Diya Health",
-        description: "Get news about Diya Health products and updates",
+        description: "Blogs, news, and other announcements that help employers stay compliant with COVID-19 mandates and promote a safe workplace",
     },
     newsAndResources: {
         fileName: "news-and-resources",
@@ -80,6 +78,7 @@ const pages = {
         title: "Vaccine Passport - Diya Health",
         description: "DiyaHR provides a powerful tool for vaccine passports",
     },
+
 };
 
 module.exports = pages;

@@ -2,5 +2,5 @@
     "id": "emergencyCard",
     "name": "Emergency Card",
     "description": "Emergency card with QR code by myDiya product",
-    "parent": "patientsAndFamilies"
+    "parent": "individuals"
 }

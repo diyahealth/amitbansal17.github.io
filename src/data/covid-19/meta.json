@@ -2,5 +2,5 @@
     "id": "covid19",
     "name": "COVID-19 Symptom Tracker",
     "description": "Manage your risk to COVID-19 and track your symptoms with myDiya's COVID-19 Symptom Tracker. ",
-    "parent": "patientsAndFamilies"
+    "parent": "individuals"
 }

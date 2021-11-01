@@ -2,5 +2,5 @@
     "id": "establishYourBrand",
     "name": "Establish Your Brand",
     "description": "Build your brand and connect with new patients on DiyaMD's platform",
-    "parent": "doctors"
+    "parent": "healthSystems"
 }

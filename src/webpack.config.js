@@ -7,9 +7,10 @@ const CssRewritePlugin = require("css-rewrite-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const data = require("./html/data");
+const redirects = require("./redirects.json");
 const process = require('./framework');
 
-const processAfterDynamic = ['doctors', 'patientsAndFamilies'];
+const processAfterDynamic = ['healthSystems', 'individuals'];
 
 
 const processStaticPage = (pageKey, argv) => {
@@ -44,6 +45,17 @@ function buildTemplateData(pageKey, mode) {
     };
 }
 
+function processRedirect(from, to, argv) {
+    const redirect_to = argv.mode === 'development' ? to + '.html' : to;
+
+    return new HtmlWebpackPlugin({
+        template: `./html/shared/redirect.pug`,
+        templateParameters: { redirect_to },
+        filename: `${from}.html`,
+        inject: false
+    });
+}
+
 function buildWebpackPages(argv) {
     const pages = data.pages;
 
@@ -59,7 +71,9 @@ function buildWebpackPages(argv) {
 
     const restStaticPages = processAfterDynamic.map(pageKey => processStaticPage(pageKey, argv));
 
-    return existing.concat(dynamic).concat(restStaticPages);
+    const redirectPages = redirects.map(x => processRedirect(x.from, x.to, argv));
+
+    return existing.concat(dynamic).concat(restStaticPages).concat(redirectPages);
 }
 
 module.exports = (env, argv) => ({

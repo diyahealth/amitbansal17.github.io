@@ -1,0 +1,9 @@
+[{
+        "from": "doctors",
+        "to": "health-systems"
+    },
+    {
+        "from": "patients-and-families",
+        "to": "individuals"
+    }
+]
