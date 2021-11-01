@@ -59,6 +59,37 @@
         background-position-y: 100%, 0;
         background-position-x: 0, 30%;
 
+        & p:first-child {
+            font-size: 60px;
+            font-weight: 900;
+            margin-bottom: 25px;
+
+            @media screen and (max-width: $break-tablet) {
+                font-size: 36px;
+                margin-bottom: 0;
+
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                font-size: 30px;
+            }
+        }
+
+        & p:last-child {
+            font-size: 45px;
+            font-weight: 700;
+
+            @media screen and (max-width: $break-tablet) {
+                font-size: 28px;
+
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                font-size: 20px;
+
+            }
+        }
+
         &__text-box {
             display: flex;
             flex-direction: column;
@@ -67,16 +98,24 @@
             top: 75%;
             left: 50%;
             transform: translate(-50%, -50%);
+
+            @media screen and (max-width: $break-mobile) {
+                width: 100%;
+                padding: 0 5px;
+            }
         }
 
         &__subtitle-text {
-            font-size: 40px;
-            font-weight: 600;
             line-height: 54px;
             white-space: nowrap;
 
             @media screen and (max-width: $break-mobile) {
                 font-size: 30px;
+                white-space: normal;
+                text-align: center;
+                line-height: 38px;
+
+
             }
         }
 
