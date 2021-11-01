@@ -5,5 +5,9 @@
     {
         "from": "patients-and-families",
         "to": "individuals"
+    },
+    {
+        "from": "vaccine-passport",
+        "to": "employers"
     }
 ]

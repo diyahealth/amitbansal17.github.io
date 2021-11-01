@@ -50,18 +50,6 @@ const buildAboutUsDropdown = () => {
     return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
 }
 
-const buildEmployersDropdown = () => {
-    const employersUrlHr = pages.employers.url;
-    const employersUrlVP = pages.vaccinePassport.url;
-
-    const titleUrlItems = [
-        { title: 'DiyaHR', variant: 'subheader', url: employersUrlHr},
-        { title: 'COVID Compliance', url: employersUrlVP},
-    ];
-
-    return titleUrlItems.map(item => buildPage(item.title, item.url, item.variant));
-}
-
 const buildBlogDropdown = () => {
     const { ourBlog, newsAndResources } = pages;
     return [pageToLink(ourBlog), pageToLink(newsAndResources)];
@@ -75,7 +63,6 @@ const buildNavigationLinks = (mode) => {
     navigationLinks.push(
         {
             ...pageToLink(pages.employers, null, postfix),
-            dropdown: buildEmployersDropdown(),
         },
         {
             ...pageToLink(pages.healthSystems, null, postfix),
