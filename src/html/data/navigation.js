@@ -44,7 +44,6 @@ const buildAboutUsDropdown = () => {
         { title: 'Our History', url: `${aboutUsUrl}#history`},
         { title: 'Our Team', url: `${aboutUsUrl}#team`},
         { title: 'Partnerships', url: `${aboutUsUrl}#partnerships `},
-        { title: 'Careers', url: `${aboutUsUrl}#careers `},
     ];
 
     return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
