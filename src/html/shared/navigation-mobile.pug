@@ -2,8 +2,11 @@
     .logo-container
         a(href=pages.index.url)
             img.logo(src=require("../../images/icons/diyahealth-logo.svg"), alt="Diya Health Logo")
-    button.material-btn.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
-                span.label Request a demo
+    if (page.url == pages.employers.url)
+        +signInButton('https://diyahr.org/auth/sign-in', 'diyaHR')
+    else
+        button.material-btn.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+            span.label Request a Demo
     .menu-toggle
         input(type="checkbox")
         span

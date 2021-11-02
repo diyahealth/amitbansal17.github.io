@@ -2,5 +2,5 @@ mixin signInButton(link, appName)
     a#sign-in.sign-in-button(href=link)
         span.label
             span.icon-container
-                include ../../images/icons/diya-favicon.svg
+                img(src=require('../../images/icons/diya-favicon.svg'))
             span.text-container Sign in to #{appName}

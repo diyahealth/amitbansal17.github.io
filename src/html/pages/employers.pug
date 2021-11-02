@@ -4,15 +4,13 @@ include ../shared/sign-in-button.pug
 
 block content
     main.main-box.employers-sales
+
         article.hr-image-container
+            button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+                span.label Request a demo
             .hr-image-container__text-box
-                //- .hr-image-container__title-text
-                //-     img(src=require("../../images/icons/diyahr-logo.svg"))
                 p.hr-image-container__subtitle-text COVID Compliance-as-a-Service
                 p.hr-image-container__subtitle-text Return to Work Made Easy
-                //- .button-container
-                //-     +signInButton('https://diyahr.org/auth/sign-in', 'diyaHR')
-
 
         article.compliance-container
             .compliance-container__left
