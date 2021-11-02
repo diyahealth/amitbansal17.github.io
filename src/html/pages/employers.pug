@@ -1,6 +1,6 @@
 extends ../shared/layout.pug
 include ../shared/contact-us-form.pug
-include ../shared/sign-in-button.pug
+include ../shared/customers.pug
 
 block content
     main.main-box.employers-sales
@@ -30,6 +30,8 @@ block content
                     .label WATCH VIDEO
             .compliance-container__right
                 .compliance-container__image-box
+
+        +customers('lift-up')
 
 
         article.compliance-service

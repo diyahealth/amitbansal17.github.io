@@ -171,6 +171,14 @@
         }
     }
 
+
+    .lift-up {
+        @media screen and (min-width: $break-tablet) {
+            margin-top: -80px;
+        }
+    }
+
+
     // Compliance service
 
     .compliance-service {
