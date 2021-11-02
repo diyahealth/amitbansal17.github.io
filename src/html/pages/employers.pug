@@ -1,6 +1,7 @@
 extends ../shared/layout.pug
 include ../shared/contact-us-form.pug
 include ../shared/customers.pug
+include ../shared/integrations.pug
 
 block content
     main.main-box.employers-sales
@@ -360,6 +361,10 @@ block content
                     h2.download-container__title Download our product details for free!
                     a(href='./files/diyaHR CaaS Presentation 10.21.21.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
                         .label DOWNLOAD
+
+        article.integrations
+            h2 Integrations
+            +integrations(true)
 
 
         article.contact-us-container(id="contact-us")

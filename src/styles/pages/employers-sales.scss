@@ -202,8 +202,7 @@
 
 
         &__subtitle {
-            margin-top: 16px;
-            margin: auto;
+            margin: 16px auto;
             max-width: 624px;
         }
 
@@ -1259,6 +1258,20 @@
 
         &__title {
             margin-bottom: 20px;
+        }
+    }
+
+    .integrations {
+        margin: auto;
+        max-width: 1440px;
+
+        h2 {
+            text-align: center;
+            margin: 80px 0 32px;
+
+            @media screen and (max-width: $break-tablet) {
+                margin: 40px 0 16px;
+            }
         }
     }
 
