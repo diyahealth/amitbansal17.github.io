@@ -1,8 +1,6 @@
 export type ToggleClass = (id: string, classToAdd: string) => void;
 
 export function toggleClass(id: string, classToAdd: string) {
-    window.location.hash = "#" + id;
-
     if (!classToAdd) {
         return;
     }
@@ -12,5 +10,6 @@ export function toggleClass(id: string, classToAdd: string) {
         return;
     }
 
+    window.location.hash = "#" + id;
     element.classList.toggle(classToAdd);
 }

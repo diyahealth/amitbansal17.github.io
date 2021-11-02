@@ -1,0 +1,31 @@
+mixin integrationLogos(useCollapse)
+    -
+        const integrations = [
+            'BambooHR',
+            'Epic',
+            'ADP',
+            'Oracle',
+            'Excel',
+            'Workday',
+            'OfficeWork',
+            'SAP',
+            'SuccessFactors',
+            'Cerner',
+            'DrugBank',
+            'Cornerstone',
+            'NIH',
+            'Kaiser Permanente'
+        ];
+
+    .integrations-container#integrations-list(class=useCollapse ? 'collapsed' : '')
+        ul.integrations-list
+            each i in integrations
+                li.integration
+                    img(src=require(`../../images/integrations/${i} Logo.png`), alt=i, title=i)
+
+        if (useCollapse)
+            .integrations-toggle(onclick="window.diya.toggleClass('integrations-list','collapsed')")
+                .text See&nbsp;
+                .icon 
+                    img(src=require("../../images/employers/arrow-left.svg"))
+

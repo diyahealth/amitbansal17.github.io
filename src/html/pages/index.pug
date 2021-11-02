@@ -13,6 +13,7 @@ include ../shared/youtube-video.pug
 include ../shared/list.pug
 include ../shared/sign-in-button.pug
 include ../shared/customers.pug
+include ../shared/integrations.pug
 
 block head
     meta(name="twitter:card" value="Diya Health Website")
@@ -112,39 +113,45 @@ block content
                                             p.text 	&#8221;Diya Health is designed to help us manage immunization compliance and infectious disease outbreaks in the rural communities of HP, India.&#8221;
         article
             +articleTitle('Press', { divider: 'primary' }, true)
-        article.press-container
-            .press-container__main-box
-                .press-container__card-box
-                    .card-press
-                        .card-press__title Blogs
-                        .card-press__image
-                            img(src=require("../../images/blog/patient-doctor-call.jpg") alt='Patient and doctor video call')
-                        p.card-press__info Diya Health has partnered with U.S. cardiologists to provide care to patients with severe heart conditions in Himachal Pradesh, India.
-                        a(href=pages.ourBlog.url class='card-press__read-more' target="__blank" rel="noopener noreferrer nofollow") Read more
-                    .card-press
-                        .card-press__title Product Details E-Book
-                        .card-press__image
-                            img(src=require("../../images/main-page/e-book-cover.jpg") alt='Product details E-Book')
-                        p.card-press__info Helps employers stay in compliance with COVID-19 regulatory requirements and bring employees back to work safely.
-                        a(href='./files/diyaHR CaaS Presentation 10.21.21.pdf' class='card-press__read-more' target="__blank" rel="noopener noreferrer nofollow") Download
-                    .card-press
-                        .card-press__title Social Media
-                        .card-press__full-height
-                            iframe(src="https://my.walls.io/f5gkq?nobackground=1&amp;show_header=0"
-                                    frameborder="0"
-                                    allowfullscreen=""
-                                    id="wallsio-iframe"
-                                    style="border:0;width:100%;height:100%;min-height:330px" 
-                                    loading="lazy"
-                                    title="Diya Health Linked-in feed")
-                .press-container__request-box 
-                    .press-container__line-box
-                        .press-container__blue-line
-                    .press-container__demo-request
-                        button.material-btn.large.color(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
-                            span.label Request a demo
-                    .press-container__line-box
-                        .press-container__blue-line
+            .press-container
+                .press-container__main-box
+                    .press-container__card-box
+                        .card-press
+                            .card-press__title Blogs
+                            .card-press__image
+                                img(src=require("../../images/blog/patient-doctor-call.jpg") alt='Patient and doctor video call')
+                            p.card-press__info Diya Health has partnered with U.S. cardiologists to provide care to patients with severe heart conditions in Himachal Pradesh, India.
+                            a(href=pages.ourBlog.url class='card-press__read-more' target="__blank" rel="noopener noreferrer nofollow") Read more
+                        .card-press
+                            .card-press__title Product Details E-Book
+                            .card-press__image
+                                img(src=require("../../images/main-page/e-book-cover.jpg") alt='Product details E-Book')
+                            p.card-press__info Helps employers stay in compliance with COVID-19 regulatory requirements and bring employees back to work safely.
+                            a(href='./files/diyaHR CaaS Presentation 10.21.21.pdf' class='card-press__read-more' target="__blank" rel="noopener noreferrer nofollow") Download
+                        .card-press
+                            .card-press__title Social Media
+                            .card-press__full-height
+                                iframe(src="https://my.walls.io/f5gkq?nobackground=1&amp;show_header=0"
+                                        frameborder="0"
+                                        allowfullscreen=""
+                                        id="wallsio-iframe"
+                                        style="border:0;width:100%;height:100%;min-height:330px" 
+                                        loading="lazy"
+                                        title="Diya Health Linked-in feed")
+                    .press-container__request-box 
+                        .press-container__line-box
+                            .press-container__blue-line
+                        .press-container__demo-request
+                            button.material-btn.large.color(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+                                span.label Request a demo
+                        .press-container__line-box
+                            .press-container__blue-line
+
+        article
+            +articleTitle('Integrations', { divider: 'primary' }, true)
+            +integrationLogos(true)
+
+
         article.contact-us-background-content(id="contact-us")
             +contactUs(organizationSizeOptions)
 block script
