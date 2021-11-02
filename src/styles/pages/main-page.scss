@@ -15,7 +15,6 @@
         height: auto;
     }
 
-
     @media screen and (max-width: $break-mobile) {
         padding: 0;
     }
@@ -24,10 +23,6 @@
     flex-direction: column;
     background-color: white;
     width: 25%;
-    height: 330px;
-
-
-
 
     &__title {
         padding: 10px;
@@ -38,16 +33,15 @@
             text-align: center;
             font-size: 28px;
             font-weight: 900;
-
-
         }
 
     }
 
     &__image {
         width: 100%;
-        height: 120px;
+        aspect-ratio: 16/9;
         background-color: gray;
+        overflow: hidden;
 
         & img {
             object-fit: cover;
@@ -57,6 +51,11 @@
 
     }
 
+
+    &__full-height {
+        flex-grow: 1;
+        min-height: 330px;
+    }
 
     &__read-more {
         color: #43B5E3;
@@ -296,7 +295,6 @@
 
     .press-container {
         width: 100%;
-        height: 550px;
         display: flex;
         align-items: center;
         background: linear-gradient(to bottom, #F3FAFD 62%, #F3F3F3 38%);
@@ -308,25 +306,19 @@
 
         &__main-box {
             @media screen and (max-width: $break-tablet) {
-
                 height: 100%;
                 width: 100%;
-
-
             }
         }
 
         &__card-box {
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: stretch;
 
             @media screen and (max-width: $break-tablet) {
-
                 flex-direction: column;
                 width: 100%;
-
-
             }
         }
 
@@ -339,9 +331,6 @@
 
             @media screen and (max-width: $break-tablet) {
                 margin-top: 0;
-
-
-
             }
         }
 
