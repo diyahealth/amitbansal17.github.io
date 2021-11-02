@@ -12,6 +12,7 @@ include ../shared/about-app-index.pug
 include ../shared/youtube-video.pug
 include ../shared/list.pug
 include ../shared/sign-in-button.pug
+include ../shared/customers.pug
 
 block head
     meta(name="twitter:card" value="Diya Health Website")
@@ -52,11 +53,16 @@ block content
                 p.compliance-product-container__text Transforms the archaic post-surgical discharge process into a living, engaging experience that drives better health outcomes.
             .compliance-product-container__right
                 .compliance-product-container__image-box.image-compliance-third
+
+
+        +customers()
+
+
         article
             +articleTitle('Testimonials', { divider: 'primary' }, true)
             .slider-service
                     .inner
-                        h2.slider-service__title                   
+                        h2.slider-service__title
                         .carousel-container#dashboard-carousel
                             ol.indicators-container.custom-settings
                                 li.indicator.active

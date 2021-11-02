@@ -1,0 +1,31 @@
+.customers-container {
+    max-width: $container-max-width;
+    margin: auto;
+    padding: 20px 80px;
+    align-items: center;
+
+    @media screen and (max-width: $break-tablet) {
+        padding: 10px 20px;
+    }
+}
+
+.customers-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    .customer-logo {
+        margin: 12px;
+        margin: 24px;
+
+        img {
+            max-width: 250px;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        flex-direction: column;
+    }
+}
