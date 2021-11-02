@@ -3,7 +3,7 @@
         a(href=pages.index.url)
             img.logo(src=require("../../images/icons/diyahealth-logo.svg"), alt="Diya Health Logo")
     if (page.url == pages.employers.url)
-        +signInButton('https://diyahr.org/auth/sign-in', 'diyaHR')
+        +signInDiyaHr
     else
         button.material-btn.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
             span.label Request a Demo

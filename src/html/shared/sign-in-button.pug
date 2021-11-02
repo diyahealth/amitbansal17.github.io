@@ -1,6 +1,13 @@
-mixin signInButton(link, appName)
-    a#sign-in.sign-in-button(href=link)
+mixin signInButton(link, text)
+    a#sign-in.material-btn(href=link)
         span.label
-            span.icon-container
-                img(src=require('../../images/icons/diya-favicon.svg'))
-            span.text-container Sign in to #{appName}
+            span.text-container= text
+
+mixin signInMyDiya
+    +signInButton('https://mydiya.org/auth/sign-in', 'Sing In to myDiya')
+
+mixin signInDiyaMd
+    +signInButton('https://diyamd.org/auth/sign-in', 'Sign In')
+
+mixin signInDiyaHr
+    +signInButton('https://diyahr.org/auth/sign-in', 'Employers Sing In')
