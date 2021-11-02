@@ -135,6 +135,10 @@
         margin: auto;
         padding: 96px 80px;
 
+        .material-btn {
+            margin-top: 16px;
+        }
+
         @media screen and (max-width: $break-tablet) {
             padding: 40px 20px;
             flex-direction: column;
