@@ -2,6 +2,25 @@
     background-color: $text-color;
     color: #fff;
 
+    .input-footer-group {
+        display: flex;
+        justify-content: flex-start;
+
+        @media screen and (max-width: $break-mobile) {
+            justify-content: center;
+            margin-top: 25px;
+        }
+
+        &__img {
+            width: 45px;
+            height: auto;
+
+            @media screen and (max-width: $break-tablet) {
+                width: 40px;
+            }
+        }
+    }
+
     .container {
         max-width: $container-max-width;
         margin: auto;
@@ -9,7 +28,7 @@
         display: flex;
         justify-content: space-between;
 
-        > div {
+        >div {
             padding-left: 20px;
         }
 
@@ -34,7 +53,7 @@
                 display: flex;
                 flex-direction: column;
 
-                > a + a {
+                >a+a {
                     margin-top: 14px;
                     padding: 0;
                 }
@@ -47,7 +66,7 @@
             align-items: center;
             text-align: center;
 
-            > div + div {
+            >div+div {
                 margin-top: 40px;
             }
         }
@@ -67,12 +86,13 @@
     .links {
         @extend .list-unstyled;
 
-        > li + li {
+        >li+li {
             margin-top: 15px;
         }
     }
 
     a {
+        flex-shrink: 0;
         color: #fff;
         font-size: 16px;
 
@@ -84,7 +104,7 @@
             font-size: 14px;
         }
 
-        + a {
+        +a {
             padding-left: 30px;
         }
     }
@@ -101,7 +121,7 @@
                 display: flex;
                 flex-direction: column;
 
-                > a + a {
+                >a+a {
                     margin-top: 14px;
                     padding: 0;
                 }
@@ -114,7 +134,7 @@
     }
 
     .copyright {
-        margin: 0 0 20px 0;
+
         color: #bababa;
         font-size: 14px;
 
