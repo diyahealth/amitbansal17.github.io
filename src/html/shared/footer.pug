@@ -1,3 +1,20 @@
+-
+    const links = [
+            {
+                href: 'https://www.facebook.com/DiyaHealthOrg',
+                icon: require("../../images/icons/facebook-icon.svg"),
+            },
+            {
+                href: 'https://twitter.com/DiyaHealth',
+                icon: require("../../images/icons/twitter-icon.svg"),
+            },
+            {
+                href: 'https://www.linkedin.com/company/diyahealth',
+                icon: require("../../images/icons/linkedin-icon.svg"),
+            }
+        ];
+
+
 footer.footer
     .container
         .section-site-map
@@ -22,6 +39,10 @@ footer.footer
         .section-copyright
             .copyright-container
                 p.copyright Copyright ©#{new Date().getFullYear()} Diya Health. All Rights Reserved.
+            .input-footer-group
+                    each item in links
+                        a(href=item.href, target="_blank")
+                            img(src=item.icon, class="input-footer-group__img") 
             .link-container
                 a(href=pages.privacyPolicy.url)= pages.privacyPolicy.name
                 a(href=pages.termsAndConditions.url)= pages.termsAndConditions.name
