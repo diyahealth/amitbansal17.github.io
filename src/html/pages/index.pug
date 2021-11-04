@@ -15,6 +15,7 @@ include ../shared/sign-in-button.pug
 include ../shared/customers.pug
 include ../shared/integrations.pug
 
+
 block head
     meta(name="twitter:card" value="Diya Health Website")
     meta(property="og:title" content="Diya Health Website")
@@ -24,6 +25,24 @@ block head
     meta(property="og:description" content="Diya Health")
 
 block content
+
+    -
+        const dataIntegrations = [
+                'BambooHR',
+                'Epic',
+                'ADP',
+                'Oracle',
+                'Excel',
+                'Workday',
+                'OfficeWork',
+                'SAP',
+                'SuccessFactors',
+                'Cerner',
+                'DrugBank',
+                'Cornerstone',
+                'NIH',
+                'Kaiser Permanente'
+        ];
 
     main.main-box.main-page
         article.main-introduce-container
@@ -86,20 +105,20 @@ block content
                                         .carousel-image-background
                                             .carousel-box.dashboard-carousel-bg-4
                                             .text-box
-                                                h4 Gary Chu
-                                                p MD - Chief, Physical Health and Wellness, The Permanente Medical Group
+                                                h4 Gary Chu, MD
+                                                p  Chief, Physical Health and Wellness, The Permanente Medical Group
                                             .spice-box
                                         .carousel-image-background
                                             .carousel-box.dashboard-carousel-bg-1
                                             .text-box
                                                 h4 Sangeeta Marwaha, MD
-                                                p MD - Chair, Dermatology Technology
+                                                p  Chair, Dermatology Technology
                                             .spice-box
                                         .carousel-image-background
                                             .carousel-box.dashboard-carousel-bg-3
                                             .text-box
                                                 h4 Rajesh K Sood, MD
-                                                p MD - Epidemiology, District Programme Officer, National Health Mission, HP, India
+                                                p  Epidemiology, District Programme Officer, National Health Mission, HP, India
                                             .spice-box
                                 ul.text-container
                                     .text-container__box
@@ -149,7 +168,7 @@ block content
 
         article
             +articleTitle('Integrations', { divider: 'primary' }, true)
-            +integrations(true)
+            +integrations(true, dataIntegrations)
 
 
         article.contact-us-background-content(id="contact-us")
