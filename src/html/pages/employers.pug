@@ -3,7 +3,25 @@ include ../shared/contact-us-form.pug
 include ../shared/customers.pug
 include ../shared/integrations.pug
 
+
 block content
+    -
+        const dataIntegrations = [
+                'BambooHR',
+                'ADP',
+                'Oracle',
+                'Excel',
+                'Workday',
+                'OfficeWork',
+                'SAP',
+                'SuccessFactors',
+                'Cornerstone',
+                'Epic',
+                'Cerner',
+                'Kaiser Permanente',
+                'NIH',
+                'DrugBank',
+        ];
     main.main-box.employers-sales
 
         article.hr-image-container
@@ -364,7 +382,7 @@ block content
 
         article.integrations
             h2 Integrations
-            +integrations(true)
+            +integrations(true,dataIntegrations)
 
 
         article.contact-us-container(id="contact-us")

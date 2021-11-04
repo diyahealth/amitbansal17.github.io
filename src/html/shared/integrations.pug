@@ -1,22 +1,4 @@
-mixin integrations(useCollapse)
-    -
-        const integrations = [
-            'BambooHR',
-            'Epic',
-            'ADP',
-            'Oracle',
-            'Excel',
-            'Workday',
-            'OfficeWork',
-            'SAP',
-            'SuccessFactors',
-            'Cerner',
-            'DrugBank',
-            'Cornerstone',
-            'NIH',
-            'Kaiser Permanente'
-        ];
-
+mixin integrations(useCollapse,integrations)
     .integrations-container#integrations-list(class=useCollapse ? 'collapsed' : '')
         ul.integrations-list
             each i in integrations
