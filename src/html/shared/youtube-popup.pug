@@ -1,0 +1,45 @@
+mixin youtubeLink(id)
+    a.material-btn(
+        href=`https://www.youtu.be/${id}`
+        target="__blank"
+        data-youtube=id
+        rel="noopener noreferrer"
+    )&attributes(attributes)
+        .label WATCH VIDEO
+
+mixin youtubePopup
+    .popup-video.hidden
+        .close
+        iframe.iframe(src="")
+
+    script.
+        const iframe = document.querySelector('.iframe');
+        const popup = document.querySelector('.popup-video');
+        const stopYouTubeVideos = () => iframe.src = iframe.src;
+
+        document
+            .querySelector('.popup-video .close')
+            .addEventListener('click', () => {
+                popup.classList.add('hidden');
+                stopYouTubeVideos();
+            });
+
+        document
+            .querySelectorAll('[data-youtube]')
+            .forEach(x => x.addEventListener('click', e => {
+                e.preventDefault();
+                e.stopPropagation();
+                iframe.src = 'https://www.youtube.com/embed/' + x.dataset.youtube;
+                popup.classList.remove('hidden');
+            }));
+
+        // Close on outside click
+        document
+            .addEventListener('click', e => {
+                if (popup.contains(e.target)) {
+                    return;
+                }
+
+                stopYouTubeVideos();
+                popup.classList.add('hidden');
+            })
