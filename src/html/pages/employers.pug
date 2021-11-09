@@ -17,7 +17,7 @@ block content
             .compliance-container__left
                 .compliance-container__title
                     h2 Compliance with COVID-19 regulatory requirements — made easy!
-                    a.material-btn(href='https://www.youtube.com/watch?v=ueuW0z5_GNc' target="__blank" rel="noopener noreferrer")
+                    div.material-btn.video.pathCompliance
                         .label WATCH VIDEO
                 p.compliance-container__text.
                     Planning a safe return to work while staying compliant with COVID-19 mandates
@@ -55,7 +55,7 @@ block content
         article.getting-started
             .getting-started__title
                 h2 Getting Started is Easy
-                a.material-btn(href='https://youtu.be/IgQOlkJVQNg' target="__blank" rel="noopener noreferrer")
+                div.material-btn.video.pathStarted
                     .label WATCH VIDEO
             .container
                 .getting-started__steps
@@ -114,22 +114,22 @@ block content
                             li.carousel-item-container.active
                                 h3.title View company-wide COVID-19 compliance statistics
                                 p.text Whether your company tracks vaccination status or test results, COVID Compliance-as-a-Service provides the relevant compliance data by location
-                                a.material-btn(href='https://youtu.be/WO8uNw5Fp4A' target="__blank" rel="noopener noreferrer")
+                                div.material-btn.video.pathCarousel
                                     .label WATCH VIDEO
                             li.carousel-item-container
                                 h3.title Examine compliance by department
                                 p.text Track compliance by specific departments at any office location to ensure a safe return to work
-                                a.material-btn(href='https://youtu.be/WO8uNw5Fp4A' target="__blank" rel="noopener noreferrer")
+                                div.material-btn.video.pathCarousel
                                     .label WATCH VIDEO
                             li.carousel-item-container
                                 h3.title Access the details you need
                                 p.text View COVID-19 compliance by manager and individual employee
-                                a.material-btn(href='https://youtu.be/WO8uNw5Fp4A' target="__blank" rel="noopener noreferrer")
+                                div.material-btn.video.pathCarousel
                                     .label WATCH VIDEO
                             li.carousel-item-container
                                 h3.title Analyze how much non-compliance is costing you
                                 p.text See how non-compliant employees are impacting productivity, sick days, backfill and more
-                                a.material-btn(href='https://youtu.be/WO8uNw5Fp4A' target="__blank" rel="noopener noreferrer")
+                                div.material-btn.video.pathCarousel
                                     .label WATCH VIDEO
 
 
@@ -137,7 +137,7 @@ block content
             .none-compliance__title-box
                 .none-compliance__title
                     h2 Understand the Impact of Non-Compliance
-                    a.material-btn(href='https://youtu.be/zja1cGin3qY' target="__blank" rel="noopener noreferrer")
+                    div.material-btn.video.pathNone
                         .label WATCH VIDEO
             .none-compliance__first-block
                 .none-compliance__content-block
@@ -291,7 +291,7 @@ block content
             .inner
                 .future-proof__main-text
                     h2.future-proof__title Future Proof
-                    a.material-btn(href='https://www.youtube.com/watch?v=U0whaQW2XQ0' target="__blank" rel="noopener noreferrer")
+                    div.material-btn.video.pathFuture
                         .label WATCH VIDEO
                     p.future-proof__subtitle  No matter how the virus mutates; new booster shots arrive; CDC, federal and state regulations change; and CEOs adjust corporate mandates — HR can be rest assured that COVID Compliance-as-a-Service will adapt to their needs
                     h3.future-proof__guarantee 100% Guaranteed
@@ -375,6 +375,12 @@ block content
                     for your organization? Contact us and we will return to you shortly.
             .content
                 +contactUsForm(organizationSizeOptions)
+        .popup-video.hidden
+            .close
+            iframe.iframe(src="")
+           
+             
+
 
 block script
     script.
@@ -384,4 +390,54 @@ block script
                 backgroundSelector: '.carousel-image-background',
             }, 8000);
         });
-    script(src="https://www.google.com/recaptcha/api.js", defer)
+    script(src="https://www.google.com/recaptcha/api.js", defer)   
+    script.
+            const main = document.querySelector('.employers-sales');
+            const currentElement = document.querySelector('.popup-video');
+            const iframe = main.querySelector('.iframe');
+            
+            const pathsVideo = ['https://www.youtube.com/embed/ueuW0z5_GNc', 
+            'https://www.youtube.com/embed/IgQOlkJVQNg', 'https://www.youtube.com/embed/WO8uNw5Fp4A',
+            'https://www.youtube.com/embed/zja1cGin3qY', 'https://www.youtube.com/embed/U0whaQW2XQ0'] 
+
+            const stopYouTubeVideos = () => { 
+                iframe.src = iframe.src;
+            };
+            
+            main.addEventListener('click', (event) => {
+                console.log('eeee');
+              const closest = event.target.closest('.video')
+                if( closest&& closest.classList.contains("pathCompliance")) {
+                   iframe.src = pathsVideo[0];
+                }
+                if( closest&& closest.classList.contains("pathStarted")) {
+                   iframe.src = pathsVideo[1];
+                }
+                if( closest&& closest.classList.contains("pathCarousel")) {
+                   iframe.src = pathsVideo[2];
+                }
+
+                 if( closest&& closest.classList.contains("pathNone")) {
+                   iframe.src = pathsVideo[3];
+                }
+
+                if( closest&& closest.classList.contains("pathFuture")) {
+                   iframe.src = pathsVideo[4];
+                }
+                if(!event.target.closest('.popup-video')) {
+                    currentElement.classList.add('hidden');
+                    stopYouTubeVideos();
+                }
+                if(closest) {
+                     currentElement.classList.toggle('hidden');
+                     if (currentElement.classList.contains('hidden')) {
+                     stopYouTubeVideos();
+                     }
+                }
+                if(event.target.closest('.close')) {
+                     currentElement.classList.add('hidden');
+                     stopYouTubeVideos();
+                }
+            }); 
+
+           
