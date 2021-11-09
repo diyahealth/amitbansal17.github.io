@@ -57,7 +57,7 @@ block content
                 h2.compliance-product-container__title COVID Compliance-as-a-Service
                 p.compliance-product-container__text Helps employers stay in compliance with COVID-19 regulatory requirements and bring employees back to work safely.
                 .compliance-product-container__button-box
-                    a.material-btn.large(href='https://www.youtube.com/watch?v=ueuW0z5_GNc' target="__blank" rel="noopener noreferrer nofollow") WATCH VIDEO
+                    div.material-btn.video.large.pathService WATCH VIDEO
                     a.material-btn.large.addMarginLeft(href=pages.employers.url) LEARN MORE
             .compliance-product-container__right
                 .compliance-product-container__image-box.image-compliance-first
@@ -173,6 +173,9 @@ block content
 
         article.contact-us-background-content(id="contact-us")
             +contactUs(organizationSizeOptions)
+        .popup-video.hidden
+            .close
+            iframe.iframe(src="")
 block script
     script.
         window.addEventListener('load', (event) => {
@@ -182,3 +185,36 @@ block script
             }, 8000);
         });
     script(src="https://www.google.com/recaptcha/api.js", defer)
+    script.
+            const main = document.querySelector('.main-page');
+            const currentElement = document.querySelector('.popup-video');
+            const iframe = main.querySelector('.iframe');
+            const pathsVideo = ['https://www.youtube.com/embed/ueuW0z5_GNc'] 
+            const stopYouTubeVideos = () => { 
+                iframe.src = iframe.src;
+            };
+            
+            main.addEventListener('click', (event) => {
+                
+                
+              const closest = event.target.closest('.video')
+                if( closest&& closest.classList.contains("pathService")) {
+                    iframe.src = pathsVideo[0];
+                }
+              
+                if(!event.target.closest('.popup-video')) {
+                    currentElement.classList.add('hidden');
+                    stopYouTubeVideos();
+                }
+                if(closest) {
+                     currentElement.classList.toggle('hidden');
+                     if (currentElement.classList.contains('hidden')) {
+                     stopYouTubeVideos();
+                     }
+                }
+                if(event.target.closest('.close')) {
+                     currentElement.classList.add('hidden');
+                     stopYouTubeVideos();
+                }
+            }); 
+
