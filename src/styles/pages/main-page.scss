@@ -8,6 +8,13 @@
     }
 }
 
+.info-custom {
+    @media screen and (max-width: $break-tablet) {
+        aspect-ratio: 17/9 !important;
+    }
+}
+
+
 .card-press {
     @media screen and (max-width: $break-tablet) {
         width: 100%;
@@ -40,7 +47,6 @@
     &__image {
         width: 100%;
         aspect-ratio: 16/9;
-        background-color: gray;
         overflow: hidden;
 
         & img {
