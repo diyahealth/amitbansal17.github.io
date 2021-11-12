@@ -8,13 +8,6 @@
     }
 }
 
-.info-custom {
-    @media screen and (max-width: $break-tablet) {
-        aspect-ratio: 17/9 !important;
-    }
-}
-
-
 .card-press {
     @media screen and (max-width: $break-tablet) {
         width: 100%;
