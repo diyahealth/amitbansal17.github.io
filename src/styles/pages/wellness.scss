@@ -58,6 +58,11 @@
         background-position-y: 100%, 60%;
         background-position-x: 0, 30%;
 
+        @media screen and (max-width: $break-tablet) {
+            background-image: linear-gradient(rgba(243, 250, 253, 0.4), rgba(243, 250, 253, 0.4)), url('../images/wellness/images/header-image.jpg');
+            background-size: cover, cover;
+        }
+
 
         h1 {
             font-size: 60px;
@@ -263,7 +268,7 @@
         &__image-box {
             aspect-ratio: 654 / 524;
             width: 100%;
-            background-image: url('../images/wellness/illustrations/section_1_illustration.svg');
+            background-image: url('../images/wellness/illustrations/section_1_illustration.png');
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -313,14 +318,11 @@
             line-height: 34px;
             letter-spacing: 0px;
             text-align: center;
-
-
-
-
         }
 
         &__service-items-box {
             margin-top: 72px;
+            gap: 50px;
             display: flex;
             width: 100%;
             justify-content: space-between;
@@ -335,7 +337,6 @@
         &__item {
             width: 30%;
             display: flex;
-            padding: 0 50px;
             flex-direction: column;
             align-items: center;
 
@@ -404,7 +405,7 @@
         }
 
         &__image-box-1 {
-            background-image: url('../images/wellness/illustrations/section_2_illustration_david.svg');
+            background-image: url('../images/wellness/illustrations/section_2_illustration_david.png');
             position: relative;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -415,7 +416,7 @@
         }
 
         &__image-box-2 {
-            background-image: url('../images/wellness/illustrations/section_2_illustration_jessica.svg');
+            background-image: url('../images/wellness/illustrations/section_2_illustration_jessica.png');
             position: relative;
             background-size: 100%;
             background-repeat: no-repeat;
@@ -773,20 +774,20 @@
         }
 
         .dashboard-carousel-bg-1 {
-            background-image: url('../images/wellness/illustrations/section_3_illustration_a.svg');
+            background-image: url('../images/wellness/illustrations/section_3_illustration_a.png');
         }
 
 
         .dashboard-carousel-bg-2 {
-            background-image: url('../images/wellness/illustrations/section_3_illustration_b.svg');
+            background-image: url('../images/wellness/illustrations/section_3_illustration_b.png');
         }
 
         .dashboard-carousel-bg-3 {
-            background-image: url('../images/wellness/illustrations/section_3_illustration_c.svg');
+            background-image: url('../images/wellness/illustrations/section_3_illustration_c.png');
         }
 
         .dashboard-carousel-bg-4 {
-            background-image: url('../images/wellness/illustrations/section_3_illustration_d.svg');
+            background-image: url('../images/wellness/illustrations/section_3_illustration_d.png');
         }
 
         .content-container {
@@ -1586,8 +1587,9 @@
     }
 
     .contact-us-container {
-        padding: 188px 189px 124px;
+        padding: 188px 189px 200px;
         margin: auto;
+        margin-bottom: 100px;
         max-width: 1440px;
 
         h2 {
@@ -1610,7 +1612,6 @@
             line-height: 34px;
             letter-spacing: 0px;
             text-align: center;
-
         }
 
         @media screen and (max-width: $break-tablet) {
