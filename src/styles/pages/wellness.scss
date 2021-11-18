@@ -129,7 +129,7 @@
     .wellness-image-container {
         aspect-ratio: 1440/736;
         background-position: bottom;
-        background-image: url('../images/wellness/waves/wave-1.png'), url('../images/wellness/images/header-image.jpg');
+        background-image: url('../images/wellness/waves/bg.png'), url('../images/wellness/images/header-image.jpg');
         position: relative;
         background-size: 100% 65%, cover;
         background-repeat: no-repeat;
@@ -137,8 +137,22 @@
         background-position-x: 0, 30%;
 
         @media screen and (max-width: $break-tablet) {
-            background-image: linear-gradient(rgba(243, 250, 253, 0.4), rgba(243, 250, 253, 0.4)), url('../images/wellness/images/header-image.jpg');
+            background-image: linear-gradient(rgba(243, 250, 253, 0.6), rgba(243, 250, 253, 0.4)), url('../images/wellness/images/header-image.jpg');
             background-size: cover, cover;
+        }
+
+        .material-btn {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            margin: auto;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            white-space: nowrap;
+
+            @media screen and (max-width: $break-mobile) {
+                top: 40px;
+            }
         }
 
 
@@ -184,14 +198,10 @@
 
             @media screen and (max-width: $break-tablet) {
                 width: 576px;
-                top: 50%;
-
             }
 
             @media screen and (max-width: $break-mobile) {
                 width: 100%;
-                top: 50%;
-
             }
         }
 

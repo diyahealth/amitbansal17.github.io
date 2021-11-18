@@ -17,6 +17,7 @@ const pageToLink = (page, variant, postfix) => buildPage(page.name, page.url, va
 
 const buildEmployersDropdown = () => {
     const titleUrlItems = [
+        { title: 'COVID Compliance-as-a-Service', url: pages.employers.url},
         { title: 'Wellness Engagement', url: pages.wellness.url},
     ];
 

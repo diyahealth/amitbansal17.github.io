@@ -26,7 +26,7 @@ include ./sign-in-button
                                 else
                                     span=dropdownLink.title
         li
-            if (page.url == pages.employers.url)
+            if (page.url == pages.employers.url || page.url == pages.wellness.url)
                 +signInDiyaHr
             else
                 button.material-btn.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
