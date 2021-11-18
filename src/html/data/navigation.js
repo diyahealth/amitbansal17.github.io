@@ -15,6 +15,14 @@ const buildPage = (title, url, variant, postfix) => {
 
 const pageToLink = (page, variant, postfix) => buildPage(page.name, page.url, variant, postfix);
 
+const buildEmployersDropdown = () => {
+    const titleUrlItems = [
+        { title: 'Wellness Engagement', url: pages.wellness.url},
+    ];
+
+    return titleUrlItems.map(item => buildPage(item.title, item.url, item.variant));
+}
+
 const buildDropdownFromPageWithSubpages = (pageKey, subheader, postfix) => {
     const page = pages[pageKey];
     const subpageKeys = page ? Object.keys(pages).filter(subPageKey => pages[subPageKey].parent === pageKey) : undefined;
@@ -34,7 +42,7 @@ const buildDropdownFromPageWithSubpages = (pageKey, subheader, postfix) => {
         return page && pageKey !== subheader ? pageToLink(page, null, postfix) : undefined;
     })].filter(Boolean);
     return links;
-}
+} 
 
 const buildAboutUsDropdown = () => {
     const aboutUsUrl = pages.aboutUs.url;
@@ -62,6 +70,7 @@ const buildNavigationLinks = (mode) => {
     navigationLinks.push(
         {
             ...pageToLink(pages.employers, null, postfix),
+            dropdown: buildEmployersDropdown(),
         },
         {
             ...pageToLink(pages.healthSystems, null, postfix),
