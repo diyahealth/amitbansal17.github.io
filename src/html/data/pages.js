@@ -23,11 +23,11 @@ const pages = {
     },
 
     wellness: {
-        fileName: "wellness",
-        url: "./wellness",
-        name: "Wellness",
-        title: "Wellness",
-        description: "Our Discharge Companion transforms the archaic post-discharge process into a living, engaging care experience that delivers great health outcomes",
+        fileName: "wellness-engagement",
+        url: "./wellness-engagement",
+        name: "Wellness Engagement",
+        title: "Wellness Engagement - Diya Health",
+        description: "Diya Wellness Engagement curates and delivers personalized content that is specific to employees’ wellness needs and goals",
     },
 
     healthSystems: {
