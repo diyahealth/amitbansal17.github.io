@@ -22,6 +22,14 @@ const pages = {
         description: " Our COVID Compliance-as-a-Service platform helps employers stay in compliance with pandemic regulatory requirements and bring employees back to work safely",
     },
 
+    wellness: {
+        fileName: "wellness",
+        url: "./wellness",
+        name: "Wellness",
+        title: "Wellness",
+        description: "Our Discharge Companion transforms the archaic post-discharge process into a living, engaging care experience that delivers great health outcomes",
+    },
+
     healthSystems: {
         fileName: "health-systems",
         url: "./health-systems",

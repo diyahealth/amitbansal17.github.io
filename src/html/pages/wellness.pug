@@ -1,0 +1,287 @@
+extends ../shared/layout.pug
+include ../shared/contact-us-form.pug
+include ../shared/customers.pug
+include ../shared/integrations.pug
+include ../shared/youtube-popup.pug
+
+
+block content
+    -
+        const dataIntegrations = [
+                'BambooHR',
+                'ADP',
+                'Oracle',
+                'Excel',
+                'Workday',
+                'OfficeWork',
+                'SAP',
+                'SuccessFactors',
+                'Cornerstone',
+                'Epic',
+                'Cerner',
+                'Kaiser Permanente',
+                'NIH',
+                'DrugBank',
+        ];
+    main.main-box.wellness
+
+        article.wellness-image-container
+           
+            .wellness-image-container__text-box
+                .wellness-image-container__subtitle-text 
+                    img.wellness-image-container__img(src=require("../../images/icons/diya-logo.svg") alt='Diya Logo') 
+                    span Wellness Engagement   
+                p.wellness-image-container__text Your Wellness, Personalized
+                button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+                    span.label Request a demo
+      
+        article.wellness-container
+            .wellness-container__left
+                .wellness-container__title
+                    h2 Personalized Content, Applied to Wellness Programs
+                p.wellness-container__text.
+                    Diya Wellness Engagement curates and delivers personalized content that is specific to employees’
+                    wellness needs and goals. It’s the personalization that we have grown to love about Netflix and 
+                    Amazon, but applied to wellness programs.
+            .wellness-container__right
+                .wellness-container__image-box
+
+        article.example-container
+            .inner
+                h2.example-container__title Let’s Look at David and Jessica, for Example
+                p.example-container__subtitle David and Jessica are employees with distinct needs. Instead of providing them with the same generic content, Diya Wellness Engagement delivers individualized recommendations to improve their well-being.
+                .example-container__content-box
+                    .example-container__box-left.mr-class
+                        .example-container__employees-info
+                            .card-employees
+                                .card-employees__logo-1
+                                       
+                                .card-employees__text
+                                    h2 David Green
+                                    p.card-employees__workplace Manufacturing Department
+                                    p.card-employees__old 61 Years Old
+                                    .arrow
+                                .card-employees__arrow       
+                            ul.list-employees
+                                .arrow.second
+                                li.list-employees__item 
+                                    img.list-employees__img(src=require("../../images/wellness/icons/icon_low_income.svg") alt='Low income')
+                                    span Low Income Level  
+                                li.list-employees__item 
+                                    img.list-employees__img(src=require("../../images/wellness/icons/icon_smoker.svg") alt='Smoker')
+                                    span Smoker 
+                                li.list-employees__item 
+                                    img.list-employees__img(src=require("../../images/wellness/icons/icon_stress-1.svg") alt='Stress')
+                                    span Medium Stress Level 
+                                li.list-employees__item 
+                                    img.list-employees__img(src=require("../../images/wellness/icons/icon_chronic-conditions-1.svg") alt='Chronic conditions')
+                                    span High Risk for Chronic Conditions 
+                                li.list-employees__item 
+                                    img.list-employees__img(src=require("../../images/wellness/icons/icon_primary_care-1.svg") alt='Primary Care')
+                                    span No Primary Care Provider Identified  
+                        .example-container__employees-page
+                            .example-container__image-box-1
+
+                            
+                    .example-container__box-right
+                        .example-container__employees-info
+                            .card-employees
+                                .card-employees__logo-2
+                                .card-employees__text
+                                    h2 Jessica Smith
+                                    p.card-employees__workplace Engineering Department
+                                    p.card-employees__old 29 Years Old
+                                    .arrow 
+                                .card-employees__arrow        
+                            ul.list-employees
+                                .arrow.second
+                                li.list-employees__item 
+                                    img.list-employees__img(src=require("../../images/wellness/icons/icon_medium_income.svg") alt='Low income')
+                                    span Medium Income Level  
+                                li.list-employees__item 
+                                    img.list-employees__img(src=require("../../images/wellness/icons/icon_non_smoker.svg") alt='Non smoker')
+                                    span Non-Smoker
+                                li.list-employees__item 
+                                    img.list-employees__img(src=require("../../images/wellness/icons/icon_stress.svg") alt='Stress')
+                                    span High Stress Level
+                                li.list-employees__item 
+                                    img.list-employees__img(src=require("../../images/wellness/icons/icon_chronic-conditions.svg") alt='Chronic conditions')
+                                    span Medium Risk for Chronic Conditions 
+                                li.list-employees__item 
+                                    img.list-employees__img(src=require("../../images/wellness/icons/icon_primary_care.svg") alt='Primary care')
+                                    span Primary Care Provider Identified
+                        .example-container__employees-page
+                            .example-container__image-box-1
+        article.slider-service
+            .inner
+                h2.slider-service__title HR Gets Real-Time Insight into Employee Engagement
+                .carousel-container#dashboard-carousel
+                    ol.indicators-container
+                        li.indicator.active
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        
+                    .carousel-control.left
+                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                    .carousel-control.right
+                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                    .content-container
+                        .carousel-image-container
+                            .carousel-image-wrapper
+                                .carousel-image-background.dashboard-carousel-bg-1.active
+                                .carousel-image-background.dashboard-carousel-bg-2
+                                .carousel-image-background.dashboard-carousel-bg-3
+                                .carousel-image-background.dashboard-carousel-bg-4
+
+                        ul.text-container
+                            li.carousel-item-container.active
+                                h3.title Employee engagement analytics at your fingertips
+                                p.text Quickly identify which wellness programs are successful. No more waiting for survey results or digging through data warehouses.
+                            li.carousel-item-container
+                                h3.title Assess employees’ satisfaction with vendors
+                                p.text Ensure that vendors are providing great value to your employees. 
+                                p.text When it’s time to renew your contract, you know which vendors to keep.
+                            li.carousel-item-container
+                                h3.title Know which programs are worth continuing
+                                p.text View ongoing employee engagement statistics to identify which programs are worth the investment.
+                            li.carousel-item-container
+                                h3.title Forecast which programs will have the greatest impact
+                                p.text Develop programs that are most needed for your employee population.
+                                p.text Set benchmarks and measure success.
+
+        article.empower-hr
+            .inner
+                h2.empower-hr__title Empower HR to Make Informed Decisions
+                p.empower-hr__subtitle With Diya Wellness Engagement, HR has the tools to create engaging wellness programs with a high return on investment.
+                .empower-hr__service-items-box
+                    .empower-hr__item
+                        img.empower-hr__logo(src=require("../../images/wellness/icons/section_4_icon_1.svg") alt='Experts in pandemic compliance')
+                        p Make smart investments
+                    .empower-hr__item
+                        img.empower-hr__logo(src=require("../../images/wellness/icons/section_4_icon_2.svg") alt='Processes to get back to work safely')
+                        p Measure results in real-time
+                    .empower-hr__item
+                        img.empower-hr__logo(src=require("../../images/wellness/icons/section_4_icon_3.svg") alt='Technology designed specifically for compliance')
+                        p Prove outcomes globally
+
+        article.slider-service-drive
+            .inner
+                .slider-service-drive__description-box
+                    h2.slider-service-drive__title Diya Wellness Engagement Drives Results
+                    p.slider-service-drive__text When employees get content specific to their needs, they engage in and improve their well-being.
+                  
+                .carousel-container-drives-result#dashboard-carousel-drives-result
+                    ol.indicators-container
+                        li.indicator.active
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                    .carousel-control.left
+                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                    .carousel-control.right
+                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                    .content-container
+                        .carousel-image-container
+                            .carousel-image-wrapper
+                                .carousel-image-background.dashboard-carousel-bg-1.active
+                                    h3.slider-service-drive__subtitle Vaccination Program Utilization
+                                    .content-box
+                                        img.slide(src=require("../../images/wellness/slider1/slide1/slide1.png"), alt="Left")
+                                        .logo-box
+                                            .arrow-up 
+                                            .arrow-down
+                                            .arrow-left 
+                                            .arrow-right
+                                            img.logo(src=require("../../images/wellness/slider1/logo.png"), alt="Left")
+                                        img.slide(src=require("../../images/wellness/slider1/slide1/slide2.png"), alt="Left")
+                                
+                                .carousel-image-background.dashboard-carousel-bg-2
+                                    h3.slider-service-drive__subtitle Weight Management Program Utilization
+                                    .content-box
+                                        img.slide(src=require("../../images/wellness/slider1/slide3/slide1.png"), alt="Left")
+                                        .logo-box
+                                            .arrow-up 
+                                            .arrow-down
+                                            .arrow-left 
+                                            .arrow-right
+                                            img.logo(src=require("../../images/wellness/slider1/logo.png"), alt="Left")
+                                        img.slide(src=require("../../images/wellness/slider1/slide3/slide2.png"), alt="Left")
+                                .carousel-image-background.dashboard-carousel-bg-3
+                                    h3.slider-service-drive__subtitle Meditation Program Utilization
+                                    .content-box
+                                        img.slide(src=require("../../images/wellness/slider1/slide4/slide1.png"), alt="Left")
+                                        .logo-box
+                                            .arrow-up 
+                                            .arrow-down
+                                            .arrow-left 
+                                            .arrow-right
+                                            img.logo(src=require("../../images/wellness/slider1/logo.png"), alt="Left")
+                                        img.slide(src=require("../../images/wellness/slider1/slide4/slide2.png"), alt="Left")
+                                .carousel-image-background.dashboard-carousel-bg-4
+                                    h3.slider-service-drive__subtitle Financial Stress Reduction Program Utilization
+                                    .content-box
+                                        img.slide(src=require("../../images/wellness/slider1/slide5/slide1.png"), alt="Left")
+                                        .logo-box
+                                            .arrow-up 
+                                            .arrow-down
+                                            .arrow-left 
+                                            .arrow-right
+                                            img.logo(src=require("../../images/wellness/slider1/logo.png"), alt="Left")
+                                        img.slide(src=require("../../images/wellness/slider1/slide5/slide2.png"), alt="Left")
+                                .carousel-image-background.dashboard-carousel-bg-5
+                                    h3.slider-service-drive__subtitle Job Satisfaction Surveys
+                                    .content-box
+                                        img.slide(src=require("../../images/wellness/slider1/slide6/slide1.png"), alt="Left")
+                                        .logo-box
+                                            .arrow-up 
+                                            .arrow-down
+                                            .arrow-left 
+                                            .arrow-right
+                                            img.logo(src=require("../../images/wellness/slider1/logo.png"), alt="Left")
+                                        img.slide(src=require("../../images/wellness/slider1/slide6/slide2.png"), alt="Left")       
+        article.download-container
+            .inner
+                .download-container__main-text
+                    h3.download-container__title Download our product details for free!
+                    a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                        .label DOWNLOAD            
+        article.integrations
+            h2 Integrations
+            +integrations(true,dataIntegrations)      
+       
+        article.contact-us-container(id="contact-us")
+            .title 
+                h2 Contact Us
+                p.text.
+                    Haven't found the answer to your question? Interested in learning more about pricing? Requesting a demo?
+                    Contact us and we will get back to you shortly.
+            .content
+                +contactUsForm(organizationSizeOptions)
+
+   
+
+block script
+    script.
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('dashboard-carousel', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 8000);
+        });
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('dashboard-carousel-drives-result', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 800000);
+        });
+        //-      window.addEventListener('load', (event) => {
+        //-     window.diya.carousel.init('dashboard-carousel-integration', {
+        //-         switchSlideControlSelector: '.carousel-control',
+        //-         backgroundSelector: '.carousel-image-background',
+        //-     }, 8000);
+        //- });
+    script(src="https://www.google.com/recaptcha/api.js", defer)   
+    
+
