@@ -112,17 +112,11 @@
         box-sizing: content-box;
         box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);
 
-
-
         @media screen and (max-width: 640px) {
             margin: 0 auto;
             width: 95%;
             height: 220px;
-
-
         }
-
-
     }
 
     .close {
@@ -132,9 +126,6 @@
         width: 20px;
         height: 20px;
         cursor: pointer;
-
-
-
     }
 
     .close:before,
