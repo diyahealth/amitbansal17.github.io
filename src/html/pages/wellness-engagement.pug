@@ -255,13 +255,14 @@ block content
             +integrations(true,dataIntegrations)
        
         article.contact-us-container(id="contact-us")
-            .title 
-                h2 Contact Us
-                p.text.
-                    Haven't found the answer to your question? Interested in learning more about pricing? Requesting a demo?
-                    Contact us and we will get back to you shortly.
-            .content
-                +contactUsForm(organizationSizeOptions)
+            .inner
+                .title
+                    h2 Contact Us
+                    p.text.
+                        Haven't found the answer to your question? Interested in learning more about pricing? Requesting a demo?
+                        Contact us and we will get back to you shortly.
+                .content
+                    +contactUsForm(organizationSizeOptions)
 
         +youtubePopup
 

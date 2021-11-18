@@ -1675,9 +1675,12 @@
 
     .contact-us-container {
         padding: 188px 189px 200px;
-        margin: auto;
         margin-bottom: 100px;
-        max-width: 1440px;
+
+        .inner {
+            margin: auto;
+            max-width: 1440px;
+        }
 
         h2 {
 
