@@ -2,15 +2,15 @@
     background-color: #fff;
     position: sticky;
     top: 0;
-    z-index: 3;
+    z-index: 5;
     width: 100%;
-   
+
 
     .navigation {
         @media screen and (max-width: $break-tablet) {
             display: none;
         }
-       
+
         padding: 0 $container-gutter;
         display: flex;
         justify-content: space-between;
@@ -56,21 +56,21 @@
                 padding-left: 2%;
             }
 
-            & > li {
+            &>li {
                 position: relative;
                 margin-left: 10px;
 
                 &:hover {
-                    & > .link-container {
+                    &>.link-container {
                         color: $primary-color;
 
-                        & > .icon {
+                        &>.icon {
                             fill: $primary-color;
                             transform: rotate(-90deg);
                         }
                     }
 
-                    & > .dropdown-menu {
+                    &>.dropdown-menu {
                         display: block;
                         overflow: initial;
                         width: initial;
@@ -85,10 +85,10 @@
                 }
 
                 &.active {
-                    & > .link-container {
+                    &>.link-container {
                         color: $primary-color;
 
-                        & > .icon {
+                        &>.icon {
                             fill: $primary-color;
                         }
                     }
@@ -96,7 +96,7 @@
                     @extend .active-link;
                 }
 
-                & > .link-container {
+                &>.link-container {
                     display: flex;
                     text-align: center;
                     align-items: center;
@@ -106,7 +106,7 @@
 
                     margin: 25px 0;
 
-                    & > a {
+                    &>a {
                         line-height: 1;
                         text-decoration: none;
                         text-transform: uppercase;
@@ -114,7 +114,7 @@
                         color: inherit;
                     }
 
-                    & > .icon {
+                    &>.icon {
                         width: 20px;
                         transform: rotate(90deg);
                         transition: fill 0.2s ease-in-out, transform 0.2s ease-in-out;
@@ -136,7 +136,7 @@
                 border-bottom-left-radius: 5%;
                 border-bottom-right-radius: 5%;
 
-                & > li {
+                &>li {
                     position: relative;
                     padding: 8px 0;
 
@@ -146,7 +146,7 @@
                         font-size: 1.2em;
 
                         &:hover {
-                            & > a {
+                            &>a {
                                 transform: none;
                                 color: $primary-color;
                             }
@@ -154,19 +154,19 @@
                     }
 
                     &:hover {
-                        & > a {
+                        &>a {
                             transform: translate(10px);
                             color: $primary-color;
                         }
                     }
 
                     &.active {
-                        & > a {
+                        &>a {
                             color: $primary-color;
                         }
                     }
 
-                    & > a {
+                    &>a {
                         display: inline-block;
                         color: rgba(0, 0, 0, 0.7);
                         text-decoration: none;
@@ -209,34 +209,36 @@
 
             cursor: pointer;
 
-            opacity: 0; /* hide this */
-            z-index: 2; /* and place it over the hamburger */
+            opacity: 0;
+            /* hide this */
+            z-index: 2;
+            /* and place it over the hamburger */
 
             -webkit-touch-callout: none;
 
             &:checked {
-                ~ span {
+                ~span {
                     opacity: 1;
                     transform: rotate(45deg) translate(-2px, -1px);
                     background: #3C4043;
                 }
 
-                ~ span:nth-last-child(3) {
+                ~span:nth-last-child(3) {
                     opacity: 0;
                     transform: rotate(0deg) scale(0.2, 0.2);
                 }
 
-                ~ span:nth-last-child(2) {
+                ~span:nth-last-child(2) {
                     transform: rotate(-45deg) translate(0, -1px);
                 }
 
-                ~ ul {
+                ~ul {
                     transform: none;
                 }
             }
         }
 
-        > span {
+        >span {
             display: block;
             width: 33px;
             height: 4px;
@@ -277,7 +279,8 @@
 
         overflow-y: scroll;
 
-        background: #f3fafd;;
+        background: #f3fafd;
+        ;
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         transform-origin: 0% 0%;
@@ -289,25 +292,26 @@
             color: #232323;
         }
 
-        > li {
+        >li {
             padding: 10px 0;
             font-size: 22px;
 
             &.active {
-                > a {
+                >a {
                     color: $primary-color;
                 }
             }
         }
+
         .dropdown-menu {
             @extend .list-unstyled;
             padding: 10px 10px 10px 40px;
 
-            > li {
+            >li {
                 padding: 8px 0;
 
                 &.active {
-                    > a {
+                    >a {
                         color: $primary-color;
                     }
                 }
@@ -318,7 +322,7 @@
                     font-size: 1.1em;
 
                     &:hover {
-                        & > a {
+                        &>a {
                             transform: none;
                             color: $primary-color;
                         }

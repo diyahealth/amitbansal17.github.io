@@ -603,9 +603,10 @@
         }
 
         .carousel-image-wrapper {
-            aspect-ratio: 312/245;
             width: 100%;
             position: relative;
+            height: 0;
+            padding-bottom: percentage(245/312);
         }
 
         .carousel-image-background {

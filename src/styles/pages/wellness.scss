@@ -20,7 +20,7 @@
         left: 50%;
         -webkit-transform: scale(1) translate(-50%, -50%);
         transform: scale(1) translate(-50%, -50%);
-        z-index: 1000;
+        z-index: 10;
         padding-top: 35px;
         border-radius: 10px;
         box-sizing: content-box;
@@ -127,7 +127,10 @@
 
 
     .wellness-image-container {
-        aspect-ratio: 1440/736;
+        height: 0;
+        width: 100%;
+        padding-bottom: percentage(736/1440);
+
         background-position: bottom;
         background-image: url('../images/wellness/waves/bg.png'), url('../images/wellness/images/header-image.jpg');
         position: relative;
@@ -357,7 +360,9 @@
         }
 
         &__image-box {
-            aspect-ratio: 654 / 524;
+            height: 0;
+            width: 100%;
+            padding-bottom: percentage(524/654);
             width: 100%;
             background-image: url('../images/wellness/illustrations/section_1_illustration.png');
             background-size: cover;
@@ -483,10 +488,10 @@
         }
 
         &__employees-page {
-            aspect-ratio: 624/390;
+            height: 0;
+            width: 100%;
+            padding-bottom: percentage(390/624);
             margin-top: 55px;
-
-
 
             @media screen and (max-width: $break-mobile) {
                 margin-top: 56px;
@@ -494,29 +499,6 @@
 
 
         }
-
-        &__image-box-1 {
-            background-image: url('../images/wellness/illustrations/section_2_illustration_david.png');
-            position: relative;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-
-
-        }
-
-        &__image-box-2 {
-            background-image: url('../images/wellness/illustrations/section_2_illustration_jessica.png');
-            position: relative;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-
-
-        }
-
 
         &__title {
             margin: 0 auto 16px;
@@ -908,8 +890,9 @@
         }
 
         .carousel-image-wrapper {
-            aspect-ratio: 312/245;
+            height: 0;
             width: 100%;
+            padding-bottom: percentage(245/312);
             position: relative;
         }
 
@@ -956,7 +939,7 @@
 
             &.left {
                 left: 15px;
-                z-index: 2000;
+                z-index: 1;
 
                 @media screen and (max-width: $break-mobile) {
                     left: -35px;
@@ -965,7 +948,7 @@
 
             &.right {
                 right: 15px;
-                z-index: 2000;
+                z-index: 1;
 
                 @media screen and (max-width: $break-mobile) {
                     right: -35px;
@@ -1081,13 +1064,13 @@
             @media screen and (max-width: $break-tablet) {
                 &>.slide:nth-of-type(1) {
                     margin-bottom: 60px;
-                    z-index: 1000;
+                    z-index: 1;
 
                 }
 
                 &>.slide:nth-of-type(2) {
                     margin-top: 60px;
-                    z-index: 1000;
+                    z-index: 1;
 
                 }
             }
@@ -1141,7 +1124,7 @@
                 height: 2px;
                 width: 65px;
                 border-top: 2px dashed #74c6e8;
-                z-index: -1000;
+                z-index: -1;
 
                 @media screen and (max-width: $break-tablet) {
                     display: none;
@@ -1172,14 +1155,11 @@
                 height: 2px;
                 width: 65px;
                 border-top: 2px dashed #74c6e8;
-                z-index: -1000;
+                z-index: -1;
 
                 @media screen and (max-width: $break-tablet) {
                     display: none;
-
                 }
-
-
             }
 
 
