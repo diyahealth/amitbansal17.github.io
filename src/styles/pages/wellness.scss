@@ -1059,6 +1059,23 @@
             width: 100%;
             padding: 0 40px;
 
+            @media screen and (max-width:1230px) {
+                padding: 0;
+            }
+
+            &>.logo-wrapper {
+                min-width: 273px;
+                flex-shrink: 0;
+                padding: 0 5px 0 55px;
+
+                @media screen and (max-width:$break-tablet) {
+                    padding: 55px 0;
+                    display: flex;
+                    justify-content: center;
+
+                }
+            }
+
 
 
             @media screen and (max-width: $break-tablet) {
@@ -1103,12 +1120,9 @@
 
             .logo-box {
                 position: relative;
+                width: 150px;
 
-                @media screen and (max-width: 1280px) {
-                    align-self: flex-start;
-                    margin-top: -30px;
 
-                }
 
                 @media screen and (max-width: $break-tablet) {
                     align-self: center;
@@ -1125,7 +1139,7 @@
                 left: calc(100% - 17px);
                 right: 1px;
                 height: 2px;
-                width: 90px;
+                width: 65px;
                 border-top: 2px dashed #74c6e8;
                 z-index: -1000;
 
@@ -1156,7 +1170,7 @@
                 top: calc(50% - 1px);
                 right: calc(100% - 17px);
                 height: 2px;
-                width: 5vw;
+                width: 65px;
                 border-top: 2px dashed #74c6e8;
                 z-index: -1000;
 
