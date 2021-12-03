@@ -192,17 +192,29 @@ block content
                             p.card-employees__count-members 1,500 Employees
                         .card-employees__info
                             .card-employees__left-part
-                                p Unvaccinated:
-                                p Total Cases:
-                                p In-Office Cases:
-                                p Training Completion:
-                                p Policy Acknowledgement:
-                            .card-employees__right-part
-                                p 8%
-                                p 96
-                                p 32
-                                p 52%
-                                p 63%
+                                .card-employees__item
+                                    p Unvaccinated:
+                                    p.card-employees__right-part 8%
+                                .card-employees__item
+                                    p Total Cases:
+                                    p.card-employees__right-part 96
+                                .card-employees__item
+                                    p In-Office Cases:
+                                    p.card-employees__right-part 32
+                                .card-employees__item
+                                    p Training Completion:
+                                    p.card-employees__right-part 52%
+                                .card-employees__item
+                                    p Policy Acknowledgement:
+                                    p.card-employees__right-part.percent-bottom 63%
+                              
+
+                            //- .card-employees__right-part
+                            //-     p 8%
+                            //-     p 96
+                            //-     p 32
+                            //-     p 52%
+                            //-     p.percent-bottom 63%
                 .wrapper
                     .line-left
                     .line-right
@@ -225,7 +237,7 @@ block content
                                 p 120
                                 p 40
                                 p 47%
-                                p 54%
+                                p.percent-bottom 54%
                 .wrapper
                     .line-left
                     .line-right
@@ -248,7 +260,7 @@ block content
                                 p 100
                                 p 33
                                 p 73%
-                                p 78%
+                                p.percent-bottom 78%
                 .wrapper
                     .line-left
                     .card-employees.warning.horizontal
@@ -270,7 +282,7 @@ block content
                                 p 990
                                 p 327
                                 p 11%
-                                p 18%
+                                p.percent-bottom 18%
 
 
         article.details-container
@@ -304,7 +316,7 @@ block content
                 .future-proof__main-text
                     h2.future-proof__title Future Proof
                     +youtubeLink('U0whaQW2XQ0')
-                    p.future-proof__subtitle  No matter how the virus mutates; new booster shots arrive; CDC, federal and state regulations change; and CEOs adjust corporate mandates — HR can be rest assured that COVID Compliance-as-a-Service will adapt to their needs
+                    p.future-proof__subtitle  No matter how the virus mutates; new booster shots arrive; CDC, federal and state regulations change; and CEOs adjust corporate mandates — HR can rest assured that COVID Compliance-as-a-Service will adapt to their needs
                     h3.future-proof__guarantee 100% Guaranteed
                 .future-proof__service-items-box
                     .future-proof__item

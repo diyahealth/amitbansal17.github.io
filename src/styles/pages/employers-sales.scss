@@ -19,6 +19,14 @@
         }
     }
 
+    .percent-bottom {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        height: 42px;
+        padding: 0;
+    }
+
     .popup-video {
         background-color: rgb(245, 245, 245);
         position: fixed;
@@ -915,7 +923,12 @@
         }
 
         &__left-part {
-            width: 83%;
+            width: 100%;
+        }
+
+        &__item {
+            display: flex;
+            justify-content: space-between;
         }
 
         &__left-part p {
@@ -932,7 +945,7 @@
             width: 17%;
         }
 
-        &__right-part p {
+        &__right-part {
             font-size: 18px;
             font-weight: 600;
             line-height: 21px;
@@ -940,7 +953,7 @@
             text-align: right;
         }
 
-        &__right-part p:not(:last-child) {
+        &__right-part :not(:last-child) {
             margin-bottom: 16px;
         }
 
