@@ -664,6 +664,10 @@
         margin: auto;
         max-width: 1440px;
 
+        @media screen and (max-width: 1300px) {
+            padding: 86px 40px;
+        }
+
         @media screen and (max-width: $break-tablet) {
             padding: 40px 20px;
         }
@@ -850,6 +854,10 @@
         box-shadow: -4px -4px 16px rgba(0, 0, 0, 0.05), 4px 4px 16px rgba(0, 0, 0, 0.05);
         position: relative;
 
+        @media screen and (max-width: 1300px) {
+            padding: 12px;
+        }
+
         &.horizontal {
             @media screen and (max-width: $break-tablet) {
                 flex-direction: row;
@@ -947,29 +955,37 @@
             justify-content: space-between;
         }
 
+        &__left-part div {
+            font-size: 18px;
+            line-height: 21px;
+            text-align: left;
+        }
+
         &__left-part p {
             font-size: 18px;
             line-height: 21px;
             text-align: left;
         }
 
-        &__left-part p:not(:last-child) {
+        &__left-part div:not(:last-child) {
             margin-bottom: 16px;
         }
 
-        &__right-part {
-            width: 17%;
-        }
 
-        &__right-part {
+
+        &__data {
             font-size: 18px;
             font-weight: 600;
             line-height: 21px;
             color: #ff5733;
             text-align: right;
+            padding-left: 6px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
         }
 
-        &__right-part :not(:last-child) {
+        &__data :not(:last-child) {
             margin-bottom: 16px;
         }
 
