@@ -182,7 +182,7 @@
             flex-direction: column;
             align-items: center;
             position: absolute;
-            top: 75%;
+            top: 71%;
             left: 50%;
             transform: translate(-50%, -50%);
 
@@ -190,6 +190,32 @@
                 width: 100%;
                 padding: 0 5px;
             }
+        }
+
+        &__omicron-text {
+            margin-bottom: 8px;
+            color: rgb(231, 0, 0);
+            font-style: italic;
+            font-size: 55px !important;
+            line-height: 55px;
+            text-align: center;
+            font-weight: 900 !important;
+
+
+            @media screen and (max-width: $break-tablet) {
+                font-size: 45px !important;
+
+
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                font-size: 24px !important;
+                line-height: 35px !important;
+
+            }
+
+
+
         }
 
         &__subtitle-text {
