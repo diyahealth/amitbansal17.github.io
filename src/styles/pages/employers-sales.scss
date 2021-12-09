@@ -274,12 +274,16 @@
 
         &__left {
             flex-basis: 50%;
-            padding-right: 8px;
+            padding-right: 32px;
+
+            @media screen and (max-width: $break-tablet) {
+                padding-right: 0;
+            }
         }
 
         &__right {
             flex-basis: 50%;
-            padding-left: 8px;
+
         }
 
         &__text {
