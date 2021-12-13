@@ -1,5 +1,4 @@
-[
-    {
+[{
         "text": "Increase Your Revenue",
         "classes": {
             "root": "increase-revenue",
@@ -9,7 +8,7 @@
             "text": "increase-revenue right"
         },
         "image": "revenue-banner.jpg",
-        "link": "https://preview.hs-sites.com/_hcms/preview/content/32121112736?portalId=7621573&_preview=true&cacheBust=0&preview_key=TpBqhNUw&from_buffer=false",
+        "link": "./posts/maximize-your-revenue-with-diyamd.html",
         "type": "banner"
     },
     {

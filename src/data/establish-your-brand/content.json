@@ -1,5 +1,4 @@
-[
-    {
+[{
         "text": "Establish Your Brand",
         "image": "brand-banner.jpg",
         "classes": {
@@ -13,7 +12,7 @@
     {
         "text": "DiyaMD allows you to expand your patient volume with billable e-service capabilities.",
         "image": "revenue-chart.png",
-        "link": "https://preview.hs-sites.com/_hcms/preview/content/32360312565?portalId=7621573&_preview=true&cacheBust=0&preview_key=ABFaWxnK&from_buffer=false",
+        "link": "./posts/automatically-bill-for-e-services-with-diyamd.html",
         "linkText": "More Info"
     },
     {
