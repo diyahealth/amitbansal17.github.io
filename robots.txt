@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://diyahealth.org/sitemap.txt
+Sitemap: https://www.diyahealth.org/sitemap.txt
