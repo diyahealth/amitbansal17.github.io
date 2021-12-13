@@ -12,7 +12,7 @@ function buildSiteMap(dynamicRoot, blogRoot, siteMapOut) {
     const pageNames = buildStaticUrls()
         .concat(buildDynamicUrls(dynamicRoot))
         .concat(buildBlogUrls(blogRoot));
-    const urls = pageNames.map(x => 'https://diyahealth.org/' + encodeURI(x));
+    const urls = pageNames.map(x => 'https://www.diyahealth.org/' + encodeURI(x));
     const content = urls.join('\r\n');
     const outPath = path.join(siteMapOut, 'sitemap.txt');
     ensureDirectoryExistence(outPath);
