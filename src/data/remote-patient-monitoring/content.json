@@ -1,5 +1,4 @@
-[
-    {
+[{
         "text": "Remote Patient Monitoring",
         "classes": {
             "root": "patient-monitoring",
@@ -9,7 +8,7 @@
             "text": "patient-monitoring"
         },
         "image": "rpm-banner.jpg",
-        "link": "https://preview.hs-sites.com/_hcms/preview/content/33270217171?portalId=7621573&_preview=true&cacheBust=0&preview_key=miUEEzWQ&from_buffer=false",
+        "link": "./posts/maximize-your-revenue-with-remote-patient-monitoring.html",
         "type": "banner"
     },
     {

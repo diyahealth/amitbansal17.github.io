@@ -1,5 +1,4 @@
-[
-    {
+[{
         "text": ["Access to Vital", "Patient Information"],
         "classes": {
             "root": "patient-info",
@@ -22,7 +21,7 @@
     {
         "text": "Manage actual or potential COVID-19 patients using DiyaMD's symptom-tracking capabilities.",
         "image": "сovid-tracker-page-full.png",
-        "link": "https://preview.hs-sites.com/_hcms/preview/content/34240559792?portalId=7621573&_preview=true&cacheBust=0&preview_key=REwzlHJY&from_buffer=false",
+        "link": "./posts/protect-your-practice-with-diyamd-s-covid-19-management-capabilities.html",
         "linkText": "More Info"
     },
     {

@@ -1,5 +1,4 @@
-[
-    {
+[{
         "text": "Telehealth Capabilities",
         "image": "telehealth-banner.jpg",
         "classes": {
@@ -9,7 +8,7 @@
             "text": "telehealth-capabilities left"
         },
         "type": "banner",
-        "link": "https://preview.hs-sites.com/_hcms/preview/content/32717616266?portalId=7621573&_preview=true&cacheBust=0&preview_key=DLrnDHbg&from_buffer=false"
+        "link": "./posts/telehealth-is-here-to-stay-and-so-is-diyamd.html"
     },
     {
         "text": "Conduct billable telehealth visits and other billable e-services using DiyaMD's innovative technology — approved by Medicare and Medicaid.",
