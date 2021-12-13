@@ -9,6 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const data = require("./html/data");
 const redirects = require("./redirects.json");
 const process = require('./framework');
+const buildSiteMap = require('./framework/sitemap');
 
 const processAfterDynamic = ['healthSystems', 'individuals'];
 
@@ -57,6 +58,10 @@ function processRedirect(from, to, argv) {
 }
 
 function buildWebpackPages(argv) {
+    const siteMapOut = path.resolve("../dist");
+    const dynamicRoot = path.join(__dirname, 'data');
+    const blogRoot = path.join(__dirname, 'posts');
+    buildSiteMap(dynamicRoot, blogRoot, siteMapOut);
     const pages = data.pages;
 
     const existing = Object.keys(pages).map(pageKey => {
@@ -66,14 +71,14 @@ function buildWebpackPages(argv) {
         return processStaticPage(pageKey, argv)
     }).filter(Boolean);
 
-    const root = path.join(__dirname, 'data');
-    const dynamic = process(root, argv);
+    const dynamic = process(dynamicRoot, argv);
 
     const restStaticPages = processAfterDynamic.map(pageKey => processStaticPage(pageKey, argv));
 
     const redirectPages = redirects.map(x => processRedirect(x.from, x.to, argv));
 
     return existing.concat(dynamic).concat(restStaticPages).concat(redirectPages);
+
 }
 
 module.exports = (env, argv) => ({
