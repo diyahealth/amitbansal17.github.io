@@ -1,10 +1,4 @@
 const allReviews = {
-    sangeeta: (app) => ({
-        image: './images/reviews/sangita.jpg',
-        text: `${app} allows doctor to quickly understand and trust patient\'s health information, and give the safest and best medical care`,
-        signature: 'Sangeeta Marwaha, MD',
-        title: 'Chair, Dermatology Technology',
-    }), 
     rajesh: (app) => ({
         image: './images/reviews/rajesh.png',
         text: `${app} is designed to help us manage immunization compliance and infectious disease outbreaks in the rural communities of HP, India.`,
@@ -35,9 +29,9 @@ const allReviews = {
 
 
 const reviews = {
-    index: [allReviews.roman('myDiya'), allReviews.sangeeta('myDiya'), allReviews.david('diyaMD')],
-    diyaMd: [allReviews.sangeeta('diyaMD'), allReviews.david('diyaMD'), allReviews.rajesh('diyaMD')],
-    myDiya: [allReviews.roman('myDiya'), allReviews.sangeeta('myDiya'), allReviews.kate('myDiya')]
+    index: [allReviews.roman('myDiya'), allReviews.david('diyaMD')],
+    diyaMd: [allReviews.david('diyaMD'), allReviews.rajesh('diyaMD')],
+    myDiya: [allReviews.roman('myDiya'), allReviews.kate('myDiya')]
 };
 
 module.exports = reviews;
