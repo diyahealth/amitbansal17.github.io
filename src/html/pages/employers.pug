@@ -26,17 +26,22 @@ block content
     main.main-box.employers-sales
 
         article.hr-image-container
-            button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
-                span.label Request a demo
+            .hr-image-container__omicron-text-box-hidden
+                
+                span.hr-image-container__omicron-text Omicron Variant Protection
+            .hr-image-container__omicron-text-box
+                img.hr-image-container__omicron-background(src=require("../../images/employers/notice.svg") alt='Processes to get back to work safely')
+                span.hr-image-container__omicron-text Omicron Variant Protection
             .hr-image-container__text-box
-                p.hr-image-container__omicron-text Omicron Variant Protection!
                 h1.hr-image-container__subtitle-text COVID Compliance-as-a-Service
-                p.hr-image-container__subtitle-text Return to Work Made Easy
+                span.hr-image-container__common-text Return to Work Made Easy
+                button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+                    span.label Request a demo
 
         article.compliance-container
             .compliance-container__left
                 .compliance-container__title
-                    h2 Complying with OSHA’s Jan. 4 deadline – made easy!
+                    h2 Complying with OSHA’s Jan. 4 deadline – made easy
                     +youtubeLink('VHEj018WfUY')
                 p.compliance-container__text.
                     Protecting your employees against the Omicron Variant while staying compliant with COVID-19 mandates is complicated.
