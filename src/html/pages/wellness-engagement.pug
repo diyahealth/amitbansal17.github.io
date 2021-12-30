@@ -18,14 +18,16 @@ mixin featureListItem(name, helpIndex)
         img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
         span=name
         .closest(data-help=helpIndex)
-            +helpPopupBody
+            .help-wrapper
+                +helpPopupBody
             img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
 
 mixin featureTableItem(name, helpIndex)
     li.pricing-container__features-list-item
         span=name
         .closest(data-help=helpIndex)
-            +helpPopupBody
+            .help-wrapper
+                +helpPopupBody
             img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
 
 
@@ -310,7 +312,7 @@ block content
                                 span Free for a limited time 
                         .pricing-card__describe-price
                             span Per employee / month billed annually
-                    a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                    button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
                         .label GET STARTED
                     ul.pricing-card__perks-list
                         +pricingCartPerkItem('5 documents')
@@ -338,7 +340,7 @@ block content
                                 
                         .pricing-card__describe-price
                             span Per employee / month billed annually
-                    a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                    button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
                         .label BUY PROFESSIONAL 
                     ul.pricing-card__perks-list
                         +pricingCartPerkItem('Unlimited documents')
@@ -373,7 +375,7 @@ block content
                             
                         .pricing-card__describe-price
                             span Per employee / month billed annually
-                        a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                        button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
                             .label BUY ENTERPRISE
                         ul.pricing-card__perks-list
                             +pricingCartPerkItem('Unlimited documents')
@@ -545,10 +547,10 @@ block content
                                     li.pricing-container__arrows-list-item.pricing-container__change-margin
                                         img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
                                     li.pricing-container__arrows-list-item.pricing-container__change-margin
-                                        a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                                        button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
                                             .label Contact US
                                     li.pricing-container__arrows-list-item
-                                        a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                                        button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
                                             .label Contact US
 
  
@@ -562,7 +564,7 @@ block content
             .inner
                 .download-container__main-text
                     h3.download-container__title Download our product details for free!
-                    a(href='./files/Diya Wellness Engagement Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                    button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
                         .label DOWNLOAD
 
         article.contact-us-container(id="contact-us")

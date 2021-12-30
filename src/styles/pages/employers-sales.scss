@@ -1544,7 +1544,7 @@
             display: flex;
             max-width: 1440px;
             justify-content: space-between;
-            align-items: flex-end;
+            margin: auto;
 
             @media screen and (max-width: $break-tablet) {
                 flex-direction: column;
@@ -1552,12 +1552,16 @@
 
         }
 
+
+
         .help-popup {
             width: 272px;
             height: auto;
             position: absolute;
-            top: 0;
-            left: 120%;
+            top: 50%;
+            left: calc(100% + 8px);
+            transform: translateY(-50%);
+
             background-color: #43B5E3;
             font-family: Open Sans;
             font-size: 14px;
@@ -1570,6 +1574,21 @@
             padding: 20px;
             border-radius: 10px;
             z-index: 1;
+
+            @media screen and (max-width: $break-mobile) {
+                bottom: calc(100% + 8px);
+                top: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            .help-wrapper {
+                position: absolute;
+                width: 100vw;
+                left: 0;
+            }
         }
 
         .hidden-help-popup {
@@ -1632,15 +1651,14 @@
 
             }
 
-            & .icon-table {
-                transform: rotate(180deg);
+            & #icon-table {
                 transition: all 0.3s;
-
+                transform: rotate(180deg);
             }
         }
 
         .icon-settings {
-            transform: rotate(-360deg) !important;
+            transform: rotate(0) !important;
 
         }
 
@@ -1679,7 +1697,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-
+            margin-bottom: -56px;
+            border-radius: 10px 10px 0 0;
         }
 
         &__special-box {
@@ -1687,8 +1706,6 @@
             box-shadow: 4px 4px 16px 0px #0000000D;
             box-shadow: -4px -4px 16px 0px #0000000D;
             border-radius: 10px;
-            overflow: hidden;
-
         }
 
         &__borders {
@@ -1700,7 +1717,6 @@
             box-shadow: -4px -4px 16px 0px #0000000D;
             margin-top: 50px;
             border-radius: 10px;
-            overflow: hidden;
             background-color: white;
 
 
@@ -1713,13 +1729,12 @@
 
 
         &__features-list-item {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
+            font-size: 18px;
         }
 
         &__features-list {
             padding: 0;
+            list-style: none;
 
             @media screen and (max-width: $break-tablet) {
                 margin-top: 40px;
@@ -1730,6 +1745,14 @@
         &__features-list-item>div {
             position: relative;
             line-height: 0;
+
+            display: inline-block;
+            vertical-align: middle;
+
+            @media screen and (max-width: $break-mobile) {
+                position: static;
+
+            }
         }
 
         &__features-list-item:not(:last-child) {
@@ -1785,10 +1808,10 @@
         &__features-item-logo {
             width: 20px;
             height: auto;
-            margin-left: 14px;
+            margin-left: 5px;
             align-self: start;
-            margin-top: 2px;
             cursor: pointer;
+            vertical-align: middle;
         }
 
         &__border-right {
@@ -1858,7 +1881,8 @@
 
 
         .pricing-card {
-            flex-basis: 30%;
+            margin-top: 56px;
+            flex-basis: 31%;
             height: auto;
             background: white;
             display: flex;
@@ -1869,7 +1893,11 @@
             border-radius: 10px;
             padding: 40px;
             width: 100%;
-            min-width: 350px;
+
+            @media screen and (max-width: $break-mobile) {
+                min-width: none;
+            }
+
 
 
 
@@ -2090,8 +2118,8 @@
     .download-container {
         width: 100%;
         padding: 188px 80px;
-        // background: url('../images/employers/wave.png');
-        // background-size: 100% 100%;
+        background: url('../images/employers/wave.png');
+        background-size: 100% 100%;
         display: flex;
         justify-content: center;
         align-items: center;

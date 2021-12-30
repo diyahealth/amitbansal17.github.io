@@ -18,8 +18,18 @@ mixin featureListItem(name, helpIndex)
         img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
         span=name
         .closest(data-help=helpIndex)
-            +helpPopupBody
+            .help-wrapper
+                +helpPopupBody
             img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+
+mixin featureTableItem(name, helpIndex)
+    li.pricing-container__features-list-item
+        span=name
+        .closest(data-help=helpIndex)
+            .help-wrapper
+                +helpPopupBody
+            img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+
 
 block content
     -
@@ -449,7 +459,7 @@ block content
                                 span Free for a limited time 
                         .pricing-card__describe-price
                             span Per employee / month billed annually
-                    a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                    button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
                         .label GET STARTED
                     ul.pricing-card__perks-list
                         +pricingCartPerkItem('OSHA-compliant')
@@ -459,25 +469,13 @@ block content
                         +pricingCartPerkItem('Booster shot tracking')
                         +pricingCartPerkItem('Up to 250 employees')
                     ul.pricing-container__features-list.activate
-                        +featureListItem('Unlimited documents', 0)
-                        +featureListItem('Unlimited number of admin users', 1)
-                        +featureListItem('Unlimited number of employees', 2)
+                        +featureListItem('OSHA-compliant', 0)
+                        +featureListItem('HIPAA-compliant', 1)
+                        +featureListItem('Vaccination tracking', 2)
                         +integrationFeatures
-                            +featureListItem('HIPAA-Compliant', 3)
-                            +featureListItem('HCM integrations', 4)
-                            +featureListItem('Email & SMS notifications', 5)
-                            +featureListItem('Employee emergency preparedness', 6)
-                            +featureListItem('Personalized employee wellness portal', 7)
-                            +featureListItem('Engagement dashboard & analytics', 8)
-                            +featureListItem('Employee-vendor satisfaction report', 9)
-                            +featureListItem('Automated HCM sync', 10)
-                            +featureListItem('Scheduled & automated notifications', 11)
-                            +featureListItem('Customized engagement dashboard & analytics', 12)
-                            +featureListItem('Curated, personalized content delivery', 13)
-                            +featureListItem('Automated content creation', 14)
-                            +featureListItem('ROI reports', 14)
-                            +featureListItem('Predictive health risks data', 14)
-                            +featureListItem('Automated content creation', 14)
+                            +featureListItem('Test results tracking', 3)
+                            +featureListItem('Booster shot tracking', 4)
+                            +featureListItem('Up to 250 employees', 5)
                 .pricing-card
                     .pricing-card__title Professional
                     .pricing-card__subtitle For organizations that also need reporting and time & efficiency gain features for HR.
@@ -490,7 +488,7 @@ block content
                                 
                         .pricing-card__describe-price
                             span Per employee / month billed annually
-                    a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                    button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
                         .label BUY PROFESSIONAL 
                     ul.pricing-card__perks-list
                         +pricingCartPerkItem('OSHA-compliant')
@@ -500,25 +498,19 @@ block content
                         +pricingCartPerkItem('Booster shot tracking')
                         +pricingCartPerkItem('Unlimited number of employees')
                     ul.pricing-container__features-list.activate
-                        +featureListItem('Unlimited documents', 0)
-                        +featureListItem('Unlimited number of admin users', 1)
-                        +featureListItem('Unlimited number of employees', 2)
+                        +featureListItem('OSHA-compliant', 0)
+                        +featureListItem('HIPAA-compliant', 1)
+                        +featureListItem('Vaccination tracking', 2)
                         +integrationFeatures
-                            +featureListItem('HIPAA-Compliant', 3)
-                            +featureListItem('HCM integrations', 4)
-                            +featureListItem('Email & SMS notifications', 5)
-                            +featureListItem('Employee emergency preparedness', 6)
-                            +featureListItem('Personalized employee wellness portal', 7)
-                            +featureListItem('Engagement dashboard & analytics', 8)
-                            +featureListItem('Employee-vendor satisfaction report', 9)
-                            +featureListItem('Automated HCM sync', 10)
-                            +featureListItem('Scheduled & automated notifications', 11)
-                            +featureListItem('Customized engagement dashboard & analytics', 12)
-                            +featureListItem('Curated, personalized content delivery', 13)
-                            +featureListItem('Automated content creation', 14)
-                            +featureListItem('ROI reports', 14)
-                            +featureListItem('Predictive health risks data', 14)
-                            +featureListItem('Automated content creation', 14) img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                            +featureListItem('Test results tracking', 3)
+                            +featureListItem('Booster shot tracking', 4)
+                            +featureListItem('Up to 250 employees', 5)
+                            +featureListItem('Symptom tracking', 6)
+                            +featureListItem('Policy attestations', 7)
+                            +featureListItem('COVID Pass', 8)
+                            +featureListItem('Dashboard & analytics', 9)
+                            +featureListItem('Reminders for record submission', 10)
+                            +featureListItem('HCM integrations', 11)
                 .pricing-container__special-box
                     .pricing-container__most-popular
                         span Most popular 
@@ -534,7 +526,7 @@ block content
                             
                         .pricing-card__describe-price
                             span Per employee / month billed annually
-                        a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                        button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
                             .label BUY ENTERPRISE
                         ul.pricing-card__perks-list
                             +pricingCartPerkItem('OSHA-compliant')
@@ -544,28 +536,32 @@ block content
                             +pricingCartPerkItem('Booster shot tracking')
                             +pricingCartPerkItem('Unlimited number of employees')
                         ul.pricing-container__features-list.activate
-                            +featureListItem('Unlimited documents', 0)
-                            +featureListItem('Unlimited number of admin users', 1)
-                            +featureListItem('Unlimited number of employees', 2)
+                            +featureListItem('OSHA-compliant', 0)
+                            +featureListItem('HIPAA-compliant', 1)
+                            +featureListItem('Vaccination tracking', 2)
                             +integrationFeatures
-                                +featureListItem('HIPAA-Compliant', 3)
-                                +featureListItem('HCM integrations', 4)
-                                +featureListItem('Email & SMS notifications', 5)
-                                +featureListItem('Employee emergency preparedness', 6)
-                                +featureListItem('Personalized employee wellness portal', 7)
-                                +featureListItem('Engagement dashboard & analytics', 8)
-                                +featureListItem('Employee-vendor satisfaction report', 9)
-                                +featureListItem('Automated HCM sync', 10)
-                                +featureListItem('Scheduled & automated notifications', 11)
-                                +featureListItem('Customized engagement dashboard & analytics', 12)
-                                +featureListItem('Curated, personalized content delivery', 13)
-                                +featureListItem('Automated content creation', 14)
-                                +featureListItem('ROI reports', 14)
-                                +featureListItem('Predictive health risks data', 14)
-                                +featureListItem('Automated content creation', 14)
+                                +featureListItem('Test results tracking', 3)
+                                +featureListItem('Booster shot tracking', 4)
+                                +featureListItem('Number of employees', 5)
+                                +featureListItem('Symptom tracking', 6)
+                                +featureListItem('Policy attestations', 7)
+                                +featureListItem('COVID Pass', 8)
+                                +featureListItem('Dashboard & analytics', 9)
+                                +featureListItem('Reminders for record submission', 10)
+                                +featureListItem('HCM integrations', 11)
+                                +featureListItem('Scheduled & automated reminders', 12)
+                                +featureListItem('Automated HCM sync', 13)
+                                +featureListItem('Customizable dashboard & analytics', 14)
+                                +featureListItem('Pandemic travel support', 15)
+                                +featureListItem('COVID-19 compliance future proofing', 16)
+                                +featureListItem('COVID-19 expert consults', 17)
+                                +featureListItem('Corporate policy guidance', 18)
+                                +featureListItem('Corporate policy implementation', 19)
+                                +featureListItem('Automated alerts for non-compliance', 20)
+                                +featureListItem('Integration with time & attendance system', 21)
+                                +featureListItem('Integration with testing labs', 22)
 
-
-                +integrationTable(true)
+            +integrationTable(true)
                     .pricing-container__table-box 
                         table.pricing-container__table
                             tr 
@@ -576,41 +572,12 @@ block content
                             tr
                                 td
                                     ul.pricing-container__features-list
-                                        li.pricing-container__features-list-item
-                                            span OSHA-compliant
-                                            div(class='closest' data-help='0')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span HIPAA-compliant
-                                            div(class='closest' data-help='1')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Vaccination tracking
-                                            div(class='closest' data-help='2')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Test results tracking
-                                            div(class='closest' data-help='3')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Booster shot tracking
-                                            div(class='closest' data-help='4')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Number of employees
-                                            div(class='closest' data-help='5')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-
-
-                                        
-                                      
-
+                                        +featureTableItem('OSHA-compliant', 0)
+                                        +featureTableItem('HIPAA-compliant', 1)
+                                        +featureTableItem('Vaccination tracking', 2)
+                                        +featureTableItem('Test results tracking', 3)
+                                        +featureTableItem('Booster shot tracking', 4)
+                                        +featureTableItem('Number of employees', 5)
                                 td
                                     ul.pricing-container__arrows-list
                                         li.pricing-container__arrows-list-item
@@ -659,42 +626,12 @@ block content
                             tr
                                 td 
                                     ul.pricing-container__features-list
-                                        li.pricing-container__features-list-item
-                                            span Symptom tracking
-                                            div(class='closest' data-help='6')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Policy attestations
-                                            div(class='closest' data-help='7')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span COVID Pass
-                                            div(class='closest' data-help='8')
-                                                +helpPopupBody    
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Dashboard & analytics
-                                            div(class='closest' data-help='9')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Reminders for record submission
-                                            div(class='closest' data-help='10')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span HCM integrations
-                                            div(class='closest' data-help='11')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-
-
-
-
-                                    
-                                      
+                                        +featureTableItem('Symptom tracking', 6)
+                                        +featureTableItem('Policy attestations', 7)
+                                        +featureTableItem('COVID Pass', 8)
+                                        +featureTableItem('Dashboard & analytics', 9)
+                                        +featureTableItem('Reminders for record submission', 10)
+                                        +featureTableItem('HCM integrations', 11)
                                 td  
                                 td.pricing-container__border-left-right 
                                     ul.pricing-container__arrows-list
@@ -727,62 +664,17 @@ block content
                             tr.pricing-container__last-row
                                 td
                                     ul.pricing-container__features-list
-                                        li.pricing-container__features-list-item
-                                            span Scheduled & automated reminders
-                                            div(class='closest' data-help='12')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Automated HCM sync
-                                            div(class='closest' data-help='13')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Customizable dashboard & analytics
-                                            div(class='closest' data-help='14')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Pandemic travel support
-                                            div(class='closest' data-help='15')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')    
-                                        li.pricing-container__features-list-item
-                                            span COVID-19 compliance future proofing
-                                            div(class='closest' data-help='16')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span COVID-19 expert consults
-                                            div(class='closest' data-help='17')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Corporate policy guidance
-                                            div(class='closest' data-help='18')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Corporate policy implementation
-                                            div(class='closest' data-help='19')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Automated alerts for non-compliance
-                                            div(class='closest' data-help='20')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Integration with time & attendance system
-                                            div(class='closest' data-help='21')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                        li.pricing-container__features-list-item
-                                            span Integration with testing labs
-                                            div(class='closest' data-help='22')
-                                                +helpPopupBody
-                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
-                                       
+                                        +featureTableItem('Scheduled & automated reminders', 12)
+                                        +featureTableItem('Automated HCM sync', 13)
+                                        +featureTableItem('Customizable dashboard & analytics', 14)
+                                        +featureTableItem('Pandemic travel support', 15)
+                                        +featureTableItem('COVID-19 compliance future proofing', 16)
+                                        +featureTableItem('COVID-19 expert consults', 17)
+                                        +featureTableItem('Corporate policy guidance', 18)
+                                        +featureTableItem('Corporate policy implementation', 19)
+                                        +featureTableItem('Automated alerts for non-compliance', 20)
+                                        +featureTableItem('Integration with time & attendance system', 21)
+                                        +featureTableItem('Integration with testing labs', 22)
                                 td  
                                 td.pricing-container__border-left-right 
                                 td.pricing-container__background 
@@ -804,13 +696,13 @@ block content
                                         li.pricing-container__arrows-list-item.pricing-container__change-margin
                                             img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
                                         li.pricing-container__arrows-list-item.pricing-container__change-margin
-                                            a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                                            button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
                                                 .label Contact US
                                         li.pricing-container__arrows-list-item.pricing-container__change-margin
-                                            a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                                            button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
                                                 .label Contact US
                                         li.pricing-container__arrows-list-item
-                                            a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                                            button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
                                                 .label Contact US
 
         article.integrations
@@ -834,7 +726,31 @@ block content
                 +contactUsForm(organizationSizeOptions)
 
         +youtubePopup
-        +helpPopup
+        +helpPopup([
+            'Ensures compliance with OSHA\'s vaccination and testing mandate',
+            'Meets HIPAA privacy and security requirements',
+            'Easy upload, secure storage, and tracking of COVID-19 vaccination records',
+            'Easy upload, secure storage, and tracking of COVID-19 test results',
+            'Easy upload, secure storage, and tracking of COVID-19 booster shots',
+            'The number of employees that can be hosted on the platform at one time',
+            'Daily symptom questionnaire and tracking of responses',
+            'Acknowledgement of company rules, policies, and procedures',
+            'Scannable QR code for entry into workplace facilities',
+            'Real-time tracking and compliance data displayed holistically, by office location, and by department',
+            'Email and SMS notifications to upload records, read new policies, and more',
+            'API integration with any human capital management system',
+            'Email and SMS notifications that can be scheduled ahead of time and managed by the Diya team',
+            'Full automation and updates of human capital management data, including the employee roster',
+            'Dashboard data parameters are customized to your company\'s needs and policies',
+            'Automated employee travel support, including domestic and international travel requirements',
+            '100% guarantee that your company will stay in compliance, no matter what rules change',
+            'Consultations with COVID-19 policy experts',
+            'Guidance on adapting corporate policies to meet compliance requirements',
+            'Guidance on corporate policy implementation, including timeline, communication material, and more',
+            'Automated alerts to HR when an employee is non-compliant',
+            'Integrate the COVID Pass with any time and attendance system',
+            'Integrate with your chosen testing centers for automated upload of employees\' test results',
+        ])
         +pricingFeatures
 
 
