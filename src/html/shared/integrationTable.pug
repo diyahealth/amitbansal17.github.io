@@ -1,0 +1,12 @@
+mixin integrationTable(useCollapse)
+    .integrations-toggle-table#table-box(onclick="window.diya.toggleClass('table','collapsed'), window.diya.toggleClass('icon-table','icon-settings')")
+        .text-table
+            span Compare all features 
+            #icon-table 
+                img(src=require("../../images/icons/direction-arrow.svg"))                            
+    .integration-table#table(class=useCollapse ? 'collapsed' : '')
+        block
+
+        
+            
+
