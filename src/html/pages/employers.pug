@@ -3,6 +3,10 @@ include ../shared/contact-us-form.pug
 include ../shared/customers.pug
 include ../shared/integrations.pug
 include ../shared/youtube-popup.pug
+include ../shared/integrationTable.pug
+include ../shared/help-popup.pug
+include ../shared/integration-features.pug
+include ../shared/pricing-features.pug
 
 
 block content
@@ -16,6 +20,31 @@ block content
                 'OfficeWork',
                 'SAP',
                 'SuccessFactors',
+                'Cornerstone',
+                'Epic',
+                'Cerner',
+                'Kaiser Permanente',
+                'NIH',
+                'DrugBank',
+        ];
+
+        const popups = [
+                'good for you',
+                'good for you d fsdf dsfsdfs',
+                ' d fsdf dsfsdfs',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo',
+                'Ecepteur sint occaecat cupidatat non proident, sunt in culpa ',
+                'OfficeWork',
+                'nisi ut aliquip ex ea commodo consequat',
+                'nisi ut ',
+                'Cornerstone',
+                'Epic',
+                'Cerner',
+                'Kaiser Permanente',
+                'NIH',
+                'DrugBank',
+                'nisi ut aliquip ex ea commodo consequat',
+                'nisi ut ',
                 'Cornerstone',
                 'Epic',
                 'Cerner',
@@ -388,10 +417,642 @@ block content
                                 img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
                                 span.hipaa-container__item-text Multi-factor authentication
                             li.hipaa-container__list-item
-                                img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+                                img.hipaa-container__item-logo(src=require("../../images/employers/check.png" ) alt='check') 
                                 span.hipaa-container__item-text Security alerts for unauthorized access
 
+        article.pricing-container
+            
+                .pricing-container__main-text
+                        h2.pricing-container__title Pricing
+                .pricing-container__pricing-card-box
+                    .pricing-card
+                        .pricing-card__title Essential
+                        .pricing-card__subtitle For organizations that are looking to manage vaccination records and test results in a HIPAA-compliant manner.
+                        .pricing-card__subscribe-price-box
+                            .pricing-card__price-box
+                                .pricing-card__price-first
+                                    s $0.50
+                                    .pricing-card__mobile-info.activate
+                                        span Per employee / month billed annually
+                                .pricing-card__info
+                                    span Free for a limited time 
+                            .pricing-card__describe-price
+                                span Per employee / month billed annually
+                        a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                            .label GET STARTED
+                        ul.pricing-card__perks-list
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span OSHA-compliant 
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span HIPAA-compliant
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span Vaccination tracking
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span Test results tracking
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span Booster shot tracking
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span Up to 250 employees
+                        ul.pricing-container__features-list.activate
+                                        li.pricing-container__features-list-item
+                                            img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                            span 5 documents
+                                            div(class='closest' data-help='0')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                            span 1 admin user
+                                            div(class='closest' data-help='1')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                            span Up to 250 employees
+                                            div(class='closest' data-help='2')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        +integrationFeatures
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span HIPAA-Compliant
+                                                div(class='closest' data-help='3')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span HCM integrations
+                                                div(class='closest' data-help='4')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Curated, personalized content delivery
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Email & SMS notifications
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Employee emergency preparedness
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                    .pricing-card
+                        .pricing-card__title Professional
+                        .pricing-card__subtitle For organizations that also need reporting and time & efficiency gain features for HR.
+                        .pricing-card__subscribe-price-box
+                            .pricing-card__price-box
+                                .pricing-card__price-first
+                                    span.pricing-card__price-color $2
+                                    .pricing-card__mobile-info.activate
+                                        span Per employee / month billed annually
+                                 
+                            .pricing-card__describe-price
+                                span Per employee / month billed annually
+                        a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                            .label BUY PROFESSIONAL 
+                        ul.pricing-card__perks-list
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span OSHA-compliant 
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span HIPAA-compliant
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span Vaccination tracking
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span Test results tracking
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span Booster shot tracking
+                            li.pricing-card__perks-item
+                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                span Unlimited number of employees
+                        ul.pricing-container__features-list.activate
+                                        li.pricing-container__features-list-item
+                                            img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                            span Unlimited documents
+                                            div(class='closest' data-help='0')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                            span 5 admin users
+                                            div(class='closest' data-help='1')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                            span Unlimited number of employees
+                                            div(class='closest' data-help='2')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        +integrationFeatures
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span HIPAA-Compliant
+                                                div(class='closest' data-help='3')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span HCM integrations
+                                                div(class='closest' data-help='4')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Curated, personalized content delivery
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Email & SMS notifications
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Employee emergency preparedness
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Personalized employee wellness portal
+                                                div(class='closest' data-help='4')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Engagement dashboard & analytics
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Employee-vendor satisfaction report
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Reports download
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                    .pricing-container__special-box
+                        .pricing-container__most-popular
+                            span Most popular 
+                        .pricing-card.pricing-container__borders
+                            .pricing-card__title Enterprise
+                            .pricing-card__subtitle For corporations that need to support multi-state or multi-national compliance policies, and require advanced reporting & analytics.
+                            .pricing-card__subscribe-price-box
+                            .pricing-card__price-box
+                                .pricing-card__price-first
+                                    span.pricing-card__price-color $3
+                                    .pricing-card__mobile-info.activate
+                                        span Per employee / month billed annually
+                                
+                            .pricing-card__describe-price
+                                span Per employee / month billed annually
+                            a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                                .label BUY ENTERPRISE
+                            ul.pricing-card__perks-list
+                                li.pricing-card__perks-item
+                                    img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    span OSHA-compliant 
+                                li.pricing-card__perks-item
+                                    img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    span HIPAA-compliant
+                                li.pricing-card__perks-item
+                                    img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    span Vaccination tracking
+                                li.pricing-card__perks-item
+                                    img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    span Test results tracking
+                                li.pricing-card__perks-item
+                                    img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    span Booster shot tracking
+                                li.pricing-card__perks-item
+                                    img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    span Up to 250 employees
+                            ul.pricing-container__features-list.activate
+                                        li.pricing-container__features-list-item
+                                            img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                            span Unlimited documents
+                                            div(class='closest' data-help='0')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                            span Unlimited number of admin users
+                                            div(class='closest' data-help='1')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                            span Unlimited number of employees
+                                            div(class='closest' data-help='2')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        +integrationFeatures
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span HIPAA-Compliant
+                                                div(class='closest' data-help='3')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span HCM integrations
+                                                div(class='closest' data-help='4')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Curated, personalized content delivery
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Email & SMS notifications
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Employee emergency preparedness
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Personalized employee wellness portal
+                                                div(class='closest' data-help='4')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Engagement dashboard & analytics
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Employee-vendor satisfaction report
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Reports download
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Automated HCM sync
+                                                div(class='closest' data-help='0')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Automated content creation
+                                                div(class='closest' data-help='1')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Customized engagement dashboard & analytics
+                                                div(class='closest' data-help='2')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span ROI reports
+                                                div(class='closest' data-help='3')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Predictive health risks data
+                                                div(class='closest' data-help='4')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Scheduled & automated notifications
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Alerts for low engagement
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Annual consults with health & wellness physicians
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Corporate emergency preparedness
+                                                div(class='closest' data-help='4')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Benefits vendor integrations
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                            li.pricing-container__features-list-item
+                                                img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                                span Health insurance claims integration
+                                                div(class='closest' data-help='5')
+                                                    +helpPopupBody
+                                                    img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        
 
+
+
+
+                +integrationTable(true)
+                    .pricing-container__table-box 
+                        table.pricing-container__table
+                            
+                            tr 
+                                th.pricing-container__width 
+                                th.pricing-container__border-right.pricing-container__common-width   Essential
+                                th.pricing-container__border-right.pricing-container__common-width Professional
+                                th.pricing-container__enterprise.pricing-container__common-width  Enterprise
+                            tr
+                                td
+                                    ul.pricing-container__features-list
+                                        li.pricing-container__features-list-item
+                                            span OSHA-compliant
+                                            div(class='closest' data-help='0')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span HIPAA-compliant
+                                            div(class='closest' data-help='1')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Vaccination tracking
+                                            div(class='closest' data-help='2')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Test results tracking
+                                            div(class='closest' data-help='3')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Booster shot tracking
+                                            div(class='closest' data-help='4')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Number of employees
+                                            div(class='closest' data-help='5')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+
+
+                                        
+                                      
+
+                                td
+                                    ul.pricing-container__arrows-list
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            span.pricing-container__number-employees-text Up to 250
+                                    
+
+                                td.pricing-container__border-left-right 
+                                    ul.pricing-container__arrows-list
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            span.pricing-container__number-employees-text Unlimited
+
+                                td.pricing-container__background  
+                                    ul.pricing-container__arrows-list
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            span.pricing-container__number-employees-text Unlimited
+                            tr
+                                td 
+                                    ul.pricing-container__features-list
+                                        li.pricing-container__features-list-item
+                                            span Symptom tracking
+                                            div(class='closest' data-help='6')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Policy attestations
+                                            div(class='closest' data-help='7')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span COVID Pass
+                                            div(class='closest' data-help='8')
+                                                +helpPopupBody    
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Dashboard & analytics
+                                            div(class='closest' data-help='9')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Reminders for record submission
+                                            div(class='closest' data-help='10')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span HCM integrations
+                                            div(class='closest' data-help='11')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+
+
+
+
+                                    
+                                      
+                                td  
+                                td.pricing-container__border-left-right 
+                                    ul.pricing-container__arrows-list
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')    
+                                td.pricing-container__background 
+                                    ul.pricing-container__arrows-list
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check') 
+                            tr.pricing-container__last-row
+                                td
+                                    ul.pricing-container__features-list
+                                        li.pricing-container__features-list-item
+                                            span Scheduled & automated reminders
+                                            div(class='closest' data-help='12')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Automated HCM sync
+                                            div(class='closest' data-help='13')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Customizable dashboard & analytics
+                                            div(class='closest' data-help='14')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Pandemic travel support
+                                            div(class='closest' data-help='15')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')    
+                                        li.pricing-container__features-list-item
+                                            span COVID-19 compliance future proofing
+                                            div(class='closest' data-help='16')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span COVID-19 expert consults
+                                            div(class='closest' data-help='17')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Corporate policy guidance
+                                            div(class='closest' data-help='18')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Corporate policy implementation
+                                            div(class='closest' data-help='19')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Automated alerts for non-compliance
+                                            div(class='closest' data-help='20')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Integration with time & attendance system
+                                            div(class='closest' data-help='21')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                        li.pricing-container__features-list-item
+                                            span Integration with testing labs
+                                            div(class='closest' data-help='22')
+                                                +helpPopupBody
+                                                img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+                                       
+                                td  
+                                td.pricing-container__border-left-right 
+                                td.pricing-container__background 
+                                    ul.pricing-container__arrows-list
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item.pricing-container__change-margin
+                                            img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                        li.pricing-container__arrows-list-item.pricing-container__change-margin
+                                            a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                                                .label Contact US
+                                        li.pricing-container__arrows-list-item.pricing-container__change-margin
+                                            a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                                                .label Contact US
+                                        li.pricing-container__arrows-list-item
+                                            a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                                                .label Contact US
+                                        
+                                 
+                  
+   
+
+        article.integrations
+            h2 Integrations
+            +integrations(true,dataIntegrations)
         article.download-container
             .inner
                 .download-container__main-text
@@ -399,9 +1060,7 @@ block content
                     a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
                         .label DOWNLOAD
 
-        article.integrations
-            h2 Integrations
-            +integrations(true,dataIntegrations)
+        
 
 
         article.contact-us-container(id="contact-us")
@@ -414,6 +1073,9 @@ block content
                 +contactUsForm(organizationSizeOptions)
 
         +youtubePopup
+        +helpPopup
+        +pricingFeatures
+            
 
 
 block script

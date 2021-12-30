@@ -1,0 +1,67 @@
+mixin helpPopupBody
+    div.help-popup.hidden-help-popup
+        span.help-popup-text
+        
+
+mixin helpPopup
+
+    script.
+
+        const popups = [
+                'test 1',
+                'test 2',
+                'test 3',
+                'test 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo',
+                'test 5 Ecepteur sint occaecat cupidatat non proident, sunt in culpa ',
+                'test 6',
+                'test 7',
+                'test 8 ',
+                'test 9',
+                'test 10',
+                'test 11',
+                'test 12',
+                'test 13',
+                'test 14',
+                'test 15',
+                'test 16',
+                'test 17',
+                'test 18',
+                'test 19',
+                'test 20',
+                'test 21',
+                'test 22',
+                'test 23',
+        ];
+        document
+            .querySelectorAll('[data-help]')
+            .forEach(x => 
+            {x.addEventListener('mouseover', e => {
+                e.preventDefault();
+                e.stopPropagation();
+            if (e.target.closest('.pricing-container__features-item-logo')) {
+                e.target.classList.add('icon-active');
+            }
+                
+                const target = e.target.closest('.closest');
+                target.querySelector('.help-popup').classList.remove('hidden-help-popup');
+                const [result] = popups.filter((e,index)=> target.dataset.help == index);
+                target.querySelector('.help-popup-text').innerHTML=`${result}`;
+                
+            });
+             x.addEventListener('mouseout', e => {
+                e.preventDefault();
+                e.stopPropagation();
+                const target = e.target.closest('.closest');
+                target.querySelector('.help-popup').classList.add('hidden-help-popup');
+                target.querySelector('.pricing-container__features-item-logo').classList.remove('icon-active');
+                
+            })}
+                       
+            );
+       
+            
+            
+           
+
+
+  

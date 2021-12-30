@@ -1,0 +1,41 @@
+mixin pricingFeatures
+    script.
+           const parentEl =  document.querySelector('.pricing-container__pricing-card-box');
+           
+           parentEl.addEventListener('click', e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                            
+                    const target = e.target.closest('.features-img');
+                   
+                    if( target == null) {
+                        return
+                    }
+
+                    const parentTarget = target.closest('.pricing-container__features-list');
+                    const integrationFeaturesElement = parentTarget.querySelector('.integration-features');
+                    const collapseElement = parentTarget.querySelector('.text-collapse');
+
+                    integrationFeaturesElement.classList.toggle('hidden-help-popup');
+                    parentTarget.querySelector('.features-img').classList.toggle('icon-settings');
+
+                    if (integrationFeaturesElement.classList.contains('hidden-help-popup')){
+                        collapseElement.innerHTML = "See all features";
+                    }
+
+                    else {
+                        collapseElement.innerHTML = "Hide all features";
+
+                    }
+                
+                    
+                });
+                
+                        
+              
+            
+            
+           
+
+
+  
