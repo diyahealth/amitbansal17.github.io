@@ -3,6 +3,30 @@ include ../shared/contact-us-form.pug
 include ../shared/customers.pug
 include ../shared/integrations.pug
 include ../shared/youtube-popup.pug
+include ../shared/integrationTable.pug
+include ../shared/help-popup.pug
+include ../shared/integration-features.pug
+include ../shared/pricing-features.pug
+
+mixin pricingCartPerkItem(name)
+    li.pricing-card__perks-item
+        img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+        span=name 
+
+mixin featureListItem(name, helpIndex)
+    li.pricing-container__features-list-item
+        img.pricing-card__perks-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+        span=name
+        .closest(data-help=helpIndex)
+            +helpPopupBody
+            img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
+
+mixin featureTableItem(name, helpIndex)
+    li.pricing-container__features-list-item
+        span=name
+        .closest(data-help=helpIndex)
+            +helpPopupBody
+            img.pricing-container__features-item-logo(src=require("../../images/icons/question.svg") alt='check')
 
 
 block content
@@ -268,15 +292,278 @@ block content
                                                 img.logo(src=require("../../images/wellness/slider1/logo.png"), alt="Left")
                                         .img-box
                                             img.slide(src=require("../../images/wellness/slider1/slide6/slide2.png"), alt="Left")       
+
+        article.pricing-container
+            .pricing-container__main-text
+                    h2.pricing-container__title Pricing
+            .pricing-container__pricing-card-box
+                .pricing-card
+                    .pricing-card__title Essential
+                    .pricing-card__subtitle For organizations that are looking to manage vaccination records and test results in a HIPAA-compliant manner.
+                    .pricing-card__subscribe-price-box
+                        .pricing-card__price-box
+                            .pricing-card__price-first
+                                s $0.50
+                                .pricing-card__mobile-info.activate
+                                    span Per employee / month billed annually
+                            .pricing-card__info
+                                span Free for a limited time 
+                        .pricing-card__describe-price
+                            span Per employee / month billed annually
+                    a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                        .label GET STARTED
+                    ul.pricing-card__perks-list
+                        +pricingCartPerkItem('5 documents')
+                        +pricingCartPerkItem('1 admin user')
+                        +pricingCartPerkItem('Up to 250 employees')
+                    ul.pricing-container__features-list.activate
+                        +featureListItem('5 documents', 0)
+                        +featureListItem('1 admin user', 1)
+                        +featureListItem('Up to 250 employees', 2)
+                        +integrationFeatures
+                            +featureListItem('HIPAA-Compliant', 3)
+                            +featureListItem('HCM integrations', 4)
+                            +featureListItem('Curated, personalized content delivery', 5)
+                            +featureListItem('Email & SMS notifications', 6)
+                            +featureListItem('Employee emergency preparedness', 7)
+                .pricing-card
+                    .pricing-card__title Professional
+                    .pricing-card__subtitle For organizations that also need reporting and time & efficiency gain features for HR.
+                    .pricing-card__subscribe-price-box
+                        .pricing-card__price-box
+                            .pricing-card__price-first
+                                span.pricing-card__price-color $2
+                                .pricing-card__mobile-info.activate
+                                    span Per employee / month billed annually
+                                
+                        .pricing-card__describe-price
+                            span Per employee / month billed annually
+                    a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                        .label BUY PROFESSIONAL 
+                    ul.pricing-card__perks-list
+                        +pricingCartPerkItem('Unlimited documents')
+                        +pricingCartPerkItem('5 admin user')
+                        +pricingCartPerkItem('Unlimited number of employees')
+                    ul.pricing-container__features-list.activate
+                        +featureListItem('Unlimited documents', 0)
+                        +featureListItem('5 admin user', 1)
+                        +featureListItem('Unlimited number of employees', 2)
+                        +integrationFeatures
+                            +featureListItem('HIPAA-Compliant', 3)
+                            +featureListItem('HCM integrations', 4)
+                            +featureListItem('Curated, personalized content delivery', 5)
+                            +featureListItem('Email & SMS notifications', 6)
+                            +featureListItem('Employee emergency preparedness', 7)
+                            +featureListItem('Personalized employee wellness portal', 8)
+                            +featureListItem('Engagement dashboard & analytics', 9)
+                            +featureListItem('Employee-vendor satisfaction report', 10)
+                            +featureListItem('Reports download', 11)
+                .pricing-container__special-box
+                    .pricing-container__most-popular
+                        span Most popular 
+                    .pricing-card.pricing-container__borders
+                        .pricing-card__title Enterprise
+                        .pricing-card__subtitle For corporations that need to support multi-state or multi-national compliance policies, and require advanced reporting & analytics.
+                        .pricing-card__subscribe-price-box
+                        .pricing-card__price-box
+                            .pricing-card__price-first
+                                span.pricing-card__price-color $3
+                                .pricing-card__mobile-info.activate
+                                    span Per employee / month billed annually
+                            
+                        .pricing-card__describe-price
+                            span Per employee / month billed annually
+                        a(href='./files/Diya COVID CaaS Presentation.pdf' class='button-mobile-settings material-btn compliance-container__title__button-size' target="__blank") 
+                            .label BUY ENTERPRISE
+                        ul.pricing-card__perks-list
+                            +pricingCartPerkItem('Unlimited documents')
+                            +pricingCartPerkItem('Unlimited number of admin users')
+                            +pricingCartPerkItem('Unlimited number of employees')
+                        ul.pricing-container__features-list.activate
+                            +featureListItem('Unlimited documents', 0)
+                            +featureListItem('Unlimited number of admin users', 1)
+                            +featureListItem('Unlimited number of employees', 2)
+                            +integrationFeatures
+                                +featureListItem('HIPAA-Compliant', 3)
+                                +featureListItem('HCM integrations', 4)
+                                +featureListItem('Curated, personalized content delivery', 5)
+                                +featureListItem('Email & SMS notifications', 6)
+                                +featureListItem('Employee emergency preparedness', 7)
+                                +featureListItem('Personalized employee wellness portal', 8)
+                                +featureListItem('Engagement dashboard & analytics', 9)
+                                +featureListItem('Employee-vendor satisfaction report', 10)
+                                +featureListItem('Reports download', 11)
+                                +featureListItem('Automated HCM sync', 13)
+                                +featureListItem('Automated content creation', 14)
+                                +featureListItem('Customized engagement dashboard & analytics', 15)
+                                +featureListItem('ROI reports', 16)
+                                +featureListItem('Predictive health risks data', 17)
+                                +featureListItem('Scheduled & automated notifications', 18)
+                                +featureListItem('Alerts for low engagement', 19)
+                                +featureListItem('Annual consults with health & wellness physicians', 20)
+                                +featureListItem('Corporate emergency preparedness', 21)
+                                +featureListItem('Benefits vendor integrations', 22)
+                                +featureListItem('Health insurance claims integration', 23)
+
+            +integrationTable(true)
+                .pricing-container__table-box 
+                    table.pricing-container__table
+                        tr 
+                            th.pricing-container__width 
+                            th.pricing-container__border-right.pricing-container__common-width   Essential
+                            th.pricing-container__border-right.pricing-container__common-width Professional
+                            th.pricing-container__enterprise.pricing-container__common-width  Enterprise
+                        tr
+                            td
+                                ul.pricing-container__features-list
+                                    +featureTableItem('Diya Health\'s Signature Content', 0)
+                                    +featureTableItem('Number of admin users', 1)
+                                    +featureTableItem('Number of employees', 2)
+                                    +featureTableItem('HIPAA-Compliant', 3)
+                                    +featureTableItem('HCM integrations', 4)
+                                    +featureTableItem('Curated, personalized content delivery', 5)
+                                    +featureTableItem('Email & SMS notifications', 6)
+                                    +featureTableItem('Employee emergency preparedness', 7)
+                            td
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text 5 documents
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text 1
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text Up to 250
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+
+                            td.pricing-container__border-left-right
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text Unlimited
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text 5
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text Unlimited
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+
+                            td.pricing-container__background
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text Unlimited
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text Unlimited
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text Unlimited
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                        tr
+                            td 
+                                ul.pricing-container__features-list
+                                    +featureTableItem('Personalized employee wellness portal', 8)
+                                    +featureTableItem('Engagement dashboard & analytics', 9)
+                                    +featureTableItem('Employee-vendor satisfaction report', 10)
+                                    +featureTableItem('Reports download', 11)
+                            td  
+                            td.pricing-container__border-left-right 
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')    
+                            td.pricing-container__background 
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check') 
+                        tr.pricing-container__last-row
+                            td
+                                ul.pricing-container__features-list
+                                    +featureTableItem('Automated HCM sync', 12)
+                                    +featureTableItem('Automated content creation', 13)
+                                    +featureTableItem('Customized engagement dashboard & analytics', 14)
+                                    +featureTableItem('ROI reports', 15)
+                                    +featureTableItem('Predictive health risks data', 16)
+                                    +featureTableItem('Scheduled & automated notifications', 17)
+                                    +featureTableItem('Alerts for low engagement', 18)
+                                    +featureTableItem('Annual consults with health & wellness physicians', 19)
+                                    +featureTableItem('Corporate emergency preparedness', 20)
+                                    +featureTableItem('Benefits vendor integrations', 21)
+                                    +featureTableItem('Health insurance claims integration', 22)
+                            td  
+                            td.pricing-container__border-left-right 
+                            td.pricing-container__background 
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item.pricing-container__change-margin
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item.pricing-container__change-margin
+                                        img.pricing-container__arrows-item-logo(src=require("../../images/icons/arrow.svg") alt='check')
+                                    li.pricing-container__arrows-list-item.pricing-container__change-margin
+                                        a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                                            .label Contact US
+                                    li.pricing-container__arrows-list-item
+                                        a(href='./files/Diya COVID CaaS Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                                            .label Contact US
+
+ 
+        article.integrations
+            h2 Integrations
+            +integrations(true,dataIntegrations)
+
+                   
+        
         article.download-container
             .inner
                 .download-container__main-text
                     h3.download-container__title Download our product details for free!
                     a(href='./files/Diya Wellness Engagement Presentation.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
                         .label DOWNLOAD
-        article.integrations
-            h2 Integrations
-            +integrations(true,dataIntegrations)
 
         article.contact-us-container(id="contact-us")
             .inner
@@ -289,6 +576,32 @@ block content
                     +contactUsForm(organizationSizeOptions)
 
         +youtubePopup
+        +helpPopup([
+            'Access to Diya Health\'s signature wellness content, created by health and wellness experts',
+            'The number of administrative users permitted on the platform at one time',
+            'The number of employees that can be hosted on the platform at one time',
+            'Meets HIPAA privacy and security requirements',
+            'API integration with any human capital management system',
+            'One-click delivery of content to employees based on office location, department, and wellness needs',
+            'Content delivery notifications sent via email and SMS',
+            'Employees create a scannable emergency card, which provides first responders with essential health information',
+            'Netflix-style employee wellness portal that stores & categorizes content specific to their needs',
+            'Holistic employee engagement data, updated monthly',
+            'Ability for employees to rate wellness vendors and content on a 5-star scale',
+            'Reports can be downloaded into Excel, CSV, or PDF formats',
+            'Full automation and updates of human capital management data, including the employee roster',
+            'Content that is developed and managed by the Diya team',
+            'Real-time employee engagement data displayed holistically, by program, by office location, and by department',
+            'Real-time return on investment data, comparing employee engagement per program to dollars invested',
+            'Analytics on chronic conditions that pose the greatest risks to employee well-being',
+            'Email and SMS notifications that can be scheduled ahead of time and managed by the Diya team',
+            'Alerts to admin users when program engagement falls below a chosen threshold',
+            'Annual consultations with physicians who provide guidance on wellness initiatives',
+            'Corporations can distribute mass email and SMS notifications to all employees in case of an emergency',
+            'API integration with any benefits vendor',
+            'Integration with health insurance claims data'
+        ])
+        +pricingFeatures
 
 block script
     script.
