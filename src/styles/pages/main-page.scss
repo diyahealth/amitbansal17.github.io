@@ -8,73 +8,7 @@
     }
 }
 
-.card-press {
-    @media screen and (max-width: $break-tablet) {
-        width: 100%;
-        padding: 0 20px;
-        height: auto;
-    }
 
-    @media screen and (max-width: $break-mobile) {
-        padding: 0;
-    }
-
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    width: 25%;
-
-    &__title {
-        padding: 10px;
-        background-color: #43B5E3;
-        color: white;
-
-        @media screen and (max-width: $break-tablet) {
-            text-align: center;
-            font-size: 28px;
-            font-weight: 900;
-        }
-
-    }
-
-    &__image {
-        width: 100%;
-        aspect-ratio: 16/9;
-        overflow: hidden;
-
-        & img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-
-    }
-
-
-    &__full-height {
-        flex-grow: 1;
-        min-height: 330px;
-    }
-
-    &__read-more {
-        color: #43B5E3;
-        font-size: 16px;
-        display: block;
-        margin-top: auto;
-        margin-bottom: 10px;
-        padding: 5px 20px;
-
-        @media screen and (max-width: $break-tablet) {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 30px;
-
-
-        }
-    }
-
-
-}
 
 .press-container .card-press p {
     font-size: 16px;
@@ -86,6 +20,75 @@
 }
 
 .main-page {
+
+
+    .card-press {
+        @media screen and (max-width: $break-tablet) {
+            width: 100%;
+            padding: 0 20px;
+            height: auto;
+        }
+
+        @media screen and (max-width: $break-mobile) {
+            padding: 0;
+        }
+
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 25%;
+
+        &__title {
+            padding: 10px;
+            background-color: #43B5E3;
+            color: white;
+
+            @media screen and (max-width: $break-tablet) {
+                text-align: center;
+                font-size: 28px;
+                font-weight: 900;
+            }
+
+        }
+
+        &__image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+
+            & img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+
+        &__full-height {
+            flex-grow: 1;
+            min-height: 330px;
+        }
+
+        &__read-more {
+            color: #43B5E3;
+            font-size: 16px;
+            display: block;
+            margin-top: auto;
+            margin-bottom: 10px;
+            padding: 5px 20px;
+
+            @media screen and (max-width: $break-tablet) {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+
+
+            }
+        }
+
+
+    }
 
     .iframe {
         width: 640px;
