@@ -1,0 +1,62 @@
+mixin followTeam(team)
+    script.
+            const newEl =  document.querySelector('.leadership-container');
+            const backGround =  document.querySelector('.popup-team__background');
+            const popupBox =  document.querySelector('.popup-team__content');
+            const popupMainBox =  document.querySelector('.popup-team');
+            const body =  document.querySelector('body');
+            const popups = !{JSON.stringify(team)};
+          
+            newEl.addEventListener('click', e => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                       
+                        const target = e.target.closest('.card-employees');
+                                                                                                       
+                        if( target == null) {
+                            return
+                        }
+
+                        popupBox.classList.remove('hidden');
+                        backGround.classList.remove('hidden');
+                        body.classList.add('scroll-off');
+
+
+
+                        const currentIndex = +target.dataset.name;
+                        const current = popups.find((e)=> e.index ===currentIndex);
+                        const popupLogo =  document.querySelector('.popup-team__logo');
+                        const popupSubtitle =  document.querySelector('.popup-team__subtitle-text');
+                        const popupText =  document.querySelector('.popup-team__text');
+                        const popupWork =  document.querySelector('.popup-team__work');
+                        const popupName =  document.querySelector('.popup-team__name');
+                        const popupLink =  document.querySelector('.popup-team__link');
+                       
+
+
+                        popupLogo.src = current.image;
+                        popupSubtitle.innerHTML = current.title;
+                        popupText.innerHTML= current.text;
+                        popupWork.innerHTML= current.work;
+                        popupName.innerHTML= current.name;
+                        popupLink.href= current.href;
+
+                                                    
+                    });
+
+            popupMainBox.addEventListener('click', e => {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                if (e.target.classList.contains('popup-team__close')|| e.target.classList.contains('popup-team__background')) {
+                    popupBox.classList.add('hidden');
+                    backGround.classList.add('hidden');
+                    body.classList.remove('scroll-off');
+                }
+
+            });
+
+          
+
+
+                
