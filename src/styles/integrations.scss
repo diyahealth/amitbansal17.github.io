@@ -28,6 +28,7 @@
 
     .icon {
         transform: rotate(90deg);
+        cursor: pointer;
 
         .collapsed & {
             transform: rotate(-90deg);
