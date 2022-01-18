@@ -49,10 +49,13 @@ mixin followTeam(team)
                     });
 
             popupMainBox.addEventListener('click', e => {
+                if (e.target.tagName === 'A') {
+                    return;
+                }
                 e.preventDefault();
                 e.stopPropagation();
                 
-                if (e.target.classList.contains('popup-team__close')|| e.target.classList.contains('popup-team__background')) {
+                if (e.target.classList.contains('popup-team__close') || e.target.classList.contains('popup-team__background')) {
                     popupBox.classList.add('hidden');
                     backGround.classList.add('hidden');
                     body.classList.remove('scroll-off');
