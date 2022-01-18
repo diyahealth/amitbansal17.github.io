@@ -165,7 +165,6 @@ block content
             },
         ];
 
-        
     main.main-box.about-us
         article.about-us-image-container
             .about-us-image-container__notice-box-hidden
@@ -231,14 +230,14 @@ block content
                     +integrationBlogCards(blog[2], 3, links[2])
                     +integrationBlogCards(blog[3], 4, links[3])
                 a.button-mobile-settings.material-btn.compliance-container__title__button-size(href=pages.ourBlog.url) 
-                    .label GO TO BLOG             
+                    .label GO TO BLOG
         article.partnerships
            .inner
                h2.partnerships__title Partnerships
                p.partnerships__subtitle Diya Health is a digital health, AI-driven Software-as-a-Service platform that engages employers, health systems, and individuals for great health outcomes. Diya Health is seeking partners to provide even more comprehensive offerings to our customers. Join the Diya Health network to provide users with all that they need to improve outcomes at lower cost.
                button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
                                .label Let's partner
-               +integrations(true,dataIntegrations)                 
+               +integrations(true,dataIntegrations)
         article.contact-us
             .contact-us-container(id="contact-us")
                 .title
@@ -250,151 +249,4 @@ block content
                     +contactUsForm(organizationSizeOptions)
         +popupTeam
         +hoverCards
-        +followTeam(team)      
-       
-                                    
-                        
-                        
-           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //- +headImage("head-bg-about-us", "Diya Health is a team of physicians, engineers, gerontologists, researchers, designers and business leaders", 'small')
-    //- article.primary-background-content.anchor(id="mission")
-    //-     .default-content-block.centered-article-container
-    //-         .content
-    //-             h4.text.title Our Mission
-    //-             +twoColumnArticle({ secondaryLeft: 'image-container' })
-    //-                 +setContent('secondaryLeft')
-    //-                     img(src=require("../../images/about-us/diya-health-on-computer.jpg"))
-    //-                 +setContent('secondaryRight')
-    //-                     +list(missions, { itemText: 'big', icon: 'big' })
-               
-    //- article
-    //-     +twoColumnArticle({ secondaryLeft: 'image-container' })
-    //-         +setContent('secondaryLeft')
-    //-             img(src=require("../../images/about-us/diya-health-on-computer.jpg"))
-    //-         +setContent('secondaryRight')
-    //-             i.text.
-    //-                 Using advanced algorithms, data science, and artificial-intelligence capability, we have developed a product that was inconceivable only a few years ago.  It is a software-as-a-service digital platform for use as a personal health diary.  It receives, stores, and updates all of a patient's medical information, making it available to anyone the patient wishes — doctors, family members, and caregivers.  It facilitates telehealth as well as communication among a patient's health providers.  It is easy to use in any language.  It improves health outcomes.
-
-    //- article.anchor(id="history")
-    //-     +articleTitle('Our History', { divider: 'primary' }, true)
-    //- article
-    //-     +twoColumnArticle({ container: 'primary-background-content', secondaryRight: 'image-container' })
-    //-         +setContent('main')
-    //-             h4.text.title What's in the name?
-    //-         +setContent('secondaryLeft')
-    //-             span.text.
-    //-                 Diya is a word of Arabic origin that means "radiance."  It has been adopted by South-Asian culture as a name for a primitive lamp — a small handmade clay bowl that, with a bit of oil and a wick, creates light.  It symbolizes optimism and prosperity.  It lights the dark and gives a sense of calm.
-    //-             br
-    //-             span.text
-    //-                 span In selecting our name, we drew inspiration from a sentence in the 
-    //-                 i prayer of St. Francis of Assisi: 
-    //-                 span "Where there is darkness, may I bring light."  When it comes to our health care, there is an enormous amount of darkness — information darkness. 
-    //-                 i Doctors, patients, and families often are in the dark. 
-    //-                 span Our product offers lifesaving information delivered on a 
-    //-                 i computer or smart phone. 
-    //-                 span It is a 
-    //-                 i unique and sophisticated 
-    //-                 span gift of modern technology.  Yet to us it also is a simple gift — it lights the dark.
-
-    //-         +setContent('secondaryRight')
-    //-             img(src=require("../../images/index/diya.jpg"), alt="Diya")
-    //- article.anchor(id="team")
-    //-     +articleTitle('Our Team', { divider: 'primary' }, true)
-    //-     .team-content-container
-    //-         each member, index in team
-    //-             div(class=member.itemClass)
-    //-                 .team-member
-    //-                     .image-container
-    //-                         .photo
-    //-                             img(src=member.image)
-    //-                     .info-container
-    //-                         h5.person
-    //-                             span=member.name
-    //-                             if member.title
-    //-                                 span , 
-    //-                                 i=member.title
-
-    //-                         p.description(id=`${index}-description`)
-    //-                             span(class=member.fullText !== null ? 'partial-description' : undefined)=member.text
-    //-                             if (member.fullText)
-    //-                                 span.more-points(onclick="window.diya.toggleClass('" + index + '-description' + "', 'full')") ...
-    //-                                 span.full-description=member.fullText
-
-    //- article.anchor(id="partnerships")
-    //-     +articleTitle('Partnerships', { divider: 'primary' }, true)
-    //- article.primary-background-content
-    //-     .default-content-block.centered-article-container
-    //-         .content
-    //-             span.text.
-    //-                 Diya Health is a growing healthcare technology startup. We are a team of a team of physicians, engineers, gerontologists, researchers, designers and business leaders who are looking to learn and grow as professionals. We are seeking additional team members who have a passion for improving care quality and access, are driven and hard-working, and who appreciate lifelong learning.
-    //-             br
-    //-             button.material-btn.large(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
-    //-                 span.label.large
-    //-                     span Partner With Us
-    //- article
-    //-     .default-content-block.centered-article-container.partners-title-container
-    //-         .content
-    //-             h4.text.title.no-margin Our Partners
-    //-     +partners()
-
-    //- article
-    //-     .default-content-block.centered-article-container.hth-share
-    //-         .content
-    //-             h4.text.title Share With Others
-    //-             span.text.
-    //-                 If you believe in our mission or know someone else who may have the desire, knowledge or expertise, please help by increasing awareness of Diya Health. Share our story with your friends. Together we can make the future brighter for those in need and give everyone a fair chance for good health.
-    //-             .input-group
-    //-                 each item in links
-    //-                     a(href=item.href, target="_blank")
-    //-                         img(src=item.icon)
-
-    //- article(id="contact-us").primary-background-content
-    //-     +contactUs(organizationSizeOptions)
+        +followTeam(team)
