@@ -13,11 +13,15 @@ mixin followTeam(team)
                        
                         const target = e.target.closest('.card-employees');
                                                                                                        
-                        if( target == null) {
+                        if( target == null || target.classList.contains('position-card')) {
                             return
                         }
 
                         popupBox.classList.remove('hidden');
+
+                        popupBox.scrollTo({
+                         top: 0,
+                         })
                         backGround.classList.remove('hidden');
                         body.classList.add('scroll-off');
 
