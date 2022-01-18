@@ -44,7 +44,7 @@
         top: -75px;
         border-radius: 10px;
 
-        @media screen and (max-width: $break-mobile) {
+        @media screen and (max-width: $break-tablet) {
             top: 0px;
 
         }
@@ -304,9 +304,10 @@
 
     .card-employees {
         cursor: pointer;
-        min-height: 286px;
         flex-shrink: 0;
-        width: 200px;
+        min-height: 260px;
+        width: 100%;
+        max-width: 300px;
         border-radius: 10px;
         position: relative;
         background-color: #fff;
@@ -321,7 +322,7 @@
             margin-bottom: 50px;
             box-shadow: 4px 4px 16px 0px #0000000D;
             box-shadow: -4px -4px 16px 0px #0000000D;
-
+            max-width: none;
 
 
         }
@@ -358,9 +359,6 @@
 
                 margin-bottom: 24px
             }
-
-            ;
-
         }
 
         &__logo {
@@ -1029,7 +1027,8 @@
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 86px 80px 136px 118px;
+        padding: 86px 20px 136px 20px;
+        max-width: 1440px;
 
         // & .card-employees:not(:last-child) {
         //     padding: 0 15px;
