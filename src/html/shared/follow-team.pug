@@ -6,6 +6,9 @@ mixin followTeam(team)
             const popupMainBox =  document.querySelector('.popup-team');
             const body =  document.querySelector('body');
             const popups = !{JSON.stringify(team)};
+            const popupSubtitleBox =  document.querySelector('.popup-team__subtitle');
+            const dataBox =  document.querySelector('.popup-team__info-box');
+            const textBox =  document.querySelector('.popup-team__text-box');
           
             newEl.addEventListener('click', e => {
                         e.preventDefault();
@@ -31,10 +34,13 @@ mixin followTeam(team)
                         const current = popups.find((e)=> e.index ===currentIndex);
                         const popupLogo =  document.querySelector('.popup-team__logo');
                         const popupSubtitle =  document.querySelector('.popup-team__subtitle-text');
+                      
                         const popupText =  document.querySelector('.popup-team__text');
                         const popupWork =  document.querySelector('.popup-team__work');
                         const popupName =  document.querySelector('.popup-team__name');
                         const popupLink =  document.querySelector('.popup-team__link');
+                        const infoBox =  document.querySelector('.popup-team__link');
+               
                        
 
 
@@ -45,6 +51,13 @@ mixin followTeam(team)
                         popupName.innerHTML= current.name;
                         popupLink.href= current.href;
 
+                        if (popupSubtitle.innerHTML === '') {
+                            popupSubtitleBox.classList.add('hidden');
+                            textBox.classList.add('order-first');
+                            dataBox.classList.add('order-second');
+
+                        }
+
                                                     
                     });
 
@@ -54,11 +67,16 @@ mixin followTeam(team)
                 }
                 e.preventDefault();
                 e.stopPropagation();
+
+             
                 
                 if (e.target.classList.contains('popup-team__close') || e.target.classList.contains('popup-team__background')) {
                     popupBox.classList.add('hidden');
                     backGround.classList.add('hidden');
                     body.classList.remove('scroll-off');
+                    popupSubtitleBox.classList.remove('hidden');
+                    textBox.classList.remove('order-first');
+                    dataBox.classList.remove('order-second');
                 }
 
             });
