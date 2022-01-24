@@ -1816,6 +1816,12 @@
         }
     }
 
+    thead,
+    tbody,
+    tr {
+        display: contents;
+    }
+
 
     // Pricing
 
@@ -2172,7 +2178,8 @@
         &__table {
             width: 100%;
             border-spacing: 0;
-            table-layout: fixed;
+            display: grid;
+            grid-template-columns: minmax(480px, 1fr) 1fr 1fr minmax(195px, 1fr);
 
             & th {
                 text-align: left;
@@ -2217,7 +2224,7 @@
         }
 
         &__width {
-            width: 480px;
+
             border-right: 1px solid #D6D6D7;
         }
 
@@ -2225,9 +2232,9 @@
         //     width: 17%;
         // }
 
-        &__common-width2 {
-            width: 190px;
-        }
+        // &__common-width2 {
+        //     min-width: 190px;
+        // }
 
         &__enterprise {
             color: #fff;

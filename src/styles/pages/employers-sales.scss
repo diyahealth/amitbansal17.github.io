@@ -371,6 +371,11 @@
             margin-top: 16px;
         }
 
+        &__button-size {
+            font-size: 16px;
+
+        }
+
         @media screen and (max-width: $break-tablet) {
             padding: 40px 20px;
             flex-direction: column;
@@ -1477,6 +1482,12 @@
         }
     }
 
+    thead,
+    tbody,
+    tr {
+        display: contents;
+    }
+
     // Pricing
 
     .pricing-container {
@@ -1732,7 +1743,7 @@
         }
 
         &__change-margin:not(:last-child) {
-            margin-bottom: 20px !important;
+            margin-bottom: 16px !important;
         }
 
 
@@ -1836,7 +1847,8 @@
         &__table {
             width: 100%;
             border-spacing: 0;
-            table-layout: fixed;
+            display: grid;
+            grid-template-columns: minmax(480px, 1fr) 1fr 1fr minmax(195px, 1fr);
 
             & th {
                 text-align: left;
@@ -1881,15 +1893,10 @@
         }
 
         &__width {
-            width: 480px;
+
             border-right: 1px solid #D6D6D7;
         }
 
-        &__common-width {}
-
-        &__common-width2 {
-            width: 190px;
-        }
 
         &__enterprise {
             color: #fff;
