@@ -34,18 +34,19 @@ mixin popupTeam
             .popup-team__background.hidden
             .popup-team__content.hidden
                 .popup-team__close
-                
-                img.popup-team__logo
-                .popup-team__subtitle
-                    p.popup-team__subtitle-text
-                    .popup-team__arrow.popup-team__arrow-left. 
-                    .popup-team__arrow.popup-team__arrow-right.
-                .popup-team__info-box
-                    p.popup-team__name
-                    p.popup-team__work 
-                    a.popup-team__link(target="_blank")
-                .popup-team__text-box
-                    p.popup-team__text 
+                .popup-team__box-left
+                    img.popup-team__logo
+                    .popup-team__info-box
+                        p.popup-team__name
+                        p.popup-team__work 
+                        a.popup-team__link(target="_blank") 
+                .popup-team__box-right
+                    .popup-team__subtitle
+                        p.popup-team__subtitle-text
+                        .popup-team__arrow.popup-team__arrow-left. 
+                        .popup-team__arrow.popup-team__arrow-right.
+                    .popup-team__text-box
+                        p.popup-team__text 
    
 block content
     -
@@ -104,7 +105,7 @@ block content
             {
                 name: 'Amit Bansal',
                 work: 'CEO & Founder',
-                title: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+                title: "",
                 text: 'Amit is an experienced software engineer who has led large organizations that develop and deploy SaaS products. His record of achievements includes innovations, expansion, and profitability. As CEO, Amit serves as the company’s lead communicatory, fundraiser, and talent recruiter. Amit directs the company’s efforts to achieve a clear vision of healthcare system improvement.',
                 image: require('../../images/about-us/fotos/bansal.png'),
                 index: 0,
@@ -113,7 +114,7 @@ block content
             {
                 name: 'Charlie Barr, MD, MPH',
                 work: 'Chief Medical Officer',
-                title: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+                title: "",
                 text: "Dr. Barr is a board-certified internal medicine physician with 20 years of experience in clinical practice, teaching, and research. He has played key roles in promoting innovative programs within the pharmaceutical and startup industries. As Chief Medical Officer, Dr. Barr plays an essential role in building Diya Health's relationships and refining the productDr. Barr's breadth of experience spans the academic and community settings with an interest in electronic health records, clinical quality improvement, clinical guidelines, and telemedicine. He has 20 years of experience in pharmaceutical drug development (Pfizer, Roche and Genentech) with leadership roles in clinical development and medical affairs, clinical operations, biostatistics, health economics, and outcomes research. He joined a startup company in disease management, and has been an intrapreunerial founder of groups in medical informatics, data science, patient registries and real world data, evidence science, strategic innovation, and external partnerships.",
                 image: require('../../images/about-us/fotos/barr.png'),
                 index: 1,
@@ -148,7 +149,7 @@ block content
             },
             {
                 name: 'Wally Finley',
-                title: "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart.",
+                title: "",
                 work: 'Head of IT & Compliance',
                 text: 'Wally Finley has over 25 years of experience managing and optimizing private and public cloud infrastructure in the medical, internet-facing, university, and big data industries. As Head of IT & Compliance, Wally oversees regulatory and contractual compliance, handling of PHI data, cloud architecture, cost modeling, and day-to-day IT operations. Wally has a Masters of Computer Science from Vanderbilt University.',
                 image: require('../../images/about-us/fotos/finley.png'),

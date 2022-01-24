@@ -7,7 +7,10 @@
     margin-top: 20px;
 }
 
+
 .about-us {
+
+
     position: relative;
 
 
@@ -15,6 +18,7 @@
     .card-press-box {
         flex-basis: 23%;
         height: auto;
+
 
         @media screen and (max-width: $break-tablet) {
             margin-bottom: 60px;
@@ -71,16 +75,34 @@
             transition: backdrop-filter 0.2s;
         }
 
-        &__logo {
-            width: 210px;
-            height: 210px;
-            border-radius: 50%;
-            margin-right: 30px;
-
-            flex-shrink: 0;
-
+        &__box-left {
             @media screen and (max-width: $break-tablet) {
-                order: 1;
+                display: flex;
+                width: 100%;
+                margin-bottom: 41px;
+
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+
+            }
+
+        }
+
+
+
+        &__logo {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            margin-right: 61px;
+
+            @media screen and (max-width: $break-mobile) {
+                margin-right: 0;
 
             }
 
@@ -90,11 +112,11 @@
         &__subtitle {
             padding: 60px 78px;
             position: relative;
-            width: calc(100% - 240px);
+            margin-bottom: 41px;
 
             @media screen and (max-width: $break-tablet) {
-                order: 3;
                 width: 100%;
+                padding: 37px 48px;
 
             }
 
@@ -106,29 +128,30 @@
         }
 
         &__info-box {
-            width: 210px;
-            margin-right: 31px;
+            width: 260px;
+            margin-right: 61px;
             display: flex;
             flex-direction: column;
             align-items: center;
 
             @media screen and (max-width: $break-tablet) {
-                order: 2;
-                width: calc(100% - 240px);
-                min-width: 200px;
                 margin-bottom: 50px;
                 margin-right: 0;
+                width: 100%;
 
             }
         }
 
         &__text-box {
-            padding-top: 41px;
-            width: calc(100% - 250px);
+            // padding-top: 41px;
 
             @media screen and (max-width: $break-tablet) {
-                order: 4;
                 width: 100%;
+
+            }
+
+            @media screen and (max-width: $break-mobile) {
+                padding-top: 0;
 
             }
         }
@@ -141,6 +164,7 @@
             line-height: 34px;
             letter-spacing: 0px;
             text-align: left;
+            padding-bottom: 20px;
 
         }
 
@@ -153,8 +177,14 @@
             font-weight: 400;
             line-height: 45px;
             letter-spacing: 0px;
-            text-align: left;
+            text-align: center;
             color: #0C9FDB;
+            padding: 0 24px;
+
+            @media screen and (max-width: $break-tablet) {
+                padding: 0;
+
+            }
 
             @media screen and (max-width: $break-mobile) {
                 font-size: 28px;
@@ -167,16 +197,32 @@
             width: 78px;
             height: 60px;
 
+            @media screen and (max-width: $break-tablet) {
+                width: 48px;
+                height: 37px;
+
+            }
+
             &-left {
                 background-image: url('../images/about-us/arrow-up.svg');
                 top: 0;
                 left: 0;
+
+                @media screen and (max-width: $break-tablet) {
+                    background-image: url('../images/about-us/arrow-up-small.svg');
+
+                }
             }
 
             &-right {
                 background-image: url('../images/about-us/arrow-down.svg');
                 bottom: 0;
                 right: 0;
+
+                @media screen and (max-width: $break-tablet) {
+                    background-image: url('../images/about-us/arrow-down-small.svg');
+
+                }
 
             }
         }
@@ -225,7 +271,6 @@
             width: 70vw;
             height: 60vh;
             display: flex;
-            flex-wrap: wrap;
             background-color: #ffff;
             position: fixed;
             top: 50%;
@@ -234,22 +279,20 @@
             -webkit-transform: scale(1) translate(-50%, -50%);
             transform: scale(1) translate(-50%, -50%);
             z-index: 1000;
-            padding: 82px 31px 50px 31px;
+            padding: 72px 72px 30px;
             border-radius: 10px;
             box-sizing: content-box;
             box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);
 
             @media screen and (max-width: $break-tablet) {
-                width: 80vw;
+                width: 75vw;
                 height: 70vh;
+                flex-direction: column;
+                padding: 32px 32px 30px;
 
             }
 
-            @media screen and (max-width: $break-mobile) {
-                justify-content: center;
-                align-items: center;
-
-            }
+            @media screen and (max-width: $break-mobile) {}
         }
 
         &__close {
@@ -306,7 +349,7 @@
         cursor: pointer;
         flex-shrink: 0;
         min-height: 260px;
-        width: 100%;
+        flex-basis: 23%;
         max-width: 300px;
         border-radius: 10px;
         position: relative;
@@ -390,6 +433,13 @@
             letter-spacing: 0px;
             text-align: center;
 
+            @media screen and (max-width: $break-tablet) {
+                font-size: 18px;
+
+
+
+            }
+
         }
 
 
@@ -398,8 +448,10 @@
             height: auto;
             margin-top: 16px;
 
+
             @media screen and (max-width: $break-tablet) {
                 display: inline-block !important;
+
 
 
 
@@ -468,6 +520,9 @@
 
 
 
+
+
+
         &:hover .card-press__content-box {
             z-index: 6;
             transform: translateY(-40px);
@@ -490,7 +545,7 @@
         &__content-box {
             background-color: #fff;
             position: relative;
-            padding-top: 42px;
+            padding-top: 20px;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -506,6 +561,7 @@
                 line-height: 25px;
                 letter-spacing: 0px;
                 text-align: left;
+                color: #000 !important;
             }
 
         }
@@ -562,8 +618,8 @@
             }
         }
 
-
     }
+
 
     /////about us IMAGE CONTAINER////
 
@@ -1029,10 +1085,8 @@
         width: 100%;
         padding: 86px 20px 136px 20px;
         max-width: 1440px;
+        margin: 0 auto;
 
-        // & .card-employees:not(:last-child) {
-        //     padding: 0 15px;
-        // }
 
         @media screen and (max-width: $break-tablet) {
             padding: 56px 20px 56px;
@@ -1044,14 +1098,22 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             padding: 0 15px;
+
+            @media screen and (max-width: $break-tablet) {
+                flex-wrap: wrap;
+
+
+
+            }
 
             &--marginTop {
                 margin-top: 80px;
 
                 @media screen and (max-width: $break-tablet) {
                     margin-top: 0;
+
 
 
                 }
@@ -1115,6 +1177,10 @@
             flex-wrap: wrap;
             min-height: 430px;
             margin-bottom: 20px;
+
+            & a {
+                color: black !important;
+            }
         }
 
 
