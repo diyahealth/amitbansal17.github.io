@@ -1,0 +1,634 @@
+extends ../shared/layout.pug
+include ../shared/contact-us-form.pug
+include ../shared/contact-savings-form.pug
+include ../shared/customers.pug
+include ../shared/integrations.pug
+include ../shared/youtube-popup.pug
+include ../shared/integrationTable.pug
+include ../shared/help-popup.pug
+include ../shared/integration-features.pug
+include ../shared/pricing-features.pug
+include ../shared/youtube-popup.pug
+
+
+mixin integrationCards(name, work, year, path, className)
+    .card-employees
+        img.card-employees__logo(src=path)
+        .card-employees__text(id=className)
+            p.card-employees__name=name
+            p.card-employees__workplace=work
+            p.card-employees__old=year
+
+mixin integrationMarkers(text)
+    li.hipaa-container__list-item
+        img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+        span.hipaa-container__item-text=text
+
+mixin integrationHipaa(text,className)
+    li.hipaa-container__list-item(class=className)
+        img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+        span.hipaa-container__item-text=text
+
+mixin popupSavingsConfirmation
+        .popup-savings
+            .popup-savings__background.hidden
+            .popup-savings__content.hidden
+                .popup-savings__close
+                h2.popup-savings__title Want more details about your cost savings?
+                .popup-savings__subtitle Please submit your email below and we will send you a personalized, detailed cost savings report?
+                form.popup-savings__box-field 
+                    .form-control
+                        .input-container
+                            input.input(name="Email", required, placeholder="Email", type="text", maxlength="250")
+                            .form-label Email
+                    
+                        button.material-btn(type="submit")
+                            span.label
+                                span SUBMIT
+               
+      
+
+block content
+    -
+    
+        const path = [
+            require('../../images/family/section2/person1.png'),
+            require('../../images/family/section2/person2.png'),
+            require('../../images/family/section2/person3.png'),
+            require('../../images/family/section2/person4.png'),
+            require('../../images/family/section2/person5.png'),
+            require('../../images/family/section2/person6.png'),
+            
+           
+
+        ]
+
+            const imagePath = [
+            require("../../images/family/section1/video1.png"),
+            require("../../images/family/section1/video2.png")
+                    
+           
+
+        ]
+
+        const markers = [
+                'Lives with her husband and three children',
+                'Has a demanding career as a business executive',
+                'Serves on various business leadership committees',
+                'Selected as the main family decision-maker for her elderly mom’s care',
+                'Lives alone and away from her family',
+                'Widowed',
+                'Suffers from Early-Stage Alzheimer’s Disease, Heart Disease, and Osteoporosis',
+               
+        ];
+
+        const hipaa = [
+                'Single sign-on',
+                'Multi-factor authentication',
+                'Security alerts for unauthorized access',
+                'No data is shared or sold',
+                'You are in control of your data (If you want your data deleted, we delete it)',
+                'No advertising on our platform',
+                '100% encryption',
+                'Immutable audit trail of all activity',
+                'Stored on the most secure cloud systems, not devices',
+               
+        ];
+
+        const access = [
+                'Vitals Signs',
+                'Medications',
+                'Allergies',
+                'Blood Type',
+                'Mood',
+                'Pain Scale',
+                'Symptoms & Incidents',
+                'Demographics',
+                'Conditions',
+                'Labs',
+                'Immunizations',
+                'Diagnostic Reports',
+                'Social History',
+                'Family History',
+                'Surgical History',
+                'Family',
+                'Primary Care',
+                'Specialists',
+                'Caregivers',
+                'In Case of Emergency',
+                
+               
+        ];
+    main.main-box.family
+
+        article.image-container
+            
+            .image-container__text-box
+                h1.image-container__subtitle-text Diya Family Connect
+                span.image-container__common-text for Home Health Care
+                button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+                    span.label Request a demo
+
+   
+
+
+        article.family-engagement
+            .inner
+                h2 Family Engagement Made Easy!
+                p.family-engagement__subtitle Diya Family Connect enables families of the home health patients to stay in close contact with their loved one while freeing up the healthcare workers to focus on delivering the best care possible. Learn how Diya enables home health agencies to maximize staff efficiencies, improve patient safety, and create brand recognition.
+                .family-engagement__service-items-box
+                    .family-engagement__item
+                        +youtubeImage('KzRLsDRvcbo', imagePath[0])
+                        p.family-engagement__title-text Shared Customers
+                        span.family-engagement__text Patients’ Family Members
+                        button.material-btn(onclick='window.diya.toAnchor(\'shared-customers\')') 
+                            span.label Read more
+
+                    .family-engagement__item
+                        +youtubeImage('ykTagu8gzdQ', imagePath[1])
+                        p.family-engagement__title-text Administrators
+                        span.family-engagement__text Home Health Care Agency
+                        button.material-btn(onclick='window.diya.toAnchor(\'administrator\')') 
+                            span.label Read more
+        .family-engagement__divider       
+
+
+
+        article.shared-customers#shared-customers
+            .shared-customers__image-container
+            
+                .shared-customers__text-box
+                    p.shared-customers__subtitle-text Shared Customers
+                    span.shared-customers__common-text Patients’ Family Members
+            .shared-customers__service-items-box
+                    .shared-customers__item.shared-customers__item--1
+                        .shared-customers__first-square
+                            .shared-customers__second-square
+                                .shared-customers__cards-square
+                                    +integrationCards("Jessica", "Business Executive",'55 Years Old', path[0])
+            
+                
+
+                    .shared-customers__item.shared-customers__item--2
+                         h3.shared-customers__info Meet Jessica, the Family Decision-Maker…
+                         ul 
+                            +integrationMarkers(markers[0])
+                            +integrationMarkers(markers[1])
+                            +integrationMarkers(markers[2])
+                            +integrationMarkers(markers[3])
+                           
+            .shared-customers__box-content
+                +integrationCards("Husband", "Lawyer",'56 Years Old', path[1], 'special-card-class' )
+                +integrationCards("Children", "Students",'15, 18, 19 Years Old', path[2], 'special-card-class')
+                +integrationCards("Sister", "Entrepreneur",'55 Years Old', path[3], 'special-card-class')
+                +integrationCards("Brother", "Engineer",'48 Years Old', path[4], 'special-card-class')                
+                        
+            .shared-customers__service-items-box.shared-customers__service-items-box--padding
+                    .shared-customers__item.shared-customers__item--2
+                         h3.shared-customers__info ...and Her Mom
+                         ul 
+                            +integrationMarkers(markers[4])
+                            +integrationMarkers(markers[5])
+                            +integrationMarkers(markers[6])
+                         
+
+                    .shared-customers__item.shared-customers__item--1
+                        .shared-customers__first-square
+                            .shared-customers__second-square
+                                .shared-customers__cards-square
+                                    +integrationCards("Mom", "Home Health Care Patient",'83 Years Old', path[5])
+            
+                
+
+        article.mom-care
+            .inner
+                h2.mom-care__title-box Jessica Feels Like She Can’t Keep Up With Mom’s Cares
+                
+                .mom-care__service-items-box
+                    .mom-care__item
+                        img.mom-care__logo(src=require("../../images/family/section3/person1.png") alt='Experts in pandemic compliance')
+                        p.mom-care__condition Afraid
+                        span.mom-care__condition-text that something will go wrong when mom needs medical attention
+                    .mom-care__item
+                        img.mom-care__logo(src=require("../../images/family/section3/person2.png") alt='Processes to get back to work safely')
+                        p.mom-care__condition Frustrated
+                        span.mom-care__condition-text that she can’t access mom’s critical health information that she needs
+                    .mom-care__item
+                        img.mom-care__logo(src=require("../../images/family/section3/person3.png") alt='Technology designed specifically for compliance')
+                        p.mom-care__condition Guilty      
+                        span.mom-care__condition-text that she can’t be with her mom during her time of need     
+
+        article.direct-access
+            .inner
+                h2.direct-access__header With Diya, Jessica Has Direct Access to Mom’s Medical Information
+                p.direct-access__subtitle It’s complete, succinct, shareable, always accessible, and safely protected.
+                .direct-access__image-box
+                    img.direct-access__image-general(src=require("../../images/family/section4/image.png") alt='image')
+                .direct-access-box 
+                    
+                    .hipaa-container__service-items-box
+                        .hipaa-container__item
+                        
+                            .text
+                                h3.hipaa-container__info.hipaa-container__special Patient Information
+                                ul.hipaa-container__list 
+                                    +integrationHipaa(access[0])
+                                    +integrationHipaa(access[1])
+                                    +integrationHipaa(access[2])
+                                    +integrationHipaa(access[3])
+                                    +integrationHipaa(access[4])
+                                    +integrationHipaa(access[5])
+                                    +integrationHipaa(access[6])
+                                    +integrationHipaa(access[7])
+                                  
+                        .hipaa-container__item
+                           
+                            .text 
+                                h3.hipaa-container__info Medical History
+                                ul.hipaa-container__list 
+                                    +integrationHipaa(access[8])
+                                    +integrationHipaa(access[9])
+                                    +integrationHipaa(access[10])
+                                    +integrationHipaa(access[11])
+                                    +integrationHipaa(access[12])
+                                    +integrationHipaa(access[13])
+                                    +integrationHipaa(access[14])
+                        .hipaa-container__item
+                            
+                            .text
+                                h3.hipaa-container__info Contacts
+                                ul.hipaa-container__list 
+                                    +integrationHipaa(access[15])
+                                    +integrationHipaa(access[16])
+                                    +integrationHipaa(access[17])
+                                    +integrationHipaa(access[18])
+                                    +integrationHipaa(access[19])
+                     
+
+        article.slider-service
+            .inner
+                h2.slider-service__title Jessica Feels Connected to Mom
+
+                .carousel-container#dashboard-carousel
+                    ol.indicators-container
+                        li.indicator.active
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                    .carousel-control.left
+                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                    .carousel-control.right
+                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                    .content-container
+                        .carousel-image-container
+                            .carousel-image-wrapper
+                                .carousel-image-background.dashboard-carousel-family-bg-1.active
+                                .carousel-image-background.dashboard-carousel-family-bg-2
+                                .carousel-image-background.dashboard-carousel-family-bg-3
+                                .carousel-image-background.dashboard-carousel-family-bg-4
+                                .carousel-image-background.dashboard-carousel-family-bg-5
+                                .carousel-image-background.dashboard-carousel-family-bg-6
+                                .carousel-image-background.dashboard-carousel-family-bg-7
+                                .carousel-image-background.dashboard-carousel-family-bg-8
+
+                        ul.text-container
+                            li.carousel-item-container.active
+                                h3.title Real-Time Updates about Mom’s Health
+                                p.text Jessica receives regular updates about her mom’s health and the care provided — directly on her phone. No need to call the home health agency for updates!
+                                
+                            li.carousel-item-container
+                                h3.title Alerts for Abnormal Health Events
+                                p.text Jessica is alerted to significant health events, including accidents, irregular vital signs, pain increases, mood declines, and medication changes.
+                               
+                            li.carousel-item-container
+                                h3.title Evaluate Critical Trendlines
+                                p.text Jessica can track her mom’s progress over time with monthly health summaries and easy-to-understand trendlines.
+                       
+                            li.carousel-item-container
+                                h3.title Emergency Preparedness
+                                p.text Mom carries an emergency card that provides first responders with the essential health information that they need — such as blood type, allergies, medications, conditions, and emergency contacts.
+                            li.carousel-item-container
+                                h3.title One-Click Emergency Alerts
+                                p.text In an emergency, the first responders can notify all of Mom’s emergency contacts with just one click!
+                            li.carousel-item-container
+                                h3.title Getting Second Opinions, Simplified
+                                p.text Jessica can easily share Mom’s entire medical history to receive a well-informed second opinion by a specialist.
+                            li.carousel-item-container
+                                h3.title Total Family Connection
+                                p.text Mom’s health information can be shared with other family members, so everyone feels well-informed and connected.
+                            
+        article.mom-care-control
+            .inner
+                h2.mom-care-control__title-box Jessica Feels In Control of Mom’s Care
+                
+                .mom-care-control__service-items-box
+                    .mom-care-control__item
+                        img.mom-care-control__logo(src=require("../../images/family/section6/image1.png") alt='Relieved')
+                        p.mom-care-control__condition Relieved
+                        span.mom-care-control__condition-text to be connected
+                    .mom-care-control__item
+                        img.mom-care-control__logo(src=require("../../images/family/section6/image2.png") alt='Relieved')
+                        p.mom-care-control__condition Relieved
+                        span.mom-care-control__condition-text that Mom’s getting the best care
+                    .mom-care-control__item
+                        img.mom-care-control__logo(src=require("../../images/family/section6/image3.png") alt='to be fully engaged')
+                        p.mom-care-control__condition Grateful     
+                        span.mom-care-control__condition-text to be fully engaged    
+
+       
+        .family-engagement__divider       
+
+        article.administrator#administrator
+            .administrator__image-container
+            
+                .administrator__text-box
+                    p.administrator__subtitle-text Administrators
+                    span.administrator__common-text Home Health Care Agency
+
+           
+        article.benefits
+            .inner
+                h2.benefits__title-box Benefits
+                
+                .benefits__service-items-box
+                    .benefits__item
+                        img.benefits__logo(src=require("../../images/family/section7/icon.svg") alt='Relieved')
+                        p.benefits__condition Improve staff efficiency
+                        
+                    .benefits__item
+                        img.benefits__logo(src=require("../../images/family/section7/icon1.svg") alt='Relieved')
+                        p.benefits__condition Strengthen brand
+                       
+                    .benefits__item
+                        img.benefits__logo(src=require("../../images/family/section7/icon2.svg") alt='to be fully engaged')
+                        p.benefits__condition Increase revenue    
+                       
+        article.slider-service
+            .inner
+                h2.slider-service__title Improve Staff Efficiency and Patient Safety
+
+                .carousel-container#dashboard-carousel-stuff
+                    ol.indicators-container
+                        li.indicator.active
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                    .carousel-control.left
+                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                    .carousel-control.right
+                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                    .content-container
+                        .carousel-image-container
+                            .carousel-image-wrapper
+                                .carousel-image-background.dashboard-carousel-stuff-bg-1.active
+                                .carousel-image-background.dashboard-carousel-stuff-bg-2
+                                .carousel-image-background.dashboard-carousel-stuff-bg-3
+                                .carousel-image-background.dashboard-carousel-stuff-bg-4
+                                .carousel-image-background.dashboard-carousel-stuff-bg-5
+                                .carousel-image-background.dashboard-carousel-stuff-bg-6
+                                .carousel-image-background.dashboard-carousel-stuff-bg-7
+                                .carousel-image-background.dashboard-carousel-stuff-bg-8
+                                .carousel-image-background.dashboard-carousel-stuff-bg-9
+                                .carousel-image-background.dashboard-carousel-stuff-bg-10
+
+                        ul.text-container
+                            li.carousel-item-container.active
+                                h3.title Continuation of Records
+                                p.text Seamlessly pull records from other healthcare organizations — including Mount Sinai and Kaiser Permanente. No need to call for medical records, wait for emails and faxes, or manually enter data. 
+                                
+                            li.carousel-item-container
+                                h3.title Input & Store Patient Information
+                                p.text Directly input critical patient information — such as daily vitals, mood, and pain levels — during in-person or remote visits. 
+                               
+                            li.carousel-item-container
+                                h3.title Monitor Patient Safety
+                                p.text Track completed or missed treatment activities. Know that all patients have received the care that they need.
+                       
+                            li.carousel-item-container
+                                h3.title Track Monthly Progress
+                                p.text View monthly summaries of patients’ progress over time, including alerts to abnormal changes.
+                            li.carousel-item-container
+                                h3.title Alerts for Missed Activity & Absenteeism
+                                p.text Receive alerts for incomplete home visits and staff absenteeism — directly on your phone or computer.
+                            li.carousel-item-container
+                                h3.title Integrated Telehealth Services
+                                p.text Reduce travel time and increase throughput with telehealth visits, performed directly in Diya.
+                            li.carousel-item-container
+                                h3.title All Information, In One Place
+                                p.text Monitor all health information — including vitals, mood, pain levels, medications changes, and more -- all in one place. Receive alerts for adverse drug reactions and allergy risks.
+                            li.carousel-item-container
+                                h3.title Alerts for Abnormal Health Events
+                                p.text Receive alerts for significant health events, including accidents, abnormal vitals or pain levels, and mood declines. Ensure that critical issues are noticed and addressed.
+                            li.carousel-item-container
+                                h3.title Create a Competitive Advantage
+                                p.text With a family-centric approach and efficiency gains, Diya strengthens your competitive advantage. 
+                            li.carousel-item-container
+                                h3.title Attract New Customers
+                                p.text By increasing customer satisfaction through family engagement, Diya improves your ability to grow your business.   
+        .family-engagement__divider.minus-margin-top
+         
+        article.table-calculation
+            .inner
+                .table-calculation__saving-box.contact-savings-container
+                    h2.table-calculation__header-text Cost Savings Calculator
+                    p.table-calculation__subtitle-text Please use the table below to calculate the estimated savings that your agency can gain from implementing Diya Family Connect.
+
+                    +contactSavingsForm(organizationSizeOptions)
+
+                h2.table-calculation__header Your Savings with Diya Family Connect
+                .table-calculation__subtitle
+                    span Number of Staff = 100; Hourly Rate = $50; Hours Spent per Day, Phone Calls = 1; Hours Spent per Day, Travel = 2 
+                .pricing-container__table-box 
+                    table.pricing-container__table
+                        tr.pricing-container__text-align 
+                            th.pricing-container__width 
+                            th.pricing-container__text-header  Daily
+                            th.pricing-container__text-header Monthly
+                            th.pricing-container__text-header  Yearly
+                        tr.pricing-container__first-column.pricing-container__borders 
+                            td.pricing-container__border-right
+                                ul.pricing-container__features-list
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text Phone Calls
+                     
+                            td
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text $5,500
+                        
+                            td.pricing-container__border-left-right
+                                 ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text $12,680
+                     
+                            td.pricing-container__background
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text $154,890,000000
+                                  
+                        tr.pricing-container__first-column
+                            td.pricing-container__border-right
+                                ul.pricing-container__features-list
+                                   
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text Travel Time
+                   
+                            td
+                                ul.pricing-container__arrows-list
+                                   
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text $5,500
+                                
+                          
+                            td.pricing-container__border-left-right
+                                 ul.pricing-container__arrows-list
+                                   
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text $12,680
+                           
+                            td.pricing-container__background
+                                ul.pricing-container__arrows-list
+                                    
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text $154,890,000000
+
+                        tr.pricing-container__second-column 
+                            td.pricing-container__border-right 
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text Total Savings
+                            td.pricing-container__border-right 
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text $5,500
+                             
+                            td.pricing-container__border-left-right 
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text $12,680 
+                              
+                            td.pricing-container__background 
+                                ul.pricing-container__arrows-list
+                                    li.pricing-container__arrows-list-item
+                                        span.pricing-container__number-employees-text $154,890,000000
+
+                .pricing-container-tablet__table-box
+                    
+                    .pricing-container-tablet__table
+                        .pricing-container-tablet__box-help 
+                            p.pricing-container-tablet__name Phone Calls
+                            .pricing-container-tablet__box-info.pricing-container-tablet__underline
+                                .pricing-container-tablet__info-item 
+                                    span Daily
+                                    span $5,500
+                                .pricing-container-tablet__info-item 
+                                    span Monthly
+                                    span $12,680
+                                .pricing-container-tablet__info-item 
+                                    span Yearly
+                                    span $154,890,000000
+                         
+                            p.pricing-container-tablet__name Travel Time
+                            .pricing-container-tablet__box-info 
+                                .pricing-container-tablet__info-item 
+                                    span Daily
+                                    span $5,500
+                                .pricing-container-tablet__info-item 
+                                    span Monthly
+                                    span $12,680
+                                .pricing-container-tablet__info-item 
+                                    span Yearly
+                                    span $154,890,000000
+                        .pricing-container-tablet__box-travel            
+                            p.pricing-container-tablet__name.pricing-container-tablet__name-special Total Savings
+                            .pricing-container-tablet__box-info 
+                                .pricing-container-tablet__info-item 
+                                    span Daily
+                                    span $5,500
+                                .pricing-container-tablet__info-item 
+                                    span Monthly
+                                    span $12,680
+                                .pricing-container-tablet__info-item 
+                                    span Yearly
+                                    span $154,890,000000
+
+   
+                        
+        .family-engagement__divider    
+
+        article.hipaa-container
+            .hipaa-container__main-text
+                h2.hipaa-container__title HIPAA-Compliant
+            .hipaa-container__service-items-box
+                .hipaa-container__item
+                    img.hipaa-container__logo(src=require("../../images/employers/illustration1.png") alt='illustration')
+                    .text
+                        h3.hipaa-container__info Safe Log-In
+                        ul.hipaa-container__list 
+                            +integrationHipaa(hipaa[0])
+                            +integrationHipaa(hipaa[1])
+                            +integrationHipaa(hipaa[2])
+                .hipaa-container__item
+                    img.hipaa-container__logo(src=require("../../images/employers/illustration2.png") alt='illustration')
+                    .text 
+                        h3.hipaa-container__info Protected Access to Information
+                        ul.hipaa-container__list 
+                            +integrationHipaa(hipaa[3])
+                            +integrationHipaa(hipaa[4])
+                            +integrationHipaa(hipaa[5])
+                .hipaa-container__item
+                    img.hipaa-container__logo(src=require("../../images/employers/illustration3.png") alt='illustration')
+                    .text
+                        h3.hipaa-container__info Secure Information Storage
+                        ul.hipaa-container__list 
+                            +integrationHipaa(hipaa[6])
+                            +integrationHipaa(hipaa[7])
+                            +integrationHipaa(hipaa[8])
+
+        article.download-family-container
+            .inner
+                .download-family-container__main-text
+                    h3.download-family-container__title Download our product details for free!
+                    a(href='./files/Diya Family Connect Home Health Care Brochure.pdf' class='material-btn compliance-container__title__button-size' target="__blank") 
+                        .label DOWNLOAD
+
+        article.contact-us-container(id="contact-us")
+            .title 
+                h2 Contact Us
+                p.text.
+                    Haven't found the answer to your question? Interested in learning more about pricing? Requesting a demo?
+                    Contact us and we will get back to you shortly.
+            .content
+                +contactUsForm(organizationSizeOptions)
+        +popupSavingsConfirmation
+        +youtubePopup
+       
+
+
+block script
+    script.
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('dashboard-carousel', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 8000);
+        });
+    script.
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('dashboard-carousel-stuff', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 8000);
+        });
+    script(src="https://www.google.com/recaptcha/api.js", defer)   
+    

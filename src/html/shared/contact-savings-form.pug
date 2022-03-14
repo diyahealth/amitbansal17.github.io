@@ -1,0 +1,52 @@
+include submit-message.pug
+
+mixin contactSavingsForm(organizationSizeOptions)
+    - const options = organizationSizeOptions || []
+    form.contact-us-form(
+        action=pages.contactUs.url,
+        method="post",
+        name="questions",
+        onsubmit="return diya.contactUs.savings()")#form
+        fieldset#fields
+            .columns-container
+                .column.left
+                    .form-control
+                        .input-container
+                            input.input(name="Name", required, value="100", type="text", maxlength="250")
+                            .form-label Number of Staff
+                    .form-control
+                        .input-container
+                            input.input(name="Calls", required, value="1", type="text", maxlength="250")
+                            .form-label Hours Spent per Day, Phone Calls
+                    .form-control
+                        .input-container
+                            input.input(name="Travel", required, value="2", type="text", maxlength="250")
+                            .form-label Hours Spent per Day, Travel
+                .column.right.comment
+                    .form-control
+                        .input-container
+                            input.input(name="Rate", required, value="50", type="text", maxlength="250")
+                            .form-label Hourly Rate, $
+                    .form-control
+                        .input-container
+                            input.input.background(name="Savings calls", value="50%", type="text", maxlength="250")
+                            .form-label Diya Savings, Phone Calls
+                    .form-control
+                        .input-container
+                            input.input.background(name="Savings travel", value="25%", type="text", maxlength="250")
+                            .form-label Diya Savings, Travel
+           
+
+            button.material-btn(type="submit").full-width
+                span.label
+                    span CALCULATE SAVINGS
+
+    .loader-container.hidden#loader
+        .loader
+            .circle
+            .circle
+            .circle
+            .circle
+            .circle
+
+    

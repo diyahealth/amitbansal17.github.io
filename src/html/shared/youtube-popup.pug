@@ -7,6 +7,16 @@ mixin youtubeLink(id)
     )&attributes(attributes)
         .label WATCH VIDEO
 
+
+mixin youtubeImage(id, path)
+    a(
+        href=`https://www.youtu.be/${id}`
+        target="__blank"
+        data-youtube=id
+        rel="noopener noreferrer"
+    )&attributes(attributes)
+        img.family-engagement__logo(src=path alt='path')
+
 mixin youtubePopup
     .popup-video.hidden
         .close

@@ -30,6 +30,14 @@ const pages = {
         description: "Diya Wellness Engagement curates and delivers personalized content that is specific to employees’ wellness needs and goals",
     },
 
+    family: {
+        fileName: "family",
+        url: "./family",
+        name: "Home Health",
+        title: "Home Health",
+        description: "Home Health",
+    },
+
     healthSystems: {
         fileName: "health-systems",
         url: "./health-systems",

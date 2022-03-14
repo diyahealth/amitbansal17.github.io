@@ -19,6 +19,7 @@ const buildEmployersDropdown = () => {
     const titleUrlItems = [
         { title: 'COVID Compliance-as-a-Service', url: pages.employers.url},
         { title: 'Wellness Engagement', url: pages.wellness.url},
+        { title: 'Family', url: pages.family.url},
     ];
 
     return titleUrlItems.map(item => buildPage(item.title, item.url, item.variant));
@@ -58,6 +59,18 @@ const buildAboutUsDropdown = () => {
     return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
 }
 
+const buildFamilyDropdown = () => {
+    const familyUrl = pages.family.url;
+
+    const titleUrlItems = [
+        { title: 'Shared Customers', url: `${familyUrl}#shared-customers`},
+        { title: 'Administrators', url: `${familyUrl}#administrator`},
+       
+    ];
+
+    return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
+}
+
 const buildBlogDropdown = () => {
     const { ourBlog, newsAndResources } = pages;
     return [pageToLink(ourBlog), pageToLink(newsAndResources)];
@@ -69,6 +82,11 @@ const buildNavigationLinks = (mode) => {
     const postfix = mode === 'development' ? '.html' : '';
     navigationLinks.length = 0;
     navigationLinks.push(
+
+        {
+            ...pageToLink(pages.family, null, postfix),
+            dropdown: buildFamilyDropdown(),
+        },
         {
             ...pageToLink(pages.employers, null, postfix),
             dropdown: buildEmployersDropdown(),
@@ -88,7 +106,8 @@ const buildNavigationLinks = (mode) => {
         {
             ...pageToLink(pages.ourBlog, null, postfix),
             dropdown: buildBlogDropdown(),
-        }
+        },
+       
     );
 }
 
