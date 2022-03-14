@@ -39,7 +39,7 @@ mixin popupSavingsConfirmation
                 form.popup-savings__box-field 
                     .form-control
                         .input-container
-                            input.input(name="Email", required, placeholder="Email", type="text", maxlength="250")
+                            input.input(name="Email", required, type="text", maxlength="250")
                             .form-label Email
                     
                         button.material-btn(type="submit")
@@ -58,17 +58,11 @@ block content
             require('../../images/family/section2/person4.png'),
             require('../../images/family/section2/person5.png'),
             require('../../images/family/section2/person6.png'),
-            
-           
-
         ]
 
             const imagePath = [
             require("../../images/family/section1/video1.png"),
             require("../../images/family/section1/video2.png")
-                    
-           
-
         ]
 
         const markers = [
@@ -92,7 +86,6 @@ block content
                 '100% encryption',
                 'Immutable audit trail of all activity',
                 'Stored on the most secure cloud systems, not devices',
-               
         ];
 
         const access = [
@@ -116,8 +109,6 @@ block content
                 'Specialists',
                 'Caregivers',
                 'In Case of Emergency',
-                
-               
         ];
     main.main-box.family
 
@@ -128,9 +119,6 @@ block content
                 span.image-container__common-text for Home Health Care
                 button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
                     span.label Request a demo
-
-   
-
 
         article.family-engagement
             .inner
@@ -150,7 +138,7 @@ block content
                         span.family-engagement__text Home Health Care Agency
                         button.material-btn(onclick='window.diya.toAnchor(\'administrator\')') 
                             span.label Read more
-        .family-engagement__divider       
+        .family-engagement__divider
 
 
 
@@ -166,8 +154,6 @@ block content
                             .shared-customers__second-square
                                 .shared-customers__cards-square
                                     +integrationCards("Jessica", "Business Executive",'55 Years Old', path[0])
-            
-                
 
                     .shared-customers__item.shared-customers__item--2
                          h3.shared-customers__info Meet Jessica, the Family Decision-Maker…
@@ -197,8 +183,6 @@ block content
                             .shared-customers__second-square
                                 .shared-customers__cards-square
                                     +integrationCards("Mom", "Home Health Care Patient",'83 Years Old', path[5])
-            
-                
 
         article.mom-care
             .inner
@@ -447,7 +431,14 @@ block content
 
                 h2.table-calculation__header Your Savings with Diya Family Connect
                 .table-calculation__subtitle
-                    span Number of Staff = 100; Hourly Rate = $50; Hours Spent per Day, Phone Calls = 1; Hours Spent per Day, Travel = 2 
+                    span Number of Staff =
+                    span#js-staff 100
+                    span ; Hourly Rate = $
+                    span#js-rate= 50
+                    span ; Hours Spent per Day, Phone Calls = 
+                    span#js-calls 1
+                    span ; Hours Spent per Day, Travel = 
+                    span#js-travels 2 
                 .pricing-container__table-box 
                     table.pricing-container__table
                         tr.pricing-container__text-align 
@@ -464,17 +455,20 @@ block content
                             td
                                 ul.pricing-container__arrows-list
                                     li.pricing-container__arrows-list-item
-                                        span.pricing-container__number-employees-text $5,500
+                                        span.pricing-container__number-employees-text
+                                            span#js-calls-d $2,500
                         
                             td.pricing-container__border-left-right
                                  ul.pricing-container__arrows-list
                                     li.pricing-container__arrows-list-item
-                                        span.pricing-container__number-employees-text $12,680
+                                        span.pricing-container__number-employees-text
+                                            span#js-calls-m $75,000
                      
                             td.pricing-container__background
                                 ul.pricing-container__arrows-list
                                     li.pricing-container__arrows-list-item
-                                        span.pricing-container__number-employees-text $154,890,000000
+                                        span.pricing-container__number-employees-text
+                                            span#js-calls-y $912,500
                                   
                         tr.pricing-container__first-column
                             td.pricing-container__border-right
@@ -487,20 +481,23 @@ block content
                                 ul.pricing-container__arrows-list
                                    
                                     li.pricing-container__arrows-list-item
-                                        span.pricing-container__number-employees-text $5,500
+                                        span.pricing-container__number-employees-text
+                                            span#js-travels-d $5,000
                                 
                           
                             td.pricing-container__border-left-right
                                  ul.pricing-container__arrows-list
                                    
                                     li.pricing-container__arrows-list-item
-                                        span.pricing-container__number-employees-text $12,680
+                                        span.pricing-container__number-employees-text
+                                            span#js-travels-m $150,00
                            
                             td.pricing-container__background
                                 ul.pricing-container__arrows-list
                                     
                                     li.pricing-container__arrows-list-item
-                                        span.pricing-container__number-employees-text $154,890,000000
+                                        span.pricing-container__number-employees-text
+                                            span#js-travels-y $1,825,000
 
                         tr.pricing-container__second-column 
                             td.pricing-container__border-right 
@@ -510,17 +507,20 @@ block content
                             td.pricing-container__border-right 
                                 ul.pricing-container__arrows-list
                                     li.pricing-container__arrows-list-item
-                                        span.pricing-container__number-employees-text $5,500
+                                        span.pricing-container__number-employees-text
+                                            span#js-total-d $7,500
                              
                             td.pricing-container__border-left-right 
                                 ul.pricing-container__arrows-list
                                     li.pricing-container__arrows-list-item
-                                        span.pricing-container__number-employees-text $12,680 
+                                        span.pricing-container__number-employees-text
+                                            span#js-total-m $225,000 
                               
                             td.pricing-container__background 
                                 ul.pricing-container__arrows-list
                                     li.pricing-container__arrows-list-item
-                                        span.pricing-container__number-employees-text $154,890,000000
+                                        span.pricing-container__number-employees-text
+                                            span#js-total-y $2,737,500
 
                 .pricing-container-tablet__table-box
                     
@@ -562,8 +562,6 @@ block content
                                     span Yearly
                                     span $154,890,000000
 
-   
-                        
         .family-engagement__divider    
 
         article.hipaa-container
@@ -630,5 +628,5 @@ block script
                 backgroundSelector: '.carousel-image-background',
             }, 8000);
         });
-    script(src="https://www.google.com/recaptcha/api.js", defer)   
+    script(src="https://www.google.com/recaptcha/api.js", defer)
     

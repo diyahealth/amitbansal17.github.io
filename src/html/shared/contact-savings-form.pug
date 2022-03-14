@@ -2,38 +2,38 @@ include submit-message.pug
 
 mixin contactSavingsForm(organizationSizeOptions)
     - const options = organizationSizeOptions || []
-    form.contact-us-form(
+    form.contact-us-form.savings-inner(
         action=pages.contactUs.url,
         method="post",
         name="questions",
-        onsubmit="return diya.contactUs.savings()")#form
+        onsubmit="return diya.contactUs.savings(event, this)")#form
         fieldset#fields
             .columns-container
                 .column.left
                     .form-control
                         .input-container
-                            input.input(name="Name", required, value="100", type="text", maxlength="250")
+                            input.input(name="staff", required, value="100", type="number", max="999999", min="1")
                             .form-label Number of Staff
                     .form-control
                         .input-container
-                            input.input(name="Calls", required, value="1", type="text", maxlength="250")
+                            input.input(name="calls", required, value="1", type="number", max="9999999", min="1")
                             .form-label Hours Spent per Day, Phone Calls
                     .form-control
                         .input-container
-                            input.input(name="Travel", required, value="2", type="text", maxlength="250")
+                            input.input(name="travels", required, value="2", type="number", max="999999", min="1")
                             .form-label Hours Spent per Day, Travel
                 .column.right.comment
                     .form-control
                         .input-container
-                            input.input(name="Rate", required, value="50", type="text", maxlength="250")
+                            input.input(name="rate", required, value="50", type="number", max="9999" min="10")
                             .form-label Hourly Rate, $
                     .form-control
                         .input-container
-                            input.input.background(name="Savings calls", value="50%", type="text", maxlength="250")
+                            input.input.background(name="Savings calls", value="50%", type="text", maxlength="250", disabled)
                             .form-label Diya Savings, Phone Calls
                     .form-control
                         .input-container
-                            input.input.background(name="Savings travel", value="25%", type="text", maxlength="250")
+                            input.input.background(name="Savings travel", value="25%", type="text", maxlength="250", disabled)
                             .form-label Diya Savings, Travel
            
 
@@ -48,5 +48,4 @@ mixin contactSavingsForm(organizationSizeOptions)
             .circle
             .circle
             .circle
-
-    
+            

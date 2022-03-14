@@ -30,19 +30,19 @@ const pages = {
         description: "Diya Wellness Engagement curates and delivers personalized content that is specific to employees’ wellness needs and goals",
     },
 
-    family: {
-        fileName: "family",
-        url: "./family",
+    familyConnect: {
+        fileName: "family-connect",
+        url: "./family-connect",
         name: "Home Health",
-        title: "Home Health",
-        description: "Home Health",
+        title: "Home Health - Diya Health",
+        description: "Diya Family Connect enables families of the home health patients to stay in close contact with their loved one while freeing up the healthcare workers to focus on delivering the best care possible",
     },
 
     healthSystems: {
         fileName: "health-systems",
         url: "./health-systems",
-        name: "Health Systems",
-        title: "Health Systems - Diya Health",
+        name: "Hospitals",
+        title: "Hospitals - Diya Health",
         description: "Our Discharge Companion transforms the archaic post-discharge process into a living, engaging care experience that delivers great health outcomes",
     },
     individuals: {
@@ -62,7 +62,7 @@ const pages = {
     ourBlog: {
         fileName: "blog",
         url: "./blog",
-        name: "Our Blog",
+        name: "Blog",
         title: "Our Blog - Diya Health",
         description: "Blogs, news, and other announcements that help employers stay compliant with COVID-19 mandates and promote a safe workplace",
     },

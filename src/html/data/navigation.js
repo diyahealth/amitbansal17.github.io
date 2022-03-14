@@ -17,9 +17,8 @@ const pageToLink = (page, variant, postfix) => buildPage(page.name, page.url, va
 
 const buildEmployersDropdown = () => {
     const titleUrlItems = [
-        { title: 'COVID Compliance-as-a-Service', url: pages.employers.url},
-        { title: 'Wellness Engagement', url: pages.wellness.url},
-        { title: 'Family', url: pages.family.url},
+        { title: 'COVID Compliance-as-a-Service', url: pages.employers.url },
+        { title: 'Wellness Engagement', url: pages.wellness.url },
     ];
 
     return titleUrlItems.map(item => buildPage(item.title, item.url, item.variant));
@@ -34,7 +33,7 @@ const buildDropdownFromPageWithSubpages = (pageKey, subheader, postfix) => {
     }
     const isPage = Boolean(subheader.url);
 
-    const subheaderLink = subheader? buildPage(
+    const subheaderLink = subheader ? buildPage(
         isPage ? subheader.name : subheader,
         isPage ? subheader.url : undefined,
         'subheader', postfix) : undefined;
@@ -44,28 +43,27 @@ const buildDropdownFromPageWithSubpages = (pageKey, subheader, postfix) => {
         return page && pageKey !== subheader ? pageToLink(page, null, postfix) : undefined;
     })].filter(Boolean);
     return links;
-} 
+}
 
 const buildAboutUsDropdown = () => {
     const aboutUsUrl = pages.aboutUs.url;
 
     const titleUrlItems = [
-        { title: 'Our Mission', url: `${aboutUsUrl}#mission`},
-        { title: 'Our History', url: `${aboutUsUrl}#history`},
-        { title: 'Our Team', url: `${aboutUsUrl}#team`},
-        { title: 'Partnerships', url: `${aboutUsUrl}#partnerships `},
+        { title: 'Our Mission', url: `${aboutUsUrl}#mission` },
+        { title: 'Our History', url: `${aboutUsUrl}#history` },
+        { title: 'Our Team', url: `${aboutUsUrl}#team` },
+        { title: 'Partnerships', url: `${aboutUsUrl}#partnerships ` },
     ];
 
     return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
 }
 
 const buildFamilyDropdown = () => {
-    const familyUrl = pages.family.url;
+    const familyUrl = pages.familyConnect.url;
 
     const titleUrlItems = [
-        { title: 'Shared Customers', url: `${familyUrl}#shared-customers`},
-        { title: 'Administrators', url: `${familyUrl}#administrator`},
-       
+        { title: 'Shared Customers', url: `${familyUrl}#shared-customers` },
+        { title: 'Administrators', url: `${familyUrl}#administrator` },
     ];
 
     return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
@@ -84,7 +82,7 @@ const buildNavigationLinks = (mode) => {
     navigationLinks.push(
 
         {
-            ...pageToLink(pages.family, null, postfix),
+            ...pageToLink(pages.familyConnect, null, postfix),
             dropdown: buildFamilyDropdown(),
         },
         {
@@ -107,7 +105,7 @@ const buildNavigationLinks = (mode) => {
             ...pageToLink(pages.ourBlog, null, postfix),
             dropdown: buildBlogDropdown(),
         },
-       
+
     );
 }
 
