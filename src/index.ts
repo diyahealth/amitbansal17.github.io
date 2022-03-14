@@ -1,5 +1,6 @@
 import { CaptchaStateHolder } from "./scripts/CaptchaStateHolder";
 import { CarouselManager } from "./scripts/CarouselManager";
+import { contactSavings } from "./scripts/ContactSavings";
 import { ContactUsForm } from "./scripts/ContactUsForm";
 import { initGoogleMap } from "./scripts/GoogleMap";
 import { LayoutManager } from "./scripts/LayoutManager";
@@ -23,6 +24,7 @@ interface DiyaHealthWebSite {
     contactUs: {
         captcha: CaptchaStateHolder,
         form: ContactUsForm,
+        savings: () => void;
     };
     map: {
         init: () => void;
@@ -44,6 +46,7 @@ window.diya = {
     contactUs: {
         captcha,
         form: new ContactUsForm(captcha, layout),
+        savings: contactSavings
     },
     map: {
         init: initGoogleMap,
@@ -65,6 +68,7 @@ function appendReturnUrl() {
         const newUrl = currentUrl + '?returnUrl=' + returnUrl;
 
         link.setAttribute("href", newUrl);
+                
     }
     window.removeEventListener("DOMContentLoaded", appendReturnUrl);
 }
