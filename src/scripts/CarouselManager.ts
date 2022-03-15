@@ -31,11 +31,13 @@ export class CarouselManager {
         const getControlFunction = (moveSlideFunc: (id: string, classes: CarouselElementsSelectors) => void) => () => {
             moveSlideFunc(id, selectors);
             const existingInterval = this.intervalsMap.has(id) ? this.intervalsMap.get(id) : undefined;
+                    
             if (existingInterval) {
                 clearInterval(existingInterval);
             }
-            const newInterval = setInterval(() => moveSlideFunc(id, selectors), speed);
-            this.intervalsMap.set(id, newInterval);
+
+            // const newInterval = setInterval(() => moveSlideFunc(id, selectors), speed);
+            // this.intervalsMap.set(id, newInterval);
         };
 
         if (rightControl) {
@@ -51,6 +53,7 @@ export class CarouselManager {
         this.setSlide(id, index, selectors);
         const existingInterval = this.intervalsMap.has(id) ? this.intervalsMap.get(id) : undefined;
 
+              
         if (existingInterval) {
             clearInterval(existingInterval);
         }

@@ -215,7 +215,7 @@ block content
                         .hipaa-container__item
                         
                             .text
-                                h3.hipaa-container__info.hipaa-container__special Patient Information
+                                h3.hipaa-container__info Patient Information
                                 ul.hipaa-container__list 
                                     +integrationHipaa(access[0])
                                     +integrationHipaa(access[1])
@@ -429,10 +429,7 @@ block content
                     p.table-calculation__subtitle-text Please use the table below to calculate the estimated savings that your agency can gain from implementing Diya Family Connect.
 
                     +contactSavingsForm(organizationSizeOptions)
-                    .table-calculation__details-box
-                        button.material-btn.full-width.get-info-button
-                            span.label
-                                span More details about savings
+                    
 
                 h2.table-calculation__header Your Savings with Diya Family Connect
                 .table-calculation__subtitle
@@ -566,7 +563,10 @@ block content
                                 .pricing-container-tablet__info-item 
                                     span Yearly
                                     span#js-total-y-tablet $2,737,500
-
+                .table-calculation__details-box
+                        button.material-btn.full-width.get-info-button
+                            span.label
+                                span Request Detailed Calculation
         .family-engagement__divider    
 
         article.hipaa-container
