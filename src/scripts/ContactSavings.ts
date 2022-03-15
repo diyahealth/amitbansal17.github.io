@@ -14,25 +14,18 @@ export function contactSavings(event, form) {
     setValue('js-travels',travels);
     setValue('js-rate', rate);
 
-    setCurrencyValue('js-calls-d',savedDailyCalls);
-    setCurrencyValue('js-calls-m',savedDailyCalls * 30);
-    setCurrencyValue('js-calls-y',savedDailyCalls * 365);
+    setCurrencyValue(['js-calls-d', 'js-calls-d-tablet'],savedDailyCalls);
+    setCurrencyValue(['js-calls-m', 'js-calls-m-tablet'],savedDailyCalls * 30);
+    setCurrencyValue(['js-calls-y', 'js-calls-y-tablet'],savedDailyCalls * 365);
 
-    setCurrencyValue('js-travels-d',saveDailyTravel);
-    setCurrencyValue('js-travels-m',saveDailyTravel * 30);
-    setCurrencyValue('js-travels-y',saveDailyTravel * 365);
+    setCurrencyValue(['js-travels-d','js-travels-d-tablet'],saveDailyTravel);
+    setCurrencyValue(['js-travels-m','js-travels-m-tablet'],saveDailyTravel * 30);
+    setCurrencyValue(['js-travels-y','js-travels-y-tablet'],saveDailyTravel * 365);
 
-    setCurrencyValue('js-total-d', saveDailyTravel + savedDailyCalls); 
-    setCurrencyValue('js-total-m', (saveDailyTravel + savedDailyCalls) * 30); 
-    setCurrencyValue('js-total-y', (saveDailyTravel + savedDailyCalls) * 365); 
- 
-    const newEl =  document.querySelector('.popup-savings__background');
-    const backGround =  document.querySelector('.popup-savings__content');
+    setCurrencyValue(['js-total-d','js-total-d-tablet'], saveDailyTravel + savedDailyCalls); 
+    setCurrencyValue(['js-total-m','js-total-m-tablet'], (saveDailyTravel + savedDailyCalls) * 30); 
+    setCurrencyValue(['js-total-y','js-total-y-tablet'], (saveDailyTravel + savedDailyCalls) * 365); 
 
-    if(newEl.classList.contains('hidden')) {
-        newEl.classList.remove('hidden');
-        backGround.classList.remove('hidden');
-    }
 }
 
 const formatter = new Intl.NumberFormat('en-US', {
@@ -42,8 +35,8 @@ const formatter = new Intl.NumberFormat('en-US', {
     maximumFractionDigits: 0, 
   });
 
-function setCurrencyValue(id: string, value: number) {
-    document.getElementById(id).innerText = formatter.format(value);
+function setCurrencyValue(ids:string[], value: number) {
+ids.forEach(x=> document.getElementById(x).innerText = formatter.format(value))
 }
 
 function setValue(id: string, value: number) {

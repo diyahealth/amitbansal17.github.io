@@ -25,7 +25,7 @@
         .full-width {
             width: 100%;
             text-align: center;
-            margin-bottom: 64px;
+            margin-bottom: 15px;
             padding: 15px 0;
             font-family: Open Sans;
             font-size: 18px;
@@ -62,6 +62,11 @@
                     max-width: 350px;
                     width: 100%;
 
+                    @media screen and (max-width: $break-tablet) {
+                        max-width: none;
+                        padding-right: 0;
+                    }
+
                     @media screen and (max-width: $break-mobile) {
                         flex-basis: 100%;
                         padding-right: 0;
@@ -72,6 +77,10 @@
                 &.right {
                     max-width: 240px;
                     width: 100%;
+
+                    @media screen and (max-width: $break-tablet) {
+                        max-width: none;
+                    }
 
                     @media screen and (max-width: $break-mobile) {
                         flex-basis: 100%;

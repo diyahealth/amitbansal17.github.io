@@ -9,6 +9,7 @@ include ../shared/help-popup.pug
 include ../shared/integration-features.pug
 include ../shared/pricing-features.pug
 include ../shared/youtube-popup.pug
+include ../shared/popup-family-close.pug
 
 
 mixin integrationCards(name, work, year, path, className)
@@ -428,6 +429,10 @@ block content
                     p.table-calculation__subtitle-text Please use the table below to calculate the estimated savings that your agency can gain from implementing Diya Family Connect.
 
                     +contactSavingsForm(organizationSizeOptions)
+                    .table-calculation__details-box
+                        button.material-btn.full-width.get-info-button
+                            span.label
+                                span More details about savings
 
                 h2.table-calculation__header Your Savings with Diya Family Connect
                 .table-calculation__subtitle
@@ -490,7 +495,7 @@ block content
                                    
                                     li.pricing-container__arrows-list-item
                                         span.pricing-container__number-employees-text
-                                            span#js-travels-m $150,00
+                                            span#js-travels-m $150,000
                            
                             td.pricing-container__background
                                 ul.pricing-container__arrows-list
@@ -530,37 +535,37 @@ block content
                             .pricing-container-tablet__box-info.pricing-container-tablet__underline
                                 .pricing-container-tablet__info-item 
                                     span Daily
-                                    span $5,500
+                                    span#js-calls-d-tablet $2,500
                                 .pricing-container-tablet__info-item 
                                     span Monthly
-                                    span $12,680
+                                    span#js-calls-m-tablet $75,000
                                 .pricing-container-tablet__info-item 
                                     span Yearly
-                                    span $154,890,000000
+                                    span#js-calls-y-tablet $912,500
                          
                             p.pricing-container-tablet__name Travel Time
                             .pricing-container-tablet__box-info 
                                 .pricing-container-tablet__info-item 
                                     span Daily
-                                    span $5,500
+                                    span#js-travels-d-tablet $5,000
                                 .pricing-container-tablet__info-item 
                                     span Monthly
-                                    span $12,680
+                                    span#js-travels-m-tablet $150,000
                                 .pricing-container-tablet__info-item 
                                     span Yearly
-                                    span $154,890,000000
+                                    span#js-travels-y-tablet $1,825,000
                         .pricing-container-tablet__box-travel            
                             p.pricing-container-tablet__name.pricing-container-tablet__name-special Total Savings
                             .pricing-container-tablet__box-info 
                                 .pricing-container-tablet__info-item 
                                     span Daily
-                                    span $5,500
+                                    span#js-total-d-tablet $7,500
                                 .pricing-container-tablet__info-item 
                                     span Monthly
-                                    span $12,680
+                                    span#js-total-m-tablet $225,500
                                 .pricing-container-tablet__info-item 
                                     span Yearly
-                                    span $154,890,000000
+                                    span#js-total-y-tablet $2,737,500
 
         .family-engagement__divider    
 
@@ -610,6 +615,7 @@ block content
                 +contactUsForm(organizationSizeOptions)
         +popupSavingsConfirmation
         +youtubePopup
+        +popupFamilyClose
        
 
 

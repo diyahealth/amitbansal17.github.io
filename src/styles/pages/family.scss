@@ -635,6 +635,11 @@
 
         }
 
+        @media screen and (max-width: $break-mobile) {
+            padding: 40px 20px;
+
+        }
+
         .inner {
             max-width: 1440px;
             margin: auto;
@@ -644,6 +649,9 @@
         &__subtitle {
             margin: 16px auto;
             max-width: 624px;
+                @media screen and (max-width: $break-mobile) {
+                    margin: 16px 0 0;
+                }
         }
 
         &__service-items-box {
@@ -669,12 +677,16 @@
                 width: 100%;
                 margin-top: 32px;
             }
+            @media screen and (max-width: $break-mobile) {
+                width: 100%;
+                margin-top: 40px;
+            }
         }
 
         &__logo {
             width: 100%;
             height: auto;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
 
 
 
@@ -704,10 +716,15 @@
             letter-spacing: 0px;
             text-align: center;
 
+            @media screen and (max-width: $break-mobile) {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+
         }
 
         &__divider {
-            max-width: 1440px;
+            // max-width: 1440px;
             margin: 0 auto;
             background-image: url('../images/family/section1/divider.png');
 
@@ -718,10 +735,11 @@
             background-size: cover;
 
             @media screen and (max-width: $break-tablet) {
-                background-image: none;
-                background: #dff2fa;
-                padding-top: 0;
-                height: 245px;
+                // background-image: none;
+                // background: #dff2fa;
+                // padding-top: 0;
+                // height: 245px;
+                display: none;
             }
 
         }
@@ -1273,7 +1291,8 @@
         }
 
         @media screen and (max-width: $break-mobile) {
-            padding: 20px;
+            padding: 40px 20px;
+
         }
 
         &__image-general {
@@ -1317,6 +1336,10 @@
             margin-top: -123px;
             position: relative;
             background-size: cover;
+            @media screen and (max-width: $break-tablet) {
+                margin-top: 0px;
+
+            }
         }
 
         &__info {
@@ -1356,7 +1379,7 @@
                 }
 
                 @media screen and (max-width: $break-mobile) {
-                    padding: 20px;
+                    padding: 40px 20px;
 
                 }
             }
@@ -1714,7 +1737,7 @@
 
 
     .administrator {
-        max-width: 1440px;
+        // max-width: 1440px;
         margin: 0 auto;
 
         &__image-container {
@@ -1725,8 +1748,11 @@
             background-position: center;
             background-repeat: no-repeat;
             margin-top: -123px;
-
             background-size: cover;
+            @media screen and (max-width: $break-tablet) {
+                margin-top: 0px;
+
+            }
         }
 
 
@@ -1805,19 +1831,6 @@
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
     .mom-care {
         width: 100%;
         background: url('../images/employers/wave.png');
@@ -2070,19 +2083,6 @@
 
             margin-bottom: 8px;
             font-family: Open Sans;
-            font-size: 26px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 35px;
-            letter-spacing: 0px;
-            text-align: center;
-
-        }
-
-        &__condition-text {
-
-
-            font-family: Open Sans;
             font-size: 22px;
             font-style: normal;
             font-weight: 400;
@@ -2090,7 +2090,17 @@
             letter-spacing: 0px;
             text-align: center;
 
+            @media screen and (max-width: $break-mobile) {
 
+                font-family: Open Sans;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30px;
+                letter-spacing: 0px;
+                text-align: center;
+
+            }
         }
 
         &__subtitle {
@@ -2848,6 +2858,21 @@
             padding: 20px;
         }
 
+        &__details-box {
+            max-width: 624px;
+            margin: 0 auto;
+
+            & button {
+                width: 100%;
+                padding: 15px 0;
+                margin-bottom: 64px;
+
+                @media screen and (max-width: $break-tablet) {
+                    font-size: 18px;
+                }
+            }
+        }
+
         &__header-text {
             max-width: 624px;
             margin: 0 auto;
@@ -2861,6 +2886,9 @@
             text-align: center;
             margin: 0 auto;
             margin-bottom: 48px;
+            @media screen and (max-width: $break-tablet) {
+                padding: 0 20px;
+            }
         }
 
         &__header {
