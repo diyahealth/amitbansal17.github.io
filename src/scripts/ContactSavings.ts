@@ -9,10 +9,16 @@ export function contactSavings(event, form) {
     const savedDailyCalls = rate * calls * staff * .5;
     const saveDailyTravel =  rate * travels * staff * .5;
 
+    (document.getElementById('calculation-params') as HTMLInputElement).value =
+         `Number of Staff = ${staff}; Hourly Rate = $${rate}; Hours Spent per Day, Phone Calls = ${calls}; Hours Spent per Day, Travel = ${travels}`;
+
     setValue('js-staff',staff);
     setValue('js-calls',calls);
     setValue('js-travels',travels);
     setValue('js-rate', rate);
+
+
+    
 
     setCurrencyValue(['js-calls-d', 'js-calls-d-tablet'],savedDailyCalls);
     setCurrencyValue(['js-calls-m', 'js-calls-m-tablet'],savedDailyCalls * 30);

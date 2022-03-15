@@ -31,7 +31,6 @@ export class CarouselManager {
         const getControlFunction = (moveSlideFunc: (id: string, classes: CarouselElementsSelectors) => void) => () => {
             moveSlideFunc(id, selectors);
             const existingInterval = this.intervalsMap.has(id) ? this.intervalsMap.get(id) : undefined;
-                    
             if (existingInterval) {
                 clearInterval(existingInterval);
             }
@@ -53,7 +52,6 @@ export class CarouselManager {
         this.setSlide(id, index, selectors);
         const existingInterval = this.intervalsMap.has(id) ? this.intervalsMap.get(id) : undefined;
 
-              
         if (existingInterval) {
             clearInterval(existingInterval);
         }

@@ -437,7 +437,7 @@
         background-size: 100% 60%, cover;
         background-repeat: no-repeat;
         background-position-y: 100%, 0;
-        background-position-x: 0, 30%;
+        background-position-x: 0, 60%;
 
         .material-btn {
             margin: auto;
@@ -648,9 +648,10 @@
         &__subtitle {
             margin: 16px auto;
             max-width: 624px;
-                @media screen and (max-width: $break-mobile) {
-                    margin: 16px 0 0;
-                }
+
+            @media screen and (max-width: $break-mobile) {
+                margin: 16px 0 0;
+            }
         }
 
         &__service-items-box {
@@ -676,6 +677,7 @@
                 width: 100%;
                 margin-top: 32px;
             }
+
             @media screen and (max-width: $break-mobile) {
                 width: 100%;
                 margin-top: 40px;
@@ -1335,6 +1337,7 @@
             margin-top: -123px;
             position: relative;
             background-size: cover;
+
             @media screen and (max-width: $break-tablet) {
                 margin-top: 0px;
 
@@ -1748,6 +1751,7 @@
             background-repeat: no-repeat;
             margin-top: -123px;
             background-size: cover;
+
             @media screen and (max-width: $break-tablet) {
                 margin-top: 0px;
 
@@ -1830,6 +1834,7 @@
 
 
     }
+
     .mom-care {
         width: 100%;
         background: url('../images/employers/wave.png');
@@ -2889,6 +2894,7 @@
             text-align: center;
             margin: 0 auto;
             margin-bottom: 48px;
+
             @media screen and (max-width: $break-tablet) {
                 padding: 0 20px;
             }
