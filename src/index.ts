@@ -24,7 +24,7 @@ interface DiyaHealthWebSite {
     contactUs: {
         captcha: CaptchaStateHolder,
         form: ContactUsForm,
-        savings: () => void;
+        savings: (event:any, form:any) => void;
     };
     map: {
         init: () => void;
