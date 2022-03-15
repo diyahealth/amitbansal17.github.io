@@ -36,17 +36,25 @@ mixin popupSavingsConfirmation
             .popup-savings__content.hidden
                 .popup-savings__close
                 h2.popup-savings__title Want more details about your cost savings?
-                .popup-savings__subtitle Please submit your email below and we will send you a personalized, detailed cost savings report?
-                form.popup-savings__box-field 
+                .popup-savings__subtitle Please submit your email below and we will send you a personalized, detailed cost savings report
+                form.popup-savings__box-field(onsubmit="return diya.contactUs.form.send(event, this)")
                     .form-control
                         .input-container
-                            input.input(name="Email", required, type="text", maxlength="250")
+                            input.input(name="Email", required, type="email", maxlength="250")
                             .form-label Email
+
+                            input#calculation-params(name="calculationParams", type="hidden", value="Number of Staff = 100; Hourly Rate = $50; Hours Spent per Day, Phone Calls = 1; Hours Spent per Day, Travel = 2")
                     
+
                         button.material-btn(type="submit")
                             span.label
                                 span SUBMIT
                
+                    .g-recaptcha(
+                        data-sitekey=keys.google.captcha,
+                        data-callback="passCaptcha",
+                        data-error-callback="resetCaptcha"
+                        data-expired-callback="resetCaptcha")
       
 
 block content
@@ -433,10 +441,10 @@ block content
 
                 h2.table-calculation__header Your Savings with Diya Family Connect
                 .table-calculation__subtitle
-                    span Number of Staff =
+                    span Number of Staff = 
                     span#js-staff 100
                     span ; Hourly Rate = $
-                    span#js-rate= 50
+                    span#js-rate 50
                     span ; Hours Spent per Day, Phone Calls = 
                     span#js-calls 1
                     span ; Hours Spent per Day, Travel = 

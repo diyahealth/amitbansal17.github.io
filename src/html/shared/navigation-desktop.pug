@@ -28,6 +28,8 @@ include ./sign-in-button
         li
             if (page.url == pages.employers.url || page.url == pages.wellness.url)
                 +signInDiyaHr
+            else if (page.url == pages.familyConnect.url)
+                +signInDiyaMd
             else
                 button.material-btn.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
                     span.label Request a Demo

@@ -16,11 +16,11 @@ mixin contactSavingsForm(organizationSizeOptions)
                             .form-label Number of Staff
                     .form-control
                         .input-container
-                            input.input(name="calls", required, value="1", type="number", max="9999999", min="1")
+                            input.input(name="calls", required, value="1", type="number", max="24", min="0")
                             .form-label Hours Spent per Day, Phone Calls
                     .form-control
                         .input-container
-                            input.input(name="travels", required, value="2", type="number", max="999999", min="0")
+                            input.input(name="travels", required, value="2", type="number", max="24", min="0")
                             .form-label Hours Spent per Day, Travel
                 .column.right.comment
                     .form-control
