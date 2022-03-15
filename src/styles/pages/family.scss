@@ -688,10 +688,6 @@
             width: 100%;
             height: auto;
             margin-bottom: 24px;
-
-
-
-
         }
 
         &__title-text {
@@ -725,7 +721,7 @@
         }
 
         &__divider {
-            // max-width: 1440px;
+            max-width: 1440px;
             margin: 0 auto;
             background-image: url('../images/family/section1/divider.png');
 
@@ -736,11 +732,12 @@
             background-size: cover;
 
             @media screen and (max-width: $break-tablet) {
-                // background-image: none;
-                // background: #dff2fa;
-                // padding-top: 0;
-                // height: 245px;
                 display: none;
+            }
+
+            &.fullscreen {
+                max-width: none;
+                background-size: 100% 100%;
             }
 
         }
@@ -1739,7 +1736,7 @@
 
 
     .administrator {
-        // max-width: 1440px;
+        max-width: 1440px;
         margin: 0 auto;
 
         &__image-container {
