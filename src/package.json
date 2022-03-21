@@ -18,8 +18,7 @@
     "author": "DiyaHealth",
     "license": "ISC",
     "dependencies": {
-        "normalize.css": "^8.0.0",
-        "npm": "^5.8.0"
+        "normalize.css": "^8.0.0"
     },
     "devDependencies": {
         "@types/googlemaps": "^3.30.8",
