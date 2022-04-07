@@ -1294,12 +1294,18 @@
         }
 
         &__image-general {
-            width: 100%;
-            height: auto;
+            width: auto;
+            height: calc(100vh - 140px);
+
+            @media screen and (max-width: $break-tablet) {
+                width: 100%;
+                height: auto;
+            }
         }
 
         &__image-box {
             margin-bottom: 86px;
+            text-align: center;
 
             @media screen and (max-width: $break-tablet) {
                 margin-bottom: 30px;
