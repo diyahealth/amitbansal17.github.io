@@ -243,7 +243,7 @@
     .main-introduce-container {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-end;
         height: 505px;
         background-position: bottom;
         background-image: url('../images/employers/bg.png'), url('../images/main-page/team_image.jpg');
