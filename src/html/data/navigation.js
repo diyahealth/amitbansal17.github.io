@@ -80,7 +80,6 @@ const buildNavigationLinks = (mode) => {
     const postfix = mode === 'development' ? '.html' : '';
     navigationLinks.length = 0;
     navigationLinks.push(
-
         {
             ...pageToLink(pages.healthSystems, null, postfix),
             dropdown: buildDropdownFromPageWithSubpages('healthSystems', { name: 'DiyaMD', url: pages.healthSystems.url }, postfix),
@@ -92,10 +91,6 @@ const buildNavigationLinks = (mode) => {
         {
             ...pageToLink(pages.employers, null, postfix),
             dropdown: buildEmployersDropdown(),
-        },
-        {
-            ...pageToLink(pages.individuals, null, postfix),
-            dropdown: buildDropdownFromPageWithSubpages('individuals', { name: 'myDiya', url: pages.individuals.url }, postfix),
         },
         {
             ...pageToLink(pages.aboutUs, null, postfix),
