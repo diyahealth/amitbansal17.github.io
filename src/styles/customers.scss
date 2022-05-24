@@ -29,3 +29,50 @@
         flex-direction: column;
     }
 }
+
+
+.integrations-seamless-container {
+    max-width: $container-max-width;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+
+    @media screen and (max-width: $break-tablet) {
+        padding: 10px 0;
+    }
+}
+
+.integrations-seamless-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    .customer-logo {
+     
+        margin:  0 12px;
+
+        @media screen and (max-width: $break-mobile) {
+            margin:0;
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+          
+
+            &:first-child {
+                margin-top: 15px;
+            }
+        }
+
+        img {
+            width:auto;
+            height: 50px;
+        }
+    }
+
+    @media screen and (max-width: $break-mobile) {
+        flex-direction: column;
+    }
+}
+

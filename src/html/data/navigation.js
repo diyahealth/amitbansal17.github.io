@@ -82,12 +82,12 @@ const buildNavigationLinks = (mode) => {
     navigationLinks.push(
 
         {
-            ...pageToLink(pages.familyConnect, null, postfix),
-            dropdown: buildFamilyDropdown(),
-        },
-        {
             ...pageToLink(pages.healthSystems, null, postfix),
             dropdown: buildDropdownFromPageWithSubpages('healthSystems', { name: 'DiyaMD', url: pages.healthSystems.url }, postfix),
+        },
+        {
+            ...pageToLink(pages.familyConnect, null, postfix),
+            dropdown: buildFamilyDropdown(),
         },
         {
             ...pageToLink(pages.employers, null, postfix),
