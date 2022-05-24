@@ -16,6 +16,17 @@ mixin youtubeImage(id, path)
         rel="noopener noreferrer"
     )&attributes(attributes)
         img.family-engagement__logo(src=path alt='path')
+        
+
+mixin youtubeImageMain(id, path)
+    a.learn-more__link(
+        href=`https://www.youtu.be/${id}`
+        target="__blank"
+        data-youtube=id
+        rel="noopener noreferrer"
+    )&attributes(attributes)
+        img.learn-more__logo(src=path alt='path')
+        img.learn-more__play(src=require("../../images/main-page/play.png") alt='path')
 
 mixin youtubePopup
     .popup-video.hidden
