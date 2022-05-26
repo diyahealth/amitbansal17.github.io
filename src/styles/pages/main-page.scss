@@ -155,8 +155,30 @@
         background-position-x: 0, 30%;
         position: relative;
 
+        @media screen and (max-width: $break-tablet) {
+            background-size: 100% 87%, cover;
+           
+        }
+
         @media screen and (max-width: $break-mobile) {
             background-size: 100% 200%, cover;
+        }
+
+        .material-btn {
+            margin: auto;
+            font-size: 1.5rem;
+            white-space: nowrap;
+            margin-top: 16px;
+    
+            @media screen and (max-width: $break-tablet) {
+                margin-top: 8px;
+                font-size: 1.35rem;
+            }
+    
+            @media screen and (max-width: $break-mobile) {
+                margin-top: 6px;
+                font-size: 1.2rem;
+            }
         }
 
 
@@ -194,19 +216,19 @@
             flex-direction: column;
             align-items: center;
             position: absolute;
-            top: 71%;
+            top: 67%;
             left: 50%;
             transform: translate(-50%, -50%);
             width: 70%;
 
             @media screen and (max-width: $break-tablet) {
-                width: 80%;
-                top: 73%;
+                width: 95%;
+                top: 65%;
             }
 
             @media screen and (max-width: $break-mobile) {
                 width: 95%;
-                top: 70%;
+                top: 57%;
             }
 
 
