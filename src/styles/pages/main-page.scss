@@ -594,7 +594,7 @@
 
         &__image-general {
             width: auto;
-            // height: calc(100vh - 140px);
+            height: calc(100vh - 200px);
 
             @media screen and (max-width: $break-tablet) {
                 width: 100%;
