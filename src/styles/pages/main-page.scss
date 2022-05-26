@@ -782,7 +782,7 @@
         margin-top: 48px;
 
         .indicators-container {
-            display: none;
+           
 
             @media screen and (max-width: $break-tablet) {
                 top: calc(100vw * 245 / 312);
@@ -916,7 +916,7 @@
        
 
         .indicators-container {
-            display: none;
+           
 
             @media screen and (max-width: $break-tablet) {
                 top: 440px;
