@@ -66,9 +66,16 @@
         }
 
         img {
-            width:auto;
+            width: 200px;
             height: 50px;
+            object-fit: contain;
         }
+
+    }
+
+    .hhax-logo img {
+        width: 90px;
+        
     }
 
     @media screen and (max-width: $break-mobile) {
