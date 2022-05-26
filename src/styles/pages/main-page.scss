@@ -953,7 +953,7 @@
         }
 
         .text-container {
-            padding: 0 94px 0 45px;
+            padding: 0 132px 0 0px;
             list-style: none;
             flex-basis: 60%;
 
@@ -965,7 +965,11 @@
             }
 
             .text {
-                margin-top: 16px;
+                margin-top: 50px;
+
+                @media screen and (max-width: $break-tablet) {
+                    margin-top: 16px;
+                }
             }
 
             @media screen and (max-width: $break-tablet) {
@@ -1065,11 +1069,11 @@
             font-size: 42px;
             font-style: normal;
             font-weight: 400;
-            line-height: 35px;
-            letter-spacing: 0;
+            line-height: 42px;
+            letter-spacing: 5px;
             text-align: center;
             color: #0c9fdb;
-            padding: 0 60px;
+            padding: 0 69px;
 }
 
             .quote-up {
