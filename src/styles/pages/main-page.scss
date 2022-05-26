@@ -468,7 +468,26 @@
             height: auto;
             margin: 0 auto;
             margin-top: 10px;
+            animation: move 1.5s infinite linear;    
+        
+         &:hover {
+             cursor: pointer;
+         }
+        
         }
+
+        @keyframes move {
+            0% {
+              transform: translateY(0);
+           
+            }
+            50% {
+                transform: translateY(7px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+          }
     }
 
 
