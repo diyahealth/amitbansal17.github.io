@@ -317,7 +317,18 @@ block script
             }
             const myTimeout = setInterval(transitionFunc,
             3000);
-          
-            }());
+                      }());
+    script.
+           
+            const clickEl =  document.querySelector('.learn-more__arrow');
+            const moveToEl = document.querySelector('.learn-more__service-items-box');
+            
+            clickEl.addEventListener('click', (e)=> {
+                e.preventDefault();
+                e.stopPropagation();
+                moveToEl.scrollIntoView({block: "center", inline: "center", behavior: "smooth"})
+            });
+
+            
 
           
