@@ -43,21 +43,8 @@
         margin: 0;
     }
 
-    .position-card {
-        position: relative;
-        top: -75px;
-        border-radius: 10px;
-
-        @media screen and (max-width: $break-tablet) {
-            top: 0px;
-
-        }
-    }
-
-    .card-shadow {
-        box-shadow: 4px 4px 16px 0px #0000000D;
-        box-shadow: -4px -4px 16px 0px #0000000D;
-
+    .no-pointer {
+        pointer-events: none;
     }
 
     .popup-team {
@@ -339,12 +326,10 @@
         }
 
         &__close:before {
-            webkit-transform: rotate(45deg);
             transform: rotate(45deg);
         }
 
         &__close:after {
-            webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
         }
 
@@ -369,7 +354,29 @@
         transition: all 0.2s;
         padding: 0 15px;
 
+        &.position-card {
+            position: relative;
+            top: -75px;
+            border-radius: 10px;
+            padding: 0;
 
+            @media screen and (max-width: $break-tablet) {
+                top: 0px;
+
+                &.no-pointer {
+                    display: none;
+                }
+            }
+        }
+
+        &:hover {
+            box-shadow: 4px 4px 16px 0px #0000000D;
+            box-shadow: -4px -4px 16px 0px #0000000D;
+
+            .card-employees__arrow {
+                display: inline-block;
+            }
+        }
 
         @media screen and (max-width: $break-tablet) {
             flex-basis: 47%;
@@ -377,8 +384,6 @@
             box-shadow: 4px 4px 16px 0px #0000000D;
             box-shadow: -4px -4px 16px 0px #0000000D;
             max-width: none;
-
-
         }
 
         @media screen and (max-width: $break-mobile) {
@@ -454,18 +459,15 @@
         }
 
 
+
         &__arrow {
             width: 32px;
             height: auto;
             margin-top: 16px;
-
+            display: none;
 
             @media screen and (max-width: $break-tablet) {
-                display: inline-block !important;
-
-
-
-
+                display: inline-block;
             }
 
         }
@@ -515,8 +517,6 @@
         }
     }
 
-
-
     .card-press {
         overflow: hidden;
         box-shadow: 4px 4px 16px 0px #0000000D;
@@ -531,7 +531,11 @@
 
 
 
-
+        &:hover {
+            .card-employees__arrow {
+                display: inline-block;
+            }
+        }
 
 
         &:hover .card-press__content-box {
@@ -550,7 +554,6 @@
 
         &:hover {
             transform: scale(1.05);
-
         }
 
         &__content-box {
@@ -1130,12 +1133,6 @@
                 }
             }
 
-        }
-
-        &__padding {
-            & .card-employees:last-child {
-                padding: 0;
-            }
         }
 
         &__title {

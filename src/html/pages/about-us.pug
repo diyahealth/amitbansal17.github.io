@@ -2,7 +2,6 @@ extends ../shared/layout.pug
 include ../shared/head-image.pug
 include ../shared/contact-us.pug
 include ../shared/two-column-article.pug
-include ../shared/hover-cards.pug
 include ../shared/article-title.pug
 include ../shared/list.pug
 include ../shared/partners.pug
@@ -16,7 +15,7 @@ mixin integrationCards(data, name, work, path)
         .card-employees__text
             p.card-employees__name=name
             p.card-employees__workplace=work
-            img.card-employees__arrow.hidden(src=require("../../images/about-us/arrow.svg") alt='check')
+            img.card-employees__arrow(src=require("../../images/about-us/arrow.svg") alt='check')
 
 mixin integrationBlogCards(work, index, link)
     a.card-press-box(href=link)
@@ -26,7 +25,7 @@ mixin integrationBlogCards(work, index, link)
             .card-press__outer(class=titleClass)
             .card-press__content-box
                 p.card-press__info=work
-                img.card-employees__arrow.hidden(src=require("../../images/about-us/arrow.svg") alt='check')
+                img.card-employees__arrow(src=require("../../images/about-us/arrow.svg") alt='check')
 
 
 mixin popupTeam
@@ -43,8 +42,8 @@ mixin popupTeam
                 .popup-team__box-right
                     .popup-team__subtitle
                         p.popup-team__subtitle-text
-                        .popup-team__arrow.popup-team__arrow-left. 
-                        .popup-team__arrow.popup-team__arrow-right.
+                        .popup-team__arrow.popup-team__arrow-left
+                        .popup-team__arrow.popup-team__arrow-right
                     .popup-team__text-box
                         p.popup-team__text 
    
@@ -204,12 +203,13 @@ block content
             .leadership-container__box-content.leadership-container__box-content--marginTop.leadership-container__padding
                 +integrationCards( 4, 'Wally Finley, MHA', 'Head of IT & Compliance', path[4])
                 +integrationCards( 5 , 'Alex Tolkachev', 'Director of Engineering', path[5])
-                .card-employees.position-card 
+                .card-employees.position-card
                     .special-card
                         .card-employees__contact-us
                             p Have a question
                             button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
                                 .label Contact US
+                .card-employees.position-card.no-pointer &nbsp;
         article.our-blog-container
             .our-blog-container__title
                 h2 Our Blog
@@ -237,5 +237,4 @@ block content
                 .content
                     +contactUsForm(organizationSizeOptions)
         +popupTeam
-        +hoverCards
         +followTeam(team)
