@@ -1,0 +1,214 @@
+extends ../shared/layout.pug
+include ../shared/head-image.pug
+include ../shared/contact-us.pug
+include ../shared/two-column-article.pug
+include ../shared/article-title.pug
+include ../shared/list.pug
+include ../shared/partners.pug
+include ../shared/integrations.pug
+include ../shared/contact-us-form.pug
+include ../shared/follow-team.pug
+include ../shared/faq-info.pug
+include ../shared/youtube-popup.pug
+include ../shared/contact-us-form.pug
+
+
+mixin InfoListItem(name)
+        li.info-title-item
+            span=name
+            img.info-title-item__img(src=require("../../images/faq/arrow-down.png") alt='check')
+
+   
+block content
+    -
+  
+        const gettingStarted = ['How do I get access to myDiya?', 'How do I log into myDiya? ','How do I install myDiya on my phone or tablet?','How do I turn notifications on or off?']
+        const library = ['What is the Library?', 'How do I view the library of information about my loved one’s care? ','How do I mark content in the Library as read?','How do I rate content in the Library?', 'How do I search for a specific item in the Library?' ]
+        const inbox = ['What is the inbox?', 'How do I view my inbox?' ]
+        const grant = ['How do I share information with other family members?', 'How do I view who has access to information?', 'What does “Pending” versus “Accepted” mean on the People with Access page?','How do I remove a family member’s access to information?' ]
+        const messages = ['What is the Messages feature?', 'How do I view messages from clinicians or family members?', 'Can I send a message to the clinicians?','Can I send a message to my family members?' ]    
+         
+
+    main.main-box.faq-page
+        article.faq-image-container
+            .faq-image-container__text-box
+                .faq-image-container__image-box 
+                    img.faq-image-container__image(src=require("../../images/faq/mydiya-logo.png") alt='check') 
+                   
+                .faq-image-container__title-text 
+                    span Frequently Asked Questions
+                .faq-image-container__subtitle-text 
+                    span For Patients and Family Members
+        article.getting-started
+            .inner
+              
+                h2.getting-started__title Getting started 
+                ol.info-container__list 
+                        +InfoListItem(gettingStarted[0])
+                        .explanation-box.hidden
+                            p.explanation-text Access is granted to myDiya using your mobile phone number and/or email address.
+                            p.explanation-text If you are a patient’s primary family representative or healthcare proxy, a clinician will grant you access. If you are not the primary family representative or healthcare proxy, that family member can grant you access.
+                            .getting-started__image-common.getting-started__image-1.img
+                        +InfoListItem(gettingStarted[1])
+                        .explanation-box.hidden
+                            p.explanation-text.margin-bottom Once granted access to myDiya, you will receive an email or text notification with a link to log in. Additionally, you can log in at  
+                                a.link.link-underline(href='https://mydiya.org/' target="_blank") mydiya.org
+
+                            p.explanation-text To maintain the utmost security, myDiya does not store any passwords on its system. For this reason, you will be prompted to log in with your Google or Facebook account. 
+                            .getting-started__image-common.getting-started__image-2.img
+                        +InfoListItem(gettingStarted[2])
+                        .explanation-box.hidden
+                            p.explanation-text To install myDiya as an application on your phone or tablet’s home screen:
+                            p.explanation-text.device-text For Apple Devices
+                            ol.list-for-app
+                                li While logged into myDiya on Safari, select the up arrow button at the bottom of your screen.
+                                li Swipe up and select the “Add to Home Screen” option. Then, click “add” in the top right.
+                                li Now, myDiya is visible on your home screen as an application. You can easily access it when needed.
+                            +youtubeLink('i2RBDqiaRSU')
+                            p.explanation-text.device-text.margin-top For Android Devices
+                            ol.list-for-app
+                                li While logged into myDiya on your phone’s internet browser, select the three buttons in the top right.
+                                li Click the “Add to Home Screen” option.
+                                li Your phone will load the myDiya icon and text as it will appear on your home screen. Once loaded, select the “add” button.
+                                li Now, myDiya is visible on your home screen as an application. You can easily access it when needed.
+                            +youtubeLink('i2RBDqiaRSU')
+                        +InfoListItem(gettingStarted[3])
+                        .explanation-box.hidden
+                            p.explanation-text To turn text (SMS), email, or Whatsapp notifications on or off:
+                         
+                            ol.list-for-app
+                                li While logged into myDiya, select the hamburger menu (three horizontal lines) in the top left corner.
+                                li Click the “Settings” menu option at the bottom of your screen.
+                                li Click on your name, which is visible in blue font.
+                                li Select the pencil icon in the right corner of your profile.
+                                li To turn notifications on for any contact method, check the relevant box. If notifications are on, the box will appear as a blue square with a white checkmark.
+                                li To turn notifications off for any contact method, uncheck the relevant box. If the notifications are off, the box will appear white.
+                                li Click “Save.”
+                                li Your notification preferences are now saved.
+                            +youtubeLink('i2RBDqiaRSU')
+                           
+        article.library-container 
+            .inner       
+                        h2.getting-started__title Library
+                        ol.info-container__list 
+                            +InfoListItem(library[0])
+                            .explanation-box.hidden
+                                p.explanation-text The Library includes high-quality, up-to-date educational videos, articles, and other content your provider has shared regarding your loved one’s care. This information answers your top-of-mind questions and is clearly categorized and always accessible
+                                .library-container__image-common.library-container__image-1.img
+                            +InfoListItem(library[1])
+                            .explanation-box.hidden
+                                p.explanation-text To view the Library:
+                                ol.list-for-app
+                                    li While logged into myDiya, select the hamburger menu (three horizontal lines) in the top left corner.
+                                    li Click the “Library” menu option.
+                                    li Now, you can view the library of information about your loved one’s care.
+                                +youtubeLink('i2RBDqiaRSU')
+                            +InfoListItem(library[2])
+                            .explanation-box.hidden
+                                p.explanation-text All unread content in the Library appears with a red circle in the right corner of the content image. 
+                                p.explanation-text After you read a piece of content within the Library, myDiya automatically marks that content as read by removing the red circle.
+                            +InfoListItem(library[3])
+                            .explanation-box.hidden
+                                p.explanation-text All users can rate and comment on how helpful each piece of content is. The option to provide a rating and comment is available at the end of each piece of content.
+                                .library-container__image-common.library-container__image-2.img
+                            +InfoListItem(library[4])
+                            .explanation-box.hidden
+                                p.explanation-text The Library includes a search bar at the top of the screen. Type within that search bar to search for a specific piece of content in the Library. For example, if you are looking for the Visitor Policy, type “Visitor Policy” in the search bar.
+                                .library-container__image-common.library-container__image-3.img
+        article.inbox-container 
+            .inner       
+                        h2.getting-started__title Inbox
+                        ol.info-container__list
+                            +InfoListItem(inbox[0])
+                            .explanation-box.hidden
+                                p.explanation-text The inbox stores notifications and announcements from your loved one’s healthcare organization.
+                                .inbox-container__image-common.inbox-container__image-1.img
+                            +InfoListItem(inbox[1])
+                            .explanation-box.hidden
+                                p.explanation-text To view the Inbox:
+                                ol.list-for-app
+                                    li While logged into myDiya, select the hamburger menu (three horizontal lines) in the top left corner.
+                                    li Click the “Inbox” menu option.
+                                    li Now, you can view your inbox of notifications from the healthcare organization, if any.
+                                +youtubeLink('i2RBDqiaRSU')
+                           
+        article.library-container 
+                .inner   
+                        h2.getting-started__title Granting Access to Family
+                        ol.info-container__list 
+                            +InfoListItem(grant[0])
+                            .explanation-box.hidden
+                                p.explanation-text The primary family representative or healthcare proxy can grant access to other family members. To grant access:
+                                ol.list-for-app
+                                    li While logged into myDiya, click the three dots in the top right corner.
+                                    li Click the “Grant Access” menu option. 
+                                    li Type the family member’s mobile phone number, email address, or both.
+                                    li Click “Continue.”
+                                    li Confirm that the information entered is correct. Then, click “Send.”
+                                    li Your family member will now receive a text or email with a link to join myDiya.
+         
+                                +youtubeLink('i2RBDqiaRSU')
+                            +InfoListItem(grant[1])
+                            .explanation-box.hidden
+                                p.explanation-text All family members with access to information are viewable within the “People with Access” tab. To view:
+
+                                ol.list-for-app
+                                    li While logged into myDiya, select the hamburger menu (three horizontal lines) in the top left corner.
+                                    li Click the “People with Access” menu option.
+                                    li Now, you can view a list of all people who have access to your loved one’s record.
+                                   
+                        
+                                +youtubeLink('i2RBDqiaRSU')
+                            +InfoListItem(grant[2])
+                            .explanation-box.hidden
+                                p.explanation-text Pending family members mean that the family member has been invited to join myDiya, but has not yet accepted the invitation. 
+                                p.explanation-text Accepted family members mean that a family member has accepted the invitation to join myDiya.
+
+                            +InfoListItem(grant[3])
+                            .explanation-box.hidden
+                                p.explanation-text Access can be removed for any family member with a pending or accepted invitation. To cancel a pending invitation or revoke access from a family member:
+                                ol.list-for-app
+                                    li While logged into myDiya, select the hamburger menu (three horizontal lines) in the top left corner.
+                                    li Click the “People with Access” menu option.
+                                    li Click “Revoke” or “Cancel” for the relevant family member.
+                               
+                       
+                                +youtubeLink('i2RBDqiaRSU')
+        article.messages-container 
+                .inner   
+                        h2.getting-started__title Messages
+                        ol.info-container__list 
+                            +InfoListItem(messages[0])
+                            .explanation-box.hidden
+                                p.explanation-text Messages is a secure messaging platform where clinicians can communicate updates about your loved one’s care and family members can collaborate. All family members who have access to myDiya can view the Messages.
+                                .messages-container__image-common.messages-container__image-1.img
+                            
+                            +InfoListItem(messages[1])
+                            .explanation-box.hidden
+                                p.explanation-text To view messages from your loved one’s clinician or other family members:
+                                ol.list-for-app
+                                    li While logged into myDiya, click the three dots in the top right corner.
+                                    li Click the “Messages” menu option. 
+                                    li Now, you can view messages from clinicians and family members. Messages from clinicians appear in a blue box, while messages from family members appear in a yellow box.
+        
+                                +youtubeLink('i2RBDqiaRSU')
+                            +InfoListItem(messages[2])
+                            .explanation-box.hidden
+                                p.explanation-text The Messages feature is designed for clinicians to update you about your loved one’s care and for family members to communicate with one another. For this reason, clinicians do not receive notifications of messages from family members.
+                             
+                            +InfoListItem(messages[3])
+                            .explanation-box.hidden
+                                p.explanation-text Yes, all family members who have access to myDiya can view and send messages. Additionally, all family members receive a notification for new messages.
+
+        article.contact-us
+            .contact-us-container(id="contact-us")
+                .title
+                    h2 Contact Us
+                    p.text.
+                        Haven't found the answer to your question? Interested in learning more about pricing? Requesting a demo?
+                        Contact us and we will get back to you shortly.
+                .content
+                    +contactUsForm(organizationSizeOptions)
+              
+        +faqInfo()
+        +youtubePopup
