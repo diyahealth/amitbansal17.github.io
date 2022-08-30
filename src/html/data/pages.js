@@ -18,9 +18,9 @@ const pages = {
     faq: {
         fileName: "faq",
         url: "./faq",
-        name: "FAQ",
-        title: "FAQ",
-        description: "FAQ",
+        name: "Frequently Asked Questions",
+        title: "Frequently Asked Questions - Diya Health",
+        description: "myDiya Frequently Asked Questions For Patients and Family Members",
     },
     employers: {
         fileName: "employers",
