@@ -1,4 +1,3 @@
-
 .faq-page {
     position: relative;
 
@@ -88,126 +87,122 @@
 
     h2 {
         margin: 0;
-            font-family: Open Sans;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 49px;
-            letter-spacing: 0;
-            text-align: center;
+        font-family: Open Sans;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 49px;
+        letter-spacing: 0;
+        text-align: center;
 
-            @media screen and (max-width: $break-tablet) {
-                font-size: 32px;
-            }
-           
-      
+        @media screen and (max-width: $break-tablet) {
+            font-size: 32px;
+        }
+
+
     }
 
     .no-pointer {
         pointer-events: none;
     }
 
-   .inner {
-    max-width: 1440px;
-    margin: auto;
-   }
-
-   .link-underline {
-    text-decoration: underline !important;
-   }
-
-   .bold-text {
-   font-weight: 700;
-   }
-
-
-   .device-text {
-    font-weight: 600;
-    text-decoration: underline;
-   }
-   .margin-top {
-    margin-top: 30px;
-   }
-
-   .margin-bottom {
-    margin-bottom: 25px;
-   }
-
-
-   .contact-us {
-    background: url('../images/about-us/contact-wave.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    width: 100%;
-    margin-bottom: -140px;
-
-    @media screen and (max-width: $break-tablet) {
-        margin-bottom: 0px;
+    .inner {
+        max-width: 1440px;
+        margin: auto;
     }
 
-    .contact-us-container {
-        padding: 188px 188px 204px 188px;
-        margin: auto;
-        max-width: 1440px;
+    .link-underline {
+        text-decoration: underline !important;
+    }
 
-        h2 {
+    .bold-text {
+        font-weight: 700;
+    }
 
-            font-family: Open Sans;
-            font-size: 36px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 49px;
-            letter-spacing: 0px;
-            text-align: center;
 
-        }
+    .device-text {
+        font-weight: 600;
+        text-decoration: underline;
+    }
 
-        & .title .text {
-            font-family: Open Sans;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 34px;
-            letter-spacing: 0px;
-            text-align: center;
-        }
+    .margin-top {
+        margin-top: 30px;
+    }
+
+    .margin-bottom {
+        margin-bottom: 25px;
+    }
+
+
+    .contact-us {
+        background: url('../images/about-us/contact-wave.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        margin-bottom: -140px;
 
         @media screen and (max-width: $break-tablet) {
-            padding: 40px 20px;
-            background: #f3fafd;
+            margin-bottom: 0px;
         }
 
-        .title {
-            text-align: center;
+        .contact-us-container {
+            padding: 188px 188px 204px 188px;
+            margin: auto;
+            max-width: 1440px;
+
+            h2 {
+
+                font-family: Open Sans;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 49px;
+                letter-spacing: 0px;
+                text-align: center;
+
+            }
+
+            & .title .text {
+                font-family: Open Sans;
+                font-size: 22px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 34px;
+                letter-spacing: 0px;
+                text-align: center;
+            }
+
+            @media screen and (max-width: $break-tablet) {
+                padding: 40px 20px;
+                background: #f3fafd;
+            }
+
+            .title {
+                text-align: center;
+            }
+
+            .text {
+                max-width: 624px;
+                margin: 11px auto 48px;
+            }
         }
 
-        .text {
-            max-width: 624px;
-            margin: 11px auto 48px;
-        }
+
     }
 
-
-}
-
-     .info-title-item {
-        display: flex;
-        align-items: center;
+    .info-title-item {
         font-size: 23px;
         font-weight: 500;
-         @media screen and (max-width: $break-tablet) {
+        cursor: pointer;
+        margin-bottom: 24px;
+        padding-left: 16px;
+
+        @media screen and (max-width: $break-tablet) {
             justify-content: space-between;
         }
 
-      
-      
-
         & span {
             text-align: left;
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 15px;
         }
 
         &__img {
@@ -216,22 +211,15 @@
             margin-left: 5px;
             transition: all 0.2s;
             cursor: pointer;
-            overflow: hidden;
-            flex-shrink: 0;
-
+            position: relative;
+            top: 7px;
         }
     }
-
 
     .rotate {
         transform: rotate(180deg);
     }
 
-
-   
-
-
-  
     .faq-image-container {
         height: calc(100vh - 40px);
         width: 100%;
@@ -248,7 +236,7 @@
             height: calc(100vh - 60px);
         }
 
-   
+
         h1 {
             font-size: 60px;
             font-weight: 900;
@@ -264,7 +252,7 @@
             }
         }
 
-        
+
         &__image {
             width: 300px;
             height: auto;
@@ -289,8 +277,8 @@
             }
         }
 
-      
-    
+
+
         &__title-text {
             color: #000;
             line-height: 67px;
@@ -327,7 +315,7 @@
         }
 
 
-        &__subtitle-text  {
+        &__subtitle-text {
             color: #000;
             text-align: center;
             display: flex;
@@ -344,29 +332,30 @@
 
                 @media screen and (max-width: $break-tablet) {
                     font-size: 22px;
-                 }
+                }
 
                 @media screen and (max-width: $break-mobile) {
                     font-size: 20px;
-                
+
                 }
 
             }
 
         }
-      
+
     }
 
-  
+
     .info-container {
-         &__list {
+        &__list {
+            text-align: left;
+
             @media screen and (max-width: $break-tablet) {
                 padding: 0;
-                
             }
-          
+
         }
-       
+
     }
 
 
@@ -376,7 +365,7 @@
         padding: 0 20px;
         text-align: left;
         font-size: 18px;
-       
+
     }
 
 
@@ -403,48 +392,47 @@
 
 
     .getting-started {
-            max-width: 1440px;
-            padding: 60px 80px 32px 60px;
-            text-align: center;
-            margin: 0 auto;
+        padding: 60px 80px 32px 60px;
+        text-align: center;
+        margin: 0 auto;
 
-            @media screen and (max-width: $break-tablet) {
-                padding: 40px 20px;
-                
-            }
-        
-            
+        @media screen and (max-width: $break-tablet) {
+            padding: 40px 20px;
 
-        
+        }
+
+
+
+
         &__title {
             margin: 0 auto 30px;
             padding: 0 30px;
             max-width: 624px;
 
-         
+
         }
 
-  
-  
-    &__image-common {
-        max-width: 500px;
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
+
+
+        &__image-common {
+            max-width: 500px;
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
-    
-    &__image-1 {
+
+        &__image-1 {
             aspect-ratio: 1372 / 952;
             background-image: url('../images/faq/Getting Started_Q1.png');
-           
-    }
 
-    &__image-2 {
-        aspect-ratio: 970 / 991;
-        background-image: url('../images/faq/Getting Started_Q2.jpg');
-     }
-  
+        }
+
+        &__image-2 {
+            aspect-ratio: 970 / 991;
+            background-image: url('../images/faq/Getting Started_Q2.jpg');
+        }
+
     }
 
 
@@ -461,7 +449,7 @@
             padding: 40px 20px;
             background: #F3FAFD;
         }
-    
+
         .inner {
             max-width: 1440px;
             margin: auto;
@@ -473,27 +461,27 @@
             width: 100%;
             background-size: cover;
             background-repeat: no-repeat;
-            }
-    
-        
+        }
+
+
         &__image-1 {
-                aspect-ratio: 820 / 937;
-                max-width: 300px;
-                background-image: url('../images/faq/Library_Q1.png');
-               
+            aspect-ratio: 820 / 937;
+            max-width: 300px;
+            background-image: url('../images/faq/Library_Q1.png');
+
         }
 
         &__image-2 {
-            aspect-ratio:  1147/1556;
+            aspect-ratio: 1147/1556;
             background-image: url('../images/faq/Library_Q4.png');
         }
 
         &__image-3 {
-            aspect-ratio:   2145 / 2156;
+            aspect-ratio: 2145 / 2156;
             background-image: url('../images/faq/Library_Q5.png');
-               
+
         }
-           
+
     }
 
 
@@ -507,9 +495,9 @@
 
         @media screen and (max-width: $break-tablet) {
             padding: 40px 20px;
-           
+
         }
-    
+
         .inner {
             max-width: 1440px;
             margin: auto;
@@ -521,17 +509,17 @@
             width: 100%;
             background-size: cover;
             background-repeat: no-repeat;
-            }
-    
-        
-        &__image-1 {
-                aspect-ratio: 970 / 1125;
-                background-image: url('../images/faq/Inbox_Q1.jpg');
-               
         }
 
-      
-           
+
+        &__image-1 {
+            aspect-ratio: 970 / 1125;
+            background-image: url('../images/faq/Inbox_Q1.jpg');
+
+        }
+
+
+
     }
 
     .granting-container {
@@ -547,7 +535,7 @@
             padding: 40px 20px;
             background: #F3FAFD;
         }
-    
+
         .inner {
             max-width: 1440px;
             margin: auto;
@@ -559,27 +547,27 @@
             width: 100%;
             background-size: cover;
             background-repeat: no-repeat;
-            }
-    
-        
+        }
+
+
         &__image-1 {
-                aspect-ratio: 820 / 937;
-                max-width: 300px;
-                background-image: url('../images/faq/Library_Q1.png');
-               
+            aspect-ratio: 820 / 937;
+            max-width: 300px;
+            background-image: url('../images/faq/Library_Q1.png');
+
         }
 
         &__image-2 {
-            aspect-ratio:  1147/1556;
+            aspect-ratio: 1147/1556;
             background-image: url('../images/faq/Library_Q4.png');
         }
 
         &__image-3 {
-            aspect-ratio:   2145 / 2156;
+            aspect-ratio: 2145 / 2156;
             background-image: url('../images/faq/Library_Q5.png');
-               
+
         }
-           
+
     }
 
     .messages-container {
@@ -590,9 +578,9 @@
 
         @media screen and (max-width: $break-tablet) {
             padding: 40px 20px;
-           
+
         }
-    
+
         .inner {
             max-width: 1440px;
             margin: auto;
@@ -604,40 +592,13 @@
             width: 100%;
             background-size: cover;
             background-repeat: no-repeat;
-            }
-    
-        
-        &__image-1 {
-                aspect-ratio: 1407 / 2788;
-                max-width: 300px;
-                background-image: url('../images/faq/Messages_Q1.png');
-               
         }
 
-      
-           
+
+        &__image-1 {
+            aspect-ratio: 1407 / 2788;
+            max-width: 300px;
+            background-image: url('../images/faq/Messages_Q1.png');
+        }
     }
-
-    
-
-
-
-
-    
-
-   
-
-     
-
-    }
-
-
-
-
-
-
-
-
-
-
-
+}
