@@ -346,6 +346,7 @@
     .info-container {
         &__list {
             text-align: left;
+            list-style-position: inside;
 
             @media screen and (max-width: $break-tablet) {
                 padding: 0;
