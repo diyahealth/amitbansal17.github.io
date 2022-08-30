@@ -14,6 +14,14 @@ const pages = {
         title: "About Us - Diya Health",
         description: "Diya Health is a digital health, AI-driven Software-as-a-Service platform that empowers employers, health systems, and individuals to deliver better health outcomes at lower cost",
     },
+
+    faq: {
+        fileName: "faq",
+        url: "./faq",
+        name: "FAQ",
+        title: "FAQ",
+        description: "FAQ",
+    },
     employers: {
         fileName: "employers",
         url: "./employers",

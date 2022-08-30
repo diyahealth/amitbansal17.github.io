@@ -1,0 +1,32 @@
+mixin faqInfo()
+    script.
+            const newEl =  document.querySelector('.faq-page');
+                           
+            newEl.addEventListener('click', e => {
+
+                       if(e.target.classList.contains('link')) {
+                        return
+                       }
+                     
+                        e.preventDefault();
+                        e.stopPropagation();
+                                             
+                        const target = e.target.closest('.info-title-item');
+                                                                                                                              
+                        if( target == null) {
+                            return
+                        }
+
+                        const title =  target.querySelector('span');
+                        const arrow = target.querySelector('.info-title-item__img');
+
+                        title.classList.toggle('bold-text');
+                        arrow.classList.toggle('rotate');
+
+                        target.nextSibling.classList.toggle('hidden');
+                        target.nextSibling.classList.toggle('margin-bottom');
+                        
+
+
+            })
+
