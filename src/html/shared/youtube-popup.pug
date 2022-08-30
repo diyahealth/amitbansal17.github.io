@@ -1,8 +1,9 @@
-mixin youtubeLink(id)
+mixin youtubeLink(id, portrait = false)
     a.material-btn(
         href=`https://www.youtu.be/${id}`
         target="__blank"
         data-youtube=id
+        data-orientation=(portrait ? 'portrait' : 'landscape')
         rel="noopener noreferrer"
     )&attributes(attributes)
         .label WATCH VIDEO
@@ -51,6 +52,7 @@ mixin youtubePopup
                 e.preventDefault();
                 e.stopPropagation();
                 iframe.src = 'https://www.youtube.com/embed/' + x.dataset.youtube;
+                iframe.classList.toggle('portrait', x.dataset.orientation === 'portrait')
                 popup.classList.remove('hidden');
             }));
 
