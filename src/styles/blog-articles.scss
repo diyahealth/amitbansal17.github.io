@@ -8,7 +8,7 @@
 
 
 .blog-articles-content {
-    font-family: "Open Sans";
+    font-family: "Roboto";
     color: #333333;
 
     .blog-text {
@@ -30,9 +30,9 @@
     }
 
     h2 {
-        font-size: 32px;
-        font-weight: 400;
-        line-height: 42px;
+        font-size: 38px;
+        font-weight: 400 ;
+        line-height: 50px;
         margin: 0;
         transition: 0.4s all;
 
@@ -52,9 +52,9 @@
     }
 
     h4 {
-        font-size: 18px;
+        font-size: 22px;
         font-weight: 400;
-        line-height: 24px;
+        line-height: 30px;
         margin: 0;
         transition: 0.4s all;
 
@@ -181,7 +181,8 @@
 
 
     .small-container {
-        margin-top: 60px;
+        padding-top: 60px;
+        border-top: 1px solid #DDD;
         display: flex;
         gap: 20px;
         align-items: flex-start;
