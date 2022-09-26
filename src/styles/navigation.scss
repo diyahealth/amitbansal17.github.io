@@ -17,6 +17,7 @@
         align-items: center;
         margin: auto;
         max-width: $navigation-max-width;
+        box-shadow: 0 0 5px rgba(0,0,0,0.5);
 
         @media screen and (max-width: $break-tablet) {
             padding: 0 30px;

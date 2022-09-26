@@ -1,17 +1,69 @@
+
 mixin blogArticles(articles)
+    -
+        const bigContainer =[]
+        const mediumContainer =[]
+        const smallContainer =[]
+        
+            articles.forEach((x,index)=> {
+                if (index===0) {
+                    bigContainer.push(x)
+                }
+                if (index>0 && index<=2) {
+                    mediumContainer.push(x)
+                }
+
+                if (index>2) {
+                    smallContainer.push(x)
+                }
+            })
+        
+
     .blog-articles-content
-        each article in articles
-            .article
-                .content
-                    a(href=article.href, target="_blank")
-                        .item.title(class=!article.timestamp ? 'no-timestamp' : '')=article.title
-                    if (article.timestamp)
-                        .item.timestamp=article.timestamp
-                    .container
-                        if (article.image)
-                            img.image(src=article.image)
-                        .text
-                            .item.description=article.description
-                            a.item.more-link(href=article.href, target="_blank")
-                                span Read More
-                                include ../../images/icons/forward-arrow-icon.svg
+            .header-content-container 
+                h1 Patient engagement stories and insights 
+            .big-container
+                 each article in bigContainer
+                    .content
+                        .container
+                            a(href=article.href, target="_blank")
+                                img.image(src=article.image)
+                        .container-big-info
+                            if (article.tag)
+                                a.tag(href=article.tag.ref)
+                                    .tagName=article.tag.name        
+                            a(href=article.href, target="_blank")
+                                h2.font-weight-bold.articleMargin.title=article.title
+                            .date-time  
+                                span.date=article.date
+                                span.time=article.timeToRead
+            .medium-container
+                each article in mediumContainer
+                    .content
+                        .container
+                            a(href=article.href, target="_blank")
+                                img.image(src=article.image)
+                        .container-info.container-info-padding
+                            if (article.tag)
+                                a.tag(href=article.tag.ref)
+                                    .tagName=article.tag.name        
+                            a(href=article.href, target="_blank")
+                                h2.articleMargin.title=article.title
+                            .date-time  
+                                span.date=article.date
+                                span.time=article.timeToRead
+            .small-container
+                    each article in smallContainer
+                        .content
+                            .container
+                                a(href=article.href, target="_blank")
+                                    img.image(src=article.image)
+                            .container-info
+                                if (article.tag)
+                                    a.tag(href=article.tag.ref)
+                                        .tagName=article.tag.name        
+                                a(href=article.href, target="_blank")
+                                    h4.articleMargin.title=article.title
+                                .date-time  
+                                    span.date=article.date
+                                    span.time=article.timeToRead
