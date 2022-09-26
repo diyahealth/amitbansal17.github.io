@@ -95,6 +95,7 @@ block content
             require('../../images/about-us/fotos/kaiser.png'),
             require('../../images/about-us/fotos/finley.png'),
             require('../../images/about-us/fotos/tolkachev.png'),
+            require('../../images/blog/susan.jpg'),
         ]
 
         const team = [
@@ -152,6 +153,15 @@ block content
                 index: 5,
                 href: 'https://www.linkedin.com/in/alexander-tolkachev-a5bb87104/',
             },
+             {
+                name: 'Susan Pasley',
+                title: "The healthcare industry has yet to connect the triad of patient, family, and caregiver in meaningful ways to promote engagement, streamline communication, and drive outcomes. Diya Health has developed an amazing platform that closes this gap to improve caregiver efficiencies and the patient and family experience.",
+                work: 'Clinical Growth Advisor',
+                text: 'Susan Pasley is a registered nurse with an extensive experience in healthcare SaaS organizations. She currently serves as the VP of Clinical Solutions at CareRev, and has held senior-level positions at Press Ganey, PointClickCare, and Collective Medical. As Clinical Growth Advisor, Pasley leverages her deep understanding of clinical workflows, technology, and innovation to drive Diya`s growth within health systems.',
+                image: require('../../images/blog/susan.jpg'),
+                index: 6,
+                href: ' https://www.linkedin.com/in/susan-pasley/',
+            },
         ];
 
     main.main-box.about-us
@@ -203,13 +213,14 @@ block content
             .leadership-container__box-content.leadership-container__box-content--marginTop.leadership-container__padding
                 +integrationCards( 4, 'Wally Finley, MHA', 'Head of IT & Compliance', path[4])
                 +integrationCards( 5 , 'Alex Tolkachev', 'Director of Engineering', path[5])
+                +integrationCards( 6 , 'Susan Pasley', 'Clinical Growth Advisor', path[6])
                 .card-employees.position-card
                     .special-card
                         .card-employees__contact-us
                             p Have a question
                             button.button-mobile-settings.material-btn.compliance-container__title__button-size(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
                                 .label Contact US
-                .card-employees.position-card.no-pointer &nbsp;
+                
         article.our-blog-container
             .our-blog-container__title
                 h2 Our Blog
