@@ -3,12 +3,12 @@
 }
 
 .articleMargin {
-    margin:  0 0 10px 0!important;
+    margin: 0 0 10px 0 !important;
 }
 
 
 .blog-articles-content {
-    font-family: "Inter";
+    font-family: "Open Sans";
     color: #333333;
 
     .blog-text {
@@ -20,7 +20,7 @@
     a {
         color: #333333;
     }
-    
+
     h1 {
         font-size: 48px;
         font-weight: 700;
@@ -35,19 +35,20 @@
         line-height: 42px;
         margin: 0;
         transition: 0.4s all;
+
         @media screen and (max-width: $break-mobile) {
             font-size: 28px;
             font-weight: 400;
             line-height: 38px;
-            }
+        }
     }
 
     h2:hover {
-        color:#0c9fdb;
+        color: #0c9fdb;
     }
 
     h4:hover {
-        color:#0c9fdb;
+        color: #0c9fdb;
     }
 
     h4 {
@@ -64,45 +65,32 @@
         }
     }
 
-    & img {
-        transition: all 0.4s;
-       }
-
-
-    & img:hover {
-     transform: scale(1.05);
+    .header-content-container {
+        border-bottom: 1px solid #DDD;
+        padding: 20px 0 30px 0;
+        margin-bottom: 40px;
     }
 
-   .header-content-container {
-    border-bottom: 1px solid #DDD;
-    padding: 20px 0 30px 0;
-    margin-bottom: 40px;
+    .tag {
+        display: inline-block;
+        margin-bottom: 10px;
+        padding: 2px 6px;
+        vertical-align: top;
+        font-size: 12px;
+        line-height: 1.1;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        background-color: $primary-color;
+        transition: 0.4s all;
     }
 
-    .tag  { 
-    display: inline-block;
-    margin-bottom: 10px;
-    padding: 2px 6px;
-    vertical-align: top;
-    font-size: 12px;
-    line-height: 1.1;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #EEEEEF;
-    background-color: #5F0957;
-    transition: 0.4s all;
-    }
-
-    .time::before  { 
-    content: "|";
-    display: inline-block;
-    width: 1.5em;
-    text-align: center;
-    color: #000;
-    }
-
-    .tag:hover {
-        color:#0c9fdb;
+    .time::before {
+        // content: "|";
+        display: inline-block;
+        width: 1.5em;
+        text-align: center;
+        color: #000;
     }
 
     .container-info-padding {
@@ -110,7 +98,7 @@
 
         @media screen and (max-width: $break-mobile) {
             padding: 20px;
-            }
+        }
     }
 
     .big-container .content {
@@ -126,7 +114,7 @@
         }
 
         & .container-big-info {
-            padding: 10px 0;
+            padding: 0 0 10px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -143,17 +131,17 @@
         & .container {
             flex: 0 0 60%;
 
-            & img  {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
+            & img {
+                width: 100%;
+                max-height: 400px;
+                object-fit: cover;
 
             }
         }
 
     }
- 
-    .medium-container  {
+
+    .medium-container {
         display: flex;
         column-gap: 20px;
         align-items: flex-start;
@@ -169,8 +157,8 @@
             width: 100%;
         }
 
-        
-        & >* {
+
+        &>* {
             flex: 0 0 48%;
         }
 
@@ -180,11 +168,11 @@
             align-items: center;
 
 
-        & img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+            & img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
 
 
         }
@@ -192,13 +180,17 @@
     }
 
 
-    .small-container  {
+    .small-container {
         margin-top: 60px;
         display: flex;
         gap: 20px;
         align-items: flex-start;
         justify-content: space-between;
         flex-wrap: wrap;
+
+        .date-time {
+            font-size: 16px;
+        }
 
         @media screen and (max-width: $break-mobile) {
             flex-direction: column;
@@ -208,8 +200,9 @@
 
         & .container {
             flex: 0 0 48%;
+
             @media screen and (max-width: $break-mobile) {
-         
+
                 flex: 0 0 100%;
             }
         }
@@ -219,26 +212,27 @@
             column-gap: 15px;
             align-items: stretch;
             flex: 0 0 48%;
-            
-        @media screen and (max-width: $break-mobile) {
-            flex-direction: column;
-            flex: 0 0 100%;
-        }
-
-           & .container-info {
 
             @media screen and (max-width: $break-mobile) {
-              padding: 20px;
+                flex-direction: column;
+                flex: 0 0 100%;
             }
 
-           }
+            & .container-info {
+
+                @media screen and (max-width: $break-mobile) {
+                    padding: 20px;
+                }
+
+            }
 
             & img {
-               
+
                 height: 150px;
                 object-fit: cover;
                 flex: 0 0 40%;
                 width: 100%;
+
                 @media screen and (max-width: $break-mobile) {
                     height: 200px;
                 }

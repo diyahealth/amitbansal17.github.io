@@ -30,7 +30,7 @@ const processStaticPage = (pageKey, argv) => {
     return new HtmlWebpackPlugin({
         template: `./html/pages/${page.fileName}.pug`,
         templateParameters: buildTemplateData(pageKey, argv.mode),
-        filename: `${page.fileName}.html`,
+        filename: `${page.path || page.fileName}.html`,
         inject: false
     });
 };
