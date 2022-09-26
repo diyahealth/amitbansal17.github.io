@@ -4,6 +4,7 @@
     top: 0;
     z-index: 6;
     width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 
 
     .navigation {
@@ -17,7 +18,6 @@
         align-items: center;
         margin: auto;
         max-width: $navigation-max-width;
-        box-shadow: 0 0 5px rgba(0,0,0,0.5);
 
         @media screen and (max-width: $break-tablet) {
             padding: 0 30px;
@@ -282,7 +282,7 @@
         overflow-y: scroll;
 
         background: #f3fafd;
-        
+
         list-style-type: none;
         -webkit-font-smoothing: antialiased;
         transform-origin: 0% 0%;

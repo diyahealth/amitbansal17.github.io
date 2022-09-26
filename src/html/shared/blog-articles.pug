@@ -30,13 +30,13 @@ mixin blogArticles(articles)
                                 img.image(src=article.image)
                         .container-big-info
                             if (article.tag)
-                                a.tag(href=article.tag.ref)
-                                    .tagName=article.tag.name        
+                                .tag
+                                    .tagName=article.tag
                             a(href=article.href, target="_blank")
                                 h2.font-weight-bold.articleMargin.title=article.title
                             .date-time  
                                 span.date=article.date
-                                span.time=article.timeToRead
+                                //- span.time=article.timeToRead
             .medium-container
                 each article in mediumContainer
                     .content

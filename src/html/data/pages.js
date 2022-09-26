@@ -95,6 +95,15 @@ const pages = {
         title: "Terms & Conditions - Diya Health",
         description: "Terms and conditions of Diya Health Website",
     },
+
+    post2022092600: {
+        fileName: "diya-health-strengthens-its-team-with-appointment-of-susan-pasley-as-clinical-growth-advisor",
+        url: './blog/diya-health-strengthens-its-team-with-appointment-of-susan-pasley-as-clinical-growth-advisor',
+        path: 'blog/diya-health-strengthens-its-team-with-appointment-of-susan-pasley-as-clinical-growth-advisor',
+        name: "Diya Health Strengthens Its Team with Appointment of Susan Pasley as Clinical Growth Advisor",
+        title: "Diya Health Strengthens Its Team with Appointment of Susan Pasley as Clinical Growth Advisor - Diya Health",
+        description: 'Diya Health, a digital health technology platform that streamlines family engagement, announced today the appointment of Susan Pasley, MS, BSN, RN, to its Board of Advisors'
+    }
 };
 
 module.exports = pages;
