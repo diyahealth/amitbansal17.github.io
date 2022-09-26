@@ -1,17 +1,11 @@
 .our-blog, .news-and-resources {
     .content-container {
-        display: flex;
-        flex-wrap: nowrap;
 
         &>.content {
             position: relative;
             margin: auto;
             padding: 12px;
-            max-width: $blog-max-width;
-
-            flex-grow: 0;
-            max-width: 70%;
-            flex-basis: 70%;
+            max-width: 1140px;
 
             @media screen and (max-width: 800px) {
                 flex-grow: initial;
