@@ -30,7 +30,7 @@ const pages = {
         description: " Our COVID Compliance-as-a-Service platform helps employers stay in compliance with pandemic regulatory requirements and bring employees back to work safely",
     },
 
-    wellness: {
+     wellness: {
         fileName: "wellness-engagement",
         url: "./wellness-engagement",
         name: "Wellness Engagement",
