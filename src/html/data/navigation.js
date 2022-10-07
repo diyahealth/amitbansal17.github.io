@@ -88,10 +88,7 @@ const buildNavigationLinks = (mode) => {
             ...pageToLink(pages.familyConnect, null, postfix),
             dropdown: buildFamilyDropdown(),
         },
-        {
-            ...pageToLink(pages.employers, null, postfix),
-            dropdown: buildEmployersDropdown(),
-        },
+      
         {
             ...pageToLink(pages.aboutUs, null, postfix),
             dropdown: buildAboutUsDropdown(postfix),
