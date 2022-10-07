@@ -1271,23 +1271,18 @@
     }
 
     .contact-us {
-        background: url('../images/about-us/contact-wave.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        width: 100%;
-        margin-bottom: -140px;
+        padding: 86px 189px 124px;
+        margin: auto;
+        max-width: 1440px;
 
         @media screen and (max-width: $break-tablet) {
-            margin-bottom: 0px;
+            padding: 40px 20px;
         }
 
         .contact-us-container {
-            padding: 188px 188px 204px 188px;
-            margin: auto;
-            max-width: 1440px;
-
+                   
             h2 {
-
+    
                 font-family: Open Sans;
                 font-size: 36px;
                 font-style: normal;
@@ -1295,9 +1290,9 @@
                 line-height: 49px;
                 letter-spacing: 0px;
                 text-align: center;
-
+    
             }
-
+    
             & .title .text {
                 font-family: Open Sans;
                 font-size: 22px;
@@ -1307,23 +1302,23 @@
                 letter-spacing: 0px;
                 text-align: center;
             }
-
+    
             @media screen and (max-width: $break-tablet) {
                 padding: 40px 20px;
-                background: #f3fafd;
+                background: 'white';
             }
-
+    
             .title {
                 text-align: center;
             }
-
+    
             .text {
                 max-width: 624px;
                 margin: 11px auto 48px;
             }
         }
 
-
+    
     }
 
 
