@@ -1,0 +1,81 @@
+.news-articles-content {
+    .article {
+        & + .article {
+            margin-top: 24px;
+        }
+
+        &:nth-child(odd) {
+            @extend .primary-background-content;
+        }
+
+        & .content {
+            @extend .default-content-block;
+
+            .container {
+                display: flex;
+                align-items: flex-start;
+                .image {
+                    width: 150px;
+                    margin-right: 20px;
+                }
+            }
+
+            .item {
+                @media screen and (max-width: $break-mobile) {
+                    font-size: 16px;
+                    padding: 0;
+                }
+
+                &.timestamp {
+                    margin: 8px 0;
+                    font-style: italic;
+                    margin-bottom: 24px;
+                    font-size: 0.8em;
+                }
+
+                &.title {
+                    margin-block-start: 0;
+                    margin-block-end: 0;
+                    font-weight: 700;
+
+                    &.no-timestamp {
+                        margin-bottom: 24px;
+                    }
+
+                    font-size: 26px;
+                    color: $primary-color;
+
+                    @media screen and (max-width: $break-tablet) {
+                        font-size: 22px;
+                    }
+
+                    @media screen and (max-width: $break-mobile) {
+                        font-size: 20px;
+                    }
+
+                    &.primary {
+                        color: $primary-color;
+                    }
+                }
+
+                &.description {
+                   margin-bottom: 12px;
+                }
+
+                &.more-link {
+                    display: flex;
+                    align-items: center;
+
+                    & > svg {
+                        margin-left: 4px;
+    
+                        color: $primary-color;
+                        &.alternative {
+                            color: $alternative-primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

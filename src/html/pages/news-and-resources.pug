@@ -1,6 +1,6 @@
 extends ../shared/layout.pug
 
-include ../shared/blog-articles.pug
+include ../shared/news-articles.pug
 include ../shared/contact-us.pug
 block content
     script.
@@ -41,10 +41,10 @@ block content
             },
         ];
 
-    .our-blog
+    .news-and-resources
         .content-container
             article.content
-                +blogArticles(articles)
+                +newsArticles(articles)
             article.feed
                 a(class="twitter-timeline", href="https://twitter.com/DiyaHealth?ref_src=twsrc%5Etfw") Tweets by DiyaHealth 
                     script(async=true, src="https://platform.twitter.com/widgets.js", charset="utf-8")
