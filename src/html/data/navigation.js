@@ -52,7 +52,7 @@ const buildAboutUsDropdown = () => {
         { title: 'Our Mission', url: `${aboutUsUrl}#mission` },
         { title: 'Our History', url: `${aboutUsUrl}#history` },
         { title: 'Our Team', url: `${aboutUsUrl}#team` },
-        { title: 'Partnerships', url: `${aboutUsUrl}#partnerships ` },
+       
     ];
 
     return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
