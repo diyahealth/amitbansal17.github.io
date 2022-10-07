@@ -1,11 +1,17 @@
-.our-blog {
+.news-and-resources {
     .content-container {
+        display: flex;
+        flex-wrap: nowrap;
 
         &>.content {
             position: relative;
             margin: auto;
             padding: 12px;
-            max-width: 1140px;
+            max-width: $blog-max-width;
+
+            flex-grow: 0;
+            max-width: 70%;
+            flex-basis: 70%;
 
             @media screen and (max-width: 800px) {
                 flex-grow: initial;
@@ -14,19 +20,13 @@
             }
         }
 
-        &  h1 {
-            font-family: "Montserrat";
-    
-        }
-
-  
-
         &>.feed {
             position: relative;
             right: 12px;
             flex-grow: 0;
             max-width: 27%;
             flex-basis: 27%;
+            background-color: 'red';
 
             &>iframe {
                 max-height: 100vh;
