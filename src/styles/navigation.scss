@@ -32,14 +32,14 @@
         }
 
         .active-link {
+          
             &::before {
                 content: ' ';
-                border-top: 1px solid $primary-color;
-                border-bottom: 1px solid $primary-color;
+                border-bottom: 2px solid $primary-color;
                 position: absolute;
                 width: 100%;
                 left: 0;
-                top: 0;
+                top: 120%;
             }
         }
 
@@ -49,7 +49,6 @@
             padding-left: 5%;
             flex-grow: 1;
             display: flex;
-            justify-content: space-between;
             text-align: right;
             align-items: center;
 
@@ -60,41 +59,43 @@
             &>li {
                 position: relative;
                 margin-left: 10px;
+                flex-grow: 1;
 
                 &:hover {
-                    &>.link-container {
-                        color: $primary-color;
+                    background-color: $primary-color-hover;
+                    &>.link-container a {
 
-                        &>.icon {
-                            fill: $primary-color;
-                            transform: rotate(-90deg);
-                        }
+                        color: $primary-color;
+                        
+                       
+
                     }
 
                     &>.dropdown-menu {
                         display: block;
-                        overflow: initial;
+                        overflow: hidden;
                         width: initial;
                         height: initial;
                         opacity: 1;
                         z-index: 2;
-                        padding: 20px;
-                        padding-top: 10px;
+                        padding: 0;
+                       
                     }
 
-                    @extend .active-link;
+           
                 }
 
                 &.active {
-                    &>.link-container {
+                    
+                    &>.link-container a {
                         color: $primary-color;
+                        
+                        @extend .active-link;
 
-                        &>.icon {
-                            fill: $primary-color;
-                        }
+                      
                     }
 
-                    @extend .active-link;
+                  
                 }
 
                 &>.link-container {
@@ -104,13 +105,21 @@
                     transition: color 0.2s ease-in-out;
                     color: #333;
                     min-height: 20px;
+                    font-family: Open Sans;
+                    font-size: 22px;
+                    font-weight: 600;
+                    line-height: 34px;
+                    letter-spacing: 0px;
+                    text-align: center;
+                    justify-content: center;
+
 
                     margin: 25px 0;
 
                     &>a {
                         line-height: 1;
                         text-decoration: none;
-                        text-transform: uppercase;
+                        
                         position: relative;
                         color: inherit;
                     }
@@ -131,15 +140,17 @@
                 width: 0;
                 height: 0;
                 overflow: hidden;
-                background: #f3fafd;
+                background: #FFFFFF;
                 transition: opacity 0.2s ease-in-out;
                 text-align: left;
                 border-bottom-left-radius: 5%;
                 border-bottom-right-radius: 5%;
+                padding: 0;
 
                 &>li {
                     position: relative;
-                    padding: 8px 0;
+                    padding: 15px 48px;
+                    
 
                     &.subheader {
                         border-bottom: 1px solid #d3dae0;
@@ -147,6 +158,7 @@
                         font-size: 1.2em;
 
                         &:hover {
+                          
                             &>a {
                                 transform: none;
                                 color: $primary-color;
@@ -155,15 +167,21 @@
                     }
 
                     &:hover {
+                        background-color: $primary-color-hover;
                         &>a {
-                            transform: translate(10px);
+                            
                             color: $primary-color;
                         }
                     }
 
                     &.active {
+                     
                         &>a {
                             color: $primary-color;
+                            @extend .active-link;
+                            &::before {
+                                top: 100%;
+                            }
                         }
                     }
 
@@ -174,6 +192,13 @@
                         position: relative;
                         transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
                         white-space: nowrap;
+                        font-family: Open Sans;
+                        font-size: 22px;
+                        font-weight: 400;
+                        line-height: 34px;
+                        letter-spacing: 0px;
+                        text-align: left;
+
                     }
                 }
             }
@@ -194,6 +219,18 @@
         width: 160px;
         padding: 10px 20px;
         padding-right: 10px;
+    }
+
+    .active-link {
+          
+        &::before {
+            content: ' ';
+            border-bottom: 2px solid $primary-color;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 120%;
+        }
     }
 
     .menu-toggle {
@@ -292,29 +329,75 @@
 
         a {
             color: #232323;
+          
+
         }
 
+        & li.topMenu a {
+            display: inline-block;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        & li.topMenu {
+           padding: 40px 0
+        }
+
+        & .topMenu:not(:last-child) {
+            border-bottom: 1px solid #D6D6D7;
+        }
+
+      
         >li {
-            padding: 10px 0;
-            font-size: 22px;
+            
+            font-family: Open Sans;
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 38px;
+            letter-spacing: 0px;
+            text-align: center;
+          
 
             &.active {
                 >a {
                     color: $primary-color;
+                    @extend .active-link;
                 }
             }
         }
 
         .dropdown-menu {
             @extend .list-unstyled;
-            padding: 10px 10px 10px 40px;
+            & li.dropMenu:not(:last-child) a {
+            margin-bottom: 32px;
+           }
+
+           & li.dropMenu:last-child a {
+            margin-bottom: 0;
+           }
 
             >li {
-                padding: 8px 0;
+              
+                font-family: Open Sans;
+                font-size: 22px;
+                font-weight: 400;
+                line-height: 30px;
+                letter-spacing: 0px;
+                text-align: center;
+                position: relative;
+                
+
+
+
+                
 
                 &.active {
                     >a {
                         color: $primary-color;
+                        @extend .active-link;
+                        &::before {
+                            top: 100%;
+                        }
                     }
                 }
 

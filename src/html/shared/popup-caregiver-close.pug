@@ -1,0 +1,26 @@
+mixin popupCaregiverClose
+    script.
+           const family =  document.querySelector('.home-care');
+           const newEl =  document.querySelector('.popup-savings__background');
+           const backGround =  document.querySelector('.popup-savings__content');
+           family.addEventListener('click', e => {
+
+               const targetOpen = e.target.closest('.get-info-button');
+
+               if (targetOpen) {
+                newEl.classList.remove('hidden');
+                backGround.classList.remove('hidden');
+                return;
+                }
+               
+
+                const targetFirst = e.target.closest('.popup-savings__close');
+                const targetSecond = e.target.closest('.popup-savings__content');  
+
+                if (targetFirst || !targetSecond)   {
+                 newEl.classList.add('hidden');
+                 backGround.classList.add('hidden');  
+                } 
+                         
+                    
+                });
