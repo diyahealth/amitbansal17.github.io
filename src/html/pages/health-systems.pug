@@ -1,4 +1,5 @@
 extends ../shared/layout.pug
+include ../shared/estimated-savings-form.pug
 
 include ../shared/contact-us.pug
 include ../shared/reviews.pug
@@ -10,49 +11,424 @@ include ../shared/sign-in-button.pug
 include ../shared/about-app.pug
 include ../shared/covid-info.pug
 include ../shared/timeline-articles.pug
+include ../shared/youtube-popup.pug
+include ../shared/popup-caregiver-close.pug
+include ../shared/great-down-button.pug
+
+mixin integrationHipaa(text,className)
+    li.hipaa-container__list-item(class=className)
+        img.hipaa-container__item-logo(src=require("../../images/employers/check.png") alt='check') 
+        span.hipaa-container__item-text=text
+
+
+mixin integrationBlogCards(work, index, link)
+    a.card-press-box(href=link)
+        .card-press
+            - const titleClass = `card-press__outer--${index}`;
+            
+            .card-press__outer(class=titleClass)
+            .card-press__content-box
+                p.card-press__info=work
+                img.card-employees__arrow(src=require("../../images/about-us/arrow.svg") alt='check')
+
+mixin popupSavingsConfirmation
+    .popup-savings
+        .popup-savings__background.hidden
+        .popup-savings__content.hidden
+            .popup-savings__close
+            h2.popup-savings__title Want more details about your cost savings?
+            .popup-savings__subtitle Please submit your email below and we will send you a personalized, detailed cost savings report
+            form.popup-savings__box-field(onsubmit="return diya.contactUs.form.send(event, this)")
+                .form-control
+                    .input-container
+                        input.input(name="Email", required, type="email", maxlength="250")
+                        .form-label Email
+
+                        input#calculation-params(name="calculationParams", type="hidden", value="Number of Staff = 100; Hourly Rate = $50; Hours Spent per Day, Phone Calls = 1; Hours Spent per Day, Travel = 2")
+                    
+
+                    button.material-btn(type="submit")
+                        span.label
+                            span SUBMIT
+               
+                .g-recaptcha(
+                    data-sitekey=keys.google.captcha,
+                    data-callback="passCaptcha",
+                    data-error-callback="resetCaptcha"
+                    data-expired-callback="resetCaptcha")
 
 block content
-    - const benefitsCarouselId = 'doctors-benefits'
-    -
-        const aboutApp = {
-            text: 'DiyaMD is a budding telehealth platform that focuses on high efficiency, high throughput, and billable patient care services. Modeled after a physician\'s customary workflow, DiyaMD helps physicians optimize their time to improve patient care and increase revenue. This novel technology allows physicians to effortlessly access their patient’s health information, track their health data, administer billable e-services, and conduct remote patient monitoring. Moreover, DiyaMD provides clinicians with reports and alerts, the capability for mass information dissemination to select or all patients, patient-doctor relationship support, and patient population management tools. With DiyaMD, physicians can improve their quality of care, establish their brand, and thrive in their practice.',
-        };
-        const timelineData = [
-            {
-                title: 'How Doctors use DiyaMD',
-                text: 'DiyaMD enables doctors to access patients\' health records, track trendlines, perform billable e-services, and communicate easily with other doctors and caregivers.  In addition, DiyaMD provides doctors with reports and alerts, enables dissemination of information to individual or multiple patients, and supports the doctor-patient relationship.',
-                src: require("../../images/doctors-benefits/reports.jpg"),
-            },
-        ];
+    -   
+        const imagePath = [
+            require("../../images/home-care/images/vimage.png"),
+           
+        ]
+
+         const blog = [
+            'Save Clinicians Time',
+            'Reduce Feelings of Burnout',
+            'Improve Experience Ratings'
+              ];
+
+        const links = ['https://www.diyahealth.org/posts/u-s-cardiologists-partner-with-diya-health-to-extend-their-reach-to-rural-india.html',
+         'https://www.diyahealth.org/posts/digital-health-enhances-senior-care.html', 
+         'https://www.diyahealth.org/posts/telehealth-transforms-in-home-care.html'
+         ]   
+
+        const hipaa = [
+                'Single sign-on',
+                'Multi-factor authentication',
+                'Security alerts for unauthorized access',
+                'No data is shared or sold',
+                'You are in control of your data (If you want your data deleted, we delete it)',
+                'No advertising on our platform',
+                '100% encryption',
+                'Immutable audit trail of all activity',
+                'Stored on the most secure cloud systems, not devices',
+        ];   
+                 
+    main.main-box.home-care
+
+        article.caregiver-image-container
+            .inner               
+                .caregiver-image-container__text-box
+                    .caregiver-image-container__subtitle-text 
+                        img.caregiver-image-container__img(src=require("../../images/icons/diya-logo.svg") alt='Diya Logo') 
+                        span  Care for the Caregiver 
+                                    
+                    button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
+                        span.label Request a demo
+        article.learn-more
+            .inner
+                h2 Learn More in Less Than 2 Minutes!
+                +greatDownButton('clinicians')
+        article.clinicians-container#clinicians
+                .clinicians-container__left
+                    h2.specialH2Class 
+                        span Save Clinicians 
+                        span.clinicians-container__minutes 30+ Minutes 
+                        span per Shift
+                    
+                    
+                    p.clinicians-container__text.
+                        During the critical, nationwide shortage of clinical staff, that time is even more precious to be spent towards clinical tasks.
+                    +youtubeLink('tPfLQ4IBNv4')
+                .clinicians-container__right
+                    .clinicians-container__item
+                            +youtubeImageMain('tPfLQ4IBNv4', imagePath[0])
+        article.calculate-savings
+            .inner
+                .calculate-savings__main-text
+                    h2 
+                        span That’s 
+                        span.calculate-savings__money $5 million 
+                        span savings per year for the average 150-bed hospital
+                    button.material-btn(onclick='window.diya.toAnchor(\'calculate-savings\')') 
+                        span.label Calculate your savings
+
+        article.empower-container
+            .inner
+                .empower-container__title
+                    h2 
+                        span.empower-container__empower Empower 
+                        span Clinicians
+                    p.empower-container__text to deliver high-quality care
+                .empower-container__cards-container
+                    +integrationBlogCards(blog[0], 1, links[0])
+                    +integrationBlogCards(blog[1], 2, links[1])
+                    +integrationBlogCards(blog[2], 3, links[2])
+        article.slider-save-clinicians
+            .inner
+                h2.slider-save-clinicians__title Save Clinicians Time
+
+                .carousel-container#dashboard-carousel
+                    ol.indicators-container
+                        li.indicator.active
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                    .carousel-control.left
+                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                       
+                    .carousel-control.right
+                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                       
+                    .content-container
+                        .carousel-image-container
+                            .carousel-image-wrapper
+                                .carousel-image-background.dashboard-carousel-bg-1.active
+                                .carousel-image-background.dashboard-carousel-bg-2
+                                .carousel-image-background.dashboard-carousel-bg-3
+                                .carousel-image-background.dashboard-carousel-bg-4
+
+                        ul.text-container
+                            li.carousel-item-container.active
+                                p.slider-content-box Save 30+ minutes per shift!
+                                h3.title Automatically Answer Time-Consuming Questions
+                                p.text Proactively deliver content to patients and their family members that answers their most common questions.
+                               
+                            li.carousel-item-container
+                                p.slider-content-box Save 30+ minutes per shift!
+                                h3.title Proactive Family Engagement
+                                p.text Deliver the right information, to the right people, at the right time.
+                         
+                            li.carousel-item-container
+                                p.slider-content-box Save 30+ minutes per shift!
+                                h3.title Measure & Improve Efficiency Gains
+                                p.text Administrators access a powerful analytics dashboard for continuous improvement.
+                               
+                            li.carousel-item-container
+                                p.slider-content-box Save 30+ minutes per shift!
+                                h3.title Deeper Insights into Top Performers
+                                p.text Not all content is created equal! Know which content is resonating with patients and family, and where improvements are needed.
+
+        article.slider-burnout
+            .inner
+                h2.slider-save-clinicians__title Reduce Feelings of Burnout
+
+                .carousel-container#burnout-carousel
+                    ol.indicators-container
+                        li.indicator.active
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                    .carousel-control.left
+                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                    .carousel-control.right
+                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                    .content-container
+                        .carousel-image-container
+                            .carousel-image-wrapper
+                                .carousel-image-background.burnout-carousel-bg-1.active
+                                .carousel-image-background.burnout-carousel-bg-2
+                                .carousel-image-background.burnout-carousel-bg-3
+                                .carousel-image-background.burnout-carousel-bg-4
+
+                        ul.text-container
+                            li.carousel-item-container.active
+                                p.slider-content-box 25% fewer disruptions!
+                                h3.title Automatic Content Delivery
+                                p.text No new technology to learn! Clinicians work with their existing EMR, with no new steps.
+                               
+                            li.carousel-item-container
+                                p.slider-content-box 25% fewer disruptions!
+                                h3.title Prepare Family for Transitions
+                                p.text Transitions are time-intensive for clinicians. Diya ensures transitions are smooth while reducing clinicians’ workload. 
+                         
+                            li.carousel-item-container
+                                p.slider-content-box 25% fewer disruptions!
+                                h3.title Reduce Family Calls
+                                p.text Automatically redirect family to their personalized content library. Clinicians focus on quality care.
+                               
+                            li.carousel-item-container
+                                p.slider-content-box 25% fewer disruptions!
+                                h3.title Track Efficiency Gains
+                                p.text Celebrate clinician job satisfaction from fewer calls and emails.
+        article.slider-ratings
+            .inner
+                h2.slider-save-clinicians__title Improve Experience Ratings
+
+                .carousel-container#rating-carousel
+                    ol.indicators-container
+                        li.indicator.active
+                        li.indicator
+                        li.indicator
+                        li.indicator
+                    .carousel-control.left
+                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                    .carousel-control.right
+                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                    .content-container
+                        .carousel-image-container
+                            .carousel-image-wrapper
+                                .carousel-image-background.rating-carousel-bg-1.active
+                                .carousel-image-background.rating-carousel-bg-2
+                                .carousel-image-background.rating-carousel-bg-3
+                           
+
+                        ul.text-container
+                            li.carousel-item-container.active
+                                p.slider-content-box 30% ratings increase!
+                                h3.title Proactive & Frequent Updates
+                                p.text Families don’t need to anxiously wait for clinicians’ phone calls. All loved ones are automatically updated on the patient’s care status.
+                               
+                            li.carousel-item-container
+                                p.slider-content-box 30% ratings increase!
+                                h3.title Family Collaboration Platform
+                                p.text Patients’ conditions can change rapidly. Diya empowers families to engage and collaborate in real-time. 
+                         
+                            li.carousel-item-container
+                                p.slider-content-box 30% ratings increase!
+                                h3.title Continuous Quality Improvement
+                                p.text Know which content is helpful and which can be improved to enhance experience and ratings.
+                               
+                            
+        article.boost
+            .inner
+                .boost__main-text
+                    h2 Boost clinician efficiency and job satisfaction          
+                         
+                    button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
+                        span.label Get started
+        .divider
+        article.table-calculation#calculate-savings
+            .inner
+                .contact-savings-container
+                    h2.table-calculation__header-text Calculate Your Savings
+                    p.table-calculation__subtitle-text Please use the table below to calculate the estimated savings that your organization can gain from implementing Diya.
+
+                    +estimatedSavingsForm(organizationSizeOptions)
+                    .button-block
+                        button.material-btn.button-details.get-info-button
+                            span.label
+                                span Request Details
+        .divider 
+        article.slider-testimonials
+            .inner
+                h2.slider-service__title Testimonials
+
+                .carousel-container-testimonials#dashboard-carousel-testimonials
+                    ol.indicators-container
+                        li.indicator.active
+                        li.indicator
+                        li.indicator
+                  
+                    .carousel-control.left
+                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                    .carousel-control.right
+                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                    .content-container
+                        .carousel-image-container
+                            .carousel-image-wrapper
+                                .carousel-image-background.dashboard-carousel-bg-1.active
+                                    .content-box
+                                        .content-box-image  
+                                            img.icon(src=require("../../images/main-page/slides/slide2/tim.png"), alt="Tim")
+                                        p.name Tim Dunn
+                                        span.workplace Finance Executive, TPG Capital (Ret.) Lead Investor
+                                        img.work-image(src=require("../../images/main-page/slides/slide2/tpg.png"), alt="hhax")
+
+                                    
+                                .carousel-image-background.dashboard-carousel-bg-2
+                                    .content-box
+                                        .content-box-image 
+                                            img.icon(src=require("../../images/main-page/slides/slide1/dave.png"), alt="Dave")
+                                        p.name David Pidwell
+                                        span.workplace Faculty, Stanford University (Ret.) Graduate School of Business
+                                        img.work-image(src=require("../../images/main-page/slides/slide1/stanford.png"), alt="stanford")
+                                    
+                                .carousel-image-background.dashboard-carousel-bg-3
+                                    .content-box 
+                                        .content-box-image.image-special
+                                            img.icon.icon-special(src=require("../../images/home-care/images/susan.png"), alt="Susan")
+                                        p.name Susan Pasley
+                                        
+                                        span.workplace VP, Clinical Solutions CareRev
+
+                                        img.work-image(src=require("../../images/home-care/images/carerev.png"), alt="nhm")        
+
+                                
+                        ul.text-container
+                            li.carousel-item-container.active
+                                .box-containers
+                           
+                                    img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
+                                    img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")   
+                                    p.text.text-integration Diya has the potential to revolutionize the healthcare industry.
+
+                               
+                            li.carousel-item-container
+                                .box-containers
+                                    img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
+                                    img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")   
+                                    
+                                    p.text.text-integration Diya delivers an unbeatable ROI for anyone managing healthcare.
+
+                               
+                            li.carousel-item-container
+                                .box-containers
+                                    img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
+                                    img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")  
+                                    p.text.text-integration Diya Health has developed an amazing platform that improves caregiver efficiencies and the patient and family experience  
+        .divider 
+        article.hipaa-container
+            .inner
+                .hipaa-container__main-text
+                    h2.hipaa-container__title HIPAA & GDPR Compliant
+                .hipaa-container__service-items-box
+                    .hipaa-container__item
+                        img.hipaa-container__logo(src=require("../../images/employers/illustration1.png") alt='illustration')
+                        .text
+                            h3.hipaa-container__info Safe Log-In
+                            ul.hipaa-container__list 
+                                +integrationHipaa(hipaa[0])
+                                +integrationHipaa(hipaa[1])
+                                +integrationHipaa(hipaa[2])
+                    .hipaa-container__item
+                        img.hipaa-container__logo(src=require("../../images/employers/illustration2.png") alt='illustration')
+                        .text 
+                            h3.hipaa-container__info Protected Access to Information
+                            ul.hipaa-container__list 
+                                +integrationHipaa(hipaa[3])
+                                +integrationHipaa(hipaa[4])
+                                +integrationHipaa(hipaa[5])
+                    .hipaa-container__item
+                        img.hipaa-container__logo(src=require("../../images/employers/illustration3.png") alt='illustration')
+                        .text
+                            h3.hipaa-container__info Secure Information Storage
+                            ul.hipaa-container__list 
+                                +integrationHipaa(hipaa[6])
+                                +integrationHipaa(hipaa[7])
+                                +integrationHipaa(hipaa[8])
+        +youtubePopup
+        article.contact-us-container(id="contact-us")
+            .title 
+                h2 Contact Us
+                p.text.
+                    Haven't found the answer to your question? Interested in learning more about pricing? Requesting a demo?
+                    Contact us and we will get back to you shortly.
+            .content
+                +contactUsForm(organizationSizeOptions)
+
+        +popupSavingsConfirmation
+        +popupCaregiverClose
+    block script
+
     script.
         window.addEventListener('load', (event) => {
-            window.diya.carousel.init('doctors-benefits', {
+            window.diya.carousel.init('dashboard-carousel-testimonials', {
                 switchSlideControlSelector: '.carousel-control',
                 backgroundSelector: '.carousel-image-background',
             }, 8000);
         });
+    script(src="https://www.google.com/recaptcha/api.js", defer) 
+    script.
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('dashboard-carousel', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 8000);
+        });
+    script(src="https://www.google.com/recaptcha/api.js", defer)   
+
+    script.
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('burnout-carousel', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 8000);
+        });
+    script(src="https://www.google.com/recaptcha/api.js", defer)   
+
+    script.
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('rating-carousel', {
+                switchSlideControlSelector: '.carousel-control',
+                backgroundSelector: '.carousel-image-background',
+            }, 8000);
+        });
+    script(src="https://www.google.com/recaptcha/api.js", defer)   
+
+
+
     
-    article.carousel-with-tile.primary-background-content
-        +textImageCarousel(doctorsBenefits, benefitsCarouselId, 'alternative small')
-            .single-tile-container
-                +infoTile('Clinician Sign-In', 'alternative')
-                    +signInDiyaMd
-    article.primary-background-content
-        +aboutApp(aboutApp, false, { title: 'playfair'})
-            include ../../images/icons/diyamd-logo.svg
-    article
-        .default-content-block
-            +timelineArticles(timelineData)
-    article
-        .default-content-block
-            +articleTitle('DiyaMD Capabilities', { title: 'primary', divider: 'primary' }, true, true)
-            .capabilities-container
-                .capabilities
-                    include ../../images/capabilities/diyamd-capabilities.svg
-    article
-        +covidInfo(covidInfo.doctors)
-            img(src=require("../../images/doctors-benefits/covid-19-synopsis.jpg"))
-    article.alternative-background-content
-        +reviews(reviews.diyaMd, 'alternative')
-    article.contact-us-background-content(id="contact-us")
-        +contactUs(organizationSizeOptions)

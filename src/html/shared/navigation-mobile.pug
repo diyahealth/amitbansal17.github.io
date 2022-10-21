@@ -18,7 +18,7 @@
             each link in navigation
                 - const haveDropdown = link.dropdown && link.dropdown.length > 0
                 - const isActive = page.name === link.title || (page.parent && pages[page.parent].name === link.title)
-                li(class = isActive ? 'active' : '')
+                li.topMenu(class = isActive ? 'active' : '')
                     if (link.url)
                         a(href=link.url) #{link.title}
                     else
@@ -28,7 +28,7 @@
                         ul.dropdown-menu
                             each dropdownLink in link.dropdown
                                 - const isDropdownLinkActive = page.name === dropdownLink.title
-                                li(class = dropdownLink.variant, class=isDropdownLinkActive ? 'active' : undefined)
+                                li.dropMenu(class = dropdownLink.variant, class=isDropdownLinkActive ? 'active' : undefined)
                                     if (dropdownLink.url)
                                         a(href=dropdownLink.url) #{dropdownLink.title}
                                     else

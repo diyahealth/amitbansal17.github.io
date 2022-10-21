@@ -1,5 +1,6 @@
 include ./sign-in-button
 
+
 .navigation
     div.logo-container
         a(href=pages.index.url)
@@ -14,8 +15,7 @@ include ./sign-in-button
                         a(href=link.url) #{link.title}
                     else
                         span=link.title
-                    if (haveDropdown)
-                        include ../../images/icons/chevron-right-icon.svg
+             
                 if (haveDropdown)
                     ul.dropdown-menu
                         each dropdownLink in link.dropdown

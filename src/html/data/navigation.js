@@ -31,14 +31,8 @@ const buildDropdownFromPageWithSubpages = (pageKey, subheader, postfix) => {
     if (!subpageKeys || subpageKeys.length === 0) {
         return undefined;
     }
-    const isPage = Boolean(subheader.url);
 
-    const subheaderLink = subheader ? buildPage(
-        isPage ? subheader.name : subheader,
-        isPage ? subheader.url : undefined,
-        'subheader', postfix) : undefined;
-
-    const links = [subheaderLink, ...subpageKeys.map(pageKey => {
+    const links = [...subpageKeys.map(pageKey => {
         const page = pages[pageKey];
         return page && pageKey !== subheader ? pageToLink(page, null, postfix) : undefined;
     })].filter(Boolean);

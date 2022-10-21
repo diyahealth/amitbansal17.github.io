@@ -1,0 +1,69 @@
+include submit-message.pug
+
+mixin estimatedSavingsForm(organizationSizeOptions)
+    - const options = organizationSizeOptions || []
+    form.contact-us-form.savings-inner(
+        action=pages.contactUs.url,
+        method="post",
+        name="questions",
+        onsubmit="return diya.contactUs.estimatedSavings(event, this)")#form
+        fieldset#fields
+            .columns-container
+                .column.left.padding-blocks
+                    h3.title-margin Hospital Information
+                    .form-box
+                        p Physicians
+                        .control-box
+                            .form-control.padding
+                                .input-container
+                                    input.input(name="physiciansCount", required, value="70", type="number", max="999999", min="1", placeholder=" ")
+                                    .form-label Count
+                            .form-control
+                                .input-container
+                                    input.input(name="physiciansWage", required, value="200", type="number", max="999999", min="1", placeholder=" ")
+                                    .form-label Hourly Wage, $
+                    .form-box
+                        p Nurses & Staff
+                        .control-box
+                            .form-control.padding
+                                .input-container
+                                    input.input(name="nursesCount", required, value="300", type="number", max="999999", min="1", placeholder=" ")
+                                    .form-label Count
+                            .form-control
+                                .input-container
+                                    input.input(name="nursesWage", required, value="50", type="number", max="999999", min="1", placeholder=" ")
+                                    .form-label Hourly Wage, $
+                   
+                        
+                .column.right.comment
+                    h3.title-margin Diya’s Results
+                    .form-box
+                        p Family Communication Overhead
+                        .control-box
+                            .form-control
+                                .input-container
+                                    input.input(name="time", required, value="1.1", type="number", max="999999", min="0.1", placeholder=" ")
+                                    .form-label Hours per Day
+                    .form-box
+                        p Hospital Savings
+                        .control-box
+                            .form-control
+                                .input-container
+                                    input.input(name="percent", required, value="50", type="number", max="999999", min="1", placeholder=" ")
+                                    .form-label Percent Savings, %
+           
+            .button-block
+                button.material-btn(type="submit").full-width
+                    span.label
+                        span CALCULATE SAVINGS
+            .result-block
+                p#result-block-value Projected Annual Cost Savings: $5,599,750
+
+    .loader-container.hidden#loader
+        .loader
+            .circle
+            .circle
+            .circle
+            .circle
+            .circle
+            
