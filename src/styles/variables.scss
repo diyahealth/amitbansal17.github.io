@@ -1,9 +1,9 @@
 $text-color: #333;
 $primary-color: #0C9FDB;
-$primary-color-hover: #F3FAFD;
+$primary-color-hover: #0A8BBF;
 $alternative-primary-color: #234683;
-$carousel-indicator-inactive-color:  #D1D1D1;
-$carousel-indicator-active-color:  #5A5A5A;
+$carousel-indicator-inactive-color: #D1D1D1;
+$carousel-indicator-active-color: #5A5A5A;
 $banner-text-alternative-color: #022c57;
 $covid-info-text-color: #FB6363;
 
@@ -15,9 +15,7 @@ $icon-font-family: 'diya-icons';
 $font-size: 18px;
 $font-size-tablet: 14px;
 
-$navigation-max-width: 1566px;
-
-$container-max-width: 1366px;
+$container-max-width: 1440px;
 $container-max-width-tablet: 768px;
 $container-max-width-mobile: 420px;
 
@@ -30,13 +28,20 @@ $break-mobile: 576px;
 
 $carousel-with-button-break-three: 785px;
 
-$container-gutter: (80px/ $font-size) * 1rem;
-$container-gutter-tablet: (30px/ $font-size-tablet) * 1rem;
+$container-gutter: 80px;
+$container-gutter-tablet: (
+    30px/ $font-size-tablet) * 1rem;
 
-$content-max-width: ($container-max-width / $font-size) * 1rem;
+$content-max-width: (
+    $container-max-width / $font-size) * 1rem;
 
-$content-image-basis: (445px / ($container-max-width - 200px -20px)) * 100%;
+$content-image-basis: (
+    445px / ($container-max-width - 200px -20px)) * 100%;
 $content-text-basis: 100% - $content-image-basis;
 
-$content-image-basis-tablet: (298px / ($container-max-width-tablet - 60px)) * 100%;
+$content-image-basis-tablet: (
+    298px / ($container-max-width-tablet - 60px)) * 100%;
 $content-text-basis-tablet: 100% - $content-image-basis-tablet;
+
+
+$header-height: 86px;
