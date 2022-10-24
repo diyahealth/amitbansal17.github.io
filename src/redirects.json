@@ -1,4 +1,5 @@
-[{
+[
+    {
         "from": "doctors",
         "to": "health-systems"
     },
@@ -9,5 +10,29 @@
     {
         "from": "vaccine-passport",
         "to": "employers"
+    },
+    {
+        "from": "access-to-vital-patient-information",
+        "to": "health-systems"
+    },
+    {
+        "from": "establish-your-brand",
+        "to": "health-systems"
+    },
+    {
+        "from": "increase-your-revenue",
+        "to": "health-systems"
+    },
+    {
+        "from": "integrate-with-your-office",
+        "to": "health-systems"
+    },
+    {
+        "from": "remote-patient-monitoring",
+        "to": "health-systems"
+    },
+    {
+        "from": "telehealth-capabilities",
+        "to": "health-systems"
     }
 ]
