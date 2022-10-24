@@ -186,6 +186,10 @@
         width: 100%;
         height: 100%;
 
+        .marginLeft {
+            margin-left: 10px;
+        }
+
         &__background {
             backdrop-filter: blur(8px);
             z-index: 100;

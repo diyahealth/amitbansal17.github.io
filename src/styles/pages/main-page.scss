@@ -373,7 +373,7 @@
         }
 
         &__service-items-box {
-            margin-top: 20px;
+            margin-top: 30px;
             display: flex;
             width: 100%;
             justify-content: space-between;
@@ -407,6 +407,7 @@
             margin-bottom: 8px;
             height: 280px;
             object-fit: cover;
+            border-radius: 15px;
 
             @media screen and (max-width: $break-tablet) {
                 height: 280px;
@@ -417,6 +418,12 @@
             position: relative;
             width: 100%;
             max-width: 500px;
+
+            transition: all 0.3s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
         }
 
         &__play {
