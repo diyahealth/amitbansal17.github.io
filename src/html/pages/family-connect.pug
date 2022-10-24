@@ -46,7 +46,7 @@ mixin popupSavingsConfirmation
                             input#calculation-params(name="calculationParams", type="hidden", value="Number of Staff = 100; Hourly Rate = $50; Hours Spent per Day, Phone Calls = 1; Hours Spent per Day, Travel = 2")
                     
 
-                        button.material-btn(type="submit")
+                        button.material-btn.marginLeft(type="submit")
                             span.label
                                 span SUBMIT
                
@@ -134,14 +134,16 @@ block content
                 p.family-engagement__subtitle Diya Family Connect enables families of the home health patients to stay in close contact with their loved one while freeing up the healthcare workers to focus on delivering the best care possible. Learn how Diya enables home health agencies to maximize staff efficiencies, improve patient safety, and create brand recognition.
                 .family-engagement__service-items-box
                     .family-engagement__item
-                        +youtubeImage('KzRLsDRvcbo', imagePath[0])
+                        +youtubeImageMain('KzRLsDRvcbo', imagePath[0])
+                      
                         p.family-engagement__title-text Shared Customers
                         span.family-engagement__text Patients’ Family Members
                         button.material-btn(onclick='window.diya.toAnchor(\'shared-customers\')') 
                             span.label Read more
 
                     .family-engagement__item
-                        +youtubeImage('ykTagu8gzdQ', imagePath[1])
+                       
+                        +youtubeImageMain('ykTagu8gzdQ', imagePath[1])
                         p.family-engagement__title-text Administrators
                         span.family-engagement__text Home Health Care Agency
                         button.material-btn(onclick='window.diya.toAnchor(\'administrator\')') 

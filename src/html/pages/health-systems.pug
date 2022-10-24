@@ -47,7 +47,7 @@ mixin popupSavingsConfirmation
                         input#calculation-params(name="calculationParams", type="hidden", value="Number of Staff = 100; Hourly Rate = $50; Hours Spent per Day, Phone Calls = 1; Hours Spent per Day, Travel = 2")
                     
 
-                    button.material-btn(type="submit")
+                    button.material-btn.marginLeft(type="submit")
                         span.label
                             span SUBMIT
                
@@ -143,6 +143,11 @@ block content
                 h2.slider-save-clinicians__title Save Clinicians Time
 
                 .carousel-container#dashboard-carousel
+                    //- ol.indicators-container
+                    //-     li.indicator.active
+                    //-     li.indicator
+                    //-     li.indicator
+                    //-     li.indicator
                     .carousel-control.left
                         include ../../images/employers/arrow-left.svg
                        
@@ -156,44 +161,47 @@ block content
                                 .carousel-image-background.dashboard-carousel-bg-2
                                 .carousel-image-background.dashboard-carousel-bg-3
                                 .carousel-image-background.dashboard-carousel-bg-4
-
-                        ul.text-container
-                            li.carousel-item-container.active
-                                p.slider-content-box Save 30+ minutes per shift!
-                                h3.title Automatically Answer Time-Consuming Questions
-                                p.text Proactively deliver content to patients and their family members that answers their most common questions.
-                               
-                            li.carousel-item-container
-                                p.slider-content-box Save 30+ minutes per shift!
-                                h3.title Proactive Family Engagement
-                                p.text Deliver the right information, to the right people, at the right time.
-                         
-                            li.carousel-item-container
-                                p.slider-content-box Save 30+ minutes per shift!
-                                h3.title Measure & Improve Efficiency Gains
-                                p.text Administrators access a powerful analytics dashboard for continuous improvement.
-                               
-                            li.carousel-item-container
-                                p.slider-content-box Save 30+ minutes per shift!
-                                h3.title Deeper Insights into Top Performers
-                                p.text Not all content is created equal! Know which content is resonating with patients and family, and where improvements are needed.
+                        .containerD
+                            ol.indicators-container-up
+                                
+                            ul.text-container
+                                li.carousel-item-container.active
+                                    p.slider-content-box Save 30+ minutes per shift!
+                                    h3.title Automatically Answer Time-Consuming Questions
+                                    p.text Proactively deliver content to patients and their family members that answers their most common questions.
+                                
+                                li.carousel-item-container
+                                    p.slider-content-box Save 30+ minutes per shift!
+                                    h3.title Proactive Family Engagement
+                                    p.text Deliver the right information, to the right people, at the right time.
+                            
+                                li.carousel-item-container
+                                    p.slider-content-box Save 30+ minutes per shift!
+                                    h3.title Measure & Improve Efficiency Gains
+                                    p.text Administrators access a powerful analytics dashboard for continuous improvement.
+                                
+                                li.carousel-item-container
+                                    p.slider-content-box Save 30+ minutes per shift!
+                                    h3.title Deeper Insights into Top Performers
+                                    p.text Not all content is created equal! Know which content is resonating with patients and family, and where improvements are needed.
 
                             ol.indicators-container
-                                li.indicator.active
-                                li.indicator
-                                li.indicator
-                                li.indicator
+                                    li.indicator.active
+                                    li.indicator
+                                    li.indicator
+                                    li.indicator    
 
         article.slider-burnout
             .inner
                 h2.slider-save-clinicians__title Reduce Feelings of Burnout
 
                 .carousel-container#burnout-carousel
-                    ol.indicators-container
-                        li.indicator.active
-                        li.indicator
-                        li.indicator
-                        li.indicator
+                    //- ol.indicators-container
+                    //-     li.indicator.active
+                    //-     li.indicator
+                    //-     li.indicator
+                    //-     li.indicator
+                   
                     .carousel-control.left
                         include ../../images/employers/arrow-left.svg
                     .carousel-control.right
@@ -205,37 +213,43 @@ block content
                                 .carousel-image-background.burnout-carousel-bg-2
                                 .carousel-image-background.burnout-carousel-bg-3
                                 .carousel-image-background.burnout-carousel-bg-4
-
-                        ul.text-container
-                            li.carousel-item-container.active
-                                p.slider-content-box 25% fewer disruptions!
-                                h3.title Automatic Content Delivery
-                                p.text No new technology to learn! Clinicians work with their existing EMR, with no new steps.
-                               
-                            li.carousel-item-container
-                                p.slider-content-box 25% fewer disruptions!
-                                h3.title Prepare Family for Transitions
-                                p.text Transitions are time-intensive for clinicians. Diya ensures transitions are smooth while reducing clinicians’ workload. 
-                         
-                            li.carousel-item-container
-                                p.slider-content-box 25% fewer disruptions!
-                                h3.title Reduce Family Calls
-                                p.text Automatically redirect family to their personalized content library. Clinicians focus on quality care.
-                               
-                            li.carousel-item-container
-                                p.slider-content-box 25% fewer disruptions!
-                                h3.title Track Efficiency Gains
-                                p.text Celebrate clinician job satisfaction from fewer calls and emails.
+                        .containerD
+                            ol.indicators-container-up
+                            ul.text-container
+                                li.carousel-item-container.active
+                                        p.slider-content-box 25% fewer disruptions!
+                                        h3.title Automatic Content Delivery
+                                        p.text No new technology to learn! Clinicians work with their existing EMR, with no new steps.
+                                    
+                                li.carousel-item-container
+                                        p.slider-content-box 25% fewer disruptions!
+                                        h3.title Prepare Family for Transitions
+                                        p.text Transitions are time-intensive for clinicians. Diya ensures transitions are smooth while reducing clinicians’ workload. 
+                            
+                                li.carousel-item-container
+                                        p.slider-content-box 25% fewer disruptions!
+                                        h3.title Reduce Family Calls
+                                        p.text Automatically redirect family to their personalized content library. Clinicians focus on quality care.
+                                    
+                                li.carousel-item-container
+                                        p.slider-content-box 25% fewer disruptions!
+                                        h3.title Track Efficiency Gains
+                                        p.text Celebrate clinician job satisfaction from fewer calls and emails.
+                            ol.indicators-container
+                                li.indicator.active
+                                li.indicator
+                                li.indicator
+                                li.indicator
         article.slider-ratings
             .inner
                 h2.slider-save-clinicians__title Improve Experience Ratings
 
                 .carousel-container#rating-carousel
-                    ol.indicators-container
-                        li.indicator.active
-                        li.indicator
-                        li.indicator
-                        li.indicator
+                    //- ol.indicators-container
+                    //-     li.indicator.active
+                    //-     li.indicator
+                    //-     li.indicator
+                    //-     li.indicator
                     .carousel-control.left
                         include ../../images/employers/arrow-left.svg
                     .carousel-control.right
@@ -247,23 +261,29 @@ block content
                                 .carousel-image-background.rating-carousel-bg-2
                                 .carousel-image-background.rating-carousel-bg-3
                            
-
-                        ul.text-container
-                            li.carousel-item-container.active
-                                p.slider-content-box 30% ratings increase!
-                                h3.title Proactive & Frequent Updates
-                                p.text Families don’t need to anxiously wait for clinicians’ phone calls. All loved ones are automatically updated on the patient’s care status.
-                               
-                            li.carousel-item-container
-                                p.slider-content-box 30% ratings increase!
-                                h3.title Family Collaboration Platform
-                                p.text Patients’ conditions can change rapidly. Diya empowers families to engage and collaborate in real-time. 
-                         
-                            li.carousel-item-container
-                                p.slider-content-box 30% ratings increase!
-                                h3.title Continuous Quality Improvement
-                                p.text Know which content is helpful and which can be improved to enhance experience and ratings.
-                               
+                        .containerD
+                                ol.indicators-container-up
+                            
+                                ul.text-container
+                                    li.carousel-item-container.active
+                                        p.slider-content-box 30% ratings increase!
+                                        h3.title Proactive & Frequent Updates
+                                        p.text Families don’t need to anxiously wait for clinicians’ phone calls. All loved ones are automatically updated on the patient’s care status.
+                                    
+                                    li.carousel-item-container
+                                        p.slider-content-box 30% ratings increase!
+                                        h3.title Family Collaboration Platform
+                                        p.text Patients’ conditions can change rapidly. Diya empowers families to engage and collaborate in real-time. 
+                                
+                                    li.carousel-item-container
+                                        p.slider-content-box 30% ratings increase!
+                                        h3.title Continuous Quality Improvement
+                                        p.text Know which content is helpful and which can be improved to enhance experience and ratings.
+                                ol.indicators-container
+                                    li.indicator.active
+                                    li.indicator
+                                    li.indicator
+                                    li.indicator   
                             
         article.boost
             .inner
@@ -290,10 +310,10 @@ block content
                 h2.slider-service__title Testimonials
 
                 .carousel-container-testimonials#dashboard-carousel-testimonials
-                    ol.indicators-container
-                        li.indicator.active
-                        li.indicator
-                        li.indicator
+                    //- ol.indicators-container
+                    //-     li.indicator.active
+                    //-     li.indicator
+                    //-     li.indicator
                   
                     .carousel-control.left
                         include ../../images/employers/arrow-left.svg
@@ -329,29 +349,34 @@ block content
 
                                         img.work-image(src=require("../../images/home-care/images/carerev.png"), alt="nhm")        
 
+                        .containerD        
+                            ul.text-container
+                                ol.indicators-container-up
+                                li.carousel-item-container.active
+                                    .box-containers
+                            
+                                        img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
+                                        img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")   
+                                        p.text.text-integration Diya has the potential to revolutionize the healthcare industry.
+
                                 
-                        ul.text-container
-                            li.carousel-item-container.active
-                                .box-containers
-                           
-                                    img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                                    img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")   
-                                    p.text.text-integration Diya has the potential to revolutionize the healthcare industry.
+                                li.carousel-item-container
+                                    .box-containers
+                                        img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
+                                        img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")   
+                                        
+                                        p.text.text-integration Diya delivers an unbeatable ROI for anyone managing healthcare.
 
-                               
-                            li.carousel-item-container
-                                .box-containers
-                                    img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                                    img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")   
-                                    
-                                    p.text.text-integration Diya delivers an unbeatable ROI for anyone managing healthcare.
-
-                               
-                            li.carousel-item-container
-                                .box-containers
-                                    img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                                    img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")  
-                                    p.text.text-integration Diya Health has developed an amazing platform that improves caregiver efficiencies and the patient and family experience  
+                                
+                                li.carousel-item-container
+                                    .box-containers
+                                        img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
+                                        img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")  
+                                        p.text.text-integration Diya Health has developed an amazing platform that improves caregiver efficiencies and the patient and family experience
+                                ol.indicators-container
+                                    li.indicator.active
+                                    li.indicator
+                                    li.indicator  
         .divider 
         article.hipaa-container
             .inner

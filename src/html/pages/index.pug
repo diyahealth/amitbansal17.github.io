@@ -15,6 +15,7 @@ include ../shared/sign-in-button.pug
 include ../shared/customers.pug
 include ../shared/integrations.pug
 include ../shared/youtube-popup.pug
+include ../shared/great-down-button.pug
 
 mixin integrationHipaa(text,className)
     li.hipaa-container__list-item(class=className)
@@ -91,8 +92,8 @@ block content
         article.learn-more
             .inner
                 h2 Learn More in Less Than 2 Minutes!
-                img.learn-more__arrow(src=require("../../images/main-page/down_arrow.png") alt='check') 
-                .learn-more__service-items-box
+                +greatDownButton('service-item') 
+                .learn-more__service-items-box#service-item
                     .learn-more__item
                         +youtubeImageMain('KQ-jxsSSeFw', imagePath[1])
                         p.learn-more__title-text Hospital Systems
