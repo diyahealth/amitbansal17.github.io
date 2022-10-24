@@ -30,7 +30,7 @@ const pages = {
         description: " Our COVID Compliance-as-a-Service platform helps employers stay in compliance with pandemic regulatory requirements and bring employees back to work safely",
     },
 
-     wellness: {
+    wellness: {
         fileName: "wellness-engagement",
         url: "./wellness-engagement",
         name: "Wellness Engagement",
@@ -103,6 +103,15 @@ const pages = {
         name: "Diya Health Strengthens Its Team with Appointment of Susan Pasley as Clinical Growth Advisor",
         title: "Diya Health Strengthens Its Team with Appointment of Susan Pasley as Clinical Growth Advisor - Diya Health",
         description: 'Diya Health, a digital health technology platform that streamlines family engagement, announced today the appointment of Susan Pasley, MS, BSN, RN, to its Board of Advisors'
+    },
+
+    post2022102400: {
+        fileName: "diya-health-unlocks-patient-experience-improvements-family-engagement-is-the-key",
+        url: './blog/diya-health-unlocks-patient-experience-improvements-family-engagement-is-the-key',
+        path: 'blog/diya-health-unlocks-patient-experience-improvements-family-engagement-is-the-key',
+        name: "Diya Health Unlocks Patient Experience Improvements: Family Engagement is the Key",
+        title: "Diya Health Unlocks Patient Experience Improvements: Family Engagement is the Key - Diya Health",
+        description: 'Diya Family Connect enables HIPAA-compliant, proactive communication with family members that provides them with a greater understanding of their loved one’s care'
     }
 };
 

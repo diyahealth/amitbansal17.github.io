@@ -45,8 +45,8 @@ mixin blogArticles(articles)
                                 img.image(src=article.image)
                         .container-info.container-info-padding
                             if (article.tag)
-                                a.tag(href=article.tag.ref)
-                                    .tagName=article.tag.name        
+                                .tag
+                                    .tagName=article.tag
                             a(href=article.href, target="_blank")
                                 h2.articleMargin.title=article.title
                             .date-time  
@@ -60,8 +60,8 @@ mixin blogArticles(articles)
                                     img.image(src=article.image)
                             .container-info
                                 if (article.tag)
-                                    a.tag(href=article.tag.ref)
-                                        .tagName=article.tag.name        
+                                    .tag
+                                        .tagName=article.tag
                                 a(href=article.href, target="_blank")
                                     h4.articleMargin.title=article.title
                                 .date-time  

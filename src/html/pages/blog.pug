@@ -4,12 +4,15 @@ include ../shared/blog-articles.pug
 include ../shared/contact-us.pug
 block content
     script.
-        window.addEventListener('load', (event) => {
-            diya.prepareTwitterFeed('twitter-widget-0');
-        });
     -
         const articles = [
-
+            {
+                title: 'Diya Health Unlocks Patient Experience Improvements: Family Engagement is the Key',
+                href: './blog/diya-health-unlocks-patient-experience-improvements-family-engagement-is-the-key',
+                image: require('../../images/blog/diya-health-unlocks-patient-experience-improvements.jpg'),
+                date: 'October 24, 2022',
+                tag: 'family'
+            },
             {
                 title: 'Diya Health Strengthens Its Team with Appointment of Susan Pasley as Clinical Growth Advisor',
                 href: './blog/diya-health-strengthens-its-team-with-appointment-of-susan-pasley-as-clinical-growth-advisor',
@@ -17,7 +20,6 @@ block content
                 date: 'September 26, 2022',
                 tag: 'team'
             },
-
             {
                 title: 'U.S. Cardiologists Partner With Diya Health to Extend Their Reach to Rural India',
                 description: 'Diya Health, an innovative Silicon Valley-based digital health firm, has partnered with U.S. cardiologists to provide care to patients with severe heart conditions in Himachal Pradesh, India. ',
@@ -164,8 +166,4 @@ block content
         .content-container
             article.content
                 +blogArticles(articles)
-            //- article.feed
-            //-     a(class="twitter-timeline", href="https://twitter.com/DiyaHealth?ref_src=twsrc%5Etfw") Tweets by DiyaHealth 
-            //-         script(async=true, src="https://platform.twitter.com/widgets.js", charset="utf-8")
-    div.contact-us-background-content(id="contact-us")
         +contactUs(organizationSizeOptions)
