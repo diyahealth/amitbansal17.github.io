@@ -9,7 +9,8 @@ export function toAnchor(id: string, focusSelector?: "button" | "input") {
     }
 
     element.scrollIntoView({
-        behavior: 'smooth'
+        behavior: 'smooth',
+        block: 'center'
       })
 
     if (!focusSelector) {
