@@ -20,6 +20,6 @@ export function toAnchor(id: string, focusSelector?: "button" | "input") {
     const focusElement = element.querySelector(focusSelector);
 
     if (focusElement) {
-        focusElement.focus({preventScroll: true});
+        focusElement.focus();
     }
 }

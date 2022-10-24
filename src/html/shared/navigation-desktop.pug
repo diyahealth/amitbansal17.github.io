@@ -1,35 +1,31 @@
 include ./sign-in-button
 
+.navigation-desktop
+    .bar-blocks
+        .logo-container
+            a(href=pages.index.url)
+                img.logo(src=require("../../images/icons/diyahealth-logo.svg"), alt="Diya Health Logo")
 
-.navigation
-    div.logo-container
-        a(href=pages.index.url)
-            img.logo(src=require("../../images/icons/diyahealth-logo.svg"), alt="Diya Health Logo")
-    ul.navigation-list
-        each link in navigation
-            - const haveDropdown = link.dropdown && link.dropdown.length > 0
-            - const isActive = page.name === link.title || (page.parent && pages[page.parent].name === link.title)
-            li(class = isActive ? 'active' : '')
-                .link-container
-                    if (link.url)
-                        a(href=link.url) #{link.title}
-                    else
+        ul.navigation-list
+            each link in navigation
+                - const haveDropdown = link.dropdown && link.dropdown.length > 0
+                - const isActive = page.name === link.title || (page.parent && pages[page.parent].name === link.title)
+                li(href=link.url, class = isActive ? 'active' : '')
+                    a.nav-link(href=link.url, title=link.title)
                         span=link.title
-             
-                if (haveDropdown)
-                    ul.dropdown-menu
-                        each dropdownLink in link.dropdown
-                            - const isDropdownLinkActive = page.name === dropdownLink.title
-                            li(class = dropdownLink.variant, class=isDropdownLinkActive ? 'active' : undefined)
-                                if (dropdownLink.url)
-                                    a(href=dropdownLink.url) #{dropdownLink.title}
-                                else
-                                    span=dropdownLink.title
-        li
+
+                    if (haveDropdown)
+                        ul.dropdown-menu
+                            each dropdownLink in link.dropdown
+                                - const isDropdownLinkActive = page.name === dropdownLink.title
+                                li(class = dropdownLink.variant, class=isDropdownLinkActive ? 'active' : undefined)
+                                    if (dropdownLink.url)
+                                        a(href=dropdownLink.url) #{dropdownLink.title}
+                                    else
+                                        span=dropdownLink.title
+
+        .button-block
             if (page.url == pages.employers.url || page.url == pages.wellness.url)
                 +signInDiyaHr
-            else if (page.url == pages.familyConnect.url)
+            else if (page.url == pages.familyConnect.url || page.url == pages.healthSystems.url)
                 +signInDiyaMd
-            else
-                button.material-btn.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
-                    span.label Request a Demo

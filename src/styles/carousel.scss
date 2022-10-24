@@ -44,3 +44,13 @@
         opacity: 1;
     }
 }
+
+.carousel-control:hover {
+    circle {
+        fill: #C2E7F6;
+    }
+
+    path {
+        fill: #fff;
+    }
+}

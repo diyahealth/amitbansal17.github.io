@@ -1,14 +1,4 @@
 .mobile-navigation
-    .logo-container
-        a(href=pages.index.url)
-            img.logo(src=require("../../images/icons/diyahealth-logo.svg"), alt="Diya Health Logo")
-    if (page.url == pages.employers.url || page.url == pages.wellness.url)
-        +signInDiyaHr
-    else if (page.url == pages.familyConnect.url)
-        +signInDiyaMd
-    else
-        button.material-btn.small(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
-            span.label Request a Demo
     .menu-toggle
         input(type="checkbox")
         span
@@ -33,4 +23,11 @@
                                         a(href=dropdownLink.url) #{dropdownLink.title}
                                     else
                                         span=dropdownLink.title
+    .logo-container
+        a(href=pages.index.url)
+            img.logo(src=require("../../images/icons/diyahealth-logo.svg"), alt="Diya Health Logo")
+    if (page.url == pages.employers.url || page.url == pages.wellness.url)
+        +signInDiyaHr
+    else if (page.url == pages.familyConnect.url || page.url == pages.healthSystems.url)
+        +signInDiyaMd
 
