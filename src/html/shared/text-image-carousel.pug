@@ -14,9 +14,9 @@ mixin textImageCarousel(carouselData, id, additionalClass)
     .text-image-carousel-container(id=id, class=additionalClass)
         .content-container
             .carousel-control.left
-                img.icon(src=require("../../images/icons/chevron-left-icon.svg"), alt="Left")
+                include ../../images/employers/arrow-left.svg
             .carousel-control.right
-                img.icon(src=require("../../images/icons/chevron-right-icon.svg"), alt="Right")
+                include ../../images/employers/arrow-right.svg
             ol.indicators-container
                 each info, index in infoArray
                     li.indicator(class = index === 0 ? 'active' : '')

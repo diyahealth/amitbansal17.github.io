@@ -16,26 +16,14 @@
         margin: 3px;
         cursor: pointer;
         border-radius: 10px;
-        border: 1px solid $carousel-indicator-inactive-color;
-        background-color: $carousel-indicator-inactive-color;
+        background-color: #C2E7F6;
 
-        @media screen and (max-width: $break-tablet) {
-            width: 8px;
-            height: 8px;
-            margin: 2px;
+        &:hover {
+            background-color: #80CCEC;
         }
 
         &.active {
-            width: 12px;
-            height: 12px;
-            margin: 2px;
-            border: 1px solid $carousel-indicator-active-color;
-            background-color: $carousel-indicator-active-color;
-
-            @media screen and (max-width: $break-tablet) {
-                width: 9px;
-                height: 9px;
-            }
+            background-color: #0C9FDB;
         }
     }
 }

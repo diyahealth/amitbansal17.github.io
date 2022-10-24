@@ -90,12 +90,13 @@ block content
     main.main-box.home-care
 
         article.caregiver-image-container
-            .inner               
+            .main-wave
+            .inner
                 .caregiver-image-container__text-box
                     .caregiver-image-container__subtitle-text 
                         img.caregiver-image-container__img(src=require("../../images/icons/diya-logo.svg") alt='Diya Logo') 
                         span  Care for the Caregiver 
-                                    
+
                     button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
                         span.label Request a demo
         article.learn-more
@@ -142,17 +143,12 @@ block content
                 h2.slider-save-clinicians__title Save Clinicians Time
 
                 .carousel-container#dashboard-carousel
-                    ol.indicators-container
-                        li.indicator.active
-                        li.indicator
-                        li.indicator
-                        li.indicator
                     .carousel-control.left
-                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                        include ../../images/employers/arrow-left.svg
                        
                     .carousel-control.right
-                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
-                       
+                        include ../../images/employers/arrow-right.svg
+
                     .content-container
                         .carousel-image-container
                             .carousel-image-wrapper
@@ -182,6 +178,12 @@ block content
                                 h3.title Deeper Insights into Top Performers
                                 p.text Not all content is created equal! Know which content is resonating with patients and family, and where improvements are needed.
 
+                            ol.indicators-container
+                                li.indicator.active
+                                li.indicator
+                                li.indicator
+                                li.indicator
+
         article.slider-burnout
             .inner
                 h2.slider-save-clinicians__title Reduce Feelings of Burnout
@@ -193,9 +195,9 @@ block content
                         li.indicator
                         li.indicator
                     .carousel-control.left
-                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                        include ../../images/employers/arrow-left.svg
                     .carousel-control.right
-                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                        include ../../images/employers/arrow-right.svg
                     .content-container
                         .carousel-image-container
                             .carousel-image-wrapper
@@ -235,9 +237,9 @@ block content
                         li.indicator
                         li.indicator
                     .carousel-control.left
-                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                        include ../../images/employers/arrow-left.svg
                     .carousel-control.right
-                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                        include ../../images/employers/arrow-right.svg
                     .content-container
                         .carousel-image-container
                             .carousel-image-wrapper
@@ -294,9 +296,9 @@ block content
                         li.indicator
                   
                     .carousel-control.left
-                        img.icon(src=require("../../images/employers/arrow-left.svg"), alt="Left")
+                        include ../../images/employers/arrow-left.svg
                     .carousel-control.right
-                        img.icon(src=require("../../images/employers/arrow-right.svg"), alt="Right")
+                        include ../../images/employers/arrow-right.svg
                     .content-container
                         .carousel-image-container
                             .carousel-image-wrapper
