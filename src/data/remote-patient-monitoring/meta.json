@@ -1,6 +1,0 @@
-{
-    "id": "remotePatientMonitoring",
-    "name": "Remote Patient Monitoring",
-    "description": "Remote Patient Monitoring of DiyaMD product",
-    "parent": "healthSystems"
-}

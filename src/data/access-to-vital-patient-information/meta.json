@@ -1,6 +1,0 @@
-{
-    "id": "accessToVitalPatientInformation",
-    "name": "Access To Vital Patient Information",
-    "description": "Access to vital patient information via DiyaMD",
-    "parent": "healthSystems"
-}

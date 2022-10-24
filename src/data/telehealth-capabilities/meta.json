@@ -1,6 +1,0 @@
-{
-    "id": "telehealthCapabilities",
-    "name": "Telehealth Capabilities",
-    "description": "Telehealth capabilities of DiyaMD product",
-    "parent": "healthSystems"
-}
