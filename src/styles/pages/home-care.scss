@@ -1,5 +1,14 @@
 .home-care {
-    scroll-behavior: smooth;
+    .page-intro {
+        .main-banner {
+            background-image: url('../images/pages/hospitals/two-nurses-with-tablet.jpg');
+        }
+
+        .material-btn {
+            margin-top: 16px;
+        }
+    }
+}
 
     .primary-text {
         color: $primary-color;
@@ -1093,7 +1102,7 @@
     }
 
     .caregiver-image-container {
-        height: calc(100vh - #{$header-height});
+        height: calc(100vh - #{$navbar-height});
         width: 100%;
         position: relative;
         background-image: url('../images/home-care/images/caregiver-header.png');
@@ -1219,39 +1228,7 @@
         }
     }
 
-    .learn-more {
-        width: 100%;
-        padding: 32px 80px 8px;
-        background-color: #F3FAFD;
-        text-align: center;
 
-
-        @media screen and (max-width: $break-tablet) {
-            padding: 40px 80px;
-
-        }
-
-        @media screen and (max-width: $break-mobile) {
-            padding: 40px 20px;
-
-        }
-
-        .inner {
-            max-width: 1440px;
-            margin: auto;
-        }
-
-        & h2 {
-            margin-bottom: 16px;
-        }
-
-        &__img {
-            width: 56px;
-            height: 56px;
-            cursor: pointer;
-        }
-
-    }
 
 
     .clinicians-container {

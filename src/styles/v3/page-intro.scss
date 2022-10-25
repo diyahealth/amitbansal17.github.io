@@ -1,0 +1,51 @@
+.page-intro {
+    height: calc(100vh - #{$navbar-height});
+
+    @include for-tablet {
+        height: calc(100vh - #{$navbar-height-tablet});
+    }
+
+    @include for-phone {
+        height: calc(100vh - #{$navbar-height-phone});
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .main-banner {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        flex-grow: 1;
+        display: flex;
+    }
+
+    .title {
+        margin-top: auto;
+        width: 100%;
+        text-align: center;
+        background-image: url("../images/back/white-wave.svg");
+        background-size: cover;
+        padding: 120px 20px 62px;
+
+        @include for-phone {
+            padding-top: 50px;
+        }
+    }
+
+    .learn-more {
+        width: 100%;
+        padding: 32px 40px;
+        background-color: #F3FAFD;
+        text-align: center;
+
+        @include for-tablet {
+            padding: 32px 20px;
+        }
+
+        .h2 {
+            margin-bottom: 16px;
+        }
+    }
+}

@@ -44,4 +44,6 @@ $content-image-basis-tablet: (
 $content-text-basis-tablet: 100% - $content-image-basis-tablet;
 
 
-$header-height: 86px;
+$navbar-height: 86px;
+$navbar-height-phone: 67px;
+$navbar-height-tablet: $navbar-height-phone;

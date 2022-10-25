@@ -9,7 +9,7 @@ import { prepareTwitterFeed } from "./scripts/PrepareTwitterFeed";
 import { toAnchor, ToAnchor } from "./scripts/toAnchor";
 import { toggleClass, ToggleClass } from "./scripts/toggleClass";
 
-import "./styles/main.scss";
+import "./styles/__main.scss";
 import "./typings";
 
 declare global {
