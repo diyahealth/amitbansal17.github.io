@@ -70,8 +70,8 @@ const pages = {
     ourBlog: {
         fileName: "blog",
         url: "./blog",
-        name: "Blog",
-        title: "Our Blog - Diya Health",
+        name: "Resources",
+        title: "Blog - Diya Health",
         description: "Blogs, news, and other announcements that help employers stay compliant with COVID-19 mandates and promote a safe workplace",
     },
     newsAndResources: {

@@ -40,7 +40,7 @@ const buildFamilyDropdown = () => {
 
 const buildBlogDropdown = () => {
     const { ourBlog, newsAndResources } = pages;
-    return [pageToLink(ourBlog), pageToLink(newsAndResources)];
+    return [pageToLink(newsAndResources)];
 }
 
 let navigationLinks = [];
@@ -50,21 +50,20 @@ const buildNavigationLinks = (mode) => {
     navigationLinks.length = 0;
     navigationLinks.push(
         {
-            ...pageToLink(pages.familyConnect, null, postfix),
-            dropdown: buildFamilyDropdown(),
-        },
-        {
             ...pageToLink(pages.healthSystems, null, postfix),
         },
         {
-            ...pageToLink(pages.aboutUs, null, postfix),
-            dropdown: buildAboutUsDropdown(postfix),
+            ...pageToLink(pages.familyConnect, null, postfix),
+            dropdown: buildFamilyDropdown(),
         },
         {
             ...pageToLink(pages.ourBlog, null, postfix),
             dropdown: buildBlogDropdown(),
         },
-
+        {
+            ...pageToLink(pages.aboutUs, null, postfix),
+            dropdown: buildAboutUsDropdown(postfix),
+        },
     );
 }
 
