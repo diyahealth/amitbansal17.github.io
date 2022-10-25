@@ -1,6 +1,10 @@
 .home-care {
     scroll-behavior: smooth;
 
+    .primary-text {
+        color: $primary-color;
+    }
+
     .iframe {
         width: 640px;
         height: 320px;
