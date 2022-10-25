@@ -21,14 +21,13 @@ mixin integrationHipaa(text,className)
         span.hipaa-container__item-text=text
 
 
-mixin integrationBlogCards(work, index, link)
+mixin integrationBlogCards(text, index, link)
     a.card-press-box(href=link)
         .card-press
             - const titleClass = `card-press__outer--${index}`;
-            
             .card-press__outer(class=titleClass)
             .card-press__content-box
-                p.card-press__info=work
+                p.card-press__info=text
                 img.card-employees__arrow(src=require("../../images/about-us/arrow.svg") alt='check')
 
 mixin popupSavingsConfirmation
@@ -64,17 +63,6 @@ block content
            
         ]
 
-         const blog = [
-            'Save Clinicians Time',
-            'Reduce Feelings of Burnout',
-            'Improve Experience Ratings'
-              ];
-
-        const links = ['https://www.diyahealth.org/posts/u-s-cardiologists-partner-with-diya-health-to-extend-their-reach-to-rural-india.html',
-         'https://www.diyahealth.org/posts/digital-health-enhances-senior-care.html', 
-         'https://www.diyahealth.org/posts/telehealth-transforms-in-home-care.html'
-         ]   
-
         const hipaa = [
                 'Single sign-on',
                 'Multi-factor authentication',
@@ -85,8 +73,8 @@ block content
                 '100% encryption',
                 'Immutable audit trail of all activity',
                 'Stored on the most secure cloud systems, not devices',
-        ];   
-                 
+        ];
+
     main.main-box.home-care
 
         article.caregiver-image-container
@@ -109,8 +97,7 @@ block content
                         span Save Clinicians 
                         span.clinicians-container__minutes 30+ Minutes 
                         span per Shift
-                    
-                    
+
                     p.clinicians-container__text.
                         During the critical, nationwide shortage of clinical staff, that time is even more precious to be spent towards clinical tasks.
                     +youtubeLink('tPfLQ4IBNv4')
@@ -135,19 +122,14 @@ block content
                         span Clinicians
                     p.empower-container__text to deliver high-quality care
                 .empower-container__cards-container
-                    +integrationBlogCards(blog[0], 1, links[0])
-                    +integrationBlogCards(blog[1], 2, links[1])
-                    +integrationBlogCards(blog[2], 3, links[2])
+                    +integrationBlogCards('Save Clinicians Time', 1, '#save-clinicians-time')
+                    +integrationBlogCards('Reduce Feelings of Burnout', 2, '#reduce-feelings-of-burnout')
+                    +integrationBlogCards('Improve Experience Ratings', 3, '#improve-experience-ratings')
         article.slider-save-clinicians
             .inner
-                h2.slider-save-clinicians__title Save Clinicians Time
+                h2.slider-save-clinicians__title#save-clinicians-time Save Clinicians Time
 
                 .carousel-container#dashboard-carousel
-                    //- ol.indicators-container
-                    //-     li.indicator.active
-                    //-     li.indicator
-                    //-     li.indicator
-                    //-     li.indicator
                     .carousel-control.left
                         include ../../images/employers/arrow-left.svg
                        
@@ -193,14 +175,9 @@ block content
 
         article.slider-burnout
             .inner
-                h2.slider-save-clinicians__title Reduce Feelings of Burnout
+                h2.slider-save-clinicians__title#reduce-feelings-of-burnout Reduce Feelings of Burnout
 
                 .carousel-container#burnout-carousel
-                    //- ol.indicators-container
-                    //-     li.indicator.active
-                    //-     li.indicator
-                    //-     li.indicator
-                    //-     li.indicator
                    
                     .carousel-control.left
                         include ../../images/employers/arrow-left.svg
@@ -242,14 +219,9 @@ block content
                                 li.indicator
         article.slider-ratings
             .inner
-                h2.slider-save-clinicians__title Improve Experience Ratings
+                h2.slider-save-clinicians__title#improve-experience-ratings Improve Experience Ratings
 
                 .carousel-container#rating-carousel
-                    //- ol.indicators-container
-                    //-     li.indicator.active
-                    //-     li.indicator
-                    //-     li.indicator
-                    //-     li.indicator
                     .carousel-control.left
                         include ../../images/employers/arrow-left.svg
                     .carousel-control.right
@@ -288,8 +260,8 @@ block content
         article.boost
             .inner
                 .boost__main-text
-                    h2 Boost clinician efficiency and job satisfaction          
-                         
+                    h2 Boost clinician efficiency and job satisfaction
+
                     button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
                         span.label Get started
         .divider
@@ -310,11 +282,6 @@ block content
                 h2.slider-service__title Testimonials
 
                 .carousel-container-testimonials#dashboard-carousel-testimonials
-                    //- ol.indicators-container
-                    //-     li.indicator.active
-                    //-     li.indicator
-                    //-     li.indicator
-                  
                     .carousel-control.left
                         include ../../images/employers/arrow-left.svg
                     .carousel-control.right
@@ -428,7 +395,6 @@ block content
                 backgroundSelector: '.carousel-image-background',
             }, 8000);
         });
-    script(src="https://www.google.com/recaptcha/api.js", defer) 
     script.
         window.addEventListener('load', (event) => {
             window.diya.carousel.init('dashboard-carousel', {
@@ -436,7 +402,6 @@ block content
                 backgroundSelector: '.carousel-image-background',
             }, 8000);
         });
-    script(src="https://www.google.com/recaptcha/api.js", defer)   
 
     script.
         window.addEventListener('load', (event) => {
@@ -445,7 +410,6 @@ block content
                 backgroundSelector: '.carousel-image-background',
             }, 8000);
         });
-    script(src="https://www.google.com/recaptcha/api.js", defer)   
 
     script.
         window.addEventListener('load', (event) => {
@@ -454,8 +418,5 @@ block content
                 backgroundSelector: '.carousel-image-background',
             }, 8000);
         });
-    script(src="https://www.google.com/recaptcha/api.js", defer)   
 
-
-
-    
+    script(src="https://www.google.com/recaptcha/api.js", defer)
