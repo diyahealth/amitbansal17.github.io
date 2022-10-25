@@ -1,0 +1,19 @@
+// Responsive
+
+@mixin for-phone {
+    @media screen and (max-width: $break-mobile) {
+        @content;
+    }
+}
+
+@mixin for-tablet {
+    @media screen and (max-width: $break-tablet) {
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media screen and (min-width: $break-desktop-small) {
+        @content;
+    }
+}

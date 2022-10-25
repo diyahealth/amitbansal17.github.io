@@ -1,5 +1,13 @@
 @import "~normalize.css";
-@import "variables.scss";
+@import "__variables.scss";
+@import "__mixins.scss";
+
+.v3 {
+    @import "./v3/page-intro.scss";
+    @import "./v3/typography.scss";
+    @import "./v3/buttons.scss";
+}
+
 @import "icons.scss";
 @import "learn-more.scss";
 @import "general.scss";

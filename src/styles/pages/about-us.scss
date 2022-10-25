@@ -638,7 +638,7 @@
     /////about us IMAGE CONTAINER////
 
     .about-us-image-container {
-        height: calc(100vh - #{$header-height});
+        height: calc(100vh - #{$navbar-height});
         width: 100%;
         background-position: bottom;
         background-image: url('../images/about-us/wave.png'), url('../images/about-us/header-image.jpg');

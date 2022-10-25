@@ -75,24 +75,20 @@ block content
                 'Stored on the most secure cloud systems, not devices',
         ];
 
-    main.main-box.home-care
+    main.main-box.home-care.v3
 
-        article.caregiver-image-container
-            .main-wave
-            .inner
-                .caregiver-image-container__text-box
-                    .caregiver-image-container__subtitle-text 
-                        img.caregiver-image-container__img(src=require("../../images/icons/diya-logo.svg") alt='Diya Logo') 
-                        span Achieve Greater 
-                            br
-                            span.primary-text Clinician Efficiency
-
-                    button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
-                        span.label Request a demo
-        article.learn-more
-            .inner
-                h2 Learn More in Less Than 2 Minutes!
+        .page-intro
+            .main-banner
+                .title
+                    h1 Achieve Greater
+                        br
+                        span.text-primary Clinician Efficiency
+                    button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')")
+                        | Request a demo
+            .learn-more
+                .h2 Learn More in Less Than 2 Minutes!
                 +greatDownButton('clinicians')
+
         article.clinicians-container#clinicians
                 .clinicians-container__left
                     h2.specialH2Class 

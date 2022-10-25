@@ -74,26 +74,30 @@ block content
 
       
 
-    main.main-box.main-page
-        article.main-introduce-container
-                .main-introduce-container__text-box
-                    h1.main-introduce-container__subtitle-text Achieve Greater
-                    .main-introduce-container__box-text 
-                        .main-introduce-container__box-container 
-                            p.main-introduce-container__common-text Clinician Efficiency
-                            p.main-introduce-container__common-text Patient Satisfaction
-                            p.main-introduce-container__common-text Health Outcomes
-                    .main-introduce-container__scribble
-                    p.main-introduce-container__description A digital health platform that streamlines communication with patients’ family members. It proactively delivers the right information, at the right time.
+    main.main-box.main-page.v3
+        .page-intro
+                .main-banner
+                    .title
+                        h1 Achieve Greater
+                            br
+                            .main-introduce-container__box-text.text-primary
+                                .main-introduce-container__box-container 
+                                    span.main-introduce-container__common-text Clinician Efficiency
+                                    br
+                                    span.main-introduce-container__common-text Patient Satisfaction
+                                    br
+                                    span.main-introduce-container__common-text Health Outcomes
 
-                    button.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') 
-                        span.label Request a demo
+                        .main-introduce-container__scribble
+                        p.main-introduce-container__description A digital health platform that streamlines communication with patients’ family members. It proactively delivers the right information, at the right time.
 
-        article.learn-more
-            .inner
-                h2 Learn More in Less Than 2 Minutes!
-                +greatDownButton('service-item') 
-                .learn-more__service-items-box#service-item
+                        button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')")
+                            | Request a demo
+                .learn-more
+                    .h2 Learn More in Less Than 2 Minutes!
+                    +greatDownButton('service-item')
+
+        article.learn-more__service-items-container#service-item
                     .learn-more__item
                         +youtubeImageMain('KQ-jxsSSeFw', imagePath[1])
                         p.learn-more__title-text Hospital Systems
@@ -101,7 +105,7 @@ block content
                     .learn-more__item
                         +youtubeImageMain('ykTagu8gzdQ', imagePath[0])
                         p.learn-more__title-text Home Health Agencies
-                        
+
         article.communication
             .inner
                 h2.communication__header Inadequate family communication disrupts clinical workflows
@@ -259,8 +263,6 @@ block content
                                 +integrationHipaa(hipaa[6])
                                 +integrationHipaa(hipaa[7])
                                 +integrationHipaa(hipaa[8])
-     
-
 
         article.contact-us-container(id="contact-us")
             .title 
@@ -288,48 +290,3 @@ block script
             }, 8000);
         });
     script(src="https://www.google.com/recaptcha/api.js", defer)
-
-    script.
-            (function(){
-            const boxEl =  document.querySelector('.main-introduce-container__box-container');
-            const coll =  document.querySelectorAll('.main-introduce-container__box-container p').length;
-            boxEl.style.transition = "all 0.2s";
-
-            if(coll === 0 | coll === 1 ) {
-                return;
-            }
-
-            let amount = coll;
-            let translateStep = -54;
-            
-            const transitionFunc =()=> {
-              if (amount !==1) {
-             boxEl.style.transform = `translateY(${translateStep}px)`;
-             translateStep += -54;
-             amount += -1;
-             }
-
-             else {
-                 boxEl.style.transform = "translateY(0px)";
-                 amount = coll;
-                 translateStep = -54;
-
-             }
-            }
-            const myTimeout = setInterval(transitionFunc,
-            3000);
-                      }());
-    script.
-           
-            const clickEl =  document.querySelector('.learn-more__arrow');
-            const moveToEl = document.querySelector('.learn-more__service-items-box');
-            
-            clickEl.addEventListener('click', (e)=> {
-                e.preventDefault();
-                e.stopPropagation();
-                moveToEl.scrollIntoView({block: "center", inline: "center", behavior: "smooth"})
-            });
-
-            
-
-          
