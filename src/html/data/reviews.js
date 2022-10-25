@@ -14,7 +14,7 @@ const allReviews = {
     }),
     david: (app) => ({
         image: './images/reviews/david.png',
-        text: `${app} has the potential to revolutionize the medical records industry and become the gateway for patient-generated health information to be merged with clinical data in doctor offices and hospitals.`,
+        text: `Diya is on its way to revolutionizing the healthcare industry.`,
         signature: 'David Pidwell',
         title: 'Partner, Alloy Ventures, Palo Alto CA',
         subline: 'Faculty, Stanford University Graduate School of Business',
