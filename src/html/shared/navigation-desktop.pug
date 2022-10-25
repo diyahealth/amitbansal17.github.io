@@ -10,7 +10,7 @@ include ./sign-in-button
             each link in navigation
                 - const haveDropdown = link.dropdown && link.dropdown.length > 0
                 - const isActive = page.name === link.title || (page.parent && pages[page.parent].name === link.title)
-                li(href=link.url, class = isActive ? 'active' : '')
+                li(class = isActive ? 'active' : '')
                     a.nav-link(href=link.url, title=link.title)
                         span=link.title
 

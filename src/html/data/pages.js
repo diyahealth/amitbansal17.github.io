@@ -70,15 +70,15 @@ const pages = {
     ourBlog: {
         fileName: "blog",
         url: "./blog",
-        name: "Resources",
+        name: "Blog",
         title: "Blog - Diya Health",
         description: "Blogs, news, and other announcements that help employers stay compliant with COVID-19 mandates and promote a safe workplace",
     },
     newsAndResources: {
         fileName: "news-and-resources",
         url: "./news-and-resources",
-        name: "News And Resources",
-        title: "News And Resources - Diya Health",
+        name: "News",
+        title: "News - Diya Health",
         description: "Get news articles and resources that are helpful to doctors and patients by DiyaHealth",
     },
     privacyPolicy: {
