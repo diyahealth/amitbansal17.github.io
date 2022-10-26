@@ -2,7 +2,7 @@ include submit-message.pug
 
 mixin estimatedSavingsForm(organizationSizeOptions)
     - const options = organizationSizeOptions || []
-    form.contact-us-form.savings-inner(
+    form.v3.contact-us-form.savings-inner(
         action=pages.contactUs.url,
         method="post",
         name="questions",
@@ -15,24 +15,24 @@ mixin estimatedSavingsForm(organizationSizeOptions)
                         p Physicians
                         .control-box
                             .form-control.padding
-                                .input-container
-                                    input.input(name="physiciansCount", required, value="70", type="number", max="999999", min="1", placeholder=" ")
-                                    .form-label Count
+                                .input
+                                    label(for="es-p-count") Count*
+                                    input#es-p-count(name="physiciansCount", required, placeholder="70", type="number", max="999999", min="1")
                             .form-control
-                                .input-container
-                                    input.input(name="physiciansWage", required, value="200", type="number", max="999999", min="1", placeholder=" ")
-                                    .form-label Hourly Wage, $
+                                .input
+                                    label(for="es-p-wage") Hourly Wage, $*
+                                    input#es-p-wage(name="physiciansWage", required, placeholder="200", type="number", max="999999", min="1")
                     .form-box
                         p Nurses & Staff
                         .control-box
                             .form-control.padding
-                                .input-container
-                                    input.input(name="nursesCount", required, value="300", type="number", max="999999", min="1", placeholder=" ")
-                                    .form-label Count
+                                .input
+                                    label(for="es-n-count") Count*
+                                    input#es-n-count(name="nursesCount", required, placeholder="300", type="number", max="999999", min="1")
                             .form-control
-                                .input-container
-                                    input.input(name="nursesWage", required, value="50", type="number", max="999999", min="1", placeholder=" ")
-                                    .form-label Hourly Wage, $
+                                .input
+                                    label(for="es-n-wage") Hourly Wage, $*
+                                    input#es-n-wage(name="nursesWage", required, placeholder="50", type="number", max="999999", min="1")
                    
                         
                 .column.right.comment
@@ -41,23 +41,23 @@ mixin estimatedSavingsForm(organizationSizeOptions)
                         p Family Communication Overhead
                         .control-box
                             .form-control
-                                .input-container
-                                    input.input(name="time", required, value="1.1", type="number", max="999999", min="0.1", placeholder=" ")
-                                    .form-label Hours per Day
+                                .input
+                                    label(for="es-time") Hours per Day
+                                    input#es-time(name="time", required, placeholder="1.1", type="number", max="999999", min="0.1")
                     .form-box
                         p Hospital Savings
                         .control-box
                             .form-control
-                                .input-container
-                                    input.background.input(name="percent", required, value="50", type="number", max="999999", min="1", placeholder=" ", disabled)
-                                    .form-label Percent Savings, %
+                                .input
+                                    label(for="es-percent", disabled) Percent Savings, %
+                                    input#es-percent(name="percent", required, value="50", type="text", disabled)
            
             .button-block
                 button.material-btn(type="submit").full-width
                     span.label
                         span CALCULATE SAVINGS
             .result-block
-                p#result-block-value Projected Annual Cost Savings: $5,599,750
+                p#result-block-value Projected Annual Cost Savings: $5,000,000
 
     .loader-container.hidden#loader
         .loader

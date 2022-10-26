@@ -1,0 +1,80 @@
+fieldset {
+    padding: 0;
+    border: none;
+}
+
+::placeholder {
+    color: #8b979b;
+    opacity: 0.6;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.input,
+.select {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-size: 16px;
+        line-height: 22px;
+        cursor: pointer;
+        color: #8B979B;
+        margin-bottom: 8px;
+
+        &[disabled] {
+            pointer-events: none;
+        }
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 18px;
+        padding: 16px;
+        line-height: 25px;
+
+        border: 1px solid #C5CBCD;
+        border-radius: 4px;
+        outline: 0;
+        position: relative;
+        resize: none;
+    }
+
+    input,
+    select,
+    textarea {
+        &:disabled {
+            pointer-events: none;
+            background-color: #DEF2FA;
+            border-color: #DEF2FA;
+        }
+
+        &:hover,
+        &:focus {
+            border: 1px solid $hover-input-border-color;
+        }
+    }
+}
+
+.select {
+    position: relative;
+
+    select {
+        padding-right: 52px;
+    }
+
+    &:after {
+        content: "▼";
+        position: absolute;
+        bottom: 17px;
+        right: 20px;
+        pointer-events: none;
+        color: #8B979B;
+    }
+}

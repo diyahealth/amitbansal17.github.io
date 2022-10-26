@@ -39,16 +39,13 @@ mixin popupSavingsConfirmation
             .popup-savings__subtitle Please submit your email below and we will send you a personalized, detailed cost savings report
             form.popup-savings__box-field(onsubmit="return diya.contactUs.form.send(event, this)")
                 .form-control
-                    .input-container
-                        input.input(name="Email", required, type="email", maxlength="250")
-                        .form-label Email
+                    .input
+                        label(for="email") Email
+                        input#email(name="Email", required, type="email", maxlength="250")
 
-                        input#calculation-params(name="calculationParams", type="hidden", value="Number of Staff = 100; Hourly Rate = $50; Hours Spent per Day, Phone Calls = 1; Hours Spent per Day, Travel = 2")
-                    
+                    input#calculation-params(name="calculationParams", type="hidden", value="Number of Staff = 100; Hourly Rate = $50; Hours Spent per Day, Phone Calls = 1; Hours Spent per Day, Travel = 2")
 
-                    button.material-btn.marginLeft(type="submit")
-                        span.label
-                            span SUBMIT
+                    button.material-btn.marginLeft(type="submit") SUBMIT
                
                 .g-recaptcha(
                     data-sitekey=keys.google.captcha,

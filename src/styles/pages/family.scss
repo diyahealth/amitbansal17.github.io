@@ -188,6 +188,7 @@
 
         .marginLeft {
             margin-left: 10px;
+            align-self: flex-end;
         }
 
         &__background {
@@ -2224,7 +2225,7 @@
                 @media screen and (max-width: $break-tablet) {
                     text-align: center;
                     margin-top: 25px;
-                    }
+                }
             }
 
             .text {
