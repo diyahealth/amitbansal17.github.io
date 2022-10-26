@@ -593,26 +593,11 @@
             position: relative;
             background-size: cover;
             background-repeat: no-repeat;
+            background-position: center;
             z-index: 5;
             border-bottom-right-radius: 400px 50px;
             border-bottom-left-radius: 400px 50px;
             transition: all 0.2s;
-
-            &--1 {
-                background-image: url('../images/about-us/blog1.svg');
-            }
-
-            &--2 {
-                background-image: url('../images/about-us/blog2.svg');
-            }
-
-            &--3 {
-                background-image: url('../images/about-us/blog3.svg');
-            }
-
-            &--4 {
-                background-image: url('../images/about-us/blog4.svg');
-            }
         }
 
 

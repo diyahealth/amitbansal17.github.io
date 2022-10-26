@@ -8,6 +8,7 @@ const { doctorsBenefits } = require("./doctorsBenefits");
 const { patientsBenefits } = require("./patientsBenefits");
 const reviews = require("./reviews");
 const { navigation } = require("./navigation");
+const blog = require("./blog");
 
 module.exports = {
     keys,
@@ -19,5 +20,6 @@ module.exports = {
     organizationSizeOptions,
     doctorsBenefits,
     patientsBenefits,
-    reviews
+    reviews,
+    blog
 };

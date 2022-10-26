@@ -24,14 +24,12 @@ mixin teamMember(member)
             p.card-employees__workplace=member.title
             img.card-employees__arrow(src=require("../../images/about-us/arrow.svg") alt='check')
 
-mixin integrationBlogCards(work, index, link)
-    a.card-press-box(href=link)
+mixin integrationBlogCards(article)
+    a.card-press-box(href=article.href)
         .card-press
-            - const titleClass = `card-press__outer--${index}`;
-            
-            .card-press__outer(class=titleClass)
+            .card-press__outer(style={'background-image': `url('${require("../../images/blog/" + article.image)}')` })
             .card-press__content-box
-                p.card-press__info=work
+                p.card-press__info=article.title
                 img.card-employees__arrow(src=require("../../images/about-us/arrow.svg") alt='check')
 
 
@@ -63,18 +61,6 @@ block content
             'To reduce healthcare costs.',
             ['To ', { text: 'put high quality ', variant: 'italic'}, 'medical care ', { text: 'within reach ', variant: 'italic'}, 'of all persons worldwide, rich or poor, in cities or remote villages.']
         ];
-
-         const blog = [
-            'U.S. Cardiologists Partner With Diya Health to Extend Their R...',
-            'Digital Health Enhances Senior Care',
-            'Telehealth Transforms In-Home Care',
-            'Adapt to Changes in Telehealth Insurance Cover...',
-        ];
-
-        const links = ['https://www.diyahealth.org/posts/u-s-cardiologists-partner-with-diya-health-to-extend-their-reach-to-rural-india.html',
-         'https://www.diyahealth.org/posts/digital-health-enhances-senior-care.html', 
-         'https://www.diyahealth.org/posts/telehealth-transforms-in-home-care.html', 
-         'https://www.diyahealth.org/posts/adapt-to-changes-in-telehealth-insurance-coverage.html']      
 
         const dataIntegrations = [
                 'Isolved',
@@ -216,10 +202,10 @@ block content
             .our-blog-container__title
                 h2 Our Blog
                 .our-blog-container__cards-container
-                    +integrationBlogCards(blog[0], 1, links[0])
-                    +integrationBlogCards(blog[1], 2, links[1])
-                    +integrationBlogCards(blog[2], 3, links[2])
-                    +integrationBlogCards(blog[3], 4, links[3])
+                    +integrationBlogCards(blog[0])
+                    +integrationBlogCards(blog[1])
+                    +integrationBlogCards(blog[2])
+                    +integrationBlogCards(blog[3])
                 a.button-mobile-settings.material-btn.compliance-container__title__button-size(href=pages.ourBlog.url) 
                     .label GO TO BLOG
         article.contact-us
