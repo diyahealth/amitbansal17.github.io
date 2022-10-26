@@ -80,6 +80,11 @@
 
         }
 
+        &__wrapper {
+            padding: 72px;
+            display: flex;
+        }
+
 
 
         &__logo {
@@ -264,7 +269,6 @@
             overflow-y: auto;
             width: 70vw;
             height: 60vh;
-            display: flex;
             background-color: #ffff;
             position: fixed;
             top: 50%;
@@ -273,7 +277,6 @@
             -webkit-transform: scale(1) translate(-50%, -50%);
             transform: scale(1) translate(-50%, -50%);
             z-index: 1000;
-            padding: 72px;
             border-radius: 10px;
             box-sizing: content-box;
             box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);
