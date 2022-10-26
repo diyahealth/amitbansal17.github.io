@@ -2,7 +2,7 @@ include submit-message.pug
 
 mixin contactUsForm(organizationSizeOptions)
     - const options = organizationSizeOptions || []
-    form.contact-us-form(
+    form.v3.contact-us-form(
         action=pages.contactUs.url,
         method="post",
         name="questions",
@@ -11,24 +11,24 @@ mixin contactUsForm(organizationSizeOptions)
             .columns-container
                 .column.left
                     .form-control
-                        .input-container
-                            input.input(name="Name", required, placeholder=" ", type="text", maxlength="250")
-                            .form-label Name*
+                        .input
+                            label(for="cu-name") Name*
+                            input#cu-name(name="Name", required, placeholder="John Doe", type="text", maxlength="250")
                     .form-control
-                        .input-container
-                            input.input(name="Email", required, placeholder=" ", type="email", maxlength="250")
-                            .form-label Email*
+                        .input
+                            label(for="cu-email") Email*
+                            input#cu-email(name="Email", required, placeholder="john.doe@example.org", type="email", maxlength="250")
                     .form-control
-                        .input-container
-                            select.input(name="OrganizationSize", required, placeholder=" ", type="email", maxlength="250", value=options[0].value)
+                        .select
+                            label(for="cu-org-size") Organization Size
+                            select#cu-org-size(name="OrganizationSize", required, placeholder="Select", value=options[0].value)
                                 each option in options
                                     option(value=option.value) #{option.label}
-                            .form-label Organization Size
                 .column.right.comment
                     .form-control
-                        .input-container
-                            textarea.input.non-resizable(name="Message", placeholder=" ", rows="9", maxlength="10000")
-                            .form-label Comments
+                        .input
+                            label(for="cu-message") Message
+                            textarea#message.non-resizable(name="Message", placeholder="Type your question on request", rows="10", maxlength="10000")
 
             .g-recaptcha(
                     data-sitekey=keys.google.captcha,

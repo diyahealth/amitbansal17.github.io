@@ -2,7 +2,7 @@ include submit-message.pug
 
 mixin contactSavingsForm(organizationSizeOptions)
     - const options = organizationSizeOptions || []
-    form.contact-us-form.savings-inner(
+    form.v3.contact-us-form.savings-inner(
         action=pages.contactUs.url,
         method="post",
         name="questions",
@@ -11,30 +11,30 @@ mixin contactSavingsForm(organizationSizeOptions)
             .columns-container
                 .column.left
                     .form-control
-                        .input-container
-                            input.input(name="staff", required, value="100", type="number", max="999999", min="1")
-                            .form-label Number of Staff
+                        .input
+                            label(for="cs-staff") Number of Staff*
+                            input#cs-staff(name="staff", required, placeholder="100", type="number", max="999999", min="1")
                     .form-control
-                        .input-container
-                            input.input(name="calls", required, value="1", type="number", max="24", min="0")
-                            .form-label Hours Spent per Day, Phone Calls
+                        .input
+                            label(for="cs-calls") Hours Spent per Day, Phone Calls*
+                            input#cs-calls(name="calls", required, placeholder="1", type="number", max="24", min="0")
                     .form-control
-                        .input-container
-                            input.input(name="travels", required, value="2", type="number", max="24", min="0")
-                            .form-label Hours Spent per Day, Travel
+                        .input
+                            label(for="cs-travels") Hours Spent per Day, Travel*
+                            input#cs-travels(name="travels", required, placeholder="2", type="number", max="24", min="0")
                 .column.right.comment
                     .form-control
-                        .input-container
-                            input.input(name="rate", required, value="50", type="number", max="9999" min="10")
-                            .form-label Hourly Rate, $
+                        .input
+                            label(for="cs-rate") Hourly Rate, $*
+                            input#cs-rate(name="rate", required, placeholder="50", type="number", max="9999" min="10")
                     .form-control
-                        .input-container
-                            input.input.background(name="Savings calls", value="50%", type="text", maxlength="250", disabled)
-                            .form-label Diya Savings, Phone Calls
+                        .input
+                            label(disabled) Diya Savings, Phone Calls
+                            input(name="Savings calls", value="50%", type="text", maxlength="250", disabled)
                     .form-control
-                        .input-container
-                            input.input.background(name="Savings travel", value="25%", type="text", maxlength="250", disabled)
-                            .form-label Diya Savings, Travel
+                        .input
+                            label(disabled) Diya Savings, Travel
+                            input(name="Savings travel", value="25%", type="text", maxlength="250", disabled)
            
 
             button.material-btn(type="submit").full-width
@@ -48,4 +48,3 @@ mixin contactSavingsForm(organizationSizeOptions)
             .circle
             .circle
             .circle
-            
