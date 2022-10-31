@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'Diya Health Expands Its Healthcare Expertise with the Appointment of Dr. Joe Ponnezhan as Executive Medical Director',
+        href: './blog/diya-health-expands-its-healthcare-expertise-with-the-appointment-of-dr-joe-ponezhan-as-executive-medical-director',
+        image: 'dr-joe-ponnezhan.jpg',
+        date: 'October 30, 2022',
+        tag: 'team',
+    },
+    {
         title: 'Diya Health Unlocks Patient Experience Improvements: Family Engagement is the Key',
         href: './blog/diya-health-unlocks-patient-experience-improvements-family-engagement-is-the-key',
         image: 'diya-health-unlocks-patient-experience-improvements.jpg',

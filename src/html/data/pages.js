@@ -112,7 +112,16 @@ const pages = {
         name: "Diya Health Unlocks Patient Experience Improvements: Family Engagement is the Key",
         title: "Diya Health Unlocks Patient Experience Improvements: Family Engagement is the Key - Diya Health",
         description: 'Diya Family Connect enables HIPAA-compliant, proactive communication with family members that provides them with a greater understanding of their loved one’s care'
-    }
+    },
+
+    post2022103000: {
+        fileName: "diya-health-expands-its-healthcare-expertise-with-the-appointment-of-dr-joe-ponezhan-as-executive-medical-director",
+        url: './blog/diya-health-expands-its-healthcare-expertise-with-the-appointment-of-dr-joe-ponezhan-as-executive-medical-director',
+        path: 'blog/diya-health-expands-its-healthcare-expertise-with-the-appointment-of-dr-joe-ponezhan-as-executive-medical-director',
+        name: "Diya Health Expands Its Healthcare Expertise with the Appointment of Dr. Joe Ponnezhan as Executive Medical Director",
+        title: "Diya Health Expands Its Healthcare Expertise with the Appointment of Dr. Joe Ponnezhan as Executive Medical Director - Diya Health",
+        description: 'Dr. Ponnezhan\'s passion for clinical excellence, operational efficiencies, and digital health technologies make him uniquely qualified to lead our medical team. We\'re incredibly fortunate and grateful to have someone with his credentials and business acumen join our team'
+    },
 };
 
 module.exports = pages;
