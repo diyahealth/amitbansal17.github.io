@@ -6,6 +6,7 @@ mixin estimatedSavingsForm(organizationSizeOptions)
         action=pages.contactUs.url,
         method="post",
         name="questions",
+        novalidate,
         onsubmit="return diya.contactUs.estimatedSavings(event, this)")#form
         fieldset#fields
             .columns-container
@@ -17,22 +18,22 @@ mixin estimatedSavingsForm(organizationSizeOptions)
                             .form-control.padding
                                 .input
                                     label(for="es-p-count") Count*
-                                    input#es-p-count(name="physiciansCount", required, placeholder="70", type="number", max="999999", min="1")
+                                    input#es-p-count(name="physiciansCount", placeholder="70", type="number", max="999999", min="1")
                             .form-control
                                 .input
                                     label(for="es-p-wage") Hourly Wage, $*
-                                    input#es-p-wage(name="physiciansWage", required, placeholder="200", type="number", max="999999", min="1")
+                                    input#es-p-wage(name="physiciansWage", placeholder="200", type="number", max="999999", min="1")
                     .form-box
                         p Nurses & Staff
                         .control-box
                             .form-control.padding
                                 .input
                                     label(for="es-n-count") Count*
-                                    input#es-n-count(name="nursesCount", required, placeholder="300", type="number", max="999999", min="1")
+                                    input#es-n-count(name="nursesCount", placeholder="300", type="number", max="999999", min="1")
                             .form-control
                                 .input
                                     label(for="es-n-wage") Hourly Wage, $*
-                                    input#es-n-wage(name="nursesWage", required, placeholder="50", type="number", max="999999", min="1")
+                                    input#es-n-wage(name="nursesWage", placeholder="50", type="number", max="999999", min="1")
                    
                         
                 .column.right.comment
