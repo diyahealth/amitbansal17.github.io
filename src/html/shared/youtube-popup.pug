@@ -29,6 +29,17 @@ mixin youtubeImageMain(id, path)
         img.learn-more__logo(src=path alt='path')
         img.learn-more__play(src=require("../../images/main-page/play.png") alt='path')
 
+mixin youtubeInline(id, preview, previewAlt)
+    a.inline-video-preview(
+        href=`https://www.youtu.be/${id}`
+        target="__blank"
+        data-youtube=id
+        rel="noopener noreferrer"
+    )&attributes(attributes)
+        img(src=preview, alt=previewAlt)
+        .play-icon
+            include ../../images/icons-v3/play.svg
+
 mixin youtubePopup
     .popup-video.hidden
         .close

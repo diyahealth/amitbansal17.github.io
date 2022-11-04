@@ -367,6 +367,7 @@
 
             @media screen and (max-width: $break-mobile) {
                 top: 98%;
+                z-index: 5;
             }
 
             &.left {
@@ -422,6 +423,11 @@
         }
 
         .dashboard-carousel-bg-3 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .dashboard-carousel-bg-4 {
             display: flex;
             justify-content: center;
         }
@@ -502,10 +508,14 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: 42px;
-                letter-spacing: 5px;
+                letter-spacing: 2px;
                 text-align: center;
                 color: #0c9fdb;
                 padding: 0 69px;
+
+                @include for-phone {
+                    padding: 0;
+                }
             }
 
             .quote-up {
@@ -761,6 +771,7 @@
 
             @media screen and (max-width: $break-mobile) {
                 top: 98%;
+                z-index: 5;
             }
 
             &.left {

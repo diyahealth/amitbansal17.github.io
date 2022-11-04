@@ -29,7 +29,9 @@ mixin integrationBlogCards(article)
         .card-press
             .card-press__outer(style={'background-image': `url('${require("../../images/blog/" + article.image)}')` })
             .card-press__content-box
-                p.card-press__info=article.title
+                -
+                    const short = article.title.substring(0, 45) + '...'
+                p.card-press__info=short
                 img.card-employees__arrow(src=require("../../images/about-us/arrow.svg") alt='check')
 
 
@@ -200,14 +202,14 @@ block content
                 
         article.our-blog-container
             .our-blog-container__title
-                h2 Our Blog
+                h2 Resources
                 .our-blog-container__cards-container
                     +integrationBlogCards(blog[0])
                     +integrationBlogCards(blog[1])
                     +integrationBlogCards(blog[2])
                     +integrationBlogCards(blog[3])
                 a.button-mobile-settings.material-btn.compliance-container__title__button-size(href=pages.ourBlog.url) 
-                    .label GO TO BLOG
+                    .label Learn More
         article.contact-us
             .contact-us-container(id="contact-us")
                 .title
