@@ -2,7 +2,7 @@ import { CaptchaStateHolder } from "./CaptchaStateHolder";
 import { LayoutManager } from "./LayoutManager";
 
 // tslint:disable-next-line:max-line-length
-const endpoint = "https://diyagroup-contactus.azurewebsites.net/api/SaveMessage?code=8NtqotFumIOq16p5MeZM2hw4elRI1SETunMU8k5aXWVbhRbL4emiJQ==";
+const endpoint = "https://diyagroup-contactus.azurewebsites.net/api/SaveMessage?code=KscVNoNPrcCjbIuLcu8jOLWnJDX__iN-Opu6lMmuK3tCAzFucSC2Qw==";
 
 type RequestCallback = (request: XMLHttpRequest) => void;
 
