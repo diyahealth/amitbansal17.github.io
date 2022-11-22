@@ -43,6 +43,10 @@
         }
     }
 
+    &.row-reversed {
+        flex-direction: row-reverse;
+    }
+
     @include for-tablet {
         flex-direction: column;
 
@@ -94,6 +98,7 @@
 .wave-divider {
     display: block;
     width: 100%;
+    
 
     @include for-tablet {
         display: none;
