@@ -46,6 +46,16 @@ const pages = {
         description: "Diya Family Connect enables families of the home health patients to stay in close contact with their loved one while freeing up the healthcare workers to focus on delivering the best care possible",
     },
 
+
+    why: {
+        fileName: "why",
+        url: "./why",
+        name: "Why Diya",
+        title: "Why Diya Health",
+        description: "Why Diya page",
+    },
+
+
     healthSystems: {
         fileName: "health-systems",
         url: "./health-systems",

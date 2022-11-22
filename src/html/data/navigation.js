@@ -50,6 +50,10 @@ const buildNavigationLinks = (mode) => {
     navigationLinks.length = 0;
     navigationLinks.push(
         {
+            ...pageToLink(pages.why, null, postfix),
+            
+        },
+        {
             ...pageToLink(pages.healthSystems, null, postfix),
         },
         {
