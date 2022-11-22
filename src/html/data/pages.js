@@ -48,11 +48,11 @@ const pages = {
 
 
     why: {
-        fileName: "why",
-        url: "./why",
+        fileName: "why-diya",
+        url: "./why-diya",
         name: "Why Diya",
-        title: "Why Diya Health",
-        description: "Why Diya page",
+        title: "Why Diya - Diya Health",
+        description: "Diya saves your clinicians 30+ minutes per day by automatically addressing family members’ most common questions and minimizing subsequent workflow disruptions",
     },
 
 
