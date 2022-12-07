@@ -52,9 +52,13 @@ block content
         .page-intro
                 .main-banner
                     .title
-                        h1 Clinicians are busy saving lives,
+                        h1 
+                            span Clinicians are busy saving lives,
                             br
-                            span.subtitle leave family engagement to
+                            .subtitle
+                                span leave
+                                span.text-primary.bold family engagement
+                                span to  
                                 include ../../images/logos/diya/diya.svg
 
                         button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')")
