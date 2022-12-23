@@ -380,7 +380,6 @@
 
     .research {
         width: 100% !important;
-        margin-top: -181px;
 
         &__header-wrapper {
             margin-bottom: 60px;
@@ -392,13 +391,7 @@
 
         }
 
-        @media screen and (max-width: $break-tablet) {
-            margin-top: -106px;
-        }
 
-        @media screen and (max-width: $break-mobile) {
-            margin-top: -65px;
-        }
 
 
         .image .general-img {
