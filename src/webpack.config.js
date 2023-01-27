@@ -160,6 +160,10 @@ module.exports = (env, argv) => ({
         {
             from: "./posts",
             to: "./posts",
+        },
+        {
+            from: "./self-service-example.html",
+            to: "./",
         }
         ]),
         new ExtractTextPlugin("./css/styles.css"),
