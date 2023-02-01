@@ -2,3 +2,4 @@ User-agent: *
 Sitemap: https://www.diyahealth.org/sitemap.txt
 Disallow: /self-service-example.html
 Disallow: /self-service-example
+Disallow: /general-hospital/*

@@ -1,0 +1,59 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * p22-mackinac-pro:
+ *   - http://typekit.com/eulas/00000000000000007735b3da
+ *   - http://typekit.com/eulas/00000000000000007735b3db
+ * trade-gothic-next:
+ *   - http://typekit.com/eulas/00000000000000007735ba3f
+ *   - http://typekit.com/eulas/00000000000000007735ba6d
+ *   - http://typekit.com/eulas/00000000000000007735ba65
+ *   - http://typekit.com/eulas/00000000000000007735ba66
+ *
+ * © 2009-2022 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2021-10-11 19:08:22 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=qtg1foo&ht=tk&f=28226.28227.39680.39681.39684.39687&a=54775642&app=typekit&e=css");
+
+@font-face {
+font-family:"p22-mackinac-pro";
+src:url("https://use.typekit.net/af/2ea16c/00000000000000007735b3da/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/2ea16c/00000000000000007735b3da/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/2ea16c/00000000000000007735b3da/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"p22-mackinac-pro";
+src:url("https://use.typekit.net/af/880b37/00000000000000007735b3db/30/l?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/880b37/00000000000000007735b3db/30/d?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/880b37/00000000000000007735b3db/30/a?primer=7fa3915bdafdf03041871920a205bef951d72bf64dd4c4460fb992e3ecc3a862&fvd=i4&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"trade-gothic-next";
+src:url("https://use.typekit.net/af/e7065f/00000000000000007735ba3f/30/l?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/e7065f/00000000000000007735ba3f/30/d?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/e7065f/00000000000000007735ba3f/30/a?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n7&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"trade-gothic-next";
+src:url("https://use.typekit.net/af/3eccd7/00000000000000007735ba6d/30/l?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i7&v=3") format("woff2"),url("https://use.typekit.net/af/3eccd7/00000000000000007735ba6d/30/d?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i7&v=3") format("woff"),url("https://use.typekit.net/af/3eccd7/00000000000000007735ba6d/30/a?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i7&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:700;font-stretch:normal;
+}
+
+@font-face {
+font-family:"trade-gothic-next";
+src:url("https://use.typekit.net/af/3bacba/00000000000000007735ba65/30/l?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/3bacba/00000000000000007735ba65/30/d?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/3bacba/00000000000000007735ba65/30/a?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=i4&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:400;font-stretch:normal;
+}
+
+@font-face {
+font-family:"trade-gothic-next";
+src:url("https://use.typekit.net/af/a741c0/00000000000000007735ba66/30/l?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/a741c0/00000000000000007735ba66/30/d?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/a741c0/00000000000000007735ba66/30/a?primer=fff1a989570eb474b8c22c57cc7199e63bfc7e911b750165d0199218f0b7e7cc&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+
+.tk-p22-mackinac-pro { font-family: "p22-mackinac-pro",serif; }
+.tk-trade-gothic-next { font-family: "trade-gothic-next",sans-serif; }
