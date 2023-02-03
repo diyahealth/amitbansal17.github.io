@@ -1,6 +1,12 @@
+.nav_mobile {
+  position: fixed;
+   top: 65px; 
+   right: 0;
+   z-index: 3000;
+}
 
 header {
-  position: fixed !important;
+  position: fixed;
 }
 
 @media (max-width: 786px) {
@@ -74,6 +80,24 @@ flex-shrink: 0;
   padding: 15px 38px 10px 30px !important;
   
 }
+
+
+@media(max-width:768px) {
+  .header_menu {
+    display: none;
+
+  }
+
+
+}
+@media(max-width:768px) {
+  .mobile-padding {
+    padding-top: 60px;
+  }
+}
+
+
+
 
 
         

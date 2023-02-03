@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr"
-  prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "
   class="js fontawesome-i2svg-active fontawesome-i2svg-complete" data-whatinput="mouse" data-whatintent="mouse"
   style="height: 100%;">
 <script async="" src="./labor-and-delivery/js"></script>
@@ -33,71 +32,104 @@
   <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
     <div class="layout-container">
 
-      <header style="display: flex; padding: 0 20px; justify-content: space-between;"
-        class="c01-crown navbar-default navbar-fixed-top yxt-search__container--nav alert-offset alert-offset-fixed">
-        <div class="logoStyle">
-          <div>
-            <img style="
+      <header style="display: flex; padding: 0 20px; justify-content: space-between; position: fixed;"
+      class="c01-crown navbar-default navbar-fixed-top yxt-search__container--nav alert-offset alert-offset-fixed">
+      <div class="logoStyle">
+        <div>
+          <img style="
                   width: 30px;
                   height: auto;
-              " src="./labor-and-delivery/images/hospital.png" alt="Hospital" />
-            <p>General Hospital</p>
-          </div>
+              " src="./drug-and-alcohol-addiction/images/hospital.png" alt="Hospital" />
+          <p>General Hospital</p>
         </div>
-        <div class="mobile-menu pull-right visible-xs">
-          <img id="burger" style="width: 40px; height: 40px; cursor: pointer;" src="./labor-and-delivery/images/burger.png" />
-        </div>
-
-		 <nav style="flex-grow: 1;" class="main-nav collapse">
-            <ul class="navbar nav navbar-nav">
-                <li class="no-expand-mobile">
-                    <a href="./neurocritical-care.html" role="button" class="hidden-xs dropdown" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" aria-label="Something">
-                        Neurocritical Care
-                    </a>
-                </li>
-
-                <li class="no-expand-mobile">
-                    <a href="./labor-and-delivery.html" role="button" class="hidden-xs dropdown" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" aria-label="Something">
-                        Labor & Delivery
-
-                    </a>
-                </li>
-
-                <li class="no-expand-mobile">
-                    <a href="./cancer.html" role="button" class="hidden-xs dropdown" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" aria-label="Something">
-                        Cancer
-
-
-                    </a>
-                </li>
-
-                <li class="no-expand-mobile">
-                    <a href="./heart-transplant.html" role="button" class="hidden-xs dropdown" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" aria-label="Something">
-                        Heart Transplant
-
-                    </a>
-                </li>
-
-                <li class="no-expand-mobile">
-
-                    <a href="./drug-and-alcohol-addiction.html" role="button" class="hidden-xs dropdown" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" aria-label="Something">
-                        Drug & Alcohol Addiction
-
-                    </a>
-                </li>
-            </ul>
-
-
+      </div>
+      <div class="mobile-menu pull-right visible-xs">
+        <img id="burger" style="width: 40px; height: 40px; cursor: pointer;" src="./drug-and-alcohol-addiction/images/burger.png" />
+      </div>
+      <div class='header_menu' style="flex-grow: 1">
+        <nav style="flex-grow: 1;" class="main-nav collapse">
+          <ul class="navbar nav navbar-nav">
+            <li class="no-expand-mobile">
+              <a href="./neurocritical-care.html"" role="button" class="hidden-xs dropdown" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" aria-label="Something">
+                Neurocritical Care
+              </a>
+            </li>
+  
+            <li class="no-expand-mobile">
+              <a href="./labor-and-delivery.html" role="button" class="hidden-xs dropdown" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" aria-label="Something">
+                Labor & Delivery
+  
+              </a>
+            </li>
+  
+            <li class="no-expand-mobile">
+              <a href="./cancer.html" role="button" class="hidden-xs dropdown" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" aria-label="Something">
+                Cancer
+  
+  
+              </a>
+            </li>
+  
+            <li class="no-expand-mobile">
+              <a href="./heart-transplant.html" role="button" class="hidden-xs dropdown" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" aria-label="Something">
+                Heart Transplant
+  
+              </a>
+            </li>
+  
+            <li class="no-expand-mobile">
+              <a href="./drug-and-alcohol-addiction.html" role="button" class="hidden-xs dropdown" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false" aria-label="Something">
+                Drug & Alcohol Addiction
+  
+              </a>
+            </li>
+          </ul>
+  
+  
         </nav>
-
-    </div>
-
+      </div>
+  
     </header>
+    <nav class="main-nav collapse c-40-sub-and-sibling-nav blue-sky-bg nav_mobile" id="burger-menu"
+      aria-expanded="true">
+      <ul class="navbar nav navbar-nav general-nav">
+        <li class="no-expand-mobile visible-xs">
+  
+          <a href="./neurocritical-care.html"" class="visible-xs dropdown" aria-label="">
+            Neurocritical Care
+          </a>
+        </li>
+        <li class="no-expand-mobile visible-xs">
+          <a href="./labor-and-delivery.html" class="visible-xs dropdown" aria-label="">
+            Labor & Delivery
+          </a>
+        </li>
+        <li class="no-expand-mobile visible-xs">
+  
+          <a href="./cancer.html" class="visible-xs dropdown" aria-label="">
+            Cancer
+          </a>
+        </li>
+        <li class="no-expand-mobile visible-xs">
+  
+          <a href="./heart-transplant.html" class="visible-xs dropdown" aria-label="">
+            Heart Transplant
+          </a>
+        </li>
+  
+        <li class="no-expand-mobile visible-xs">
+  
+          <a href="./drug-and-alcohol-addiction.html" class="visible-xs dropdown" aria-label="">
+            Drug & Alcohol Addiction
+          </a>
+        </li>
+      </ul>
+    </nav>
     <div class="container_screen">
 
     <nav class="main-nav collapse c-40-sub-and-sibling-nav blue-sky-bg" id="burger-menu" aria-expanded="true" >
