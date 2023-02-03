@@ -1,7 +1,25 @@
 
-header {
-  position: fixed !important;
+
+.nav_mobile {
+  position: fixed;
+   top: 60px; 
+   right: 0;
+   z-index: 3000;
 }
+
+header {
+  position: fixed;
+}
+
+@media (max-width: 786px) {
+header {
+    padding: 10px 20px !important;
+    position: fixed !important;
+}
+}
+
+
+
 
 @media (max-width: 786px) {
 header {
@@ -84,6 +102,21 @@ html {
     font-size: 16px !important;
   }
 
+
+  @media(max-width:768px) {
+    .header_menu {
+      display: none;
+  
+    }
+  
+  
+  }
+  @media(max-width:768px) {
+    .mobile-padding {
+      padding-top: 60px;
+    }
+  }
+  
 
 
         
