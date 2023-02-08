@@ -118,5 +118,9 @@ html {
   }
   
 
+header.c01-crown .main-nav .navbar .active-d>a:not(:focus) {
+	color: #7fd2f1;
+	text-decoration: underline;
+}
 
         

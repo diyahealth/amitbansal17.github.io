@@ -31,6 +31,12 @@ header.c01-crown .main-nav>ul>li>a {
 	font-family: "Neue Helvetica eText W01","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+
+header.c01-crown .main-nav .navbar .active-d>a:not(:focus) {
+	color: #7fd2f1;
+	text-decoration: underline;
+}
+
 .logoStyle>div {
   display: flex;
   align-items: center;
