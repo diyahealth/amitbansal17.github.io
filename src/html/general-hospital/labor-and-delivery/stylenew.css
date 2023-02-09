@@ -123,4 +123,14 @@ header.c01-crown .main-nav .navbar .active-d>a:not(:focus) {
 	text-decoration: underline;
 }
 
+@media(max-width:786px){
+  footer {
+    padding: 12px !important;
+  }
+
+  footer a {
+   font-size: 18px !important;
+  }
+}
+
         

@@ -57,6 +57,16 @@ flex-shrink: 0;
   padding: 0 20px;
 }
 
+@media(max-width:786px){
+  footer {
+    padding: 12px !important;
+  }
+
+  footer a {
+   font-size: 18px !important;
+  }
+}
+
 
 
 .general-nav {
