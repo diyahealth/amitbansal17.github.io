@@ -153,3 +153,13 @@ flex-shrink: 0;
 		line-height: 22px;
 		list-style: initial;
  }
+
+ @media(max-width:786px){
+  footer {
+    padding: 12px !important;
+  }
+
+  footer a {
+   font-size: 18px !important;
+  }
+}

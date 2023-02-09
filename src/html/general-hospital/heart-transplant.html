@@ -20,6 +20,7 @@
     <link type="text/css" rel="stylesheet" href="./heart-transplant/all.lc-1669838366956-lc.min.css">
     <link rel="stylesheet" href="./heart-transplant/fonts.css" />
     <link href="./heart-transplant/stylenew.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="./shared/popup.css" />
     <title>Heart Transplant</title>
 	</head>
 	<body>
@@ -4362,20 +4363,54 @@
                     <meta name="sp_clinics" content="Cardiovascular Health|Advanced Heart Failure Program|">
                 </div>
             </div>
-            <footer style="
-       text-align: center;
-       padding: 20px;
-   " class="cb-site-footer" role="contentinfo"
-                aria-label="Herbert Irving Comprehensive Cancer Center (HICCC) - New York">
+            <footer  style="
+            z-index: 6000;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            transition: all 0.3s;
+        ">
 
-                <div class="copyright"><span>©2023 </span>Icahn School of Medicine at General Hospital</div>
+<div class="copyright"><a style=" color: white; font-size: 20px; text-decoration: underline;" href="https://www.diyahealth.org/">Back To Diya</a></div>
             </footer>
             <script type="text/javascript">
                 var GLOBAL_SPURL_OBJECT = "//sp1004f3b2.guided.ss-omtrdc.net";
             </script>
         </div>
     </div>
+<div class="popup-welcome">
+    <div class="popup-welcome__background hidden"> 
+        <div class="popup-welcome__content"> 
+            <button type="submit" style="border: 0; background: transparent;" form="welcome" class='popup-welcome__close'></button>
+            <div style="padding: 0 20px;"><h3>Welcome to Diya’s Family Engagement Demo Site!</h3>
+            <div class="popup-welcome__text">
+                This interactive demo site is designed to show how various hospital departments can
+                use Diya FamilyConnect to engage with and educate patients’ 
+                families to improve their experience and outcomes.
+            </div>
 
+            <form style="margin-bottom: 20px;" id="welcome">
+            <div style="display: flex; align-items: center;">
+                <input style="margin: 0; transform:scale(1.5);" type="checkbox"  name="check" id="gh-welcome-check"><br>
+                <label style="margin: 0; margin-left: 10px;"  for="gh-welcome-check">Don’t show this message again
+                </label>
+            </div>
+             </form>
+            </div>
+             <div class="popup-welcome__actions">
+                <a style="display: flex;
+    align-items: end;
+    column-gap: 10px;" href="https://www.diyahealth.org/">Back to
+                    <img style="width: 50px;" src="./shared/diya.svg">
+                </a>
+                <button class="popup-welcome__submit" type="submit" form="welcome">Close</button>
+             </div>
+          </div>
+        </div>
+    </div>
+</div>
     <script type="text/javascript">
 
 
@@ -4388,7 +4423,9 @@
         })
 
     </script>
-
+    
+<script src="./shared/footer.js"></script>
+	<script src="./shared/popup.js"></script>
 <script data-dh-cw="#diyahealth-self-service" src="https://publicar8pvg06wf.blob.core.windows.net/content-package-widget/05468a51-eb01-48d3-a661-61d2c62c615d%2Flib.js"></script>
     </body>
 

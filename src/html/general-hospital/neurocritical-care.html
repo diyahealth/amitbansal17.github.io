@@ -15,13 +15,14 @@
     <link href="./neurocritical-care/vendor.css" rel="stylesheet"
         type="text/css" />
     <link rel="stylesheet" href="./neurocritical-care/style.css" />
+    <link rel="stylesheet" href="./shared/popup.css" />
     <link rel="stylesheet"
         href="./neurocritical-care/override.css" />
         <link rel="stylesheet"
         href="./neurocritical-care/fonts.css" />
 
     <title>Neurocritical Care - Neurosurgery | General Hospital - California</title>
-   
+
     <link type="text/css" rel="stylesheet"
         href="./neurocritical-care/1.css" />
     <script src="https://kit.fontawesome.com/f9b995e6e7.js" crossorigin="anonymous"></script>
@@ -48,7 +49,7 @@
       <nav style="flex-grow: 1;" class="main-nav collapse">
         <ul class="navbar nav navbar-nav">
           <li class="no-expand-mobile  active-d">
-            <a href="./neurocritical-care.html"" role="button" class="hidden-xs dropdown " data-toggle="dropdown" aria-haspopup="true"
+            <a href="./neurocritical-care.html"" role="button" class="hidden-xs dropdown" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false" aria-label="Something" style="">
               Neurocritical Care
             </a>
@@ -130,7 +131,7 @@
   </nav>
 
 
-    <div role="document" class="container-fluid" aria-label="Something" aria-hidden="true">
+    <div style="padding-bottom: 68px;" role="document" class="container-fluid" aria-label="Something" aria-hidden="true">
         <div class="row">
             <div class="container">
                 <div class="row margin-40-top">
@@ -356,7 +357,7 @@
                      
                     </div>
                     <div class="one-third col-xs-12 col-md-4">
-						<div class="hidden-xs" diyahealth-self-service style=" background: white; margin-bottom: 20px;"></div>
+						<div id="diyahealth-self-service" style=" background: white; margin-bottom: 20px;"></div>
                         <aside
                             class="c-40-sub-and-sibling-nav blue-dark-bg mshs-service-area mshs-fixed 644b16102cdca510VgnVCM2000005815020aRCRD">
                             <div class="title">
@@ -502,21 +503,55 @@
     </div>
 
     <!--googleoff: index -->
-    <footer style="
+    <footer  style="
+    z-index: 6000;
        text-align: center;
        padding: 20px;
+       position: fixed;
+       bottom: 0;
+       width: 100%;
+       transition: all 0.3s;
    ">
-
-
-        <div class="copyright"><span>©2023 </span>Icahn School of Medicine at General Hospital</div>
-
-
+        <div class="copyright"><a style=" color: white; font-size: 20px; text-decoration: underline;" href="https://www.diyahealth.org/">Back To Diya</a></div>
     </footer>
 </div>
+
+<div class="popup-welcome">
+    <div class="popup-welcome__background hidden"> 
+        <div class="popup-welcome__content"> 
+            <button type="submit" style="border: 0; background: transparent;" form="welcome" class='popup-welcome__close'></button>
+            <div style="padding: 0 20px;"><h3>Welcome to Diya’s Family Engagement Demo Site!</h3>
+            <div class="popup-welcome__text">
+                This interactive demo site is designed to show how various hospital departments can
+                use Diya FamilyConnect to engage with and educate patients’ 
+                families to improve their experience and outcomes.
+            </div>
+
+            <form style="margin-bottom: 20px;" id="welcome">
+            <div style="display: flex; align-items: center;">
+                <input style="margin: 0; transform:scale(1.5);" type="checkbox" id="gh-welcome-check" name="check" aria-label=""><br>
+                <label style="margin: 0; margin-left: 10px;"  for="gh-welcome-check">Don’t show this message again
+                </label>
+            </div>
+             </form>
+            </div>
+             <div class="popup-welcome__actions">
+                <a style="display: flex;
+    align-items: end;
+    column-gap: 10px;" href="https://www.diyahealth.org/">Back to 
+                    <img style="width: 50px;" src="./shared/diya.svg">
+                </a>
+                <button class="popup-welcome__submit" type="submit" form="welcome">Close</button>
+             </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+
     <script type="text/javascript">
 
         (function () {
-
             const element = document.getElementById('titleNav');
             const parent = element.parentNode;
             const getNavElement = parent.querySelector("nav");
@@ -544,7 +579,10 @@
 
         }());
     </script>
-	<script data-dh-cw="[diyahealth-self-service]" src="https://publicar8pvg06wf.blob.core.windows.net/content-package-widget/16bda409-9374-4cb0-9dc5-23f0819a3d01%2Flib.js"></script>
+
+	<script src="./shared/footer.js"></script>
+	<script src="./shared/popup.js"></script>
+	<script data-dh-cw="#diyahealth-self-service" src="https://publicar8pvg06wf.blob.core.windows.net/content-package-widget/aae0c1a8-cee5-4f12-b2c6-1f0f0247c826%2Flib.js"></script>
 </body>
 
 </html>
