@@ -26,13 +26,21 @@
   font-family: "Neue Helvetica eText W01","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-header.c01-crown .main-nav>ul>li {
+.nav > li {
 	margin: 0;
 }
 
 header.c01-crown .main-nav>ul>li>a {
 	font-size: 16px;
 	font-family: "Neue Helvetica eText W01","Helvetica Neue",Helvetica,Arial,sans-serif;
+	display: flex !important;
+    min-height: 50px;
+}
+
+
+header.c01-crown .main-nav .navbar .active-d>a:not(:focus) {
+	color: #7fd2f1;
+	text-decoration: underline;
 }
 
 .logoStyle>div {
