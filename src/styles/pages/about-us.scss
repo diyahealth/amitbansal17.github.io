@@ -83,8 +83,12 @@
         &__wrapper {
             padding: 72px;
             display: flex;
-        }
 
+            @media screen and (max-width: $break-tablet) {
+                padding: 0;
+                flex-direction: column;
+            }
+        }
 
 
         &__logo {
@@ -113,8 +117,7 @@
             }
 
             @media screen and (max-width: $break-mobile) {
-                padding: 0 48px;
-
+                padding: 40px 0;
             }
 
         }
