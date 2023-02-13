@@ -18,6 +18,7 @@
   <link rel="stylesheet" media="all" href="./labor-and-delivery/css_W-dLUc5R4tDltyRBEA7qbluUF9b9cgz_3hxiQtg5t3U.css">
   <link rel="stylesheet" media="all" href="./labor-and-delivery/css_LW-7cEGwvBkxIq2G0hCjFuPqsObZyVSe6MrqKAgqSX0.css">
   <link type="text/css" rel="stylesheet" charset="UTF-8" href="./labor-and-delivery/translateelement.css">
+  <link rel="stylesheet" href="./shared/popup.css" />
 
   <script src="./labor-and-delivery/fontawesome.min.js.download" defer=""></script>
   <script src="./labor-and-delivery/solid.min.js.download" defer=""></script>
@@ -170,7 +171,7 @@
 
  </div>
 
-  <main role="main">
+  <main role="main" style="padding-bottom: 68px;">
     <a id="main-content" tabindex="-1"></a>
     <div class="layout-content">
       <div>
@@ -410,12 +411,50 @@
     </div>
   </main>
 
-  <footer style="
+  <footer  style="
        text-align: center;
        padding: 20px;
+       position: fixed;
+       bottom: 0;
+       width: 100%;
+       transition: all 0.3s;
    ">
-    <div class="copyright"><span>©2023 </span>Icahn School of Medicine at General Hospital</div>
+     <div class="copyright">
+	 <a style=" color: white; font-size: 20px; text-decoration: underline;" href="https://www.diyahealth.org/">Back To Diya</a></div>
   </footer>
+</div>
+
+<div class="popup-welcome">
+    <div class="popup-welcome__background hidden"> 
+        <div class="popup-welcome__content"> 
+            <button type="submit" style="border: 0; background: transparent;" form="welcome" class='popup-welcome__close'></button>
+            <div style="padding: 0 20px;"><h3>Welcome to Diya’s Family Engagement Demo Site!</h3>
+            <div class="popup-welcome__text">
+                This interactive demo site is designed to show how various hospital departments can
+                use Diya FamilyConnect to engage with and educate patients’ 
+                families to improve their experience and outcomes.
+            </div>
+
+            <form style="margin-bottom: 20px;" id="welcome">
+            <div style="display: flex; align-items: center;">
+                <input style="margin: 0; transform:scale(1.5); box-shadow: none;
+    appearance: auto;" type="checkbox"  name="check" id="gh-welcome-check"><br>
+                <label style="margin: 0; margin-left: 10px;"  for="gh-welcome-check">Don’t show this message again
+                </label>
+            </div>
+             </form>
+            </div>
+             <div class="popup-welcome__actions">
+                <a style="display: flex; color: #2393c3;
+    align-items: end;
+    column-gap: 10px;" href="https://www.diyahealth.org/">Back to Diya
+                    <img style="width: 50px;" src="./shared/diya.svg">
+                </a>
+                <button class="popup-welcome__submit" type="submit" form="welcome">Close</button>
+             </div>
+          </div>
+        </div>
+    </div>
 </div>
   <script type="text/javascript">
 
@@ -448,7 +487,8 @@
 
     }());
   </script>
-  
+  <script src="./shared/footer.js"></script>
+<script src="./shared/popup.js"></script>
   <script data-dh-cw="#diyahealth-self-service" src="https://publicar8pvg06wf.blob.core.windows.net/content-package-widget/962eded3-2650-4644-b8b6-073ce4f70ac2%2Flib.js"></script>
 
 </body>
