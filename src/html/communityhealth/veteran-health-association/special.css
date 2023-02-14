@@ -4,6 +4,10 @@
     padding-bottom: 0;
 }
 
+body {
+    height: auto !important;
+}
+
 a {
     transition-duration: 0s !important;
 }
