@@ -1,0 +1,146 @@
+.general-nav {
+    align-items: stretch;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+body {
+ font-family: 'Roboto', 'alz-icons', sans-serif !important;
+ 
+}
+
+.general-nav a {
+   color: #3f4246 !important;
+   font-size: 16px;
+   }
+
+.general-nav li {
+        background-color: #eee !important;
+       
+    }
+
+
+.mobile-view {
+    display: none !important;
+}
+
+.c-40-sub-and-sibling-nav ul li>a:hover, .c-40-sub-and-sibling-nav ul li>a:focus {
+    background-color: #dddddd;
+}
+
+.h-placeholder-image {
+    background-color: transparent !important;
+
+}
+
+.navbar {
+    padding: 0 !important;
+
+}
+
+.navbar li {
+margin-bottom: 0 !important;
+    
+}
+
+.btn-secondary {
+  
+}
+
+.btn {
+    background-color: #359a8e  !important;
+    background-image: none !important;
+  
+}
+
+
+.btn-secondary {
+    color: #fff;
+    background-color: #359a8e  !important;
+    border-color: #256d65  !important;
+}
+
+
+.btn {
+   
+}
+
+.btn-secondary:hover {
+    background: #359a8e  !important;
+    /* -webkit-box-shadow: 0 5px #256d65  !important;
+    box-shadow: 0 5px #256d65  !important; */
+}
+
+.btn:hover, .btn:active, .btn:focus {
+   color: #fff !important;
+}
+
+
+.btn:focus, .btn:hover {
+    text-decoration: none  !important;
+}
+
+
+#main-content {
+    padding-top: 65px;
+}
+
+@media(max-width:786px){
+    #main-content {
+        padding-top: 45px;
+    }
+ 
+     }
+
+
+  @media(min-width:992px){
+    .hpQuickLinks {
+      
+        bottom: 30px !important;
+    }
+   
+  }
+
+  .a-none {
+    display: none;
+  }
+
+  
+  @media(min-width:768px){
+    .hpQuickLinks {
+       bottom: 10px !important;
+    }
+
+    .a-none {
+        display: inline;
+      }
+   
+  }
+
+  @media (max-width: 591px) {
+.getSupportDuringCovid19 #desktop {
+    display: block;
+}
+  }
+
+  @media (max-width: 591px) {
+.mastheadHome.covid2020 .mastheadCaption h2 {
+    color: #fff !important;
+    text-align: center !important;
+    font-size: 26px;
+    font-weight: 700 !important;
+    display: block !important;
+}
+  }
+
+
+  body {
+    font-family: 'Roboto', sans-serif !important;
+  }
+
+
+
+
+
+
+  
