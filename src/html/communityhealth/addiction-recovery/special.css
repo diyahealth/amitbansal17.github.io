@@ -1,0 +1,35 @@
+.main-section {
+padding-top: 66px;
+}
+
+.labels {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+}
+
+.mobile-view {
+    display: none !important;
+}
+
+.page-wrapper {
+    padding-bottom: 17px;
+}
+
+@media(max-width:786px){
+    .main-section {
+      padding-bottom: 30px;
+    
+    }
+    }
+
+@media(max-width:786px){
+    .wrapper-widget {
+        display: none;
+    }
+    .mobile-view {
+        display: flex !important;
+    }
+   
+  }
+
+
