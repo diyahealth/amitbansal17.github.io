@@ -24,37 +24,31 @@
     }
 
     .mobileAlign {
-          @media screen and (max-width: $break-tablet) {
-          text-align: left;
-          font-size: 16px;
-            }
+        @media screen and (max-width: $break-tablet) {
+            font-size: 16px;
         }
+    }
 
     .specialList {
         padding-left: 15px;
         margin-top: 15px;
 
         @media screen and (min-width: $break-mobile + 1px) and (max-width: $break-tablet) {
-          & li a {
-            font-size: 14px;
-          }
-        }
-
-        @media screen and (max-width: $break-mobile) {
-          text-align: left;
+            & li a {
+                font-size: 14px;
             }
         }
-     
-    
+    }
+
+
 
     .marginTop {
         margin-top: 25px;
 
         @media screen and (max-width: $break-mobile) {
-            text-align: left;
             font-size: 16px;
-              }
-          }
+        }
+    }
 
     .container {
         max-width: $container-max-width;
@@ -71,7 +65,7 @@
 
         @media screen and (min-width: $break-mobile + 1px) and (max-width: 1136px) {
             padding: 45px 30px 100px;
-            position: relative;            
+            position: relative;
 
             .copyright-container {
                 position: absolute;
@@ -164,7 +158,8 @@
         .link-container {
             @media screen and (max-width: $break-tablet) {
                 align-items: center;
-            } }
+            }
+        }
 
         @media screen and (max-width: $break-mobile) {
             flex-direction: column-reverse;
