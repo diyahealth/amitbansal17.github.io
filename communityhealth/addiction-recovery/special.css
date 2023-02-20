@@ -11,17 +11,6 @@ padding-top: 66px;
     display: none !important;
 }
 
-.page-wrapper {
-    padding-bottom: 17px;
-}
-
-@media(max-width:786px){
-    .main-section {
-      padding-bottom: 30px;
-    
-    }
-    }
-
 @media(max-width:786px){
     .wrapper-widget {
         display: none;
@@ -32,4 +21,6 @@ padding-top: 66px;
    
   }
 
-
+main>section:last-child {
+    margin-bottom: 0 !important;
+}
