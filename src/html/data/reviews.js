@@ -29,8 +29,8 @@ const allReviews = {
 
 
 const reviews = {
-    index: [allReviews.roman('myDiya'), allReviews.david('diyaMD')],
-    diyaMd: [allReviews.david('diyaMD'), allReviews.rajesh('diyaMD')],
+    index: [allReviews.roman('myDiya'), allReviews.david('Diya')],
+    diyaMd: [allReviews.david('Diya'), allReviews.rajesh('Diya')],
     myDiya: [allReviews.roman('myDiya'), allReviews.kate('myDiya')]
 };
 
