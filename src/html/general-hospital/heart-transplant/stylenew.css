@@ -192,5 +192,31 @@ li {
   footer a {
    font-size: 18px !important;
   }
+
+ 
 }
+
+
+@media(max-width: 960px) {
+  .specialClassCol8 {
+    width: 100% !important;
+  }
+
+  .specialClassCol4 {
+    width: 100% !important;
+  }
+}
+
+
+@media(min-width:1024px){
+  #marquee-cp16 {
+    width: 1100px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .container {
+    width: 1100px;
+  }
+}
+
 

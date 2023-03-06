@@ -123,6 +123,27 @@ margin-bottom: 0 !important;
 }
   }
 
+
+
+  @media (min-width: 768px) {
+    .specialClass {
+       transform: scale(1.03);
+       margin-top: 0;
+     
+    }
+      }
+
+      @media (max-width: 768px) {
+        .specialClass {
+           margin-left: auto;
+           margin-right: auto;
+           margin-top: 30px;
+           max-width: 600px;
+        }
+          }
+
+
+
   @media (max-width: 591px) {
 .mastheadHome.covid2020 .mastheadCaption h2 {
     color: #fff !important;
