@@ -116,6 +116,22 @@ flex-shrink: 0;
   }
 
 
+
+  
+  @media(max-width:961px) {
+    .cps-region-inner {
+      flex-wrap: wrap !important;
+      justify-content: center;
+
+    }
+    #diyahealth-self-service {
+     margin-bottom: 30px;
+    }
+
+  }
+  
+
+
   @media(max-width:768px) {
     .header-info {
       bottom: 0;
