@@ -1,26 +1,29 @@
-.main-section {
-padding-top: 66px;
+.elementor-widget-container > ul {
+	margin: 0 0 10px 25px;
 }
 
-.labels {
-    font-size: 16px !important;
-    font-weight: 400 !important;
+.elementor-widget-container > ul > li {
+	line-height: 1.4;
+	list-style: initial;
 }
 
-.mobile-view {
-    display: none !important;
+h2 {
+	font-size: 2rem;
 }
 
-@media(max-width:786px){
-    .wrapper-widget {
-        display: none;
-    }
-    .mobile-view {
-        display: flex !important;
-    }
-   
-  }
+h5 {
+    font-size: 1.25rem;
+}
 
-main>section:last-child {
-    margin-bottom: 0 !important;
+h6 {
+    font-size: 1rem;
+}
+
+.self-service-widget {
+	margin: 50px;
+	background: white;
+}
+
+.elementor-container.elementor-column-gap-default {
+	justify-content: center;
 }
