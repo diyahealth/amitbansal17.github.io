@@ -132,6 +132,15 @@ const pages = {
         title: "Diya Health Expands Its Healthcare Expertise with the Appointment of Dr. Joe Ponnezhan as Executive Medical Director - Diya Health",
         description: 'Dr. Ponnezhan\'s passion for clinical excellence, operational efficiencies, and digital health technologies make him uniquely qualified to lead our medical team. We\'re incredibly fortunate and grateful to have someone with his credentials and business acumen join our team'
     },
+
+    post2023041100: {
+        fileName: "empowering-family-members-a-key-strategy-for-reducing-hospital-readmissions",
+        url: './blog/empowering-family-members-a-key-strategy-for-reducing-hospital-readmissions',
+        path: 'blog/empowering-family-members-a-key-strategy-for-reducing-hospital-readmissions',
+        name: "Empowering Family Members: A Key Strategy for Reducing Hospital Readmissions",
+        title: "Empowering Family Members: A Key Strategy for Reducing Hospital Readmissions - Diya Health",
+        description: 'According to a recent study, engaging family members during the care transition process can help reduce hospital readmission rates. The study found that providing family members with clear communication and education decreased the likelihood of readmission.'
+    }
 };
 
 module.exports = pages;

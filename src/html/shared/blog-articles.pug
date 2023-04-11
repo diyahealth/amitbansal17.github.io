@@ -41,7 +41,7 @@ mixin blogArticles(articles)
                     .content
                         .container
                             a(href=article.href, target="_blank")
-                                img.image(src=require(`../../images/blog/${article.image}`))
+                                img.image(src=require(`../../images/blog/${article.image}`), style=`object-position: ${article.alignment || 'initial'}`)
                         .container-info.container-info-padding
                             if (article.tag)
                                 .tag

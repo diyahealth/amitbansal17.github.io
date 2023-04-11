@@ -1,8 +1,16 @@
 const articles = [
     {
+        title: 'Empowering Family Members: A Key Strategy for Reducing Hospital Readmissions',
+        href: './blog/empowering-family-members-a-key-strategy-for-reducing-hospital-readmissions',
+        image: 'avoid-scrambling.jpg',
+        date: 'April 11, 2023',
+        tag: 'family'
+    },
+    {
         title: 'Diya Health Expands Its Healthcare Expertise with the Appointment of Dr. Joe Ponnezhan as Executive Medical Director',
         href: './blog/diya-health-expands-its-healthcare-expertise-with-the-appointment-of-dr-joe-ponezhan-as-executive-medical-director',
         image: 'dr-joe-ponnezhan.jpg',
+        alignment: '0 45%',
         date: 'October 30, 2022',
         tag: 'team',
     },
