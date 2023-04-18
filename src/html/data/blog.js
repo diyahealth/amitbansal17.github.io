@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'Nursing After the Pandemic: The Lingering Impact on Healthcare Workers and How to Address It',
+        href: './blog/nursing-after-the-pandemic-the-lingering-impact-on-healthcare-workers-and-how-to-address-it',
+        image: 'nurse-in-icu.jpg',
+        date: 'April 18, 2023',
+        tag: 'Healthcare',
+    },
+    {
         title: 'Empowering Family Members: A Key Strategy for Reducing Hospital Readmissions',
         href: './blog/empowering-family-members-a-key-strategy-for-reducing-hospital-readmissions',
         image: 'avoid-scrambling.jpg',

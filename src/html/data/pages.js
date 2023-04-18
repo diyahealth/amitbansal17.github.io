@@ -130,7 +130,7 @@ const pages = {
         path: 'blog/diya-health-expands-its-healthcare-expertise-with-the-appointment-of-dr-joe-ponezhan-as-executive-medical-director',
         name: "Diya Health Expands Its Healthcare Expertise with the Appointment of Dr. Joe Ponnezhan as Executive Medical Director",
         title: "Diya Health Expands Its Healthcare Expertise with the Appointment of Dr. Joe Ponnezhan as Executive Medical Director - Diya Health",
-        description: 'Dr. Ponnezhan\'s passion for clinical excellence, operational efficiencies, and digital health technologies make him uniquely qualified to lead our medical team. We\'re incredibly fortunate and grateful to have someone with his credentials and business acumen join our team'
+        description: 'Dr. Ponnezhan\'s passion for clinical excellence, operational efficiencies, and digital health technologies make him uniquely qualified to lead our medical team.'
     },
 
     post2023041100: {
@@ -139,7 +139,16 @@ const pages = {
         path: 'blog/empowering-family-members-a-key-strategy-for-reducing-hospital-readmissions',
         name: "Empowering Family Members: A Key Strategy for Reducing Hospital Readmissions",
         title: "Empowering Family Members: A Key Strategy for Reducing Hospital Readmissions - Diya Health",
-        description: 'According to a recent study, engaging family members during the care transition process can help reduce hospital readmission rates. The study found that providing family members with clear communication and education decreased the likelihood of readmission.'
+        description: 'According to a recent study, engaging family members during the care transition process can help reduce hospital readmission rates'
+    },
+
+    post2023041800: {
+        fileName: "nursing-after-the-pandemic-the-lingering-impact-on-healthcare-workers-and-how-to-address-it",
+        url: './blog/nursing-after-the-pandemic-the-lingering-impact-on-healthcare-workers-and-how-to-address-it',
+        path: 'blog/nursing-after-the-pandemic-the-lingering-impact-on-healthcare-workers-and-how-to-address-it',
+        name: 'Nursing After the Pandemic: The Lingering Impact on Healthcare Workers and How to Address It',
+        title: 'Nursing After the Pandemic: The Lingering Impact on Healthcare Workers and How to Address It - Diya Health',
+        description: 'The pandemic exacerbated existing challenges in the nursing workforce, such as shortages, burnout, and high turnover rates'
     }
 };
 
