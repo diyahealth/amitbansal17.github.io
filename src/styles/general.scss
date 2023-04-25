@@ -21,7 +21,10 @@ body {
 a {
     text-decoration: none;
     color: $primary-color;
-    word-break: break-all;
+
+    .pure {
+        word-break: break-all;
+    }
 }
 
 img {
