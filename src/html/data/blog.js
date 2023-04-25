@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'Putting Families at the Heart of the ICU: Guidelines for Compassionate Care',
+        href: './blog/putting-families-at-the-heart-of-the-icu-guidelines-for-compassionate-care',
+        image: 'nurse-asking-family.jpg',
+        date: 'April 25, 2023',
+        tag: 'family'
+    },
+    {
         title: 'Nursing After the Pandemic: The Lingering Impact on Healthcare Workers and How to Address It',
         href: './blog/nursing-after-the-pandemic-the-lingering-impact-on-healthcare-workers-and-how-to-address-it',
         image: 'nurse-in-icu.jpg',

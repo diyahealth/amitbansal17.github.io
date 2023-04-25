@@ -149,7 +149,16 @@ const pages = {
         name: 'Nursing After the Pandemic: The Lingering Impact on Healthcare Workers and How to Address It',
         title: 'Nursing After the Pandemic: The Lingering Impact on Healthcare Workers and How to Address It - Diya Health',
         description: 'The pandemic exacerbated existing challenges in the nursing workforce, such as shortages, burnout, and high turnover rates'
-    }
+    },
+
+    post2023042500: {
+        fileName: 'putting-families-at-the-heart-of-the-icu-guidelines-for-compassionate-care',
+        url: './blog/putting-families-at-the-heart-of-the-icu-guidelines-for-compassionate-care',
+        path: 'blog/putting-families-at-the-heart-of-the-icu-guidelines-for-compassionate-care',
+        name: 'Putting Families at the Heart of the ICU: Guidelines for Compassionate Care',
+        title: 'Putting Families at the Heart of the ICU: Guidelines for Compassionate Care - Diya Health',
+        description: 'Critically ill patients often require complex and urgent care, and families may feel overwhelmed and uncertain about how to participate',
+    },
 };
 
 module.exports = pages;
