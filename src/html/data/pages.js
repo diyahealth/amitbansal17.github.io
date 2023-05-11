@@ -159,6 +159,15 @@ const pages = {
         title: 'Putting Families at the Heart of the ICU: Guidelines for Compassionate Care - Diya Health',
         description: 'Critically ill patients often require complex and urgent care, and families may feel overwhelmed and uncertain about how to participate',
     },
+
+    post2023051100: {
+        fileName: 'embracing-the-power-of-partnership-patient-and-family-centered-care-for-all',
+        url: './blog/embracing-the-power-of-partnership-patient-and-family-centered-care-for-all',
+        path: 'blog/embracing-the-power-of-partnership-patient-and-family-centered-care-for-all',
+        name: 'Embracing the Power of Partnership: Patient and Family-Centered Care for All',
+        title: 'Embracing the Power of Partnership: Patient and Family-Centered Care for All - Diya Health',
+        description: 'Patient and family-centered care is an approach that prioritizes the involvement of patients and their families in decision-making processes and treatment planning'
+    }
 };
 
 module.exports = pages;

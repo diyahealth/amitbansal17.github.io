@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'Embracing the Power of Partnership: Patient and Family-Centered Care for All',
+        href: './blog/embracing-the-power-of-partnership-patient-and-family-centered-care-for-all',
+        image: 'doctor-with-patient-and-daughter.jpg',
+        date: 'May 11, 2023',
+        tag: 'family'
+    },
+    {
         title: 'Putting Families at the Heart of the ICU: Guidelines for Compassionate Care',
         href: './blog/putting-families-at-the-heart-of-the-icu-guidelines-for-compassionate-care',
         image: 'nurse-asking-family.jpg',
