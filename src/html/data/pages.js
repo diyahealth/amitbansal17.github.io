@@ -167,6 +167,15 @@ const pages = {
         name: 'Embracing the Power of Partnership: Patient and Family-Centered Care for All',
         title: 'Embracing the Power of Partnership: Patient and Family-Centered Care for All - Diya Health',
         description: 'Patient and family-centered care is an approach that prioritizes the involvement of patients and their families in decision-making processes and treatment planning'
+    },
+
+    post2023051700: {
+        fileName: 'one-third-of-patients-don-t-receive-education-here-s-how-to-fill-the-gap',
+        url: './blog/one-third-of-patients-don-t-receive-education-here-s-how-to-fill-the-gap',
+        path: 'blog/one-third-of-patients-don-t-receive-education-here-s-how-to-fill-the-gap',
+        name: 'One-Third of Patients Don’t Receive Education: Here’s How to Fill the Gap',
+        title: 'One-Third of Patients Don’t Receive Education: Here’s How to Fill the Gap - Diya Health',
+        description: 'A recent study has shed light on the disconnect between patient desire for educational healthcare content and the current reality of its delivery'
     }
 };
 

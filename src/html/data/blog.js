@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'One-Third of Patients Don’t Receive Education: Here’s How to Fill the Gap',
+        href: './blog/one-third-of-patients-don-t-receive-education-here-s-how-to-fill-the-gap',
+        image: 'doctor-explaining-result-to-patient.jpg',
+        date: 'May 17, 2023',
+        tag: 'healthcare'
+    },
+    {
         title: 'Embracing the Power of Partnership: Patient and Family-Centered Care for All',
         href: './blog/embracing-the-power-of-partnership-patient-and-family-centered-care-for-all',
         image: 'doctor-with-patient-and-daughter.jpg',
