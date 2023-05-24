@@ -176,6 +176,15 @@ const pages = {
         name: 'One-Third of Patients Don’t Receive Education: Here’s How to Fill the Gap',
         title: 'One-Third of Patients Don’t Receive Education: Here’s How to Fill the Gap - Diya Health',
         description: 'A recent study has shed light on the disconnect between patient desire for educational healthcare content and the current reality of its delivery'
+    },
+
+    post2023052400: {
+        fileName: 'transform-care-delivery-strategies-for-a-successful-patient-and-family-centered-approach',
+        url: './blog/transform-care-delivery-strategies-for-a-successful-patient-and-family-centered-approach',
+        path: 'blog/transform-care-delivery-strategies-for-a-successful-patient-and-family-centered-approach',
+        name: 'Transform Care Delivery: Strategies for a Successful Patient- and Family-Centered Approach',
+        title: 'Transform Care Delivery: Strategies for a Successful Patient- and Family-Centered Approach - Diya Health',
+        description: 'PFCC is a holistic approach that recognizes the essential role of patients and their families in healthcare decision-making and delivery'
     }
 };
 

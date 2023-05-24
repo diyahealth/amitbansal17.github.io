@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'Transform Care Delivery: Strategies for a Successful Patient- and Family-Centered Approach',
+        href: './blog/transform-care-delivery-strategies-for-a-successful-patient-and-family-centered-approach',
+        image: 'doctors-hand.jpg',
+        date: 'May 24, 2023',
+        tag: 'family'
+    },
+    {
         title: 'One-Third of Patients Don’t Receive Education: Here’s How to Fill the Gap',
         href: './blog/one-third-of-patients-don-t-receive-education-here-s-how-to-fill-the-gap',
         image: 'doctor-explaining-result-to-patient.jpg',
