@@ -185,6 +185,15 @@ const pages = {
         name: 'Transform Care Delivery: Strategies for a Successful Patient- and Family-Centered Approach',
         title: 'Transform Care Delivery: Strategies for a Successful Patient- and Family-Centered Approach - Diya Health',
         description: 'PFCC is a holistic approach that recognizes the essential role of patients and their families in healthcare decision-making and delivery'
+    },
+
+    post2023053100: {
+        fileName: 'unleashing-the-potential-of-patient-family-engagement-solutions',
+        url: './blog/unleashing-the-potential-of-patient-family-engagement-solutions',
+        path: 'blog/unleashing-the-potential-of-patient-family-engagement-solutions',
+        name: 'Unleashing the Potential of Patient & Family Engagement Solutions',
+        title: 'Unleashing the Potential of Patient & Family Engagement Solutions - Diya Health',
+        description: 'How patient and family engagement solutions leverage technology to empower patients, enhance communication, and streamline healthcare delivery processes'
     }
 };
 

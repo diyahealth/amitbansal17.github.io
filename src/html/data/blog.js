@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'Unleashing the Potential of Patient & Family Engagement Solutions',
+        href: './blog/unleashing-the-potential-of-patient-family-engagement-solutions',
+        image: 'woman-checking-phone.jpg',
+        date: 'May 31, 2023',
+        tag: 'family'
+    },
+    {
         title: 'Transform Care Delivery: Strategies for a Successful Patient- and Family-Centered Approach',
         href: './blog/transform-care-delivery-strategies-for-a-successful-patient-and-family-centered-approach',
         image: 'doctors-hand.jpg',
