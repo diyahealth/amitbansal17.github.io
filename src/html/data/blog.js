@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'Addressing the Forgotten 50%:  The Key to Better Patient Education',
+        href: './blog/addressing-the-forgotten-50-the-key-to-better-patient-education',
+        image: 'doctor-showing-tablet.jpg',
+        date: 'June 8, 2023',
+        tag: 'family'
+    },
+    {
         title: 'Unleashing the Potential of Patient & Family Engagement Solutions',
         href: './blog/unleashing-the-potential-of-patient-family-engagement-solutions',
         image: 'woman-checking-phone.jpg',

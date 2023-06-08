@@ -194,7 +194,16 @@ const pages = {
         name: 'Unleashing the Potential of Patient & Family Engagement Solutions',
         title: 'Unleashing the Potential of Patient & Family Engagement Solutions - Diya Health',
         description: 'How patient and family engagement solutions leverage technology to empower patients, enhance communication, and streamline healthcare delivery processes'
-    }
+    },
+
+    post2023060800: {
+        fileName: 'addressing-the-forgotten-50-the-key-to-better-patient-education',
+        url: './blog/addressing-the-forgotten-50-the-key-to-better-patient-education',
+        path: 'blog/addressing-the-forgotten-50-the-key-to-better-patient-education',
+        name: 'Addressing the Forgotten 50%:  The Key to Better Patient Education',
+        title: 'Addressing the Forgotten 50%:  The Key to Better Patient Education - Diya Health',
+        description: ' The complex information provided during inpatient stays leaves patients feeling overloaded and confused'
+    },
 };
 
 module.exports = pages;
