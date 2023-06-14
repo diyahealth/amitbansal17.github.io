@@ -204,6 +204,15 @@ const pages = {
         title: 'Addressing the Forgotten 50%:  The Key to Better Patient Education - Diya Health',
         description: ' The complex information provided during inpatient stays leaves patients feeling overloaded and confused'
     },
+
+    post2023061400: {
+        fileName: 'navigating-the-healthcare-maze-the-burden-of-care-coordination-on-patients-experiences',
+        url: '/blog/navigating-the-healthcare-maze-the-burden-of-care-coordination-on-patients-experiences',
+        path: 'blog/navigating-the-healthcare-maze-the-burden-of-care-coordination-on-patients-experiences',
+        name: 'Navigating the Healthcare Maze: The Burden of Care Coordination on Patients\' Experiences',
+        title: 'Navigating the Healthcare Maze: The Burden of Care Coordination on Patients\' Experiences - Diya Health',
+        description: 'Overburdening patients and their families with care coordination responsibilities hurt their experience'
+    }
 };
 
 module.exports = pages;

@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'Navigating the Healthcare Maze: The Burden of Care Coordination on Patients\' Experiences',
+        href: './blog/navigating-the-healthcare-maze-the-burden-of-care-coordination-on-patients-experiences',
+        image: 'thinking-woman.jpg',
+        date: 'June 14, 2023',
+        tag: 'family'
+    },
+    {
         title: 'Addressing the Forgotten 50%:  The Key to Better Patient Education',
         href: './blog/addressing-the-forgotten-50-the-key-to-better-patient-education',
         image: 'doctor-showing-tablet.jpg',
