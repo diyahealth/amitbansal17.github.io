@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'Unveiling the Unsung Heroes: How Family Members Impact Patient Outcomes',
+        href: './blog/unveiling-the-unsung-heroes-how-family-members-impact-patient-outcomes',
+        image: 'father-with-son.jpg',
+        date: 'June 21, 2023',
+        tag: 'family'
+    },
+    {
         title: 'Navigating the Healthcare Maze: The Burden of Care Coordination on Patients\' Experiences',
         href: './blog/navigating-the-healthcare-maze-the-burden-of-care-coordination-on-patients-experiences',
         image: 'thinking-woman.jpg',

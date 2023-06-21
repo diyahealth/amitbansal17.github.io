@@ -212,7 +212,16 @@ const pages = {
         name: 'Navigating the Healthcare Maze: The Burden of Care Coordination on Patients\' Experiences',
         title: 'Navigating the Healthcare Maze: The Burden of Care Coordination on Patients\' Experiences - Diya Health',
         description: 'Overburdening patients and their families with care coordination responsibilities hurt their experience'
-    }
+    },
+
+    post2023062100: {
+        fileName: 'unveiling-the-unsung-heroes-how-family-members-impact-patient-outcomes',
+        url: '/blog/unveiling-the-unsung-heroes-how-family-members-impact-patient-outcomes',
+        path: 'blog/unveiling-the-unsung-heroes-how-family-members-impact-patient-outcomes',
+        name: 'Unveiling the Unsung Heroes: How Family Members Impact Patient Outcomes',
+        title: 'Unveiling the Unsung Heroes: How Family Members Impact Patient Outcomes - Diya Health',
+        description: 'Caregiving is a challenging and demanding journey, impacting caregivers\' physical, emotional, social, financial, and overall well-being'
+    },
 };
 
 module.exports = pages;
