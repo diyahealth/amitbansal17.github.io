@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'Transforming Healthcare with the Power of Engagement',
+        href: './blog/transforming-healthcare-with-the-power-of-engagement',
+        image: 'mature-woman-in-consultation.jpg',
+        date: 'June 28, 2023',
+        tag: 'healthcare'
+    },
+    {
         title: 'Unveiling the Unsung Heroes: How Family Members Impact Patient Outcomes',
         href: './blog/unveiling-the-unsung-heroes-how-family-members-impact-patient-outcomes',
         image: 'father-with-son.jpg',

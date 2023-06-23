@@ -222,6 +222,15 @@ const pages = {
         title: 'Unveiling the Unsung Heroes: How Family Members Impact Patient Outcomes - Diya Health',
         description: 'Caregiving is a challenging and demanding journey, impacting caregivers\' physical, emotional, social, financial, and overall well-being'
     },
+
+    post2023062800: {
+        fileName: 'transforming-healthcare-with-the-power-of-engagement',
+        url: '/blog/transforming-healthcare-with-the-power-of-engagement',
+        path: 'blog/transforming-healthcare-with-the-power-of-engagement',
+        name: 'Transforming Healthcare with the Power of Engagement',
+        title: 'Transforming Healthcare with the Power of Engagement - Diya Health',
+        description: 'Healthcare providers and organizations increasingly recognize the importance of involving patients in their care journey',
+    },
 };
 
 module.exports = pages;
