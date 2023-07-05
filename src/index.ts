@@ -10,7 +10,7 @@ import { toAnchor, ToAnchor } from "./scripts/toAnchor";
 import { toggleClass, ToggleClass } from "./scripts/toggleClass";
 
 import "./styles/__main.scss";
-import "./typings";
+import "./custom";
 
 declare global {
     interface Window {
@@ -71,7 +71,6 @@ function appendReturnUrl() {
         const newUrl = currentUrl + '?returnUrl=' + returnUrl;
 
         link.setAttribute("href", newUrl);
-                
     }
     window.removeEventListener("DOMContentLoaded", appendReturnUrl);
 }

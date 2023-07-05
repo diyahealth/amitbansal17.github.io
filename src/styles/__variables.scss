@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $text-color: #333;
 $primary-color: #0C9FDB;
 $primary-color-hover: #0A8BBF;
@@ -29,18 +31,14 @@ $break-mobile: 576px;
 $carousel-with-button-break-three: 785px;
 
 $container-gutter: 80px;
-$container-gutter-tablet: (
-    30px/ $font-size-tablet) * 1rem;
+$container-gutter-tablet: math.div(30px, $font-size-tablet) * 1rem;
 
-$content-max-width: (
-    $container-max-width / $font-size) * 1rem;
+$content-max-width: math.div($container-max-width, $font-size) * 1rem;
 
-$content-image-basis: (
-    445px / ($container-max-width - 200px -20px)) * 100%;
+$content-image-basis: math.div(445px, ($container-max-width - 200px - 20px)) * 100%;
 $content-text-basis: 100% - $content-image-basis;
 
-$content-image-basis-tablet: (
-    298px / ($container-max-width-tablet - 60px)) * 100%;
+$content-image-basis-tablet: math.div(298px , ($container-max-width-tablet - 60px)) * 100%;
 $content-text-basis-tablet: 100% - $content-image-basis-tablet;
 
 

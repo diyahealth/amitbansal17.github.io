@@ -38,8 +38,7 @@ function process(root, argv) {
     rebuildPatientsBenefits(argv.mode);
     return [
         ...htmlParams.map(x => new HtmlWebpackPlugin(x)),
-        new CopyWebpackPlugin(imageCopyParams.filter(x => x != null)),
-        //new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i, disable: argv.mode === 'development' }),
+        new CopyWebpackPlugin({patterns: imageCopyParams.filter(x => x != null)}),
     ]
 }
 

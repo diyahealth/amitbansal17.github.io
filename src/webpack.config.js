@@ -1,10 +1,11 @@
 "use strict";
 
 const path = require("path");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CssRewritePlugin = require("css-rewrite-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const data = require("./html/data");
 const redirects = require("./redirects.json");
@@ -85,23 +86,16 @@ module.exports = (env, argv) => ({
     entry: "./index.ts",
     output: {
         path: path.resolve("../dist"),
-        filename: "js/app.js"
+        filename: "js/app.js",
     },
     module: {
         rules: [{
             test: /\.scss$/,
-            use: ExtractTextPlugin.extract({
-                use: [{
-                    loader: "css-loader",
-                    options: {
-                        minimize: true
-                    }
-                },
-                {
-                    loader: "sass-loader"
-                },
-                ],
-            }),
+            use: [
+                MiniCssExtractPlugin.loader,
+                'css-loader',
+                'sass-loader',
+            ],
         },
         {
             test: /\.pug$/,
@@ -109,78 +103,73 @@ module.exports = (env, argv) => ({
         },
         {
             test: /\.(png|svg|jpg|gif|webp)$/,
-            use: [{
-                loader: 'file-loader',
-                options: {
-                    publicPath: "images",
-                    outputPath: "images"
-                }
-            }]
+            type: 'asset/resource',
+            generator: { filename: 'images/[hash][ext]', publicPath: '' },
         },
         {
             test: /\.woff$/,
-            use: [{
-                loader: 'file-loader',
-                options: {
-                    publicPath: "fonts",
-                    outputPath: "fonts"
-                }
-            }]
+            type: 'asset/resource',
+            generator: { filename: 'fonts/[hash][ext]', publicPath: '' },
         },
         {
             test: /\.ts$/,
-            loader: 'awesome-typescript-loader',
+            loader: 'ts-loader',
             exclude: /node_modules/,
         }
         ]
     },
     resolve: {
-        extensions: [".ts", "js"]
+        extensions: [".ts", ".js"]
     },
     plugins: [
-        new CopyWebpackPlugin([{
-            from: "favicon/*",
-            flatten: true,
-        },
-        {
-            from: "robots.txt",
-        },
-        {
-            from: "./files",
-            to: "./files"
-        },
-        {
-            from: "./images/reviews",
-            to: "./images/reviews",
-        },
-        {
-            from: "./images/patients-and-families",
-            to: "./images/patients-and-families",
-        },
-        {
-            from: "./posts",
-            to: "./posts",
-        },
-        {
-            from: "./self-service-example.html",
-            to: "./",
-        },
-        {
-            from: "./html/general-hospital",
-            to: "./general-hospital",
-        },
-        {
-            from: "./html/communityhealth",
-            to: "./communityhealth",
-        }
-        ]),
-        new ExtractTextPlugin("./css/styles.css"),
-        new CssRewritePlugin({
-            fileReg: new RegExp('./css/styles.css'),
-            processor: (source) => source
-                .replace(/url\(images\//g, "url(../images/")
-                .replace(/url\(fonts\//g, "url(../fonts/")
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: "favicon/*",
+                    to: './[name][ext]',
+                },
+                {
+                    from: "robots.txt",
+                },
+                {
+                    from: "./files",
+                    to: "./files"
+                },
+                {
+                    from: "./images/reviews",
+                    to: "./images/reviews",
+                },
+                {
+                    from: "./images/patients-and-families",
+                    to: "./images/patients-and-families",
+                },
+                {
+                    from: "./posts",
+                    to: "./posts",
+                },
+                {
+                    from: "./self-service-example.html",
+                    to: "./",
+                },
+                {
+                    from: "./html/general-hospital",
+                    to: "./general-hospital",
+                },
+                {
+                    from: "./html/communityhealth",
+                    to: "./communityhealth",
+                }
+            ]
         }),
+        new MiniCssExtractPlugin({ filename: "./css/styles.css" }),
         ...buildWebpackPages(argv),
-    ]
+    ],
+    optimization: {
+        minimizer: [
+            '...',
+            new CssMinimizerPlugin({
+                exclude: /general-hospital|communityhealth/
+            }),
+        ],
+    },
 });

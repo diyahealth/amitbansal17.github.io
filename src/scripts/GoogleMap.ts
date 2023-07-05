@@ -1,5 +1,3 @@
-// tslint:disable-next-line:no-implicit-dependencies
-import { } from "googlemaps";
 import mapPin from "../images/icons/map-pin.svg";
 
 export function initGoogleMap() {

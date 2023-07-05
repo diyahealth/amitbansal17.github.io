@@ -1,8 +1,6 @@
 const path = require("path");
 const fs = require("fs");
 
-const timestamp = Math.round(new Date().getTime() / 1000);
-
 const buildImageCopyCommand = (root, name) => {
     const source = path.join(root, 'images');
     if (!fs.existsSync(source)) {
@@ -11,7 +9,7 @@ const buildImageCopyCommand = (root, name) => {
 
     const res = ({
         from: source,
-        to: `./images/${name}-${timestamp}`,
+        to: `./images/${name}`,
     });
 
     return res;
@@ -19,7 +17,7 @@ const buildImageCopyCommand = (root, name) => {
 
 const rewriteImagePath = (items, pageName) => items
     .filter(x => x.image != null)
-    .forEach(x => x.image = `./images/${pageName}-${timestamp}/${x.image}`);
+    .forEach(x => x.image = `./images/${pageName}/${x.image}`);
 
 module.exports = {
     buildImageCopyCommand,
