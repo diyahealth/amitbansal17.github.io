@@ -231,6 +231,15 @@ const pages = {
         title: 'Transforming Healthcare with the Power of Engagement - Diya Health',
         description: 'Healthcare providers and organizations increasingly recognize the importance of involving patients in their care journey',
     },
+
+    post2023070500: {
+        fileName: 'unlocking-the-power-of-patient-family-engagement-in-home-based-care',
+        url: '/blog/unlocking-the-power-of-patient-family-engagement-in-home-based-care',
+        path: 'blog/unlocking-the-power-of-patient-family-engagement-in-home-based-care',
+        name: 'Unlocking the Power of Patient & Family Engagement in Home-Based Care',
+        title: 'Unlocking the Power of Patient & Family Engagement in Home-Based Care - Diya Health',
+        description: 'Dr. Jain emphasized the importance of actively involving patients and families in care journeys'
+    }
 };
 
 module.exports = pages;

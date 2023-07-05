@@ -26,13 +26,13 @@ mixin blogArticles(articles)
                  each article in bigContainer
                     .content
                         .container
-                            a(href=article.href, target="_blank")
+                            a(href=article.href)
                                 img.image(src=require(`../../images/blog/${article.image}`))
                         .container-big-info
                             if (article.tag)
                                 .tag
                                     .tagName=article.tag
-                            a(href=article.href, target="_blank")
+                            a(href=article.href)
                                 h2.font-weight-bold.articleMargin.title=article.title
                             .date-time  
                                 span.date=article.date
@@ -40,13 +40,13 @@ mixin blogArticles(articles)
                 each article in mediumContainer
                     .content
                         .container
-                            a(href=article.href, target="_blank")
+                            a(href=article.href)
                                 img.image(src=require(`../../images/blog/${article.image}`), style=`object-position: ${article.alignment || 'initial'}`)
                         .container-info.container-info-padding
                             if (article.tag)
                                 .tag
                                     .tagName=article.tag
-                            a(href=article.href, target="_blank")
+                            a(href=article.href)
                                 h2.articleMargin.title=article.title
                             .date-time  
                                 span.date=article.date
@@ -55,13 +55,13 @@ mixin blogArticles(articles)
                     each article in smallContainer
                         .content
                             .container
-                                a(href=article.href, target="_blank")
+                                a(href=article.href)
                                     img.image(src=require(`../../images/blog/${article.image}`))
                             .container-info
                                 if (article.tag)
                                     .tag
                                         .tagName=article.tag
-                                a(href=article.href, target="_blank")
+                                a(href=article.href)
                                     h4.articleMargin.title=article.title
                                 .date-time  
                                     span.date=article.date

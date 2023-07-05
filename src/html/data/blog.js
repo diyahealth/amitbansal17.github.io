@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'Unlocking the Power of Patient & Family Engagement in Home-Based Care',
+        href: './blog/unlocking-the-power-of-patient-family-engagement-in-home-based-care',
+        image: 'nurse-explains-prescription.jpg',
+        date: 'July 5, 2023',
+        tag: 'family'
+    },
+    {
         title: 'Transforming Healthcare with the Power of Engagement',
         href: './blog/transforming-healthcare-with-the-power-of-engagement',
         image: 'mature-woman-in-consultation.jpg',
