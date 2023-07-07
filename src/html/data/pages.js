@@ -207,7 +207,7 @@ const pages = {
 
     post2023061400: {
         fileName: 'navigating-the-healthcare-maze-the-burden-of-care-coordination-on-patients-experiences',
-        url: '/blog/navigating-the-healthcare-maze-the-burden-of-care-coordination-on-patients-experiences',
+        url: './blog/navigating-the-healthcare-maze-the-burden-of-care-coordination-on-patients-experiences',
         path: 'blog/navigating-the-healthcare-maze-the-burden-of-care-coordination-on-patients-experiences',
         name: 'Navigating the Healthcare Maze: The Burden of Care Coordination on Patients\' Experiences',
         title: 'Navigating the Healthcare Maze: The Burden of Care Coordination on Patients\' Experiences - Diya Health',
@@ -216,7 +216,7 @@ const pages = {
 
     post2023062100: {
         fileName: 'unveiling-the-unsung-heroes-how-family-members-impact-patient-outcomes',
-        url: '/blog/unveiling-the-unsung-heroes-how-family-members-impact-patient-outcomes',
+        url: './blog/unveiling-the-unsung-heroes-how-family-members-impact-patient-outcomes',
         path: 'blog/unveiling-the-unsung-heroes-how-family-members-impact-patient-outcomes',
         name: 'Unveiling the Unsung Heroes: How Family Members Impact Patient Outcomes',
         title: 'Unveiling the Unsung Heroes: How Family Members Impact Patient Outcomes - Diya Health',
@@ -225,7 +225,7 @@ const pages = {
 
     post2023062800: {
         fileName: 'transforming-healthcare-with-the-power-of-engagement',
-        url: '/blog/transforming-healthcare-with-the-power-of-engagement',
+        url: './blog/transforming-healthcare-with-the-power-of-engagement',
         path: 'blog/transforming-healthcare-with-the-power-of-engagement',
         name: 'Transforming Healthcare with the Power of Engagement',
         title: 'Transforming Healthcare with the Power of Engagement - Diya Health',
@@ -234,7 +234,7 @@ const pages = {
 
     post2023070500: {
         fileName: 'unlocking-the-power-of-patient-family-engagement-in-home-based-care',
-        url: '/blog/unlocking-the-power-of-patient-family-engagement-in-home-based-care',
+        url: './blog/unlocking-the-power-of-patient-family-engagement-in-home-based-care',
         path: 'blog/unlocking-the-power-of-patient-family-engagement-in-home-based-care',
         name: 'Unlocking the Power of Patient & Family Engagement in Home-Based Care',
         title: 'Unlocking the Power of Patient & Family Engagement in Home-Based Care - Diya Health',
