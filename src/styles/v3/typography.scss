@@ -97,3 +97,34 @@ p {
         line-height: 30px;
     }
 }
+
+.quote {
+    position: relative;
+    $quotemark-shift: 30px;
+    
+    .quote-up {
+        position: absolute;
+        left: 0;
+        top: $quotemark-shift;
+        transform: translate(0, -50%);
+    }
+
+    .quote-down {
+        position: absolute;
+        right: 0;
+        bottom: $quotemark-shift;
+        transform: translate(0, 50%) rotate(180deg);
+    }
+
+    .text-integration {
+        font-family: Playball;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 42px;
+        letter-spacing: 2px;
+        text-align: center;
+        color: #0c9fdb;
+        padding: $quotemark-shift 69px;
+    }
+}

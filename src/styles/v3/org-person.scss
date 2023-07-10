@@ -1,0 +1,47 @@
+.org-person {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    &.vertical {
+        flex-direction: column;
+    }
+
+    @include for-phone {
+        flex-direction: column;
+    }
+
+    .avatar-box {
+        width: 200px;
+        height: 200px;
+        background-image: url('../images/main-page/slides/bg.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%, cover;
+        display: flex;
+
+        .avatar {
+            width: 120px;
+            margin: auto;
+            border-radius: 50%;
+        }
+    }
+
+    .info-box {
+        text-align: center;
+        .name {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        .title {
+
+        }
+
+        .org-logo {
+            width: auto;
+            height: 50px;
+            margin-top: 10px;
+        }
+    }
+}

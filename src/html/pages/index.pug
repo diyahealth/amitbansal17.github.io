@@ -22,9 +22,7 @@ mixin integrationBlogCards(article)
         .card-press
             .card-press__outer(style={'background-image': `url('${require("../../images/blog/" + article.image)}')` })
             .card-press__content-box
-                -
-                    const short = article.title.substring(0, 45) + '...'
-                p.card-press__info=short
+                p.card-press__info=article.title
                 img.card-employees__arrow(src=require("../../images/about-us/arrow.svg") alt='check')
 
 
@@ -68,15 +66,11 @@ block content
                     +greatDownButton('bridge-the-gap')
 
         article.plain-article#bridge-the-gap
-            h2 
-                span Bridge the 
-                span.text-primary Family Engagement 
-                span Gap
-
-            p.article-subtitle
-                span Digital health transformation has left family engagement behind, 
-                br
-                span Diya fills the gap!
+            h2
+                div.imaged-title
+                    include ../../images/logos/diya/diya.svg
+                    i.text-primary Family Engagement 
+                | Drives Staff Efficiency & Patient Loyalty
 
             +youtubeInline('HnQKk1cHoCw', require('../../images/pages/index/icu-room.jpg'), 'ICU room')
 
@@ -90,6 +84,8 @@ block content
                     strong.text-primary leading health systems
 
                 ul.clients-logo
+                    li
+                        img(src=require('../../images/pages/index/clients/mount-sinai.png'), alt='Mount Sinai Logo')
                     li
                         img(src=require('../../images/pages/index/clients/kaiser-permanente.png'), alt='Kaiser Permanente Logo')
                     li
@@ -145,6 +141,44 @@ block content
 
                     button.m3.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')")
                         | Learn More
+
+        +wave-divider
+
+        article.plain-article
+            h2 Hear from Our Users
+            .two-columns.m4
+                .left
+                    +youtubeInline('qrhyXCTkqp0', require('../../images/pages/index/nurse-face-during-surgery.jpg'))
+                .right
+                    .quote
+                        img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
+                        img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")
+                        p.text.text-integration Diya has quickly become indispensable for my team & me
+                    .org-person
+                        .avatar-box
+                            img.avatar(src=require("../../images/main-page/dana.jpg"), alt="Dana Klavansky, MD")
+                        .info-box
+                            .name Dana Klavansky, MD
+                            .title Neurointensivist Neurosciences ICU
+                            img.org-logo(src=require('../../images/pages/index/clients/mount-sinai.png'), alt="Mount Sinai Logo")
+
+        article.plain-article
+            .two-columns.m4
+                .right
+                    .quote
+                        img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
+                        img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")
+                        p.text.text-integration Diya helps our patients and families to better cope with serious illness every day
+                    .org-person
+                        .avatar-box
+                            img.avatar(src=require("../../images/main-page/ruth.jpg"), alt="Ruth Levy, NP")
+                        .info-box
+                            .name Ruth Levy, NP
+                            .title Nurse Practitioner Neurosciences ICU
+                            img.org-logo(src=require('../../images/pages/index/clients/mount-sinai.png'), alt="Mount Sinai Logo")
+                .left
+                    +youtubeInline('nhcinjb4RrQ', require('../../images/pages/index/doctor-holds-hand.jpg'))
+
 
         +wave-divider
 
