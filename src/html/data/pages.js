@@ -239,6 +239,15 @@ const pages = {
         name: 'Unlocking the Power of Patient & Family Engagement in Home-Based Care',
         title: 'Unlocking the Power of Patient & Family Engagement in Home-Based Care - Diya Health',
         description: 'Dr. Jain emphasized the importance of actively involving patients and families in care journeys'
+    },
+
+    post2023071200: {
+        fileName: 'the-secret-solution-to-improving-outcomes-family-engagement',
+        url: './blog/the-secret-solution-to-improving-outcomes-family-engagement',
+        path: 'blog/the-secret-solution-to-improving-outcomes-family-engagement',
+        name: 'The Secret Solution to Improving Outcomes: Family Engagement',
+        title: 'The Secret Solution to Improving Outcomes: Family Engagement - Diya Health',
+        description: 'Glenn Llopis highlights the urgent need for family caregiver empowerment as a key solution to the healthcare industry\'s challenges'
     }
 };
 

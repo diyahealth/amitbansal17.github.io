@@ -1,5 +1,12 @@
 const articles = [
     {
+        title: 'The Secret Solution to Improving Outcomes: Family Engagement',
+        href: './blog/the-secret-solution-to-improving-outcomes-family-engagement',
+        image: 'doctor-with-family.jpg',
+        date: 'July 12, 2023',
+        tag: 'family'
+    },
+    {
         title: 'Unlocking the Power of Patient & Family Engagement in Home-Based Care',
         href: './blog/unlocking-the-power-of-patient-family-engagement-in-home-based-care',
         image: 'nurse-explains-prescription.jpg',
