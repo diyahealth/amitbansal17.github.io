@@ -34,5 +34,9 @@
     {
         "from": "telehealth-capabilities",
         "to": "health-systems"
+    },
+    {
+        "from": "blog/diya-health-expands-its-healthcare-expertise-with-the-appointment-of-dr-joe-ponezhan-as-executive-medical-director",
+        "to": "blog/diya-health-expands-its-healthcare-expertise-with-the-appointment-of-dr-joe-ponnezhan-as-executive-medical-director"
     }
 ]

@@ -1,98 +1,86 @@
+const { toKebabCase } = require("./utils");
+
 const articles = [
     {
         title: 'The Secret Solution to Improving Outcomes: Family Engagement',
-        href: './blog/the-secret-solution-to-improving-outcomes-family-engagement',
         image: 'doctor-with-family.jpg',
         date: 'July 12, 2023',
-        tag: 'family'
+        tag: 'family',
     },
     {
         title: 'Unlocking the Power of Patient & Family Engagement in Home-Based Care',
-        href: './blog/unlocking-the-power-of-patient-family-engagement-in-home-based-care',
         image: 'nurse-explains-prescription.jpg',
         date: 'July 5, 2023',
         tag: 'family'
     },
     {
         title: 'Transforming Healthcare with the Power of Engagement',
-        href: './blog/transforming-healthcare-with-the-power-of-engagement',
         image: 'mature-woman-in-consultation.jpg',
         date: 'June 28, 2023',
         tag: 'healthcare'
     },
     {
         title: 'Unveiling the Unsung Heroes: How Family Members Impact Patient Outcomes',
-        href: './blog/unveiling-the-unsung-heroes-how-family-members-impact-patient-outcomes',
         image: 'father-with-son.jpg',
         date: 'June 21, 2023',
         tag: 'family'
     },
     {
         title: 'Navigating the Healthcare Maze: The Burden of Care Coordination on Patients\' Experiences',
-        href: './blog/navigating-the-healthcare-maze-the-burden-of-care-coordination-on-patients-experiences',
         image: 'thinking-woman.jpg',
         date: 'June 14, 2023',
         tag: 'family'
     },
     {
         title: 'Addressing the Forgotten 50%:  The Key to Better Patient Education',
-        href: './blog/addressing-the-forgotten-50-the-key-to-better-patient-education',
         image: 'doctor-showing-tablet.jpg',
         date: 'June 8, 2023',
         tag: 'family'
     },
     {
         title: 'Unleashing the Potential of Patient & Family Engagement Solutions',
-        href: './blog/unleashing-the-potential-of-patient-family-engagement-solutions',
         image: 'woman-checking-phone.jpg',
         date: 'May 31, 2023',
         tag: 'family'
     },
     {
         title: 'Transform Care Delivery: Strategies for a Successful Patient- and Family-Centered Approach',
-        href: './blog/transform-care-delivery-strategies-for-a-successful-patient-and-family-centered-approach',
         image: 'doctors-hand.jpg',
         date: 'May 24, 2023',
         tag: 'family'
     },
     {
         title: 'One-Third of Patients Don’t Receive Education: Here’s How to Fill the Gap',
-        href: './blog/one-third-of-patients-don-t-receive-education-here-s-how-to-fill-the-gap',
         image: 'doctor-explaining-result-to-patient.jpg',
         date: 'May 17, 2023',
         tag: 'healthcare'
     },
     {
         title: 'Embracing the Power of Partnership: Patient and Family-Centered Care for All',
-        href: './blog/embracing-the-power-of-partnership-patient-and-family-centered-care-for-all',
         image: 'doctor-with-patient-and-daughter.jpg',
         date: 'May 11, 2023',
         tag: 'family'
     },
     {
         title: 'Putting Families at the Heart of the ICU: Guidelines for Compassionate Care',
-        href: './blog/putting-families-at-the-heart-of-the-icu-guidelines-for-compassionate-care',
         image: 'nurse-asking-family.jpg',
         date: 'April 25, 2023',
         tag: 'family'
     },
     {
         title: 'Nursing After the Pandemic: The Lingering Impact on Healthcare Workers and How to Address It',
-        href: './blog/nursing-after-the-pandemic-the-lingering-impact-on-healthcare-workers-and-how-to-address-it',
         image: 'nurse-in-icu.jpg',
         date: 'April 18, 2023',
         tag: 'Healthcare',
     },
     {
         title: 'Empowering Family Members: A Key Strategy for Reducing Hospital Readmissions',
-        href: './blog/empowering-family-members-a-key-strategy-for-reducing-hospital-readmissions',
         image: 'avoid-scrambling.jpg',
         date: 'April 11, 2023',
         tag: 'family'
     },
     {
         title: 'Diya Health Expands Its Healthcare Expertise with the Appointment of Dr. Joe Ponnezhan as Executive Medical Director',
-        href: './blog/diya-health-expands-its-healthcare-expertise-with-the-appointment-of-dr-joe-ponezhan-as-executive-medical-director',
         image: 'dr-joe-ponnezhan.jpg',
         alignment: '0 45%',
         date: 'October 30, 2022',
@@ -100,14 +88,12 @@ const articles = [
     },
     {
         title: 'Diya Health Unlocks Patient Experience Improvements: Family Engagement is the Key',
-        href: './blog/diya-health-unlocks-patient-experience-improvements-family-engagement-is-the-key',
         image: 'diya-health-unlocks-patient-experience-improvements.jpg',
         date: 'October 24, 2022',
         tag: 'family'
     },
     {
         title: 'Diya Health Strengthens Its Team with Appointment of Susan Pasley as Clinical Growth Advisor',
-        href: './blog/diya-health-strengthens-its-team-with-appointment-of-susan-pasley-as-clinical-growth-advisor',
         image: 'susan.jpg',
         date: 'September 26, 2022',
         tag: 'team'
@@ -254,4 +240,18 @@ const articles = [
     },
 ];
 
-module.exports = articles;
+function withDefaults(articles) {
+    return articles.map(article => {
+        if (article.title == null) {
+            throw new Error('Missing blog post title');
+        }
+        
+        const defaults = {
+            href: './blog/' + toKebabCase(article.title)
+        };
+
+        return {...defaults, ...article}
+    })
+}
+
+module.exports = withDefaults(articles);

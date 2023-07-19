@@ -20,18 +20,17 @@ const processStaticPage = (pageKey, argv) => {
     const page = pages[pageKey];
 
     if (argv.mode === 'development') {
-        if (page.id === 'index') {
+        if (page.name === 'Index') {
             page.url = page.url + 'index.html';
         } else {
             page.url = page.url + '.html';
         }
     }
 
-
     return new HtmlWebpackPlugin({
-        template: `./html/pages/${page.fileName}.pug`,
+        template: `./html/pages/${page.source}.pug`,
         templateParameters: buildTemplateData(pageKey, argv.mode),
-        filename: `${page.path || page.fileName}.html`,
+        filename: `${page.destination}.html`,
         inject: false
     });
 };
@@ -44,6 +43,7 @@ function buildTemplateData(pageKey, mode) {
     return {
         ...data,
         page: data.pages[pageKey],
+        post: data.blog?.find(x => x.title === data.pages[pageKey].name),
     };
 }
 

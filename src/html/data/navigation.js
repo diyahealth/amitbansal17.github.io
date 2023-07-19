@@ -39,8 +39,8 @@ const buildFamilyDropdown = () => {
 }
 
 const buildBlogDropdown = () => {
-    const { ourBlog, newsAndResources, faq } = pages;
-    return [pageToLink(ourBlog), pageToLink(newsAndResources), { ...pageToLink(faq), title: 'myDiya FAQ' }];
+    const { blog, newsAndResources, faq } = pages;
+    return [pageToLink(blog), pageToLink(newsAndResources), { ...pageToLink(faq), title: 'myDiya FAQ' }];
 }
 
 let navigationLinks = [];
@@ -61,7 +61,7 @@ const buildNavigationLinks = (mode) => {
             dropdown: buildFamilyDropdown(),
         },
         {
-            ...pageToLink(pages.ourBlog, null, postfix),
+            ...pageToLink(pages.blog, null, postfix),
             title: 'Resources',
             dropdown: buildBlogDropdown(),
         },
