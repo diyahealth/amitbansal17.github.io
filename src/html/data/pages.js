@@ -163,7 +163,13 @@ const pages = {
         name: 'The Secret Solution to Improving Outcomes: Family Engagement',
         description: 'Glenn Llopis highlights the urgent need for family caregiver empowerment as a key solution to the healthcare industry\'s challenges',
         parent: 'blog',
-    }
+    },
+
+    post2023071900: {
+        name: 'How Digital Health Is Changing Home Health Care As We Know It',
+        description: 'Care no longer needed to be provided in a physical facility; patients could stay in the comfort of their own homes',
+        parent: 'blog',
+    },
 };
 
 function withDefaults(pages) {

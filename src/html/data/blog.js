@@ -2,6 +2,12 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        title: 'How Digital Health Is Changing Home Health Care As We Know It',
+        image: 'elder-man-in-chair.jpg',
+        date: 'July 19, 2023',
+        tag: 'home care',
+    },
+    {
         title: 'The Secret Solution to Improving Outcomes: Family Engagement',
         image: 'doctor-with-family.jpg',
         date: 'July 12, 2023',
