@@ -1,0 +1,38 @@
+extends ../../shared/layout.pug
+block head
+    - const canonicalUrl = `https://www.diyahealth.org/${page.destination}`;
+    - const encodedCanonicalUrl = encodeURIComponent(canonicalUrl);
+    base(href="../")
+
+    meta(name="twitter:card" value=page.name)
+    meta(property="og:title" content=page.name)
+    meta(property="og:type" content="website")
+    meta(property="og:url" content=canonicalUrl)
+    meta(property="og:image" content=`https://www.diyahealth.org/${require(`@images/blog/${post.image}`)}`)
+    meta(property="og:description" content=page.description)
+
+
+block content
+    main.post-container
+        .post-container__header
+            .post-container__tag=post.tag
+
+            h1=post.title
+            .post-container__date-time
+                span.post-container__date=post.date
+            .post-container__social-networks
+                a(href=`https://www.facebook.com/sharer/sharer.php?u=${encodedCanonicalUrl}` class='post-ref' target="__blank")
+                    img.post-container__social-image(src=require("@images/icons/facebook-icon.svg") alt='check') 
+                a(href=`http://www.linkedin.com/shareArticle?mini=true&url=${encodedCanonicalUrl}` class='post-ref' target="__blank") 
+                    img.post-container__social-image(src=require("@images/icons/linkedin-icon.svg") alt='check')
+                a(href=`https://twitter.com/intent/tweet?url=${encodedCanonicalUrl}` class='post-ref' target="__blank")
+                    img.post-container__social-image(src=require("@images/icons/twitter-icon.svg") alt='check')
+        .post-container__image-box
+            img(src=require(`@images/blog/${post.image}`) alt=post.imageAlt)
+
+        .post-container__text-box
+            block post-content
+            .post-container__text-block
+                p.post-container__bold-text  About Diya Health
+                p Diya Health is a Silicon Valley-based digital health company that streamlines hospitals' communication with patients' family members to improve satisfaction ratings and increase clinical staff efficiency. The HIPAA and GDPR-compliant platform complements EHRs for inpatient, discharge, and post-discharge communication. Learn more at 
+                    a(href='https://www.diyahealth.org/' class='post-ref' target="__blank") &nbsp; www.diyahealth.org

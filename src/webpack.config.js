@@ -15,17 +15,10 @@ const buildSiteMap = require('./framework/sitemap');
 const processAfterDynamic = ['healthSystems', 'individuals'];
 
 
-const processStaticPage = (pageKey, argv) => {
-    const pages = data.pages;
-    const page = pages[pageKey];
+const blogMap = new Map(data.blog.filter(x => x.key != null).map(x => [x.key, x]));
 
-    if (argv.mode === 'development') {
-        if (page.name === 'Index') {
-            page.url = page.url + 'index.html';
-        } else {
-            page.url = page.url + '.html';
-        }
-    }
+const processStaticPage = (pageKey, argv) => {
+    const page = data.pages[pageKey];
 
     return new HtmlWebpackPlugin({
         template: `./html/pages/${page.source}.pug`,
@@ -43,8 +36,8 @@ function buildTemplateData(pageKey, mode) {
     return {
         ...data,
         page: data.pages[pageKey],
-        post: data.blog?.find(x => x.title === data.pages[pageKey].name),
-    };
+        post: blogMap.get(pageKey),
+    }
 }
 
 function processRedirect(from, to, argv) {
@@ -59,6 +52,8 @@ function processRedirect(from, to, argv) {
 }
 
 function buildWebpackPages(argv) {
+    overrideDevUrls(argv);
+
     const siteMapOut = path.resolve("../dist");
     const dynamicRoot = path.join(__dirname, 'data');
     const blogRoot = path.join(__dirname, 'posts');
@@ -80,6 +75,15 @@ function buildWebpackPages(argv) {
 
     return existing.concat(dynamic).concat(restStaticPages).concat(redirectPages);
 
+}
+
+function overrideDevUrls(argv) {
+    if (argv.mode === 'development') {
+        Object.values(data.pages).forEach(page => page.url += page.name === 'Index' ? 'index.html' : '.html');
+        data.blog
+            .filter(post => post.key != null)
+            .forEach(post => post.href = data.pages[post.key].url);
+    }
 }
 
 module.exports = (env, argv) => ({
@@ -119,7 +123,10 @@ module.exports = (env, argv) => ({
         ]
     },
     resolve: {
-        extensions: [".ts", ".js"]
+        extensions: [".ts", ".js"],
+        alias: {
+            '@images': path.join(__dirname, './images'),
+        },
     },
     plugins: [
         new CopyWebpackPlugin({

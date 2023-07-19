@@ -180,8 +180,8 @@ function withDefaults(pages) {
         }
         const parent = page.parent ? page.parent + '/' : '';
         const normalizedName = toKebabCase(page.name);
-        const source = page.source ?? normalizedName;
-        const destination = page.destination ?? parent + source;
+        const source = page.source ?? parent + normalizedName;
+        const destination = page.destination ?? source;
         const defaults = {
             source,
             destination,
