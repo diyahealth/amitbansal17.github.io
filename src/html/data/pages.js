@@ -170,6 +170,12 @@ const pages = {
         description: 'Care no longer needed to be provided in a physical facility; patients could stay in the comfort of their own homes',
         parent: 'blog',
     },
+
+    post2023072600: {
+        name: 'Reducing Surgery Cancellations with Patient Engagement Strategies',
+        description: 'Day-of surgical cancellations are a significant challenge for healthcare providers, impacting both patient care and the financial health of medical facilities',
+        parent: 'blog',
+    }
 };
 
 function withDefaults(pages) {

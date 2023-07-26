@@ -2,10 +2,18 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023072600",
+        title: "Reducing Surgery Cancellations with Patient Engagement Strategies",
+        image: "surgery.jpg",
+        imageAlt: "Surgeon team",
+        date: "July 26, 2023",
+        tag: "healthcare",
+    },
+    {
         key: "post2023071900",
         title: "How Digital Health Is Changing Home Health Care As We Know It",
         image: "elder-man-in-chair.jpg",
-        imageAlt: 'Elder man in chair',
+        imageAlt: "Elder man in chair",
         date: "July 19, 2023",
         tag: "home care",
     },
