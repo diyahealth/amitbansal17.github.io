@@ -2,15 +2,23 @@
     const links = [
             {
                 href: 'https://www.facebook.com/DiyaHealthOrg',
-                icon: require("../../images/icons/facebook-icon.svg"),
+                title: 'Facebook Community',
+                icon: require("@images/icons/facebook-icon.svg"),
             },
             {
                 href: 'https://twitter.com/DiyaHealth',
-                icon: require("../../images/icons/twitter-icon.svg"),
+                title: 'Twitter',
+                icon: require("@images/icons/twitter-icon.svg"),
             },
             {
                 href: 'https://www.linkedin.com/company/diyahealth',
-                icon: require("../../images/icons/linkedin-icon.svg"),
+                title: 'Linked In',
+                icon: require("@images/icons/linkedin-icon.svg"),
+            },
+            {
+                href: 'https://www.youtube.com/@DiyaHealth',
+                title: 'Youtube Channel',
+                icon: require("@images/icons/youtube-icon.svg"),
             }
         ];
 
@@ -81,7 +89,7 @@ footer.footer
             .input-footer-group
                     each item in links
                         a(href=item.href, target="_blank")
-                            img(src=item.icon, class="input-footer-group__img") 
+                            img(src=item.icon, class="input-footer-group__img", alt=item.title, title=item.title) 
             .link-container
                 a(href=pages.privacyPolicy.url)= pages.privacyPolicy.name
                 a(href=pages.termsAndConditions.url)= pages.termsAndConditions.name

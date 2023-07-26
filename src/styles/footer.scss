@@ -59,8 +59,14 @@
         flex-wrap: wrap;
         row-gap: 30px;
 
-        >div {
+        > div {
             padding-left: 20px;
+        }
+
+        @include for-tablet {
+            > div {
+                padding-left: 0;
+            }
         }
 
         @media screen and (min-width: $break-mobile + 1px) and (max-width: 1136px) {
