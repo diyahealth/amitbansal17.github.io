@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023080200",
+        title: "Seamless Healthcare Journeys: How Payers & Providers Can Unleash the Value of Smooth Care Transitions",
+        image: "discharge-patient.jpg",
+        imageAlt: "Discharge patient",
+        date: "August 2, 2023",
+        tag: "healthcare"
+    },
+    {
         key: "post2023072600",
         title: "Reducing Surgery Cancellations with Patient Engagement Strategies",
         image: "surgery.jpg",

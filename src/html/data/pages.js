@@ -175,6 +175,12 @@ const pages = {
         name: 'Reducing Surgery Cancellations with Patient Engagement Strategies',
         description: 'Day-of surgical cancellations are a significant challenge for healthcare providers, impacting both patient care and the financial health of medical facilities',
         parent: 'blog',
+    },
+
+    post2023080200: {
+        name: "Seamless Healthcare Journeys: How Payers & Providers Can Unleash the Value of Smooth Care Transitions",
+        description: "Ensuring smooth transitions of care is crucial for optimizing patient outcomes and controlling costs",
+        parent: 'blog',
     }
 };
 
