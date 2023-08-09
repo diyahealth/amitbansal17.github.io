@@ -181,6 +181,12 @@ const pages = {
         name: "Seamless Healthcare Journeys: How Payers & Providers Can Unleash the Value of Smooth Care Transitions",
         description: "Ensuring smooth transitions of care is crucial for optimizing patient outcomes and controlling costs",
         parent: 'blog',
+    },
+
+    post2023080900: {
+        name: "Improving Patient Retention with Effective Communication",
+        description: "The article highlights the growing significance of patient-provider communication in influencing patients' choices",
+        parent: "blog",
     }
 };
 
