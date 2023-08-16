@@ -187,7 +187,13 @@ const pages = {
         name: "Improving Patient Retention with Effective Communication",
         description: "The article highlights the growing significance of patient-provider communication in influencing patients' choices",
         parent: "blog",
-    }
+    },
+
+    post2023081600 : {
+        name: "Enhancing Patient & Family Engagement: A Pathway to Financial Success in Healthcare",
+        description: "Healthcare providers improve patient satisfaction and increase adherence by involving patients and families in care delivery",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {

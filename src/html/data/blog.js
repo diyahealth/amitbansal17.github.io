@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023081600",
+        title: "Enhancing Patient & Family Engagement: A Pathway to Financial Success in Healthcare",
+        image: "man-listening-to-presentation.jpg",
+        imageAlt: "Man listening to presentation",
+        date: "August 16, 2023",
+        tag: "healthcare",
+    },
+    {
         key: "post2023080900",
         title: "Improving Patient Retention with Effective Communication",
         image: "medical-exam.jpg",
