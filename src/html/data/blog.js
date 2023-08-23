@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023082300",
+        title: "How to Succeed in Value-Based Care: Patient & Family Engagement",
+        image: "family-with-patient-in-room.jpg",
+        imageAlt: "Family with patient in room",
+        date: "August 23, 2023",
+        tag: "family",
+    },
+    {
         key: "post2023081600",
         title: "Enhancing Patient & Family Engagement: A Pathway to Financial Success in Healthcare",
         image: "man-listening-to-presentation.jpg",

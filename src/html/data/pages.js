@@ -194,6 +194,12 @@ const pages = {
         description: "Healthcare providers improve patient satisfaction and increase adherence by involving patients and families in care delivery",
         parent: "blog",
     },
+
+    post2023082300 : {
+        name: "How to Succeed in Value-Based Care: Patient & Family Engagement",
+        description: "A critical factor that will promote success for healthcare organizations in this transformative care model is robust patient and family engagement",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {
