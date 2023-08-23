@@ -90,5 +90,10 @@ body {
   .c-40-sub-and-sibling-nav ul li>a:hover, .c-40-sub-and-sibling-nav ul li>a:focus {
     background-color: #dddddd;
 }
-
+@media (min-width: 767.98px) {
+    .jumbotron.acf-slider.container.mx-auto {
+        background-attachment: fixed;
+        min-height: calc(100vh - 75px);
+    }
+}
 
