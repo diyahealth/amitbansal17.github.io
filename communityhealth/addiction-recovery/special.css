@@ -1,8 +1,8 @@
-.elementor-widget-container > ul {
+.elementor-widget-container>ul {
 	margin: 0 0 10px 25px;
 }
 
-.elementor-widget-container > ul > li {
+.elementor-widget-container>ul>li {
 	line-height: 1.4;
 	list-style: initial;
 }
@@ -12,11 +12,11 @@ h2 {
 }
 
 h5 {
-    font-size: 1.25rem;
+	font-size: 1.25rem;
 }
 
 h6 {
-    font-size: 1rem;
+	font-size: 1rem;
 }
 
 .self-service-widget {
@@ -26,4 +26,25 @@ h6 {
 
 .elementor-container.elementor-column-gap-default {
 	justify-content: center;
+}
+
+.elementor-element-e2ef08f {
+	margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+	body {
+		padding-top: 75px !important;
+	}
+
+	.elementor-section.elementor-section-height-full {
+		height: auto;
+		min-height: calc(100vh - 75px);
+	}
+
+	.elementor-element-e2ef08f {
+		align-self: start;
+		margin-top: 50vh;
+		transform: translateY(-50%);
+	}
 }
