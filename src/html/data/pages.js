@@ -200,6 +200,12 @@ const pages = {
         description: "A critical factor that will promote success for healthcare organizations in this transformative care model is robust patient and family engagement",
         parent: "blog",
     },
+
+    post2023083000 : {
+        name: "Preventing Cyberchondria Among Your Patients",
+        description: "Individuals are increasingly turning to the internet for medical information and self-diagnosis",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {

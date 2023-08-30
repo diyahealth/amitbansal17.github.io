@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023083000",
+        title: "Preventing Cyberchondria Among Your Patients",
+        image: "elder-women.jpg",
+        imageAlt: "Elder Women",
+        date: "August 30, 2023",
+        tag: "patients",
+    },
+    {
         key: "post2023082300",
         title: "How to Succeed in Value-Based Care: Patient & Family Engagement",
         image: "family-with-patient-in-room.jpg",
