@@ -188,7 +188,7 @@
 
         .pricing-card {
             margin-top: 56px;
-            flex-basis: 31%;
+            flex-basis: auto;
             height: auto;
             background: white;
             display: flex;
@@ -298,6 +298,16 @@
             &__price-small {
                 font-family: Open Sans;
                 font-size: 32px;
+                font-weight: 700;
+                line-height: 44px;
+                letter-spacing: 0px;
+                text-align: left;
+
+            }
+
+            &__price-medium {
+                font-family: Open Sans;
+                font-size: 48px;
                 font-weight: 700;
                 line-height: 44px;
                 letter-spacing: 0px;
