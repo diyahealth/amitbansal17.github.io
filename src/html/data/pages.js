@@ -206,6 +206,12 @@ const pages = {
         description: "Individuals are increasingly turning to the internet for medical information and self-diagnosis",
         parent: "blog",
     },
+
+    post2023090600: {
+        name: "Empowering Patients: The Rise of Shared Decision-Making",
+        description: "Both patients and providers are embracing a shift towards shared decision-making",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {
