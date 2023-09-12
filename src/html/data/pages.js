@@ -212,6 +212,12 @@ const pages = {
         description: "Both patients and providers are embracing a shift towards shared decision-making",
         parent: "blog",
     },
+
+    post2023091200: {
+        name: "Improving the Family Experience in Healthcare: The Role of Communication",
+        description: "Healthcare providers have increasingly recognized the pivotal role of family members and caregivers in patient care",
+        parent: "blog",
+    }
 };
 
 function withDefaults(pages) {

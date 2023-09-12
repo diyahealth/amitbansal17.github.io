@@ -2,8 +2,16 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
-        key: 'post2023090600',
-        title: 'Empowering Patients: The Rise of Shared Decision-Making',
+        key: "post2023091200",
+        title: "Improving the Family Experience in Healthcare: The Role of Communication",
+        image: "doctor-with-grandmother-and-granddaughter.jpg",
+        imageAlt: "Doctor stays with grandmother and her granddaughter",
+        date: "September 12, 2023",
+        tag: "family"
+    },
+    {
+        key: "post2023090600",
+        title: "Empowering Patients: The Rise of Shared Decision-Making",
         image: "doctor-holds-patients-hand.jpg",
         date: "September 6, 2023",
         tag: "patients"
