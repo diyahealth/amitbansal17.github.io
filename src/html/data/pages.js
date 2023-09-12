@@ -217,7 +217,13 @@ const pages = {
         name: "Improving the Family Experience in Healthcare: The Role of Communication",
         description: "Healthcare providers have increasingly recognized the pivotal role of family members and caregivers in patient care",
         parent: "blog",
-    }
+    },
+
+    post2023091201: {
+        name: "The Transformative Power of AI in Caring for Older Adults",
+        description: "Artificial intelligence (AI) is emerging as a game-changer in healthcare, offering innovative solutions to improve patient care and overall well-being, especially for older adults.",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {

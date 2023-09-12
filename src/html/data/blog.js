@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023091201",
+        title: "The Transformative Power of AI in Caring for Older Adults",
+        image: "doctor-examines-heart.jpg",
+        imageAlt: "Doctor examines heart",
+        date: "September 12, 2023",
+        tag: "patients"
+    },
+    {
         key: "post2023091200",
         title: "Improving the Family Experience in Healthcare: The Role of Communication",
         image: "doctor-with-grandmother-and-granddaughter.jpg",
