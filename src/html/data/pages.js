@@ -224,6 +224,12 @@ const pages = {
         description: "Artificial intelligence (AI) is emerging as a game-changer in healthcare, offering innovative solutions to improve patient care and overall well-being, especially for older adults.",
         parent: "blog",
     },
+
+    post2023092700: {
+        name: "The Technological Pillars Supporting the Hospital-at-Home Revolution",
+        description: "Hospital-at-home programs allow patients to receive care outside the traditional hospital setting, improving access and reducing costs.",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {

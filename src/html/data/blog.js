@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023092700",
+        title: "The Technological Pillars Supporting the Hospital-at-Home Revolution",
+        image: "oxygen-test.jpg",
+        imageAlt: "Oxygen Test",
+        date: "September 27, 2023",
+        tag: "healthcare",
+    },
+    {
         key: "post2023091201",
         title: "The Transformative Power of AI in Caring for Older Adults",
         image: "doctor-examines-heart.jpg",
