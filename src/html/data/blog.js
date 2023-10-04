@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023100400",
+        title: "A Path to Patient-Family-Centric Care",
+        image: "surgery-consultation-preparation-tips.jpg",
+        imageAlt: "Surgery consultation preparation tips",
+        date: "October 4, 2023",
+        tag: "family"
+    },
+    {
         key: "post2023092700",
         title: "The Technological Pillars Supporting the Hospital-at-Home Revolution",
         image: "oxygen-test.jpg",

@@ -230,6 +230,12 @@ const pages = {
         description: "Hospital-at-home programs allow patients to receive care outside the traditional hospital setting, improving access and reducing costs.",
         parent: "blog",
     },
+
+    post2023100400: {
+        name: "A Path to Patient-Family-Centric Care",
+        description: "Shared decision-making has gained recognition for its potential to enhance the quality of care",
+        parent: "blog"
+    },
 };
 
 function withDefaults(pages) {
