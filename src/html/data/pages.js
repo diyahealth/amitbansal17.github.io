@@ -236,6 +236,12 @@ const pages = {
         description: "Shared decision-making has gained recognition for its potential to enhance the quality of care",
         parent: "blog"
     },
+
+    post2023101100: {
+        name: "Support Clinician Efficiency & Wellbeing with Digital Transformation",
+        description: "Digital transformation is becoming a top priority, as it has the potential to reduce clinician burnout, boost job satisfaction, and improve the patient experience",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {

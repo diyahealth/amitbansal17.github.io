@@ -2,12 +2,20 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023101100",
+        title: "Support Clinician Efficiency & Wellbeing with Digital Transformation",
+        image: "nurse-with-tablet.jpg",
+        imageAlt: "Nurse with tablet",
+        date: "October 11, 2023",
+        tag: "healthcare",
+    },
+    {
         key: "post2023100400",
         title: "A Path to Patient-Family-Centric Care",
         image: "surgery-consultation-preparation-tips.jpg",
         imageAlt: "Surgery consultation preparation tips",
         date: "October 4, 2023",
-        tag: "family"
+        tag: "family",
     },
     {
         key: "post2023092700",
