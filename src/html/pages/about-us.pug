@@ -53,8 +53,8 @@ mixin popupTeam
                             .popup-team__arrow.popup-team__arrow-left
                             .popup-team__arrow.popup-team__arrow-right
                         .popup-team__text-box
-                            p.popup-team__text 
-   
+                            p.popup-team__text
+
 block content
     -
         const missions = [
@@ -146,6 +146,14 @@ block content
                 bio: 'Dr. Joe Ponnezhan is a pulmonary and critical care physician who has been practicing for more than ten years. He is passionate about providing compassionate and comprehensive care. As Executive Medical Director, Dr. Ponnezhan applies his expertise to identify opportunities for growth and ensure the platform promotes the highest quality of care.',
                 image: require('../../images/about-us/photos/ponnezhan.png'),
                 linkedin: 'https://www.linkedin.com/in/vimal-joe-ponnezhan-md-4736a492/'
+            },
+            {
+                name: 'Mark Williams',
+                quote: "",
+                title: 'Head of Business Development & Strategy',
+                bio: 'Mark Williams is a seasoned strategist, leader, and health-tech entrepreneur with a remarkable 30-year career spanning across the healthcare continuum. With extensive expertise in delivering innovative solutions, Mark has overseen the largest global Oracle EHR implementation with Wareed, providing invaluable insights into the complexities of the healthcare ecosystem. Delivering value on time and under budget. \n\n Mark was the senior thought leader whose team was behind the creation of the NHSx Digital Transformation Road Map, showcasing his visionary approach to revolutionizing healthcare systems. Building value for all stakeholders in the healthcare ecosystem.  Throughout his journey, he has held executive positions at renowned organizations such as Atos, Microsoft, Orion Health, and Siemens. His transformative leadership has steered these organizations through significant growth and change, elevating their service standards and profitability. \n\n A trusted advisor to startups, healthcare providers, and major enterprises, Mark currently serves as a Strategic Advisor at ScaleHealth, Care Logistics, and QliqSoft. In these roles, he facilitates innovation and transformation within the health-tech domain, contributing to the advancement of healthcare technology. \n\n Mark\'s reputation as an industry leader is built on his strategic acumen, unwavering commitment to excellence, and a passion for empowering organizations to thrive. His unique blend of creativity, analytical prowess, and technical expertise continues to leave a lasting impact on the industries he serves.',
+                image: require('../../images/about-us/photos/williams.jpg'),
+                linkedin: 'https://www.linkedin.com/in/markwatartistry/'
             }
         ];
 
@@ -192,14 +200,16 @@ block content
             .leadership-container__box-content
                 +teamMember(team[0])
                 +teamMember(team[1])
+                +teamMember(team[8])
                 +teamMember(team[7])
-                +teamMember(team[2])
             .leadership-container__box-content.leadership-container__box-content--marginTop.leadership-container__padding
+                +teamMember(team[2])
                 +teamMember(team[3])
                 +teamMember(team[4])
                 +teamMember(team[6])
+            .leadership-container__box-content.leadership-container__box-content--marginTop.leadership-container__padding
                 +teamMember(team[5])
-                
+
         article.our-blog-container
             .our-blog-container__title
                 h2 Resources
