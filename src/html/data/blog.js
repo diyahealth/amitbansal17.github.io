@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023102000",
+        title: "Modernizing Care Delivery: Technology's Empowering Touch in Patient-Centric Medicine",
+        image: "smartphone-with-health-info.jpg",
+        imageAlt: "Smartphone contains person's health information",
+        date: "October 20, 2023",
+        tag: "healthcare",
+    },
+    {
         key: "post2023101100",
         title: "Support Clinician Efficiency & Wellbeing with Digital Transformation",
         image: "nurse-with-tablet.jpg",

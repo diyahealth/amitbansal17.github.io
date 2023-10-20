@@ -242,6 +242,12 @@ const pages = {
         description: "Digital transformation is becoming a top priority, as it has the potential to reduce clinician burnout, boost job satisfaction, and improve the patient experience",
         parent: "blog",
     },
+
+    post2023102000: {
+        name: "Modernizing Care Delivery: Technology's Empowering Touch in Patient-Centric Medicine",
+        description: "New tools and digital solutions empower patients, improve healthcare delivery, and place individuals at the center of their care",
+        parent: "blog",
+    }
 };
 
 function withDefaults(pages) {
