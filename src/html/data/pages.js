@@ -247,6 +247,12 @@ const pages = {
         name: "Modernizing Care Delivery: Technology's Empowering Touch in Patient-Centric Medicine",
         description: "New tools and digital solutions empower patients, improve healthcare delivery, and place individuals at the center of their care",
         parent: "blog",
+    },
+
+    post2023102500: {
+        name: "Digital Transformation: Supporting the Healthcare Workforce",
+        description: "As telemedicine, remote monitoring, and app-based healthcare tools become more prominent, healthcare is extending beyond traditional hospital settings",
+        parent: "blog",
     }
 };
 

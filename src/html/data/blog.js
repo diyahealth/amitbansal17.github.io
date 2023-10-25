@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023102500",
+        title: "Digital Transformation: Supporting the Healthcare Workforce",
+        image: "surgery-team.jpg",
+        imageAlt: "Surgery Team",
+        date: "October 25, 2023",
+        tag: "healthcare",
+    },
+    {
         key: "post2023102000",
         title: "Modernizing Care Delivery: Technology's Empowering Touch in Patient-Centric Medicine",
         image: "smartphone-with-health-info.jpg",
