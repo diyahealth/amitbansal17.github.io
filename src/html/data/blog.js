@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023110300",
+        title: "The Transformative Power of AI and Automation in Care Management",
+        image: "digital-healthcare.jpg",
+        imageAlt: "Digital HealthCare",
+        date: "November 3, 2023",
+        tag: "healthcare",
+    },
+    {
         key: "post2023102500",
         title: "Digital Transformation: Supporting the Healthcare Workforce",
         image: "surgery-team.jpg",

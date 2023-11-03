@@ -253,7 +253,13 @@ const pages = {
         name: "Digital Transformation: Supporting the Healthcare Workforce",
         description: "As telemedicine, remote monitoring, and app-based healthcare tools become more prominent, healthcare is extending beyond traditional hospital settings",
         parent: "blog",
-    }
+    },
+
+    post2023110300: {
+        name: "The Transformative Power of AI and Automation in Care Management",
+        description: "Automation through AI has the potential to revolutionize the current state of care management",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {
