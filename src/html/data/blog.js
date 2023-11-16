@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023111600",
+        title: "Crafting Incomparable Patient Experiences Through Innovation",
+        image: "physician.jpg",
+        imageAlt: "Physician",
+        date: "November 16, 2023",
+        tag: "patients"
+    },
+    {
         key: "post2023110300",
         title: "The Transformative Power of AI and Automation in Care Management",
         image: "digital-healthcare.jpg",
@@ -404,12 +412,12 @@ function withDefaults(articles) {
         if (article.title == null) {
             throw new Error("Missing blog post title");
         }
-        
+
         const defaults = {
             href: "./blog/" + toKebabCase(article.title)
         };
 
-        return {...defaults, ...article}
+        return { ...defaults, ...article }
     })
 }
 

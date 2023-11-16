@@ -189,19 +189,19 @@ const pages = {
         parent: "blog",
     },
 
-    post2023081600 : {
+    post2023081600: {
         name: "Enhancing Patient & Family Engagement: A Pathway to Financial Success in Healthcare",
         description: "Healthcare providers improve patient satisfaction and increase adherence by involving patients and families in care delivery",
         parent: "blog",
     },
 
-    post2023082300 : {
+    post2023082300: {
         name: "How to Succeed in Value-Based Care: Patient & Family Engagement",
         description: "A critical factor that will promote success for healthcare organizations in this transformative care model is robust patient and family engagement",
         parent: "blog",
     },
 
-    post2023083000 : {
+    post2023083000: {
         name: "Preventing Cyberchondria Among Your Patients",
         description: "Individuals are increasingly turning to the internet for medical information and self-diagnosis",
         parent: "blog",
@@ -260,6 +260,12 @@ const pages = {
         description: "Automation through AI has the potential to revolutionize the current state of care management",
         parent: "blog",
     },
+
+    post2023111600: {
+        name: "Crafting Incomparable Patient Experiences Through Innovation",
+        description: "Patient experience programs aim to simplify healthcare treatment by providing guidance, education, and resources to help individuals overcome obstacles and achieve their health goals.",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {
@@ -279,7 +285,7 @@ function withDefaults(pages) {
             title: page.name + ' - Diya Health',
         }
 
-        pages[pageKey] = {...defaults, ...page };
+        pages[pageKey] = { ...defaults, ...page };
     }
 
     return pages;
