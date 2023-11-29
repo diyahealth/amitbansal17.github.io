@@ -74,6 +74,7 @@ const pages = {
         source: "404",
         destination: "404",
         description: "The requested resource can not be found",
+        excludeFromSitemap: true,
     },
 
     post2022092600: {

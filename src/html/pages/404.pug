@@ -18,8 +18,7 @@ block content
 
 block script
     script.
-        var location = window.location;
         var appPrefixes = ["/s/", "/auth/", "/account/", "/p/", "/epic-integration/", "/public-branding/", "/public/", "/sessions/", "/images/", "/application/", "/unsupported-browser/", "/emergency/", "/shared-incident/", "/appointments/", "/covid-passport/",  "/error/", "/client-redirect/"];
-        if (appPrefixes.some(x => location.pathname.startsWith(x))) {
+        if (appPrefixes.some(x => window.location.pathname.startsWith(x))) {
             window.location = "https://app.diya.health" + location.pathname + location.search + location.hash;
         }

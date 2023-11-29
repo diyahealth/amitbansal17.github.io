@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: https://diya.health/sitemap.txt
+Sitemap: https://www.diya.health/sitemap.txt
 Disallow: /self-service-example.html
 Disallow: /self-service-example
 Disallow: /general-hospital/*

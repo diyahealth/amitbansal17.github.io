@@ -2,7 +2,7 @@ const static = require("../html/data").pages;
 const fs = require("fs");
 const path = require("path");
 
-const buildStaticUrls = () => Object.values(static).map(x => x.url.substring(2));
+const buildStaticUrls = () => Object.values(static).filter(x => !x.excludeFromSitemap).map(x => x.url.substring(2));
 const buildDynamicUrls = (root) => fs.readdirSync(root);
 const buildBlogUrls = (root) => fs.readdirSync(root)
     .filter(x => path.extname(x) === '.html')
@@ -12,7 +12,7 @@ function buildSiteMap(dynamicRoot, blogRoot, siteMapOut) {
     const pageNames = buildStaticUrls()
         .concat(buildDynamicUrls(dynamicRoot))
         .concat(buildBlogUrls(blogRoot));
-    const urls = pageNames.map(x => 'https://diya.health/' + encodeURI(x));
+    const urls = pageNames.map(x => 'https://www.diya.health/' + encodeURI(x));
     const content = urls.join('\r\n');
     const outPath = path.join(siteMapOut, 'sitemap.txt');
     ensureDirectoryExistence(outPath);
