@@ -69,6 +69,13 @@ const pages = {
         description: "Terms and conditions of Diya Health Website",
     },
 
+    404: {
+        name: "Not Found",
+        source: "404",
+        destination: "404",
+        description: "The requested resource can not be found",
+    },
+
     post2022092600: {
         name: "Diya Health Strengthens Its Team with Appointment of Susan Pasley as Clinical Growth Advisor",
         description: 'Diya Health, a digital health technology platform that streamlines family engagement, announced today the appointment of Susan Pasley, MS, BSN, RN, to its Board of Advisors',
