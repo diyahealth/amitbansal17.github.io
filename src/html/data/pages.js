@@ -274,6 +274,12 @@ const pages = {
         description: "Patient experience programs aim to simplify healthcare treatment by providing guidance, education, and resources to help individuals overcome obstacles and achieve their health goals.",
         parent: "blog",
     },
+
+    post2023120600: {
+        name: "Leveraging Digital Health to Connect Care in Rural Communities",
+        description: "Prominent healthcare leaders see digital health as pivotal in fostering health equity in rural America.",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {

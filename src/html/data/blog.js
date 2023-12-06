@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023120600",
+        title: "Leveraging Digital Health to Connect Care in Rural Communities",
+        image: "leveraging-digital-health.jpg",
+        imageAlt: "Leveraging Digital Health",
+        date: "December 6, 2023",
+        tag: "healthcare"
+    },
+    {
         key: "post2023111600",
         title: "Crafting Incomparable Patient Experiences Through Innovation",
         image: "physician.jpg",
