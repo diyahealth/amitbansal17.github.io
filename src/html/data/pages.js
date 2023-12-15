@@ -280,6 +280,12 @@ const pages = {
         description: "Prominent healthcare leaders see digital health as pivotal in fostering health equity in rural America.",
         parent: "blog",
     },
+
+    post2023121500: {
+        name: "The Role of Digital Solutions in Improving Staff Retention and Care Quality",
+        description: "Healthcare leaders must invest in digital solutions that improve the patient experience and prioritize the well-being of clinicians and staff.",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {

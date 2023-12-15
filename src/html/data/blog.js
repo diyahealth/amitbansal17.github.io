@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2023121500",
+        title: "The Role of Digital Solutions in Improving Staff Retention and Care Quality",
+        image: "staff-retention-and-care-quality.jpg",
+        imageAlt: "Staff Retention and Care Quality",
+        date: "December 15, 2023",
+        tag: "healthcare"
+    },
+    {
         key: "post2023120600",
         title: "Leveraging Digital Health to Connect Care in Rural Communities",
         image: "leveraging-digital-health.jpg",
