@@ -286,6 +286,12 @@ const pages = {
         description: "Healthcare leaders must invest in digital solutions that improve the patient experience and prioritize the well-being of clinicians and staff.",
         parent: "blog",
     },
+
+    post2024012200: {
+        name: "How to Mitigate the Problems With Healthcare Interpreter Services",
+        description: "Language barriers, however, pose significant challenges that can impede the delivery of accurate and timely medical services.",
+        parent: "blog",
+    }
 };
 
 function withDefaults(pages) {

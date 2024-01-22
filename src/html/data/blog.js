@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2024012200",
+        title: "How to Mitigate the Problems With Healthcare Interpreter Services",
+        image: "a-doctor-with-a-foreigner.jpg",
+        imageAlt: "A doctor with a foreigner",
+        date: "January 19, 2024",
+        tag: "healthcare",
+    },
+    {
         key: "post2023121500",
         title: "The Role of Digital Solutions in Improving Staff Retention and Care Quality",
         image: "staff-retention-and-care-quality.jpg",
