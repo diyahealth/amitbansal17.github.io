@@ -82,8 +82,8 @@ block content
                 'DrugBank',
         ];
 
-        const team = [
-            {
+        const team = {
+            amit: {
                 name: 'Amit Bansal',
                 title: 'CEO & Founder',
                 quote: "Diya is a mission of a lifetime for me!",
@@ -91,7 +91,7 @@ block content
                 image: require('../../images/about-us/photos/bansal.jpg'),
                 linkedin: 'https://www.linkedin.com/in/ambansal/',
             },
-            {
+            roman: {
                 name: 'Roman Polunin',
                 quote: "Health information shouldn't be locked within the walls of clinical systems. I'm passionate about Diya Health because it fulfills the vast need for a platform that enables meaningful, flexible, engaging, and measurable health communication.",
                 title: 'Technical Advisor',
@@ -99,7 +99,7 @@ block content
                 image: require('../../images/about-us/photos/polunin.png'),
                 linkedin: 'https://www.linkedin.com/in/romanpolunin/',
             },
-            {
+            daniel: {
                 name: 'Daniel Garcia, MD, PhD',
                 quote: "As a physician, everyday I see the challenges created by gaps in information—Diya Health has created a transformational ecosystem that connects physicians, patients and families to improve critical information delivery when needed most. I am excited to be a part of Diya Health’s journey, and I look forward to contributing my clinical expertise to improve patient care.",
                 title: 'Executive Director of Business Development',
@@ -107,7 +107,7 @@ block content
                 image: require('../../images/about-us/photos/garcia.png'),
                 linkedin: 'https://www.linkedin.com/in/drdangarcia/',
             },
-            {
+            danielle: {
                 name: 'Danielle Kaiser, MHA',
                 quote:"Diya Health empowers organizations and individuals with information to improve health outcomes. With Diya, everyone can become better health advocates for themselves and their loved ones.",
                 title: 'Director of Customer Success',
@@ -115,7 +115,7 @@ block content
                 image: require('../../images/about-us/photos/kaiser.png'),
                 linkedin: 'https://www.linkedin.com/in/danielle-kaiser/',
             },
-            {
+            wally: {
                 name: 'Wally Finley, MSCS',
                 quote: "",
                 title: 'Head of IT & Compliance',
@@ -123,7 +123,7 @@ block content
                 image: require('../../images/about-us/photos/finley.png'),
                 linkedin: 'https://www.linkedin.com/in/wfinley/',  
             },
-            {
+            alex: {
                 name: 'Alex Tolkachev',
                 quote: "Diya Health helps connect technologies and people to make their lives lighter. It’s exciting to be a part of the future of health and wellness.",
                 title: 'Director of Engineering',
@@ -131,23 +131,7 @@ block content
                 image: require('../../images/about-us/photos/tolkachev.png'),
                 linkedin: 'https://www.linkedin.com/in/alexander-tolkachev-a5bb87104/',
             },
-             {
-                name: 'Susan Pasley, MS, BSN, RN',
-                quote: "The healthcare industry has yet to connect the triad of patient, family, and caregiver in meaningful ways to promote engagement, streamline communication, and drive outcomes. Diya Health has developed an amazing platform that closes this gap to improve caregiver efficiencies and the patient and family experience.",
-                title: 'Clinical Growth Advisor',
-                bio: 'Susan Pasley is a registered nurse with an extensive experience in healthcare SaaS organizations. She currently serves as the VP of Clinical Solutions at CareRev, and has held senior-level positions at Press Ganey, PointClickCare, and Collective Medical. As Clinical Growth Advisor, Pasley leverages her deep understanding of clinical workflows, technology, and innovation to drive Diya`s growth within health systems.',
-                image: require('../../images/blog/susan.jpg'),
-                linkedin: 'https://www.linkedin.com/in/susan-pasley/',
-            },
-            {
-                name: 'Joe Ponnezhan, MD',
-                quote: 'Diya is making a difference in the way that healthcare is delivered. It improves communication between patients, families, and physicians, which is essential to providing high-quality care. I am proud to be a part of this team.',
-                title: 'Executive Medical Director',
-                bio: 'Dr. Joe Ponnezhan is a pulmonary and critical care physician who has been practicing for more than ten years. He is passionate about providing compassionate and comprehensive care. As Executive Medical Director, Dr. Ponnezhan applies his expertise to identify opportunities for growth and ensure the platform promotes the highest quality of care.',
-                image: require('../../images/about-us/photos/ponnezhan.png'),
-                linkedin: 'https://www.linkedin.com/in/vimal-joe-ponnezhan-md-4736a492/'
-            },
-            {
+            mark: {
                 name: 'Mark Williams',
                 quote: "",
                 title: 'Head of Business Development & Strategy',
@@ -155,7 +139,7 @@ block content
                 image: require('../../images/about-us/photos/williams.jpg'),
                 linkedin: 'https://www.linkedin.com/in/markwatartistry/'
             },
-            {
+            david: {
                 name: 'David Kapaska, DO',
                 quote: "Diya is a must-have for all health systems!",
                 title: 'Advisory Board Member',
@@ -163,7 +147,7 @@ block content
                 image: require('../../images/about-us/photos/kapaska.jpg'),
                 linkedin: 'https://www.linkedin.com/in/dave-kapaska-78aa9612/'
             }
-        ];
+        };
 
     main.main-box.about-us
         article.about-us-image-container
@@ -206,16 +190,14 @@ block content
             .leadership-container__title
                     h2 Leadership Team
             .leadership-container__box-content
-                +teamMember(team[0])
-                +teamMember(team[1])
-                +teamMember(team[9])
-                +teamMember(team[8])
-                +teamMember(team[7])
-                +teamMember(team[2])
-                +teamMember(team[3])
-                +teamMember(team[4])
-                +teamMember(team[6])
-                +teamMember(team[5])
+                +teamMember(team.amit)
+                +teamMember(team.roman)
+                +teamMember(team.david)
+                +teamMember(team.mark)
+                +teamMember(team.daniel)
+                +teamMember(team.danielle)
+                +teamMember(team.wally)
+                +teamMember(team.alex)
 
         article.our-blog-container
             .our-blog-container__title
