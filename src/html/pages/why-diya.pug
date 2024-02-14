@@ -177,9 +177,8 @@ block content
                     h3.mb3 Access to content from&nbsp; 
                         span.text-primary top health systems
                     p.mb4 No need to create all of your own educational content!&nbsp;Pick from a shared library. 
-                        
+
                     .ma 
-                        //- +youtubeLink('tPfLQ4IBNv4')
                         a.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
                             | Learn More
                         
@@ -190,8 +189,10 @@ block content
                     h3.mb3
                         span.text-primary Low-cost&nbsp;
                         | starter package
-                    p A $2500/month cost is designed to make budgeting painless for you.
-                    button.m4.ma.material-btn(onclick='window.diya.toAnchor(\'pricing\')')  VIEW PRICING
+                    p Pricing is designed to make budgeting painless for you
+                    .ma.m4
+                        a.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')')
+                            | Learn More
            
 
         +wave-divider
@@ -242,48 +243,6 @@ block content
 
                                 p.small-text Atrium Health, Wake Forest School of Medicine
                                 img.m3.special-margin(src=require('../../images/why/research/atrium__logo.svg'), alt="Atrium logo")   
-
-        +wave-divider
-        article.plain-article(id="pricing")
-            h2  Pricing
-            p.article-subtitle Low cost makes budgeting painless for you!
-                    
-            .pricing-card-box
-                .pricing-card
-                    p.pricing-card__header.first-color Subscription
-                    br
-                    .pricing-card__info-box
-                        .pricing-card__description Starting at: 
-                        .m3.pricing-card__price $2,500/mo
-                        .pricing-card__description Billed annually 
-                        .pricing-card__description ($30K/yr)
-                        h3.pricing-card__text Includes 50 staff members
-
-                .pricing-card
-                    p.pricing-card__header.second-color Implementation
-                    br
-                    .pricing-card__info-box
-                        .pricing-card__description Starting at: 
-                        .m3.pricing-card__price $5,000
-                        .pricing-card__description One-time payment
-                        h3.pricing-card__text Includes integration, training, and go-live support
-
-                .pricing-card
-                    p.pricing-card__header.third-color Add-Ons
-                    .pricing-card__info-box
-                        h3
-                            span.text-primary Additional Staff
-                        .pricing-card__description Packs of 20
-                        br
-                        .pricing-card__description Starting at: 
-                        .m3.pricing-card__price  $1,000/mo
-                        .pricing-card__description Billed annually 
-                        .pricing-card__description ($12K/yr)
-                       
-            .text-align-center
-                button.margin-request-top.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')")
-                            | Request a demo
-                
 
         +wave-divider
         article.contact-us-container(id="contact-us")
