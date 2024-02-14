@@ -9,8 +9,14 @@ include ../shared/integrations.pug
 include ../shared/contact-us-form.pug
 include ../shared/follow-team.pug
 
+mixin wave-divider
+    img.wave-divider(src=require('../../images/bg/divider.svg'))
+    img.wave-divider-tablet(src=require('../../images/bg/divider-tablet.svg'))
+    img.wave-divider-phone(src=require('../../images/bg/divider-phone.svg'))
+
 mixin teamMember(member)
     .card-employees(
+        data-team-trigger,
         data-team-name=member.name,
         data-team-title=member.title,
         data-team-image=member.image,
@@ -134,7 +140,7 @@ block content
             mark: {
                 name: 'Mark Williams',
                 quote: "",
-                title: 'Head of Business Development & Strategy',
+                title: 'Strategic Advisor',
                 bio: 'Mark Williams is a seasoned strategist, leader, and health-tech entrepreneur with a remarkable 30-year career spanning across the healthcare continuum. With extensive expertise in delivering innovative solutions, Mark has overseen the largest global Oracle EHR implementation with Wareed, providing invaluable insights into the complexities of the healthcare ecosystem. Delivering value on time and under budget. \n\n Mark was the senior thought leader whose team was behind the creation of the NHSx Digital Transformation Road Map, showcasing his visionary approach to revolutionizing healthcare systems. Building value for all stakeholders in the healthcare ecosystem.  Throughout his journey, he has held executive positions at renowned organizations such as Atos, Microsoft, Orion Health, and Siemens. His transformative leadership has steered these organizations through significant growth and change, elevating their service standards and profitability. \n\n A trusted advisor to startups, healthcare providers, and major enterprises, Mark currently serves as a Strategic Advisor at ScaleHealth, Care Logistics, and QliqSoft. In these roles, he facilitates innovation and transformation within the health-tech domain, contributing to the advancement of healthcare technology. \n\n Mark\'s reputation as an industry leader is built on his strategic acumen, unwavering commitment to excellence, and a passion for empowering organizations to thrive. His unique blend of creativity, analytical prowess, and technical expertise continues to leave a lasting impact on the industries he serves.',
                 image: require('../../images/about-us/photos/williams.jpg'),
                 linkedin: 'https://www.linkedin.com/in/markwatartistry/'
@@ -142,14 +148,14 @@ block content
             david: {
                 name: 'David Kapaska, DO',
                 quote: "Diya is a must-have for all health systems!",
-                title: 'Advisory Board Member',
+                title: 'Strategic Advisor',
                 bio: `Dave Kapaska heard the call to service early on in life.\n\nAccepted into the U.S. Air Force Academy at the height of the Vietnam War, Kapaska rapidly adopted the code that governs the conduct of our nation’s military officers: Duty, Honor, Country. He embraced those sacred words and the accompanying pledge of service before self.\n\nThat pledge of sacrifice for the greater good came to define his career and life.\n\nBorn July 18, 1949, in Sioux City, Iowa, to Lyle and Sue Kapaska, he grew up in nearby Sac City with younger siblings Marc and Jana. He was blessed with the opportunity to enjoy school, sports, and church activities, all of which provided encouraging teachers and mentors.\n\nAt the Air Force Academy, Kapaska and his fellow cadets were challenged to live every moment at the highest level of achievement – a transformational experience that prepared him for future leadership.\n\nKapaska first thought it was a joke when an Academy mentor, Col. Pete Carter, suggested he consider medical school after graduation. But the idea was planted. That advice from Carter – later, Dr. Pete Carter of Aberdeen - would become a reality a decade later.\n\nAfter graduation, Kapaska trained as an Air Force pilot and began flying C-141 Cargo Jets around the world. For the first time in his life, he was introduced to a variety of people and cultures.\n\nThe final days of the Vietnam War in 1975 presented an opportunity to live out the Academy’s call to service before self. Kapaska joined other courageous pilots in airlifting thousands of desperate refugees out of Saigon before the Viet Cong took over the city.\n\nKapaska still gets chills recalling the cheers from the cabin, over the roar of the engines, as his jet left the ground on those dramatic flights. Lives had been saved – and freedom and opportunity in America awaited.\n\nA year later, he married Mary Ann Herbst, turning the theory of unconditional love into reality. The love of his life encouraged Kapaska to follow his dreams, however unlikely, and that support served as inspiration for his medical career.\n\nAfter earning an MBA degree while in the Air Force, Kapaska joined Mobil as a marketing manager. While he quickly found success, the idea of becoming a physician wouldn’t leave him.\n\nHe finally succumbed, enrolling at Des Moines University. After graduating from DMU, he completed a residency in Family Medicine. Even as his practice thrived, Kapaska’s business experience and MBA brought him an opportunity to lead – and in a place that hadn’t been on his radar.\n\nFred Slunecka, then regional president of Avera McKennan Hospital in Sioux Falls, invited Kapaska to join his team in 1999 as chief medical officer. That was his introduction to South Dakota and its people.\n\nAt Avera McKennan, “Dr. K” led the formation of Avera e-ICU, which brought virtual ICU specialists and care to every hospital in Avera’s network.\n\nThat ushered in other breakthroughs that transformed remote care: e-pharmacy, e-emergency, e-school nurse, and e-long term care, among others.\n\nWith the critical help of the Helmsley Charitable Trust, Avera extended the technology to hospitals around the globe. Avera eCare, which IBM calls the most robust rural telemedicine network in the world, brought world-class specialty support to every Avera patient.\n\nPromoted to regional president for Avera McKennan in 2010, Kapaska led the expansion of medical facilities throughout the region. Those included a new Emergency Department in western Sioux Falls, a consolidated Avera Cancer Institute, Precision Oncology, Addiction Center, and Avera on Louise.\n\nNone of those advances were possible, Kapaska notes, without the support of Avera employees and the guidance of the Presentation and Benedictine Sisters.\n\nKapaska, who retired in 2017, was active in the Sioux Falls community throughout his many years at Avera, serving on the boards of the Washington Pavilion, McCrossan Boys Ranch, United Way, Forward Sioux Falls, and others.\n\nAs chair of the Chamber of Commerce and later as Interim Chamber President, Kapaska worked closely with the city, county, and state to ensure forward-thinking on business and workforce development.\n\nIn retirement, Kapaska remains committed to service – and a fervent belief that helping every individual “belong” will define South Dakota and its people for generations to come.\n\nPaying it forward, the ‘Dr. Dave and Mary Ann Kapaska New Americans in Health Care Scholarship’ is investing in men and women who dream of a better future.`,
                 image: require('../../images/about-us/photos/kapaska.jpg'),
                 linkedin: 'https://www.linkedin.com/in/dave-kapaska-78aa9612/'
             }
         };
 
-    main.main-box.about-us
+    main.main-box.about-us.v3
         article.about-us-image-container
             .about-us-image-container__notice-box-hidden
                     .about-us-image-container__wellness-text-box
@@ -188,16 +194,23 @@ block content
                     .history-container__image-box
         article.leadership-container#team
             .leadership-container__title
-                    h2 Leadership Team
+                h2 Leadership Team
             .leadership-container__box-content
                 +teamMember(team.amit)
                 +teamMember(team.roman)
-                +teamMember(team.david)
-                +teamMember(team.mark)
                 +teamMember(team.daniel)
                 +teamMember(team.danielle)
                 +teamMember(team.wally)
                 +teamMember(team.alex)
+
+        +wave-divider
+
+        article.leadership-container#advisory
+            .leadership-container__title
+                h2 Advisory Board
+            .leadership-container__box-content
+                +teamMember(team.david)
+                +teamMember(team.mark)
 
         article.our-blog-container
             .our-blog-container__title
