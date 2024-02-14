@@ -2,6 +2,14 @@ const { toKebabCase } = require("./utils");
 
 const articles = [
     {
+        key: "post2024021400",
+        title: "Reducing Healthcare Disparities With AI-Driven Language Services Technology",
+        image: "surgeon-with-a-patient.jpg",
+        imageAlt: "A surgeon with a patient",
+        date: "February 14, 2024",
+        tag: "healthcare",
+    },
+    {
         key: "post2024012200",
         title: "How to Mitigate the Problems With Healthcare Interpreter Services",
         image: "a-doctor-with-a-foreigner.jpg",

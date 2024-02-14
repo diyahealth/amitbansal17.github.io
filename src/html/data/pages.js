@@ -291,7 +291,13 @@ const pages = {
         name: "How to Mitigate the Problems With Healthcare Interpreter Services",
         description: "Language barriers, however, pose significant challenges that can impede the delivery of accurate and timely medical services.",
         parent: "blog",
-    }
+    },
+
+    post2024021400: {
+        name: "Reducing Healthcare Disparities With AI-Driven Language Services Technology",
+        description: "Diya AI Translation Services leverages artificial intelligence to support translation needs throughout an LEP patient’s care journey",
+        parent: "blog",
+    },
 };
 
 function withDefaults(pages) {
