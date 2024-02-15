@@ -1,12 +1,12 @@
 .page-intro {
-    height: calc(100vh - #{$navbar-height});
+    min-height: calc(100vh - #{$navbar-height});
 
     @include for-tablet {
-        height: calc(100vh - #{$navbar-height-tablet});
+        min-height: calc(100vh - #{$navbar-height-tablet});
     }
 
     @include for-phone {
-        height: calc(100vh - #{$navbar-height-phone});
+        min-height: calc(100vh - #{$navbar-height-phone});
     }
 
     display: flex;
