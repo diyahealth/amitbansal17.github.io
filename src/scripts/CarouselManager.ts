@@ -25,8 +25,8 @@ export class CarouselManager {
         const changeSlideInterval = setInterval(() => this.nextSlide(id, selectors), speed);
         this.intervalsMap.set(id, changeSlideInterval);
 
-        const leftControl = controls.find((el) => el.className.includes("left"));
-        const rightControl = controls.find((el) => el.className.includes("right"));
+        const leftControls = controls.filter((el) => el.className.includes("left"));
+        const rightControls = controls.filter((el) => el.className.includes("right"));
 
         const getControlFunction = (moveSlideFunc: (id: string, classes: CarouselElementsSelectors) => void) => () => {
             moveSlideFunc(id, selectors);
@@ -39,12 +39,12 @@ export class CarouselManager {
             // this.intervalsMap.set(id, newInterval);
         };
 
-        if (rightControl) {
-            rightControl.addEventListener("click", getControlFunction(this.nextSlide.bind(this)));
+        if (rightControls.length > 0) {
+            rightControls.forEach(ctrl => ctrl.addEventListener("click", getControlFunction(this.nextSlide.bind(this))));
         }
 
-        if (leftControl) {
-            leftControl.addEventListener("click", getControlFunction(this.prevSlide.bind(this)));
+        if (leftControls.length > 0) {
+            leftControls.forEach(ctrl => ctrl.addEventListener("click", getControlFunction(this.prevSlide.bind(this))));
         }
     }
 

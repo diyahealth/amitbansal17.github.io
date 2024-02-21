@@ -16,6 +16,7 @@ include ../shared/customers.pug
 include ../shared/integrations.pug
 include ../shared/youtube-popup.pug
 include ../shared/great-down-button.pug
+include ../shared/waved.pug 
 
 mixin integrationBlogCards(article)
     a.card-press-box(href=article.href)
@@ -26,16 +27,6 @@ mixin integrationBlogCards(article)
                 img.card-employees__arrow(src=require("../../images/about-us/arrow.svg") alt='check')
 
 
-mixin waved
-    img.waved-top(src=require('../../images/bg/wave-top.svg'))
-    .waved-content 
-        block
-    img.waved-bottom(src=require('../../images/bg/wave-top.svg'))
-
-mixin wave-divider
-    img.wave-divider(src=require('../../images/bg/divider.svg'))
-    img.wave-divider-tablet(src=require('../../images/bg/divider-tablet.svg'))
-    img.wave-divider-phone(src=require('../../images/bg/divider-phone.svg'))
 
 block head
     meta(name="twitter:card" value="Diya Health Website")
@@ -46,41 +37,26 @@ block head
     meta(property="og:description" content="Diya Health")
 
 block content
-    main.main-box.main-page.v3
-        .page-intro
-                .main-banner
-                    .title
-                        h1 
-                            span Clinicians are busy saving lives,
-                            br
-                            .subtitle
-                                span leave
-                                span.text-primary.bold family engagement
-                                span to  
-                                include ../../images/logos/diya/diya.svg
+    main.page-index.v3
+        .plain-article.two-columns
+            .intro
+                .title Healthcare Communication
+                    br
+                    span.text-primary.underline Reimagined
 
-                        button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')")
-                            | Request a demo
-                .learn-more
-                    .h2 Learn More in Less Than 2 Minutes!
-                    +greatDownButton('bridge-the-gap')
+                p Leveraging the latest advancements in AI to increase profitability, improve clinician capacity, and strengthen brand
 
-        article.plain-article#bridge-the-gap
-            h2
-                div.imaged-title
-                    include ../../images/logos/diya/diya.svg
-                    i.text-primary Family Engagement 
-                | Drives Staff Efficiency & Patient Loyalty
+                button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Request a demo
 
-            +youtubeInline('HnQKk1cHoCw', require('../../images/pages/index/icu-room.jpg'), 'ICU room')
-
+            div
+                +youtubeInline('c-ZZmQtvlOw', require("@images/pages/index/doctor-holds-patient-hand.jpg"))
 
         +waved
             article.plain-article#collaboration
                 h2 Developed in Collaboration
 
                 p.article-subtitle
-                    span with experts from 
+                    span with experts from&nbsp;
                     strong.text-primary leading health systems
 
                 ul.clients-logo
@@ -97,226 +73,180 @@ block content
 
                 button.m5.ma.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') GET STARTED
 
-        article.plain-article#efficiency
-            .two-columns.reversed
-                .text
-                    .call-out Clinician Efficiency
-                    h2.m2 Save Clinicians 
-                        span.text-primary 30+ Minutes 
-                        | per Shift
-                    p.m2.
-                        Family-centered care — which incorporates family members
-                        into a collaborative team with patients and clinicians —
-                        is a key component of high-quality ICU care.
-                        Diya’s state of the art technology delivers on this promise!
-                        It has also proven to save clinicians time and improve job satisfaction.
+        .plain-article.two-columns
+            .intro
+                .title Increase Your&nbsp;
+                    span.text-primary Profitability
 
-                    a.m3.material-btn(href="./health-systems")
-                        | Learn More
-                .image
-                    img(src=require('../../images/pages/index/benefit-1.jpg'), alt="Benefit #1")
+                p The non-English-speaking patient population is growing. Serve a larger market with the first HIPAA-compliant AI-driven interpreter & translator.
+
+                button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Learn More
+
+            div.animate-session
+                include ../../images/pages/index/translation-session.svg
 
         +waved
-            article.plain-article#savings
-                .title
-                    .pre-line That’s
-                    .main-line $5M per year savings
-                    .pre-line for a 150-bed hospital
+            .plain-article.two-columns.reversed
+                div.animate-clinicians 
+                    include ../../images/pages/index/clinician-family-communication.svg
+                .intro
+                    .title Increase Clinician&nbsp;
+                        span.text-primary Capacity
 
-                    a.m3.material-btn(href='./health-systems#calculate-savings') CALCULATE YOUR SAVINGS
+                    p Empower clinicians and staff to communicate in a way that’s easy for patients and families to understand, without any extra work.
+
+                    button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Learn More
 
 
-        article.plain-article#efficiency
-            .two-columns
-                .image
-                    img(src=require('../../images/pages/index/benefit-2.jpg'), alt="Benefit #2")
-                .text
-                    img.call-out-logo(src=require('../../images/pages/index/cms-rating.png'))
-                    h2.m2 Strengthen 
-                        span.text-primary Hospital Brand
-                    p.m2.
-                        Diya automates communication between the patient’s care team and family members,
-                        promotes humanization of the patient, and provides emotional support to the family.
-                        It’s no wonder that families are left in awe of hospitals’ services!
 
-                    button.m3.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')")
-                        | Learn More
+        .plain-article.two-columns
+            .intro
+                .title Strengthen Your&nbsp;
+                    span.text-primary Brand
+
+                p Extend your reach to patients’ loved ones throughout the full continuum of care — whether they are 10 miles or 10,000 miles away — fully automated.
+
+                button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Learn More
+
+            .animate-family
+                include ../../images/pages/index/doctor-to-family-members.svg
 
         +wave-divider
 
-        article.plain-article
+        .plain-article
             h2 Hear from Our Users
             .two-columns.m4
-                .left
-                    +youtubeInline('qrhyXCTkqp0', require('../../images/pages/index/nurse-face-during-surgery.jpg'))
-                .right
-                    .quote
-                        img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                        img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                        p.text.text-integration Diya has quickly become indispensable for my team & me
+                .stack
+                    .quote Diya helps our patients and families to better cope with serious illness every day
                     .org-person
                         .avatar-box
-                            img.avatar(src=require("../../images/main-page/dana.jpg"), alt="Dana Klavansky, MD")
-                        .info-box
-                            .name Dana Klavansky, MD
-                            .title Neurointensivist Neurosciences ICU
-                            img.org-logo(src=require('../../images/pages/index/clients/mount-sinai.png'), alt="Mount Sinai Logo")
-
-        article.plain-article
-            .two-columns.m4
-                .right
-                    .quote
-                        img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                        img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                        p.text.text-integration Diya helps our patients and families to better cope with serious illness every day
-                    .org-person
-                        .avatar-box
-                            img.avatar(src=require("../../images/main-page/ruth.jpg"), alt="Ruth Levy, NP")
+                            img.avatar(src=require("@images/main-page/ruth.jpg"), alt="Ruth Levy, NP")
                         .info-box
                             .name Ruth Levy, NP
                             .title Nurse Practitioner Neurosciences ICU
-                            img.org-logo(src=require('../../images/pages/index/clients/mount-sinai.png'), alt="Mount Sinai Logo")
-                .left
-                    +youtubeInline('nhcinjb4RrQ', require('../../images/pages/index/doctor-holds-hand.jpg'))
-            .extra-testimonial.m4
-                .stars
-                    include ../../images/main-page/star.svg
-                    include ../../images/main-page/star.svg
-                    include ../../images/main-page/star.svg
-                    include ../../images/main-page/star.svg
-                    include ../../images/main-page/star.svg
+                            img.org-logo(src=require('@images/pages/index/clients/mount-sinai.png'), alt="Mount Sinai Logo")
+                .stack
+                    +youtubeInline('nhcinjb4RrQ', require('@images/pages/index/doctor-holds-hand.jpg'))
 
-                .quote
-                    img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                    img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                    p.text.text-integration Diya is a must-have for all health systems!
-                .org-person
-                    .avatar-box
-                        img.avatar(src=require("../../images/about-us/photos/kapaska.jpg"), alt="Dr. David Kapaska")
-                    .info-box
-                        .name David Kapaska, DO
-                        .title Hospital CEO (Ret.)
+        +waved
+            .plain-article
+                .extra-testimonial.m4
+                    .stars
+                        include ../../images/main-page/star.svg
+                        include ../../images/main-page/star.svg
+                        include ../../images/main-page/star.svg
+                        include ../../images/main-page/star.svg
+                        include ../../images/main-page/star.svg
+
+                    .quote Diya is a must-have for all health systems!
+                    .org-person
+                        .avatar-box
+                            img.avatar(src=require("../../images/about-us/photos/kapaska.jpg"), alt="Dr. David Kapaska")
+                        .info-box
+                            .name David Kapaska, DO
+                            .title Hospital CEO (Ret.)
+
+        .plain-article
+            h2 Who We Serve
+
+            .carousel-container.who-we-serve#who-we-serve
+                .content-container
+                    .carousel-control.left
+                        include ../../images/employers/arrow-left.svg
+
+                    ul.content-items
+                        li.carousel-item-container.active
+                            .two-columns
+                                .stack
+                                    .slide-title Health Systems
+                                    .illustration
+                                        img(src=require("@images/pages/index/health-systems.jpg"))
+                                .stack
+                                    .quote Diya seamlessly keeps patients & families understood and informed while truly reducing the administrative burdens too often placed on our caregiving staff
+                                    .org-person
+                                        .avatar-box
+                                            img.avatar(src=require("@images/pages/index/greg.jpg"))
+                                        .info-box
+                                            .name Greg Stecklein
+                                            .title Press Ganey
+
+                        li.carousel-item-container
+                            .two-columns
+                                .stack
+                                    .slide-title Long-Term Care
+                                    .illustration
+                                        img(src=require("@images/pages/index/long-term-care.jpg"))
+                                .stack
+                                    .quote Coming soon
+                                    .org-person
+                                        .avatar-box
+                                            img.avatar(src=require("@images/about-us/photos/briggs.jpg"))
+                                        .info-box
+                                            .name Jim Briggs
+                                            .title Tata Consultancy
+
+                        li.carousel-item-container
+                            .two-columns
+                                .stack
+                                    .slide-title Community Health
+                                    .illustration
+                                        img(src=require("@images/pages/index/community-health.jpg"))
+                                .stack
+                                    .quote CCS Health engages ‘at the kitchen table’ 24/7 with Diya
+                                    .org-person
+                                        .avatar-box
+                                            img.avatar(src=require("@images/pages/index/bob.png"))
+                                        .info-box
+                                            .name Bob Harnach
+                                            .title CCS
+
+                    .carousel-control.right
+                        include ../../images/employers/arrow-right.svg
+
+                .indicators-container
+                    .carousel-control.left
+                        include ../../images/employers/arrow-left.svg
+                    ol.indicators
+                        li.indicator.active
+                        li.indicator
+                        li.indicator
+                    .carousel-control.right
+                        include ../../images/employers/arrow-right.svg
 
         +wave-divider
 
         article.integration#collaboration
-            h2.integration__header Seamless Integration
-            p.integration__subtitle With any major EMR & AMS system
+            h2 Seamless Integration
+            p.article-subtitle With any major EMR & AMS system
             +integrationsSystem()
 
-        +wave-divider
+        +waved
 
-        .home-care
-            article.slider-testimonials
-                .inner
-                    h2.slider-service__title Testimonials
+            .about-us
+                article.our-blog-container
+                    .our-blog-container__title
+                        h2 Resources
+                        .our-blog-container__cards-container
+                            +integrationBlogCards(blog[0])
+                            +integrationBlogCards(blog[1])
+                            +integrationBlogCards(blog[2])
+                            +integrationBlogCards(blog[3])
+                        a.button-mobile-settings.material-btn.compliance-container__title__button-size(href=pages.blog.url) 
+                            .label Learn More
 
-                    .carousel-container-testimonials#dashboard-carousel-testimonials
-                        .carousel-control.left
-                            include ../../images/employers/arrow-left.svg
-                        .carousel-control.right
-                            include ../../images/employers/arrow-right.svg
-                        .content-container
-                            .carousel-image-container
-                                .carousel-image-wrapper
-                                    .carousel-image-background.dashboard-carousel-bg-1.active
-                                        .content-box
-                                            .content-box-image  
-                                                img.icon(src=require("../../images/main-page/slides/slide2/tim.png"), alt="Tim")
-                                            p.name Tim Dunn
-                                            span.workplace Finance Executive, TPG Capital (Ret.) Lead Investor
-                                            img.work-image(src=require("../../images/main-page/slides/slide2/tpg.png"), alt="hhax")
-
-                                    .carousel-image-background.dashboard-carousel-bg-4
-                                        .content-box
-                                            .content-box-image  
-                                                img.icon(src=require("../../images/main-page/slides/slide4/joe.png"), alt="Joe").minimized
-                                            p.name Joe Ponnezhan, MD
-                                            span.workplace ICU Medical Director
-                                            img.work-image(src=require("../../images/main-page/slides/slide4/ahmc.jpg"), alt="ahmc logo")
-
-                                    .carousel-image-background.dashboard-carousel-bg-2
-                                        .content-box
-                                            .content-box-image 
-                                                img.icon(src=require("../../images/main-page/slides/slide1/dave.png"), alt="Dave")
-                                            p.name David Pidwell
-                                            span.workplace Faculty, Stanford University (Ret.) Graduate School of Business
-                                            img.work-image(src=require("../../images/main-page/slides/slide1/stanford.png"), alt="stanford")
-                                        
-                                    .carousel-image-background.dashboard-carousel-bg-3
-                                        .content-box 
-                                            .content-box-image.image-special
-                                                img.icon.icon-special(src=require("../../images/home-care/images/susan.png"), alt="Susan")
-                                            p.name Susan Pasley
-                                            
-                                            span.workplace VP, Clinical Solutions CareRev
-
-                                            img.work-image(src=require("../../images/home-care/images/carerev.png"), alt="nhm")
-
-                            .containerD
-                                ul.text-container
-                                    ol.indicators-container-up
-                                    li.carousel-item-container.active
-                                        .box-containers
-                                            img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                                            img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")   
-                                            p.text.text-integration Diya delivers an unbeatable ROI for anyone managing healthcare.
-
-                                    li.carousel-item-container
-                                        .box-containers
-                                            img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                                            img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")   
-                                            p.text.text-integration Diya improves communication between patients, families, and physicians, which is essential to providing high-quality care.
-
-
-                                    li.carousel-item-container
-                                        .box-containers
-                                            img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                                            img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")   
-                                            p.text.text-integration Diya is on its way to revolutionizing the healthcare industry.
-
-                                    li.carousel-item-container
-                                        .box-containers
-                                            img.quote-up(src=require("../../images/main-page/slides/quote.png"), alt="quote")
-                                            img.quote-down(src=require("../../images/main-page/slides/quote.png"), alt="quote")  
-                                            p.text.text-integration Diya Health has developed an amazing platform that improves caregiver efficiencies and the patient and family experience
-
-                                    ol.indicators-container
-                                        li.indicator.active
-                                        li.indicator
-                                        li.indicator
-                                        li.indicator  
-
-        +wave-divider
-
-        .about-us
-            article.our-blog-container
-                .our-blog-container__title
-                    h2 Resources
-                    .our-blog-container__cards-container
-                        +integrationBlogCards(blog[0])
-                        +integrationBlogCards(blog[1])
-                        +integrationBlogCards(blog[2])
-                        +integrationBlogCards(blog[3])
-                    a.button-mobile-settings.material-btn.compliance-container__title__button-size(href=pages.blog.url) 
-                        .label Learn More
-
-        +wave-divider
-
-        article.contact-us-container(id="contact-us")
+        article.plain-article#contact-us.contact-us-container
             .title 
                 h2 Contact Us
-                p.text.
-                    Learn more about how Diya Health can improve family engagement for your organization.
+                p.text-center Learn more about how Diya Health can improve family engagement for your organization.
             .content
                 +contactUsForm(organizationSizeOptions)
-        +youtubePopup
+
 block script
+    +youtubeIntegration
     script.
         window.addEventListener('load', (event) => {
-            window.diya.carousel.init('dashboard-carousel-testimonials', {
+            window.diya.carousel.init('who-we-serve', {
                 switchSlideControlSelector: '.carousel-control',
-                backgroundSelector: '.carousel-image-background',
             }, 8000);
-        });
+        }, { once: true });
     script(src="https://www.google.com/recaptcha/api.js", defer)

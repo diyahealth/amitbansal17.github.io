@@ -1,3 +1,40 @@
+mixin youtubeInline(id, preview, previewAlt)
+    a.inline-video-preview(
+        href=`https://www.youtu.be/${id}`
+        target="__blank"
+        data-youtube=id
+        rel="noopener noreferrer"
+    )&attributes(attributes)
+        img(src=preview, alt=previewAlt)
+        .inline-player(id=id)
+        .play-icon
+            include ../../images/icons-v3/play.svg
+
+mixin youtubeIntegration
+    script.
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        document
+            .querySelectorAll('[data-youtube]')
+            .forEach(x => x.addEventListener('click', e => {
+                e.preventDefault();
+                e.stopPropagation();
+                e.currentTarget.querySelector(".play-icon").style.display = 'none';
+                const player = new YT.Player(x.dataset.youtube, {
+                    height: e.currentTarget.clientHeight,
+                    width: e.currentTarget.clientWidth,
+                    videoId: x.dataset.youtube,
+                    playerVars: { 'autoplay': 1 },
+                });
+            }));
+
+
+
+//- v2
+
 mixin youtubeLink(id, portrait = false)
     a.material-btn(
         href=`https://www.youtu.be/${id}`
@@ -17,7 +54,7 @@ mixin youtubeImage(id, path)
         rel="noopener noreferrer"
     )&attributes(attributes)
         img.family-engagement__logo(src=path alt='path')
-        
+
 
 mixin youtubeImageMain(id, path)
     a.learn-more__link(
@@ -29,16 +66,6 @@ mixin youtubeImageMain(id, path)
         img.learn-more__logo(src=path alt='path')
         img.learn-more__play(src=require("../../images/main-page/play.png") alt='path')
 
-mixin youtubeInline(id, preview, previewAlt)
-    a.inline-video-preview(
-        href=`https://www.youtu.be/${id}`
-        target="__blank"
-        data-youtube=id
-        rel="noopener noreferrer"
-    )&attributes(attributes)
-        img(src=preview, alt=previewAlt)
-        .play-icon
-            include ../../images/icons-v3/play.svg
 
 mixin youtubePopup
     .popup-video.hidden

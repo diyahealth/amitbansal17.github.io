@@ -26,13 +26,11 @@
 }
 
 .two-columns {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
     gap: 32px;
     align-items: center;
-
-    >div {
-        flex-basis: 50%
-    }
 
     h2,
     .h2 {
@@ -48,6 +46,9 @@
     }
 
     @include for-tablet {
+        display: flex;
+        gap: 32px;
+        align-items: center;
         flex-direction: column;
 
         &.reversed {
@@ -98,7 +99,7 @@
 .wave-divider {
     display: block;
     width: 100%;
-    
+
 
     @include for-tablet {
         display: none;
@@ -138,4 +139,21 @@
 .waved-bottom {
     display: block;
     transform: rotate(180deg);
+}
+
+.illustration {
+    background-image: url('@images/bg/illustration.png');
+    padding: 30px;
+    background-size: 100% 100%;
+    line-height: 0;
+
+    img {
+        border-radius: 10px;
+    }
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }

@@ -6,6 +6,7 @@
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 0;
 
     &:hover {
         transform: scale(1.05);
@@ -27,5 +28,13 @@
         svg {
             height: 100%;
         }
+    }
+
+    .inline-player {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 }

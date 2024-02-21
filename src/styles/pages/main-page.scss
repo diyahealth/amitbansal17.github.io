@@ -1,41 +1,57 @@
-.main-page {
-    .page-intro {
-        .main-banner {
-            background-image: url('../images/pages/index/doctors-on-surgery.jpg');
-        }
+.page-index {
+    .intro {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
 
-        .material-btn {
-            margin-top: 24px;
-        }
-
-        .bold {
+        .title {
+            font-size: 40px;
             font-weight: 700;
-        }
+            line-height: 54px;
 
-        h1 .subtitle {
-            display: flex;
-            justify-content: center;
-            align-items: end;
-            gap: 12px;
-            margin-top: 6px;
-            font-family: "Playfair Display";
-            font-style: italic;
-            flex-wrap: wrap;
+            text-align: left;
+            padding-bottom: 18px;
 
-            @include for-phone {
-                flex-direction: column;
-                align-items: center;
-                gap: 2px;
-                margin-top: 24px;
+            .text-primary {
+                position: relative;
+
+                &.underline:after {
+                    content: " ";
+                    height: 18px;
+                    width: 100%;
+                    position: absolute;
+                    background-size: 100% 100%;
+                    background-image: url("@images/pages/index/header-underline.svg");
+                    bottom: -18px;
+                    left: 0;
+                }
             }
         }
     }
 
-    #bridge-the-gap {
-        .inline-video-preview {
-            margin-top: 56px;
+    .who-we-serve {
+        margin-top: 40px;
+
+        .slide-title {
+            text-align: center;
+            font-family: 'Playfair Display';
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 64px;
+            letter-spacing: 0px;
+            text-align: center;
+        }
+
+        .stack {
+            align-items: center;
         }
     }
+}
+
+// v2
+
+.page-index {
 
     #collaboration {
         .clients-logo {
@@ -62,507 +78,28 @@
         }
     }
 
-    #savings {
-        .title {
-            text-align: center;
-        }
+    .extra-testimonial {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
 
-        .pre-line {
-            font-size: 26px;
-            font-weight: 600;
-            line-height: 35px;
-        }
+        .stars {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
 
-        .main-line {
-            font-size: 36px;
-            font-weight: 700;
-            line-height: 49px;
-            color: $primary-color;
+            >svg {
+                width: 50px;
+                height: 50px;
+            }
         }
     }
-
-
 }
 
 .main-page {
-    .iframe {
-        width: 640px;
-        height: 320px;
-
-
-        @media screen and (max-width: 640px) {
-            width: 100%;
-            height: 220px;
-
-        }
-    }
-
-    .popup-video {
-        background-color: rgb(245, 245, 245);
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: scale(1) translate(-50%, -50%);
-        transform: scale(1) translate(-50%, -50%);
-        z-index: 1000;
-        padding-top: 35px;
-        border-radius: 10px;
-        box-sizing: content-box;
-        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);
-
-        @media screen and (max-width: 640px) {
-            margin: 0 auto;
-            width: 95%;
-            height: 220px;
-        }
-    }
-
-    .close {
-        position: absolute;
-        top: 5px;
-        right: 8px;
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-    }
-
-    .close:before,
-    .close:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0px;
-        width: 22px;
-        height: 4px;
-        background: #0c9fdb;
-        transition: all 0.2s;
-    }
-
-    .close:hover:before,
-    .close:hover:after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0px;
-        width: 22px;
-        height: 4px;
-        background: #086083
-    }
-
-    .close:before {
-        webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-    }
-
-    .close:after {
-        webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
-
-    .hidden {
-        -webkit-transform: scale(0) translate(-50%, -50%);
-        transform: translate(-50%, -50%) scale(0);
-        transition: all 0.5s;
-    }
-
-
-
-
-    .tablet-only {
-        @media screen and (min-width: $break-tablet + 1px) {
-            display: none;
-        }
-    }
-
-    color: #000;
-
-    h3 {
-        font-size: 26px;
-        font-weight: 600;
-        line-height: 35px;
-        margin: 0;
-    }
-
-    ul {
-        margin: 0;
-        padding: 0;
-    }
-
-
-    .hr-button {
-        padding: 16px 22px;
-        border-radius: 4px;
-        background-color: #0c9fdb;
-        color: white;
-        font-size: 18px;
-        line-height: 24.5px;
-        border: none;
-        cursor: pointer;
-        display: inline-block;
-    }
-
-    .inner {
-        max-width: 1440px;
-        margin: auto;
-    }
-
-
-    .learn-more {
-        width: 100%;
-        // background: url('../images/employers/wave.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        padding: 15px 80px 86px 60px;
-        text-align: center;
-
-        @media screen and (max-width: $break-tablet) {
-            padding: 40px 80px;
-
-        }
-
-        @media screen and (max-width: $break-mobile) {
-            padding: 40px 20px;
-
-        }
-
-        .inner {
-            max-width: 1440px;
-            margin: auto;
-        }
-
-
-        &__subtitle {
-            margin: 16px auto;
-            max-width: 624px;
-
-            @media screen and (max-width: $break-mobile) {
-                margin: 16px 0 0;
-            }
-        }
-
-        &__service-items-container {
-            padding: 40px 20px;
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-
-            @media screen and (max-width: $break-tablet) {
-                flex-direction: column;
-                align-items: center;
-                margin-top: 0;
-            }
-        }
-
-        &__item {
-            width: 48%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            @media screen and (max-width: $break-tablet) {
-                width: 100%;
-                margin-top: 32px;
-            }
-
-            @media screen and (max-width: $break-mobile) {
-                width: 100%;
-                margin-top: 40px;
-            }
-        }
-
-        &__logo {
-            width: 100%;
-            margin-bottom: 8px;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 15px;
-
-            @media screen and (max-width: $break-tablet) {
-                height: 280px;
-            }
-        }
-
-        &__link {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-
-            transition: all 0.3s;
-
-            &:hover {
-                transform: scale(1.05);
-            }
-        }
-
-        &__play {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90px;
-            height: auto;
-        }
-
-        &__title-text {
-            margin-bottom: 8px;
-            font-family: Open Sans;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 35px;
-            letter-spacing: 0px;
-            text-align: center;
-
-
-        }
-
-        &__text {
-            margin-bottom: 24px;
-            font-family: Open Sans;
-            font-size: 22px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 34px;
-            letter-spacing: 0px;
-            text-align: center;
-
-            @media screen and (max-width: $break-mobile) {
-                width: 100%;
-                margin-bottom: 16px;
-            }
-
-        }
-
-        &__divider {
-            max-width: 1440px;
-            margin: 0 auto;
-            background-image: url('../images/family/section1/divider.png');
-
-            background-repeat: no-repeat;
-            padding-top: 245px;
-            width: 100%;
-            background-position: center;
-            background-size: cover;
-
-            @media screen and (max-width: $break-tablet) {
-                display: none;
-            }
-
-            &.fullscreen {
-                max-width: none;
-                background-size: 100% 100%;
-            }
-
-        }
-
-        &__special-divider {
-            margin-top: -148px;
-        }
-
-        &__arrow {
-            display: block;
-            width: 50px;
-            height: auto;
-            margin: 0 auto;
-            margin-top: 10px;
-            animation: move 1.5s infinite linear;
-
-            &:hover {
-                cursor: pointer;
-            }
-
-        }
-
-        @keyframes move {
-            0% {
-                transform: translateY(0);
-
-            }
-
-            50% {
-                transform: translateY(7px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
-        }
-    }
-
-
-    .communication {
-        padding: 80px;
-        // max-width: 1440px;
-        margin: 0 auto;
-        width: 100%;
-        background: url('../images/employers/wave.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        padding: 165px 80px 35px;
-        text-align: center;
-
-        @media screen and (max-width: $break-tablet) {
-
-            padding: 40px 20px;
-            background: #f3fafd;
-
-        }
-
-        @media screen and (max-width: $break-mobile) {
-            padding: 40px 20px;
-
-        }
-
-        &__image-general {
-            width: auto;
-            // height: calc(100vh - 140px);
-
-            @media screen and (max-width: $break-tablet) {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        &__image-box {
-            margin-bottom: 86px;
-            text-align: center;
-
-            @media screen and (max-width: $break-tablet) {
-                margin-bottom: 0;
-                margin-top: 0;
-            }
-        }
-
-        &__header {
-            max-width: 624px;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 16px;
-        }
-
-        &__subtitle {
-            max-width: 624px;
-            padding: 0 40px;
-            text-align: center;
-            margin: 0 auto;
-        }
-    }
-
-    .designed {
-        padding: 80px;
-        // max-width: 1440px;
-        margin: 0 auto;
-        width: 100%;
-        background: url('../images/employers/wave.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        padding: 210px 80px 110px;
-        text-align: center;
-
-        @media screen and (max-width: $break-tablet) {
-            padding: 40px 20px;
-            background: #f3fafd;
-        }
-
-        @media screen and (max-width: $break-mobile) {
-            padding: 40px 20px;
-
-        }
-
-        &__image-general {
-            width: auto;
-            height: calc(100vh - 200px);
-
-            @media screen and (max-width: $break-tablet) {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        &__image-box {
-            margin-bottom: 86px;
-            text-align: center;
-
-            @media screen and (max-width: $break-tablet) {
-                margin-bottom: 0;
-                margin-top: 20px;
-            }
-        }
-
-        &__header {
-            max-width: 624px;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 16px;
-        }
-
-        &__subtitle {
-            max-width: 624px;
-            padding: 0 40px;
-            text-align: center;
-            margin: 0 auto;
-        }
-    }
-
-
-
-    .streamlines {
-        padding: 80px;
-        // max-width: 1440px;
-        margin: 0 auto;
-        width: 100%;
-        background: url('../images/employers/wave.png');
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        padding: 165px 80px 110px;
-        text-align: center;
-
-        @media screen and (max-width: $break-tablet) {
-            padding: 40px 20px;
-            background: #f3fafd;
-        }
-
-        @media screen and (max-width: $break-mobile) {
-            padding: 40px 20px;
-
-        }
-
-        &__image-general {
-            width: auto;
-            // height: calc(100vh - 140px);
-
-            @media screen and (max-width: $break-tablet) {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        &__image-box {
-            margin-top: 40px;
-
-            text-align: center;
-
-            @media screen and (max-width: $break-tablet) {
-
-                margin-top: 20px;
-            }
-        }
-
-        &__header {
-            max-width: 624px;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 16px;
-        }
-
-        &__subtitle {
-            max-width: 624px;
-            padding: 0 40px;
-            text-align: center;
-            margin: 0 auto;
-        }
-    }
-
     .integration {
         // max-width: 1440px;
         margin: 0 auto;
@@ -613,54 +150,6 @@
         }
     }
 
-
-
-    .slider-service {
-        width: 100%;
-
-        padding: 86px 0 86px;
-
-        @media screen and (max-width: $break-tablet) {
-            margin-top: 0;
-        }
-
-        .inner {
-            max-width: 1440px;
-            margin: auto;
-        }
-
-        &__title {
-            text-align: center;
-            margin: 0 auto;
-            max-width: 624px;
-            margin-bottom: 25px;
-        }
-
-        @media screen and (max-width: $break-tablet) {
-            padding: 40px 20px;
-            // background: #F3FAFD;
-        }
-    }
-
-    .contact-us-container {
-        padding: 0px 189px 124px;
-        margin: auto;
-        max-width: 1440px;
-
-        @media screen and (max-width: $break-tablet) {
-            padding: 40px 20px;
-        }
-
-        .title {
-            text-align: center;
-        }
-
-        .text {
-            max-width: 624px;
-            margin: 11px auto 48px;
-        }
-    }
-
     .about-us .our-blog-container {
         background: none;
         padding: 86px 80px;
@@ -675,24 +164,149 @@
             padding: 48px 20px;
         }
     }
+}
 
-    .extra-testimonial {
-        margin-top: 150px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
 
-        .stars {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
+// animations
+@mixin animate($name, $prefix, $total, $enterOn, $leaveOn) {
+    $animationName: $prefix + $name;
 
-            >svg {
-                width: 50px;
-                height: 50px;
-            }
+    ##{$name} {
+        opacity: 0;
+
+        .enable-animation & {}
+
+        animation: #{$animationName} $total * 1s infinite;
+    }
+
+    $sec: math.div(1, $total) * 100%;
+    $startIn: $sec * ($enterOn - 1);
+    $endIn: $sec * $enterOn;
+    $startOut: $sec * ($leaveOn - 1);
+    $endOut: $sec * $leaveOn;
+
+    @keyframes #{$animationName} {
+
+        0%,
+        #{$startIn} {
+            opacity: 0;
+        }
+
+        #{$endIn},
+        #{$startOut} {
+            opacity: 1;
+        }
+
+        #{$endOut},
+        100% {
+            opacity: 0;
         }
     }
+}
+
+.animate-session {
+    $duration: 33;
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+
+    @mixin animateElement($name, $in, $out) {
+        @include animate($name, 'session', $duration, $in, $out)
+    }
+
+    @include animateElement(docq, 1, 16);
+    @include animateElement(arda, 6, 16);
+    @include animateElement(arap, 9, 16);
+    @include animateElement(patr, 10, 16);
+
+    @include animateElement(patq, 17, 32);
+    @include animateElement(arpa, 22, 32);
+    @include animateElement(arad, 25, 32);
+    @include animateElement(docr, 26, 32);
+
+    #ai {
+        animation: ai $duration * 1s infinite;
+    }
+
+    @keyframes ai {
+
+        0%,
+        18% {
+            opacity: 0;
+        }
+
+        21%,
+        45% {
+            opacity: 1;
+        }
+
+        48%,
+        66% {
+            opacity: 0;
+        }
+
+        69%,
+        93% {
+            opacity: 1;
+        }
+
+        96%,
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+.animate-clinicians {
+    $duration: 25;
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+
+    @mixin animateElement($name, $in, $out) {
+        @include animate($name, 'clinicians', $duration, $in, $out)
+    }
+
+    @include animateElement(arca, 1, 24);
+    @include animateElement(bc, 2, 24);
+    @include animateElement(ai, 3, 24);
+    @include animateElement(araf, 6, 24);
+    @include animateElement(bf, 7, 24);
+
+    @include animateElement(all-f, 9, 12);
+    @include animateElement(all-c, 9, 12);
+
+    @include animateElement(epic-f, 13, 16);
+    @include animateElement(epic-c, 13, 16);
+
+    @include animateElement(med-f, 17, 20);
+    @include animateElement(med-c, 17, 20);
+
+    @include animateElement(cer-f, 21, 24);
+    @include animateElement(cer-c, 21, 24);
+}
+
+.animate-family {
+    svg {
+        width: 100%;
+        height: auto;
+    }
+
+    $duration: 10;
+
+    @mixin animateElement($name, $enterOn) {
+        @include animate($name, 'family', $duration, $enterOn, $duration)
+    }
+
+    @include animateElement(msg, 1);
+    @include animateElement(arha, 4);
+    @include animateElement(ai, 5);
+    @include animateElement(arad, 6);
+    @include animateElement(aras, 6);
+    @include animateElement(boxd, 7);
+    @include animateElement(boxs, 7)
 }

@@ -87,6 +87,10 @@ h3,
     color: $primary-color;
 }
 
+.text-center {
+    text-align: center;
+}
+
 p {
     font-size: 22px;
     line-height: 34px;
@@ -99,32 +103,33 @@ p {
 }
 
 .quote {
-    position: relative;
-    $quotemark-shift: 30px;
-    
-    .quote-up {
-        position: absolute;
-        left: 0;
-        top: $quotemark-shift;
-        transform: translate(0, -50%);
+    @mixin quote-mark {
+        content: '';
+        background-image: url('@images/icons-v3/quote.png');
+        background-size: cover;
+        display: block;
+        width: 78px;
+        height: 60px;
     }
 
-    .quote-down {
-        position: absolute;
-        right: 0;
-        bottom: $quotemark-shift;
-        transform: translate(0, 50%) rotate(180deg);
+    &:before {
+        @include quote-mark;
+        margin: 0 0 8px -16px;
     }
 
-    .text-integration {
-        font-family: Playball;
-        font-size: 42px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 42px;
-        letter-spacing: 2px;
-        text-align: center;
-        color: #0c9fdb;
-        padding: $quotemark-shift 69px;
+    &:after {
+        @include quote-mark;
+        transform: scale(-1, -1);
+        margin: 8px 0 0 auto;
     }
+
+    font-family: Playball;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #0c9fdb;
+    padding: 0 16px;
 }
