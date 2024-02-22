@@ -143,9 +143,9 @@
     ##{$name} {
         opacity: 0;
 
-        .enable-animation & {}
-
-        animation: #{$animationName} $total * 1s infinite;
+        .in-viewport & {
+            animation: #{$animationName} $total * 1s infinite;
+        }
     }
 
     $sec: math.div(1, $total) * 100%;
@@ -174,7 +174,7 @@
 }
 
 .animate-session {
-    $duration: 33;
+    $duration: 30;
 
     svg {
         width: 100%;
@@ -185,51 +185,21 @@
         @include animate($name, 'session', $duration, $in, $out)
     }
 
-    @include animateElement(docq, 1, 16);
-    @include animateElement(arda, 6, 16);
-    @include animateElement(arap, 9, 16);
-    @include animateElement(patr, 10, 16);
+    @include animateElement(docq, 1, 15);
+    @include animateElement(arda, 6, 15);
+    @include animateElement(aidp, 7, 15);
+    @include animateElement(arap, 8, 15);
+    @include animateElement(patr, 9, 15);
 
-    @include animateElement(patq, 17, 32);
-    @include animateElement(arpa, 22, 32);
-    @include animateElement(arad, 25, 32);
-    @include animateElement(docr, 26, 32);
-
-    #ai {
-        animation: ai $duration * 1s infinite;
-    }
-
-    @keyframes ai {
-
-        0%,
-        18% {
-            opacity: 0;
-        }
-
-        21%,
-        45% {
-            opacity: 1;
-        }
-
-        48%,
-        66% {
-            opacity: 0;
-        }
-
-        69%,
-        93% {
-            opacity: 1;
-        }
-
-        96%,
-        100% {
-            opacity: 0;
-        }
-    }
+    @include animateElement(patq, 16, 30);
+    @include animateElement(arpa, 21, 30);
+    @include animateElement(aipd, 22, 30);
+    @include animateElement(arad, 23, 30);
+    @include animateElement(docr, 24, 30);
 }
 
 .animate-clinicians {
-    $duration: 25;
+    $duration: 22;
 
     svg {
         width: 100%;
@@ -240,23 +210,23 @@
         @include animate($name, 'clinicians', $duration, $in, $out)
     }
 
-    @include animateElement(arca, 1, 24);
-    @include animateElement(bc, 2, 24);
-    @include animateElement(ai, 3, 24);
-    @include animateElement(araf, 6, 24);
-    @include animateElement(bf, 7, 24);
+    @include animateElement(arca, 1, 21);
+    @include animateElement(bc, 2, 21);
+    @include animateElement(ai, 3, 21);
+    @include animateElement(araf, 4, 21);
+    @include animateElement(bf, 5, 21);
 
-    @include animateElement(all-f, 9, 12);
-    @include animateElement(all-c, 9, 12);
+    @include animateElement(all-f, 6, 9);
+    @include animateElement(all-c, 6, 9);
 
-    @include animateElement(epic-f, 13, 16);
-    @include animateElement(epic-c, 13, 16);
+    @include animateElement(epic-f, 10, 13);
+    @include animateElement(epic-c, 10, 13);
 
-    @include animateElement(med-f, 17, 20);
-    @include animateElement(med-c, 17, 20);
+    @include animateElement(med-f, 14, 17);
+    @include animateElement(med-c, 14, 17);
 
-    @include animateElement(cer-f, 21, 24);
-    @include animateElement(cer-c, 21, 24);
+    @include animateElement(cer-f, 18, 21);
+    @include animateElement(cer-c, 18, 21);
 }
 
 .animate-family {

@@ -17,6 +17,7 @@ include ../shared/integrations.pug
 include ../shared/youtube-popup.pug
 include ../shared/great-down-button.pug
 include ../shared/waved.pug 
+include ../shared/viewport.pug
 
 mixin integrationBlogCards(article)
     a.card-press-box(href=article.href)
@@ -33,7 +34,7 @@ block head
     meta(property="og:title" content="Diya Health Website")
     meta(property="og:type" content="website")
     meta(property="og:url" content="https://www.diya.health/")
-    meta(property="og:image" content="https://www.diya.health/images/cbde0a1dc167b130bcf77464cabbe0e7.svg")
+    meta(property="og:image" content=require("@images/logos/diya/diyahealth.svg"))
     meta(property="og:description" content="Diya Health")
 
 block content
@@ -73,23 +74,10 @@ block content
 
                 button.m5.ma.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') GET STARTED
 
-        .plain-article.two-columns
-            .intro
-                .title Increase Your&nbsp;
-                    span.text-primary Profitability
-
-                p The non-English-speaking patient population is growing. Serve a larger market with the first HIPAA-compliant AI-driven interpreter & translator.
-
-                button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Learn More
-
-            .animate-session
-                include ../../images/pages/index/translation-session.svg
-
-        +waved
-            .plain-article.two-columns.reversed
-                .animate-clinicians 
+        .plain-article.two-columns.reversed(data-viewport)
+                .animate-clinicians
                     include ../../images/pages/index/clinician-family-communication.svg
-                .intro
+                .simplified-page-intro
                     .title Increase Clinician&nbsp;
                         span.text-primary Capacity
 
@@ -97,19 +85,31 @@ block content
 
                     button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Learn More
 
+        +waved
+            .plain-article.two-columns(data-viewport)
+                .simplified-page-intro
+                    .title Increase Your&nbsp;
+                        span.text-primary Profitability
+
+                    p The non-English-speaking patient population is growing. Serve a larger market with the first HIPAA-compliant AI-driven interpreter & translator.
+
+                    button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Learn More
+
+                .animate-session
+                    include ../../images/pages/index/translation-session.svg
 
 
-        .plain-article.two-columns
-            .intro
+        .plain-article.two-columns(data-viewport)
+            .animate-family
+                include ../../images/pages/index/doctor-to-family-members.svg
+
+            .simplified-page-intro
                 .title Strengthen Your&nbsp;
                     span.text-primary Brand
 
                 p Extend your reach to patients’ loved ones throughout the full continuum of care — whether they are 10 miles or 10,000 miles away — fully automated.
 
                 button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Learn More
-
-            .animate-family
-                include ../../images/pages/index/doctor-to-family-members.svg
 
         +wave-divider
 
@@ -198,7 +198,7 @@ block content
                                             img.avatar(src=require("@images/pages/index/bob.png"))
                                         .info-box
                                             .name Bob Harnach
-                                            .title CCS
+                                            .title Care Coordination Systems
 
                     .carousel-control.right
                         include ../../images/employers/arrow-right.svg
@@ -243,6 +243,7 @@ block content
 
 block script
     +youtubeIntegration
+    +trackViewportEntry
     script.
         window.addEventListener('load', (event) => {
             window.diya.carousel.init('who-we-serve', {
