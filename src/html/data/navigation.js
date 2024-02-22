@@ -1,48 +1,17 @@
 const pages = require("./pages");
 
-const buildPage = (title, url, variant, postfix) => {
-    const result = {
-        title,
-        url,
-        variant,
-    };
 
-    if (result.url && postfix && !url.endsWith(postfix)) {
-        result.url = result.url + postfix;
-    }
-    return result;
-};
-
-const pageToLink = (page, variant, postfix) => buildPage(page.name, page.url, variant, postfix);
+const pageToLink = (page, title = null) => ({ title: title ?? page.name, url: page.url });
 
 const buildAboutUsDropdown = () => {
     const aboutUsUrl = pages.aboutUs.url;
 
-    const titleUrlItems = [
+    return [
         { title: 'Our Mission', url: `${aboutUsUrl}#mission` },
         { title: 'Our History', url: `${aboutUsUrl}#history` },
         { title: 'Our Team', url: `${aboutUsUrl}#team` },
     ];
-
-    return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
 }
-
-const buildFamilyDropdown = () => {
-    const familyUrl = pages.familyConnect.url;
-
-    const titleUrlItems = [
-        { title: 'Shared Customers', url: `${familyUrl}#shared-customers` },
-        { title: 'Administrators', url: `${familyUrl}#administrator` },
-    ];
-
-    return titleUrlItems.map(item => buildPage(item.title, item.url, undefined));
-}
-
-const buildBlogDropdown = () => {
-    const { blog, newsAndResources, faq } = pages;
-    return [pageToLink(blog), pageToLink(newsAndResources), { ...pageToLink(faq), title: 'myDiya FAQ' }];
-}
-
 let navigationLinks = [];
 
 const buildNavigationLinks = (mode) => {
@@ -50,23 +19,32 @@ const buildNavigationLinks = (mode) => {
     navigationLinks.length = 0;
     navigationLinks.push(
         {
-            ...pageToLink(pages.why, null, postfix),
-            
+            ...pageToLink(pages.why),
         },
         {
-            ...pageToLink(pages.healthSystems, null, postfix),
+            title: 'Solutions',
+            dropdown: [
+                pageToLink(pages.aiInterpreter),
+                pageToLink(pages.healthSystems, 'Family Connect'),
+            ],
         },
         {
-            ...pageToLink(pages.familyConnect, null, postfix),
-            dropdown: buildFamilyDropdown(),
+            title: 'Who We Serve',
+            dropdown: [
+                pageToLink(pages.healthSystems, 'Hospitals'),
+                pageToLink(pages.familyConnect, 'Long Term Care'),
+            ],
         },
         {
-            ...pageToLink(pages.blog, null, postfix),
-            title: 'Resources',
-            dropdown: buildBlogDropdown(),
+            ...pageToLink(pages.blog, 'Resources'),
+            dropdown: [
+                pageToLink(pages.blog),
+                pageToLink(pages.newsAndResources),
+                pageToLink(pages.faq, 'myDiya FAQ'),
+            ],
         },
         {
-            ...pageToLink(pages.aboutUs, null, postfix),
+            ...pageToLink(pages.aboutUs),
             dropdown: buildAboutUsDropdown(postfix),
         },
     );

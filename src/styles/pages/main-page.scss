@@ -1,35 +1,4 @@
 .page-index {
-    .intro {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        align-items: flex-start;
-
-        .title {
-            font-size: 40px;
-            font-weight: 700;
-            line-height: 54px;
-
-            text-align: left;
-            padding-bottom: 18px;
-
-            .text-primary {
-                position: relative;
-
-                &.underline:after {
-                    content: " ";
-                    height: 18px;
-                    width: 100%;
-                    position: absolute;
-                    background-size: 100% 100%;
-                    background-image: url("@images/pages/index/header-underline.svg");
-                    bottom: -18px;
-                    left: 0;
-                }
-            }
-        }
-    }
-
     .who-we-serve {
         margin-top: 40px;
 

@@ -45,6 +45,10 @@ const pages = {
         name: "Individuals",
         description: "Diya Health empowers people to take control of their health information and achieve their health goals using a personal health diary",
     },
+    aiInterpreter: {
+        name: "AI Interpreter",
+        description: "Imagine an ideal experience for non-English-speaking patients",
+    },
     contactUs: {
         name: "Contact Us",
         description: "Contact with Diya Health!",

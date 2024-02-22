@@ -1,0 +1,225 @@
+extends ../shared/layout.pug
+include ../shared/contact-us.pug
+include ../shared/youtube-popup.pug
+include ../shared/waved.pug
+include ../shared/customers.pug
+
+block head
+    meta(name="twitter:card" value="Diya Health AI Interpreter")
+    meta(property="og:title" content="Diya Health AI Interpreter")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="https://www.diya.health/ai-interpreter")
+    meta(property="og:image" content=require("@images/logos/diya/diyahealth.svg"))
+    meta(property="og:description" content="Diya Health AI Interpreter")
+
+block content
+    main.v3.page-ai-interpreter 
+        .plain-article.two-columns
+            .simplified-page-intro
+                .title Imagine an&nbsp;
+                    span.text-primary ideal experience
+                    |&nbsp; for non-English-speaking patients
+
+                button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Request a demo
+
+            div
+                +youtubeInline('_UrW32z2d9A', require("@images/pages/ai-interpreter/explanation.jpg"))
+
+        +waved
+            .plain-article#collaboration
+                h2 Introducing the first all
+                    span.text-primary AI Interpreter
+                    | !
+
+                .article-subtitle Lives in your pocket. Speaks 120+ languages. At one-third the cost.
+
+                button.m5.ma.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') Request a demo
+
+        .plain-article#easy-access
+            h2 Easy access
+
+            .carousel-container.m4
+                .content-container
+                    .carousel-control.left
+                        include ../../images/employers/arrow-left.svg
+
+                    ul.content-items
+                        li.carousel-item-container.active
+                            .two-columns
+                                div
+                                    img(src=require("@images/pages/ai-interpreter/in-your-coat-pocket.jpg"))
+                                .stack
+                                    h3 In the Clinician’s Coat Pocket
+                                    p.text-center At their service wherever they go, available 24/7.
+
+                        li.carousel-item-container
+                            .two-columns
+                                div
+                                    img(src=require("@images/pages/ai-interpreter/in-your-coat-pocket.jpg"))
+                                .stack
+                                    h3 Works on Your Own Phone
+                                    p.text-center No more chasing down special devices!
+
+                        li.carousel-item-container
+                            .two-columns
+                                div
+                                    img(src=require("@images/pages/ai-interpreter/available-immediately.jpg"))
+                                .stack
+                                    h3 Available Immediately
+                                    p.text-center No need to wait 15+ minutes for the right interpreter.
+
+                    .carousel-control.right
+                        include ../../images/employers/arrow-right.svg
+
+                .indicators-container
+                    .carousel-control.left
+                        include ../../images/employers/arrow-left.svg
+                    ol.indicators
+                        li.indicator.active
+                        li.indicator
+                        li.indicator
+                    .carousel-control.right
+                        include ../../images/employers/arrow-right.svg
+
+        +waved
+            .plain-article#continuum-of-care
+                h2 Continuum of Care
+
+                .carousel-container.m4
+                    .content-container
+                        .carousel-control.left
+                            include ../../images/employers/arrow-left.svg
+
+                        ul.content-items
+                            li.carousel-item-container.active
+                                .two-columns
+                                    div
+                                        img(src=require("@images/pages/ai-interpreter/follow-the-patient.png"))
+                                    .stack
+                                        h3 Follows the Patient - 
+                                            span.text-primary Admission to Discharge
+                                        p.text-center Provides limited English proficiency (LEP)  patients the same experience as English-speaking patients
+
+                            li.carousel-item-container
+                                .two-columns
+                                    div
+                                        img(src=require("@images/pages/ai-interpreter/transcript.png"))
+                                    .stack
+                                        h3 Captures All Patient Interactions
+                                        p.text-center Add a full transcript of the conversation to your SOAP note in the EMR.
+
+                        .carousel-control.right
+                            include ../../images/employers/arrow-right.svg
+
+                    .indicators-container
+                        .carousel-control.left
+                            include ../../images/employers/arrow-left.svg
+                        ol.indicators
+                            li.indicator.active
+                            li.indicator
+                        .carousel-control.right
+                            include ../../images/employers/arrow-right.svg
+
+        .plain-article
+            h2 Low Cost
+
+            .two-columns.m4
+                .stack
+                    p
+                        strong.text-primary $400K savings&nbsp;
+                        strong per year for the average 150-bed hospital
+
+                    p Pay for only what you use.
+
+                    button.ma.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') Learn More
+
+                div
+                    img(src=require("@images/pages/ai-interpreter/cost-savings.jpg"))
+
+        +waved
+            .plain-article
+                h2 Exceeds All Legal Requirements
+
+                .two-columns.m4.reversed
+                    div
+                        img(src=require("@images/pages/ai-interpreter/meets-requirements.png"))
+
+                    .stack
+                        p.strong Meets Medically Qualified Interpreter Requirements
+
+                        p Fully compliant with federal and state requirements for healthcare interpretation.
+
+        .plain-article#integrated-telehealth
+            h2 Integrated Telehealth
+
+            .carousel-container.m4
+                .content-container
+                    .carousel-control.left
+                        include ../../images/employers/arrow-left.svg
+
+                    ul.content-items
+                        li.carousel-item-container.active
+                            .two-columns
+                                div
+                                    img(src=require("@images/pages/ai-interpreter/telehealth.png"))
+                                .stack
+                                    h3 Supports Video & Phone Calls
+                                    p.text-center Serve LEP patients no matter where they are located.
+
+                        li.carousel-item-container
+                            .two-columns
+                                div
+                                    img(src=require("@images/pages/ai-interpreter/everyone-needed.jpg"))
+                                .stack
+                                    h3 Include Everyone Needed
+                                    p.text-center Add the patient’s family members and other caregivers to the same session.
+
+                    .carousel-control.right
+                        include ../../images/employers/arrow-right.svg
+
+                .indicators-container
+                    .carousel-control.left
+                        include ../../images/employers/arrow-left.svg
+                    ol.indicators
+                        li.indicator.active
+                        li.indicator
+                    .carousel-control.right
+                        include ../../images/employers/arrow-right.svg
+
+        +waved
+            .plain-article
+                h2 Say Goodbye to Costly, Inaccessible Interpreter Services
+
+                .m4
+                    img(src=require("@images/pages/ai-interpreter/comparison-grid.png"))
+
+        .plain-article
+            h2 Seamless Integration
+            p.article-subtitle With any major EMR & AMS system
+            +integrationsSystem()
+
+        +wave-divider
+
+        article.plain-article#contact-us.contact-us-container
+            .title 
+                h2 Contact Us
+                p.text-center Let's reimagine communication for your organization.
+            .content
+                +contactUsForm(organizationSizeOptions)
+
+block script
+    +youtubeIntegration
+    script.
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('easy-access', {
+                switchSlideControlSelector: '.carousel-control',
+            }, 8000);
+
+            window.diya.carousel.init('continuum-of-care', {
+                switchSlideControlSelector: '.carousel-control',
+            }, 8000);
+
+            window.diya.carousel.init('integrated-telehealth', {
+                switchSlideControlSelector: '.carousel-control',
+            }, 8000);
+        }, { once: true });

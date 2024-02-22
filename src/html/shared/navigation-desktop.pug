@@ -18,7 +18,7 @@ include ./sign-in-button
                         ul.dropdown-menu
                             each dropdownLink in link.dropdown
                                 - const isDropdownLinkActive = page.name === dropdownLink.title
-                                li(class = dropdownLink.variant, class=isDropdownLinkActive ? 'active' : undefined)
+                                li(class=isDropdownLinkActive ? 'active' : undefined)
                                     if (dropdownLink.url)
                                         a(href=dropdownLink.url) #{dropdownLink.title}
                                     else
