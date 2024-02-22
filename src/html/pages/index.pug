@@ -39,7 +39,7 @@ block head
 block content
     main.page-index.v3
         .plain-article.two-columns
-            .intro
+            .simplified-page-intro
                 .title Healthcare Communication
                     br
                     span.text-primary.underline Reimagined
@@ -52,7 +52,7 @@ block content
                 +youtubeInline('c-ZZmQtvlOw', require("@images/pages/index/doctor-holds-patient-hand.jpg"))
 
         +waved
-            article.plain-article#collaboration
+            .plain-article#collaboration
                 h2 Developed in Collaboration
 
                 p.article-subtitle
@@ -82,12 +82,12 @@ block content
 
                 button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Learn More
 
-            div.animate-session
+            .animate-session
                 include ../../images/pages/index/translation-session.svg
 
         +waved
             .plain-article.two-columns.reversed
-                div.animate-clinicians 
+                .animate-clinicians 
                     include ../../images/pages/index/clinician-family-communication.svg
                 .intro
                     .title Increase Clinician&nbsp;
@@ -177,7 +177,7 @@ block content
                                     .illustration
                                         img(src=require("@images/pages/index/long-term-care.jpg"))
                                 .stack
-                                    .quote Coming soon
+                                    .quote Diya increases capacity with its AI-based platform that interprets & translates all communications in over 130 languages for employees and customers.
                                     .org-person
                                         .avatar-box
                                             img.avatar(src=require("@images/about-us/photos/briggs.jpg"))
