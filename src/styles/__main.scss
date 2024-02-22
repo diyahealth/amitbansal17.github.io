@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use "sass:selector";
 @import "~normalize.css";
 @import "__variables.scss";
 @import "__mixins.scss";
@@ -12,6 +13,7 @@
     @import "./v3/videos.scss";
     @import "./v3/spacing.scss";
     @import "./v3/org-person.scss";
+    @import "./v3/animations.scss";
 
     @import "pages/404.scss";
 }

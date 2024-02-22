@@ -8,6 +8,7 @@ import { LayoutManager } from "./scripts/LayoutManager";
 import { prepareTwitterFeed } from "./scripts/PrepareTwitterFeed";
 import { toAnchor, ToAnchor } from "./scripts/toAnchor";
 import { toggleClass, ToggleClass } from "./scripts/toggleClass";
+import { activateViewportTracking } from './scripts/viewport';
 
 import "./styles/__main.scss";
 import "./custom";
@@ -25,8 +26,8 @@ interface DiyaHealthWebSite {
     contactUs: {
         captcha: CaptchaStateHolder,
         form: ContactUsForm,
-        savings: (event:any, form:any) => void;
-        estimatedSavings: (event:any, form:any) => void;
+        savings: (event: any, form: any) => void;
+        estimatedSavings: (event: any, form: any) => void;
     };
     map: {
         init: () => void;
@@ -59,6 +60,11 @@ window.diya = {
     toggleClass,
 };
 
+function applyScripts() {
+    appendReturnUrl();
+    activateViewportTracking();
+}
+
 function appendReturnUrl() {
     const link = document.getElementById("sign-in");
     if (link != null) {
@@ -72,6 +78,6 @@ function appendReturnUrl() {
 
         link.setAttribute("href", newUrl);
     }
-    window.removeEventListener("DOMContentLoaded", appendReturnUrl);
 }
-window.addEventListener('DOMContentLoaded',appendReturnUrl)
+
+window.addEventListener('load', applyScripts, { once: true })

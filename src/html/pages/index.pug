@@ -17,7 +17,6 @@ include ../shared/integrations.pug
 include ../shared/youtube-popup.pug
 include ../shared/great-down-button.pug
 include ../shared/waved.pug 
-include ../shared/viewport.pug
 
 mixin integrationBlogCards(article)
     a.card-press-box(href=article.href)
@@ -74,8 +73,8 @@ block content
 
                 button.m5.ma.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') GET STARTED
 
-        .plain-article.two-columns.reversed(data-viewport)
-                .animate-clinicians
+        .plain-article.two-columns
+                .animate-clinicians(data-full-viewport)
                     include ../../images/pages/index/clinician-family-communication.svg
                 .simplified-page-intro
                     .title Increase Clinician&nbsp;
@@ -86,7 +85,7 @@ block content
                     button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Learn More
 
         +waved
-            .plain-article.two-columns(data-viewport)
+            .plain-article.two-columns.reversed
                 .simplified-page-intro
                     .title Increase Your&nbsp;
                         span.text-primary Profitability
@@ -95,12 +94,12 @@ block content
 
                     button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Learn More
 
-                .animate-session
+                .animate-session(data-full-viewport)
                     include ../../images/pages/index/translation-session.svg
 
 
-        .plain-article.two-columns(data-viewport)
-            .animate-family
+        .plain-article.two-columns
+            .animate-family(data-full-viewport)
                 include ../../images/pages/index/doctor-to-family-members.svg
 
             .simplified-page-intro
@@ -243,7 +242,6 @@ block content
 
 block script
     +youtubeIntegration
-    +trackViewportEntry
     script.
         window.addEventListener('load', (event) => {
             window.diya.carousel.init('who-we-serve', {

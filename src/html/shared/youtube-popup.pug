@@ -4,6 +4,8 @@ mixin youtubeInline(id, preview, previewAlt)
         href=`https://youtu.be/${id}`
         target="__blank"
         data-youtube=id
+        data-animate="fade-in-up"
+        data-viewport
         rel="noopener noreferrer"
     )&attributes(attributes)
         img(src=preview, alt=previewAlt)

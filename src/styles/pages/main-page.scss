@@ -142,10 +142,10 @@
 
     ##{$name} {
         opacity: 0;
+    }
 
-        .in-viewport & {
-            animation: #{$animationName} $total * 1s infinite;
-        }
+    @at-root #{selector.append(&, '.visible-in-viewport')} ##{$name} {
+        animation: #{$animationName} $total * 1s infinite;
     }
 
     $sec: math.div(1, $total) * 100%;

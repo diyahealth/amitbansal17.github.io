@@ -1,0 +1,10 @@
+[data-animate=fade-in-up] {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity, transform 1s;
+
+    &.in-viewport {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
