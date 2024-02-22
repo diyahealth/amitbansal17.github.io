@@ -8,7 +8,7 @@
     margin-right: auto;
     line-height: 0;
 
-    &:hover {
+    &:not(.active):hover {
         transform: scale(1.05);
     }
 

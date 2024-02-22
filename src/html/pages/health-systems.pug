@@ -95,10 +95,10 @@ block content
 
                     p.clinicians-container__text.
                         During the critical, nationwide shortage of clinical staff, that time is even more precious to be spent towards clinical tasks.
-                    +youtubeLink('tPfLQ4IBNv4')
+                    +youtubeInlineTrigger('tPfLQ4IBNv4')
                 .clinicians-container__right
                     .clinicians-container__item
-                            +youtubeImageMain('tPfLQ4IBNv4', imagePath[0])
+                            +youtubeInline('tPfLQ4IBNv4', imagePath[0])
         article.calculate-savings
             .inner
                 .calculate-savings__main-text
@@ -358,7 +358,7 @@ block content
                                 +integrationHipaa(hipaa[6])
                                 +integrationHipaa(hipaa[7])
                                 +integrationHipaa(hipaa[8])
-        +youtubePopup
+
         article.contact-us-container(id="contact-us")
             .title 
                 h2 Contact Us
@@ -369,7 +369,8 @@ block content
 
         +popupSavingsConfirmation
         +popupCaregiverClose
-    block script
+block script
+    +youtubeIntegration
 
     script.
         window.addEventListener('load', (event) => {

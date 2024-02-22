@@ -3,7 +3,6 @@ include ../shared/contact-us-form.pug
 include ../shared/contact-savings-form.pug
 include ../shared/customers.pug
 include ../shared/integrations.pug
-include ../shared/youtube-popup.pug
 include ../shared/integrationTable.pug
 include ../shared/help-popup.pug
 include ../shared/integration-features.pug
@@ -130,17 +129,17 @@ block content
                 h2 Family Engagement Made Easy!
                 p.family-engagement__subtitle Diya Family Connect enables families of the home health patients to stay in close contact with their loved one while freeing up the healthcare workers to focus on delivering the best care possible. Learn how Diya enables home health agencies to maximize staff efficiencies, improve patient safety, and create brand recognition.
                 .family-engagement__service-items-box
-                    .family-engagement__item
-                        +youtubeImageMain('KzRLsDRvcbo', imagePath[0])
+                    .family-engagement__item.v3
+                        +youtubeInline('KzRLsDRvcbo', imagePath[0])
                       
                         p.family-engagement__title-text Shared Customers
                         span.family-engagement__text Patients’ Family Members
                         button.material-btn(onclick='window.diya.toAnchor(\'shared-customers\')') 
                             span.label Read more
 
-                    .family-engagement__item
+                    .family-engagement__item.v3
                        
-                        +youtubeImageMain('ykTagu8gzdQ', imagePath[1])
+                        +youtubeInline('ykTagu8gzdQ', imagePath[1])
                         p.family-engagement__title-text Administrators
                         span.family-engagement__text Home Health Care Agency
                         button.material-btn(onclick='window.diya.toAnchor(\'administrator\')') 
@@ -617,12 +616,11 @@ block content
             .content
                 +contactUsForm(organizationSizeOptions)
         +popupSavingsConfirmation
-        +youtubePopup
         +popupFamilyClose
-       
-
 
 block script
+    +youtubeIntegration
+
     script.
         window.addEventListener('load', (event) => {
             window.diya.carousel.init('dashboard-carousel', {

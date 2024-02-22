@@ -1,13 +1,14 @@
 mixin youtubeInline(id, preview, previewAlt)
     a.inline-video-preview(
-        href=`https://www.youtu.be/${id}`
+        id=`youtube-inline-${id}`
+        href=`https://youtu.be/${id}`
         target="__blank"
         data-youtube=id
         rel="noopener noreferrer"
     )&attributes(attributes)
         img(src=preview, alt=previewAlt)
         .inline-player(id=id)
-        .play-icon
+        .play-icon(id=`youtube-icon-${id}`)
             include ../../images/icons-v3/play.svg
 
 mixin youtubeIntegration
@@ -20,26 +21,40 @@ mixin youtubeIntegration
         document
             .querySelectorAll('[data-youtube]')
             .forEach(x => x.addEventListener('click', e => {
+                const videoId = x.dataset.youtube;
                 e.preventDefault();
                 e.stopPropagation();
-                e.currentTarget.querySelector(".play-icon").style.display = 'none';
-                const player = new YT.Player(x.dataset.youtube, {
+                const wrapper = document.getElementById('youtube-inline-' + videoId);
+                if (wrapper.classList.contains('active')) {
+                    return;
+                }
+                wrapper.classList.add('active');
+                document.getElementById('youtube-icon-' + videoId).style.display = 'none';
+                const player = new YT.Player(videoId, {
                     height: e.currentTarget.clientHeight,
                     width: e.currentTarget.clientWidth,
-                    videoId: x.dataset.youtube,
+                    videoId: videoId,
                     playerVars: { 'autoplay': 1 },
                 });
             }));
 
 
+mixin youtubeInlineTrigger(id)
+    a.material-btn(
+        href=`https://youtu.be/${id}`
+        target="__blank"
+        data-youtube=id
+        rel="noopener noreferrer"
+    )&attributes(attributes)
+        .label WATCH VIDEO
 
 //- v2
 
 mixin youtubeLink(id, portrait = false)
     a.material-btn(
-        href=`https://www.youtu.be/${id}`
+        href=`https://youtu.be/${id}`
         target="__blank"
-        data-youtube=id
+        data-youtube-popup=id
         data-orientation=(portrait ? 'portrait' : 'landscape')
         rel="noopener noreferrer"
     )&attributes(attributes)
@@ -48,9 +63,9 @@ mixin youtubeLink(id, portrait = false)
 
 mixin youtubeImage(id, path)
     a(
-        href=`https://www.youtu.be/${id}`
+        href=`https://youtu.be/${id}`
         target="__blank"
-        data-youtube=id
+        data-youtube-popup=id
         rel="noopener noreferrer"
     )&attributes(attributes)
         img.family-engagement__logo(src=path alt='path')
@@ -58,9 +73,9 @@ mixin youtubeImage(id, path)
 
 mixin youtubeImageMain(id, path)
     a.learn-more__link(
-        href=`https://www.youtu.be/${id}`
+        href=`https://youtu.be/${id}`
         target="__blank"
-        data-youtube=id
+        data-youtube-popup=id
         rel="noopener noreferrer"
     )&attributes(attributes)
         img.learn-more__logo(src=path alt='path')
@@ -85,11 +100,11 @@ mixin youtubePopup
             });
 
         document
-            .querySelectorAll('[data-youtube]')
+            .querySelectorAll('[data-youtube-popup]')
             .forEach(x => x.addEventListener('click', e => {
                 e.preventDefault();
                 e.stopPropagation();
-                iframe.src = 'https://www.youtube.com/embed/' + x.dataset.youtube;
+                iframe.src = 'https://www.youtube.com/embed/' + x.dataset.youtubePopup;
                 iframe.classList.toggle('portrait', x.dataset.orientation === 'portrait')
                 popup.classList.remove('hidden');
             }));
