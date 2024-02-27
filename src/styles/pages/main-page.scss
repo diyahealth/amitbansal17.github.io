@@ -137,21 +137,23 @@
 
 
 // animations
-@mixin animate($name, $prefix, $total, $enterOn, $leaveOn) {
+@mixin inOut($name, $prefix, $total, $enterOn, $leaveOn, $repeat: 1, $delay: 0s) {
     $animationName: $prefix + $name;
+    $duration: $total * 1s;
 
     ##{$name} {
         opacity: 0;
     }
 
     @at-root #{selector.append(&, '.visible-in-viewport')} ##{$name} {
-        animation: #{$animationName} $total * 1s infinite;
+        animation: #{$animationName} $duration linear $delay $repeat;
     }
 
     $sec: math.div(1, $total) * 100%;
-    $startIn: $sec * ($enterOn - 1);
+    $transitionTime: $sec;
+    $startIn: $sec * $enterOn - $transitionTime;
     $endIn: $sec * $enterOn;
-    $startOut: $sec * ($leaveOn - 1);
+    $startOut: $sec * $leaveOn - $transitionTime;
     $endOut: $sec * $leaveOn;
 
     @keyframes #{$animationName} {
@@ -173,60 +175,99 @@
     }
 }
 
+@mixin in($name, $prefix, $total, $enterOn) {
+    $animationName: $prefix + $name;
+
+    ##{$name} {
+        opacity: 0;
+    }
+
+    @at-root #{selector.append(&, '.visible-in-viewport')} ##{$name} {
+        animation: #{$animationName} $total * 1s forwards;
+    }
+
+    $sec: math.div(1, $total) * 100%;
+    $transitionTime: $sec;
+    $startIn: $sec * $enterOn - $transitionTime;
+    $endIn: $sec * $enterOn;
+
+    @keyframes #{$animationName} {
+
+        0%,
+        #{$startIn} {
+            opacity: 0;
+        }
+
+        #{$endIn},
+        100% {
+            opacity: 1;
+        }
+    }
+}
+
 .animate-session {
-    $duration: 30;
+    $duration: 14;
 
     svg {
         width: 100%;
         height: auto;
     }
 
-    @mixin animateElement($name, $in, $out) {
-        @include animate($name, 'session', $duration, $in, $out)
+    @mixin elementInOut($name, $in, $out) {
+        @include inOut($name, 'session', $duration, $in, $out, 1)
     }
 
-    @include animateElement(docq, 1, 15);
-    @include animateElement(arda, 6, 15);
-    @include animateElement(aidp, 7, 15);
-    @include animateElement(arap, 8, 15);
-    @include animateElement(patr, 9, 15);
+    @mixin elementIn($name, $in) {
+        @include in($name, 'session', $duration, $in)
+    }
 
-    @include animateElement(patq, 16, 30);
-    @include animateElement(arpa, 21, 30);
-    @include animateElement(aipd, 22, 30);
-    @include animateElement(arad, 23, 30);
-    @include animateElement(docr, 24, 30);
+    @include elementInOut(docq, 1, 7);
+    @include elementInOut(arda, 2, 7);
+    @include elementInOut(aidp, 3, 7);
+    @include elementInOut(arap, 4, 7);
+    @include elementInOut(patr, 5, 7);
+
+    @include elementIn(patq, 8);
+    @include elementIn(arpa, 9);
+    @include elementIn(aipd, 10);
+    @include elementIn(arad, 11);
+    @include elementIn(docr, 12);
 }
 
 .animate-clinicians {
-    $duration: 22;
+    $main-duration: 5;
+    $rotate-duration: 16;
 
     svg {
         width: 100%;
         height: auto;
     }
 
-    @mixin animateElement($name, $in, $out) {
-        @include animate($name, 'clinicians', $duration, $in, $out)
+    @mixin elementIn($name, $in) {
+        @include in($name, 'clinicians', $main-duration, $in)
     }
 
-    @include animateElement(arca, 1, 21);
-    @include animateElement(bc, 2, 21);
-    @include animateElement(ai, 3, 21);
-    @include animateElement(araf, 4, 21);
-    @include animateElement(bf, 5, 21);
+    @mixin elementRotate($name, $in, $out) {
+        @include inOut($name, 'clinicians', $rotate-duration, $in, $out, infinite, $main-duration * 1s)
+    }
 
-    @include animateElement(all-f, 6, 9);
-    @include animateElement(all-c, 6, 9);
+    @include elementIn(arca, 1);
+    @include elementIn(bc, 2);
+    @include elementIn(ai, 3);
+    @include elementIn(araf, 4);
+    @include elementIn(bf, 5);
 
-    @include animateElement(epic-f, 10, 13);
-    @include animateElement(epic-c, 10, 13);
+    @include elementRotate(all-f, 1, 4);
+    @include elementRotate(all-c, 1, 4);
 
-    @include animateElement(med-f, 14, 17);
-    @include animateElement(med-c, 14, 17);
+    @include elementRotate(epic-f, 5, 8);
+    @include elementRotate(epic-c, 5, 8);
 
-    @include animateElement(cer-f, 18, 21);
-    @include animateElement(cer-c, 18, 21);
+    @include elementRotate(med-f, 9, 12);
+    @include elementRotate(med-c, 9, 12);
+
+    @include elementRotate(cer-f, 13, 16);
+    @include elementRotate(cer-c, 13, 16);
 }
 
 .animate-family {
@@ -235,17 +276,17 @@
         height: auto;
     }
 
-    $duration: 10;
+    $duration: 6;
 
     @mixin animateElement($name, $enterOn) {
-        @include animate($name, 'family', $duration, $enterOn, $duration)
+        @include in($name, 'family', $duration, $enterOn)
     }
 
     @include animateElement(msg, 1);
-    @include animateElement(arha, 4);
-    @include animateElement(ai, 5);
-    @include animateElement(arad, 6);
-    @include animateElement(aras, 6);
-    @include animateElement(boxd, 7);
-    @include animateElement(boxs, 7)
+    @include animateElement(arha, 2);
+    @include animateElement(ai, 3);
+    @include animateElement(arad, 4);
+    @include animateElement(aras, 4);
+    @include animateElement(boxd, 5);
+    @include animateElement(boxs, 5)
 }
