@@ -1,0 +1,279 @@
+extends ../shared/layout.pug
+include ../shared/contact-us.pug
+include ../shared/youtube-popup.pug
+include ../shared/waved.pug
+include ../shared/customers.pug
+
+block head
+    meta(name="twitter:card" value="Diya Health AI Interpreter")
+    meta(property="og:title" content="Diya Health AI Interpreter")
+    meta(property="og:type" content="website")
+    meta(property="og:url" content="https://www.diya.health/ai-interpreter")
+    meta(property="og:image" content= require("@images/pages/ai-interpreter/explanation.jpg"))
+    meta(property="og:description" content="Diya Health AI Interpreter")
+
+block content
+    main.v3.page-ai-translation
+        .plain-article.two-columns
+            .simplified-page-intro
+                .title The first ever all
+                    span.text-primary.underline &nbsp;AI-based&nbsp;
+                    | Translation Services Platform
+
+                p Comprehensive. Real-time. 120+ languages.&nbsp;
+                    i.text-primary Fraction of the cost.
+
+                button.material-btn(onclick="window.diya.toAnchor('contact-us', 'input')") Request a demo
+
+            div
+                +youtubeInline('i8TmSlwhEHU', require("@images/pages/ai-translation/doctor-and-patient.jpg"))
+
+        +waved
+            .plain-article
+                h2 Comprehensive Translations
+
+                .tab-wrap
+                    input.tab#tab-1(type="radio", checked, name="tabs")
+                    label(for="tab-1") Pre-Care
+
+                    input.tab#tab-2(type="radio", name="tabs")
+                    label(for="tab-2") During Care
+
+                    input.tab#tab-3(type="radio", name="tabs")
+                    label(for="tab-3") Post-Care
+
+                    .tab__content
+                        ul.chain-list
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/pre-care/intake.png"))
+                                span Intake
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/pre-care/medication-reconciliation.png"))
+                                span Medication reconciliation
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/pre-care/consent-forms.png"))
+                                span Consent forms
+
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/pre-care/questionnaire.png"))
+                                span Questionnaires
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/pre-care/reminder.png"))
+                                span Reminders
+                    .tab__content
+                        ul.chain-list
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/in-care/labs.png"))
+                                span Labs, imaging, & test results
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/in-care/care-updates.png"))
+                                span Care updates
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/in-care/media-rich-education.png"))
+                                span Media-rich education
+
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/in-care/messaging.png"))
+                                span Messaging
+
+                    .tab__content
+                        ul.chain-list
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/post-care/discharge-summary.png"))
+                                span Discharge summary
+
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/post-care/insurance-information.png"))
+                                span Insurance information
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/post-care/revenue-cycle.png"))
+                                span Revenue cycle management
+
+                            li
+                                .img-wrapper
+                                    img(src=require("@images/pages/ai-translation/post-care/follow-up-outreach.png"))
+                                span Follow-up outreach
+
+        .plain-article#immediate-quality
+            h2 Immediate & Highest Quality
+
+            .carousel-container.m4
+                .content-container
+                    .carousel-control.left
+                        include ../../images/employers/arrow-left.svg
+
+                    ul.content-items
+                        li.carousel-item-container.active
+                            .two-columns
+                                div
+                                    img(src=require("@images/pages/ai-translation/immediate-quality/one-click.png"))
+                                .stack
+                                    h3 Translate with One Click
+                                    p.text-center All the content you need, translated immediately
+
+                        li.carousel-item-container
+                            .two-columns
+                                div
+                                    img(src=require("@images/pages/ai-translation/immediate-quality/layout-and-formatting.png"))
+                                .stack
+                                    h3 Preserve Layout & Formatting
+                                    p.text-center No need to spend valuable time reformatting
+
+                    .carousel-control.right
+                        include ../../images/employers/arrow-right.svg
+
+                .indicators-container
+                    .carousel-control.left
+                        include ../../images/employers/arrow-left.svg
+                    ol.indicators
+                        li.indicator.active
+                        li.indicator
+                    .carousel-control.right
+                        include ../../images/employers/arrow-right.svg
+
+        +waved
+            .plain-article#bi-directional-communication
+                h2 Bi-Directional Communication
+
+                .carousel-container.m4
+                    .content-container
+                        .carousel-control.left
+                            include ../../images/employers/arrow-left.svg
+
+                        ul.content-items
+                            li.carousel-item-container.active
+                                .two-columns
+                                    div
+                                        img(src=require("@images/pages/ai-translation/bi-directional-communication/efficiency.png"))
+                                    .stack
+                                        h3 Efficient & Accurate Intake
+                                        p.text-center Boost clinician efficiency by quickly gathering the information they need
+
+                            li.carousel-item-container
+                                .two-columns
+                                    div
+                                        img(src=require("@images/pages/ai-translation/bi-directional-communication/messaging.png"))
+                                    .stack
+                                        h3 Real-Time Messaging
+                                        p.text-center Communicate with patients in their preferred language
+
+                        .carousel-control.right
+                            include ../../images/employers/arrow-right.svg
+
+                    .indicators-container
+                        .carousel-control.left
+                            include ../../images/employers/arrow-left.svg
+                        ol.indicators
+                            li.indicator.active
+                            li.indicator
+                        .carousel-control.right
+                            include ../../images/employers/arrow-right.svg
+
+        .plain-article#oversight
+            h2 Administrative Oversight
+
+            .carousel-container.m4
+                .content-container
+                    .carousel-control.left
+                        include ../../images/employers/arrow-left.svg
+
+                    ul.content-items
+                        li.carousel-item-container.active
+                            .two-columns
+                                div
+                                    img(src=require("@images/pages/ai-translation/oversight/stats.png"))
+                                .stack
+                                    h3 Real-Time Analytics
+                                    p.text-center Usage analytics & feedback reveal key language services trends
+
+                        li.carousel-item-container
+                            .two-columns
+                                div
+                                    img(src=require("@images/pages/ai-translation/oversight/roi.png"))
+                                .stack
+                                    h3 Maximize Language Services ROI
+                                    p.text-center Ensure program efforts align with the greatest needs 
+
+                    .carousel-control.right
+                        include ../../images/employers/arrow-right.svg
+
+                .indicators-container
+                    .carousel-control.left
+                        include ../../images/employers/arrow-left.svg
+                    ol.indicators
+                        li.indicator.active
+                        li.indicator
+                    .carousel-control.right
+                        include ../../images/employers/arrow-right.svg
+
+        +waved
+            .plain-article
+                h2 Low Cost
+
+                .two-columns.m4
+                    .stack
+                        p
+                            strong.text-primary Fraction of the cost&nbsp;
+                            span of current translation solutions
+
+                        button.mr.material-btn(onclick='window.diya.toAnchor(\'contact-us\', \'input\')') Learn More
+
+                    div
+                        img(src=require("@images/pages/ai-translation/cost-savings.png"))
+
+        .plain-article
+            h2 Exceeds All Legal Requirements
+
+            .two-columns.m4
+                div
+                    img(src=require("@images/pages/ai-translation/requirements.png"))
+
+                .stack
+                    h3 Meets Medically Qualified Interpreter Requirements
+                    p.text-center Fully compliant with federal and state requirements for healthcare interpretation.
+
+
+        +wave-divider
+
+        .plain-article
+            h2 Seamless Integration
+            p.article-subtitle With any major EMR & AMS system
+            +integrationsSystem()
+
+        +wave-divider
+
+        article.plain-article#contact-us.contact-us-container
+            .title 
+                h2 Contact Us
+                p.text-center Let's reimagine communication for your organization.
+            .content
+                +contactUsForm(organizationSizeOptions)
+
+block script
+    +youtubeIntegration
+    script.
+        window.addEventListener('load', (event) => {
+            window.diya.carousel.init('immediate-quality', {
+                switchSlideControlSelector: '.carousel-control',
+            }, 8000);
+
+            window.diya.carousel.init('bi-directional-communication', {
+                switchSlideControlSelector: '.carousel-control',
+            }, 8000);
+
+            window.diya.carousel.init('oversight', {
+                switchSlideControlSelector: '.carousel-control',
+            }, 8000);
+        }, { once: true });

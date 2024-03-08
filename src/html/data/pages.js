@@ -49,6 +49,10 @@ const pages = {
         name: "AI Interpreter",
         description: "Imagine an ideal experience for non-English-speaking patients",
     },
+    aiTranslation: {
+        name: "AI Translation",
+        description: "The first ever all AI-based Translation Services Platform",
+    },
     contactUs: {
         name: "Contact Us",
         description: "Contact with Diya Health!",

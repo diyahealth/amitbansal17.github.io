@@ -1,0 +1,78 @@
+$max-tab-count: 5;
+$tab-wrap-border-radius: 30px;
+
+.tab-wrap {
+    transition: 0.3s box-shadow ease;
+    border-radius: $tab-wrap-border-radius;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    list-style: none;
+    margin: 40px 0;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+    clip-path: inset(0 -8px -8px -8px);
+}
+
+.tab {
+    display: none;
+
+    @for $i from 1 through $max-tab-count {
+        &:checked:nth-of-type(#{$i})~.tab__content:nth-of-type(#{$i}) {
+            opacity: 1;
+            transition: 0.5s opacity ease-in, 0.8s transform ease;
+            position: relative;
+            top: 0;
+            z-index: 100;
+            transform: translateY(0px);
+            text-shadow: 0 0 0;
+        }
+    }
+
+    &:checked+label {
+        background-color: #ff9900;
+        box-shadow: 0 -1px 0 #fff inset;
+        cursor: default;
+        color: white;
+
+        &:hover {
+            box-shadow: 0 -1px 0 #fff inset;
+            background-color: #ff9900;
+        }
+    }
+
+    +label {
+        box-shadow: 0 -1px 0 #eee inset;
+        border-radius: $tab-wrap-border-radius $tab-wrap-border-radius 0 0;
+        cursor: pointer;
+        display: block;
+        text-decoration: none;
+        color: #595959;
+        flex-grow: 3;
+        text-align: center;
+        background-color: #cef0ff;
+        user-select: none;
+        text-align: center;
+        transition: 0.3s background-color ease, 0.3s box-shadow ease;
+        box-sizing: border-box;
+        padding: 16px 8px;
+        font-size: 16px;
+
+        &:hover {
+            background-color: color.scale(#cef0ff, $lightness: 30%);
+            box-shadow: 0 1px 0 #f4f4f4 inset;
+        }
+    }
+
+    &__content {
+        padding: 16px;
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        opacity: 0;
+        left: 0;
+        transform: translateY(-3px);
+        border-radius: 0 0 $tab-wrap-border-radius $tab-wrap-border-radius;
+    }
+}
