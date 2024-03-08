@@ -25,6 +25,7 @@ const buildNavigationLinks = (mode) => {
             title: 'Solutions',
             dropdown: [
                 pageToLink(pages.aiInterpreter),
+                pageToLink(pages.aiTranslation, 'AI Translation Services'),
                 pageToLink(pages.healthSystems, 'FamilyConnect™'),
             ],
         },
