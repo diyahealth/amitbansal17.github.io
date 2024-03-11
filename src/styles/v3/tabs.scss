@@ -56,11 +56,15 @@ $tab-wrap-border-radius: 30px;
         transition: 0.3s background-color ease, 0.3s box-shadow ease;
         box-sizing: border-box;
         padding: 16px 8px;
-        font-size: 16px;
+        font-size: 18px;
 
         &:hover {
             background-color: color.scale(#cef0ff, $lightness: 30%);
             box-shadow: 0 1px 0 #f4f4f4 inset;
+        }
+
+        @include for-phone {
+            font-size: 16px;
         }
     }
 
