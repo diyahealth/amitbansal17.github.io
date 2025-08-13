@@ -6,8 +6,8 @@ https://www.diya.health/wellness-engagement
 https://www.diya.health/family-connect
 https://www.diya.health/health-systems
 https://www.diya.health/individuals
-https://www.diya.health/ai-interpreter
-https://www.diya.health/ai-translation
+https://www.diya.health/ai-medical-interpreter
+https://www.diya.health/ai-translator
 https://www.diya.health/outpatient-clinics
 https://www.diya.health/contact-us
 https://www.diya.health/blog
