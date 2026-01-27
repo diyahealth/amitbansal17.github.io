@@ -26,12 +26,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const expandableItems = document.querySelectorAll('.expandable-item');
     const isometricLayers = document.querySelectorAll('.isometric-layer');
     
+    // Function to set max-height for active items
+    function setActiveItemHeights() {
+        expandableItems.forEach(item => {
+            if (item.classList.contains('active')) {
+                const content = item.querySelector('.expandable-content');
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        });
+    }
+    
     // Set initial max-height for items that are already active
-    expandableItems.forEach(item => {
-        if (item.classList.contains('active')) {
-            const content = item.querySelector('.expandable-content');
-            content.style.maxHeight = content.scrollHeight + 'px';
-        }
+    setActiveItemHeights();
+    
+    // Recalculate after images load
+    window.addEventListener('load', function() {
+        setActiveItemHeights();
     });
     
     // Function to activate a specific layer
