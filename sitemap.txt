@@ -10,6 +10,7 @@ https://www.diya.health/hospitals
 https://www.diya.health/individuals
 https://www.diya.health/ai-medical-interpreter
 https://www.diya.health/ai-translation
+https://www.diya.health/language-services-partners
 https://www.diya.health/carehub-patient-communication
 https://www.diya.health/diya-forms
 https://www.diya.health/outpatient-clinics
